@@ -1,0 +1,9 @@
+{
+  "raw_traces": 400,
+  "parsed_event_rows": 400,
+  "analysis_rows": 390,
+  "excluded_empty_roster_rows": 10,
+  "balanced_task_model_panel": true,
+  "recipient_set_mismatches_vs_legacy": 0,
+  "evaluator_join_complete": true
+}

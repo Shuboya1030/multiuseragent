@@ -1,0 +1,272 @@
+{
+  "panel": {
+    "n_episodes": 390,
+    "n_tasks": 39,
+    "n_models": 10,
+    "balanced": true,
+    "task_repetitions": 10
+  },
+  "overall_rates": {
+    "any_scenario_contact": {
+      "n": 163,
+      "N": 390,
+      "rate": 0.41794871794871796,
+      "ci95_wilson": [
+        0.37003118217564124,
+        0.46746688064476505
+      ]
+    },
+    "all_scenario_contacts": {
+      "n": 97,
+      "N": 390,
+      "rate": 0.24871794871794872,
+      "ci95_wilson": [
+        0.20840700938563886,
+        0.2939308080018552
+      ]
+    },
+    "any_outside_scenario": {
+      "n": 48,
+      "N": 390,
+      "rate": 0.12307692307692308,
+      "ci95_wilson": [
+        0.09410009022564116,
+        0.1594066358556
+      ]
+    },
+    "success": {
+      "n": 33,
+      "N": 390,
+      "rate": 0.08461538461538462,
+      "ci95_wilson": [
+        0.060883818908328835,
+        0.11645012411997774
+      ]
+    },
+    "fabricated": {
+      "n": 32,
+      "N": 390,
+      "rate": 0.08205128205128205,
+      "ci95_wilson": [
+        0.05871865846245737,
+        0.11353709902898691
+      ]
+    }
+  },
+  "model_coverage_friedman": {
+    "statistic": 91.41378470530935,
+    "df": 9,
+    "p": 8.46889875332816e-16,
+    "kendall_W": 0.2604381330635594,
+    "matched_unit": "task",
+    "posthoc": "45 pairwise asymptotic Wilcoxon signed-rank tests; Holm adjusted; see coverage_pairwise_holm.csv",
+    "holm_significant_pairs": 16
+  },
+  "coverage_score_association": {
+    "term": "scenario_coverage",
+    "estimate": 0.3789155077020451,
+    "se_task_clustered": 0.061321808633114455,
+    "ci95": [
+      0.25872476278114076,
+      0.4991062526229494
+    ],
+    "p": 6.445527054387109e-10,
+    "R2": 0.6186712646358727,
+    "n": 390,
+    "task_clusters": 39,
+    "interpretation": "score association per 1.0 (0-to-1) increase in scenario-set coverage; observational, not causal",
+    "sensitivity_n_target_lt_10": {
+      "estimate": 0.3782733279450753,
+      "se": 0.0619784630531879,
+      "ci95": [
+        0.25679554036082697,
+        0.4997511155293236
+      ],
+      "p": 1.0389872888601772e-09,
+      "n": 370,
+      "task_clusters": 37
+    }
+  },
+  "model_summary": [
+    {
+      "model": "gemini-1.5-pro",
+      "n_tasks": 39,
+      "mean_scenario_coverage": 0.22948717948717948,
+      "sd_scenario_coverage": 0.36898116281934995,
+      "any_target_contact_n": 14,
+      "any_target_contact_rate": 0.358974358974359,
+      "contact_rate_ci95": [
+        0.22742085458992867,
+        0.5158185144045146
+      ],
+      "success_n": 1,
+      "success_rate": 0.02564102564102564,
+      "mean_checkpoint_score": 0.13748473748473747,
+      "sd_checkpoint_score": 0.20477772710093323,
+      "outside_scenario_rate": 0.10256410256410256,
+      "no_chat_rate": 0.41025641025641024
+    },
+    {
+      "model": "gemini-2.0-flash",
+      "n_tasks": 39,
+      "mean_scenario_coverage": 0.5232528908999498,
+      "sd_scenario_coverage": 0.4731688224420004,
+      "any_target_contact_n": 24,
+      "any_target_contact_rate": 0.6153846153846154,
+      "contact_rate_ci95": [
+        0.45899061456925083,
+        0.7510862653443866
+      ],
+      "success_n": 7,
+      "success_rate": 0.1794871794871795,
+      "mean_checkpoint_score": 0.35976800976800977,
+      "sd_checkpoint_score": 0.36371184952590924,
+      "outside_scenario_rate": 0.23076923076923078,
+      "no_chat_rate": 0.20512820512820518
+    },
+    {
+      "model": "gpt-4o-2024-08-06",
+      "n_tasks": 39,
+      "mean_scenario_coverage": 0.269884364002011,
+      "sd_scenario_coverage": 0.38320041487371265,
+      "any_target_contact_n": 17,
+      "any_target_contact_rate": 0.4358974358974359,
+      "contact_rate_ci95": [
+        0.2930475387568963,
+        0.5902430835133052
+      ],
+      "success_n": 0,
+      "success_rate": 0.0,
+      "mean_checkpoint_score": 0.22423687423687425,
+      "sd_checkpoint_score": 0.26164025820775977,
+      "outside_scenario_rate": 0.23076923076923078,
+      "no_chat_rate": 0.23076923076923073
+    },
+    {
+      "model": "llama-3.1-405b",
+      "n_tasks": 39,
+      "mean_scenario_coverage": 0.5098290598290598,
+      "sd_scenario_coverage": 0.47783805810816093,
+      "any_target_contact_n": 22,
+      "any_target_contact_rate": 0.5641025641025641,
+      "contact_rate_ci95": [
+        0.40975691648669477,
+        0.7069524612431037
+      ],
+      "success_n": 6,
+      "success_rate": 0.15384615384615385,
+      "mean_checkpoint_score": 0.27399267399267396,
+      "sd_checkpoint_score": 0.3429621569784074,
+      "outside_scenario_rate": 0.02564102564102564,
+      "no_chat_rate": 0.28205128205128205
+    },
+    {
+      "model": "llama-3.1-70b",
+      "n_tasks": 39,
+      "mean_scenario_coverage": 0.26452991452991453,
+      "sd_scenario_coverage": 0.3851061121935394,
+      "any_target_contact_n": 16,
+      "any_target_contact_rate": 0.41025641025641024,
+      "contact_rate_ci95": [
+        0.27079310000725176,
+        0.5658137711710304
+      ],
+      "success_n": 1,
+      "success_rate": 0.02564102564102564,
+      "mean_checkpoint_score": 0.13089133089133087,
+      "sd_checkpoint_score": 0.20119176430271396,
+      "outside_scenario_rate": 0.10256410256410256,
+      "no_chat_rate": 0.41025641025641024
+    },
+    {
+      "model": "llama-3.3-70b",
+      "n_tasks": 39,
+      "mean_scenario_coverage": 0.3264957264957265,
+      "sd_scenario_coverage": 0.4160823613348746,
+      "any_target_contact_n": 17,
+      "any_target_contact_rate": 0.4358974358974359,
+      "contact_rate_ci95": [
+        0.2930475387568963,
+        0.5902430835133052
+      ],
+      "success_n": 3,
+      "success_rate": 0.07692307692307693,
+      "mean_checkpoint_score": 0.18681318681318682,
+      "sd_checkpoint_score": 0.2909589881042284,
+      "outside_scenario_rate": 0.1794871794871795,
+      "no_chat_rate": 0.41025641025641024
+    },
+    {
+      "model": "nova-pro-v1_0",
+      "n_tasks": 39,
+      "mean_scenario_coverage": 0.00641025641025641,
+      "sd_scenario_coverage": 0.04003203845127179,
+      "any_target_contact_n": 1,
+      "any_target_contact_rate": 0.02564102564102564,
+      "contact_rate_ci95": [
+        0.004540703100990098,
+        0.13180990169850076
+      ],
+      "success_n": 0,
+      "success_rate": 0.0,
+      "mean_checkpoint_score": 0.0703907203907204,
+      "sd_checkpoint_score": 0.12637216181562042,
+      "outside_scenario_rate": 0.0,
+      "no_chat_rate": 0.6923076923076923
+    },
+    {
+      "model": "qwen2-72b",
+      "n_tasks": 39,
+      "mean_scenario_coverage": 0.09700854700854701,
+      "sd_scenario_coverage": 0.2417913107138513,
+      "any_target_contact_n": 8,
+      "any_target_contact_rate": 0.20512820512820512,
+      "contact_rate_ci95": [
+        0.10779718230710382,
+        0.35533968013582296
+      ],
+      "success_n": 0,
+      "success_rate": 0.0,
+      "mean_checkpoint_score": 0.07765567765567766,
+      "sd_checkpoint_score": 0.14566539651188312,
+      "outside_scenario_rate": 0.05128205128205128,
+      "no_chat_rate": 0.5897435897435898
+    },
+    {
+      "model": "qwen2.5-72b",
+      "n_tasks": 39,
+      "mean_scenario_coverage": 0.23717948717948717,
+      "sd_scenario_coverage": 0.3699901519643561,
+      "any_target_contact_n": 14,
+      "any_target_contact_rate": 0.358974358974359,
+      "contact_rate_ci95": [
+        0.22742085458992867,
+        0.5158185144045146
+      ],
+      "success_n": 2,
+      "success_rate": 0.05128205128205128,
+      "mean_checkpoint_score": 0.19065934065934065,
+      "sd_checkpoint_score": 0.2572382078712041,
+      "outside_scenario_rate": 0.2564102564102564,
+      "no_chat_rate": 0.3589743589743589
+    },
+    {
+      "model": "sonnet-20241022",
+      "n_tasks": 39,
+      "mean_scenario_coverage": 0.7094268476621418,
+      "sd_scenario_coverage": 0.4394425055286085,
+      "any_target_contact_n": 30,
+      "any_target_contact_rate": 0.7692307692307693,
+      "contact_rate_ci95": [
+        0.6166374277165825,
+        0.8735419587485715
+      ],
+      "success_n": 13,
+      "success_rate": 0.3333333333333333,
+      "mean_checkpoint_score": 0.512057387057387,
+      "sd_checkpoint_score": 0.4049708457000175,
+      "outside_scenario_rate": 0.05128205128205128,
+      "no_chat_rate": 0.1282051282051282
+    }
+  ]
+}
