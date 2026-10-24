@@ -1,6 +1,6 @@
 # Benchmark Contribution Brainstorm: Role-Aware Help-Seeking
 
-> Discussion update, 2026-10-23. This is a research-design memo, not a finalized protocol. It revises the novelty framing after checking PeopleJoin, Muses-Bench, TheAgentCompany, Co-Gym, HiL-Bench, and Manager Agent Gym.
+> Discussion update, 2026-10-23. This is a seed memo for a **separate future research proposal**, not an expansion of the current Role-Aware Help-Seeking paper. It revises the novelty framing after checking PeopleJoin, Muses-Bench, TheAgentCompany, Co-Gym, HiL-Bench, and Manager Agent Gym. See the future-proposal queue in `06_Publication_Plan_20261023-1921.md`.
 
 ## 1. Revised premise
 
