@@ -37,18 +37,18 @@ Do not infer an internal uncertainty state from a question alone. The agent’s 
 
 ## Message-function categories for first-pass screening
 
-The current extractor assigns a transparent lexical **candidate** label; annotators must adjudicate it in context.
+The current extractor assigns a transparent lexical **candidate** label; annotators must adjudicate it in context. These are operational message-function buckets, not labels claimed to be an established taxonomy. Their literature/practice anchors and the mapping to higher-level episode modes are cross-referenced in `literature_industry_help_modes_synthesis_v1.md`.
 
-- **Information/input request:** asks for a fact, file location, preference, quantity, requirements, or other task input.
-- **Clarification/verification:** resolves ambiguity or checks a premise/answer.
-- **Advice/expertise/decision:** asks for judgment or recommendation.
-- **Status inquiry:** asks about task, issue, or work progress.
-- **Coordination/availability:** schedules or checks willingness/availability.
-- **Feedback/evaluation:** asks for opinion, rating, or performance feedback.
-- **Authority/action request:** asks someone to approve or perform an action.
-- **Information delivery/notification:** tells someone a result or provides an artifact/location.
-- **Short/name-only or unclear message:** retain for review; do not automatically call it help-seeking.
-- **Other/unclear:** retain original text and adjudicate.
+- **Information/input request:** asks for a fact, file location, preference, quantity, requirements, or other task input. (Related constructs: organizational information/help-seeking [R04], [R07].)
+- **Clarification/verification:** resolves ambiguity or checks a premise/answer. (Anchors: human-agent design guidance and delegation practice [R02], [R10], [R11].)
+- **Advice/expertise/decision:** asks for judgment or recommendation. (Anchors: workplace help/advice-seeking and source selection [R07]–[R09], [R23].)
+- **Status inquiry:** asks about task, issue, or work progress. (Anchors: multi-user coordination and status protocols [R04], [R19], [R20].)
+- **Coordination/availability:** schedules or checks willingness/availability. (Anchors: organizational accessibility and multi-user coordination [R04], [R07], [R08].)
+- **Feedback/evaluation:** asks for opinion, rating, or performance feedback. (Feedback-seeking is distinguished from help/information-seeking in workplace research [R09]; TAC supplies task-specific examples [R05].)
+- **Authority/action request:** asks someone to approve or perform an action. (Anchors: authority structures and human approval mechanisms [R01], [R02], [R13]–[R16].)
+- **Information delivery/notification:** tells someone a result or provides an artifact/location. (Anchors: process/status/artifact communication [R03], [R19], [R20].)
+- **Acknowledgment/action commitment or answer/data response:** conversational responses coded from the trajectory; retain as response/uptake evidence and link to the preceding request [R02], [R21]. These are not help-seeking categories by themselves.
+- **Short/name-only, other, or unclear message:** trace-derived data-quality/uncertainty buckets; retain for review and do not treat them as a literature-defined behavior type.
 
 The labels intentionally allow a directed survey question to be coded as `feedback/evaluation` while its task relation remains `task_mandated_contact`. Those are different analytic facts.
 
