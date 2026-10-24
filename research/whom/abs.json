@@ -1,0 +1,174 @@
+{
+ "Whom to Query for What: Adaptive Group Elicitation via Multi-Turn LLM Interactions": {
+  "title": "Whom to Query for What: Adaptive Group Elicitation via Multi-Turn LLM Interactions",
+  "id": "http://arxiv.org/abs/2602.14279v2",
+  "published": "2026-02-15",
+  "abs": "Eliciting information to reduce uncertainty about latent group-level properties from surveys and other collective assessments requires allocating limited questioning effort under real costs and missing data. Although large language models enable adaptive, multi-turn interactions in natural language, most existing elicitation methods optimize what to ask with a fixed respondent pool, and do not adapt respondent selection or leverage population structure when responses are partial or incomplete. To address this gap, we study adaptive group elicitation, a multi-round setting where an agent adaptively selects both questions and respondents under explicit query and participation budgets. We propose a theoretically grounded framework that combines (i) an LLM-based expected information gain objective for scoring candidate questions with (ii) heterogeneous graph neural network propagation that aggregates observed responses and participant attributes to impute missing responses and guide per-round respondent selection. This closed-loop procedure queries a small, informative subset of individuals while inferring population-level responses via structured similarity. Across three real-world opinion datasets, our method consistently improves population-level response prediction under constrained budgets, including a &gt;12% relative gain on CES at a 10% respondent budget.",
+  "authors": [
+   "Ruomeng Ding",
+   "Tianwei Gao",
+   "Thomas P. Zollo",
+   "Eitan Bachmat",
+   "Richard Zemel",
+   "Zhun Deng"
+  ],
+  "comment": "Published as a conference paper at ICML 2026"
+ },
+ "AgentAsk: Multi-Agent Systems Need to Ask": {
+  "title": "AgentAsk: Multi-Agent Systems Need to Ask",
+  "id": "http://arxiv.org/abs/2510.07593v2",
+  "published": "2025-10-08",
+  "abs": "Multi-agent systems (MAS) built on large language models promise improved problem-solving through collaboration, yet they often fail to consistently outperform strong single-agent baselines due to error propagation at inter-agent message handoffs.In this work, we conduct a systematic empirical analysis of such failures and introduce an edge-level error taxonomy that identifies four dominant error types: Data Gap, Signal Corruption, Referential Drift, and Capability Gap, as primary sources of failure in multi-agent interactions. Building on this taxonomy, we propose AgentAsk, a lightweight clarification module designed to intervene at the edge level in MAS to prevent cascading errors. The module operates by strategically applying minimal clarifications at critical points within the system, improving the accuracy and efficiency of the overall task. AgentAsk is trained to balance the trade-offs between clarification cost, latency, and accuracy, while it is also architecture-agnostic and can be easily integrated into existing systems. Evaluated across five benchmarks, AgentAsk consistently improves accuracy by up to 4.69%, while keeping latency and extra costs below 10% compared to baseline MAS, showcasing its high efficiency and minimal overhead.",
+  "authors": [
+   "Bohan Lin",
+   "Kuo Yang",
+   "Zelin Tan",
+   "Yingchuan Lai",
+   "Chen Zhang",
+   "Guibin Zhang"
+  ],
+  "comment": ""
+ },
+ "Multi-User Large Language Model Agents": {
+  "title": "Multi-User Large Language Model Agents",
+  "id": "http://arxiv.org/abs/2604.08567v2",
+  "published": "2026-03-19",
+  "abs": "Large language models (LLMs) and LLM-based agents are increasingly deployed as assistants in planning and decision making, yet most existing systems are implicitly optimized for a single-principal interaction paradigm, in which the model is designed to satisfy the objectives of one dominant user whose instructions are treated as the sole source of authority and utility. However, as they are integrated into team workflows and organizational tools, they are increasingly required to serve multiple users simultaneously, each with distinct roles, preferences, and authority levels, leading to multi-user, multi-principal settings with unavoidable conflicts, information asymmetry, and privacy constraints. In this work, we present the first systematic study of multi-user LLM agents. We begin by formalizing multi-user interaction with LLM agents as a multi-principal decision problem, where a single agent must account for multiple users with potentially conflicting interests and associated challenges. We then introduce a unified multi-user interaction protocol and design three targeted stress-testing scenarios to evaluate current LLMs' capabilities in instruction following, privacy preservation, and coordination. Our results reveal systematic gaps: frontier LLMs frequently fail to maintain stable prioritization under conflicting user objectives, exhibit increasing privacy violations over multi-turn interactions, and suffer from efficiency bottlenecks when coordination requires iterative information gathering.",
+  "authors": [
+   "Shu Yang",
+   "Shenzhe Zhu",
+   "Hao Zhu",
+   "José Ramón Enríquez",
+   "Di Wang",
+   "Alex Pentland"
+  ],
+  "comment": ""
+ },
+ "Harness-MU: A Safe, Governed, and Effective Harness for Multi-User LLM Agents": {
+  "title": "Harness-MU: A Safe, Governed, and Effective Harness for Multi-User LLM Agents",
+  "id": "http://arxiv.org/abs/2606.21856v1",
+  "published": "2026-06-20",
+  "abs": "The increasing deployment of large language model (LLM) agents in collaborative workflows demands robust multi-user, multi-principal interaction mechanisms capable of enforcing access permissions, resolving authoritative conflicts, and preventing unauthorized data disclosure. However, a fundamental mismatch exists between the single-user training paradigm of contemporary LLMs and the hard constraints required for multi-principal governance, rendering probabilistic, prompt-based safeguards vulnerable under multi-turn adversarial interactions.Our key insight is that governance constraints -- who is authorized, what is restricted, and whose instructions take precedence -- are deterministic runtime variables that should be enforced by execution hooks rather than entrusted to the LLM. We present \\textbf{Harness-MU}, the first model-agnostic, zero-tuning infrastructure framework for multi-user LLM agents. By decoupling language generation from safety orchestration, Harness-MU guarantees unbreakable permission boundaries while maximizing compliant demand satisfaction. Across four frontier open-weight and proprietary models on the \\textit{Muses-Bench} benchmark, Harness-MU achieves the goal of privacy preservation across all access-control attacks, outperforming the standard baseline by 0.28--0.39 in utility score and improving instruction-following accuracy by up to 48.9 percentage points. Harness-MU advances the philosophy of \\textit{Harness Engineering}, establishing that systematic infrastructure is essential for solving LLM multi-principal governance challenges. The code and data are available at https://github.com/YuanJrShiuan/Harness-MulUser.",
+  "authors": [
+   "Wangxuan Fan",
+   "Xiaoyu Nie",
+   "Zhongxiang Dai"
+  ],
+  "comment": "15 pages, 4 figures, 15 tables"
+ },
+ "Collaborative Memory: Multi-User Memory Sharing in LLM Agents with Dynamic Access Control": {
+  "title": "Collaborative Memory: Multi-User Memory Sharing in LLM Agents with Dynamic Access Control",
+  "id": "http://arxiv.org/abs/2505.18279v1",
+  "published": "2025-05-23",
+  "abs": "Complex tasks are increasingly delegated to ensembles of specialized LLM-based agents that reason, communicate, and coordinate actions-both among themselves and through interactions with external tools, APIs, and databases. While persistent memory has been shown to enhance single-agent performance, most approaches assume a monolithic, single-user context-overlooking the benefits and challenges of knowledge transfer across users under dynamic, asymmetric permissions. We introduce Collaborative Memory, a framework for multi-user, multi-agent environments with asymmetric, time-evolving access controls encoded as bipartite graphs linking users, agents, and resources. Our system maintains two memory tiers: (1) private memory-private fragments visible only to their originating user; and (2) shared memory-selectively shared fragments. Each fragment carries immutable provenance attributes (contributing agents, accessed resources, and timestamps) to support retrospective permission checks. Granular read policies enforce current user-agent-resource constraints and project existing memory fragments into filtered transformed views. Write policies determine fragment retention and sharing, applying context-aware transformations to update the memory. Both policies may be designed conditioned on system, agent, and user-level information. Our framework enables safe, efficient, and interpretable cross-user knowledge sharing, with provable adherence to asymmetric, time-varying policies and full auditability of memory operations.",
+  "authors": [
+   "Alireza Rezazadeh",
+   "Zichao Li",
+   "Ange Lou",
+   "Yuying Zhao",
+   "Wei Wei",
+   "Yujia Bao"
+  ],
+  "comment": ""
+ },
+ "Whose Side Is Your Agent On? Multi-Party Principal Loyalty in LLM Agents": {
+  "title": "Whose Side Is Your Agent On? Multi-Party Principal Loyalty in LLM Agents",
+  "id": "http://arxiv.org/abs/2606.30383v1",
+  "published": "2026-06-29",
+  "abs": "A rapidly growing class of LLM agents is multi-party: the agent acts for a principal (who briefs it, sends follow-ups, and receives results) while also conversing in a separate channel with a counterparty whose interests may diverge (negotiating with a vendor, screening inbound requests, or mediating between employees). Here \"help whoever you are talking to\" is the wrong objective. The agent must stay loyal to the principal it represents without over-refusing the principal's own cooperative asks. We study this multi-party loyalty problem and contribute a measurement instrument, two mechanisms, and a structural lesson. PrincipalBench is a 75-item multi-turn benchmark with leak probes, dual judges, and an integrity-audit gate. Across 13 frontier subjects it exposes a sharp split (&lt;=20% vs. 53.6-75.3% harm) invisible to single-turn safety evaluations: a selective cluster that declines adversarial probes while still following the principal's legitimate requests, and an over-refusing cluster that refuses broadly. (M1) A prompt-time loyalty scaffold (a fixed system prompt of seven prioritized rules, open-coded from 50+ failure trajectories) holds Claude-Sonnet to 19.4% harm and all nine selective subjects to &lt;=20%. (M2) A per-token-KL distillation recipe transfers a prompted Qwen3-32B teacher into 8B Qwen3 and Llama-3.1 students, the strongest open-weight recipe we measure. (Lesson) Both mechanisms only move along a common leak/over-refusal trade-off rather than crossing it: improving one axis costs the other, and the jointly favorable outcome stays out of reach.",
+  "authors": [
+   "Bojie Li",
+   "Noah Shi"
+  ],
+  "comment": ""
+ },
+ "Agentic AI and Human-in-the-Loop Interventions: Field Experimental Evidence from Alibaba's Customer Service Operations": null,
+ "Cost-sensitive learning to defer to multiple experts with workload constraints": {
+  "title": "Cost-Sensitive Learning to Defer to Multiple Experts with Workload Constraints",
+  "id": "http://arxiv.org/abs/2403.06906v3",
+  "published": "2024-03-11",
+  "abs": "Learning to defer (L2D) aims to improve human-AI collaboration systems by learning how to defer decisions to humans when they are more likely to be correct than an ML classifier. Existing research in L2D overlooks key real-world aspects that impede its practical adoption, namely: i) neglecting cost-sensitive scenarios, where type I and type II errors have different costs; ii) requiring concurrent human predictions for every instance of the training dataset; and iii) not dealing with human work-capacity constraints. To address these issues, we propose the \\textit{deferral under cost and capacity constraints framework} (DeCCaF). DeCCaF is a novel L2D approach, employing supervised learning to model the probability of human error under less restrictive data requirements (only one expert prediction per instance) and using constraint programming to globally minimize the error cost, subject to workload limitations. We test DeCCaF in a series of cost-sensitive fraud detection scenarios with different teams of 9 synthetic fraud analysts, with individual work-capacity constraints. The results demonstrate that our approach performs significantly better than the baselines in a wide array of scenarios, achieving an average $8.4\\%$ reduction in the misclassification cost. The code used for the experiments is available at https://github.com/feedzai/deccaf",
+  "authors": [
+   "Jean V. Alves",
+   "Diogo Leitão",
+   "Sérgio Jesus",
+   "Marco O. P. Sampaio",
+   "Javier Liébana",
+   "Pedro Saleiro"
+  ],
+  "comment": ""
+ },
+ "Two-stage learning to defer with multiple experts": null,
+ "Why Ask One When You Can Ask k? Learning-to-Defer to the Top-k Experts": {
+  "title": "Why Ask One When You Can Ask $k$? Learning-to-Defer to the Top-$k$ Experts",
+  "id": "http://arxiv.org/abs/2504.12988v7",
+  "published": "2025-04-17",
+  "abs": "Existing Learning-to-Defer (L2D) frameworks are limited to single-expert deferral, forcing each query to rely on only one expert and preventing the use of collective expertise. We introduce the first framework for Top-$k$ Learning-to-Defer, which allocates queries to the $k$ most cost-effective entities. Our formulation unifies and strictly generalizes prior approaches, including the one-stage and two-stage regimes, selective prediction, and classical cascades. In particular, it recovers the usual Top-1 deferral rule as a special case while enabling principled collaboration with multiple experts when $k&gt;1$. We further propose Top-$k(x)$ Learning-to-Defer, an adaptive variant that learns the optimal number of experts per query based on input difficulty, expert quality, and consultation cost. To enable practical learning, we develop a novel surrogate loss that is Bayes-consistent, $\\mathcal{H}_h$-consistent in the one-stage setting, and $(\\mathcal{H}_r,\\mathcal{H}_g)$-consistent in the two-stage setting. Crucially, this surrogate is independent of $k$, allowing a single policy to be learned once and deployed flexibly across $k$. Experiments across both regimes show that Top-$k$ and Top-$k(x)$ deliver superior accuracy-cost trade-offs, opening a new direction for multi-expert deferral in L2D.",
+  "authors": [
+   "Yannis Montreuil",
+   "Axel Carlier",
+   "Lai Xing Ng",
+   "Wei Tsang Ooi"
+  ],
+  "comment": ""
+ },
+ "When More Experts Hurt: Underfitting in Multi-Expert Learning to Defer": {
+  "title": "When More Experts Hurt: Underfitting in Multi-Expert Learning to Defer",
+  "id": "http://arxiv.org/abs/2602.17144v1",
+  "published": "2026-02-19",
+  "abs": "Learning to Defer (L2D) enables a classifier to abstain from predictions and defer to an expert, and has recently been extended to multi-expert settings. In this work, we show that multi-expert L2D is fundamentally more challenging than the single-expert case. With multiple experts, the classifier's underfitting becomes inherent, which seriously degrades prediction performance, whereas in the single-expert setting it arises only under specific conditions. We theoretically reveal that this stems from an intrinsic expert identifiability issue: learning which expert to trust from a diverse pool, a problem absent in the single-expert case and renders existing underfitting remedies failed. To tackle this issue, we propose PiCCE (Pick the Confident and Correct Expert), a surrogate-based method that adaptively identifies a reliable expert based on empirical evidence. PiCCE effectively reduces multi-expert L2D to a single-expert-like learning problem, thereby resolving multi expert underfitting. We further prove its statistical consistency and ability to recover class probabilities and expert accuracies. Extensive experiments across diverse settings, including real-world expert scenarios, validate our theoretical results and demonstrate improved performance.",
+  "authors": [
+   "Shuqi Liu",
+   "Yuzhou Cao",
+   "Lei Feng",
+   "Bo An",
+   "Luke Ong"
+  ],
+  "comment": ""
+ },
+ "Can LLMs help you at work? A sandbox for evaluating LLM agents in enterprise environments": {
+  "title": "Can LLMs Help You at Work? A Sandbox for Evaluating LLM Agents in Enterprise Environments",
+  "id": "http://arxiv.org/abs/2510.27287v1",
+  "published": "2025-10-31",
+  "abs": "Enterprise systems are crucial for enhancing productivity and decision-making among employees and customers. Integrating LLM based systems into enterprise systems enables intelligent automation, personalized experiences, and efficient information retrieval, driving operational efficiency and strategic growth. However, developing and evaluating such systems is challenging due to the inherent complexity of enterprise environments, where data is fragmented across multiple sources and governed by sophisticated access controls. We present EnterpriseBench, a comprehensive benchmark that simulates enterprise settings, featuring 500 diverse tasks across software engineering, HR, finance, and administrative domains. Our benchmark uniquely captures key enterprise characteristics including data source fragmentation, access control hierarchies, and cross-functional workflows. Additionally, we provide a novel data generation pipeline that creates internally consistent enterprise tasks from organizational metadata. Experiments with state-of-the-art LLM agents demonstrate that even the most capable models achieve only 41.8% task completion, highlighting significant opportunities for improvement in enterprise-focused AI systems.",
+  "authors": [
+   "Harsh Vishwakarma",
+   "Ankush Agarwal",
+   "Ojas Patil",
+   "Chaitanya Devaguptapu",
+   "Mahesh Chandran"
+  ],
+  "comment": "Accepted at EMNLP 2025 Main Track"
+ },
+ "LLM-Powered Multi-Agent Collaboration for Intelligent Industrial On-Call Automation": null,
+ "GroupMemBench: Benchmarking LLM Agent Memory in Multi-Party Conversations": {
+  "title": "GroupMemBench: Benchmarking LLM Agent Memory in Multi-Party Conversations",
+  "id": "http://arxiv.org/abs/2605.14498v2",
+  "published": "2026-05-14",
+  "abs": "Large Language Model (LLM) agents increasingly serve as personal assistants and workplace collaborators, where their utility depends on memory systems that extract, retrieve, and apply information across long-running conversations. However, both existing memory systems and benchmarks are built around the dyadic, single-user setup, even though real deployments routinely span groups and channels with multiple users interacting with the agent and with each other. This mismatch leaves three properties of group memory unmeasured: (i) group dynamics that go beyond concatenated one-on-one chats, (ii) speaker-grounded belief tracking, where the per-user memory modeling is needed, and (iii) audience-adapted language, where Theory-of-Mind shifts produce role-specific vocabulary. We introduce GroupMemBench, a benchmark that exposes all three. A graph-grounded synthesis pipeline produces multi-party conversations with controllable reply structure and conditions each message on per-user personas and target audiences. An adversarial query pipeline then binds every question to a specific asker across six categories, spanning multi-hop reasoning, knowledge update, term ambiguity, user-implicit reasoning, temporal reasoning, and abstention, and iteratively searches challenging, realistic queries that reflect comprehensive memory capability. Benchmarking leading memory systems exposes a sharp collapse: the strongest one reaches only 46.0% average accuracy, with knowledge update at 27.1% and term ambiguity at 37.7%, while a simple BM25 baseline matches or exceeds most agent memory systems. This indicates current memory ingestion erases the structural and lexical features group memory depends on, leaving multi-user memory far from solved.",
+  "authors": [
+   "Jingbo Yang",
+   "Kwei-Herng Lai",
+   "Xiaowen Wang",
+   "Shiyu Chang",
+   "Yaar Harari",
+   "Evgeniy Gabrilovich"
+  ],
+  "comment": ""
+ },
+ "Helping Customers in Distress: An LLM-powered Agent that Converses, Probes, and Routes": {
+  "title": "Helping Customers in Distress: An LLM-powered Agent that Converses, Probes, and Routes",
+  "id": "http://arxiv.org/abs/2605.16268v2",
+  "published": "2026-03-31",
+  "abs": "Banks receive millions of reports of fraud, scams, and disputed transactions every year, making it challenging to accurately direct customers to the appropriate specialist teams for assistance. The existing manual process driven by humans is slow and stressful for both customers and staff. To address this, we develop a customer-facing AI powered triaging agent that leverages large language models (LLMs) to conduct multi-turn conversations, ask relevant questions, and classify cases for accurate, policy-guided routing, making it embedded in the customer journey. To evaluate and continuously improve the agent, synthetic digital twins of real customers were simulated, generating realistic, labelled dialogues based on historical data to test a wide range of real-world scenarios. This work details the triage agent's modelling approach, integration with policy, safety guardrails and reasoning frameworks, the use of the synthetic agent for scalable evaluation, and findings on the AI system's accuracy, robustness, and compliance. Results show that the agent successfully improves triaging of historical cases, achieving a 30.6% increase in classification accuracy, with high satisfaction levels reported by our subject-matter experts, highlighting how targeted probing can lead to more effective triage in banking operations at scale.",
+  "authors": [
+   "Alankar Atreya",
+   "Stefan Sylvius Wagner",
+   "Devesh Batra",
+   "Robert Hankache",
+   "Cristovao Iglesias",
+   "Patrick Sinclair"
+  ],
+  "comment": ""
+ }
+}

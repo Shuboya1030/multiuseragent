@@ -1,0 +1,42 @@
+{
+ "Current and future use of large language models for knowledge work": {
+  "title": "Current and Future Use of Large Language Models for Knowledge Work",
+  "year": 2025,
+  "venue": "Proceedings of the ACM on Human-Computer Interaction",
+  "doi": "https://doi.org/10.1145/3757403",
+  "authors": [
+   "Michelle Brachman",
+   "Amina El-Ashry",
+   "Casey Dugan",
+   "Werner Geyer"
+  ],
+  "cited": 12,
+  "abs": "Large Language Models (LLMs) have introduced a paradigm shift in interaction with AI technology, enabling knowledge workers to complete tasks by specifying their desired outcome in natural language. LLMs have the potential to increase productivity and reduce tedious tasks in an unprecedented way. A systematic study of LLM adoption for work can provide insight into how LLMs can best support these workers. To explore knowledge workers' current and desired usage of LLMs, we ran a survey (n=216). Workers described tasks they already used LLMs for, like generating code or improving text, but imagined a future with LLMs integrated into their workflows and data. We ran a second survey (n=107) a year later that validated our initial findings and provides insight into up-to-date LLM use by knowledge workers. We discuss implications for adoption and design of generative AI technologies for knowledge work."
+ },
+ "Read the Room: Exploring When LLM Agents Should Participate in Everyday Mixed-Context Group Chats on Mobile Messaging Platforms": {
+  "title": "Read the Room: Exploring When LLM Agents Should Participate in Everyday Mixed-Context Group Chats on Mobile Messaging Platforms",
+  "year": 2026,
+  "venue": "Extended Abstracts of the CHI Conference on Human Factors in Computing Systems (CHI EA)",
+  "doi": "https://doi.org/10.1145/3772363.3798392",
+  "authors": [
+   "Sunkyeung Yoo"
+  ],
+  "cited": 0,
+  "abs": "Invoking an AI agent mid-conversation in group chats can disrupt conversational flow. Prior work has examined how agents can proactively join group conversations in timely, contextually appropriate ways, but has largely focused on single-context interactions—limiting its applicability to real-world conversations where casual and goal-oriented talk are intertwined. This study investigates when an agent should proactively participate in mixed-context group chats. We conducted sessions in a ChatGPT group chat with six dyads of acquaintances, where each pair engaged in both casual conversation and travel planning while the agent proactively participated based on the ongoing context. We found that proactive participation was perceived as appropriate when the conversation lacked a clear next step and when the information need was already aligned, but was seen as disruptive during active opinion exchange—across both contexts, but especially in casual talk. We conclude with design implications for the timing of agent participation in mixed-context group chats."
+ },
+ "Role-aware language models for secure and contextualized access control in organizations": {
+  "title": "Role-Aware Language Models for Secure and Contextualized Access Control in Organizations",
+  "year": 2025,
+  "venue": "International Joint Conference on Natural Language Processing and Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics (IJCNLP-AACL)",
+  "doi": "https://doi.org/10.18653/v1/2025.ijcnlp-long.29",
+  "authors": [
+   "Saeed Almheiri",
+   "Yerulan Kongrat",
+   "Adrian Santosh",
+   "Ruslan Tasmukhanov",
+   "Josemaria Loza Vera"
+  ],
+  "cited": 2,
+  "abs": "Saeed Almheiri, Yerulan Kongrat, Adrian Santosh, Ruslan Tasmukhanov, Josemaria Loza Vera, Muhammad Dehan Al Kautsar, Fajri Koto. Proceedings of the 14th International Joint Conference on Natural Language Processing and the 4th Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics. 2025."
+ }
+}

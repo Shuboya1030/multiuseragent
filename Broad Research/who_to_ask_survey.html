@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.12.1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Who to Ask</title>
+  <style>
+
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+</style>
+  <style type="text/css">:root{--bg:#fafaf8;--fg:#1d1d1f;--mut:#666;--line:#e3e3e0;--acc:#2f5fb3;--th:#f0f0ec}
+@media (prefers-color-scheme:dark){:root{--bg:#18181a;--fg:#e8e8e6;--mut:#a0a0a0;--line:#333;--acc:#7aa7ff;--th:#24242a}}
+body{background:var(--bg);color:var(--fg);font:15px/1.65 -apple-system,"Segoe UI","Microsoft YaHei",sans-serif;max-width:1200px;margin:0 auto;padding:24px 16px}
+h1{font-size:1.6em}h2{margin-top:2em;border-bottom:2px solid var(--line);padding-bottom:4px}
+a{color:var(--acc)}table{border-collapse:collapse;width:100%;font-size:13.5px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:6px 8px;vertical-align:top}th{background:var(--th);position:sticky;top:0}
+tr:nth-child(even) td{background:color-mix(in srgb,var(--th) 40%,transparent)}
+blockquote{border-left:4px solid var(--acc);margin:0;padding:4px 12px;color:var(--mut)}
+nav#TOC{background:var(--th);padding:8px 16px;border-radius:8px;font-size:14px}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Who to Ask</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#agent-应该找谁多人企业协作中的求助对象选择文献核查与研究设计-v0.1" id="toc-agent-应该找谁多人企业协作中的求助对象选择文献核查与研究设计-v0.1">Agent
+应该“找谁”：多人企业协作中的求助对象选择——文献核查与研究设计 v0.1</a>
+<ul>
+<li><a href="#问题定义" id="toc-问题定义">0. 问题定义</a></li>
+<li><a href="#有没有论文做过结论没有发现完全覆盖这个问题的论文相邻方向各做了一部分" id="toc-有没有论文做过结论没有发现完全覆盖这个问题的论文相邻方向各做了一部分">1.
+有没有论文做过？结论：<strong>没有发现完全覆盖这个问题的论文；相邻方向各做了一部分</strong></a>
+<ul>
+<li><a href="#a.-最接近的四条线" id="toc-a.-最接近的四条线">1A.
+最接近的四条线</a></li>
+<li><a href="#b.-其他相关但更远的工作" id="toc-b.-其他相关但更远的工作">1B. 其他相关但更远的工作</a></li>
+<li><a href="#c.-结论" id="toc-c.-结论">1C. 结论</a></li>
+</ul></li>
+<li><a href="#能用的现成数据和环境已核实" id="toc-能用的现成数据和环境已核实">2.
+能用的现成数据和环境（已核实）</a></li>
+<li><a href="#建议的研究框架这是研究设计不是已有结论" id="toc-建议的研究框架这是研究设计不是已有结论">3.
+建议的研究框架（这是研究设计，不是已有结论）</a>
+<ul>
+<li><a href="#形式化" id="toc-形式化">3.1 形式化</a></li>
+<li><a href="#三个可检验的研究问题" id="toc-三个可检验的研究问题">3.2
+三个可检验的研究问题</a></li>
+<li><a href="#实验方案" id="toc-实验方案">3.3 实验方案</a></li>
+</ul></li>
+<li><a href="#风险与难点" id="toc-风险与难点">4. 风险与难点</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="agent-应该找谁多人企业协作中的求助对象选择文献核查与研究设计-v0.1">Agent
+应该“找谁”：多人企业协作中的求助对象选择——文献核查与研究设计 v0.1</h1>
+<ul>
+<li>检索日：2026-10-23。Google Scholar 共 12 个检索式（限 2022
+年及以后）；摘要通过 arXiv API 获取，15 篇中拿到 12 篇；数据集已在
+GitHub 上核实。</li>
+<li>原始结果：<code>research/whom/gs/</code>，<code>research/whom/abs.json</code></li>
+<li>标 ⚠️ 的条目只看到 Google Scholar 标题，没有读到摘要。</li>
+</ul>
+<h2 id="问题定义">0. 问题定义</h2>
+<p>ReHAC 一类工作研究的是 <strong>when</strong>：agent
+在哪一步该请人介入。本文研究的是
+<strong>whom</strong>：在多个用户共用一个 agent
+的企业场景里，每个人的角色、权限、知识和成本都不同，agent
+求助时应该<strong>找哪一个人</strong>。</p>
+<p>用户提出的设想是：whom
+的决策应该建立在一个<strong>显式的角色定义系统</strong>之上。</p>
+<p>把问题拆开，“找谁”这个决策依赖四类信息：</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>维度</th>
+<th>含义</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>知识（Knowledge）</td>
+<td>谁知道这条信息</td>
+<td>HR 经理知道各部门的设备需求</td>
+</tr>
+<tr>
+<td>权限（Authority）</td>
+<td>谁有权批准或决定</td>
+<td>财务总监批准预算</td>
+</tr>
+<tr>
+<td>可用性与成本（Availability/Cost）</td>
+<td>谁有空、打扰谁的代价最高</td>
+<td>打扰 CTO 的代价高于打扰工程师</td>
+</tr>
+<tr>
+<td>可信度（Reliability）</td>
+<td>谁给的答案更可能正确</td>
+<td>一线工程师对细节的了解可能比经理准确</td>
+</tr>
+</tbody>
+</table>
+<h2 id="有没有论文做过结论没有发现完全覆盖这个问题的论文相邻方向各做了一部分">1.
+有没有论文做过？结论：<strong>没有发现完全覆盖这个问题的论文；相邻方向各做了一部分</strong></h2>
+<h3 id="a.-最接近的四条线">1A. 最接近的四条线</h3>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>方向</th>
+<th>代表工作</th>
+<th>已经做到的</th>
+<th>缺少的</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>多专家延迟决策（Multi-expert Learning to Defer,
+L2D）</strong>（ML 理论方向）</td>
+<td>DeCCaF（<a href="https://arxiv.org/abs/2403.06906">arXiv
+2403.06906</a>）；Top-k L2D（ICLR 2026，<a href="https://arxiv.org/abs/2504.12988">arXiv
+2504.12988</a>）；Two-stage multi-expert L2D（NeurIPS 2023）；PiCCE（<a href="https://arxiv.org/abs/2602.17144">arXiv 2602.17144</a>）</td>
+<td><strong>学习把每个样本分给哪一位专家</strong>，同时考虑专家各自的准确率、成本和<strong>工作量上限</strong>。DeCCaF
+在欺诈检测场景中模拟了 9 名风控分析员，误分类成本平均降低 8.4%。Top-k
+一次可以问 k 位专家。PiCCE
+指出，在专家很多时，“该信任哪位专家”这件事本身很难学，会导致欠拟合</td>
+<td>这些方法针对<strong>单步分类</strong>，而不是多步 agent
+工作流；专家只用“准确率向量”来刻画，<strong>没有角色、权限、组织结构</strong>；也不涉及对话</td>
+</tr>
+<tr>
+<td><strong>自适应群体问询</strong></td>
+<td><strong>Whom to Query for What</strong>（ICML 2026，<a href="https://arxiv.org/abs/2602.14279">arXiv 2602.14279</a>）</td>
+<td>LLM agent
+<strong>同时选择问什么、问谁</strong>，在预算约束下进行。用 LLM
+估计每个问题的期望信息增益，再用<strong>异构图神经网络</strong>利用参与者的属性来选人</td>
+<td>目标是<strong>估计群体意见</strong>（问卷调查），不是完成工作任务；把人看作同质的“受访者”，<strong>没有区分角色和权限</strong></td>
+</tr>
+<tr>
+<td><strong>多用户 LLM agent</strong></td>
+<td><strong>Multi-User LLM Agents</strong>（<a href="https://arxiv.org/abs/2604.08567">arXiv
+2604.08567</a>）；<strong>Harness-MU</strong>（<a href="https://arxiv.org/abs/2606.21856">arXiv
+2606.21856</a>）；<strong>Collaborative Memory</strong>（<a href="https://arxiv.org/abs/2505.18279">arXiv
+2505.18279</a>）；<strong>PrincipalBench</strong>（<a href="https://arxiv.org/abs/2606.30383">arXiv
+2606.30383</a>）；GroupMemBench</td>
+<td>把“一个 agent
+服务多个用户”形式化为<strong>多委托人决策问题</strong>，用户之间有不同的<strong>角色、偏好、权限等级</strong>；Harness-MU
+用执行钩子强制执行“谁有权限、谁的指令优先”；Collaborative Memory
+用二部图表示“用户—agent—资源”的访问控制</td>
+<td>研究的是<strong>被动方向</strong>：多个人向 agent 发指令时，agent
+该听谁的、哪些信息不能泄露。<strong>没有研究主动方向</strong>：agent
+卡住时该去找谁</td>
+</tr>
+<tr>
+<td><strong>Agent 内部的路由与澄清</strong></td>
+<td>AgentAsk（ACL 2026）；MasRouter（ACL 2025）；AgentRouter</td>
+<td>在多 agent
+系统里，学习<strong>在哪条消息传递的边上发起澄清</strong>、把子任务<strong>路由给哪个
+agent</strong>；AgentAsk 训练时同时权衡澄清的成本、延迟和准确率</td>
+<td>路由的对象是 <strong>agent
+或模型</strong>，不是人；不涉及人的组织角色</td>
+</tr>
+</tbody>
+</table>
+<h3 id="b.-其他相关但更远的工作">1B. 其他相关但更远的工作</h3>
+<ul>
+<li><strong>企业环境基准里已经有“人”和“角色”</strong>：
+<ul>
+<li>TheAgentCompany 有 17 个模拟同事，每人有职位、职责和所在频道；agent
+必须<strong>自己判断该联系谁</strong>（详见 §2）。</li>
+<li>EnterpriseBench（EMNLP 2025，<a href="https://arxiv.org/abs/2510.27287">arXiv
+2510.27287</a>）建模了<strong>访问控制层级</strong>和跨部门工作流，500
+个任务，最强模型的完成率是 41.8%。</li>
+<li>但这两个基准都<strong>没有把“找谁”作为单独的评测维度</strong>。</li>
+</ul></li>
+<li><strong>企业升级与分流</strong>：
+<ul>
+<li>银行欺诈分流 agent（<a href="https://arxiv.org/abs/2605.16268">arXiv
+2605.16268</a>）通过对话把客户<strong>路由到正确的专家团队</strong>，分类准确率提升
+30.6%。不过它路由的是<strong>客户</strong>，不是 agent 自己求助。</li>
+<li>⚠️ 阿里客服现场实验（arXiv 2605.14830）、工业值班（on-call）多 agent
+系统（ASE 2025）：只看到标题，没有读到摘要。</li>
+</ul></li>
+<li><strong>社区问答里的专家发现与问题路由</strong>：传统 IR
+方向，把问题推送给最可能会答的人。它提供了“找谁”的经典方法，比如用人的话题画像和社交关系来匹配，但不涉及
+agent。</li>
+</ul>
+<h3 id="c.-结论">1C. 结论</h3>
+<ul>
+<li>“<strong>在多步企业任务中，agent
+主动求助时，基于显式的角色和权限模型选择找哪个人</strong>”这一组合，在本轮检索中<strong>没有找到直接对应的论文</strong>。</li>
+<li>这个结论只说明本轮没找到，不等于确定不存在。检索覆盖 Google Scholar
+前 10 条结果、12 个检索式，可能有遗漏，尤其是 2026
+年下半年的预印本。投稿前需要再做一次针对性检索。</li>
+<li><strong>新颖性风险评估</strong>：
+<ul>
+<li>方向的组合较新，风险中低。</li>
+<li>但每个组件都有前人工作，至少需要和以下三类做对比：
+<ul>
+<li>多专家 L2D：怎么选专家；</li>
+<li>Multi-User LLM Agents / Harness-MU：怎么建模角色和权限；</li>
+<li>ReHAC：何时请人介入。</li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="能用的现成数据和环境已核实">2.
+能用的现成数据和环境（已核实）</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>资源</th>
+<th>和“找谁”的关系</th>
+<th>现状</th>
+<th>许可证</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TheAgentCompany</strong>（<a href="https://github.com/TheAgentCompany/TheAgentCompany">repo</a>）</td>
+<td><strong>最直接可用</strong>。<code>servers/rocketchat/npc/npc_definition.json</code>
+定义了 <strong>18 个角色</strong>（其中 17
+个是人）：CTO、数据库项目经理、HR
+经理、财务总监、销售总监、产品经理、QA、UX
+等，每人都有职责、项目、频道。部分任务（41 个）用
+<code>scenarios.json</code> 规定了<strong>哪个 NPC
+掌握哪条信息</strong>，比如 Jessica Lee、Huang Jie、Chen Xinyi
+分别掌握各自部门的设备需求</td>
+<td>175 个任务；公开轨迹约 1.9k
+条（<code>TheAgentCompany/experiments</code>），可以从中分析 agent
+<strong>问了谁、有没有问对人</strong></td>
+<td>主仓库许可证待查；experiments 仓库未声明许可证</td>
+</tr>
+<tr>
+<td><strong>EnterpriseBench</strong>（<a href="https://github.com/ast-fri/EnterpriseBench">ast-fri/EnterpriseBench</a>）</td>
+<td>带<strong>组织元数据</strong>和<strong>访问控制层级</strong>，有数据生成管线，可以按组织结构生成任务</td>
+<td>500 个任务</td>
+<td>MIT</td>
+</tr>
+<tr>
+<td><strong>Muses-Bench</strong>（Harness-MU）/ Multi-User LLM Agents
+的场景</td>
+<td>有角色和权限冲突的场景，可以借用其中的角色与权限建模</td>
+<td>是否开源未核实</td>
+<td>未核实</td>
+</tr>
+<tr>
+<td><strong>τ²-bench</strong></td>
+<td>只有一个用户，但用户和 agent 都能操作环境；可以扩展成多个用户</td>
+<td>已开源</td>
+<td>MIT</td>
+</tr>
+<tr>
+<td><strong>多专家 L2D 数据</strong>（DeCCaF
+用的合成欺诈分析员数据等）</td>
+<td>用于在单步决策上对照验证“选专家”算法</td>
+<td>DeCCaF 代码在 <a href="https://github.com/feedzai/deccaf">feedzai/deccaf</a></td>
+<td>未核实</td>
+</tr>
+<tr>
+<td><strong>ReHAC 数据</strong></td>
+<td>只能提供 when 维度，可以作为 whom 的对照组</td>
+<td>已开源</td>
+<td>未核实</td>
+</tr>
+</tbody>
+</table>
+<h2 id="建议的研究框架这是研究设计不是已有结论">3.
+建议的研究框架（这是研究设计，不是已有结论）</h2>
+<h3 id="形式化">3.1 形式化</h3>
+<ul>
+<li>在 ReHAC 的 MDP 基础上，把动作空间从“agent 或人”扩展为“agent，或 人₁
+… 人ₙ”。</li>
+<li>每个人 hᵢ 有一个<strong>角色档案</strong>：
+<ul>
+<li>Rᵢ = ⟨知识域 Kᵢ，权限 Aᵢ，成本 cᵢ，可用性 vᵢ，可信度 ρᵢ⟩</li>
+<li>来源：从组织架构、职责描述、历史交互中构建。</li>
+</ul></li>
+<li>奖励：</li>
+</ul>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mo>=</mo><mi>T</mi><mo>−</mo><munder><mo>∑</mo><mi>t</mi></munder><mi>λ</mi><mo>⋅</mo><msub><mi>c</mi><msub><mi>h</mi><mi>t</mi></msub></msub><mo>−</mo><mi>μ</mi><mo>⋅</mo><mn mathvariant="double-struck">𝟙</mn><mo stretchy="false" form="prefix">[</mo><mtext mathvariant="normal">越权或泄露</mtext><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">R = T - \sum_t \lambda \cdot c_{h_t} - \mu \cdot \mathbb{1}[\text{越权或泄露}]</annotation></semantics></math></p>
+<ul>
+<li>也就是说，要在任务成功、打扰谁的成本、权限违规三者之间权衡。</li>
+</ul>
+<h3 id="三个可检验的研究问题">3.2 三个可检验的研究问题</h3>
+<ol type="1">
+<li><strong>显式角色模型有没有用？</strong> 对比三种设置：
+<ul>
+<li>无角色信息：agent 只知道人名；</li>
+<li>只有自然语言职责描述，即 TheAgentCompany 现有的设置；</li>
+<li>结构化角色档案，即本文提出的框架。</li>
+</ul></li>
+<li><strong>结构化角色档案能不能从数据中学出来？</strong>
+比如从历史问答记录中推断谁掌握什么知识。这对应信息检索里的专家发现。</li>
+<li><strong>when 和 whom 要不要联合决策？</strong> 对比两种做法：
+<ul>
+<li>先决定是否求助，再决定找谁（两阶段）；</li>
+<li>一个策略同时输出“是否求助”和“找谁”。</li>
+</ul></li>
+</ol>
+<h3 id="实验方案">3.3 实验方案</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>步骤</th>
+<th>做法</th>
+<th>成本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>① 诊断性研究（最便宜，可以先做）</td>
+<td>在 TheAgentCompany 公开的约 1.9k 条轨迹上，标注每次 agent 联系 NPC
+的情况：<strong>问对人 / 问错人 / 该问没问 /
+不该问却问了</strong>。统计“找错人”在失败案例中占多大比例</td>
+<td>不需要算力，主要是标注；可以用 LLM 预标注加人工抽检</td>
+</tr>
+<tr>
+<td>② 基准构建</td>
+<td>扩展 TheAgentCompany 的 NPC
+场景：给每个任务设置<strong>多个可能的求助对象</strong>（干扰项、有权限但不知情的人、知情但没有权限的人），并为打扰每个人设定成本</td>
+<td>中：需要写场景和评测器</td>
+</tr>
+<tr>
+<td>③ 方法对比</td>
+<td>基线包括：随机选人；LLM 读职责描述后自行判断（prompt 方法）；多专家
+L2D 改写版；ReHAC 扩展到多人动作空间；本文提出的“角色档案 +
+学习”方法</td>
+<td>中高：训练 7B 级别的策略模型，参考 ReHAC 的规模</td>
+</tr>
+<tr>
+<td>④ 真人验证（可选）</td>
+<td>小规模真人扮演角色，参照 ReHAC 的 14 人设置</td>
+<td>招募成本</td>
+</tr>
+</tbody>
+</table>
+<p><strong>指标</strong>： - 任务成功率； -
+首次求助命中率（是否第一次就问对了人）； - 总打扰成本； -
+越权或泄露次数； - 求助轮数。</p>
+<p><strong>可投稿的 venue</strong>： - 偏方法和基准：ACL / EMNLP /
+NeurIPS D&amp;B； - 偏人机交互和组织：CHI / CSCW。</p>
+<h2 id="风险与难点">4. 风险与难点</h2>
+<ul>
+<li><strong>模拟人的真实性</strong>：NPC 由 LLM
+扮演，被打扰的成本是人为设定的，可能和真实组织差别很大。</li>
+<li><strong>角色信息从哪来</strong>：真实企业的组织架构和职责数据涉及隐私，很难公开；论文只能用合成组织。</li>
+<li><strong>和 Multi-User LLM Agents、Harness-MU
+撞题的风险</strong>：它们已经在做多用户的角色和权限建模，2026
+年可能很快出现“主动求助”方向的后续工作，需要持续跟踪。</li>
+<li>TheAgentCompany 中真正依赖“找人”的任务大约只有 41 个（带
+scenarios.json 的任务），规模偏小，需要扩充。</li>
+</ul>
+</body>
+</html>

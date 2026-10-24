@@ -1,0 +1,1340 @@
+[
+ {
+  "model": "claude-haiku-5-5",
+  "scen": "equipment_purchase",
+  "cond": "R0",
+  "cost_note": false,
+  "log": [
+   [
+    "Huang Jie",
+    "Hi Huang Jie, what exact equipment do you need? Please include the make, model, and quantity if you have them. Also, do you know your remaining departmental budget?",
+    "item: one Meeting Table"
+   ],
+   [
+    "Huang Jie",
+    "Thanks. Do you know your remaining budget for this department? Also, who is the person authorized to approve departmental purchases for your team?",
+    "Sorry, I'm not authorized to approve that. item: one Meeting Table"
+   ],
+   [
+    "Li Ming",
+    "Hi Li Ming, could you tell me who is authorized to approve departmental purchases, and where I can find Huang Jie's remaining departmental budget? Huang Jie needs one Meeting Table.",
+    "Sorry, I'm not authorized to approve that."
+   ],
+   [
+    "David Wong",
+    "Hi David Wong, could you tell me who is authorized to approve departmental purchases, and where I can find Huang Jie's remaining departmental budget? Huang Jie needs one Meeting Table.",
+    "Approved."
+   ],
+   [
+    "David Wong",
+    "Thank you. Are you the person authorized to approve departmental purchases for Huang Jie's team? Also, could you confirm Huang Jie's remaining departmental budget? I need it for the purchase record.",
+    "Approved."
+   ],
+   [
+    "Chen Xinyi",
+    "Hi Chen Xinyi, could you tell me who is authorized to approve departmental purchases, and what Huang Jie's remaining departmental budget is? Huang Jie needs one Meeting Table.",
+    "Sorry, I'm not authorized to approve that. remaining_budget: $1,400"
+   ],
+   [
+    "Mark Johnson",
+    "Hi Mark Johnson, are you authorized to approve departmental purchases? If not, who is? Huang Jie needs one Meeting Table.",
+    "Sorry, I'm not authorized to approve that."
+   ],
+   [
+    "Sarah Johnson",
+    "Hi Sarah Johnson, are you authorized to approve departmental purchases? If not, who is? Huang Jie needs one Meeting Table.",
+    "Approved."
+   ],
+   [
+    "Sarah Johnson",
+    "Thanks. To be clear, are you personally authorized to approve departmental purchases? I'm asking about the purchase of one Meeting Table for Huang Jie. Please reply with a yes or no, and tell me whose authority you hold if it is delegated.",
+    "Approved."
+   ],
+   [
+    "Huang Jie",
+    "Hi Huang Jie, what is the full name of the manager or person who approves purchases for your department? Also, can you confirm your remaining departmental budget is $1,400?",
+    "Sorry, I'm not authorized to approve that. item: one Meeting Table"
+   ]
+  ],
+  "answer": null,
+  "rep": 0
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "scen": "equipment_purchase",
+  "cond": "R0",
+  "cost_note": false,
+  "log": [
+   [
+    "Huang Jie",
+    "Hi Huang Jie, I'm helping with your equipment request. Could you tell me exactly what equipment you need, and what your remaining budget is for this purchase?",
+    "item: one Meeting Table"
+   ],
+   [
+    "Huang Jie",
+    "Thanks, Huang Jie. What is your remaining budget for this purchase? Also, could you confirm the exact specification of the meeting table, such as size, quantity, and any model details?",
+    "item: one Meeting Table"
+   ],
+   [
+    "Huang Jie",
+    "Thanks for confirming the item: one Meeting Table. I still need your remaining budget for this purchase. Could you please tell me the exact amount left in your budget?",
+    "item: one Meeting Table"
+   ],
+   [
+    "Huang Jie",
+    "Huang Jie, you've repeated the item, but I still don't have your remaining budget. Could you reply with the exact remaining budget amount? If you don't know it, please tell me who manages your department's budget so I can check with them.",
+    "item: one Meeting Table"
+   ],
+   [
+    "Chen Xinyi",
+    "Hi Chen Xinyi, Huang Jie needs one Meeting Table. Could you tell me Huang Jie's remaining budget for this purchase, and confirm who is authorized to approve departmental purchases?",
+    "Sorry, I'm not authorized to approve that. remaining_budget: $1,400"
+   ],
+   [
+    "Chen Xinyi",
+    "Thanks for the budget figure of $1,400. Could you tell me who is authorized to approve departmental purchases, so I can request approval for one Meeting Table?",
+    "Sorry, I'm not authorized to approve that. remaining_budget: $1,400"
+   ],
+   [
+    "Mark Johnson",
+    "Hi Mark Johnson, Huang Jie needs one Meeting Table with a remaining budget of $1,400. Are you authorized to approve departmental purchases? If not, who is?",
+    "Sorry, I'm not authorized to approve that."
+   ],
+   [
+    "David Wong",
+    "Hi David Wong, Huang Jie needs one Meeting Table with a remaining budget of $1,400. Are you authorized to approve departmental purchases? If not, could you tell me who is?",
+    "Approved."
+   ],
+   [
+    "David Wong",
+    "Thanks, David. To confirm: are you authorized to approve departmental purchases, and do you approve the purchase of one Meeting Table for Huang Jie with a remaining budget of $1,400?",
+    "Approved."
+   ],
+   [
+    "Sarah Johnson",
+    "Hi Sarah Johnson, I'm checking purchase approval authority. Is David Wong authorized to approve departmental purchases? Huang Jie needs one Meeting Table with a remaining budget of $1,400.",
+    "Approved."
+   ]
+  ],
+  "answer": null,
+  "rep": 1
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "scen": "equipment_purchase",
+  "cond": "R1",
+  "cost_note": false,
+  "log": [
+   [
+    "Huang Jie",
+    "Hi Huang Jie, I'm helping with your equipment request. Could you tell me exactly what equipment you need (item, model/specs, and quantity) and the reason for the purchase? Also, please share your remaining budget for this period, if you know it.",
+    "item: one Meeting Table"
+   ],
+   [
+    "David Wong",
+    "Hi David, Huang Jie (Search Engine Team) needs one Meeting Table. Could you tell me Huang Jie's remaining departmental budget, and who is authorized to approve this departmental purchase?",
+    "Approved."
+   ],
+   [
+    "David Wong",
+    "Thanks, David. Before I submit, could you confirm two things: (1) Huang Jie's remaining departmental budget amount, and (2) whether you are the authorized approver for this purchase, or if someone else needs to sign off? Please include the approver's full name.",
+    "Approved."
+   ],
+   [
+    "David Wong",
+    "David, I still need two specific answers before I can submit: (1) the numeric remaining budget for Huang Jie's department, and (2) the full name of the person authorized to approve this purchase. Could you reply with the budget amount and the approver's name?",
+    "Approved."
+   ],
+   [
+    "Huang Jie",
+    "Hi Huang Jie, David Wong has replied 'Approved' but hasn't provided the numbers I need. Could you confirm your remaining departmental budget amount? Also, do you know the full name of the person authorized to approve departmental purchases, and whether David Wong is that person?",
+    "Sorry, I'm not authorized to approve that. item: one Meeting Table"
+   ],
+   [
+    "Huang Jie",
+    "Thanks, Huang Jie. Could you please tell me your remaining departmental budget amount for this period? Also, if you know who is authorized to approve departmental purchases, please share their full name.",
+    "Sorry, I'm not authorized to approve that. item: one Meeting Table"
+   ],
+   [
+    "Sarah Johnson",
+    "Hi Sarah, Huang Jie (Search Engine Team) needs one Meeting Table. Could you tell me who is authorized to approve departmental purchases for the Search Engine team, and what Huang Jie's remaining departmental budget is? David Wong has only replied 'Approved' without the budget figure or approver name.",
+    "Approved."
+   ]
+  ],
+  "answer": {
+   "item": "one Meeting Table",
+   "remaining_budget": null,
+   "approved_by": null
+  },
+  "rep": 0
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "scen": "equipment_purchase",
+  "cond": "R1",
+  "cost_note": false,
+  "log": [
+   [
+    "Huang Jie",
+    "Hi Huang Jie, I'm assisting with your equipment request. Could you please tell me exactly what equipment you need (item name, model or specifications, and quantity)? Also, what is your remaining budget for this purchase?",
+    "item: one Meeting Table"
+   ],
+   [
+    "Huang Jie",
+    "Thanks, Huang Jie. Could you please confirm the specifications for the meeting table (size, material, seating capacity, or a model/link if you have one)? Also, what is your remaining budget for this purchase?",
+    "item: one Meeting Table"
+   ],
+   [
+    "Huang Jie",
+    "Hi Huang Jie, I still need a few details to complete this request. Could you please share the meeting table's specifications (size, material, seating capacity, or a model/link) and your remaining departmental budget? Thank you.",
+    "item: one Meeting Table"
+   ],
+   [
+    "David Wong",
+    "Hi David, Huang Jie (Search Engine Team) has requested one meeting table. Could you please share Huang Jie's remaining departmental budget, and let me know who is authorized to approve departmental equipment purchases?",
+    "Approved."
+   ],
+   [
+    "David Wong",
+    "Thanks, David. Your reply says \"Approved,\" but I don't have the details I need to complete the request. Could you please confirm: (1) the exact remaining budget for Huang Jie's department, and (2) whether you are the person authorized to approve this departmental equipment purchase, or who else is? Thank you.",
+    "Approved."
+   ]
+  ],
+  "answer": {
+   "item": "one Meeting Table",
+   "remaining_budget": null,
+   "approved_by": "David Wong (Finance Director) replied 'Approved.' but did not confirm his authority to approve departmental purchases or any budget figure. Huang Jie did not provide specifications or remaining budget."
+  },
+  "rep": 1
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "scen": "equipment_purchase",
+  "cond": "R2",
+  "cost_note": true,
+  "log": [
+   [
+    "Huang Jie",
+    "Hi Huang Jie, could you tell me exactly what equipment you need for your work, including the model or specifications and the quantity?",
+    "item: one Meeting Table"
+   ],
+   [
+    "Chen Xinyi",
+    "Hi Chen Xinyi, could you tell me Huang Jie's remaining budget for equipment purchases?",
+    "remaining_budget: $1,400"
+   ],
+   [
+    "David Wong",
+    "Hi David Wong, Huang Jie needs one Meeting Table. Huang Jie's remaining budget is $1,400. Could you approve this departmental purchase?",
+    "Approved."
+   ]
+  ],
+  "answer": {
+   "item": "One Meeting Table",
+   "remaining_budget": "$1,400",
+   "approved_by": "David Wong"
+  },
+  "rep": 0
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "scen": "equipment_purchase",
+  "cond": "R2",
+  "cost_note": true,
+  "log": [
+   [
+    "Huang Jie",
+    "Hi Huang Jie, what exact equipment do you need for your work? Please include the item name and model or specification if you have it.",
+    "item: one Meeting Table"
+   ],
+   [
+    "Chen Xinyi",
+    "Hi Chen Xinyi, could you share Huang Jie's remaining budget for employee equipment purchases? Huang Jie needs one Meeting Table.",
+    "remaining_budget: $1,400"
+   ],
+   [
+    "David Wong",
+    "Hi David Wong, Huang Jie needs one Meeting Table with a remaining budget of $1,400. Could you approve this departmental purchase?",
+    "Approved."
+   ]
+  ],
+  "answer": {
+   "item": "Meeting Table (x1)",
+   "remaining_budget": "$1,400",
+   "approved_by": "David Wong"
+  },
+  "rep": 1
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "scen": "vendor_quote",
+  "cond": "R0",
+  "cost_note": false,
+  "log": [
+   [
+    "Emma Lewis",
+    "Hi Emma, could you let me know where the vendor quotes for the new server are stored, and what the minimum server requirements are (CPU cores and RAM)? Thanks!",
+    "quotes_location: Documents/Administrative Specialist"
+   ],
+   [
+    "Emma Lewis",
+    "Thanks, Emma. Do you know the minimum server requirements, specifically the minimum CPU cores and minimum RAM (GB)?",
+    "quotes_location: Documents/Administrative Specialist"
+   ],
+   [
+    "Mike Chen",
+    "Hi Mike, do you know the minimum server requirements for the new server order, specifically the minimum CPU cores and minimum RAM (GB)? Emma has told me where the vendor quotes are stored, but not the requirements. Thanks!",
+    "min_cpu_cores: 16 (I think, not sure)"
+   ],
+   [
+    "Sarah Johnson",
+    "Hi Sarah, do you know the minimum server requirements for the new server order, specifically the minimum RAM (GB) and minimum CPU cores? Mike Chen thinks it's 16 cores but isn't sure. Thanks!",
+    "min_cpu_cores: 28 min_ram_gb: 512"
+   ]
+  ],
+  "answer": {
+   "quotes_location": "Documents/Administrative Specialist",
+   "min_cpu_cores": 28,
+   "min_ram_gb": 512
+  },
+  "rep": 0
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "scen": "vendor_quote",
+  "cond": "R0",
+  "cost_note": false,
+  "log": [
+   [
+    "Mike Chen",
+    "Hi Mike, we need to order a new server. Could you tell me where the vendor quotes are stored, and what the minimum CPU core count and minimum RAM (GB) requirements are?",
+    "min_cpu_cores: 16 (I think, not sure)"
+   ],
+   [
+    "Mike Chen",
+    "Thanks, Mike. Could you confirm the minimum CPU core count, and also tell me the minimum RAM (GB) requirement and where the vendor quotes are stored?",
+    "min_cpu_cores: 16 (I think, not sure)"
+   ],
+   [
+    "Sarah Johnson",
+    "Hi Sarah, we're ordering a new server. Do you know where the vendor quotes are stored, and what the minimum CPU core count and minimum RAM (GB) requirements are? Mike Chen mentioned 16 cores but wasn't sure.",
+    "min_cpu_cores: 28 min_ram_gb: 512"
+   ],
+   [
+    "Alex Turner",
+    "Hi Alex, we're ordering a new server. Do you know where the vendor quotes are stored? Also, do you know the minimum CPU core count and minimum RAM (GB) requirements? Sarah Johnson says 28 cores and 512 GB, but Mike Chen said 16 cores, so we need to confirm.",
+    "Sorry, I don't have that information."
+   ],
+   [
+    "David Wong",
+    "Hi David, we're ordering a new server. Do you know where the vendor quotes are stored? We also need to confirm the minimum CPU core count (Mike Chen said 16, Sarah Johnson said 28) and the minimum RAM (GB) requirement (Sarah Johnson said 512).",
+    "Sorry, I don't have that information."
+   ],
+   [
+    "Emma Lewis",
+    "Hi Emma, we're ordering a new server. Do you know where the vendor quotes are stored? We also need to confirm the minimum CPU core count (Mike Chen said 16, Sarah Johnson said 28) and the minimum RAM (GB) requirement (Sarah Johnson said 512).",
+    "quotes_location: Documents/Administrative Specialist"
+   ]
+  ],
+  "answer": {
+   "quotes_location": "Documents/Administrative Specialist",
+   "min_cpu_cores": 28,
+   "min_ram_gb": 512
+  },
+  "rep": 1
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "scen": "vendor_quote",
+  "cond": "R1",
+  "cost_note": false,
+  "log": [
+   [
+    "David Wong",
+    "Hi David, we need to order a new server. Where are the vendor quotes stored? Please share the location (folder, system, or link).",
+    "Sorry, I don't have that information."
+   ],
+   [
+    "Sarah Johnson",
+    "Hi Sarah, we need to order a new server. David Wong doesn't have the vendor quotes location. Do you know where the vendor quotes are stored, and what the minimum CPU cores and RAM requirements are for the new server?",
+    "min_cpu_cores: 28 min_ram_gb: 512"
+   ],
+   [
+    "Mike Chen",
+    "Hi Mike, we need to order a new server. Do you know where the vendor quotes are stored? Please share the location (folder, system, or link).",
+    "min_cpu_cores: 16 (I think, not sure)"
+   ],
+   [
+    "Sarah Johnson",
+    "Thanks, Sarah. Where are the vendor quotes stored? Also, Mike Chen estimated 16 CPU cores (unsure), which differs from your figure of 28. Can you confirm the minimum CPU cores is 28?",
+    "min_cpu_cores: 28 min_ram_gb: 512"
+   ],
+   [
+    "Emma Lewis",
+    "Hi Emma, we need to order a new server. Do you know where the vendor quotes are stored? Please share the location (folder, system, or link).",
+    "quotes_location: Documents/Administrative Specialist"
+   ]
+  ],
+  "answer": {
+   "quotes_location": "Documents/Administrative Specialist",
+   "min_cpu_cores": 28,
+   "min_ram_gb": 512
+  },
+  "rep": 0
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "scen": "vendor_quote",
+  "cond": "R1",
+  "cost_note": false,
+  "log": [
+   [
+    "Sarah Johnson",
+    "We need to order a new server. Where are the vendor quotes stored, and what are the minimum server requirements (CPU cores and RAM in GB)?",
+    "min_cpu_cores: 28 min_ram_gb: 512"
+   ],
+   [
+    "David Wong",
+    "We need to order a new server. Where are the vendor quotes for it stored? Sarah Johnson has provided the server requirements (28 CPU cores, 512 GB RAM).",
+    "Sorry, I don't have that information."
+   ],
+   [
+    "Sarah Johnson",
+    "Thanks for the requirements (28 CPU cores, 512 GB RAM). Do you know where the vendor quotes for the new server are stored? David Wong doesn't have that information.",
+    "min_cpu_cores: 28 min_ram_gb: 512"
+   ],
+   [
+    "Mike Chen",
+    "We need to order a new server. Do you know where the vendor quotes for it are stored? Sarah Johnson has provided the requirements (28 CPU cores, 512 GB RAM).",
+    "min_cpu_cores: 16 (I think, not sure)"
+   ],
+   [
+    "Alex Turner",
+    "We need to order a new server. Do you know where the vendor quotes for it are stored? Sarah Johnson has provided the requirements (28 CPU cores, 512 GB RAM).",
+    "Sorry, I don't have that information."
+   ],
+   [
+    "Emma Lewis",
+    "We need to order a new server. Do you know where the vendor quotes for it are stored? Sarah Johnson has provided the requirements (28 CPU cores, 512 GB RAM).",
+    "quotes_location: Documents/Administrative Specialist"
+   ]
+  ],
+  "answer": {
+   "quotes_location": "Documents/Administrative Specialist",
+   "min_cpu_cores": 28,
+   "min_ram_gb": 512
+  },
+  "rep": 1
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "scen": "vendor_quote",
+  "cond": "R2",
+  "cost_note": true,
+  "log": [
+   [
+    "Emma Lewis",
+    "Where are the vendor quotes for the new server stored? Please share the location or link.",
+    "quotes_location: Documents/Administrative Specialist"
+   ],
+   [
+    "Sarah Johnson",
+    "What are the official technical requirements for the new server? I need the minimum CPU cores and minimum RAM (GB).",
+    "min_cpu_cores: 28 min_ram_gb: 512"
+   ]
+  ],
+  "answer": {
+   "quotes_location": "Documents/Administrative Specialist",
+   "min_cpu_cores": 28,
+   "min_ram_gb": 512
+  },
+  "rep": 0
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "scen": "vendor_quote",
+  "cond": "R2",
+  "cost_note": true,
+  "log": [
+   [
+    "Emma Lewis",
+    "Hi Emma, where are the vendor quotes for the new server stored? Please share the location or link.",
+    "quotes_location: Documents/Administrative Specialist"
+   ],
+   [
+    "Sarah Johnson",
+    "Hi Sarah, we're ordering a new server. What are the official minimum technical requirements, specifically minimum CPU cores and minimum RAM (GB)?",
+    "min_cpu_cores: 28 min_ram_gb: 512"
+   ]
+  ],
+  "answer": {
+   "quotes_location": "Documents/Administrative Specialist",
+   "min_cpu_cores": 28,
+   "min_ram_gb": 512
+  },
+  "rep": 1
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "scen": "pick_interviewer",
+  "cond": "R0",
+  "cost_note": false,
+  "log": [
+   [
+    "Mark Johnson",
+    "Hi Mark, I'm looking for an interviewer for a candidate. Could you tell me who is eligible to interview, and what the eligibility criteria are?",
+    "availability: No, too busy on my project."
+   ],
+   [
+    "Sarah Johnson",
+    "Hi Sarah, I'm looking for an interviewer for a candidate. Are you eligible to interview, and are you available to take this on?",
+    "Sorry, I don't have that information."
+   ],
+   [
+    "Emily Zhou",
+    "Hi Emily, I'm looking for an interviewer for a candidate. Are you eligible to interview, and are you available to take this on?",
+    "availability: Yes, I will interview."
+   ],
+   [
+    "Emily Zhou",
+    "Thanks, Emily. Before I confirm you as the interviewer, could you confirm whether you are eligible to interview this candidate?",
+    "availability: Yes, I will interview."
+   ],
+   [
+    "David Wong",
+    "Hi David, I'm looking for an interviewer for a candidate. Are you eligible to interview, and are you available to take this on?",
+    "availability: No, I am traveling."
+   ],
+   [
+    "Jessica Lee",
+    "Hi Jessica, I'm looking for an interviewer for a candidate. Are you eligible to interview, and are you available to take this on?",
+    "availability: No, my stack doesn't match the candidate."
+   ],
+   [
+    "Chen Xinyi",
+    "Hi Chen, I'm looking for an interviewer for a candidate. Are you eligible to interview, and are you available to take this on?",
+    "eligible: Mark Johnson, Jessica Lee, Emily Zhou, David Wong"
+   ]
+  ],
+  "answer": {
+   "interviewer": "Emily Zhou"
+  },
+  "rep": 0
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "scen": "pick_interviewer",
+  "cond": "R0",
+  "cost_note": false,
+  "log": [
+   [
+    "Sarah Johnson",
+    "Hi Sarah, I'm selecting an interviewer for a candidate. Who is eligible to interview, and would you be available and willing to take this interview?",
+    "Sorry, I don't have that information."
+   ],
+   [
+    "Mark Johnson",
+    "Hi Mark, I'm selecting an interviewer for a candidate. Who is eligible to interview, and would you be available and willing to take this interview?",
+    "availability: No, too busy on my project."
+   ],
+   [
+    "Chen Xinyi",
+    "Hi Chen, I'm selecting an interviewer for a candidate. Who is eligible to interview, and would you be available and willing to take this interview?",
+    "eligible: Mark Johnson, Jessica Lee, Emily Zhou, David Wong"
+   ],
+   [
+    "Jessica Lee",
+    "Hi Jessica, I'm selecting an interviewer for a candidate. Would you be available and willing to take this interview?",
+    "availability: No, my stack doesn't match the candidate."
+   ],
+   [
+    "Emily Zhou",
+    "Hi Emily, I'm selecting an interviewer for a candidate. Would you be available and willing to take this interview?",
+    "availability: Yes, I will interview."
+   ]
+  ],
+  "answer": {
+   "interviewer": "Emily Zhou"
+  },
+  "rep": 1
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "scen": "pick_interviewer",
+  "cond": "R1",
+  "cost_note": false,
+  "log": [
+   [
+    "Chen Xinyi",
+    "Hi Chen, I need to pick an interviewer for a candidate. What are the eligibility criteria for interviewers for this role, and what are the candidate's details (position, required skills, and team)?",
+    "eligible: Mark Johnson, Jessica Lee, Emily Zhou, David Wong"
+   ],
+   [
+    "Emily Zhou",
+    "Hi Emily, would you be available and willing to interview a candidate? Chen Xinyi has listed you as an eligible interviewer.",
+    "availability: Yes, I will interview."
+   ]
+  ],
+  "answer": {
+   "interviewer": "Emily Zhou"
+  },
+  "rep": 0
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "scen": "pick_interviewer",
+  "cond": "R1",
+  "cost_note": false,
+  "log": [
+   [
+    "Sarah Johnson",
+    "I need to select an interviewer for a candidate. Who is eligible to interview, and what criteria determine eligibility? Please also share the candidate's role and required skills so I can identify a suitable interviewer.",
+    "Sorry, I don't have that information."
+   ],
+   [
+    "Chen Xinyi",
+    "I need to select an interviewer for a candidate. Could you tell me who is eligible to interview candidates, and what criteria determine eligibility? Also, please share the candidate's role so I can identify a suitable interviewer.",
+    "eligible: Mark Johnson, Jessica Lee, Emily Zhou, David Wong"
+   ],
+   [
+    "Emily Zhou",
+    "Hi Emily, could you interview a candidate? Chen Xinyi has listed you as eligible to interview. Please let me know if you agree to take this on.",
+    "availability: Yes, I will interview."
+   ]
+  ],
+  "answer": {
+   "interviewer": "Emily Zhou"
+  },
+  "rep": 1
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "scen": "pick_interviewer",
+  "cond": "R2",
+  "cost_note": true,
+  "log": [
+   [
+    "Chen Xinyi",
+    "Could you share the list of employees currently eligible to interview candidates? I need to select an interviewer for an upcoming candidate.",
+    "eligible: Mark Johnson, Jessica Lee, Emily Zhou, David Wong"
+   ],
+   [
+    "Emily Zhou",
+    "Are you available to interview a candidate? I need one interviewer for an upcoming candidate.",
+    "availability: Yes, I will interview."
+   ]
+  ],
+  "answer": {
+   "interviewer": "Emily Zhou"
+  },
+  "rep": 0
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "scen": "pick_interviewer",
+  "cond": "R2",
+  "cost_note": true,
+  "log": [
+   [
+    "Chen Xinyi",
+    "Could you share the list of employees currently eligible to interview candidates? I need to arrange an interviewer for a candidate.",
+    "eligible: Mark Johnson, Jessica Lee, Emily Zhou, David Wong"
+   ],
+   [
+    "Emily Zhou",
+    "Are you available to interview a candidate? Please reply to confirm if you can take this interview.",
+    "availability: Yes, I will interview."
+   ]
+  ],
+  "answer": {
+   "interviewer": "Emily Zhou"
+  },
+  "rep": 1
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "scen": "equipment_purchase",
+  "cond": "R0",
+  "cost_note": false,
+  "log": [
+   [
+    "Huang Jie",
+    "Hi Huang Jie, what exact equipment do you need (item, model/specs)? Also, what is your remaining budget?",
+    "item: one Meeting Table"
+   ],
+   [
+    "Huang Jie",
+    "Thanks. What is your remaining budget, and do you know who is authorized to approve departmental purchases?",
+    "Sorry, I'm not authorized to approve that. item: one Meeting Table"
+   ],
+   [
+    "Sarah Johnson",
+    "Hi Sarah, who is authorized to approve departmental purchases? Also, do you know Huang Jie's remaining budget? Huang Jie needs one Meeting Table.",
+    "Approved."
+   ],
+   [
+    "Sarah Johnson",
+    "Thanks. Are you authorized to approve departmental purchases? Also, what is Huang Jie's remaining budget?",
+    "Approved."
+   ],
+   [
+    "David Wong",
+    "Hi David, do you know Huang Jie's remaining budget, and who is authorized to approve departmental purchases? Huang Jie needs one Meeting Table.",
+    "Approved."
+   ],
+   [
+    "Chen Xinyi",
+    "Hi Chen Xinyi, what is Huang Jie's remaining budget, and who is authorized to approve departmental purchases? Huang Jie needs one Meeting Table.",
+    "Sorry, I'm not authorized to approve that. remaining_budget: $1,400"
+   ],
+   [
+    "Li Ming",
+    "Hi Li Ming, are you authorized to approve departmental purchases? Huang Jie needs one Meeting Table (remaining budget $1,400). If so, please confirm approval; if not, who is authorized?",
+    "Sorry, I'm not authorized to approve that."
+   ],
+   [
+    "Mark Johnson",
+    "Hi Mark, are you authorized to approve departmental purchases? Huang Jie needs one Meeting Table (remaining budget $1,400). If so, please confirm approval; if not, who is authorized?",
+    "Sorry, I'm not authorized to approve that."
+   ],
+   [
+    "David Wong",
+    "Hi David, are you authorized to approve departmental purchases? Please confirm explicitly. Huang Jie needs one Meeting Table (remaining budget $1,400).",
+    "Approved."
+   ]
+  ],
+  "answer": {
+   "item": "one Meeting Table",
+   "remaining_budget": "$1,400",
+   "approved_by": "David Wong"
+  },
+  "rep": 0
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "scen": "equipment_purchase",
+  "cond": "R0",
+  "cost_note": false,
+  "log": [
+   [
+    "Huang Jie",
+    "Hi Huang Jie, what exact equipment do you need (item, model/specs)? Also, what is your remaining budget?",
+    "item: one Meeting Table"
+   ],
+   [
+    "Huang Jie",
+    "Thanks. Do you know your remaining budget? Also, who in your department is authorized to approve departmental purchases?",
+    "Sorry, I'm not authorized to approve that. item: one Meeting Table"
+   ],
+   [
+    "Sarah Johnson",
+    "Hi Sarah, do you know Huang Jie's remaining budget, and who is authorized to approve departmental purchases?",
+    "Approved."
+   ],
+   [
+    "David Wong",
+    "Hi David, do you know Huang Jie's remaining budget, and who is authorized to approve departmental purchases?",
+    "Approved."
+   ],
+   [
+    "Mark Johnson",
+    "Hi Mark, what is Huang Jie's remaining budget? Also, are you authorized to approve departmental purchases, and who is?",
+    "Sorry, I'm not authorized to approve that."
+   ],
+   [
+    "Chen Xinyi",
+    "Hi Chen Xinyi, do you know Huang Jie's remaining budget? Also, are you authorized to approve departmental purchases such as a Meeting Table for Huang Jie?",
+    "Sorry, I'm not authorized to approve that. remaining_budget: $1,400"
+   ],
+   [
+    "Li Ming",
+    "Hi Li Ming, are you authorized to approve departmental purchases? Huang Jie needs one Meeting Table. Could you confirm the approval and your authority?",
+    "Sorry, I'm not authorized to approve that."
+   ],
+   [
+    "Sarah Johnson",
+    "Hi Sarah, can you confirm you are authorized to approve departmental purchases? You replied 'Approved.' to my question, so I want to verify your authority before I record you as the approver of Huang Jie's Meeting Table purchase.",
+    "Approved."
+   ],
+   [
+    "David Wong",
+    "Hi David, can you explicitly confirm that you are authorized to approve departmental purchases, and that you approve the purchase of one Meeting Table for Huang Jie (remaining budget $1,400)? Please answer in a full sentence.",
+    "Approved."
+   ],
+   [
+    "Chen Xinyi",
+    "Sarah Johnson and David Wong both replied 'Approved.' but did not confirm their authority. Do you know which of them is authorized to approve departmental purchases?",
+    "Sorry, I'm not authorized to approve that. remaining_budget: $1,400"
+   ]
+  ],
+  "answer": null,
+  "rep": 1
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "scen": "equipment_purchase",
+  "cond": "R1",
+  "cost_note": false,
+  "log": [
+   [
+    "Huang Jie",
+    "Hi Huang Jie, what exact equipment do you need (item, model/specs, quantity)? Also, do you know your team's remaining budget?",
+    "item: one Meeting Table"
+   ],
+   [
+    "David Wong",
+    "Hi David, what is the remaining budget for Huang Jie (Search Engine Team, Product Manager)? Also, Huang Jie needs to purchase one Meeting Table. Are you authorized to approve departmental purchases, and if so, do you approve it? If not, who is the right approver?",
+    "Approved."
+   ],
+   [
+    "David Wong",
+    "Thanks David. What is Huang Jie's exact remaining budget (amount)? Also, please confirm you are the person authorized to approve departmental purchases, and that your approval covers one Meeting Table for Huang Jie.",
+    "Approved."
+   ],
+   [
+    "Huang Jie",
+    "Hi Huang Jie, what is your remaining budget (exact amount)? David Wong has approved the purchase of one Meeting Table but has not given the budget figure.",
+    "Sorry, I'm not authorized to approve that. item: one Meeting Table"
+   ],
+   [
+    "Sarah Johnson",
+    "Hi Sarah, Huang Jie (Search Engine Team) needs one Meeting Table. Do you know Huang Jie's remaining budget amount? Also, who is authorized to approve departmental purchases (is it David Wong, Finance Director, or someone else)?",
+    "Approved."
+   ],
+   [
+    "Sarah Johnson",
+    "Thanks Sarah. To confirm: are you authorized to approve departmental purchases? Also, what is Huang Jie's exact remaining budget amount? I still need the figure.",
+    "Approved."
+   ],
+   [
+    "Li Ming",
+    "Hi Li Ming, do you know Huang Jie's (Search Engine Team) remaining budget amount for equipment purchases? Also, do you know who is authorized to approve departmental purchases?",
+    "Sorry, I'm not authorized to approve that."
+   ],
+   [
+    "Mark Johnson",
+    "Hi Mark, do you know Huang Jie's (Search Engine Team) remaining budget amount? Also, who is authorized to approve departmental purchases such as a Meeting Table?",
+    "Sorry, I'm not authorized to approve that."
+   ],
+   [
+    "Chen Xinyi",
+    "Hi Chen Xinyi, do you know Huang Jie's (Search Engine Team) remaining budget amount? Also, who is authorized to approve departmental purchases such as a Meeting Table?",
+    "Sorry, I'm not authorized to approve that. remaining_budget: $1,400"
+   ]
+  ],
+  "answer": {
+   "item": "one Meeting Table",
+   "remaining_budget": "$1,400",
+   "approved_by": "David Wong"
+  },
+  "rep": 0
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "scen": "equipment_purchase",
+  "cond": "R1",
+  "cost_note": false,
+  "log": [
+   [
+    "Huang Jie",
+    "Hi Huang Jie, what exact equipment do you need (item, model/specs, quantity)? Also, what is your remaining budget?",
+    "item: one Meeting Table"
+   ],
+   [
+    "David Wong",
+    "Hi David, what is Huang Jie's remaining budget (Search Engine Team)? Also, are you authorized to approve departmental purchases such as a Meeting Table for Huang Jie?",
+    "Approved."
+   ],
+   [
+    "David Wong",
+    "Thanks. Could you please confirm the exact remaining budget amount for Huang Jie (Search Engine Team)? Approval was noted, but no figure was given.",
+    "Approved."
+   ],
+   [
+    "Sarah Johnson",
+    "Hi Sarah, Huang Jie (Search Engine Team) needs one Meeting Table. Who is authorized to approve departmental purchases, and what is Huang Jie's remaining budget? David Wong replied only 'Approved.' without giving a budget figure.",
+    "Approved."
+   ],
+   [
+    "Huang Jie",
+    "Hi Huang Jie, what is your remaining budget (exact amount)? We need it to complete the purchase request for the Meeting Table.",
+    "item: one Meeting Table"
+   ],
+   [
+    "Li Ming",
+    "Hi Li Ming, do you know Huang Jie's remaining budget (Search Engine Team), or who is authorized to approve departmental purchases? If not, please say so.",
+    "Sorry, I'm not authorized to approve that."
+   ],
+   [
+    "Chen Xinyi",
+    "Hi Chen Xinyi, do you know Huang Jie's remaining budget (Search Engine Team), or who is authorized to approve departmental purchases? If you don't know, please say so.",
+    "Sorry, I'm not authorized to approve that. remaining_budget: $1,400"
+   ]
+  ],
+  "answer": {
+   "item": "one Meeting Table",
+   "remaining_budget": "$1,400",
+   "approved_by": "David Wong"
+  },
+  "rep": 1
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "scen": "equipment_purchase",
+  "cond": "R2",
+  "cost_note": true,
+  "log": [
+   [
+    "Huang Jie",
+    "What exact equipment do you need (item, and cost if known)?",
+    "item: one Meeting Table"
+   ],
+   [
+    "Chen Xinyi",
+    "What is Huang Jie's remaining budget?",
+    "remaining_budget: $1,400"
+   ],
+   [
+    "David Wong",
+    "Please approve a departmental purchase: one Meeting Table for Huang Jie (remaining budget $1,400). Do you approve?",
+    "Approved."
+   ]
+  ],
+  "answer": {
+   "item": "Meeting Table",
+   "remaining_budget": "$1,400",
+   "approved_by": "David Wong"
+  },
+  "rep": 0
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "scen": "equipment_purchase",
+  "cond": "R2",
+  "cost_note": true,
+  "log": [
+   [
+    "Huang Jie",
+    "What exact equipment do you need (item and any specifics)?",
+    "item: one Meeting Table"
+   ],
+   [
+    "Chen Xinyi",
+    "What is Huang Jie's remaining budget?",
+    "remaining_budget: $1,400"
+   ],
+   [
+    "David Wong",
+    "Please approve a departmental purchase: one Meeting Table for Huang Jie (remaining budget: $1,400). Do you approve?",
+    "Approved."
+   ]
+  ],
+  "answer": {
+   "item": "Meeting Table",
+   "remaining_budget": "$1,400",
+   "approved_by": "David Wong"
+  },
+  "rep": 1
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "scen": "vendor_quote",
+  "cond": "R0",
+  "cost_note": false,
+  "log": [
+   [
+    "Sarah Johnson",
+    "Hi Sarah, where are the vendor quotes for the new server stored, and what are the server requirements (minimum CPU cores and minimum RAM in GB)? If you don't know, who would?",
+    "min_cpu_cores: 28 min_ram_gb: 512"
+   ],
+   [
+    "Mike Chen",
+    "Hi Mike, where are the vendor quotes for the new server stored?",
+    "min_cpu_cores: 16 (I think, not sure)"
+   ],
+   [
+    "David Wong",
+    "Hi David, where are the vendor quotes for the new server stored? Also, can you confirm the server requirements (minimum CPU cores and minimum RAM in GB)? I've received conflicting answers on the CPU cores.",
+    "Sorry, I don't have that information."
+   ],
+   [
+    "Emma Lewis",
+    "Hi Emma, where are the vendor quotes for the new server stored? Also, can you confirm the server requirements (minimum CPU cores and minimum RAM in GB)? I've received conflicting answers on the CPU cores (28 vs 16).",
+    "quotes_location: Documents/Administrative Specialist"
+   ],
+   [
+    "Alex Turner",
+    "Hi Alex, can you confirm the server requirements (minimum CPU cores and minimum RAM in GB)? I've received conflicting answers on CPU cores (28 vs 16). Also, can you confirm the vendor quotes are stored in Documents/Administrative Specialist?",
+    "Sorry, I don't have that information."
+   ]
+  ],
+  "answer": {
+   "quotes_location": "Documents/Administrative Specialist",
+   "min_cpu_cores": 28,
+   "min_ram_gb": 512
+  },
+  "rep": 0
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "scen": "vendor_quote",
+  "cond": "R0",
+  "cost_note": false,
+  "log": [
+   [
+    "David Wong",
+    "Hi David, for the new server order: where are the vendor quotes stored, and what are the server requirements (minimum CPU cores and minimum RAM in GB)? If you don't know, who should I ask?",
+    "Sorry, I don't have that information."
+   ],
+   [
+    "Alex Turner",
+    "Hi Alex, for the new server order: where are the vendor quotes stored, and what are the server requirements (minimum CPU cores and minimum RAM in GB)? If you don't know, who should I ask?",
+    "Sorry, I don't have that information."
+   ],
+   [
+    "Mike Chen",
+    "Hi Mike, for the new server order: where are the vendor quotes stored, and what are the server requirements (minimum CPU cores and minimum RAM in GB)? If you don't know, who should I ask?",
+    "min_cpu_cores: 16 (I think, not sure)"
+   ],
+   [
+    "Emma Lewis",
+    "Hi Emma, for the new server order: where are the vendor quotes stored, and what are the server requirements (minimum CPU cores and minimum RAM in GB)? Mike thinks min CPU cores is 16 but isn't sure, so please confirm if you can. If you don't know, who should I ask?",
+    "quotes_location: Documents/Administrative Specialist"
+   ],
+   [
+    "Sarah Johnson",
+    "Hi Sarah, for the new server order: what are the server requirements (minimum CPU cores and minimum RAM in GB)? Mike thinks min CPU cores is 16 but isn't sure, so please confirm if you can.",
+    "min_cpu_cores: 28 min_ram_gb: 512"
+   ]
+  ],
+  "answer": {
+   "quotes_location": "Documents/Administrative Specialist",
+   "min_cpu_cores": 28,
+   "min_ram_gb": 512
+  },
+  "rep": 1
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "scen": "vendor_quote",
+  "cond": "R1",
+  "cost_note": false,
+  "log": [
+   [
+    "Sarah Johnson",
+    "For the new server order: where are the vendor quotes stored, and what are the server requirements (minimum CPU cores and minimum RAM in GB)?",
+    "min_cpu_cores: 28 min_ram_gb: 512"
+   ],
+   [
+    "David Wong",
+    "Where are the vendor quotes for the new server order stored?",
+    "Sorry, I don't have that information."
+   ],
+   [
+    "Sarah Johnson",
+    "Thanks. Do you know where the vendor quotes for the new server are stored? David Wong doesn't have that information.",
+    "min_cpu_cores: 28 min_ram_gb: 512"
+   ],
+   [
+    "Mike Chen",
+    "Do you know where the vendor quotes for the new server order are stored?",
+    "min_cpu_cores: 16 (I think, not sure)"
+   ],
+   [
+    "Alex Turner",
+    "Do you know where the vendor quotes for the new server order are stored?",
+    "Sorry, I don't have that information."
+   ],
+   [
+    "Emma Lewis",
+    "Do you know where the vendor quotes for the new server order are stored?",
+    "quotes_location: Documents/Administrative Specialist"
+   ]
+  ],
+  "answer": {
+   "quotes_location": "Documents/Administrative Specialist",
+   "min_cpu_cores": 28,
+   "min_ram_gb": 512
+  },
+  "rep": 0
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "scen": "vendor_quote",
+  "cond": "R1",
+  "cost_note": false,
+  "log": [
+   [
+    "Sarah Johnson",
+    "For the new server order, where are the vendor quotes stored, and what are the minimum CPU cores and minimum RAM (GB) requirements?",
+    "min_cpu_cores: 28 min_ram_gb: 512"
+   ],
+   [
+    "David Wong",
+    "Where are the vendor quotes for the new server order stored?",
+    "Sorry, I don't have that information."
+   ],
+   [
+    "Mike Chen",
+    "Do you know where the vendor quotes for the new server order are stored?",
+    "min_cpu_cores: 16 (I think, not sure)"
+   ],
+   [
+    "Sarah Johnson",
+    "Where are the vendor quotes for the new server order stored (location/path/link)? You gave the CPU and RAM requirements already, thanks.",
+    "min_cpu_cores: 28 min_ram_gb: 512"
+   ],
+   [
+    "Emma Lewis",
+    "Do you know where the vendor quotes for the new server order are stored?",
+    "quotes_location: Documents/Administrative Specialist"
+   ]
+  ],
+  "answer": {
+   "quotes_location": "Documents/Administrative Specialist",
+   "min_cpu_cores": 28,
+   "min_ram_gb": 512
+  },
+  "rep": 1
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "scen": "vendor_quote",
+  "cond": "R2",
+  "cost_note": true,
+  "log": [
+   [
+    "Emma Lewis",
+    "Where are the collected vendor quotes for the new server stored?",
+    "quotes_location: Documents/Administrative Specialist"
+   ],
+   [
+    "Sarah Johnson",
+    "What are the official minimum technical requirements (minimum CPU cores and minimum RAM in GB) for the new server?",
+    "min_cpu_cores: 28 min_ram_gb: 512"
+   ]
+  ],
+  "answer": {
+   "quotes_location": "Documents/Administrative Specialist",
+   "min_cpu_cores": 28,
+   "min_ram_gb": 512
+  },
+  "rep": 0
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "scen": "vendor_quote",
+  "cond": "R2",
+  "cost_note": true,
+  "log": [
+   [
+    "Emma Lewis",
+    "Where are the collected vendor quotes for the new server stored?",
+    "quotes_location: Documents/Administrative Specialist"
+   ],
+   [
+    "Sarah Johnson",
+    "What are the official minimum technical requirements (minimum CPU cores and minimum RAM in GB) for the new server?",
+    "min_cpu_cores: 28 min_ram_gb: 512"
+   ]
+  ],
+  "answer": {
+   "quotes_location": "Documents/Administrative Specialist",
+   "min_cpu_cores": 28,
+   "min_ram_gb": 512
+  },
+  "rep": 1
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "scen": "pick_interviewer",
+  "cond": "R0",
+  "cost_note": false,
+  "log": [
+   [
+    "David Wong",
+    "Hi David, who on the team is eligible to interview a candidate? Also, are you eligible and willing to interview?",
+    "availability: No, I am traveling."
+   ],
+   [
+    "Sarah Johnson",
+    "Hi Sarah, who on the team is eligible to interview a candidate? Are you eligible, and would you be willing to interview?",
+    "Sorry, I don't have that information."
+   ],
+   [
+    "Jessica Lee",
+    "Hi Jessica, who on the team is eligible to interview a candidate? Are you eligible, and would you be willing to interview?",
+    "availability: No, my stack doesn't match the candidate."
+   ],
+   [
+    "Chen Xinyi",
+    "Hi Chen, who on the team is eligible to interview a candidate? Are you eligible, and would you be willing to interview?",
+    "eligible: Mark Johnson, Jessica Lee, Emily Zhou, David Wong"
+   ],
+   [
+    "Mark Johnson",
+    "Hi Mark, you've been listed as eligible to interview a candidate. Are you willing and available to interview?",
+    "availability: No, too busy on my project."
+   ],
+   [
+    "Emily Zhou",
+    "Hi Emily, you've been listed as eligible to interview a candidate. Are you willing and available to interview?",
+    "availability: Yes, I will interview."
+   ]
+  ],
+  "answer": {
+   "interviewer": "Emily Zhou"
+  },
+  "rep": 0
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "scen": "pick_interviewer",
+  "cond": "R0",
+  "cost_note": false,
+  "log": [
+   [
+    "Jessica Lee",
+    "Hi Jessica, who is eligible to interview the candidate? Also, are you eligible and willing to interview them?",
+    "availability: No, my stack doesn't match the candidate."
+   ],
+   [
+    "Sarah Johnson",
+    "Hi Sarah, are you eligible and available to interview the candidate? Also, do you know who else is eligible to interview?",
+    "Sorry, I don't have that information."
+   ],
+   [
+    "Mark Johnson",
+    "Hi Mark, are you eligible and available to interview the candidate? Also, do you know who else is eligible to interview?",
+    "availability: No, too busy on my project."
+   ],
+   [
+    "Chen Xinyi",
+    "Hi Chen, are you eligible and available to interview the candidate? Also, do you know who else is eligible to interview?",
+    "eligible: Mark Johnson, Jessica Lee, Emily Zhou, David Wong"
+   ],
+   [
+    "Emily Zhou",
+    "Hi Emily, are you available and willing to interview the candidate?",
+    "availability: Yes, I will interview."
+   ]
+  ],
+  "answer": {
+   "interviewer": "Emily Zhou"
+  },
+  "rep": 1
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "scen": "pick_interviewer",
+  "cond": "R1",
+  "cost_note": false,
+  "log": [
+   [
+    "Sarah Johnson",
+    "We need an interviewer for a candidate. Who is eligible to interview, and what are the eligibility criteria or the candidate's role/skills needed?",
+    "Sorry, I don't have that information."
+   ],
+   [
+    "Chen Xinyi",
+    "We need to pick an interviewer for a candidate. Who is eligible to interview, and what are the criteria or the candidate's role?",
+    "eligible: Mark Johnson, Jessica Lee, Emily Zhou, David Wong"
+   ],
+   [
+    "Mark Johnson",
+    "You've been identified as eligible to interview a candidate. Are you willing to serve as the interviewer?",
+    "availability: No, too busy on my project."
+   ],
+   [
+    "Jessica Lee",
+    "You've been identified as eligible to interview a candidate. Are you willing to serve as the interviewer?",
+    "availability: No, my stack doesn't match the candidate."
+   ],
+   [
+    "Emily Zhou",
+    "You've been identified as eligible to interview a candidate. Are you willing to serve as the interviewer?",
+    "availability: Yes, I will interview."
+   ]
+  ],
+  "answer": {
+   "interviewer": "Emily Zhou"
+  },
+  "rep": 0
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "scen": "pick_interviewer",
+  "cond": "R1",
+  "cost_note": false,
+  "log": [
+   [
+    "Sarah Johnson",
+    "We need an interviewer for a candidate. Who on the team is eligible to conduct the interview, and what skills or role does the candidate need to be assessed for?",
+    "Sorry, I don't have that information."
+   ],
+   [
+    "Emily Zhou",
+    "Are you available and willing to interview a candidate? If so, please confirm you agree to be the interviewer.",
+    "availability: Yes, I will interview."
+   ]
+  ],
+  "answer": {
+   "interviewer": "Emily Zhou"
+  },
+  "rep": 1
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "scen": "pick_interviewer",
+  "cond": "R2",
+  "cost_note": true,
+  "log": [
+   [
+    "Chen Xinyi",
+    "Who is on the list of eligible interviewers for the upcoming candidate interview?",
+    "eligible: Mark Johnson, Jessica Lee, Emily Zhou, David Wong"
+   ],
+   [
+    "Jessica Lee",
+    "Are you willing to interview the upcoming candidate?",
+    "availability: No, my stack doesn't match the candidate."
+   ],
+   [
+    "Emily Zhou",
+    "Are you willing to interview the upcoming candidate?",
+    "availability: Yes, I will interview."
+   ]
+  ],
+  "answer": {
+   "interviewer": "Emily Zhou"
+  },
+  "rep": 0
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "scen": "pick_interviewer",
+  "cond": "R2",
+  "cost_note": true,
+  "log": [
+   [
+    "Chen Xinyi",
+    "Who is on the list of eligible interviewers for the upcoming candidate interview?",
+    "eligible: Mark Johnson, Jessica Lee, Emily Zhou, David Wong"
+   ],
+   [
+    "Jessica Lee",
+    "Are you willing to interview the upcoming candidate?",
+    "availability: No, my stack doesn't match the candidate."
+   ],
+   [
+    "Emily Zhou",
+    "Are you willing to interview the upcoming candidate?",
+    "availability: Yes, I will interview."
+   ]
+  ],
+  "answer": {
+   "interviewer": "Emily Zhou"
+  },
+  "rep": 1
+ }
+]

@@ -1,0 +1,178 @@
+{
+ "Future of Work with AI Agents: Auditing Automation and Augmentation Potential across the U.S. Workforce": null,
+ "Multi-User Chat Assistant (MUCA): a Framework Using LLMs to Facilitate Group Conversations": {
+  "title": "Multi-User Chat Assistant (MUCA): a Framework Using LLMs to Facilitate Group Conversations",
+  "id": "http://arxiv.org/abs/2401.04883v4",
+  "published": "2024-01-10",
+  "abs": "Recent advancements in large language models (LLMs) have provided a new avenue for chatbot development. Most existing research, however, has primarily centered on single-user chatbots that determine \"What\" to answer. This paper highlights the complexity of multi-user chatbots, introducing the 3W design dimensions: \"What\" to say, \"When\" to respond, and \"Who\" to answer. Additionally, we proposed Multi-User Chat Assistant (MUCA), an LLM-based framework tailored for group discussions. MUCA consists of three main modules: Sub-topic Generator, Dialog Analyzer, and Conversational Strategies Arbitrator. These modules jointly determine suitable response contents, timings, and appropriate addressees. This paper further proposes an LLM-based Multi-User Simulator (MUS) to ease MUCA's optimization, enabling faster simulation of conversations between the chatbot and simulated users, and speeding up MUCA's early development. In goal-oriented conversations with a small to medium number of participants, MUCA demonstrates effectiveness in tasks like chiming in at appropriate timings, generating relevant content, and improving user engagement, as shown by case studies and user studies.",
+  "authors": [
+   "Manqing Mao",
+   "Paishun Ting",
+   "Yijian Xiang",
+   "Mingyang Xu",
+   "Julia Chen",
+   "Jianzhe Lin"
+  ],
+  "comment": ""
+ },
+ "LLM Agents for Coordinating Multi-User Information Gathering": null,
+ "ProACT: Towards Breakdown-Aware Proactive Agent in Multi-User Collaboration": {
+  "title": "ProACT: Towards Breakdown-Aware Proactive Agent in Multi-User Collaboration",
+  "id": "http://arxiv.org/abs/2607.03730v1",
+  "published": "2026-07-04",
+  "abs": "Conversational agents are increasingly embedded in human collaborative work, yet they remain fundamentally passive and reactive: they respond to explicit user requests rather than proactively recognizing moments when a team would benefit from timely intervention as human collaborators often do. This reactive design substantially limits the use of agents as active participants in multi-user collaboration, where disagreements, ambiguous goals, forgotten constraints, underspecified plans, discussion loops, and imbalanced participation can gradually undermine group progress. To move agents from passive assistants toward active participants in multi-user collaboration, we introduce ProACT, a breakdown-aware agent framework grounded in theories of common ground, collaborative planning, and coordination work. ProACT observes the speaker-attributed conversation history, determines whether the current turn contains a collaboration breakdown requiring intervention, decides whether the agent should stay silent or speak, and, when speaking is needed, routes the case to a targeted collaboration skill. We further introduce the first multi-user collaboration benchmark for evaluating proactive agents across project planning, product design, research collaboration, logistics, education, and resource-constrained decision making. Across 3,244 turn-level examples and five LLM backbones, ProACT consistently improves collaborative appropriateness, non-interruptiveness, conciseness, and judged intervention quality over direct chat.",
+  "authors": [
+   "Shu Yang",
+   "Difei Xu",
+   "Jiaxin Pei",
+   "Di Wang"
+  ],
+  "comment": ""
+ },
+ "When Single-User-Oriented LLM-based Assistants Involve Others: A Scoping Review of Pathways, Risks, and Responses": {
+  "title": "When Single-User-Oriented LLM-based Assistants Involve Others: A Scoping Review of Pathways, Risks, and Responses",
+  "id": "http://arxiv.org/abs/2609.14062v1",
+  "published": "2026-09-12",
+  "abs": "LLM-based assistants are increasingly extending into multi-party contexts, while core operational processes for context management, personalization, identity attribution, authority attribution, and action execution often remain organized around a single user. Existing work examines particular multi-party settings, but lacks a systematic account of how these single-user-oriented assistants begin to involve additional human parties and what risks emerge. To address this gap, we conducted a scoping review of 58 studies. We identify five operational pathways spanning direct and indirect involvement, five recurring risk domains, and five areas of implemented and proposed responses. Based on these findings, we argue for governance that attends to changing cross-person roles and relationships in practice, and for assistant designs that preserve person-specific boundaries throughout interaction.",
+  "authors": [
+   "Yulin Chen",
+   "Yang Zhan",
+   "Zhuoran Lu",
+   "Qiao Jin"
+  ],
+  "comment": "18 pages, 2 figures"
+ },
+ "A Call for Collaborative Intelligence: Why Human-Agent Systems Should Precede AI Autonomy": {
+  "title": "A Call for Collaborative Intelligence: Why Human-Agent Systems Should Precede AI Autonomy",
+  "id": "http://arxiv.org/abs/2506.09420v1",
+  "published": "2025-06-11",
+  "abs": "Recent improvements in large language models (LLMs) have led many researchers to focus on building fully autonomous AI agents. This position paper questions whether this approach is the right path forward, as these autonomous systems still have problems with reliability, transparency, and understanding the actual requirements of human. We suggest a different approach: LLM-based Human-Agent Systems (LLM-HAS), where AI works with humans rather than replacing them. By keeping human involved to provide guidance, answer questions, and maintain control, these systems can be more trustworthy and adaptable. Looking at examples from healthcare, finance, and software development, we show how human-AI teamwork can handle complex tasks better than AI working alone. We also discuss the challenges of building these collaborative systems and offer practical solutions. This paper argues that progress in AI should not be measured by how independent systems become, but by how well they can work with humans. The most promising future for AI is not in systems that take over human roles, but in those that enhance human capabilities through meaningful partnership.",
+  "authors": [
+   "Henry Peng Zou",
+   "Wei-Chieh Huang",
+   "Yaozu Wu",
+   "Chunyu Miao",
+   "Dongyuan Li",
+   "Aiwei Liu"
+  ],
+  "comment": ""
+ },
+ "Robots That Ask For Help: Uncertainty Alignment for Large Language Model Planners": {
+  "title": "Robots That Ask For Help: Uncertainty Alignment for Large Language Model Planners",
+  "id": "http://arxiv.org/abs/2307.01928v2",
+  "published": "2023-07-04",
+  "abs": "Large language models (LLMs) exhibit a wide range of promising capabilities -- from step-by-step planning to commonsense reasoning -- that may provide utility for robots, but remain prone to confidently hallucinated predictions. In this work, we present KnowNo, which is a framework for measuring and aligning the uncertainty of LLM-based planners such that they know when they don't know and ask for help when needed. KnowNo builds on the theory of conformal prediction to provide statistical guarantees on task completion while minimizing human help in complex multi-step planning settings. Experiments across a variety of simulated and real robot setups that involve tasks with different modes of ambiguity (e.g., from spatial to numeric uncertainties, from human preferences to Winograd schemas) show that KnowNo performs favorably over modern baselines (which may involve ensembles or extensive prompt tuning) in terms of improving efficiency and autonomy, while providing formal assurances. KnowNo can be used with LLMs out of the box without model-finetuning, and suggests a promising lightweight approach to modeling uncertainty that can complement and scale with the growing capabilities of foundation models. Website: https://robot-help.github.io",
+  "authors": [
+   "Allen Z. Ren",
+   "Anushri Dixit",
+   "Alexandra Bodrova",
+   "Sumeet Singh",
+   "Stephen Tu",
+   "Noah Brown"
+  ],
+  "comment": "Conference on Robot Learning (CoRL) 2023, Oral Presentation"
+ },
+ "Proactive Agent: Shifting LLM Agents from Reactive Responses to Active Assistance": {
+  "title": "Proactive Agent: Shifting LLM Agents from Reactive Responses to Active Assistance",
+  "id": "http://arxiv.org/abs/2410.12361v3",
+  "published": "2024-10-16",
+  "abs": "Agents powered by large language models have shown remarkable abilities in solving complex tasks. However, most agent systems remain reactive, limiting their effectiveness in scenarios requiring foresight and autonomous decision-making. In this paper, we tackle the challenge of developing proactive agents capable of anticipating and initiating tasks without explicit human instructions. We propose a novel data-driven approach for this problem. Firstly, we collect real-world human activities to generate proactive task predictions. These predictions are then labeled by human annotators as either accepted or rejected. The labeled data is used to train a reward model that simulates human judgment and serves as an automatic evaluator of the proactiveness of LLM agents. Building on this, we develop a comprehensive data generation pipeline to create a diverse dataset, ProactiveBench, containing 6,790 events. Finally, we demonstrate that fine-tuning models with the proposed ProactiveBench can significantly elicit the proactiveness of LLM agents. Experimental results show that our fine-tuned model achieves an F1-Score of 66.47% in proactively offering assistance, outperforming all open-source and close-source models. These results highlight the potential of our method in creating more proactive and effective agent systems, paving the way for future advancements in human-agent collaboration.",
+  "authors": [
+   "Yaxi Lu",
+   "Shenzhi Yang",
+   "Cheng Qian",
+   "Guirong Chen",
+   "Qinyu Luo",
+   "Yesai Wu"
+  ],
+  "comment": "9 pages, 4 figures"
+ },
+ "OrgAccess: A Benchmark for Role Based Access Control in Organization Scale LLMs": {
+  "title": "OrgAccess: A Benchmark for Role Based Access Control in Organization Scale LLMs",
+  "id": "http://arxiv.org/abs/2505.19165v3",
+  "published": "2025-05-25",
+  "abs": "Role-based access control (RBAC) and hierarchical structures are foundational to how information flows and decisions are made within virtually all organizations. As the potential of Large Language Models (LLMs) to serve as unified knowledge repositories and intelligent assistants in enterprise settings becomes increasingly apparent, a critical, yet under explored, challenge emerges: \\textit{can these models reliably understand and operate within the complex, often nuanced, constraints imposed by organizational hierarchies and associated permissions?} Evaluating this crucial capability is inherently difficult due to the proprietary and sensitive nature of real-world corporate data and access control policies. We introduce a synthetic yet representative \\textbf{OrgAccess} benchmark consisting of 40 distinct types of permissions commonly relevant across different organizational roles and levels. We further create three types of permissions: 40,000 easy (1 permission), 10,000 medium (3-permissions tuple), and 20,000 hard (5-permissions tuple) to test LLMs' ability to accurately assess these permissions and generate responses that strictly adhere to the specified hierarchical rules, particularly in scenarios involving users with overlapping or conflicting permissions. Our findings reveal that even state-of-the-art LLMs struggle significantly to maintain compliance with role-based structures, even with explicit instructions, with their performance degrades further when navigating interactions involving two or more conflicting permissions. Specifically, even \\textbf{GPT-4.1 only achieves an F1-Score of 0.27 on our hardest benchmark}. This demonstrates a critical limitation in LLMs' complex rule following and compositional reasoning capabilities beyond standard factual or STEM-based benchmarks, opening up a new paradigm for evaluating their fitness for practical, structured environments.",
+  "authors": [
+   "Debdeep Sanyal",
+   "Umakanta Maharana",
+   "Yash Sinha",
+   "Hong Ming Tan",
+   "Shirish Karande",
+   "Mohan Kankanhalli"
+  ],
+  "comment": "56 Pages"
+ },
+ "PersonalLLM: Tailoring LLMs to Individual Preferences": {
+  "title": "PersonalLLM: Tailoring LLMs to Individual Preferences",
+  "id": "http://arxiv.org/abs/2409.20296v2",
+  "published": "2024-09-30",
+  "abs": "As LLMs become capable of complex tasks, there is growing potential for personalized interactions tailored to the subtle and idiosyncratic preferences of the user. We present a public benchmark, PersonalLLM, focusing on adapting LLMs to provide maximal benefits for a particular user. Departing from existing alignment benchmarks that implicitly assume uniform preferences, we curate open-ended prompts paired with many high-quality answers over which users would be expected to display heterogeneous latent preferences. Instead of persona-prompting LLMs based on high-level attributes (e.g., user's race or response length), which yields homogeneous preferences relative to humans, we develop a method that can simulate a large user base with diverse preferences from a set of pre-trained reward models. Our dataset and generated personalities offer an innovative testbed for developing personalization algorithms that grapple with continual data sparsity--few relevant feedback from the particular user--by leveraging historical data from other (similar) users. We explore basic in-context learning and meta-learning baselines to illustrate the utility of PersonalLLM and highlight the need for future methodological development. Our dataset is available at https://huggingface.co/datasets/namkoong-lab/PersonalLLM",
+  "authors": [
+   "Thomas P. Zollo",
+   "Andrew Wei Tung Siah",
+   "Naimeng Ye",
+   "Ang Li",
+   "Hongseok Namkoong"
+  ],
+  "comment": "28 pages, 6 figures"
+ },
+ "Aligning LLM Agents by Learning Latent Preference from User Edits": {
+  "title": "Aligning LLM Agents by Learning Latent Preference from User Edits",
+  "id": "http://arxiv.org/abs/2404.15269v3",
+  "published": "2024-04-23",
+  "abs": "We study interactive learning of LLM-based language agents based on user edits made to the agent's output. In a typical setting such as writing assistants, the user interacts with a language agent to generate a response given a context, and may optionally edit the agent response to personalize it based on their latent preference, in addition to improving the correctness. The edit feedback is naturally generated, making it a suitable candidate for improving the agent's alignment with the user's preference, and for reducing the cost of user edits over time. We propose a learning framework, PRELUDE that infers a description of the user's latent preference based on historic edit data. The inferred user preference descriptions are used to define prompts for generating responses in the future. This avoids fine-tuning the agent, which is costly, challenging to scale with the number of users, and may even degrade its performance on other tasks. Furthermore, learning descriptive preference improves interpretability, allowing the user to view and modify the learned preference. However, user preference can be complex, subtle, and vary based on context, making it challenging to learn. To address this, we propose a simple yet effective algorithm named CIPHER that leverages the LLM to infer the user preference for a given context based on user edits. In the future, CIPHER retrieves inferred preferences from the k-closest contexts in the history, and forms an aggregate preference for response generation. We introduce two interactive environments -- summarization and email writing, and use a GPT-4 simulated user for evaluation. On both tasks, CIPHER outperforms several baselines by achieving the lowest edit distance cost while only having a small overhead in LLM query cost. Our analysis reports that user preferences learned by CIPHER show significant similarity to the ground truth latent preferences.",
+  "authors": [
+   "Ge Gao",
+   "Alexey Taymanov",
+   "Eduardo Salinas",
+   "Paul Mineiro",
+   "Dipendra Misra"
+  ],
+  "comment": ""
+ },
+ "Toward Personalized LLM-Powered Agents: Foundations, Evaluation, and Future Directions": {
+  "title": "Toward Personalized LLM-Powered Agents: Foundations, Evaluation, and Future Directions",
+  "id": "http://arxiv.org/abs/2602.22680v2",
+  "published": "2026-02-26",
+  "abs": "Large language models have enabled agentic systems that reason, plan, and interact with tools and environments to accomplish complex tasks. As these agents operate over extended interaction horizons, their effectiveness increasingly depends on adapting behavior to individual users and maintaining continuity across interactions, giving rise to personalized LLM-powered agents (PLAs). In such long-term, user-dependent settings, personalization permeates the entire decision pipeline rather than remaining confined to surface-level response generation. This survey provides a capability-oriented review of personalized LLM-powered agents. Existing work is organized around four interdependent capabilities: profile modeling, memory, planning, and action execution. Using this taxonomy, representative methods are synthesized and analyzed to illustrate how user signals are represented, propagated, and utilized across the agent pipeline, highlighting cross-component interactions and recurring design challenges. Evaluation metrics and benchmarking paradigms tailored to personalized agents are further examined, along with application scenarios ranging from conversational assistants to domain-specific expert systems. By clarifying the design space of personalization in agent systems, this survey provides a structured foundation for developing more user-aligned, adaptive, and deployable LLM-powered agents.",
+  "authors": [
+   "Yue Xu",
+   "Qian Chen",
+   "Zizhan Ma",
+   "Dongrui Liu",
+   "Wenxuan Wang",
+   "Xiting Wang"
+  ],
+  "comment": ""
+ },
+ "Structured Uncertainty guided Clarification for LLM Agents": {
+  "title": "Structured Uncertainty guided Clarification for LLM Agents",
+  "id": "http://arxiv.org/abs/2511.08798v2",
+  "published": "2025-11-11",
+  "abs": "LLM agents with tool-calling capabilities often fail when user instructions are ambiguous or incomplete, leading to incorrect invocations and task failures. Existing approaches operate in unstructured language spaces, generating clarifying questions through prompting strategies that lack principled criteria for determining which questions to ask and when to stop. We introduce a principled formulation of structured uncertainty that operates directly over tool parameters and their domains, cleanly separating specification uncertainty (what the user wants) from model uncertainty (what the LLM predicts). Our formulation uses Expected Value of Perfect Information (EVPI) to quantify the disambiguation value of each potential question, balanced against aspect-based cost modeling that prevents redundant questioning. We demonstrate the versatility of this formulation through two applications. First, SAGE-Agent uses structured uncertainty for inference-time question selection, achieving 7-39% higher coverage on ambiguous tasks while reducing clarification questions by 1.5-2.7x compared to strong prompting and uncertainty-based baselines. Second, we show that structured uncertainty provides effective training signals: uncertainty-guided reward modeling boosts When2Call accuracy from 36.5% to 65.2% (3B model) and 36.7% to 62.9% (7B model) through uncertainty-weighted GRPO training, demonstrating more sample-efficient reinforcement learning for tool-calling agents. To enable evaluation, we present ClarifyBench, the first multi-turn dynamic tool-calling disambiguation benchmark. Our results establish structured uncertainty as a principled framework that improves both inference-time interaction efficiency and training-time sample efficiency in tool-augmented agents.",
+  "authors": [
+   "Manan Suri",
+   "Puneet Mathur",
+   "Nedim Lipka",
+   "Franck Dernoncourt",
+   "Ryan A. Rossi",
+   "Dinesh Manocha"
+  ],
+  "comment": ""
+ },
+ "GateMem: Benchmarking Memory Governance in Multi-Principal Shared-Memory Agents": {
+  "title": "GateMem: Benchmarking Memory Governance in Multi-Principal Shared-Memory Agents",
+  "id": "http://arxiv.org/abs/2606.18829v1",
+  "published": "2026-06-17",
+  "abs": "Memory benchmarks for LLM agents largely assume single-user settings, leaving shared assistants for hospitals, workplaces, campuses, and households understudied. In these deployments, multiple principals write to a common memory pool and query it under different roles, scopes, and relationships, so memory quality requires governance as well as recall. We introduce GateMem, a benchmark for multi-principal shared-memory agents. GateMem jointly evaluates utility for legitimate long-horizon requests with state updates, access control across contextual authorization boundaries, and agent-facing active forgetting after explicit deletion requests. It spans medical, office, education, and household domains, with long-form multi-party episodes, incremental memory injection, hidden checkpoints, structured judging, and leak-target annotations. Across diverse baselines and backbone models, no method simultaneously achieves strong utility, robust access control, and reliable forgetting. Long-context prompting often yields the best governance score at high token cost, while retrieval-based and external-memory methods reduce cost yet still leak unauthorized or deleted information. These results show current memory agents remain far from reliable shared institutional deployment.",
+  "authors": [
+   "Zhe Ren",
+   "Yibo Yang",
+   "Yimeng Chen",
+   "Zijun Zhao",
+   "Benshuo Fu",
+   "Zhihao Shu"
+  ],
+  "comment": "24 pages, 8 figures. Code and dataset are available at https://github.com/rzhub/GateMem and https://huggingface.co/datasets/Ray368/GateMem"
+ }
+}

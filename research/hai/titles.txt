@@ -1,0 +1,38 @@
+Generative AI at Work
+Experimental evidence on the productivity effects of generative artificial intelligence
+Navigating the Jagged Technological Frontier: Field Experimental Evidence of the Effects of AI on Knowledge Worker Productivity and Quality
+The effects of generative AI on high-skilled work: Evidence from three field experiments with software developers
+How much does AI impact development speed? An enterprise-based randomized controlled trial
+Examining the use and impact of an AI code assistant on developer productivity and experience in the enterprise
+Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity
+AI in the Enterprise: How People Use M365 Copilot Chat
+Beyond Training: How Workers Discover Value in Enterprise AI
+Generative AI uses and risks for knowledge workers in a science organization
+The Impact of Generative AI on Critical Thinking: Self-Reported Reductions in Cognitive Effort and Confidence Effects From a Survey of Knowledge Workers
+Exploring How Knowledge Workers Situate an Organisationally Embedded LLM Agent in their Collaborative Work Practices
+SeeSawBot: An LLM-Driven Chatbot Mediating Across Private and Shared Slack Channels to Support Team Dynamics
+AI and the Future of Collaborative Work: Group Ideation with an LLM in a Virtual Canvas
+Plan-then-execute: An empirical study of user trust and team performance when using LLM agents as a daily assistant
+Fostering appropriate reliance on large language models: The role of explanations, sources, and inconsistencies
+Explanations can reduce overreliance on AI systems during decision-making
+Appropriate reliance on AI advice: Conceptualization and the effect of explanations
+Complementarity in human-AI collaboration: Concept, sources, and evidence
+Does the whole exceed its parts? The effect of AI explanations on complementary team performance
+When combinations of humans and AI are useful: A systematic review and meta-analysis
+Large language model-based human-agent collaboration for complex task solving
+LLM-based human-agent collaboration and interaction systems: A survey
+CollabSkill: Evaluating Human-Agent Collaboration On Real-World Tasks
+HAS-Bench: Evaluating LLM-Based Human-Agent Systems under Configurable Human Participation
+CentaurEval: Benchmarking human-in-the-loop value in agentic coding
+Collaborative Gym: A Framework for Enabling and Evaluating Human-Agent Collaboration
+How to Steer Your Multi-Agent System: Human-LLM Collaborative Planning
+Future of Work with AI Agents: Auditing Automation and Augmentation Potential across the U.S. Workforce
+Use it or slowly lose it: Expertise atrophy with organizational AI usage
+AI deskilling is a structural problem
+The GenAI is out of the bottle: generative AI from the business model innovation perspective
+Still just personal assistants? A multiple case study of generative AI adoption in software organizations
+Generative AI in customer support services: a framework for augmenting the routines of frontline service employees
+My advisor, her AI, and me: Evidence from a field experiment on human-AI collaboration and investment decisions
+The Cybernetic Teammate: A Field Experiment on Generative AI Reshaping Teamwork and Expertise
+Ironies of Generative AI: Understanding and mitigating productivity loss in human-AI interactions
+More Code, Less Understanding? On the Impact of AI Assistants on Developers' Productivity and Code Ownership

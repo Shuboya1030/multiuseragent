@@ -1,0 +1,14 @@
+Future of Work with AI Agents: Auditing Automation and Augmentation Potential across the U.S. Workforce
+Multi-User Chat Assistant (MUCA): a Framework Using LLMs to Facilitate Group Conversations
+LLM Agents for Coordinating Multi-User Information Gathering
+ProACT: Towards Breakdown-Aware Proactive Agent in Multi-User Collaboration
+When Single-User-Oriented LLM-based Assistants Involve Others: A Scoping Review of Pathways, Risks, and Responses
+A Call for Collaborative Intelligence: Why Human-Agent Systems Should Precede AI Autonomy
+Robots That Ask For Help: Uncertainty Alignment for Large Language Model Planners
+Proactive Agent: Shifting LLM Agents from Reactive Responses to Active Assistance
+OrgAccess: A Benchmark for Role Based Access Control in Organization Scale LLMs
+PersonalLLM: Tailoring LLMs to Individual Preferences
+Aligning LLM Agents by Learning Latent Preference from User Edits
+Toward Personalized LLM-Powered Agents: Foundations, Evaluation, and Future Directions
+Structured Uncertainty guided Clarification for LLM Agents
+GateMem: Benchmarking Memory Governance in Multi-Principal Shared-Memory Agents

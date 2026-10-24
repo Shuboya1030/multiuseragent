@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.12.1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Related Work Patterns</title>
+  <style>
+
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+</style>
+  <style type="text/css">:root{--bg:#fafaf8;--fg:#1d1d1f;--mut:#666;--line:#e3e3e0;--acc:#2f5fb3;--th:#f0f0ec}
+@media (prefers-color-scheme:dark){:root{--bg:#18181a;--fg:#e8e8e6;--mut:#a0a0a0;--line:#333;--acc:#7aa7ff;--th:#24242a}}
+body{background:var(--bg);color:var(--fg);font:15px/1.65 -apple-system,"Segoe UI","Microsoft YaHei",sans-serif;max-width:1200px;margin:0 auto;padding:24px 16px}
+h1{font-size:1.6em}h2{margin-top:2em;border-bottom:2px solid var(--line);padding-bottom:4px}
+a{color:var(--acc)}table{border-collapse:collapse;width:100%;font-size:13.5px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:6px 8px;vertical-align:top}th{background:var(--th);position:sticky;top:0}
+tr:nth-child(even) td{background:color-mix(in srgb,var(--th) 40%,transparent)}
+blockquote{border-left:4px solid var(--acc);margin:0;padding:4px 12px;color:var(--mut)}
+nav#TOC{background:var(--th);padding:8px 16px;border-radius:8px;font-size:14px}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Related Work Patterns</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#how-papers-write-the-related-work-section-patterns-and-templates" id="toc-how-papers-write-the-related-work-section-patterns-and-templates">How
+Papers Write the Related Work Section: Patterns and Templates</a>
+<ul>
+<li><a href="#the-five-sample-papers" id="toc-the-five-sample-papers">1.
+The five sample papers</a></li>
+<li><a href="#common-patterns" id="toc-common-patterns">2. Common
+patterns</a></li>
+<li><a href="#sentence-templates" id="toc-sentence-templates">3.
+Sentence templates</a></li>
+<li><a href="#checklist-for-writing-a-related-work-section" id="toc-checklist-for-writing-a-related-work-section">4. Checklist for
+writing a Related Work section</a></li>
+<li><a href="#application-to-this-project-role-aware-help-seeking" id="toc-application-to-this-project-role-aware-help-seeking">5.
+Application to this project (role-aware help-seeking)</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="how-papers-write-the-related-work-section-patterns-and-templates">How
+Papers Write the Related Work Section: Patterns and Templates</h1>
+<blockquote>
+<p>Compiled 2026-10-23. Source: the Related Work sections of 5 papers in
+the human–agent collaboration / multi-agent / enterprise agent area,
+read via the arXiv HTML versions. Purpose: a reference for writing the
+literature review in a proposal or paper.</p>
+</blockquote>
+<h2 id="the-five-sample-papers">1. The five sample papers</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Paper</th>
+<th>Venue</th>
+<th>Structure</th>
+<th>How each paragraph is built</th>
+<th>How it contrasts with prior work</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ReHAC</strong> (Feng et al.) — <a href="https://arxiv.org/html/2402.12914v1">arXiv 2402.12914</a></td>
+<td>Findings of EMNLP 2024</td>
+<td>2 subsections, broad to narrow: <em>LLM-based Agent</em> →
+<em>Human-Agent Collaboration</em></td>
+<td>Survey prior work → “However” pivot → this paper’s aim</td>
+<td>“still perform poorly on some complex tasks”; “relies on designing
+high-quality rules or prompts”; “highly dependent on the designer’s
+domain knowledge” → “a generalised and learnable method”</td>
+</tr>
+<tr>
+<td><strong>Multi-User LLM Agents</strong> (Yang et al.) — <a href="https://arxiv.org/html/2604.08567">arXiv 2604.08567</a></td>
+<td>Preprint 2026</td>
+<td>No subsections; one paragraph with about 11 citations</td>
+<td>Organized by dimension (interaction benchmarks → feedback/preference
+learning → proactive clarification → preference aggregation);
+transitions such as “Along the … dimension” and “Separately”</td>
+<td>One contrasting sentence at the very end: “In contrast to these
+settings, we focus on…”; no direct criticism of prior work</td>
+</tr>
+<tr>
+<td><strong>MAST</strong> (Cemri et al.) — <a href="https://arxiv.org/html/2503.13657v3">arXiv 2503.13657</a></td>
+<td>NeurIPS 2025 D&amp;B</td>
+<td>3 subsections: challenges → design principles → datasets and
+taxonomies</td>
+<td>Broad framing → cited examples → while/however contrast →
+positioning</td>
+<td>Stresses a different perspective: “do not offer a fine-grained,
+empirically grounded taxonomy”; “primarily facilitate a top-down
+perspective” vs. “bottom-up analysis”; “extends these insights to the
+multi-agent context”; closes with “the first…”</td>
+</tr>
+<tr>
+<td><strong>Who&amp;When</strong> (Zhang et al.) — <a href="https://arxiv.org/html/2505.00212v3">arXiv 2505.00212</a></td>
+<td>ICML 2025</td>
+<td>3 bold run-in headings: LLM MAS → LLM-as-judge → Reward Models</td>
+<td>Neutral survey; concessive pivot in the last sentence</td>
+<td>“Despite these advancements, failure attribution remains a manual
+process”; “focus primarily on … individual LLMs, rather than identifying
+the errors in complex agentic systems”</td>
+</tr>
+<tr>
+<td><strong>TheAgentCompany</strong> (Xu et al.) — <a href="https://arxiv.org/html/2412.14161">arXiv 2412.14161</a></td>
+<td>NeurIPS 2025 D&amp;B</td>
+<td>No “Related Work” section; organized by <strong>desiderata</strong>,
+one paragraph per requirement, plus a large comparison table in the
+appendix</td>
+<td>Requirement (“In order to…” / “If agents are…”) → prior benchmarks
+that do not meet it → how this paper meets it</td>
+<td>“In contrast, TheAgentCompany contains…”; “Most other benchmarks do
+not measure…, except for τ-bench”; “One novel contribution … is”; the
+table compares 19 benchmarks, and this paper is the only one checked in
+every column</td>
+</tr>
+</tbody>
+</table>
+<h2 id="common-patterns">2. Common patterns</h2>
+<ol type="1">
+<li><strong>One paragraph per theme, and the last sentence states the
+gap or position.</strong> All five papers follow this rule.
+<ul>
+<li>The first half of the paragraph surveys prior work neutrally.</li>
+<li>The final sentence pivots with However / Despite / In contrast /
+rather than.</li>
+</ul></li>
+<li><strong>Order from broad to narrow.</strong> The last paragraph is
+the one closest to the paper. ReHAC, for example, goes agent →
+human-agent collaboration.</li>
+<li><strong>Frame the gap as a different focus, not as prior work being
+wrong.</strong>
+<ul>
+<li>Common phrasings: <em>focus primarily on X rather than Y</em>,
+<em>complementary to</em>, <em>extends … to</em>, <em>bottom-up vs
+top-down</em>.</li>
+<li>The Multi-User paper barely criticizes prior work. It only says the
+setting is different.</li>
+</ul></li>
+<li><strong>Make the gap concrete along one dimension.</strong> Common
+dimensions:
+<ul>
+<li>degree of automation: manual → automated</li>
+<li>scope: single → multi (single-agent → multi-agent, single-user →
+multi-user)</li>
+<li>perspective: reactive → proactive, top-down → bottom-up</li>
+<li>method: rule- or prompt-based → learnable / generalizable</li>
+<li>environment: synthetic → realistic, third-party hosted →
+self-hosted</li>
+</ul></li>
+<li><strong>When the problem spans several dimensions, use a comparison
+table.</strong> TheAgentCompany is the example: rows are prior work,
+columns are dimensions, and only this paper has every column checked.
+Readers can see the gap at a glance.</li>
+<li><strong>Citations are unevenly distributed.</strong>
+<ul>
+<li>Background paragraphs cite a lot. ReHAC’s first subsection has about
+30 citations.</li>
+<li>The paragraph closest to the paper cites only a few, carefully
+chosen works.</li>
+</ul></li>
+<li><strong>The review mirrors the Introduction.</strong> Each challenge
+named in the Introduction gets a corresponding paragraph. ReHAC
+criticizes rule- and prompt-based methods in its Introduction, and its
+Related Work has a dedicated paragraph on exactly those methods.</li>
+<li><strong>Placement and naming vary.</strong>
+<ul>
+<li>The section can be called Related Work or Background.</li>
+<li>It can sit in Section 2, before the method (MAST, TheAgentCompany),
+or near the end, before the Conclusion (ReHAC, Who&amp;When,
+Multi-User).</li>
+<li>A proposal usually places it right after the Introduction, as
+“Background and Research Gap.”</li>
+</ul></li>
+</ol>
+<h2 id="sentence-templates">3. Sentence templates</h2>
+<p><strong>Opening a paragraph</strong> - “Recent work has examined how
+… (Author, Year).” - “LLMs have demonstrated … in X (refs), Y (refs),
+and Z (refs).” - “Numerous studies have explored …” - “Traditional
+research on X focused on …” - “In order to make valid statements about
+…, a benchmark must …” (desiderata style)</p>
+<p><strong>Moving between threads</strong> - “Along the X dimension, …”
+- “Beyond X, another line of work studies …” - “Separately, …” -
+“Building on this, …”</p>
+<p><strong>Pivoting to the gap (end of paragraph)</strong> - “However,
+these approaches assume …” - “Despite these advancements, X remains …” -
+“These works focus primarily on X, rather than Y.” - “Most existing X do
+not …, except for …” - “While X addresses …, it does not consider …”</p>
+<p><strong>Positioning this paper</strong> - “In contrast to these
+settings, we focus on …” - “Our work is complementary: …” - “Our work
+extends these insights to …” - “To our knowledge, this is the first …
+that …”</p>
+<h2 id="checklist-for-writing-a-related-work-section">4. Checklist for
+writing a Related Work section</h2>
+<ul class="task-list">
+<li><label><input type="checkbox"></input>Is the order broad to narrow, with
+the last paragraph closest to my problem?</label></li>
+<li><label><input type="checkbox"></input>Does every paragraph end with a
+sentence stating the gap or my position?</label></li>
+<li><label><input type="checkbox"></input>Is each gap concrete along one
+dimension (scope, perspective, automation, method,
+environment)?</label></li>
+<li><label><input type="checkbox"></input>Have I avoided wording that
+disparages prior work, framing gaps as differences in focus or
+setting?</label></li>
+<li><label><input type="checkbox"></input>Does each challenge raised in the
+Introduction have a matching paragraph?</label></li>
+<li><label><input type="checkbox"></input>If the problem spans several
+dimensions, have I included a comparison table?</label></li>
+<li><label><input type="checkbox"></input>For a “first …” claim, is there a
+hedge (<em>to our knowledge</em>), and is it backed by a
+search?</label></li>
+<li><label><input type="checkbox"></input>Are citation formats consistent, and
+is the publication status (preprint vs. published) correct?</label></li>
+</ul>
+<h2 id="application-to-this-project-role-aware-help-seeking">5.
+Application to this project (role-aware help-seeking)</h2>
+<p><strong>Suggested paragraph order</strong>, broad to narrow: 1. LLM
+agents and enterprise workflows (TheAgentCompany, τ-bench, CRMArena).
+Gap: autonomous agents are still unreliable. 2. Human–agent
+collaboration: deciding <em>when</em> to involve a human (ReHAC,
+Learning to Ask, Co-Gym, HAS-Bench). Gap: they assume a single,
+interchangeable human. 3. Rule- or prompt-based escalation. Gap: depends
+on context and does not generalize. (Corresponds to the challenge raised
+in the Introduction.) 4. Multi-user / multi-principal agents (Multi-User
+LLM Agents, Harness-MU, Collaborative Memory). Gap: reactive, not
+proactive. 5. Multi-expert learning-to-defer and adaptive elicitation
+(DeCCaF, Top-k L2D, Whom to Query). Gap: single-step classification or
+opinion estimation; no organizational roles. 6. Human–agent teaming in
+human factors (Chung et al., 2024). Gap: most studies examine one human
+and one agent.</p>
+<p><strong>Suggested comparison table</strong> (only this paper has
+every column checked):</p>
+<table style="width:99%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr>
+<th>Work</th>
+<th>Multiple humans</th>
+<th>Decides when</th>
+<th>Decides whom</th>
+<th>Roles/authority</th>
+<th>Multi-step tasks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ReHAC</td>
+<td>✗</td>
+<td>✓</td>
+<td>✗</td>
+<td>✗</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Learning to Ask</td>
+<td>✗</td>
+<td>✓</td>
+<td>✗</td>
+<td>✗</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Multi-User LLM Agents</td>
+<td>✓</td>
+<td>✗</td>
+<td>✗</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Multi-expert L2D</td>
+<td>✓ (experts)</td>
+<td>✓</td>
+<td>✓</td>
+<td>✗</td>
+<td>✗</td>
+</tr>
+<tr>
+<td>Whom to Query for What</td>
+<td>✓</td>
+<td>✗</td>
+<td>✓</td>
+<td>✗ (attributes only)</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>TheAgentCompany</td>
+<td>✓</td>
+<td>— (benchmark)</td>
+<td>—</td>
+<td>partial</td>
+<td>✓</td>
+</tr>
+<tr>
+<td><strong>This work</strong></td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>The ✓/✗ entries in this table are my judgments based on the
+abstracts. Check each against the original papers before using the
+table.</p>
+</blockquote>
+</body>
+</html>

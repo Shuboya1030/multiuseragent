@@ -1,0 +1,45 @@
+TheAgentCompany: Benchmarking LLM Agents on Consequential Real World Tasks
+A Benchmark for Tool-Agent-User Interaction in Real-World Domains
+Evaluating Conversational Agents in a Dual-Control Environment
+AppWorld: A Controllable World of Apps and People for Benchmarking Interactive Coding Agents
+WorkArena: How Capable Are Web Agents at Solving Common Knowledge Work Tasks
+WorkArena++: Towards Compositional Planning and Reasoning-based Common Knowledge Work Tasks
+CRMArena: Understanding the Capacity of LLM Agents to Perform Professional CRM Tasks in Realistic Environments
+CRMArena-Pro: Holistic Assessment of LLM Agents Across Diverse Business Scenarios and Interactions
+OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments
+OfficeBench: Benchmarking Language Agents across Multiple Applications for Office Automation
+OdysseyBench: Evaluating LLM Agents on Long-Horizon Complex Office Application Workflows
+FlowBench: Revisiting and Benchmarking Workflow-Guided Planning for LLM-based Agents
+SWE-bench Pro: Can AI Agents Solve Long-Horizon Software Engineering Tasks
+Why Do Multi-Agent LLM Systems Fail
+Which Agent Causes Task Failures and When? On Automated Failure Attribution of LLM Multi-Agent Systems
+AgenTracer: Who Is Inducing Failure in the LLM Agentic Systems
+DoVer: Intervention-Driven Auto Debugging for LLM Multi-Agent Systems
+WebSuite: Systematically Evaluating Why Web Agents Fail
+Understanding Code Agent Behaviour: An Empirical Study of Success and Failure Trajectories
+Characterizing Faults in Agentic AI: A Taxonomy of Types, Symptoms, and Root Causes
+AgentOps: Enabling Observability of LLM Agents
+Butterfly Effects in Toolchains: A Comprehensive Analysis of Failed Parameter Filling in LLM Tool-Agent Systems
+ToolScan: A Benchmark for Characterizing Errors in Tool-Use LLMs
+Learning to Ask: When LLM Agents Meet Unclear Instruction
+CAR-bench: Evaluating the Consistency and Limit-Awareness of LLM Agents under Real-World Uncertainty
+AgentDojo: A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for LLM Agents
+InjecAgent: Benchmarking Indirect Prompt Injections in Tool-Integrated Large Language Model Agents
+Adaptive Attacks Break Defenses Against Indirect Prompt Injection Attacks on LLM Agents
+Defeating Prompt Injections by Design
+The Task Shield: Enforcing Task Alignment to Defend Against Indirect Prompt Injection in LLM Agents
+Progent: Programmable Privilege Control for LLM Agents
+AgentSpec: Customizable Runtime Enforcement for Safe and Reliable LLM Agents
+AgentPoison: Red-teaming LLM Agents via Poisoning Memory or Knowledge Bases
+Identifying the Risks of LM Agents with an LM-Emulated Sandbox
+ST-WebAgentBench: A Benchmark for Evaluating Safety and Trustworthiness in Web Agents
+OpenAgentSafety: A Comprehensive Framework for Evaluating Real-World AI Agent Safety
+Operationalizing Contextual Integrity in Privacy-Conscious Assistants
+Beyond Accuracy: A Multi-Dimensional Framework for Evaluating Enterprise Agentic AI Systems
+ReliabilityBench: Evaluating LLM Agent Reliability Under Production-Like Stress Conditions
+Beyond Task Completion: Revealing Corrupt Success in LLM Agents through Procedure-Aware Evaluation
+When Agents Go Astray: Course-Correcting SWE Agents with PRMs
+Efficient Agents: Building Effective Agents While Reducing Cost
+Evaluation and Benchmarking of LLM Agents: A Survey
+MemoryGraft: Persistent Compromise of LLM Agents via Poisoned Experience Retrieval
+Agent-SafetyBench: Evaluating the Safety of LLM Agents

@@ -1,0 +1,540 @@
+{
+ "Generative AI at Work": {
+  "title": "Generative AI at Work",
+  "year": 2024,
+  "venue": "The Quarterly Journal of Economics",
+  "doi": "https://doi.org/10.1093/qje/qjae044",
+  "authors": [
+   "Erik Brynjolfsson",
+   "Danielle Li",
+   "Lindsey Raymond"
+  ],
+  "cited": 1037,
+  "abs": "Abstract We study the staggered introduction of a generative AI–based conversational assistant using data from 5,172 customer-support agents. Access to AI assistance increases worker productivity, as measured by issues resolved per hour, by 15% on average, with substantial heterogeneity across workers. The effects vary significantly across different agents. Less experienced and lower-skilled workers improve both the speed and quality of their output, while the most experienced and highest-skilled workers see small gains in speed and small declines in quality. We also find evidence that AI assistance facilitates worker learning and improves English fluency, particularly among international agents. While AI systems improve with more training data, we find that the gains from AI adoption are largest for moderately rare problems, where human agents have less baseline experience but the system still has adequate training data. Finally, we provide evidence that AI assistance improves the experience of work along several dimensions: customers are more polite and less likely to ask to speak to a manager."
+ },
+ "Experimental evidence on the productivity effects of generative artificial intelligence": {
+  "title": "Experimental evidence on the productivity effects of generative artificial intelligence",
+  "year": 2023,
+  "venue": "Science",
+  "doi": "https://doi.org/10.1126/science.adh2586",
+  "authors": [
+   "Shakked Noy",
+   "Whitney Zhang"
+  ],
+  "cited": 2109,
+  "abs": "We examined the productivity effects of a generative artificial intelligence (AI) technology, the assistive chatbot ChatGPT, in the context of midlevel professional writing tasks. In a preregistered online experiment, we assigned occupation-specific, incentivized writing tasks to 453 college-educated professionals and randomly exposed half of them to ChatGPT. Our results show that ChatGPT substantially raised productivity: The average time taken decreased by 40% and output quality rose by 18%. Inequality between workers decreased, and concern and excitement about AI temporarily rose. Workers exposed to ChatGPT during the experiment were 2 times as likely to report using it in their real job 2 weeks after the experiment and 1.6 times as likely 2 months after the experiment."
+ },
+ "Navigating the Jagged Technological Frontier: Field Experimental Evidence of the Effects of AI on Knowledge Worker Productivity and Quality": {
+  "title": "Navigating the Jagged Technological Frontier: Field Experimental Evidence of the Effects of Artificial Intelligence on Knowledge Worker Productivity and Quality",
+  "year": 2023,
+  "venue": "SSRN Electronic Journal",
+  "doi": "https://doi.org/10.2139/ssrn.4573321",
+  "authors": [
+   "Fabrizio Dell’Acqua",
+   "Edward McFowland",
+   "Ethan Mollick",
+   "Hila Lifshitz‐Assaf",
+   "Katherine C. Kellogg"
+  ],
+  "cited": 789,
+  "abs": ""
+ },
+ "The effects of generative AI on high-skilled work: Evidence from three field experiments with software developers": {
+  "title": "The Effects of Generative AI on High Skilled Work: Evidence from Three Field Experiments with Software Developers",
+  "year": 2024,
+  "venue": "SSRN Electronic Journal",
+  "doi": "https://doi.org/10.2139/ssrn.4945566",
+  "authors": [
+   "Zheyuan Cui",
+   "Mert Demirer",
+   "Sonia Jaffe",
+   "Leon Musolff",
+   "Sida Peng"
+  ],
+  "cited": 73,
+  "abs": ""
+ },
+ "How much does AI impact development speed? An enterprise-based randomized controlled trial": {
+  "title": "How Much Does AI Impact Development Speed? an Enterprise-Based Randomized Controlled Trial",
+  "year": 2025,
+  "venue": "IEEE/ACM International Conference on Software Engineering: Software Engineering in Practice (ICSE-SEIP)",
+  "doi": "https://doi.org/10.1109/icse-seip66354.2025.00060",
+  "authors": [
+   "Elise Paradis",
+   "Kate Grey",
+   "Quinn Madison",
+   "Daye Nam",
+   "Andrew Macvean"
+  ],
+  "cited": 20,
+  "abs": "How much does AI assistance impact developer productivity? To date, the software engineering literature has provided a range of answers, targeting a diversity of outcomes: from perceived productivity to speed on task and developer throughput. Our randomized controlled trial with 96 full-time Google software engineers contributes to this literature by sharing an estimate of the impact of three AI features on the time developers spent on a complex, enterprise-grade task. We found that AI significantly shortened the time developers spent on task. Our best estimate of the size of this effect, controlling for factors known to influence developer time on task, stands at about$\\mathbf{2 1 \\%}$, although our confidence interval is large. We also found an interesting effect whereby developers who spend more hours on code-related activities per day were faster with AI. Product and future research considerations are discussed. In particular, we invite further research that explores the impact of AI at the ecosystem level and across multiple suites of AI-enhanced tools, since we cannot assume that the effect size obtained in our lab study will necessarily apply more broadly, or that the effect of AI found using internal Google tooling in the summer of 2024 will translate across tools and over time."
+ },
+ "Examining the use and impact of an AI code assistant on developer productivity and experience in the enterprise": {
+  "title": "Examining the Use and Impact of an AI Code Assistant on Developer Productivity and Experience in the Enterprise",
+  "year": 2025,
+  "venue": "Extended Abstracts of the CHI Conference on Human Factors in Computing Systems (CHI EA)",
+  "doi": "https://doi.org/10.1145/3706599.3706670",
+  "authors": [
+   "Justin D. Weisz",
+   "Shraddha Kumar",
+   "Michael J. Muller",
+   "Karen-Ellen Browne",
+   "Arielle Goldberg"
+  ],
+  "cited": 36,
+  "abs": "AI assistants are being created to help software engineers conduct a variety of coding-related tasks, such as writing, documenting, and testing code. We describe the use of the watsonx Code Assistant (WCA), an LLM-powered coding assistant deployed internally within IBM. Through surveys of two user cohorts (N=669) and unmoderated usability testing (N=15), we examined developers' experiences with WCA and its impact on their productivity. We learned about their motivations for using (or not using) WCA, we examined their expectations of its speed and quality, and we identified new considerations regarding ownership of and responsibility for generated code. Our case study characterizes the impact of an LLM-powered assistant on developers' perceptions of productivity and it shows that although such tools do often provide net productivity increases, these benefits may not always be experienced by all users."
+ },
+ "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity": {
+  "title": "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity",
+  "year": 2025,
+  "venue": "arXiv (Cornell University)",
+  "doi": "https://doi.org/10.48550/arxiv.2507.09089",
+  "authors": [
+   "Becker, Joel",
+   "Nate Rush",
+   "Elizabeth A. Barnes",
+   "Rein, David"
+  ],
+  "cited": 15,
+  "abs": "Despite widespread adoption, the impact of AI tools on software development in the wild remains understudied. We conduct a randomized controlled trial (RCT) to understand how AI tools at the February-June 2025 frontier affect the productivity of experienced open-source developers. 16 developers with moderate AI experience complete 246 tasks in mature projects on which they have an average of 5 years of prior experience. Each task is randomly assigned to allow or disallow usage of early 2025 AI tools. When AI tools are allowed, developers primarily use Cursor Pro, a popular code editor, and Claude 3.5/3.7 Sonnet. Before starting tasks, developers forecast that allowing AI will reduce completion time by 24%. After completing the study, developers estimate that allowing AI reduced completion time by 20%. Surprisingly, we find that allowing AI actually increases completion time by 19%--AI tooling slowed developers down. This slowdown also contradicts predictions from experts in economics (39% shorter) and ML (38% shorter). To understand this result, we collect and evaluate evidence for 20 properties of our setting that a priori could contribute to the observed slowdown effect--for example, the size and quality standards of projects, or prior developer experience with AI tooling. Although the influence of experimental artifacts cannot be entirely ruled out, the robustness of the slowdown effect across our analyses suggests it is unlikely to primarily be a function of our experimental design."
+ },
+ "AI in the Enterprise: How People Use M365 Copilot Chat": {
+  "title": "AI in the Enterprise: How People Use M365 Copilot Chat",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "doi": "https://doi.org/10.48550/arxiv.2605.23958",
+  "authors": [
+   "Scott Counts",
+   "Yan Chen",
+   "Jing Dong",
+   "Himanshu Sharma",
+   "Andrey Zaikin"
+  ],
+  "cited": 0,
+  "abs": "M365 Copilot is used every week by millions of people across more than a million companies around the world as part of their workflows. Uniquely positioned in the AI landscape given its near-exclusive use for work purposes, M365 Copilot can offer a clear picture of how people use AI for work and where that usage may expand next. This paper characterizes that usage through direct classification of user interactions with M365 Copilot Chat. Based on an anonymized and privacy-preserving analysis of a sample of approximately 5.5 million sessions, we combine a learned classification of user intent with a classification of O*NET work activities done with M365 Copilot Chat. We find that M365 Copilot is emerging as an everyday assistant for knowledge work: writing dominates, but users also rely on it for information retrieval, analysis, decision making and strategizing, and evaluating and diagnosing programs and systems, among others. Information seeking tasks remain common, but time trends suggest a relative shift away from ``chat as search'' and toward content and communication-related work. Comparisons across occupational groupings and to work done in the labor market further show that usage is broad but uneven, where the relative share of work done with M365 Copilot Chat cuts across jobs in some cases and is occupation-specific in others. Areas of relative underrepresentation in the labor market suggest the next frontier for enterprise AI adoption."
+ },
+ "Beyond Training: How Workers Discover Value in Enterprise AI": {
+  "title": "Beyond Training: How Workers Discover Value in Enterprise AI",
+  "year": 2026,
+  "venue": "Proceedings of the ... Annual Hawaii International Conference on System Sciences/Proceedings of the Annual Hawaii International Conference on System Sciences",
+  "doi": "https://doi.org/10.24251/hicss.2026.028",
+  "authors": [
+   "Riya Sahni",
+   "Lydia Chilton"
+  ],
+  "cited": 1,
+  "abs": "While organizations continue to invest in enterprise AI, little is known about how individual employees find valuable use cases once these tools are deployed. We present an exploratory interview study of 10 experienced U.S. professionals using M365 Copilot and interpret accounts through Rogers’ Diffusion of Innovations to examine where value appears and how use cases are found and shared. Findings reveal a strong preference for informal learning methods over structured training. No participants (0/10) reported formal training as their primary way of learning; most relied on trial-and-error (8/10) and on exchanging tips with colleagues (6/10). Participants most often used M365 Copilot for note-taking/summarization, information retrieval/explanation, and writing. They also reported perceived gains in efficiency but low confidence in mastering more advanced features. The paper discusses social learning strategies and outlines implementable steps for organizations to support the discovery of high-value use cases with available enterprise AI tools."
+ },
+ "Generative AI uses and risks for knowledge workers in a science organization": {
+  "title": "Generative AI Uses and Risks for Knowledge Workers in a Science Organization",
+  "year": 2025,
+  "venue": "CHI Conference on Human Factors in Computing Systems",
+  "doi": "https://doi.org/10.1145/3706598.3713827",
+  "authors": [
+   "Kelly B. Wagman",
+   "Matthew T. Dearing",
+   "Marshini Chetty"
+  ],
+  "cited": 16,
+  "abs": "Generative AI could enhance scientific discovery by supporting knowledge workers in science organizations. However, the real-world applications and perceived concerns of generative AI use in these organizations are uncertain. In this paper, we report on a collaborative study with a US national laboratory with employees spanning Science and Operations about their use of generative AI tools. We surveyed 66 employees, interviewed a subset (N=22), and measured early adoption of an internal generative AI interface called Argo lab-wide. We have four findings: (1) Argo usage data shows small but increasing use by Science and Operations employees; Common current and envisioned use cases for generative AI in this context conceptually fall into either a (2) copilot or (3) workflow agent modality; and (4) Concerns include sensitive data security, academic publishing, and job impacts. Based on our findings, we make recommendations for generative AI use in science and other organizations."
+ },
+ "The Impact of Generative AI on Critical Thinking: Self-Reported Reductions in Cognitive Effort and Confidence Effects From a Survey of Knowledge Workers": {
+  "title": "The Impact of Generative AI on Critical Thinking: Self-Reported Reductions in Cognitive Effort and Confidence Effects From a Survey of Knowledge Workers",
+  "year": 2025,
+  "venue": "CHI Conference on Human Factors in Computing Systems",
+  "doi": "https://doi.org/10.1145/3706598.3713778",
+  "authors": [
+   "Hao-Ping Lee",
+   "Advait Sarkar",
+   "Lev Tankelevitch",
+   "Ian Drosos",
+   "Sean Rintel"
+  ],
+  "cited": 532,
+  "abs": "The rise of Generative AI (GenAI) in knowledge workflows raises questions about its impact on critical thinking skills and practices.We survey 319 knowledge workers to investigate 1) when and how they perceive the enaction of critical thinking when using GenAI, and 2) when and why GenAI affects their effort to do so.Participants shared 936 first-hand examples of using GenAI in work tasks.Quantitatively, when considering both task-and user-specific factors, a user's task-specific self-confidence and confidence in GenAI are predictive of whether critical thinking is enacted and the effort of doing so in GenAI-assisted tasks.Specifically, higher confidence in GenAI is associated with less critical thinking, while higher self-confidence is associated with more critical thinking.Qualitatively, GenAI shifts the nature of critical thinking toward information verification, response integration, and task stewardship.Our insights reveal new design challenges and opportunities for developing GenAI tools for knowledge work."
+ },
+ "Exploring How Knowledge Workers Situate an Organisationally Embedded LLM Agent in their Collaborative Work Practices": {
+  "title": "Exploring How Knowledge Workers Situate an Organisationally Embedded LLM Agent in their Collaborative Work Practices",
+  "year": 2026,
+  "venue": "Computer Supported Cooperative Work (CSCW)",
+  "doi": "https://doi.org/10.1007/s10606-026-09549-1",
+  "authors": [
+   "Kenton O’Hara",
+   "Michael Massimi",
+   "Miftah Khan"
+  ],
+  "cited": 0,
+  "abs": "Abstract Since their introduction, large language models (LLMs), have seen widespread adoption by knowledge workers across a range of industries. A growing body of research is exploring this adoption and examining its implications for the future of work. However, much of this research has focused on individual workers with less attention on understanding how these technologies impact the collaborative practices of knowledge work. Furthermore, studies have primarily explored off-the-shelf LLM systems such as ChatGPT which have limited integration into enterprise systems and workflows. As organisations develop and deploy their own LLM agents, grounded in their specific enterprise systems and workflows, there is an important need to understand how they transform collaborative knowledge work. To address this need we present a qualitative study conducted in an IT services organisation that has introduced a custom LLM agent integrated into its enterprise systems, documents, and workflows. We examine how the employees have integrated the technology into trajectories of everyday practices and workflows and how this shapes collaboration in knowledge work."
+ },
+ "SeeSawBot: An LLM-Driven Chatbot Mediating Across Private and Shared Slack Channels to Support Team Dynamics": {
+  "title": "SeeSawBot: An LLM-Driven Chatbot Mediating Across Private and Shared Slack Channels to Support Team Dynamics",
+  "year": 2026,
+  "venue": "CHI Conference on Human Factors in Computing Systems",
+  "doi": "https://doi.org/10.1145/3772318.3791880",
+  "authors": [
+   "Yihe Wang",
+   "Kehua Lei",
+   "Sheng–Yang Chiu",
+   "Katherine Isbister",
+   "David T. Lee"
+  ],
+  "cited": 2,
+  "abs": ""
+ },
+ "AI and the Future of Collaborative Work: Group Ideation with an LLM in a Virtual Canvas": {
+  "title": "AI and the Future of Collaborative Work: Group Ideation with an LLM in a Virtual Canvas",
+  "year": 2024,
+  "venue": null,
+  "doi": "https://doi.org/10.1145/3663384.3663398",
+  "authors": [
+   "Jessica He",
+   "Stephanie Houde",
+   "Gabriel Enrique Gonzalez",
+   "D Moran",
+   "Steven Ross"
+  ],
+  "cited": 66,
+  "abs": "The introduction of generative AI into multi-user applications raises novel considerations for the future of collaborative work. How might collaborative work practices change? How might we incorporate generative AI into shared tools with users’ needs at the forefront? We examine these questions in the context of a remote team conducting ideation tasks – an example of collaborative work enabled by a shared digital workspace. We conducted a user study with 17 professionals experienced with virtual group ideation workshops. Our study examined their use of the Collaborative Canvas, a virtual canvas tool with integrated generative AI capabilities that we created as a probe. Participants saw value in using generative AI to assist with group facilitation and to augment perspectives and ideas. However, they worried about losing human perspectives and critical thinking, as well as reputational harms resulting from harmful AI outputs. Participants shared suggestions for appropriate ways to incorporate generative AI capabilities within multi-user applications and identified needs for transparency of content ownership, private digital spaces, and specialized AI capabilities. Based on participants’ insights, we share implications and opportunities for the incorporation of generative AI into collaborative work in ways that place user needs at the forefront."
+ },
+ "Plan-then-execute: An empirical study of user trust and team performance when using LLM agents as a daily assistant": {
+  "title": "Plan-Then-Execute: An Empirical Study of User Trust and Team Performance When Using LLM Agents As A Daily Assistant",
+  "year": 2025,
+  "venue": "CHI Conference on Human Factors in Computing Systems",
+  "doi": "https://doi.org/10.1145/3706598.3713218",
+  "authors": [
+   "Gaole He",
+   "Gianluca Demartini",
+   "Ujwal Gadiraju"
+  ],
+  "cited": 23,
+  "abs": "Since the explosion in popularity of ChatGPT, large language models (LLMs) have continued to impact our everyday lives. Equipped with external tools that are designed for a specific purpose (e.g., for flight booking or an alarm clock), LLM agents exercise an increasing capability to assist humans in their daily work. Although LLM agents have shown a promising blueprint as daily assistants, there is a limited understanding of how they can provide daily assistance based on planning and sequential decision making capabilities. We draw inspiration from recent work that has highlighted the value of 'LLM-modulo' setups in conjunction with humans-in-the-loop for planning tasks. We conducted an empirical study (N = 248) of LLM agents as daily assistants in six commonly occurring tasks with different levels of risk typically associated with them (e.g., flight ticket booking and credit card payments). To ensure user agency and control over the LLM agent, we adopted LLM agents in a plan-then-execute manner, wherein the agents conducted step-wise planning and step-by-step execution in a simulation environment. We analyzed how user involvement at each stage affects their trust and collaborative team performance. Our findings demonstrate that LLM agents can be a double-edged sword -- (1) they can work well when a high-quality plan and necessary user involvement in execution are available, and (2) users can easily mistrust the LLM agents with plans that seem plausible. We synthesized key insights for using LLM agents as daily assistants to calibrate user trust and achieve better overall task outcomes. Our work has important implications for the future design of daily assistants and human-AI collaboration with LLM agents."
+ },
+ "Fostering appropriate reliance on large language models: The role of explanations, sources, and inconsistencies": {
+  "title": "Fostering Appropriate Reliance on Large Language Models: The Role of Explanations, Sources, and Inconsistencies",
+  "year": 2025,
+  "venue": "CHI Conference on Human Factors in Computing Systems",
+  "doi": "https://doi.org/10.1145/3706598.3714020",
+  "authors": [
+   "Sunnie S. Y. Kim",
+   "Jennifer Wortman Vaughan",
+   "Q. Vera Liao",
+   "Tania Lombrozo",
+   "Olga Russakovsky"
+  ],
+  "cited": 57,
+  "abs": "Large language models (LLMs) can produce erroneous responses that sound fluent and convincing, raising the risk that users will rely on these responses as if they were correct. Mitigating such overreliance is a key challenge. Through a think-aloud study in which participants use an LLM-infused application to answer objective questions, we identify several features of LLM responses that shape users' reliance: explanations (supporting details for answers), inconsistencies in explanations, and sources. Through a large-scale, pre-registered, controlled experiment (N=308), we isolate and study the effects of these features on users' reliance, accuracy, and other measures. We find that the presence of explanations increases reliance on both correct and incorrect responses. However, we observe less reliance on incorrect responses when sources are provided or when explanations exhibit inconsistencies. We discuss the implications of these findings for fostering appropriate reliance on LLMs."
+ },
+ "Explanations can reduce overreliance on AI systems during decision-making": {
+  "title": "Explanations Can Reduce Overreliance on AI Systems During Decision-Making",
+  "year": 2023,
+  "venue": "Proceedings of the ACM on Human-Computer Interaction",
+  "doi": "https://doi.org/10.1145/3579605",
+  "authors": [
+   "Helena Vasconcelos",
+   "Matthew Jörke",
+   "Madeleine Grunde-McLaughlin",
+   "Tobias Gerstenberg",
+   "Michael S. Bernstein"
+  ],
+  "cited": 394,
+  "abs": "Prior work has identified a resilient phenomenon that threatens the performance of human-AI decision-making teams: overreliance, when people agree with an AI, even when it is incorrect. Surprisingly, overreliance does not reduce when the AI produces explanations for its predictions, compared to only providing predictions. Some have argued that overreliance results from cognitive biases or uncalibrated trust, attributing overreliance to an inevitability of human cognition. By contrast, our paper argues that people strategically choose whether or not to engage with an AI explanation, demonstrating empirically that there are scenarios where AI explanations reduce overreliance. To achieve this, we formalize this strategic choice in a cost-benefit framework, where the costs and benefits of engaging with the task are weighed against the costs and benefits of relying on the AI. We manipulate the costs and benefits in a maze task, where participants collaborate with a simulated AI to find the exit of a maze. Through 5 studies (N = 731), we find that costs such as task difficulty (Study 1), explanation difficulty (Study 2, 3), and benefits such as monetary compensation (Study 4) affect overreliance. Finally, Study 5 adapts the Cognitive Effort Discounting paradigm to quantify the utility of different explanations, providing further support for our framework. Our results suggest that some of the null effects found in literature could be due in part to the explanation not sufficiently reducing the costs of verifying the AI's prediction."
+ },
+ "Appropriate reliance on AI advice: Conceptualization and the effect of explanations": {
+  "title": "Appropriate Reliance on AI Advice: Conceptualization and the Effect of Explanations",
+  "year": 2023,
+  "venue": "ACM International Conference on Intelligent User Interfaces (IUI)",
+  "doi": "https://doi.org/10.1145/3581641.3584066",
+  "authors": [
+   "Max Schemmer",
+   "Niklas Kuehl",
+   "Carina Benz",
+   "Andrea Bartos",
+   "Gerhard Satzger"
+  ],
+  "cited": 201,
+  "abs": "AI advice is becoming increasingly popular, e.g., in investment and medical treatment decisions. As this advice is typically imperfect, decision-makers have to exert discretion as to whether actually follow that advice: they have to “appropriately” rely on correct and turn down incorrect advice. However, current research on appropriate reliance still lacks a common definition as well as an operational measurement concept. Additionally, no in-depth behavioral experiments have been conducted that help understand the factors influencing this behavior. In this paper, we propose Appropriateness of Reliance (AoR) as an underlying, quantifiable two-dimensional measurement concept. We develop a research model that analyzes the effect of providing explanations for AI advice. In an experiment with 200 participants, we demonstrate how these explanations influence the AoR, and, thus, the effectiveness of AI advice. Our work contributes fundamental concepts for the analysis of reliance behavior and the purposeful design of AI advisors."
+ },
+ "Complementarity in human-AI collaboration: Concept, sources, and evidence": {
+  "title": "Complementarity in human-AI collaboration: concept, sources, and evidence",
+  "year": 2025,
+  "venue": "European Journal of Information Systems",
+  "doi": "https://doi.org/10.1080/0960085x.2025.2475962",
+  "authors": [
+   "Patrick Hemmer",
+   "Max Schemmer",
+   "Niklas Kühl",
+   "Michael Vössing",
+   "Gerhard Satzger"
+  ],
+  "cited": 127,
+  "abs": "Artificial intelligence (AI) has the potential to significantly enhance human performance across various domains. Ideally, collaboration between humans and AI should result in complementary team performance (CTP)—a level of performance that neither of them can attain individually. So far, however, CTP has rarely been observed, suggesting an insufficient understanding of the principle and the application of complementarity. Therefore, we develop a general concept of complementarity and formalize its theoretical potential as well as the actual realized effect in decision-making situations. Moreover, we identify information and capability asymmetry as the two key sources of complementarity. Finally, we illustrate the impact of each source on complementarity potential and effect in two empirical studies. Our work provides researchers with a comprehensive theoretical foundation of human-AI complementarity in decision-making and demonstrates that leveraging these sources constitutes a viable pathway towards designing effective human-AI collaboration, i.e., the realization of CTP."
+ },
+ "Does the whole exceed its parts? The effect of AI explanations on complementary team performance": {
+  "title": "Does the Whole Exceed its Parts? The Effect of AI Explanations on Complementary Team Performance",
+  "year": 2021,
+  "venue": "CHI Conference on Human Factors in Computing Systems",
+  "doi": "https://doi.org/10.1145/3411764.3445717",
+  "authors": [
+   "Gagan Bansal",
+   "Tongshuang Wu",
+   "Joyce Zhou",
+   "Raymond Fok",
+   "Besmira Nushi"
+  ],
+  "cited": 748,
+  "abs": "Many researchers motivate explainable AI with studies showing that human-AI team performance on decision-making tasks improves when the AI explains its recommendations. However, prior studies observed improvements from explanations only when the AI, alone, outperformed both the human and the best team. Can explanations help lead to complementary performance, where team accuracy is higher than either the human or the AI working solo? We conduct mixed-method user studies on three datasets, where an AI with accuracy comparable to humans helps participants solve a task (explaining itself in some conditions). While we observed complementary improvements from AI augmentation, they were not increased by explanations. Rather, explanations increased the chance that humans will accept the AI’s recommendation, regardless of its correctness. Our result poses new challenges for human-centered AI: Can we develop explanatory approaches that encourage appropriate trust in AI, and therefore help generate (or improve) complementary performance?"
+ },
+ "When combinations of humans and AI are useful: A systematic review and meta-analysis": {
+  "title": "When combinations of humans and AI are useful: A systematic review and meta-analysis",
+  "year": 2024,
+  "venue": "Nature Human Behaviour",
+  "doi": "https://doi.org/10.1038/s41562-024-02024-1",
+  "authors": [
+   "Thomas W. Malone",
+   "Michelle Anna Vaccaro",
+   "Andres Campero",
+   "Jaeyoon Song",
+   "Haoran Wen"
+  ],
+  "cited": 580,
+  "abs": "Inspired by the increasing use of artificial intelligence (AI) to augment humans, researchers have studied human-AI systems involving different tasks, systems and populations. Despite such a large body of work, we lack a broad conceptual understanding of when combinations of humans and AI are better than either alone. Here we addressed this question by conducting a preregistered systematic review and meta-analysis of 106 experimental studies reporting 370 effect sizes. We searched an interdisciplinary set of databases (the Association for Computing Machinery Digital Library, the Web of Science and the Association for Information Systems eLibrary) for studies published between 1 January 2020 and 30 June 2023. Each study was required to include an original human-participants experiment that evaluated the performance of humans alone, AI alone and human-AI combinations. First, we found that, on average, human-AI combinations performed significantly worse than the best of humans or AI alone (Hedges' g = -0.23; 95% confidence interval, -0.39 to -0.07). Second, we found performance losses in tasks that involved making decisions and significantly greater gains in tasks that involved creating content. Finally, when humans outperformed AI alone, we found performance gains in the combination, but when AI outperformed humans alone, we found losses. Limitations of the evidence assessed here include possible publication bias and variations in the study designs analysed. Overall, these findings highlight the heterogeneity of the effects of human-AI collaboration and point to promising avenues for improving human-AI systems."
+ },
+ "Large language model-based human-agent collaboration for complex task solving": {
+  "title": "Large Language Model-based Human-Agent Collaboration for Complex Task Solving",
+  "year": 2024,
+  "venue": null,
+  "doi": "https://doi.org/10.18653/v1/2024.findings-emnlp.72",
+  "authors": [
+   "Xueyang Feng",
+   "Zhiyuan Chen",
+   "Yujia Qin",
+   "Yankai Lin",
+   "Xu Chen"
+  ],
+  "cited": 23,
+  "abs": "In recent developments within the research community, the integration of Large Language Models (LLMs) in creating fully autonomous agents has garnered significant interest.Despite this, LLM-based agents frequently demonstrate notable shortcomings in adjusting to dynamic environments and fully grasping human needs.In this work, we introduce the problem of LLM-based human-agent collaboration for complex task-solving, exploring their synergistic potential.To tackle the problem, we propose a Reinforcement Learning-based Human-Agent Collaboration method, ReHAC, which trains a policy model designed to determine the most opportune stages for human intervention within the task-solving process.We conduct experiments under real and simulated human-agent collaboration scenarios.Experimental results demonstrate that the synergistic efforts of humans and LLM-based agents significantly improve performance in complex tasks, primarily through well-planned, limited human intervention.Datasets and code are available at: https://github.com/ XueyangFeng/ReHAC/."
+ },
+ "LLM-based human-agent collaboration and interaction systems: A survey": {
+  "title": "LLM-Based Human-Agent Collaboration and Interaction Systems: A Survey",
+  "year": 2025,
+  "venue": "arXiv (Cornell University)",
+  "doi": "https://doi.org/10.48550/arxiv.2505.00753",
+  "authors": [
+   "Henry Peng Zou",
+   "Wei Huang",
+   "Yaozu Wu",
+   "Guo, Jizhou",
+   "Chen, Yankai"
+  ],
+  "cited": 2,
+  "abs": "Recent advances in large language models (LLMs) have sparked growing interest in building fully autonomous agents. However, fully autonomous LLM-based agents still face significant challenges, including limited reliability due to hallucinations, difficulty in handling complex tasks, and substantial safety and ethical risks, all of which limit their feasibility and trustworthiness in real-world applications. To overcome these limitations, LLM-based human-agent systems (LLM-HAS) incorporate human-provided information, feedback, or control into the agent system to enhance system performance, reliability, and safety. These human-agent collaboration systems enable humans and LLM-based agents to collaborate effectively by leveraging their complementary strengths. This paper provides the first comprehensive and structured survey of LLM-HAS. It clarifies fundamental concepts, systematically presents core components shaping these systems, including environment and profiling, human feedback, interaction types, orchestration, and communication, explores emerging applications, and discusses unique challenges and opportunities arising from human-AI collaboration. By consolidating current knowledge and offering a structured overview, we aim to foster further research and innovation in this rapidly evolving interdisciplinary field. Paper lists and resources are available at https://github.com/HenryPengZou/Awesome-Human-Agent-Collaboration-Interaction-Systems."
+ },
+ "CollabSkill: Evaluating Human-Agent Collaboration On Real-World Tasks": {
+  "title": "CollabSkill: Evaluating Human-Agent Collaboration On Real-World Tasks",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "doi": "https://doi.org/10.48550/arxiv.2606.09833",
+  "authors": [
+   "Yijia Shao",
+   "Zora Zhiruo Wang",
+   "Neel Ahuja",
+   "Yicheng Wang",
+   "Bowen Liu"
+  ],
+  "cited": 0,
+  "abs": "AI agents are reshaping the workspace, leading to drastic change of how humans work. Despite the considerable potential of human-agent collaboration both in preserving human agency and generating economic value, this paradigm remains largely absent from occupational task evaluation, hindered by the difficulty of gathering real human data and accounting for inter-human variability. We introduce CollabSkill, a framework for evaluating human-agent collaboration on real-world occupational tasks. CollabSkill pairs real human workers with AI agents on tasks matched to their occupational background, collecting data that capture the complexity of economically valuable tasks and the usage patterns of real workers. To account for inter-human variability, CollabSkill employs a Bayesian skill rating system to disentangle and quantify the skill contributions of both humans and AI agents. Drawing on over 1,500 prompts from 386 working sessions contributed by 93 human workers, our analysis yields insights on two fronts: on the agent side, rankings on CollabSkill diverge meaningfully from those of existing fully autonomous benchmarks where Codex leads, with Claude Code ranking first; on the human side, CollabSkill reveals that practical experience emerges as the primary driver of collaboration skill, with hands-on collaboration meaningfully shifting workers' AI literacy. Together, we hope CollabSkill enables the community to invest in systematic evaluation of human-agent collaboration and spurs development efforts aimed at building AI agents that genuinely augment human workers."
+ },
+ "HAS-Bench: Evaluating LLM-Based Human-Agent Systems under Configurable Human Participation": {
+  "title": "HAS-Bench: Evaluating LLM-Based Human-Agent Systems under Configurable Human Participation",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "doi": "https://doi.org/10.48550/arxiv.2607.04329",
+  "authors": [
+   "Yaozu Wu",
+   "W E I-Xing Huang",
+   "Jizhou Guo",
+   "Dongyuan Li",
+   "Renhe Jiang"
+  ],
+  "cited": 0,
+  "abs": "Large language models increasingly operate in settings where humans are active collaborators rather than passive task providers. We introduce HAS-Framework, a graph-based framework that represents humans and LLM-powered agents as first-class participants with explicit roles, permissions, communication paths, and action authority. Building on this framework, HAS-Bench evaluates Human-Agent Systems under configurable human participation across agency levels, interaction channels, and persona policies. The benchmark measures both task outcomes and process-level collaboration behavior, including clarification quality, feedback utilization, control calibration, safety, initiative, and interaction cost. Experiments across six domains show that human participation can substantially improve task completion and failure recovery, but the gains depend on when, how, and by whom human input is exercised."
+ },
+ "CentaurEval: Benchmarking human-in-the-loop value in agentic coding": {
+  "title": "CentaurEval: Benchmarking Human-in-the-Loop Value in Agentic Coding",
+  "year": 2025,
+  "venue": "arXiv (Cornell University)",
+  "doi": "https://doi.org/10.48550/arxiv.2512.04111",
+  "authors": [
+   "Luo, Hanjun",
+   "Ni, Chiming",
+   "Wen, Jiaheng",
+   "Huang, Zhimu",
+   "Yiran Wang"
+  ],
+  "cited": 0,
+  "abs": "LLM-powered coding agents are reshaping the development paradigm. However, existing evaluation systems, neither traditional tests for humans nor benchmarks for LLMs, fail to capture this shift, excluding problems that require both human reasoning to guide solutions and AI efficiency for implementation. We introduce CentaurEval, a unified, ecologically valid benchmark for measuring human-in-the-loop value in coding. CentaurEval's core innovation is its \"Collaboration-Necessary\" problem templates, which are intractable for standalone LLMs or humans, but solvable through effective collaboration. CentaurEval dynamically instantiates tasks from 45 templates, providing a standardized IDE for humans and a reproducible 450-task toolkit for LLMs. We benchmark 45 participants against 5 LLMs under 4 levels of human intervention. Results show that while LLMs or humans alone achieve poor pass rates (0.67% and 18.89%), human-AI collaboration significantly improves to 31.11%. Our analysis reveals an emerging co-reasoning partnership, challenging the traditional human-tool hierarchy by showing that strategic breakthroughs can originate from either humans or AI."
+ },
+ "Collaborative Gym: A Framework for Enabling and Evaluating Human-Agent Collaboration": {
+  "title": "Collaborative Gym: A Framework for Enabling and Evaluating Human-Agent Collaboration",
+  "year": 2024,
+  "venue": "arXiv (Cornell University)",
+  "doi": "https://doi.org/10.48550/arxiv.2412.15701",
+  "authors": [
+   "Yijia Shao",
+   "Samuel, Vinay",
+   "Jiang, Yucheng",
+   "Yang, John",
+   "Diyi Yang"
+  ],
+  "cited": 1,
+  "abs": "While the advancement of large language models has spurred the development of AI agents to automate tasks, numerous use cases inherently require agents to collaborate with humans due to humans' latent preferences, domain expertise, or the need for control. To facilitate the study of human-agent collaboration, we introduce Collaborative Gym (Co-Gym), an open framework for developing and evaluating collaborative agents that engage in bidirectional communication with humans while interacting with task environments. We describe how the framework enables the implementation of new task environments and coordination between humans and agents through a flexible, non-turn-taking interaction paradigm, along with an evaluation suite that assesses both collaboration outcomes and processes. Our framework provides both a simulated condition with a reliable user simulator and a real-world condition with an interactive web application. Initial benchmark experiments across three representative tasks -- creating travel plans, writing related work sections, and analyzing tabular data -- demonstrate the benefits of human-agent collaboration: The best-performing collaborative agents consistently outperform their fully autonomous counterparts in task performance, achieving win rates of 86% in Travel Planning, 74% in Tabular Analysis, and 66% in Related Work when evaluated by real users. Despite these improvements, our evaluation reveals persistent limitations in current language models and agents, with communication and situational awareness failures observed in 65% and 40% of cases in the real condition, respectively. Released under the permissive MIT license, Co-Gym supports the addition of new task environments and can be used to develop collaborative agent applications, while its evaluation suite enables assessment and improvement of collaborative agents."
+ },
+ "How to Steer Your Multi-Agent System: Human-LLM Collaborative Planning": {
+  "title": "How to Steer Your Multi-Agent System: Human-LLM Collaborative Planning — Code and Data",
+  "year": 2026,
+  "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+  "doi": "https://doi.org/10.5281/zenodo.20100632",
+  "authors": [
+   "Zeyu He",
+   "Hannah Kim",
+   "Dan Zhang",
+   "Estevam Rafael Hruschka Junior"
+  ],
+  "cited": 0,
+  "abs": "Code and data for \"How to Steer Your Multi-Agent System: Human-LLM Collaborative Planning\" (He et al; ACM CAIS 2026 - 🏆 Best Artifact Award)"
+ },
+ "Future of Work with AI Agents: Auditing Automation and Augmentation Potential across the U.S. Workforce": {
+  "title": "A Large-Scale Audit of Worker Preferences for AI Agent Automation and Augmentation",
+  "year": 2026,
+  "venue": "International Journal of Artificial Intelligence and Agent Systems",
+  "doi": "https://doi.org/10.67231/z4d5ey28",
+  "authors": [
+   "Eeshwar Pasula"
+  ],
+  "cited": 0,
+  "abs": "As AI agents are increasingly being integrated into work, little is known about the systematic knowledge among workers. We conduct a large audit of 1,500 workers across 104 US occupations, examining the preferred AI involvement in 844 occupational tasks. Our main contribution is the Human Agency Scale (HAS), which comprises 5 levels of human involvement between fully automated (H1) and essential human agency (H5). HAS seeks to circumvent the automation debate. The findings show that there is a 46.1% positive tendency to auto-automate tasks. According to research, this was largely to free up time for higher-value work (69.4%). Moreover, resistance has come from the creative sector as well. A significant mismatch is indicated by the comparison between what workers want and what 52 AI specialists think. We illustrate these mismatches as a desire-capability landscape consisting of four zones. The zones are Automation “Green Light”, Automation “Red Light”, R&D Opportunity, and Low Priority. Currently, investment is mostly concentrated in low-priority zones with unmet labour needs. H3 (Equal partnership) occupies 45.2% of the jobs, indicating an upcoming phase of collaboration. Interpersonal skills are becoming increasingly important. The implementation of AI technology and focused research should be guided by this worker-centred framework."
+ },
+ "Use it or slowly lose it: Expertise atrophy with organizational AI usage": {
+  "title": "Use it or Slowly Lose it: Expertise Atrophy with Organizational AI Usage",
+  "year": 2026,
+  "venue": "SSRN Electronic Journal",
+  "doi": "https://doi.org/10.2139/ssrn.6398398",
+  "authors": [
+   "James Siderius",
+   "Robert A. Shumsky",
+   "Alva Taylor"
+  ],
+  "cited": 0,
+  "abs": ""
+ },
+ "AI deskilling is a structural problem": {
+  "title": "AI deskilling is a structural problem",
+  "year": 2025,
+  "venue": "AI & Society",
+  "doi": "https://doi.org/10.1007/s00146-025-02686-z",
+  "authors": [
+   "Avigail Ferdman"
+  ],
+  "cited": 46,
+  "abs": "Abstract Many artificial intelligence tools replace or stand to replace human activity, via automated decision-making, recommender systems and content generation. The more artificial intelligence (AI) replaces valuable human activity, the more it risks deskilling humans of their human capacities. This paper argues for applying a structural perspective to this phenomenon. It introduces the concept of ‘capacity-hostile environments’ to identify instances where AI mediation impedes human capacity cultivation. The analysis moves beyond individual responsibility that agents have to cultivate their human capacities, demonstrating how AI’s influence creates systemic conditions that could inhibit the development and exercise of human capacities by undermining the process of capacity cultivation. Drawing on the philosophy of skill as well as social epistemology, this paper argues that capacity cultivation (skilling) includes acquiring agential control over the capacities, inculcated through a long, gradual process of habituation. Habituation, in turn, depends on learning from others: the ‘know how’ of the skill, as well as a shared understanding of the value of the skill. AI mediation risks undermining the quality of the conditions for capacity habituation, leading to capacity impoverishment. By exploring the role of AI in mediating human activity, the paper highlights the need to evaluate AI applications based on their conduciveness or hostility to capacity cultivation. Ultimately, it calls for a critical reflection on the values inherent in AI socio-technical systems and emphasizes the societal obligation to foster capacity-conducive environments in the age of AI."
+ },
+ "The GenAI is out of the bottle: generative AI from the business model innovation perspective": {
+  "title": "The GenAI is out of the bottle: generative artificial intelligence from a business model innovation perspective",
+  "year": 2023,
+  "venue": "Review of Managerial Science",
+  "doi": "https://doi.org/10.1007/s11846-023-00696-z",
+  "authors": [
+   "Dominik Kurt Kanbach",
+   "Louisa Heiduk",
+   "Georg Blueher",
+   "Maximilian Schreiter",
+   "Alexander D.F. Lahmann"
+  ],
+  "cited": 463,
+  "abs": "Abstract The introduction of ChatGPT in November 2022 by OpenAI has stimulated substantial discourse on the implementation of artificial intelligence (AI) in various domains such as academia, business, and society at large. Although AI has been utilized in numerous areas for several years, the emergence of generative AI (GAI) applications such as ChatGPT, Jasper, or DALL-E are considered a breakthrough for the acceleration of AI technology due to their ease of use, intuitive interface, and performance. With GAI, it is possible to create a variety of content such as texts, images, audio, code, and even videos. This creates a variety of implications for businesses requiring a deeper examination, including an influence on business model innovation (BMI). Therefore, this study provides a BMI perspective on GAI with two primary contributions: (1) The development of six comprehensive propositions outlining the impact of GAI on businesses, and (2) the discussion of three industry examples, specifically software engineering, healthcare, and financial services. This study employs a qualitative content analysis using a scoping review methodology, drawing from a wide-ranging sample of 513 data points. These include academic publications, company reports, and public information such as press releases, news articles, interviews, and podcasts. The study thus contributes to the growing academic discourse in management research concerning AI's potential impact and offers practical insights into how to utilize this technology to develop new or improve existing business models."
+ },
+ "Still just personal assistants? A multiple case study of generative AI adoption in software organizations": {
+  "title": "Still just personal assistants? – A multiple case study of generative AI adoption in software organizations",
+  "year": 2025,
+  "venue": "Information and Software Technology",
+  "doi": "https://doi.org/10.1016/j.infsof.2025.107805",
+  "authors": [
+   "Kai‐Kristian Kemell",
+   "Matti Saarikallio",
+   "Anh Nguyen‐Duc",
+   "Pekka Abrahamsson"
+  ],
+  "cited": 17,
+  "abs": "Context: Generative AI (GenAI) is argued to transform software engineering (SE) in various ways, and GenAI tools show promise for various SE tasks. Software organizations across the globe are currently exploring the use of GenAI for SE. Objective: While numerous studies have recently been published on GenAI, few studies have looked at the adoption of these tools and their usage from an organizational point of view, focusing instead on individual users. Our objective is to understand how organizations adopt these tools and what their impacts are in industrial contexts, with a focus on the European perspective. Method: We conducted a multiple case study of seven European companies. We collected data through semi-structured interviews (n=15), as well as through longitudinal observation in one case company. All data were analyzed using thematic analysis. Results: We analyzed 28 transcripts, resulting in 456 quotations and 557 code occurrences split between 66 individual codes that were categorized under 6 high-level themes. We identified 25 types of tasks GenAI was currently being used for in our case organizations. We identified 12 benefits for GenAI in SE and 10 adoption and use challenges. Key adoption challenges for organizations include data privacy and legislative concerns, the emerging and fast-moving market of GenAI tools, difficulty of measuring the positive impact of the tools, and potential change resistance. For individuals, the key challenges are related to prompting, such as understanding what a good prompt is, and how to write prompts for specific tasks. Conclusion: GenAI adoption is becoming widespread in SE, but good practices and use cases are still emerging. While GenAI can potentially produce various benefits in SE, companies and individual users are facing various challenges in making the most of GenAI in SE. Our results provide insights into the current state of practice."
+ },
+ "Generative AI in customer support services: a framework for augmenting the routines of frontline service employees": {
+  "title": "Generative AI in Customer Support Services: A Framework for Augmenting the Routines of Frontline Service Employees",
+  "year": 2024,
+  "venue": "Proceedings of the ... Annual Hawaii International Conference on System Sciences/Proceedings of the Annual Hawaii International Conference on System Sciences",
+  "doi": "https://doi.org/10.24251/hicss.2024.028",
+  "authors": [
+   "Philipp Reinhard",
+   "Mahei Manhai Li",
+   "Christoph Peters",
+   "Jan Marco Leimeister"
+  ],
+  "cited": 13,
+  "abs": "Customer support service employees are facing an increased workload, while artificial intelligence (AI) appears to possess the potential to change the way we work. With the advent of modern types of generative AI, new opportunities to augment frontline service employees have emerged. However, little is known about how to integrate generative AI in customer support service organizations and purposefully change service employee work routines. Following multi-method qualitative research, we performed a literature review, conducted workshops, and interviewed IT support agents, managers, and AI experts. Thereby, we examine AI augmentation for frontline service employees in the context of IT support to carve out where and how GenAI can be leveraged to develop more efficient and higher-quality customer support. Our resulting framework reveals that especially adapting solutions and retaining knowledge is subject to a high degree of AI augmentation."
+ },
+ "My advisor, her AI, and me: Evidence from a field experiment on human-AI collaboration and investment decisions": {
+  "title": "Commentary on “My Advisor, Her AI, and Me: Evidence from a Field Experiment on Human-AI Collaboration and Investment Decisions”",
+  "year": 2026,
+  "venue": "Management Science",
+  "doi": "https://doi.org/10.1287/mnsc.2026.01340",
+  "authors": [
+   "Hans‐Paul Bürkner"
+  ],
+  "cited": 0,
+  "abs": "This is a commentary by Dr. Hans-Paul Bürkner (Global Chair Emeritus and former CEO of The Boston Consulting Group) on Yang, Bauer, Li, and Hinz (2025) “My Advisor, Her AI, and Me: Evidence from a Field Experiment on Human–AI Collaboration and Investment Decisions.”"
+ },
+ "The Cybernetic Teammate: A Field Experiment on Generative AI Reshaping Teamwork and Expertise": {
+  "title": "The Cybernetic Teammate: A Field Experiment on Generative AI Reshaping Teamwork and Expertise",
+  "year": 2025,
+  "venue": "National Bureau of Economic Research",
+  "doi": "https://doi.org/10.3386/w33641",
+  "authors": [
+   "Fabrizio Dell’Acqua",
+   "Charles Ayoubi",
+   "Hila Lifshitz‐Assaf",
+   "Raffaella Sadun",
+   "Ethan Mollick"
+  ],
+  "cited": 53,
+  "abs": "We examine how artificial intelligence transforms the core pillars of collaboration-performance, expertise sharing, and social engagement-through a pre-registered field experiment with 776 professionals at Procter & Gamble, a global consumer packaged goods company.Working on real product innovation challenges, professionals were randomly assigned to work either with or without AI, and either individually or with another professional in new product development teams.Our findings reveal that AI significantly enhances performance: individuals with AI matched the performance of teams without AI, demonstrating that AI can effectively replicate certain benefits of human collaboration.Moreover, AI breaks down functional silos.Without AI, R&D professionals tended to suggest more technical solutions, while Commercial professionals leaned towards commercially-oriented proposals.Professionals using AI produced balanced solutions, regardless of their professional background.Finally, AI's language-based interface prompted more positive self-reported emotional responses among participants, suggesting it can fulfill part of the social and motivational role traditionally offered by human teammates.Our results suggest that AI adoption at scale in knowledge work reshapes not only performance but also how expertise and social connectivity manifest within teams, compelling organizations to rethink the very structure of collaborative work."
+ },
+ "Ironies of Generative AI: Understanding and mitigating productivity loss in human-AI interactions": {
+  "title": "Ironies of Generative AI: Understanding and Mitigating Productivity Loss in Human-AI Interaction",
+  "year": 2024,
+  "venue": "International Journal of Human-Computer Interaction",
+  "doi": "https://doi.org/10.1080/10447318.2024.2405782",
+  "authors": [
+   "Auste Simkute",
+   "Lev Tankelevitch",
+   "Viktor Nikolaus Kewenig",
+   "Ava Elizabeth Scott",
+   "Abigail J. Sellen"
+  ],
+  "cited": 85,
+  "abs": "Generative AI (GenAI) systems offer opportunities to increase user productivity in many tasks, such as programming and writing. However, while they boost productivity in some studies, many others show that users are working ineffectively with GenAI systems and losing productivity. Despite the apparent novelty of these usability challenges, these ‘ironies of automation’ have been observed for over three decades in Human Factors research on the introduction of automation in domains such as aviation, automated driving, and intelligence. We draw on this extensive research alongside recent GenAI user studies to outline four key reasons for productivity loss with GenAI systems: a shift in users’ roles from production to evaluation, unhelpful restructuring of workflows, interruptions, and a tendency for automation to make easy tasks easier and hard tasks harder. We then suggest how Human Factors research can also inform GenAI system design to mitigate productivity loss by using approaches such as continuous feedback, system personalization, ecological interface design, task stabilization, and clear task allocation. Thus, we ground developments in GenAI system usability in decades of Human Factors research, ensuring that the design of human-AI interactions in this rapidly moving field learns from history instead of repeating it."
+ },
+ "More Code, Less Understanding? On the Impact of AI Assistants on Developers' Productivity and Code Ownership": {
+  "title": "More Code, Less Understanding? On the Impact of AI Assistants on Developers’ Productivity and Code Ownership",
+  "year": 2026,
+  "venue": "IEEE Transactions on Software Engineering",
+  "doi": "https://doi.org/10.1109/tse.2026.3679627",
+  "authors": [
+   "Alberto Martin-Lopez",
+   "Rosalia Tufano",
+   "Emanuela Guglielmi",
+   "Ana B. Sánchez",
+   "Ana Lourdes Sanz"
+  ],
+  "cited": 3,
+  "abs": "Artificial Intelligence (AI) is transforming many domains, including software engineering. AI-based tools are gaining popularity and are increasingly being integrated into software development workflows, automating complex tasks such as code writing and reviewing. When it comes to coding tasks, some evidence suggests that tools like Copilot boost developers’ productivity (e.g.,developers can handle a larger number of pull requests per week). However, it remains unclear whether this comes at the expense of code ownership (i.e.,the developer’ ability to argue about their implementation choices). To partially address this gap, we present an experiment aimed at investigating the impact of AI-based assistants on developers’ productivity and behavior in the context of code writing (e.g.,developing a program from scratch or evolving an existing code). Our focus is on the interplay between productivity and code ownership. We asked 69 participants (34 BSc and 13 MSc students, 8 researchers, and 14 professional developers) to perform two code writing tasks, one with the support of AI and one without. Then, we compared the two treatments in terms of: (i) time spent on the coding task and percentage of the task completeness—both being productivity proxies; and (ii) ability of the participants to answer questions about the code they implemented—code ownership proxy. While the time-based analyses did not provide strong evidence on the impact of AI on the investigated dependent variables, participants using AI achieved a much higher task completeness (>2× in terms of median), confirming a positive impact on their productivity. However, such a boost did not come for free. Indeed, we also observed a loss in code ownership when participants used AI, with lower ability to answer technical questions (–12.5%)."
+ }
+}

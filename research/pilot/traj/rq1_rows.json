@@ -1,0 +1,9898 @@
+[
+ {
+  "model": "gemini-1.5-pro",
+  "task": "admin-ask-for-meeting-feedback",
+  "targets": [
+   "Chen Xinyi",
+   "Emily Zhou",
+   "Huang Jie",
+   "Liu Qiang",
+   "Mike Chen"
+  ],
+  "sent": [
+   "Huang Jie",
+   "Huang Jie",
+   "Huang Jie",
+   "Huang Jie",
+   "Huang Jie",
+   "Huang Jie",
+   "Huang Jie",
+   "Huang Jie"
+  ],
+  "contacted": [
+   "Huang Jie"
+  ],
+  "steps": 40,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.3333333333333333,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 4,
+  "cov": 0.2
+ },
+ {
+  "model": "gemini-1.5-pro",
+  "task": "admin-ask-for-upgrade-reimbursement",
+  "targets": [
+   "Chen Xinyi",
+   "Sarah Johnson"
+  ],
+  "sent": [
+   "Chen Xinyi"
+  ],
+  "contacted": [
+   "Chen Xinyi"
+  ],
+  "steps": 201,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.25,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.5
+ },
+ {
+  "model": "gemini-1.5-pro",
+  "task": "admin-check-employees-budget-and-reply-2",
+  "targets": [
+   "Chen Xinyi",
+   "Huang Jie",
+   "Mike Chen",
+   "Sophia Rodriguez"
+  ],
+  "sent": [
+   "Huang Jie",
+   "Huang Jie",
+   "Huang Jie"
+  ],
+  "contacted": [
+   "Huang Jie"
+  ],
+  "steps": 38,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 3,
+  "cov": 0.25
+ },
+ {
+  "model": "gemini-1.5-pro",
+  "task": "admin-check-employees-budget-and-reply-and-record",
+  "targets": [
+   "Huang Jie",
+   "Li Ming",
+   "Sophia Rodriguez",
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Li Ming",
+   "Li Ming",
+   "Li Ming",
+   "Li Ming",
+   "Li Ming",
+   "Li Ming",
+   "Li Ming",
+   "Li Ming",
+   "Li Ming",
+   "Li Ming",
+   "Li Ming",
+   "Li Ming",
+   "Li Ming",
+   "Li Ming",
+   "Li Ming"
+  ],
+  "contacted": [
+   "Li Ming"
+  ],
+  "steps": 104,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 3,
+  "cov": 0.25
+ },
+ {
+  "model": "gemini-1.5-pro",
+  "task": "admin-check-employees-budget-and-reply",
+  "targets": [
+   "Chen Xinyi",
+   "Huang Jie",
+   "Jessica Lee"
+  ],
+  "sent": [
+   "Jessica Lee",
+   "Jessica Lee",
+   "Jessica Lee",
+   "Jessica Lee",
+   "Huang Jie",
+   "Chen Xinyi",
+   "Chen Xinyi",
+   "Jessica Lee"
+  ],
+  "contacted": [
+   "Chen Xinyi",
+   "Huang Jie",
+   "Jessica Lee"
+  ],
+  "steps": 84,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.25,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 3,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "gemini-1.5-pro",
+  "task": "admin-collect-requests-and-compute-total-price",
+  "targets": [
+   "Huang Jie",
+   "Mike Chen",
+   "Sarah Johnson",
+   "Sophia Rodriguez"
+  ],
+  "sent": [
+   "Huang Jie",
+   "Sophia Rodriguez",
+   "Mike Chen",
+   "Sarah Johnson"
+  ],
+  "contacted": [
+   "Huang Jie",
+   "Mike Chen",
+   "Sarah Johnson",
+   "Sophia Rodriguez"
+  ],
+  "steps": 46,
+  "finished": true,
+  "fabricated": true,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 4,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "gemini-1.5-pro",
+  "task": "admin-employee-info-reconciliation",
+  "targets": [
+   "Priya Sharma",
+   "Sophia Rodriguez",
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 21,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.14285714285714285,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 3,
+  "cov": 0.0
+ },
+ {
+  "model": "gemini-1.5-pro",
+  "task": "admin-get-best-vendor-quote",
+  "targets": [
+   "Emma Lewis",
+   "Sarah Johnson"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 201,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 2,
+  "cov": 0.0
+ },
+ {
+  "model": "gemini-1.5-pro",
+  "task": "finance-apply-tax-credit",
+  "targets": [
+   "David Wong"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 24,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "gemini-1.5-pro",
+  "task": "finance-find-signatories",
+  "targets": [
+   "David Wong"
+  ],
+  "sent": [
+   "Chen Xinyi"
+  ],
+  "contacted": [
+   "Chen Xinyi"
+  ],
+  "steps": 23,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "partial+wrong",
+  "n_hit": 0,
+  "n_wrong": 1,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "gemini-1.5-pro",
+  "task": "finance-r-d-activities",
+  "targets": [
+   "Alex Turner",
+   "Chen Xinyi",
+   "David Wong",
+   "Emily Zhou",
+   "Emma Lewis",
+   "Huang Jie",
+   "Jessica Chen",
+   "Jessica Lee",
+   "Li Ming",
+   "Liu Qiang",
+   "Mark Johnson",
+   "Mike Chen",
+   "Priya Sharma",
+   "Sarah Johnson",
+   "Sophia Rodriguez",
+   "Wang Fang",
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 22,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 17,
+  "cov": 0.0
+ },
+ {
+  "model": "gemini-1.5-pro",
+  "task": "hr-check-attendance-multiple-days-department-with-chat",
+  "targets": [
+   "Chen Xinyi",
+   "David Wong",
+   "Mark Johnson"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 201,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.25,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 3,
+  "cov": 0.0
+ },
+ {
+  "model": "gemini-1.5-pro",
+  "task": "hr-check-for-invalid-passwords-and-ask-for-valid-passwords",
+  "targets": [
+   "Mark Johnson",
+   "Mike Chen"
+  ],
+  "sent": [
+   "Mark Johnson",
+   "Mike Chen"
+  ],
+  "contacted": [
+   "Mark Johnson",
+   "Mike Chen"
+  ],
+  "steps": 30,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.5,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 2,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "gemini-1.5-pro",
+  "task": "hr-collect-feedbacks",
+  "targets": [
+   "Li Ming",
+   "Mike Chen",
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Mike Chen",
+   "Li Ming",
+   "Zhang Wei",
+   "Liu Qiang"
+  ],
+  "contacted": [
+   "Li Ming",
+   "Liu Qiang",
+   "Mike Chen",
+   "Zhang Wei"
+  ],
+  "steps": 25,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 1.0,
+  "success": true,
+  "cat": "complete+extra",
+  "n_hit": 3,
+  "n_wrong": 1,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "gemini-1.5-pro",
+  "task": "hr-collect-multiple-valid-passwords",
+  "targets": [
+   "Li Ming",
+   "Mark Johnson",
+   "Mike Chen",
+   "Sarah Johnson",
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 4,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 5,
+  "cov": 0.0
+ },
+ {
+  "model": "gemini-1.5-pro",
+  "task": "hr-get-valid-password",
+  "targets": [
+   "Mark Johnson"
+  ],
+  "sent": [
+   "Mike Chen"
+  ],
+  "contacted": [
+   "Mike Chen"
+  ],
+  "steps": 35,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "partial+wrong",
+  "n_hit": 0,
+  "n_wrong": 1,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "gemini-1.5-pro",
+  "task": "hr-green-card-consultation",
+  "targets": [
+   "Priya Sharma"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 6,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "gemini-1.5-pro",
+  "task": "hr-mass-survey",
+  "targets": [
+   "Alex Turner",
+   "Chen Xinyi",
+   "David Wong",
+   "Emily Zhou",
+   "Emma Lewis",
+   "Huang Jie",
+   "Jessica Chen",
+   "Jessica Lee",
+   "Li Ming",
+   "Liu Qiang",
+   "Mark Johnson",
+   "Mike Chen",
+   "Priya Sharma",
+   "Sarah Johnson",
+   "Sophia Rodriguez",
+   "Wang Fang",
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 6,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.14285714285714285,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 17,
+  "cov": 0.0
+ },
+ {
+  "model": "gemini-1.5-pro",
+  "task": "hr-new-grad-job-description-2",
+  "targets": [
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 27,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "gemini-1.5-pro",
+  "task": "hr-new-grad-job-description-3",
+  "targets": [
+   "Li Ming",
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 60,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.4,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 2,
+  "cov": 0.0
+ },
+ {
+  "model": "gemini-1.5-pro",
+  "task": "hr-pick-interviewer-1",
+  "targets": [
+   "Chen Xinyi"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 21,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.3333333333333333,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "gemini-1.5-pro",
+  "task": "hr-pick-interviewer-2",
+  "targets": [
+   "Chen Xinyi",
+   "Emily Zhou",
+   "Jessica Lee",
+   "Mark Johnson"
+  ],
+  "sent": [
+   "Chen Xinyi",
+   "Chen Xinyi"
+  ],
+  "contacted": [
+   "Chen Xinyi"
+  ],
+  "steps": 20,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.3333333333333333,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 3,
+  "cov": 0.25
+ },
+ {
+  "model": "gemini-1.5-pro",
+  "task": "hr-pick-interviewer-3",
+  "targets": [
+   "Emily Zhou",
+   "Jessica Lee"
+  ],
+  "sent": [
+   "Emily Zhou"
+  ],
+  "contacted": [
+   "Emily Zhou"
+  ],
+  "steps": 19,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.25,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.5
+ },
+ {
+  "model": "gemini-1.5-pro",
+  "task": "hr-resume-screening",
+  "targets": [
+   "Chen Xinyi"
+  ],
+  "sent": [
+   "Mike Chen",
+   "Chen Xinyi"
+  ],
+  "contacted": [
+   "Chen Xinyi",
+   "Mike Chen"
+  ],
+  "steps": 32,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.25,
+  "success": false,
+  "cat": "complete+extra",
+  "n_hit": 1,
+  "n_wrong": 1,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "gemini-1.5-pro",
+  "task": "pm-ask-for-issue-and-create-in-gitlab",
+  "targets": [
+   "Li Ming",
+   "Mark Johnson",
+   "Mike Chen"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 12,
+  "finished": true,
+  "fabricated": true,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 3,
+  "cov": 0.0
+ },
+ {
+  "model": "gemini-1.5-pro",
+  "task": "pm-ask-issue-assignee-for-issue-status-and-update-in-plane",
+  "targets": [
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 52,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "gemini-1.5-pro",
+  "task": "pm-check-backlog-update-issues",
+  "targets": [
+   "Liu Qiang"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 34,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.2,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "gemini-1.5-pro",
+  "task": "pm-plan-personnel-for-new-project",
+  "targets": [
+   "Chen Xinyi"
+  ],
+  "sent": [
+   "Chen Xinyi"
+  ],
+  "contacted": [
+   "Chen Xinyi"
+  ],
+  "steps": 175,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.14285714285714285,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "gemini-1.5-pro",
+  "task": "pm-prepare-meeting-with-customers",
+  "targets": [
+   "Huang Jie"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 20,
+  "finished": true,
+  "fabricated": true,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "gemini-1.5-pro",
+  "task": "pm-schedule-meeting-1",
+  "targets": [
+   "Emily Zhou",
+   "Liu Qiang"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 61,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 2,
+  "cov": 0.0
+ },
+ {
+  "model": "gemini-1.5-pro",
+  "task": "pm-schedule-meeting-2",
+  "targets": [
+   "Emily Zhou",
+   "Liu Qiang"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 45,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 2,
+  "cov": 0.0
+ },
+ {
+  "model": "gemini-1.5-pro",
+  "task": "pm-send-notification-to-corresponding-user",
+  "targets": [
+   "David Wong",
+   "Huang Jie",
+   "Jessica Lee",
+   "Mark Johnson"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 19,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 4,
+  "cov": 0.0
+ },
+ {
+  "model": "gemini-1.5-pro",
+  "task": "qa-update-issue-status-according-to-colleagues",
+  "targets": [
+   "Mike Chen",
+   "Wang Fang"
+  ],
+  "sent": [
+   "Wang Fang"
+  ],
+  "contacted": [
+   "Wang Fang"
+  ],
+  "steps": 67,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.3333333333333333,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.5
+ },
+ {
+  "model": "gemini-1.5-pro",
+  "task": "sde-create-new-gitlab-project-logo",
+  "targets": [
+   "Jessica Lee"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 46,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "gemini-1.5-pro",
+  "task": "sde-create-new-repo",
+  "targets": [
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 10,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "gemini-1.5-pro",
+  "task": "sde-debug-crashed-server",
+  "targets": [
+   "Emily Zhou",
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Emily Zhou",
+   "Emily Zhou",
+   "Emily Zhou",
+   "Emily Zhou",
+   "Emily Zhou"
+  ],
+  "contacted": [
+   "Emily Zhou"
+  ],
+  "steps": 55,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.25,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.5
+ },
+ {
+  "model": "gemini-1.5-pro",
+  "task": "sde-find-answer-in-codebase-3",
+  "targets": [
+   "Mike Chen"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 26,
+  "finished": true,
+  "fabricated": true,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "gemini-1.5-pro",
+  "task": "sde-reply-community-issue-by-asking-npc",
+  "targets": [
+   "Mike Chen"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 16,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "gemini-1.5-pro",
+  "task": "sde-report-agent-repos",
+  "targets": [
+   "Sarah Johnson"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 20,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "gemini-2.0-flash",
+  "task": "admin-ask-for-meeting-feedback",
+  "targets": [
+   "Chen Xinyi",
+   "Emily Zhou",
+   "Huang Jie",
+   "Liu Qiang",
+   "Mike Chen"
+  ],
+  "sent": [
+   "Huang Jie",
+   "Mike Chen",
+   "Emily Zhou",
+   "Liu Qiang",
+   "Chen Xinyi"
+  ],
+  "contacted": [
+   "Chen Xinyi",
+   "Emily Zhou",
+   "Huang Jie",
+   "Liu Qiang",
+   "Mike Chen"
+  ],
+  "steps": 72,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.6666666666666666,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 5,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "gemini-2.0-flash",
+  "task": "admin-ask-for-upgrade-reimbursement",
+  "targets": [
+   "Chen Xinyi",
+   "Sarah Johnson"
+  ],
+  "sent": [
+   "Chen Xinyi",
+   "Sarah Johnson"
+  ],
+  "contacted": [
+   "Chen Xinyi",
+   "Sarah Johnson"
+  ],
+  "steps": 36,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 1.0,
+  "success": true,
+  "cat": "complete",
+  "n_hit": 2,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "gemini-2.0-flash",
+  "task": "admin-check-employees-budget-and-reply-2",
+  "targets": [
+   "Chen Xinyi",
+   "Huang Jie",
+   "Mike Chen",
+   "Sophia Rodriguez"
+  ],
+  "sent": [
+   "Mike Chen",
+   "Sophia Rodriguez",
+   "Huang Jie",
+   "Chen Xinyi",
+   "Huang Jie",
+   "Sophia Rodriguez",
+   "Mike Chen"
+  ],
+  "contacted": [
+   "Chen Xinyi",
+   "Huang Jie",
+   "Mike Chen",
+   "Sophia Rodriguez"
+  ],
+  "steps": 102,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.25,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 4,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "gemini-2.0-flash",
+  "task": "admin-check-employees-budget-and-reply-and-record",
+  "targets": [
+   "Huang Jie",
+   "Li Ming",
+   "Sophia Rodriguez",
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Li Ming",
+   "Li Ming",
+   "Li Ming",
+   "Li Ming",
+   "Li Ming"
+  ],
+  "contacted": [
+   "Li Ming"
+  ],
+  "steps": 201,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 3,
+  "cov": 0.25
+ },
+ {
+  "model": "gemini-2.0-flash",
+  "task": "admin-check-employees-budget-and-reply",
+  "targets": [
+   "Chen Xinyi",
+   "Huang Jie",
+   "Jessica Lee"
+  ],
+  "sent": [
+   "Jessica Lee",
+   "Huang Jie",
+   "Chen Xinyi"
+  ],
+  "contacted": [
+   "Chen Xinyi",
+   "Huang Jie",
+   "Jessica Lee"
+  ],
+  "steps": 201,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.25,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 3,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "gemini-2.0-flash",
+  "task": "admin-collect-requests-and-compute-total-price",
+  "targets": [
+   "Huang Jie",
+   "Mike Chen",
+   "Sarah Johnson",
+   "Sophia Rodriguez"
+  ],
+  "sent": [
+   "Mike Chen",
+   "Huang Jie",
+   "Sophia Rodriguez",
+   "Sarah Johnson"
+  ],
+  "contacted": [
+   "Huang Jie",
+   "Mike Chen",
+   "Sarah Johnson",
+   "Sophia Rodriguez"
+  ],
+  "steps": 201,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.25,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 4,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "gemini-2.0-flash",
+  "task": "admin-employee-info-reconciliation",
+  "targets": [
+   "Priya Sharma",
+   "Sophia Rodriguez",
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 20,
+  "finished": true,
+  "fabricated": true,
+  "reached_chat": false,
+  "score": 0.14285714285714285,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 3,
+  "cov": 0.0
+ },
+ {
+  "model": "gemini-2.0-flash",
+  "task": "admin-get-best-vendor-quote",
+  "targets": [
+   "Emma Lewis",
+   "Sarah Johnson"
+  ],
+  "sent": [
+   "Emma Lewis"
+  ],
+  "contacted": [
+   "Emma Lewis"
+  ],
+  "steps": 201,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.16666666666666666,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.5
+ },
+ {
+  "model": "gemini-2.0-flash",
+  "task": "finance-apply-tax-credit",
+  "targets": [
+   "David Wong"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 201,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "gemini-2.0-flash",
+  "task": "finance-find-signatories",
+  "targets": [
+   "David Wong"
+  ],
+  "sent": [
+   "Mike Chen",
+   "Chen Xinyi"
+  ],
+  "contacted": [
+   "Chen Xinyi",
+   "Mike Chen"
+  ],
+  "steps": 24,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "partial+wrong",
+  "n_hit": 0,
+  "n_wrong": 2,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "gemini-2.0-flash",
+  "task": "finance-r-d-activities",
+  "targets": [
+   "Alex Turner",
+   "Chen Xinyi",
+   "David Wong",
+   "Emily Zhou",
+   "Emma Lewis",
+   "Huang Jie",
+   "Jessica Chen",
+   "Jessica Lee",
+   "Li Ming",
+   "Liu Qiang",
+   "Mark Johnson",
+   "Mike Chen",
+   "Priya Sharma",
+   "Sarah Johnson",
+   "Sophia Rodriguez",
+   "Wang Fang",
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Mike Chen",
+   "Chen Xinyi"
+  ],
+  "contacted": [
+   "Chen Xinyi",
+   "Mike Chen"
+  ],
+  "steps": 44,
+  "finished": true,
+  "fabricated": true,
+  "reached_chat": true,
+  "score": 0.16666666666666666,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 2,
+  "n_wrong": 0,
+  "n_miss": 15,
+  "cov": 0.11764705882352941
+ },
+ {
+  "model": "gemini-2.0-flash",
+  "task": "hr-check-attendance-multiple-days-department-with-chat",
+  "targets": [
+   "Chen Xinyi",
+   "David Wong",
+   "Mark Johnson"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 201,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.25,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 3,
+  "cov": 0.0
+ },
+ {
+  "model": "gemini-2.0-flash",
+  "task": "hr-check-for-invalid-passwords-and-ask-for-valid-passwords",
+  "targets": [
+   "Mark Johnson",
+   "Mike Chen"
+  ],
+  "sent": [
+   "Mike Chen",
+   "Mike Chen",
+   "Mark Johnson"
+  ],
+  "contacted": [
+   "Mark Johnson",
+   "Mike Chen"
+  ],
+  "steps": 45,
+  "finished": true,
+  "fabricated": true,
+  "reached_chat": true,
+  "score": 0.5,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 2,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "gemini-2.0-flash",
+  "task": "hr-collect-feedbacks",
+  "targets": [
+   "Li Ming",
+   "Mike Chen",
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Mike Chen",
+   "Li Ming",
+   "Zhang Wei",
+   "Liu Qiang"
+  ],
+  "contacted": [
+   "Li Ming",
+   "Liu Qiang",
+   "Mike Chen",
+   "Zhang Wei"
+  ],
+  "steps": 46,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 1.0,
+  "success": true,
+  "cat": "complete+extra",
+  "n_hit": 3,
+  "n_wrong": 1,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "gemini-2.0-flash",
+  "task": "hr-collect-multiple-valid-passwords",
+  "targets": [
+   "Li Ming",
+   "Mark Johnson",
+   "Mike Chen",
+   "Sarah Johnson",
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Mark Johnson",
+   "Mark Johnson",
+   "Sarah Johnson",
+   "Sarah Johnson",
+   "Li Ming",
+   "Zhang Wei",
+   "Zhang Wei",
+   "Zhang Wei",
+   "Mike Chen",
+   "Mike Chen",
+   "Mike Chen"
+  ],
+  "contacted": [
+   "Li Ming",
+   "Mark Johnson",
+   "Mike Chen",
+   "Sarah Johnson",
+   "Zhang Wei"
+  ],
+  "steps": 122,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 1.0,
+  "success": true,
+  "cat": "complete",
+  "n_hit": 5,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "gemini-2.0-flash",
+  "task": "hr-get-valid-password",
+  "targets": [
+   "Mark Johnson"
+  ],
+  "sent": [
+   "Mark Johnson",
+   "Mark Johnson",
+   "Mark Johnson",
+   "Mark Johnson"
+  ],
+  "contacted": [
+   "Mark Johnson"
+  ],
+  "steps": 38,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 1.0,
+  "success": true,
+  "cat": "complete",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "gemini-2.0-flash",
+  "task": "hr-green-card-consultation",
+  "targets": [
+   "Priya Sharma"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 201,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "gemini-2.0-flash",
+  "task": "hr-mass-survey",
+  "targets": [
+   "Alex Turner",
+   "Chen Xinyi",
+   "David Wong",
+   "Emily Zhou",
+   "Emma Lewis",
+   "Huang Jie",
+   "Jessica Chen",
+   "Jessica Lee",
+   "Li Ming",
+   "Liu Qiang",
+   "Mark Johnson",
+   "Mike Chen",
+   "Priya Sharma",
+   "Sarah Johnson",
+   "Sophia Rodriguez",
+   "Wang Fang",
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Mike Chen",
+   "Chen Xinyi",
+   "Alex Turner",
+   "David Wong",
+   "Emily Zhou",
+   "Emma Lewis",
+   "Huang Jie",
+   "Jessica Chen",
+   "Jessica Lee",
+   "Li Ming",
+   "Li Ming",
+   "Liu Qiang",
+   "Liu Qiang",
+   "Mark Johnson",
+   "Mark Johnson"
+  ],
+  "contacted": [
+   "Alex Turner",
+   "Chen Xinyi",
+   "David Wong",
+   "Emily Zhou",
+   "Emma Lewis",
+   "Huang Jie",
+   "Jessica Chen",
+   "Jessica Lee",
+   "Li Ming",
+   "Liu Qiang",
+   "Mark Johnson",
+   "Mike Chen"
+  ],
+  "steps": 195,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.14285714285714285,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 12,
+  "n_wrong": 0,
+  "n_miss": 5,
+  "cov": 0.7058823529411765
+ },
+ {
+  "model": "gemini-2.0-flash",
+  "task": "hr-new-grad-job-description-2",
+  "targets": [
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Zhang Wei"
+  ],
+  "contacted": [
+   "Zhang Wei"
+  ],
+  "steps": 56,
+  "finished": true,
+  "fabricated": true,
+  "reached_chat": true,
+  "score": 0.5,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "gemini-2.0-flash",
+  "task": "hr-new-grad-job-description-3",
+  "targets": [
+   "Li Ming",
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Mike Chen",
+   "Chen Xinyi"
+  ],
+  "contacted": [
+   "Chen Xinyi",
+   "Mike Chen"
+  ],
+  "steps": 50,
+  "finished": true,
+  "fabricated": true,
+  "reached_chat": true,
+  "score": 0.2,
+  "success": false,
+  "cat": "partial+wrong",
+  "n_hit": 0,
+  "n_wrong": 2,
+  "n_miss": 2,
+  "cov": 0.0
+ },
+ {
+  "model": "gemini-2.0-flash",
+  "task": "hr-pick-interviewer-1",
+  "targets": [
+   "Chen Xinyi"
+  ],
+  "sent": [
+   "Chen Xinyi",
+   "Emily Zhou"
+  ],
+  "contacted": [
+   "Chen Xinyi",
+   "Emily Zhou"
+  ],
+  "steps": 48,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 1.0,
+  "success": true,
+  "cat": "complete+extra",
+  "n_hit": 1,
+  "n_wrong": 1,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "gemini-2.0-flash",
+  "task": "hr-pick-interviewer-2",
+  "targets": [
+   "Chen Xinyi",
+   "Emily Zhou",
+   "Jessica Lee",
+   "Mark Johnson"
+  ],
+  "sent": [
+   "Chen Xinyi",
+   "Mark Johnson",
+   "Jessica Lee",
+   "Emily Zhou"
+  ],
+  "contacted": [
+   "Chen Xinyi",
+   "Emily Zhou",
+   "Jessica Lee",
+   "Mark Johnson"
+  ],
+  "steps": 52,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.6666666666666666,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 4,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "gemini-2.0-flash",
+  "task": "hr-pick-interviewer-3",
+  "targets": [
+   "Emily Zhou",
+   "Jessica Lee"
+  ],
+  "sent": [
+   "Emily Zhou"
+  ],
+  "contacted": [
+   "Emily Zhou"
+  ],
+  "steps": 17,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.5
+ },
+ {
+  "model": "gemini-2.0-flash",
+  "task": "hr-resume-screening",
+  "targets": [
+   "Chen Xinyi"
+  ],
+  "sent": [
+   "Mike Chen",
+   "Chen Xinyi"
+  ],
+  "contacted": [
+   "Chen Xinyi",
+   "Mike Chen"
+  ],
+  "steps": 66,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.25,
+  "success": false,
+  "cat": "complete+extra",
+  "n_hit": 1,
+  "n_wrong": 1,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "gemini-2.0-flash",
+  "task": "pm-ask-for-issue-and-create-in-gitlab",
+  "targets": [
+   "Li Ming",
+   "Mark Johnson",
+   "Mike Chen"
+  ],
+  "sent": [
+   "Mike Chen",
+   "Mike Chen"
+  ],
+  "contacted": [
+   "Mike Chen"
+  ],
+  "steps": 89,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 2,
+  "cov": 0.3333333333333333
+ },
+ {
+  "model": "gemini-2.0-flash",
+  "task": "pm-ask-issue-assignee-for-issue-status-and-update-in-plane",
+  "targets": [
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 201,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "gemini-2.0-flash",
+  "task": "pm-check-backlog-update-issues",
+  "targets": [
+   "Liu Qiang"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 60,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 1.0,
+  "success": true,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "gemini-2.0-flash",
+  "task": "pm-plan-personnel-for-new-project",
+  "targets": [
+   "Chen Xinyi"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 22,
+  "finished": true,
+  "fabricated": true,
+  "reached_chat": false,
+  "score": 0.42857142857142855,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "gemini-2.0-flash",
+  "task": "pm-prepare-meeting-with-customers",
+  "targets": [
+   "Huang Jie"
+  ],
+  "sent": [
+   "Chen Xinyi",
+   "Chen Xinyi",
+   "Chen Xinyi"
+  ],
+  "contacted": [
+   "Chen Xinyi"
+  ],
+  "steps": 64,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.3333333333333333,
+  "success": false,
+  "cat": "partial+wrong",
+  "n_hit": 0,
+  "n_wrong": 1,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "gemini-2.0-flash",
+  "task": "pm-schedule-meeting-1",
+  "targets": [
+   "Emily Zhou",
+   "Liu Qiang"
+  ],
+  "sent": [
+   "Chen Xinyi",
+   "Mike Chen"
+  ],
+  "contacted": [
+   "Chen Xinyi",
+   "Mike Chen"
+  ],
+  "steps": 20,
+  "finished": true,
+  "fabricated": true,
+  "reached_chat": true,
+  "score": 0.6,
+  "success": false,
+  "cat": "partial+wrong",
+  "n_hit": 0,
+  "n_wrong": 2,
+  "n_miss": 2,
+  "cov": 0.0
+ },
+ {
+  "model": "gemini-2.0-flash",
+  "task": "pm-schedule-meeting-2",
+  "targets": [
+   "Emily Zhou",
+   "Liu Qiang"
+  ],
+  "sent": [
+   "Chen Xinyi",
+   "Mike Chen"
+  ],
+  "contacted": [
+   "Chen Xinyi",
+   "Mike Chen"
+  ],
+  "steps": 20,
+  "finished": true,
+  "fabricated": true,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "partial+wrong",
+  "n_hit": 0,
+  "n_wrong": 2,
+  "n_miss": 2,
+  "cov": 0.0
+ },
+ {
+  "model": "gemini-2.0-flash",
+  "task": "pm-send-notification-to-corresponding-user",
+  "targets": [
+   "David Wong",
+   "Huang Jie",
+   "Jessica Lee",
+   "Mark Johnson"
+  ],
+  "sent": [
+   "Jessica Lee",
+   "David Wong",
+   "Huang Jie",
+   "Mark Johnson"
+  ],
+  "contacted": [
+   "David Wong",
+   "Huang Jie",
+   "Jessica Lee",
+   "Mark Johnson"
+  ],
+  "steps": 49,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 1.0,
+  "success": true,
+  "cat": "complete",
+  "n_hit": 4,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "gemini-2.0-flash",
+  "task": "qa-update-issue-status-according-to-colleagues",
+  "targets": [
+   "Mike Chen",
+   "Wang Fang"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 28,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.3333333333333333,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 2,
+  "cov": 0.0
+ },
+ {
+  "model": "gemini-2.0-flash",
+  "task": "sde-create-new-gitlab-project-logo",
+  "targets": [
+   "Jessica Lee"
+  ],
+  "sent": [
+   "Jessica Lee"
+  ],
+  "contacted": [
+   "Jessica Lee"
+  ],
+  "steps": 57,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "gemini-2.0-flash",
+  "task": "sde-create-new-repo",
+  "targets": [
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Zhang Wei"
+  ],
+  "contacted": [
+   "Zhang Wei"
+  ],
+  "steps": 21,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.3333333333333333,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "gemini-2.0-flash",
+  "task": "sde-debug-crashed-server",
+  "targets": [
+   "Emily Zhou",
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Chen Xinyi",
+   "Mike Chen",
+   "Mike Chen"
+  ],
+  "contacted": [
+   "Chen Xinyi",
+   "Mike Chen"
+  ],
+  "steps": 32,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "partial+wrong",
+  "n_hit": 0,
+  "n_wrong": 2,
+  "n_miss": 2,
+  "cov": 0.0
+ },
+ {
+  "model": "gemini-2.0-flash",
+  "task": "sde-find-answer-in-codebase-3",
+  "targets": [
+   "Mike Chen"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 50,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "gemini-2.0-flash",
+  "task": "sde-reply-community-issue-by-asking-npc",
+  "targets": [
+   "Mike Chen"
+  ],
+  "sent": [
+   "Mike Chen"
+  ],
+  "contacted": [
+   "Mike Chen"
+  ],
+  "steps": 38,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.6,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "gemini-2.0-flash",
+  "task": "sde-report-agent-repos",
+  "targets": [
+   "Sarah Johnson"
+  ],
+  "sent": [
+   "Sarah Johnson"
+  ],
+  "contacted": [
+   "Sarah Johnson"
+  ],
+  "steps": 102,
+  "finished": true,
+  "fabricated": true,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "gpt-4o-2024-08-06",
+  "task": "admin-ask-for-meeting-feedback",
+  "targets": [
+   "Chen Xinyi",
+   "Emily Zhou",
+   "Huang Jie",
+   "Liu Qiang",
+   "Mike Chen"
+  ],
+  "sent": [
+   "Mike Chen",
+   "Huang Jie",
+   "Mike Chen"
+  ],
+  "contacted": [
+   "Huang Jie",
+   "Mike Chen"
+  ],
+  "steps": 42,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.6666666666666666,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 2,
+  "n_wrong": 0,
+  "n_miss": 3,
+  "cov": 0.4
+ },
+ {
+  "model": "gpt-4o-2024-08-06",
+  "task": "admin-ask-for-upgrade-reimbursement",
+  "targets": [
+   "Chen Xinyi",
+   "Sarah Johnson"
+  ],
+  "sent": [
+   "Chen Xinyi",
+   "Sarah Johnson"
+  ],
+  "contacted": [
+   "Chen Xinyi",
+   "Sarah Johnson"
+  ],
+  "steps": 50,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.5,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 2,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "gpt-4o-2024-08-06",
+  "task": "admin-check-employees-budget-and-reply-2",
+  "targets": [
+   "Chen Xinyi",
+   "Huang Jie",
+   "Mike Chen",
+   "Sophia Rodriguez"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 27,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 4,
+  "cov": 0.0
+ },
+ {
+  "model": "gpt-4o-2024-08-06",
+  "task": "admin-check-employees-budget-and-reply-and-record",
+  "targets": [
+   "Huang Jie",
+   "Li Ming",
+   "Sophia Rodriguez",
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 42,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 4,
+  "cov": 0.0
+ },
+ {
+  "model": "gpt-4o-2024-08-06",
+  "task": "admin-check-employees-budget-and-reply",
+  "targets": [
+   "Chen Xinyi",
+   "Huang Jie",
+   "Jessica Lee"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 32,
+  "finished": true,
+  "fabricated": true,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 3,
+  "cov": 0.0
+ },
+ {
+  "model": "gpt-4o-2024-08-06",
+  "task": "admin-collect-requests-and-compute-total-price",
+  "targets": [
+   "Huang Jie",
+   "Mike Chen",
+   "Sarah Johnson",
+   "Sophia Rodriguez"
+  ],
+  "sent": [
+   "Mike Chen",
+   "Chen Xinyi"
+  ],
+  "contacted": [
+   "Chen Xinyi",
+   "Mike Chen"
+  ],
+  "steps": 32,
+  "finished": true,
+  "fabricated": true,
+  "reached_chat": true,
+  "score": 0.3333333333333333,
+  "success": false,
+  "cat": "partial+wrong",
+  "n_hit": 1,
+  "n_wrong": 1,
+  "n_miss": 3,
+  "cov": 0.25
+ },
+ {
+  "model": "gpt-4o-2024-08-06",
+  "task": "admin-employee-info-reconciliation",
+  "targets": [
+   "Priya Sharma",
+   "Sophia Rodriguez",
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 18,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 3,
+  "cov": 0.0
+ },
+ {
+  "model": "gpt-4o-2024-08-06",
+  "task": "admin-get-best-vendor-quote",
+  "targets": [
+   "Emma Lewis",
+   "Sarah Johnson"
+  ],
+  "sent": [
+   "Emma Lewis",
+   "Sarah Johnson"
+  ],
+  "contacted": [
+   "Emma Lewis",
+   "Sarah Johnson"
+  ],
+  "steps": 55,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.3333333333333333,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 2,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "gpt-4o-2024-08-06",
+  "task": "finance-apply-tax-credit",
+  "targets": [
+   "David Wong"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 37,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "gpt-4o-2024-08-06",
+  "task": "finance-find-signatories",
+  "targets": [
+   "David Wong"
+  ],
+  "sent": [
+   "David Wong",
+   "Mark Johnson"
+  ],
+  "contacted": [
+   "David Wong",
+   "Mark Johnson"
+  ],
+  "steps": 58,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.6,
+  "success": false,
+  "cat": "complete+extra",
+  "n_hit": 1,
+  "n_wrong": 1,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "gpt-4o-2024-08-06",
+  "task": "finance-r-d-activities",
+  "targets": [
+   "Alex Turner",
+   "Chen Xinyi",
+   "David Wong",
+   "Emily Zhou",
+   "Emma Lewis",
+   "Huang Jie",
+   "Jessica Chen",
+   "Jessica Lee",
+   "Li Ming",
+   "Liu Qiang",
+   "Mark Johnson",
+   "Mike Chen",
+   "Priya Sharma",
+   "Sarah Johnson",
+   "Sophia Rodriguez",
+   "Wang Fang",
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Mike Chen"
+  ],
+  "contacted": [
+   "Mike Chen"
+  ],
+  "steps": 94,
+  "finished": true,
+  "fabricated": true,
+  "reached_chat": true,
+  "score": 0.16666666666666666,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 16,
+  "cov": 0.058823529411764705
+ },
+ {
+  "model": "gpt-4o-2024-08-06",
+  "task": "hr-check-attendance-multiple-days-department-with-chat",
+  "targets": [
+   "Chen Xinyi",
+   "David Wong",
+   "Mark Johnson"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 36,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 3,
+  "cov": 0.0
+ },
+ {
+  "model": "gpt-4o-2024-08-06",
+  "task": "hr-check-for-invalid-passwords-and-ask-for-valid-passwords",
+  "targets": [
+   "Mark Johnson",
+   "Mike Chen"
+  ],
+  "sent": [
+   "Mike Chen",
+   "Mike Chen",
+   "Mike Chen",
+   "Mike Chen"
+  ],
+  "contacted": [
+   "Mike Chen"
+  ],
+  "steps": 32,
+  "finished": true,
+  "fabricated": true,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.5
+ },
+ {
+  "model": "gpt-4o-2024-08-06",
+  "task": "hr-collect-feedbacks",
+  "targets": [
+   "Li Ming",
+   "Mike Chen",
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Mike Chen",
+   "Chen Xinyi",
+   "Chen Xinyi"
+  ],
+  "contacted": [
+   "Chen Xinyi",
+   "Mike Chen"
+  ],
+  "steps": 30,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.2,
+  "success": false,
+  "cat": "partial+wrong",
+  "n_hit": 1,
+  "n_wrong": 1,
+  "n_miss": 2,
+  "cov": 0.3333333333333333
+ },
+ {
+  "model": "gpt-4o-2024-08-06",
+  "task": "hr-collect-multiple-valid-passwords",
+  "targets": [
+   "Li Ming",
+   "Mark Johnson",
+   "Mike Chen",
+   "Sarah Johnson",
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Mike Chen",
+   "Mike Chen",
+   "Mike Chen",
+   "Sarah Johnson",
+   "Sarah Johnson"
+  ],
+  "contacted": [
+   "Mike Chen",
+   "Sarah Johnson"
+  ],
+  "steps": 85,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 2,
+  "n_wrong": 0,
+  "n_miss": 3,
+  "cov": 0.4
+ },
+ {
+  "model": "gpt-4o-2024-08-06",
+  "task": "hr-get-valid-password",
+  "targets": [
+   "Mark Johnson"
+  ],
+  "sent": [
+   "Mike Chen",
+   "Mike Chen"
+  ],
+  "contacted": [
+   "Mike Chen"
+  ],
+  "steps": 26,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "partial+wrong",
+  "n_hit": 0,
+  "n_wrong": 1,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "gpt-4o-2024-08-06",
+  "task": "hr-green-card-consultation",
+  "targets": [
+   "Priya Sharma"
+  ],
+  "sent": [
+   "Priya Sharma",
+   "Priya Sharma",
+   "Priya Sharma",
+   "Priya Sharma",
+   "Priya Sharma"
+  ],
+  "contacted": [
+   "Priya Sharma"
+  ],
+  "steps": 98,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.6666666666666666,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "gpt-4o-2024-08-06",
+  "task": "hr-mass-survey",
+  "targets": [
+   "Alex Turner",
+   "Chen Xinyi",
+   "David Wong",
+   "Emily Zhou",
+   "Emma Lewis",
+   "Huang Jie",
+   "Jessica Chen",
+   "Jessica Lee",
+   "Li Ming",
+   "Liu Qiang",
+   "Mark Johnson",
+   "Mike Chen",
+   "Priya Sharma",
+   "Sarah Johnson",
+   "Sophia Rodriguez",
+   "Wang Fang",
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 59,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.14285714285714285,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 17,
+  "cov": 0.0
+ },
+ {
+  "model": "gpt-4o-2024-08-06",
+  "task": "hr-new-grad-job-description-2",
+  "targets": [
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Mike Chen"
+  ],
+  "contacted": [
+   "Mike Chen"
+  ],
+  "steps": 26,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.25,
+  "success": false,
+  "cat": "partial+wrong",
+  "n_hit": 0,
+  "n_wrong": 1,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "gpt-4o-2024-08-06",
+  "task": "hr-new-grad-job-description-3",
+  "targets": [
+   "Li Ming",
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Li Ming"
+  ],
+  "contacted": [
+   "Li Ming"
+  ],
+  "steps": 54,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.4,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.5
+ },
+ {
+  "model": "gpt-4o-2024-08-06",
+  "task": "hr-pick-interviewer-1",
+  "targets": [
+   "Chen Xinyi"
+  ],
+  "sent": [
+   "Chen Xinyi"
+  ],
+  "contacted": [
+   "Chen Xinyi"
+  ],
+  "steps": 16,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.6666666666666666,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "gpt-4o-2024-08-06",
+  "task": "hr-pick-interviewer-2",
+  "targets": [
+   "Chen Xinyi",
+   "Emily Zhou",
+   "Jessica Lee",
+   "Mark Johnson"
+  ],
+  "sent": [
+   "Chen Xinyi"
+  ],
+  "contacted": [
+   "Chen Xinyi"
+  ],
+  "steps": 28,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.6666666666666666,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 3,
+  "cov": 0.25
+ },
+ {
+  "model": "gpt-4o-2024-08-06",
+  "task": "hr-pick-interviewer-3",
+  "targets": [
+   "Emily Zhou",
+   "Jessica Lee"
+  ],
+  "sent": [
+   "Emily Zhou"
+  ],
+  "contacted": [
+   "Emily Zhou"
+  ],
+  "steps": 18,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.5
+ },
+ {
+  "model": "gpt-4o-2024-08-06",
+  "task": "hr-resume-screening",
+  "targets": [
+   "Chen Xinyi"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 20,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "gpt-4o-2024-08-06",
+  "task": "pm-ask-for-issue-and-create-in-gitlab",
+  "targets": [
+   "Li Ming",
+   "Mark Johnson",
+   "Mike Chen"
+  ],
+  "sent": [
+   "Li Ming"
+  ],
+  "contacted": [
+   "Li Ming"
+  ],
+  "steps": 38,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 2,
+  "cov": 0.3333333333333333
+ },
+ {
+  "model": "gpt-4o-2024-08-06",
+  "task": "pm-ask-issue-assignee-for-issue-status-and-update-in-plane",
+  "targets": [
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Mike Chen"
+  ],
+  "contacted": [
+   "Mike Chen"
+  ],
+  "steps": 24,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "partial+wrong",
+  "n_hit": 0,
+  "n_wrong": 1,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "gpt-4o-2024-08-06",
+  "task": "pm-check-backlog-update-issues",
+  "targets": [
+   "Liu Qiang"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 32,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.2,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "gpt-4o-2024-08-06",
+  "task": "pm-plan-personnel-for-new-project",
+  "targets": [
+   "Chen Xinyi"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 14,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.2857142857142857,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "gpt-4o-2024-08-06",
+  "task": "pm-prepare-meeting-with-customers",
+  "targets": [
+   "Huang Jie"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 32,
+  "finished": true,
+  "fabricated": true,
+  "reached_chat": false,
+  "score": 0.3333333333333333,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "gpt-4o-2024-08-06",
+  "task": "pm-schedule-meeting-1",
+  "targets": [
+   "Emily Zhou",
+   "Liu Qiang"
+  ],
+  "sent": [
+   "Mike Chen",
+   "Chen Xinyi"
+  ],
+  "contacted": [
+   "Chen Xinyi",
+   "Mike Chen"
+  ],
+  "steps": 22,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.6,
+  "success": false,
+  "cat": "partial+wrong",
+  "n_hit": 0,
+  "n_wrong": 2,
+  "n_miss": 2,
+  "cov": 0.0
+ },
+ {
+  "model": "gpt-4o-2024-08-06",
+  "task": "pm-schedule-meeting-2",
+  "targets": [
+   "Emily Zhou",
+   "Liu Qiang"
+  ],
+  "sent": [
+   "Chen Xinyi",
+   "Chen Xinyi",
+   "Chen Xinyi"
+  ],
+  "contacted": [
+   "Chen Xinyi"
+  ],
+  "steps": 24,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "partial+wrong",
+  "n_hit": 0,
+  "n_wrong": 1,
+  "n_miss": 2,
+  "cov": 0.0
+ },
+ {
+  "model": "gpt-4o-2024-08-06",
+  "task": "pm-send-notification-to-corresponding-user",
+  "targets": [
+   "David Wong",
+   "Huang Jie",
+   "Jessica Lee",
+   "Mark Johnson"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 14,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 4,
+  "cov": 0.0
+ },
+ {
+  "model": "gpt-4o-2024-08-06",
+  "task": "qa-update-issue-status-according-to-colleagues",
+  "targets": [
+   "Mike Chen",
+   "Wang Fang"
+  ],
+  "sent": [
+   "Chen Xinyi",
+   "Chen Xinyi",
+   "Chen Xinyi"
+  ],
+  "contacted": [
+   "Chen Xinyi"
+  ],
+  "steps": 38,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.6666666666666666,
+  "success": false,
+  "cat": "partial+wrong",
+  "n_hit": 0,
+  "n_wrong": 1,
+  "n_miss": 2,
+  "cov": 0.0
+ },
+ {
+  "model": "gpt-4o-2024-08-06",
+  "task": "sde-create-new-gitlab-project-logo",
+  "targets": [
+   "Jessica Lee"
+  ],
+  "sent": [
+   "Jessica Lee"
+  ],
+  "contacted": [
+   "Jessica Lee"
+  ],
+  "steps": 38,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "gpt-4o-2024-08-06",
+  "task": "sde-create-new-repo",
+  "targets": [
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 38,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.6666666666666666,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "gpt-4o-2024-08-06",
+  "task": "sde-debug-crashed-server",
+  "targets": [
+   "Emily Zhou",
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 30,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 2,
+  "cov": 0.0
+ },
+ {
+  "model": "gpt-4o-2024-08-06",
+  "task": "sde-find-answer-in-codebase-3",
+  "targets": [
+   "Mike Chen"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 26,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "gpt-4o-2024-08-06",
+  "task": "sde-reply-community-issue-by-asking-npc",
+  "targets": [
+   "Mike Chen"
+  ],
+  "sent": [
+   "Mike Chen"
+  ],
+  "contacted": [
+   "Mike Chen"
+  ],
+  "steps": 24,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.4,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "gpt-4o-2024-08-06",
+  "task": "sde-report-agent-repos",
+  "targets": [
+   "Sarah Johnson"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 18,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.1-405b",
+  "task": "admin-ask-for-meeting-feedback",
+  "targets": [
+   "Chen Xinyi",
+   "Emily Zhou",
+   "Huang Jie",
+   "Liu Qiang",
+   "Mike Chen"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 72,
+  "finished": true,
+  "fabricated": true,
+  "reached_chat": true,
+  "score": 0.16666666666666666,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 5,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.1-405b",
+  "task": "admin-ask-for-upgrade-reimbursement",
+  "targets": [
+   "Chen Xinyi",
+   "Sarah Johnson"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 55,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 2,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.1-405b",
+  "task": "admin-check-employees-budget-and-reply-2",
+  "targets": [
+   "Chen Xinyi",
+   "Huang Jie",
+   "Mike Chen",
+   "Sophia Rodriguez"
+  ],
+  "sent": [
+   "Mike Chen",
+   "Huang Jie",
+   "Sophia Rodriguez"
+  ],
+  "contacted": [
+   "Huang Jie",
+   "Mike Chen",
+   "Sophia Rodriguez"
+  ],
+  "steps": 67,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 3,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.75
+ },
+ {
+  "model": "llama-3.1-405b",
+  "task": "admin-check-employees-budget-and-reply-and-record",
+  "targets": [
+   "Huang Jie",
+   "Li Ming",
+   "Sophia Rodriguez",
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Li Ming",
+   "Zhang Wei",
+   "Huang Jie",
+   "Sophia Rodriguez"
+  ],
+  "contacted": [
+   "Huang Jie",
+   "Li Ming",
+   "Sophia Rodriguez",
+   "Zhang Wei"
+  ],
+  "steps": 73,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.16666666666666666,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 4,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "llama-3.1-405b",
+  "task": "admin-check-employees-budget-and-reply",
+  "targets": [
+   "Chen Xinyi",
+   "Huang Jie",
+   "Jessica Lee"
+  ],
+  "sent": [
+   "Chen Xinyi",
+   "Jessica Lee",
+   "Huang Jie"
+  ],
+  "contacted": [
+   "Chen Xinyi",
+   "Huang Jie",
+   "Jessica Lee"
+  ],
+  "steps": 69,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.25,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 3,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "llama-3.1-405b",
+  "task": "admin-collect-requests-and-compute-total-price",
+  "targets": [
+   "Huang Jie",
+   "Mike Chen",
+   "Sarah Johnson",
+   "Sophia Rodriguez"
+  ],
+  "sent": [
+   "Mike Chen",
+   "Sophia Rodriguez",
+   "Huang Jie",
+   "Sarah Johnson"
+  ],
+  "contacted": [
+   "Huang Jie",
+   "Mike Chen",
+   "Sarah Johnson",
+   "Sophia Rodriguez"
+  ],
+  "steps": 81,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.25,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 4,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "llama-3.1-405b",
+  "task": "admin-employee-info-reconciliation",
+  "targets": [
+   "Priya Sharma",
+   "Sophia Rodriguez",
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 16,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 3,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.1-405b",
+  "task": "admin-get-best-vendor-quote",
+  "targets": [
+   "Emma Lewis",
+   "Sarah Johnson"
+  ],
+  "sent": [
+   "Emma Lewis"
+  ],
+  "contacted": [
+   "Emma Lewis"
+  ],
+  "steps": 59,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.16666666666666666,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.5
+ },
+ {
+  "model": "llama-3.1-405b",
+  "task": "finance-apply-tax-credit",
+  "targets": [
+   "David Wong"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 51,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.1-405b",
+  "task": "finance-find-signatories",
+  "targets": [
+   "David Wong"
+  ],
+  "sent": [
+   "David Wong"
+  ],
+  "contacted": [
+   "David Wong"
+  ],
+  "steps": 59,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.2,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "llama-3.1-405b",
+  "task": "finance-r-d-activities",
+  "targets": [
+   "Alex Turner",
+   "Chen Xinyi",
+   "David Wong",
+   "Emily Zhou",
+   "Emma Lewis",
+   "Huang Jie",
+   "Jessica Chen",
+   "Jessica Lee",
+   "Li Ming",
+   "Liu Qiang",
+   "Mark Johnson",
+   "Mike Chen",
+   "Priya Sharma",
+   "Sarah Johnson",
+   "Sophia Rodriguez",
+   "Wang Fang",
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 55,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 17,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.1-405b",
+  "task": "hr-check-attendance-multiple-days-department-with-chat",
+  "targets": [
+   "Chen Xinyi",
+   "David Wong",
+   "Mark Johnson"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 55,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 3,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.1-405b",
+  "task": "hr-check-for-invalid-passwords-and-ask-for-valid-passwords",
+  "targets": [
+   "Mark Johnson",
+   "Mike Chen"
+  ],
+  "sent": [
+   "Mike Chen",
+   "Mike Chen",
+   "Mark Johnson",
+   "Mark Johnson"
+  ],
+  "contacted": [
+   "Mark Johnson",
+   "Mike Chen"
+  ],
+  "steps": 46,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 1.0,
+  "success": true,
+  "cat": "complete",
+  "n_hit": 2,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "llama-3.1-405b",
+  "task": "hr-collect-feedbacks",
+  "targets": [
+   "Li Ming",
+   "Mike Chen",
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 80,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 3,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.1-405b",
+  "task": "hr-collect-multiple-valid-passwords",
+  "targets": [
+   "Li Ming",
+   "Mark Johnson",
+   "Mike Chen",
+   "Sarah Johnson",
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Mark Johnson",
+   "Mark Johnson",
+   "Sarah Johnson",
+   "Sarah Johnson",
+   "Li Ming",
+   "Li Ming",
+   "Zhang Wei",
+   "Zhang Wei"
+  ],
+  "contacted": [
+   "Li Ming",
+   "Mark Johnson",
+   "Sarah Johnson",
+   "Zhang Wei"
+  ],
+  "steps": 107,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 4,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.8
+ },
+ {
+  "model": "llama-3.1-405b",
+  "task": "hr-get-valid-password",
+  "targets": [
+   "Mark Johnson"
+  ],
+  "sent": [
+   "Mark Johnson",
+   "Mark Johnson"
+  ],
+  "contacted": [
+   "Mark Johnson"
+  ],
+  "steps": 34,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 1.0,
+  "success": true,
+  "cat": "complete",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "llama-3.1-405b",
+  "task": "hr-green-card-consultation",
+  "targets": [
+   "Priya Sharma"
+  ],
+  "sent": [
+   "Priya Sharma"
+  ],
+  "contacted": [
+   "Priya Sharma"
+  ],
+  "steps": 75,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.3333333333333333,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "llama-3.1-405b",
+  "task": "hr-mass-survey",
+  "targets": [
+   "Alex Turner",
+   "Chen Xinyi",
+   "David Wong",
+   "Emily Zhou",
+   "Emma Lewis",
+   "Huang Jie",
+   "Jessica Chen",
+   "Jessica Lee",
+   "Li Ming",
+   "Liu Qiang",
+   "Mark Johnson",
+   "Mike Chen",
+   "Priya Sharma",
+   "Sarah Johnson",
+   "Sophia Rodriguez",
+   "Wang Fang",
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 65,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.14285714285714285,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 17,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.1-405b",
+  "task": "hr-new-grad-job-description-2",
+  "targets": [
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Zhang Wei"
+  ],
+  "contacted": [
+   "Zhang Wei"
+  ],
+  "steps": 129,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.25,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "llama-3.1-405b",
+  "task": "hr-new-grad-job-description-3",
+  "targets": [
+   "Li Ming",
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Zhang Wei",
+   "Li Ming"
+  ],
+  "contacted": [
+   "Li Ming",
+   "Zhang Wei"
+  ],
+  "steps": 77,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.4,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 2,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "llama-3.1-405b",
+  "task": "hr-pick-interviewer-1",
+  "targets": [
+   "Chen Xinyi"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 65,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.3333333333333333,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.1-405b",
+  "task": "hr-pick-interviewer-2",
+  "targets": [
+   "Chen Xinyi",
+   "Emily Zhou",
+   "Jessica Lee",
+   "Mark Johnson"
+  ],
+  "sent": [
+   "Chen Xinyi",
+   "Mark Johnson",
+   "Jessica Lee",
+   "Emily Zhou"
+  ],
+  "contacted": [
+   "Chen Xinyi",
+   "Emily Zhou",
+   "Jessica Lee",
+   "Mark Johnson"
+  ],
+  "steps": 116,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 4,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "llama-3.1-405b",
+  "task": "hr-pick-interviewer-3",
+  "targets": [
+   "Emily Zhou",
+   "Jessica Lee"
+  ],
+  "sent": [
+   "Emily Zhou"
+  ],
+  "contacted": [
+   "Emily Zhou"
+  ],
+  "steps": 16,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.25,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.5
+ },
+ {
+  "model": "llama-3.1-405b",
+  "task": "hr-resume-screening",
+  "targets": [
+   "Chen Xinyi"
+  ],
+  "sent": [
+   "Li Ming",
+   "Li Ming",
+   "Chen Xinyi",
+   "Chen Xinyi"
+  ],
+  "contacted": [
+   "Chen Xinyi",
+   "Li Ming"
+  ],
+  "steps": 83,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.5,
+  "success": false,
+  "cat": "complete+extra",
+  "n_hit": 1,
+  "n_wrong": 1,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "llama-3.1-405b",
+  "task": "pm-ask-for-issue-and-create-in-gitlab",
+  "targets": [
+   "Li Ming",
+   "Mark Johnson",
+   "Mike Chen"
+  ],
+  "sent": [
+   "Li Ming"
+  ],
+  "contacted": [
+   "Li Ming"
+  ],
+  "steps": 59,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 2,
+  "cov": 0.3333333333333333
+ },
+ {
+  "model": "llama-3.1-405b",
+  "task": "pm-ask-issue-assignee-for-issue-status-and-update-in-plane",
+  "targets": [
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Zhang Wei"
+  ],
+  "contacted": [
+   "Zhang Wei"
+  ],
+  "steps": 36,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 1.0,
+  "success": true,
+  "cat": "complete",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "llama-3.1-405b",
+  "task": "pm-check-backlog-update-issues",
+  "targets": [
+   "Liu Qiang"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 45,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.2,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.1-405b",
+  "task": "pm-plan-personnel-for-new-project",
+  "targets": [
+   "Chen Xinyi"
+  ],
+  "sent": [
+   "Chen Xinyi"
+  ],
+  "contacted": [
+   "Chen Xinyi"
+  ],
+  "steps": 77,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.14285714285714285,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "llama-3.1-405b",
+  "task": "pm-prepare-meeting-with-customers",
+  "targets": [
+   "Huang Jie"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 24,
+  "finished": true,
+  "fabricated": true,
+  "reached_chat": false,
+  "score": 0.3333333333333333,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.1-405b",
+  "task": "pm-schedule-meeting-1",
+  "targets": [
+   "Emily Zhou",
+   "Liu Qiang"
+  ],
+  "sent": [
+   "Emily Zhou",
+   "Liu Qiang"
+  ],
+  "contacted": [
+   "Emily Zhou",
+   "Liu Qiang"
+  ],
+  "steps": 34,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.4,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 2,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "llama-3.1-405b",
+  "task": "pm-schedule-meeting-2",
+  "targets": [
+   "Emily Zhou",
+   "Liu Qiang"
+  ],
+  "sent": [
+   "Emily Zhou",
+   "Liu Qiang"
+  ],
+  "contacted": [
+   "Emily Zhou",
+   "Liu Qiang"
+  ],
+  "steps": 32,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 1.0,
+  "success": true,
+  "cat": "complete",
+  "n_hit": 2,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "llama-3.1-405b",
+  "task": "pm-send-notification-to-corresponding-user",
+  "targets": [
+   "David Wong",
+   "Huang Jie",
+   "Jessica Lee",
+   "Mark Johnson"
+  ],
+  "sent": [
+   "Jessica Lee",
+   "Jessica Lee",
+   "David Wong",
+   "Huang Jie",
+   "Mark Johnson"
+  ],
+  "contacted": [
+   "David Wong",
+   "Huang Jie",
+   "Jessica Lee",
+   "Mark Johnson"
+  ],
+  "steps": 60,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 1.0,
+  "success": true,
+  "cat": "complete",
+  "n_hit": 4,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "llama-3.1-405b",
+  "task": "qa-update-issue-status-according-to-colleagues",
+  "targets": [
+   "Mike Chen",
+   "Wang Fang"
+  ],
+  "sent": [
+   "Wang Fang",
+   "Mike Chen"
+  ],
+  "contacted": [
+   "Mike Chen",
+   "Wang Fang"
+  ],
+  "steps": 40,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 1.0,
+  "success": true,
+  "cat": "complete",
+  "n_hit": 2,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "llama-3.1-405b",
+  "task": "sde-create-new-gitlab-project-logo",
+  "targets": [
+   "Jessica Lee"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 61,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.1-405b",
+  "task": "sde-create-new-repo",
+  "targets": [
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 21,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.1-405b",
+  "task": "sde-debug-crashed-server",
+  "targets": [
+   "Emily Zhou",
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 34,
+  "finished": true,
+  "fabricated": true,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 2,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.1-405b",
+  "task": "sde-find-answer-in-codebase-3",
+  "targets": [
+   "Mike Chen"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 63,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.1-405b",
+  "task": "sde-reply-community-issue-by-asking-npc",
+  "targets": [
+   "Mike Chen"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 5,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.2,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.1-405b",
+  "task": "sde-report-agent-repos",
+  "targets": [
+   "Sarah Johnson"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 20,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.1-70b",
+  "task": "admin-ask-for-meeting-feedback",
+  "targets": [
+   "Chen Xinyi",
+   "Emily Zhou",
+   "Huang Jie",
+   "Liu Qiang",
+   "Mike Chen"
+  ],
+  "sent": [
+   "Mike Chen"
+  ],
+  "contacted": [
+   "Mike Chen"
+  ],
+  "steps": 129,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.16666666666666666,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 4,
+  "cov": 0.2
+ },
+ {
+  "model": "llama-3.1-70b",
+  "task": "admin-ask-for-upgrade-reimbursement",
+  "targets": [
+   "Chen Xinyi",
+   "Sarah Johnson"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 65,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 2,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.1-70b",
+  "task": "admin-check-employees-budget-and-reply-2",
+  "targets": [
+   "Chen Xinyi",
+   "Huang Jie",
+   "Mike Chen",
+   "Sophia Rodriguez"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 7,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 4,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.1-70b",
+  "task": "admin-check-employees-budget-and-reply-and-record",
+  "targets": [
+   "Huang Jie",
+   "Li Ming",
+   "Sophia Rodriguez",
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 143,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 4,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.1-70b",
+  "task": "admin-check-employees-budget-and-reply",
+  "targets": [
+   "Chen Xinyi",
+   "Huang Jie",
+   "Jessica Lee"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 7,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.25,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 3,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.1-70b",
+  "task": "admin-collect-requests-and-compute-total-price",
+  "targets": [
+   "Huang Jie",
+   "Mike Chen",
+   "Sarah Johnson",
+   "Sophia Rodriguez"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 67,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 4,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.1-70b",
+  "task": "admin-employee-info-reconciliation",
+  "targets": [
+   "Priya Sharma",
+   "Sophia Rodriguez",
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 32,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.14285714285714285,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 3,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.1-70b",
+  "task": "admin-get-best-vendor-quote",
+  "targets": [
+   "Emma Lewis",
+   "Sarah Johnson"
+  ],
+  "sent": [
+   "Emma Lewis"
+  ],
+  "contacted": [
+   "Emma Lewis"
+  ],
+  "steps": 35,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.16666666666666666,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.5
+ },
+ {
+  "model": "llama-3.1-70b",
+  "task": "finance-apply-tax-credit",
+  "targets": [
+   "David Wong"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 3,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.1-70b",
+  "task": "finance-find-signatories",
+  "targets": [
+   "David Wong"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 69,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.1-70b",
+  "task": "finance-r-d-activities",
+  "targets": [
+   "Alex Turner",
+   "Chen Xinyi",
+   "David Wong",
+   "Emily Zhou",
+   "Emma Lewis",
+   "Huang Jie",
+   "Jessica Chen",
+   "Jessica Lee",
+   "Li Ming",
+   "Liu Qiang",
+   "Mark Johnson",
+   "Mike Chen",
+   "Priya Sharma",
+   "Sarah Johnson",
+   "Sophia Rodriguez",
+   "Wang Fang",
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 73,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 17,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.1-70b",
+  "task": "hr-check-attendance-multiple-days-department-with-chat",
+  "targets": [
+   "Chen Xinyi",
+   "David Wong",
+   "Mark Johnson"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 65,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 3,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.1-70b",
+  "task": "hr-check-for-invalid-passwords-and-ask-for-valid-passwords",
+  "targets": [
+   "Mark Johnson",
+   "Mike Chen"
+  ],
+  "sent": [
+   "Mark Johnson",
+   "Mark Johnson",
+   "Mike Chen",
+   "Mike Chen"
+  ],
+  "contacted": [
+   "Mark Johnson",
+   "Mike Chen"
+  ],
+  "steps": 52,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 1.0,
+  "success": true,
+  "cat": "complete",
+  "n_hit": 2,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "llama-3.1-70b",
+  "task": "hr-collect-feedbacks",
+  "targets": [
+   "Li Ming",
+   "Mike Chen",
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Mike Chen",
+   "Chen Xinyi",
+   "Mike Chen",
+   "Mike Chen",
+   "Mike Chen",
+   "Mike Chen"
+  ],
+  "contacted": [
+   "Chen Xinyi",
+   "Mike Chen"
+  ],
+  "steps": 103,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.2,
+  "success": false,
+  "cat": "partial+wrong",
+  "n_hit": 1,
+  "n_wrong": 1,
+  "n_miss": 2,
+  "cov": 0.3333333333333333
+ },
+ {
+  "model": "llama-3.1-70b",
+  "task": "hr-collect-multiple-valid-passwords",
+  "targets": [
+   "Li Ming",
+   "Mark Johnson",
+   "Mike Chen",
+   "Sarah Johnson",
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Mike Chen"
+  ],
+  "contacted": [
+   "Mike Chen"
+  ],
+  "steps": 20,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 4,
+  "cov": 0.2
+ },
+ {
+  "model": "llama-3.1-70b",
+  "task": "hr-get-valid-password",
+  "targets": [
+   "Mark Johnson"
+  ],
+  "sent": [
+   "Mark Johnson",
+   "Mark Johnson"
+  ],
+  "contacted": [
+   "Mark Johnson"
+  ],
+  "steps": 30,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.5,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "llama-3.1-70b",
+  "task": "hr-green-card-consultation",
+  "targets": [
+   "Priya Sharma"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 59,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.1-70b",
+  "task": "hr-mass-survey",
+  "targets": [
+   "Alex Turner",
+   "Chen Xinyi",
+   "David Wong",
+   "Emily Zhou",
+   "Emma Lewis",
+   "Huang Jie",
+   "Jessica Chen",
+   "Jessica Lee",
+   "Li Ming",
+   "Liu Qiang",
+   "Mark Johnson",
+   "Mike Chen",
+   "Priya Sharma",
+   "Sarah Johnson",
+   "Sophia Rodriguez",
+   "Wang Fang",
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 61,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.14285714285714285,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 17,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.1-70b",
+  "task": "hr-new-grad-job-description-2",
+  "targets": [
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Zhang Wei"
+  ],
+  "contacted": [
+   "Zhang Wei"
+  ],
+  "steps": 107,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.25,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "llama-3.1-70b",
+  "task": "hr-new-grad-job-description-3",
+  "targets": [
+   "Li Ming",
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Zhang Wei"
+  ],
+  "contacted": [
+   "Zhang Wei"
+  ],
+  "steps": 77,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.2,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.5
+ },
+ {
+  "model": "llama-3.1-70b",
+  "task": "hr-pick-interviewer-1",
+  "targets": [
+   "Chen Xinyi"
+  ],
+  "sent": [
+   "Chen Xinyi"
+  ],
+  "contacted": [
+   "Chen Xinyi"
+  ],
+  "steps": 45,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.3333333333333333,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "llama-3.1-70b",
+  "task": "hr-pick-interviewer-2",
+  "targets": [
+   "Chen Xinyi",
+   "Emily Zhou",
+   "Jessica Lee",
+   "Mark Johnson"
+  ],
+  "sent": [
+   "Chen Xinyi"
+  ],
+  "contacted": [
+   "Chen Xinyi"
+  ],
+  "steps": 27,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 3,
+  "cov": 0.25
+ },
+ {
+  "model": "llama-3.1-70b",
+  "task": "hr-pick-interviewer-3",
+  "targets": [
+   "Emily Zhou",
+   "Jessica Lee"
+  ],
+  "sent": [
+   "Emily Zhou"
+  ],
+  "contacted": [
+   "Emily Zhou"
+  ],
+  "steps": 22,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.5
+ },
+ {
+  "model": "llama-3.1-70b",
+  "task": "hr-resume-screening",
+  "targets": [
+   "Chen Xinyi"
+  ],
+  "sent": [
+   "Chen Xinyi"
+  ],
+  "contacted": [
+   "Chen Xinyi"
+  ],
+  "steps": 43,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "llama-3.1-70b",
+  "task": "pm-ask-for-issue-and-create-in-gitlab",
+  "targets": [
+   "Li Ming",
+   "Mark Johnson",
+   "Mike Chen"
+  ],
+  "sent": [
+   "Mike Chen"
+  ],
+  "contacted": [
+   "Mike Chen"
+  ],
+  "steps": 59,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 2,
+  "cov": 0.3333333333333333
+ },
+ {
+  "model": "llama-3.1-70b",
+  "task": "pm-ask-issue-assignee-for-issue-status-and-update-in-plane",
+  "targets": [
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Mike Chen"
+  ],
+  "contacted": [
+   "Mike Chen"
+  ],
+  "steps": 28,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "partial+wrong",
+  "n_hit": 0,
+  "n_wrong": 1,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.1-70b",
+  "task": "pm-check-backlog-update-issues",
+  "targets": [
+   "Liu Qiang"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 29,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.2,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.1-70b",
+  "task": "pm-plan-personnel-for-new-project",
+  "targets": [
+   "Chen Xinyi"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 14,
+  "finished": true,
+  "fabricated": true,
+  "reached_chat": false,
+  "score": 0.2857142857142857,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.1-70b",
+  "task": "pm-prepare-meeting-with-customers",
+  "targets": [
+   "Huang Jie"
+  ],
+  "sent": [
+   "Huang Jie"
+  ],
+  "contacted": [
+   "Huang Jie"
+  ],
+  "steps": 44,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.3333333333333333,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "llama-3.1-70b",
+  "task": "pm-schedule-meeting-1",
+  "targets": [
+   "Emily Zhou",
+   "Liu Qiang"
+  ],
+  "sent": [
+   "Mike Chen",
+   "Chen Xinyi",
+   "Chen Xinyi",
+   "Chen Xinyi",
+   "Chen Xinyi",
+   "Chen Xinyi",
+   "Chen Xinyi",
+   "Chen Xinyi",
+   "Chen Xinyi",
+   "Chen Xinyi",
+   "Chen Xinyi",
+   "Chen Xinyi",
+   "Chen Xinyi"
+  ],
+  "contacted": [
+   "Chen Xinyi",
+   "Mike Chen"
+  ],
+  "steps": 115,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "partial+wrong",
+  "n_hit": 0,
+  "n_wrong": 2,
+  "n_miss": 2,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.1-70b",
+  "task": "pm-schedule-meeting-2",
+  "targets": [
+   "Emily Zhou",
+   "Liu Qiang"
+  ],
+  "sent": [
+   "Emily Zhou",
+   "Liu Qiang"
+  ],
+  "contacted": [
+   "Emily Zhou",
+   "Liu Qiang"
+  ],
+  "steps": 34,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.4,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 2,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "llama-3.1-70b",
+  "task": "pm-send-notification-to-corresponding-user",
+  "targets": [
+   "David Wong",
+   "Huang Jie",
+   "Jessica Lee",
+   "Mark Johnson"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 18,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 4,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.1-70b",
+  "task": "qa-update-issue-status-according-to-colleagues",
+  "targets": [
+   "Mike Chen",
+   "Wang Fang"
+  ],
+  "sent": [
+   "Mike Chen",
+   "Mike Chen"
+  ],
+  "contacted": [
+   "Mike Chen"
+  ],
+  "steps": 38,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.3333333333333333,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.5
+ },
+ {
+  "model": "llama-3.1-70b",
+  "task": "sde-create-new-gitlab-project-logo",
+  "targets": [
+   "Jessica Lee"
+  ],
+  "sent": [
+   "Mike Chen"
+  ],
+  "contacted": [
+   "Mike Chen"
+  ],
+  "steps": 46,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "partial+wrong",
+  "n_hit": 0,
+  "n_wrong": 1,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.1-70b",
+  "task": "sde-create-new-repo",
+  "targets": [
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 23,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.1-70b",
+  "task": "sde-debug-crashed-server",
+  "targets": [
+   "Emily Zhou",
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 107,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 2,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.1-70b",
+  "task": "sde-find-answer-in-codebase-3",
+  "targets": [
+   "Mike Chen"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 1,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.1-70b",
+  "task": "sde-reply-community-issue-by-asking-npc",
+  "targets": [
+   "Mike Chen"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 7,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.2,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.1-70b",
+  "task": "sde-report-agent-repos",
+  "targets": [
+   "Sarah Johnson"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 7,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.3-70b",
+  "task": "admin-ask-for-meeting-feedback",
+  "targets": [
+   "Chen Xinyi",
+   "Emily Zhou",
+   "Huang Jie",
+   "Liu Qiang",
+   "Mike Chen"
+  ],
+  "sent": [
+   "Huang Jie",
+   "Huang Jie",
+   "Mike Chen",
+   "Chen Xinyi",
+   "Chen Xinyi",
+   "Mike Chen",
+   "Huang Jie",
+   "Chen Xinyi",
+   "Mike Chen",
+   "Huang Jie"
+  ],
+  "contacted": [
+   "Chen Xinyi",
+   "Huang Jie",
+   "Mike Chen"
+  ],
+  "steps": 151,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.3333333333333333,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 3,
+  "n_wrong": 0,
+  "n_miss": 2,
+  "cov": 0.6
+ },
+ {
+  "model": "llama-3.3-70b",
+  "task": "admin-ask-for-upgrade-reimbursement",
+  "targets": [
+   "Chen Xinyi",
+   "Sarah Johnson"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 63,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 2,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.3-70b",
+  "task": "admin-check-employees-budget-and-reply-2",
+  "targets": [
+   "Chen Xinyi",
+   "Huang Jie",
+   "Mike Chen",
+   "Sophia Rodriguez"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 171,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 4,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.3-70b",
+  "task": "admin-check-employees-budget-and-reply-and-record",
+  "targets": [
+   "Huang Jie",
+   "Li Ming",
+   "Sophia Rodriguez",
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Li Ming",
+   "Zhang Wei",
+   "Huang Jie"
+  ],
+  "contacted": [
+   "Huang Jie",
+   "Li Ming",
+   "Zhang Wei"
+  ],
+  "steps": 99,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 3,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.75
+ },
+ {
+  "model": "llama-3.3-70b",
+  "task": "admin-check-employees-budget-and-reply",
+  "targets": [
+   "Chen Xinyi",
+   "Huang Jie",
+   "Jessica Lee"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 5,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 3,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.3-70b",
+  "task": "admin-collect-requests-and-compute-total-price",
+  "targets": [
+   "Huang Jie",
+   "Mike Chen",
+   "Sarah Johnson",
+   "Sophia Rodriguez"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 63,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 4,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.3-70b",
+  "task": "admin-employee-info-reconciliation",
+  "targets": [
+   "Priya Sharma",
+   "Sophia Rodriguez",
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 13,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 3,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.3-70b",
+  "task": "admin-get-best-vendor-quote",
+  "targets": [
+   "Emma Lewis",
+   "Sarah Johnson"
+  ],
+  "sent": [
+   "Emma Lewis"
+  ],
+  "contacted": [
+   "Emma Lewis"
+  ],
+  "steps": 67,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.16666666666666666,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.5
+ },
+ {
+  "model": "llama-3.3-70b",
+  "task": "finance-apply-tax-credit",
+  "targets": [
+   "David Wong"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 61,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.3-70b",
+  "task": "finance-find-signatories",
+  "targets": [
+   "David Wong"
+  ],
+  "sent": [
+   "David Wong"
+  ],
+  "contacted": [
+   "David Wong"
+  ],
+  "steps": 65,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.2,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "llama-3.3-70b",
+  "task": "finance-r-d-activities",
+  "targets": [
+   "Alex Turner",
+   "Chen Xinyi",
+   "David Wong",
+   "Emily Zhou",
+   "Emma Lewis",
+   "Huang Jie",
+   "Jessica Chen",
+   "Jessica Lee",
+   "Li Ming",
+   "Liu Qiang",
+   "Mark Johnson",
+   "Mike Chen",
+   "Priya Sharma",
+   "Sarah Johnson",
+   "Sophia Rodriguez",
+   "Wang Fang",
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 63,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 17,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.3-70b",
+  "task": "hr-check-attendance-multiple-days-department-with-chat",
+  "targets": [
+   "Chen Xinyi",
+   "David Wong",
+   "Mark Johnson"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 63,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 3,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.3-70b",
+  "task": "hr-check-for-invalid-passwords-and-ask-for-valid-passwords",
+  "targets": [
+   "Mark Johnson",
+   "Mike Chen"
+  ],
+  "sent": [
+   "Mark Johnson",
+   "Mike Chen"
+  ],
+  "contacted": [
+   "Mark Johnson",
+   "Mike Chen"
+  ],
+  "steps": 32,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.5,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 2,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "llama-3.3-70b",
+  "task": "hr-collect-feedbacks",
+  "targets": [
+   "Li Ming",
+   "Mike Chen",
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Mike Chen",
+   "Li Ming",
+   "Zhang Wei",
+   "Liu Qiang"
+  ],
+  "contacted": [
+   "Li Ming",
+   "Liu Qiang",
+   "Mike Chen",
+   "Zhang Wei"
+  ],
+  "steps": 60,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 1.0,
+  "success": true,
+  "cat": "complete+extra",
+  "n_hit": 3,
+  "n_wrong": 1,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "llama-3.3-70b",
+  "task": "hr-collect-multiple-valid-passwords",
+  "targets": [
+   "Li Ming",
+   "Mark Johnson",
+   "Mike Chen",
+   "Sarah Johnson",
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Mike Chen",
+   "Mike Chen",
+   "Mark Johnson",
+   "Mark Johnson",
+   "Sarah Johnson",
+   "Sarah Johnson",
+   "Li Ming",
+   "Li Ming",
+   "Li Ming"
+  ],
+  "contacted": [
+   "Li Ming",
+   "Mark Johnson",
+   "Mike Chen",
+   "Sarah Johnson"
+  ],
+  "steps": 201,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 4,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.8
+ },
+ {
+  "model": "llama-3.3-70b",
+  "task": "hr-get-valid-password",
+  "targets": [
+   "Mark Johnson"
+  ],
+  "sent": [
+   "Mark Johnson",
+   "Mark Johnson",
+   "Mark Johnson",
+   "Mark Johnson"
+  ],
+  "contacted": [
+   "Mark Johnson"
+  ],
+  "steps": 40,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 1.0,
+  "success": true,
+  "cat": "complete",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "llama-3.3-70b",
+  "task": "hr-green-card-consultation",
+  "targets": [
+   "Priya Sharma"
+  ],
+  "sent": [
+   "Priya Sharma",
+   "Priya Sharma",
+   "Priya Sharma"
+  ],
+  "contacted": [
+   "Priya Sharma"
+  ],
+  "steps": 36,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.3333333333333333,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "llama-3.3-70b",
+  "task": "hr-mass-survey",
+  "targets": [
+   "Alex Turner",
+   "Chen Xinyi",
+   "David Wong",
+   "Emily Zhou",
+   "Emma Lewis",
+   "Huang Jie",
+   "Jessica Chen",
+   "Jessica Lee",
+   "Li Ming",
+   "Liu Qiang",
+   "Mark Johnson",
+   "Mike Chen",
+   "Priya Sharma",
+   "Sarah Johnson",
+   "Sophia Rodriguez",
+   "Wang Fang",
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 63,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.14285714285714285,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 17,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.3-70b",
+  "task": "hr-new-grad-job-description-2",
+  "targets": [
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Chen Xinyi"
+  ],
+  "contacted": [
+   "Chen Xinyi"
+  ],
+  "steps": 73,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "partial+wrong",
+  "n_hit": 0,
+  "n_wrong": 1,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.3-70b",
+  "task": "hr-new-grad-job-description-3",
+  "targets": [
+   "Li Ming",
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Mike Chen",
+   "Chen Xinyi"
+  ],
+  "contacted": [
+   "Chen Xinyi",
+   "Mike Chen"
+  ],
+  "steps": 46,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "partial+wrong",
+  "n_hit": 0,
+  "n_wrong": 2,
+  "n_miss": 2,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.3-70b",
+  "task": "hr-pick-interviewer-1",
+  "targets": [
+   "Chen Xinyi"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 9,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.3333333333333333,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.3-70b",
+  "task": "hr-pick-interviewer-2",
+  "targets": [
+   "Chen Xinyi",
+   "Emily Zhou",
+   "Jessica Lee",
+   "Mark Johnson"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 5,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 4,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.3-70b",
+  "task": "hr-pick-interviewer-3",
+  "targets": [
+   "Emily Zhou",
+   "Jessica Lee"
+  ],
+  "sent": [
+   "Emily Zhou"
+  ],
+  "contacted": [
+   "Emily Zhou"
+  ],
+  "steps": 14,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.5
+ },
+ {
+  "model": "llama-3.3-70b",
+  "task": "hr-resume-screening",
+  "targets": [
+   "Chen Xinyi"
+  ],
+  "sent": [
+   "Li Ming",
+   "Chen Xinyi"
+  ],
+  "contacted": [
+   "Chen Xinyi",
+   "Li Ming"
+  ],
+  "steps": 79,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.5,
+  "success": false,
+  "cat": "complete+extra",
+  "n_hit": 1,
+  "n_wrong": 1,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "llama-3.3-70b",
+  "task": "pm-ask-for-issue-and-create-in-gitlab",
+  "targets": [
+   "Li Ming",
+   "Mark Johnson",
+   "Mike Chen"
+  ],
+  "sent": [
+   "Mike Chen",
+   "Mike Chen",
+   "Mike Chen",
+   "Mike Chen",
+   "Mike Chen"
+  ],
+  "contacted": [
+   "Mike Chen"
+  ],
+  "steps": 103,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 2,
+  "cov": 0.3333333333333333
+ },
+ {
+  "model": "llama-3.3-70b",
+  "task": "pm-ask-issue-assignee-for-issue-status-and-update-in-plane",
+  "targets": [
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 97,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.3-70b",
+  "task": "pm-check-backlog-update-issues",
+  "targets": [
+   "Liu Qiang"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 115,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.2,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.3-70b",
+  "task": "pm-plan-personnel-for-new-project",
+  "targets": [
+   "Chen Xinyi"
+  ],
+  "sent": [
+   "Chen Xinyi"
+  ],
+  "contacted": [
+   "Chen Xinyi"
+  ],
+  "steps": 65,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.14285714285714285,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "llama-3.3-70b",
+  "task": "pm-prepare-meeting-with-customers",
+  "targets": [
+   "Huang Jie"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 5,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.3-70b",
+  "task": "pm-schedule-meeting-1",
+  "targets": [
+   "Emily Zhou",
+   "Liu Qiang"
+  ],
+  "sent": [
+   "Mike Chen",
+   "Mike Chen",
+   "Mike Chen",
+   "Chen Xinyi",
+   "Chen Xinyi",
+   "Chen Xinyi",
+   "Chen Xinyi",
+   "Chen Xinyi"
+  ],
+  "contacted": [
+   "Chen Xinyi",
+   "Mike Chen"
+  ],
+  "steps": 40,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.6,
+  "success": false,
+  "cat": "partial+wrong",
+  "n_hit": 0,
+  "n_wrong": 2,
+  "n_miss": 2,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.3-70b",
+  "task": "pm-schedule-meeting-2",
+  "targets": [
+   "Emily Zhou",
+   "Liu Qiang"
+  ],
+  "sent": [
+   "Mike Chen",
+   "Mike Chen",
+   "Mike Chen",
+   "Mike Chen",
+   "Mike Chen",
+   "Mike Chen",
+   "Mike Chen",
+   "Mike Chen",
+   "Mike Chen",
+   "Chen Xinyi",
+   "Chen Xinyi",
+   "Chen Xinyi"
+  ],
+  "contacted": [
+   "Chen Xinyi",
+   "Mike Chen"
+  ],
+  "steps": 36,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "partial+wrong",
+  "n_hit": 0,
+  "n_wrong": 2,
+  "n_miss": 2,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.3-70b",
+  "task": "pm-send-notification-to-corresponding-user",
+  "targets": [
+   "David Wong",
+   "Huang Jie",
+   "Jessica Lee",
+   "Mark Johnson"
+  ],
+  "sent": [
+   "Jessica Lee",
+   "Jessica Lee"
+  ],
+  "contacted": [
+   "Jessica Lee"
+  ],
+  "steps": 32,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.25,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 3,
+  "cov": 0.25
+ },
+ {
+  "model": "llama-3.3-70b",
+  "task": "qa-update-issue-status-according-to-colleagues",
+  "targets": [
+   "Mike Chen",
+   "Wang Fang"
+  ],
+  "sent": [
+   "Mike Chen",
+   "Mike Chen",
+   "Mike Chen",
+   "Mike Chen",
+   "Chen Xinyi"
+  ],
+  "contacted": [
+   "Chen Xinyi",
+   "Mike Chen"
+  ],
+  "steps": 70,
+  "finished": true,
+  "fabricated": true,
+  "reached_chat": true,
+  "score": 0.3333333333333333,
+  "success": false,
+  "cat": "partial+wrong",
+  "n_hit": 1,
+  "n_wrong": 1,
+  "n_miss": 1,
+  "cov": 0.5
+ },
+ {
+  "model": "llama-3.3-70b",
+  "task": "sde-create-new-gitlab-project-logo",
+  "targets": [
+   "Jessica Lee"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 17,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.3-70b",
+  "task": "sde-create-new-repo",
+  "targets": [
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 5,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.3-70b",
+  "task": "sde-debug-crashed-server",
+  "targets": [
+   "Emily Zhou",
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Emily Zhou",
+   "Emily Zhou",
+   "Emily Zhou",
+   "Emily Zhou",
+   "Emily Zhou",
+   "Emily Zhou",
+   "Emily Zhou",
+   "Emily Zhou",
+   "Emily Zhou",
+   "Emily Zhou",
+   "Emily Zhou",
+   "Emily Zhou",
+   "Emily Zhou",
+   "Emily Zhou",
+   "Emily Zhou",
+   "Emily Zhou",
+   "Emily Zhou",
+   "Emily Zhou"
+  ],
+  "contacted": [
+   "Emily Zhou"
+  ],
+  "steps": 123,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.25,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.5
+ },
+ {
+  "model": "llama-3.3-70b",
+  "task": "sde-find-answer-in-codebase-3",
+  "targets": [
+   "Mike Chen"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 5,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "llama-3.3-70b",
+  "task": "sde-reply-community-issue-by-asking-npc",
+  "targets": [
+   "Mike Chen"
+  ],
+  "sent": [
+   "Mike Chen"
+  ],
+  "contacted": [
+   "Mike Chen"
+  ],
+  "steps": 30,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 1.0,
+  "success": true,
+  "cat": "complete",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "llama-3.3-70b",
+  "task": "sde-report-agent-repos",
+  "targets": [
+   "Sarah Johnson"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 5,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "nova-pro-v1_0",
+  "task": "admin-ask-for-meeting-feedback",
+  "targets": [
+   "Chen Xinyi",
+   "Emily Zhou",
+   "Huang Jie",
+   "Liu Qiang",
+   "Mike Chen"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 5,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 5,
+  "cov": 0.0
+ },
+ {
+  "model": "nova-pro-v1_0",
+  "task": "admin-ask-for-upgrade-reimbursement",
+  "targets": [
+   "Chen Xinyi",
+   "Sarah Johnson"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 139,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 2,
+  "cov": 0.0
+ },
+ {
+  "model": "nova-pro-v1_0",
+  "task": "admin-check-employees-budget-and-reply-2",
+  "targets": [
+   "Chen Xinyi",
+   "Huang Jie",
+   "Mike Chen",
+   "Sophia Rodriguez"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 22,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 4,
+  "cov": 0.0
+ },
+ {
+  "model": "nova-pro-v1_0",
+  "task": "admin-check-employees-budget-and-reply-and-record",
+  "targets": [
+   "Huang Jie",
+   "Li Ming",
+   "Sophia Rodriguez",
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 7,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 4,
+  "cov": 0.0
+ },
+ {
+  "model": "nova-pro-v1_0",
+  "task": "admin-check-employees-budget-and-reply",
+  "targets": [
+   "Chen Xinyi",
+   "Huang Jie",
+   "Jessica Lee"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 7,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 3,
+  "cov": 0.0
+ },
+ {
+  "model": "nova-pro-v1_0",
+  "task": "admin-collect-requests-and-compute-total-price",
+  "targets": [
+   "Huang Jie",
+   "Mike Chen",
+   "Sarah Johnson",
+   "Sophia Rodriguez"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 29,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 4,
+  "cov": 0.0
+ },
+ {
+  "model": "nova-pro-v1_0",
+  "task": "admin-employee-info-reconciliation",
+  "targets": [
+   "Priya Sharma",
+   "Sophia Rodriguez",
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 24,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 3,
+  "cov": 0.0
+ },
+ {
+  "model": "nova-pro-v1_0",
+  "task": "admin-get-best-vendor-quote",
+  "targets": [
+   "Emma Lewis",
+   "Sarah Johnson"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 7,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 2,
+  "cov": 0.0
+ },
+ {
+  "model": "nova-pro-v1_0",
+  "task": "finance-apply-tax-credit",
+  "targets": [
+   "David Wong"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 139,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "nova-pro-v1_0",
+  "task": "finance-find-signatories",
+  "targets": [
+   "David Wong"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 141,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "nova-pro-v1_0",
+  "task": "finance-r-d-activities",
+  "targets": [
+   "Alex Turner",
+   "Chen Xinyi",
+   "David Wong",
+   "Emily Zhou",
+   "Emma Lewis",
+   "Huang Jie",
+   "Jessica Chen",
+   "Jessica Lee",
+   "Li Ming",
+   "Liu Qiang",
+   "Mark Johnson",
+   "Mike Chen",
+   "Priya Sharma",
+   "Sarah Johnson",
+   "Sophia Rodriguez",
+   "Wang Fang",
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 45,
+  "finished": false,
+  "fabricated": true,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 17,
+  "cov": 0.0
+ },
+ {
+  "model": "nova-pro-v1_0",
+  "task": "hr-check-attendance-multiple-days-department-with-chat",
+  "targets": [
+   "Chen Xinyi",
+   "David Wong",
+   "Mark Johnson"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 5,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 3,
+  "cov": 0.0
+ },
+ {
+  "model": "nova-pro-v1_0",
+  "task": "hr-check-for-invalid-passwords-and-ask-for-valid-passwords",
+  "targets": [
+   "Mark Johnson",
+   "Mike Chen"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 61,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 2,
+  "cov": 0.0
+ },
+ {
+  "model": "nova-pro-v1_0",
+  "task": "hr-collect-feedbacks",
+  "targets": [
+   "Li Ming",
+   "Mike Chen",
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 22,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 3,
+  "cov": 0.0
+ },
+ {
+  "model": "nova-pro-v1_0",
+  "task": "hr-collect-multiple-valid-passwords",
+  "targets": [
+   "Li Ming",
+   "Mark Johnson",
+   "Mike Chen",
+   "Sarah Johnson",
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 55,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 5,
+  "cov": 0.0
+ },
+ {
+  "model": "nova-pro-v1_0",
+  "task": "hr-get-valid-password",
+  "targets": [
+   "Mark Johnson"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 31,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.25,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "nova-pro-v1_0",
+  "task": "hr-green-card-consultation",
+  "targets": [
+   "Priya Sharma"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 5,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.3333333333333333,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "nova-pro-v1_0",
+  "task": "hr-mass-survey",
+  "targets": [
+   "Alex Turner",
+   "Chen Xinyi",
+   "David Wong",
+   "Emily Zhou",
+   "Emma Lewis",
+   "Huang Jie",
+   "Jessica Chen",
+   "Jessica Lee",
+   "Li Ming",
+   "Liu Qiang",
+   "Mark Johnson",
+   "Mike Chen",
+   "Priya Sharma",
+   "Sarah Johnson",
+   "Sophia Rodriguez",
+   "Wang Fang",
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 21,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.14285714285714285,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 17,
+  "cov": 0.0
+ },
+ {
+  "model": "nova-pro-v1_0",
+  "task": "hr-new-grad-job-description-2",
+  "targets": [
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 74,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "nova-pro-v1_0",
+  "task": "hr-new-grad-job-description-3",
+  "targets": [
+   "Li Ming",
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 201,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 2,
+  "cov": 0.0
+ },
+ {
+  "model": "nova-pro-v1_0",
+  "task": "hr-pick-interviewer-1",
+  "targets": [
+   "Chen Xinyi"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 139,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.3333333333333333,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "nova-pro-v1_0",
+  "task": "hr-pick-interviewer-2",
+  "targets": [
+   "Chen Xinyi",
+   "Emily Zhou",
+   "Jessica Lee",
+   "Mark Johnson"
+  ],
+  "sent": [
+   "Chen Xinyi"
+  ],
+  "contacted": [
+   "Chen Xinyi"
+  ],
+  "steps": 22,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.3333333333333333,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 3,
+  "cov": 0.25
+ },
+ {
+  "model": "nova-pro-v1_0",
+  "task": "hr-pick-interviewer-3",
+  "targets": [
+   "Emily Zhou",
+   "Jessica Lee"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 21,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 2,
+  "cov": 0.0
+ },
+ {
+  "model": "nova-pro-v1_0",
+  "task": "hr-resume-screening",
+  "targets": [
+   "Chen Xinyi"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 201,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "nova-pro-v1_0",
+  "task": "pm-ask-for-issue-and-create-in-gitlab",
+  "targets": [
+   "Li Ming",
+   "Mark Johnson",
+   "Mike Chen"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 19,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 3,
+  "cov": 0.0
+ },
+ {
+  "model": "nova-pro-v1_0",
+  "task": "pm-ask-issue-assignee-for-issue-status-and-update-in-plane",
+  "targets": [
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 201,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "nova-pro-v1_0",
+  "task": "pm-check-backlog-update-issues",
+  "targets": [
+   "Liu Qiang"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 34,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.2,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "nova-pro-v1_0",
+  "task": "pm-plan-personnel-for-new-project",
+  "targets": [
+   "Chen Xinyi"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 20,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.2857142857142857,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "nova-pro-v1_0",
+  "task": "pm-prepare-meeting-with-customers",
+  "targets": [
+   "Huang Jie"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 39,
+  "finished": false,
+  "fabricated": true,
+  "reached_chat": false,
+  "score": 0.3333333333333333,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "nova-pro-v1_0",
+  "task": "pm-schedule-meeting-1",
+  "targets": [
+   "Emily Zhou",
+   "Liu Qiang"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 9,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 2,
+  "cov": 0.0
+ },
+ {
+  "model": "nova-pro-v1_0",
+  "task": "pm-schedule-meeting-2",
+  "targets": [
+   "Emily Zhou",
+   "Liu Qiang"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 61,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 2,
+  "cov": 0.0
+ },
+ {
+  "model": "nova-pro-v1_0",
+  "task": "pm-send-notification-to-corresponding-user",
+  "targets": [
+   "David Wong",
+   "Huang Jie",
+   "Jessica Lee",
+   "Mark Johnson"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 25,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 4,
+  "cov": 0.0
+ },
+ {
+  "model": "nova-pro-v1_0",
+  "task": "qa-update-issue-status-according-to-colleagues",
+  "targets": [
+   "Mike Chen",
+   "Wang Fang"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 28,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.3333333333333333,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 2,
+  "cov": 0.0
+ },
+ {
+  "model": "nova-pro-v1_0",
+  "task": "sde-create-new-gitlab-project-logo",
+  "targets": [
+   "Jessica Lee"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 11,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "nova-pro-v1_0",
+  "task": "sde-create-new-repo",
+  "targets": [
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 9,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "nova-pro-v1_0",
+  "task": "sde-debug-crashed-server",
+  "targets": [
+   "Emily Zhou",
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 20,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 2,
+  "cov": 0.0
+ },
+ {
+  "model": "nova-pro-v1_0",
+  "task": "sde-find-answer-in-codebase-3",
+  "targets": [
+   "Mike Chen"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 9,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "nova-pro-v1_0",
+  "task": "sde-reply-community-issue-by-asking-npc",
+  "targets": [
+   "Mike Chen"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 7,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.2,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "nova-pro-v1_0",
+  "task": "sde-report-agent-repos",
+  "targets": [
+   "Sarah Johnson"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 1,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2-72b",
+  "task": "admin-ask-for-meeting-feedback",
+  "targets": [
+   "Chen Xinyi",
+   "Emily Zhou",
+   "Huang Jie",
+   "Liu Qiang",
+   "Mike Chen"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 21,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.16666666666666666,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 5,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2-72b",
+  "task": "admin-ask-for-upgrade-reimbursement",
+  "targets": [
+   "Chen Xinyi",
+   "Sarah Johnson"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 21,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 2,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2-72b",
+  "task": "admin-check-employees-budget-and-reply-2",
+  "targets": [
+   "Chen Xinyi",
+   "Huang Jie",
+   "Mike Chen",
+   "Sophia Rodriguez"
+  ],
+  "sent": [
+   "Huang Jie"
+  ],
+  "contacted": [
+   "Huang Jie"
+  ],
+  "steps": 27,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 3,
+  "cov": 0.25
+ },
+ {
+  "model": "qwen2-72b",
+  "task": "admin-check-employees-budget-and-reply-and-record",
+  "targets": [
+   "Huang Jie",
+   "Li Ming",
+   "Sophia Rodriguez",
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 22,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 4,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2-72b",
+  "task": "admin-check-employees-budget-and-reply",
+  "targets": [
+   "Chen Xinyi",
+   "Huang Jie",
+   "Jessica Lee"
+  ],
+  "sent": [
+   "Jessica Lee"
+  ],
+  "contacted": [
+   "Jessica Lee"
+  ],
+  "steps": 25,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 2,
+  "cov": 0.3333333333333333
+ },
+ {
+  "model": "qwen2-72b",
+  "task": "admin-collect-requests-and-compute-total-price",
+  "targets": [
+   "Huang Jie",
+   "Mike Chen",
+   "Sarah Johnson",
+   "Sophia Rodriguez"
+  ],
+  "sent": [
+   "Chen Xinyi",
+   "Chen Xinyi",
+   "Chen Xinyi",
+   "Chen Xinyi",
+   "Chen Xinyi"
+  ],
+  "contacted": [
+   "Chen Xinyi"
+  ],
+  "steps": 49,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "partial+wrong",
+  "n_hit": 0,
+  "n_wrong": 1,
+  "n_miss": 4,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2-72b",
+  "task": "admin-employee-info-reconciliation",
+  "targets": [
+   "Priya Sharma",
+   "Sophia Rodriguez",
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 23,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 3,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2-72b",
+  "task": "admin-get-best-vendor-quote",
+  "targets": [
+   "Emma Lewis",
+   "Sarah Johnson"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 14,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 2,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2-72b",
+  "task": "finance-apply-tax-credit",
+  "targets": [
+   "David Wong"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 28,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2-72b",
+  "task": "finance-find-signatories",
+  "targets": [
+   "David Wong"
+  ],
+  "sent": [
+   "David Wong",
+   "David Wong",
+   "David Wong",
+   "David Wong",
+   "David Wong",
+   "David Wong",
+   "David Wong",
+   "David Wong",
+   "David Wong",
+   "David Wong"
+  ],
+  "contacted": [
+   "David Wong"
+  ],
+  "steps": 33,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.2,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "qwen2-72b",
+  "task": "finance-r-d-activities",
+  "targets": [
+   "Alex Turner",
+   "Chen Xinyi",
+   "David Wong",
+   "Emily Zhou",
+   "Emma Lewis",
+   "Huang Jie",
+   "Jessica Chen",
+   "Jessica Lee",
+   "Li Ming",
+   "Liu Qiang",
+   "Mark Johnson",
+   "Mike Chen",
+   "Priya Sharma",
+   "Sarah Johnson",
+   "Sophia Rodriguez",
+   "Wang Fang",
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 17,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 17,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2-72b",
+  "task": "hr-check-attendance-multiple-days-department-with-chat",
+  "targets": [
+   "Chen Xinyi",
+   "David Wong",
+   "Mark Johnson"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 15,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 3,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2-72b",
+  "task": "hr-check-for-invalid-passwords-and-ask-for-valid-passwords",
+  "targets": [
+   "Mark Johnson",
+   "Mike Chen"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 23,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 2,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2-72b",
+  "task": "hr-collect-feedbacks",
+  "targets": [
+   "Li Ming",
+   "Mike Chen",
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 23,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 3,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2-72b",
+  "task": "hr-collect-multiple-valid-passwords",
+  "targets": [
+   "Li Ming",
+   "Mark Johnson",
+   "Mike Chen",
+   "Sarah Johnson",
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Mark Johnson"
+  ],
+  "contacted": [
+   "Mark Johnson"
+  ],
+  "steps": 55,
+  "finished": false,
+  "fabricated": true,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 4,
+  "cov": 0.2
+ },
+ {
+  "model": "qwen2-72b",
+  "task": "hr-get-valid-password",
+  "targets": [
+   "Mark Johnson"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 29,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2-72b",
+  "task": "hr-green-card-consultation",
+  "targets": [
+   "Priya Sharma"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 19,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2-72b",
+  "task": "hr-mass-survey",
+  "targets": [
+   "Alex Turner",
+   "Chen Xinyi",
+   "David Wong",
+   "Emily Zhou",
+   "Emma Lewis",
+   "Huang Jie",
+   "Jessica Chen",
+   "Jessica Lee",
+   "Li Ming",
+   "Liu Qiang",
+   "Mark Johnson",
+   "Mike Chen",
+   "Priya Sharma",
+   "Sarah Johnson",
+   "Sophia Rodriguez",
+   "Wang Fang",
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 10,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.14285714285714285,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 17,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2-72b",
+  "task": "hr-new-grad-job-description-2",
+  "targets": [
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Zhang Wei"
+  ],
+  "contacted": [
+   "Zhang Wei"
+  ],
+  "steps": 51,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.25,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "qwen2-72b",
+  "task": "hr-new-grad-job-description-3",
+  "targets": [
+   "Li Ming",
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Zhang Wei"
+  ],
+  "contacted": [
+   "Zhang Wei"
+  ],
+  "steps": 25,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.2,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.5
+ },
+ {
+  "model": "qwen2-72b",
+  "task": "hr-pick-interviewer-1",
+  "targets": [
+   "Chen Xinyi"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 27,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.3333333333333333,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2-72b",
+  "task": "hr-pick-interviewer-2",
+  "targets": [
+   "Chen Xinyi",
+   "Emily Zhou",
+   "Jessica Lee",
+   "Mark Johnson"
+  ],
+  "sent": [
+   "Chen Xinyi",
+   "Chen Xinyi"
+  ],
+  "contacted": [
+   "Chen Xinyi"
+  ],
+  "steps": 25,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.3333333333333333,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 3,
+  "cov": 0.25
+ },
+ {
+  "model": "qwen2-72b",
+  "task": "hr-pick-interviewer-3",
+  "targets": [
+   "Emily Zhou",
+   "Jessica Lee"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 21,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 2,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2-72b",
+  "task": "hr-resume-screening",
+  "targets": [
+   "Chen Xinyi"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 27,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2-72b",
+  "task": "pm-ask-for-issue-and-create-in-gitlab",
+  "targets": [
+   "Li Ming",
+   "Mark Johnson",
+   "Mike Chen"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 103,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 3,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2-72b",
+  "task": "pm-ask-issue-assignee-for-issue-status-and-update-in-plane",
+  "targets": [
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 11,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2-72b",
+  "task": "pm-check-backlog-update-issues",
+  "targets": [
+   "Liu Qiang"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 15,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.2,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2-72b",
+  "task": "pm-plan-personnel-for-new-project",
+  "targets": [
+   "Chen Xinyi"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 33,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.2857142857142857,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2-72b",
+  "task": "pm-prepare-meeting-with-customers",
+  "targets": [
+   "Huang Jie"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 85,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2-72b",
+  "task": "pm-schedule-meeting-1",
+  "targets": [
+   "Emily Zhou",
+   "Liu Qiang"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 25,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 2,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2-72b",
+  "task": "pm-schedule-meeting-2",
+  "targets": [
+   "Emily Zhou",
+   "Liu Qiang"
+  ],
+  "sent": [
+   "Chen Xinyi",
+   "Chen Xinyi",
+   "Chen Xinyi",
+   "Mike Chen",
+   "Mike Chen"
+  ],
+  "contacted": [
+   "Chen Xinyi",
+   "Mike Chen"
+  ],
+  "steps": 24,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "partial+wrong",
+  "n_hit": 0,
+  "n_wrong": 2,
+  "n_miss": 2,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2-72b",
+  "task": "pm-send-notification-to-corresponding-user",
+  "targets": [
+   "David Wong",
+   "Huang Jie",
+   "Jessica Lee",
+   "Mark Johnson"
+  ],
+  "sent": [
+   "Jessica Lee"
+  ],
+  "contacted": [
+   "Jessica Lee"
+  ],
+  "steps": 25,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.25,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 3,
+  "cov": 0.25
+ },
+ {
+  "model": "qwen2-72b",
+  "task": "qa-update-issue-status-according-to-colleagues",
+  "targets": [
+   "Mike Chen",
+   "Wang Fang"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 17,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.6666666666666666,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 2,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2-72b",
+  "task": "sde-create-new-gitlab-project-logo",
+  "targets": [
+   "Jessica Lee"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 48,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2-72b",
+  "task": "sde-create-new-repo",
+  "targets": [
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 101,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2-72b",
+  "task": "sde-debug-crashed-server",
+  "targets": [
+   "Emily Zhou",
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 10,
+  "finished": true,
+  "fabricated": true,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 2,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2-72b",
+  "task": "sde-find-answer-in-codebase-3",
+  "targets": [
+   "Mike Chen"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 90,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2-72b",
+  "task": "sde-reply-community-issue-by-asking-npc",
+  "targets": [
+   "Mike Chen"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 31,
+  "finished": false,
+  "fabricated": true,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2-72b",
+  "task": "sde-report-agent-repos",
+  "targets": [
+   "Sarah Johnson"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 77,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2.5-72b",
+  "task": "admin-ask-for-meeting-feedback",
+  "targets": [
+   "Chen Xinyi",
+   "Emily Zhou",
+   "Huang Jie",
+   "Liu Qiang",
+   "Mike Chen"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 129,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 5,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2.5-72b",
+  "task": "admin-ask-for-upgrade-reimbursement",
+  "targets": [
+   "Chen Xinyi",
+   "Sarah Johnson"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 55,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 2,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2.5-72b",
+  "task": "admin-check-employees-budget-and-reply-2",
+  "targets": [
+   "Chen Xinyi",
+   "Huang Jie",
+   "Mike Chen",
+   "Sophia Rodriguez"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 77,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.25,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 4,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2.5-72b",
+  "task": "admin-check-employees-budget-and-reply-and-record",
+  "targets": [
+   "Huang Jie",
+   "Li Ming",
+   "Sophia Rodriguez",
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Chen Xinyi",
+   "Chen Xinyi",
+   "Chen Xinyi",
+   "Chen Xinyi"
+  ],
+  "contacted": [
+   "Chen Xinyi"
+  ],
+  "steps": 127,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "partial+wrong",
+  "n_hit": 0,
+  "n_wrong": 1,
+  "n_miss": 4,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2.5-72b",
+  "task": "admin-check-employees-budget-and-reply",
+  "targets": [
+   "Chen Xinyi",
+   "Huang Jie",
+   "Jessica Lee"
+  ],
+  "sent": [
+   "Mike Chen",
+   "Mike Chen",
+   "Chen Xinyi",
+   "Chen Xinyi",
+   "Chen Xinyi",
+   "Mike Chen"
+  ],
+  "contacted": [
+   "Chen Xinyi",
+   "Mike Chen"
+  ],
+  "steps": 63,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.25,
+  "success": false,
+  "cat": "partial+wrong",
+  "n_hit": 1,
+  "n_wrong": 1,
+  "n_miss": 2,
+  "cov": 0.3333333333333333
+ },
+ {
+  "model": "qwen2.5-72b",
+  "task": "admin-collect-requests-and-compute-total-price",
+  "targets": [
+   "Huang Jie",
+   "Mike Chen",
+   "Sarah Johnson",
+   "Sophia Rodriguez"
+  ],
+  "sent": [
+   "Mike Chen"
+  ],
+  "contacted": [
+   "Mike Chen"
+  ],
+  "steps": 53,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 3,
+  "cov": 0.25
+ },
+ {
+  "model": "qwen2.5-72b",
+  "task": "admin-employee-info-reconciliation",
+  "targets": [
+   "Priya Sharma",
+   "Sophia Rodriguez",
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 18,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.14285714285714285,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 3,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2.5-72b",
+  "task": "admin-get-best-vendor-quote",
+  "targets": [
+   "Emma Lewis",
+   "Sarah Johnson"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 127,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 2,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2.5-72b",
+  "task": "finance-apply-tax-credit",
+  "targets": [
+   "David Wong"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 43,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2.5-72b",
+  "task": "finance-find-signatories",
+  "targets": [
+   "David Wong"
+  ],
+  "sent": [
+   "David Wong"
+  ],
+  "contacted": [
+   "David Wong"
+  ],
+  "steps": 56,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.4,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "qwen2.5-72b",
+  "task": "finance-r-d-activities",
+  "targets": [
+   "Alex Turner",
+   "Chen Xinyi",
+   "David Wong",
+   "Emily Zhou",
+   "Emma Lewis",
+   "Huang Jie",
+   "Jessica Chen",
+   "Jessica Lee",
+   "Li Ming",
+   "Liu Qiang",
+   "Mark Johnson",
+   "Mike Chen",
+   "Priya Sharma",
+   "Sarah Johnson",
+   "Sophia Rodriguez",
+   "Wang Fang",
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 51,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 17,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2.5-72b",
+  "task": "hr-check-attendance-multiple-days-department-with-chat",
+  "targets": [
+   "Chen Xinyi",
+   "David Wong",
+   "Mark Johnson"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 43,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 3,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2.5-72b",
+  "task": "hr-check-for-invalid-passwords-and-ask-for-valid-passwords",
+  "targets": [
+   "Mark Johnson",
+   "Mike Chen"
+  ],
+  "sent": [
+   "Mark Johnson",
+   "Mike Chen",
+   "Mike Chen",
+   "Mike Chen",
+   "Mike Chen",
+   "Mark Johnson",
+   "Mark Johnson",
+   "Mark Johnson",
+   "Mark Johnson"
+  ],
+  "contacted": [
+   "Mark Johnson",
+   "Mike Chen"
+  ],
+  "steps": 54,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 1.0,
+  "success": true,
+  "cat": "complete",
+  "n_hit": 2,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "qwen2.5-72b",
+  "task": "hr-collect-feedbacks",
+  "targets": [
+   "Li Ming",
+   "Mike Chen",
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Mike Chen",
+   "Chen Xinyi"
+  ],
+  "contacted": [
+   "Chen Xinyi",
+   "Mike Chen"
+  ],
+  "steps": 35,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.2,
+  "success": false,
+  "cat": "partial+wrong",
+  "n_hit": 1,
+  "n_wrong": 1,
+  "n_miss": 2,
+  "cov": 0.3333333333333333
+ },
+ {
+  "model": "qwen2.5-72b",
+  "task": "hr-collect-multiple-valid-passwords",
+  "targets": [
+   "Li Ming",
+   "Mark Johnson",
+   "Mike Chen",
+   "Sarah Johnson",
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 43,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 5,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2.5-72b",
+  "task": "hr-get-valid-password",
+  "targets": [
+   "Mark Johnson"
+  ],
+  "sent": [
+   "Mark Johnson",
+   "Mark Johnson",
+   "Mark Johnson",
+   "Mark Johnson"
+  ],
+  "contacted": [
+   "Mark Johnson"
+  ],
+  "steps": 38,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 1.0,
+  "success": true,
+  "cat": "complete",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "qwen2.5-72b",
+  "task": "hr-green-card-consultation",
+  "targets": [
+   "Priya Sharma"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 89,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.3333333333333333,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2.5-72b",
+  "task": "hr-mass-survey",
+  "targets": [
+   "Alex Turner",
+   "Chen Xinyi",
+   "David Wong",
+   "Emily Zhou",
+   "Emma Lewis",
+   "Huang Jie",
+   "Jessica Chen",
+   "Jessica Lee",
+   "Li Ming",
+   "Liu Qiang",
+   "Mark Johnson",
+   "Mike Chen",
+   "Priya Sharma",
+   "Sarah Johnson",
+   "Sophia Rodriguez",
+   "Wang Fang",
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 39,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.14285714285714285,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 17,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2.5-72b",
+  "task": "hr-new-grad-job-description-2",
+  "targets": [
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Chen Xinyi"
+  ],
+  "contacted": [
+   "Chen Xinyi"
+  ],
+  "steps": 59,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "partial+wrong",
+  "n_hit": 0,
+  "n_wrong": 1,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2.5-72b",
+  "task": "hr-new-grad-job-description-3",
+  "targets": [
+   "Li Ming",
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Chen Xinyi",
+   "Chen Xinyi"
+  ],
+  "contacted": [
+   "Chen Xinyi"
+  ],
+  "steps": 29,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "partial+wrong",
+  "n_hit": 0,
+  "n_wrong": 1,
+  "n_miss": 2,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2.5-72b",
+  "task": "hr-pick-interviewer-1",
+  "targets": [
+   "Chen Xinyi"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 47,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.3333333333333333,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2.5-72b",
+  "task": "hr-pick-interviewer-2",
+  "targets": [
+   "Chen Xinyi",
+   "Emily Zhou",
+   "Jessica Lee",
+   "Mark Johnson"
+  ],
+  "sent": [
+   "Chen Xinyi",
+   "Chen Xinyi",
+   "Mark Johnson",
+   "Mark Johnson",
+   "Jessica Lee",
+   "Jessica Lee",
+   "Emily Zhou"
+  ],
+  "contacted": [
+   "Chen Xinyi",
+   "Emily Zhou",
+   "Jessica Lee",
+   "Mark Johnson"
+  ],
+  "steps": 34,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.6666666666666666,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 4,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "qwen2.5-72b",
+  "task": "hr-pick-interviewer-3",
+  "targets": [
+   "Emily Zhou",
+   "Jessica Lee"
+  ],
+  "sent": [
+   "Emily Zhou"
+  ],
+  "contacted": [
+   "Emily Zhou"
+  ],
+  "steps": 16,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.25,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.5
+ },
+ {
+  "model": "qwen2.5-72b",
+  "task": "hr-resume-screening",
+  "targets": [
+   "Chen Xinyi"
+  ],
+  "sent": [
+   "Chen Xinyi"
+  ],
+  "contacted": [
+   "Chen Xinyi"
+  ],
+  "steps": 71,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.25,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "qwen2.5-72b",
+  "task": "pm-ask-for-issue-and-create-in-gitlab",
+  "targets": [
+   "Li Ming",
+   "Mark Johnson",
+   "Mike Chen"
+  ],
+  "sent": [
+   "Mike Chen"
+  ],
+  "contacted": [
+   "Mike Chen"
+  ],
+  "steps": 51,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.2,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 2,
+  "cov": 0.3333333333333333
+ },
+ {
+  "model": "qwen2.5-72b",
+  "task": "pm-ask-issue-assignee-for-issue-status-and-update-in-plane",
+  "targets": [
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Alex Turner"
+  ],
+  "contacted": [
+   "Alex Turner"
+  ],
+  "steps": 49,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "partial+wrong",
+  "n_hit": 0,
+  "n_wrong": 1,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2.5-72b",
+  "task": "pm-check-backlog-update-issues",
+  "targets": [
+   "Liu Qiang"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 56,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.2,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2.5-72b",
+  "task": "pm-plan-personnel-for-new-project",
+  "targets": [
+   "Chen Xinyi"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 123,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2.5-72b",
+  "task": "pm-prepare-meeting-with-customers",
+  "targets": [
+   "Huang Jie"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 117,
+  "finished": false,
+  "fabricated": true,
+  "reached_chat": false,
+  "score": 0.3333333333333333,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2.5-72b",
+  "task": "pm-schedule-meeting-1",
+  "targets": [
+   "Emily Zhou",
+   "Liu Qiang"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 47,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 2,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2.5-72b",
+  "task": "pm-schedule-meeting-2",
+  "targets": [
+   "Emily Zhou",
+   "Liu Qiang"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 29,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 2,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2.5-72b",
+  "task": "pm-send-notification-to-corresponding-user",
+  "targets": [
+   "David Wong",
+   "Huang Jie",
+   "Jessica Lee",
+   "Mark Johnson"
+  ],
+  "sent": [
+   "Jessica Lee",
+   "Jessica Lee",
+   "Mike Chen",
+   "Mike Chen",
+   "Mike Chen",
+   "Huang Jie",
+   "Huang Jie",
+   "Huang Jie",
+   "Huang Jie",
+   "Huang Jie",
+   "Huang Jie",
+   "Huang Jie",
+   "Huang Jie",
+   "Huang Jie",
+   "Huang Jie",
+   "Huang Jie",
+   "Huang Jie",
+   "Huang Jie",
+   "Huang Jie",
+   "Huang Jie",
+   "Huang Jie",
+   "Huang Jie",
+   "Huang Jie",
+   "Huang Jie"
+  ],
+  "contacted": [
+   "Huang Jie",
+   "Jessica Lee",
+   "Mike Chen"
+  ],
+  "steps": 65,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.5,
+  "success": false,
+  "cat": "partial+wrong",
+  "n_hit": 2,
+  "n_wrong": 1,
+  "n_miss": 2,
+  "cov": 0.5
+ },
+ {
+  "model": "qwen2.5-72b",
+  "task": "qa-update-issue-status-according-to-colleagues",
+  "targets": [
+   "Mike Chen",
+   "Wang Fang"
+  ],
+  "sent": [
+   "Chen Xinyi",
+   "Chen Xinyi",
+   "Mike Chen"
+  ],
+  "contacted": [
+   "Chen Xinyi",
+   "Mike Chen"
+  ],
+  "steps": 67,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.3333333333333333,
+  "success": false,
+  "cat": "partial+wrong",
+  "n_hit": 1,
+  "n_wrong": 1,
+  "n_miss": 1,
+  "cov": 0.5
+ },
+ {
+  "model": "qwen2.5-72b",
+  "task": "sde-create-new-gitlab-project-logo",
+  "targets": [
+   "Jessica Lee"
+  ],
+  "sent": [
+   "Chen Xinyi",
+   "Chen Xinyi",
+   "Chen Xinyi"
+  ],
+  "contacted": [
+   "Chen Xinyi"
+  ],
+  "steps": 61,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "partial+wrong",
+  "n_hit": 0,
+  "n_wrong": 1,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2.5-72b",
+  "task": "sde-create-new-repo",
+  "targets": [
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Mike Chen"
+  ],
+  "contacted": [
+   "Mike Chen"
+  ],
+  "steps": 27,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "partial+wrong",
+  "n_hit": 0,
+  "n_wrong": 1,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2.5-72b",
+  "task": "sde-debug-crashed-server",
+  "targets": [
+   "Emily Zhou",
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Emily Zhou"
+  ],
+  "contacted": [
+   "Emily Zhou"
+  ],
+  "steps": 94,
+  "finished": true,
+  "fabricated": true,
+  "reached_chat": true,
+  "score": 0.25,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.5
+ },
+ {
+  "model": "qwen2.5-72b",
+  "task": "sde-find-answer-in-codebase-3",
+  "targets": [
+   "Mike Chen"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 45,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "qwen2.5-72b",
+  "task": "sde-reply-community-issue-by-asking-npc",
+  "targets": [
+   "Mike Chen"
+  ],
+  "sent": [
+   "Mike Chen"
+  ],
+  "contacted": [
+   "Mike Chen"
+  ],
+  "steps": 24,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.4,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "qwen2.5-72b",
+  "task": "sde-report-agent-repos",
+  "targets": [
+   "Sarah Johnson"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 5,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "sonnet-20241022",
+  "task": "admin-ask-for-meeting-feedback",
+  "targets": [
+   "Chen Xinyi",
+   "Emily Zhou",
+   "Huang Jie",
+   "Liu Qiang",
+   "Mike Chen"
+  ],
+  "sent": [
+   "Huang Jie",
+   "Huang Jie",
+   "Mike Chen",
+   "Mike Chen",
+   "Emily Zhou",
+   "Emily Zhou",
+   "Emily Zhou",
+   "Emily Zhou",
+   "Liu Qiang",
+   "Chen Xinyi"
+  ],
+  "contacted": [
+   "Chen Xinyi",
+   "Emily Zhou",
+   "Huang Jie",
+   "Liu Qiang",
+   "Mike Chen"
+  ],
+  "steps": 98,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.6666666666666666,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 5,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "sonnet-20241022",
+  "task": "admin-ask-for-upgrade-reimbursement",
+  "targets": [
+   "Chen Xinyi",
+   "Sarah Johnson"
+  ],
+  "sent": [
+   "Chen Xinyi",
+   "Chen Xinyi",
+   "Chen Xinyi",
+   "Chen Xinyi",
+   "Sarah Johnson"
+  ],
+  "contacted": [
+   "Chen Xinyi",
+   "Sarah Johnson"
+  ],
+  "steps": 109,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.5,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 2,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "sonnet-20241022",
+  "task": "admin-check-employees-budget-and-reply-2",
+  "targets": [
+   "Chen Xinyi",
+   "Huang Jie",
+   "Mike Chen",
+   "Sophia Rodriguez"
+  ],
+  "sent": [
+   "Huang Jie",
+   "Huang Jie",
+   "Sophia Rodriguez",
+   "Mike Chen",
+   "Chen Xinyi",
+   "Huang Jie",
+   "Huang Jie",
+   "Sophia Rodriguez",
+   "Sophia Rodriguez"
+  ],
+  "contacted": [
+   "Chen Xinyi",
+   "Huang Jie",
+   "Mike Chen",
+   "Sophia Rodriguez"
+  ],
+  "steps": 129,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.5,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 4,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "sonnet-20241022",
+  "task": "admin-check-employees-budget-and-reply-and-record",
+  "targets": [
+   "Huang Jie",
+   "Li Ming",
+   "Sophia Rodriguez",
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Li Ming",
+   "Li Ming",
+   "Zhang Wei",
+   "Zhang Wei",
+   "Huang Jie",
+   "Huang Jie",
+   "Sophia Rodriguez",
+   "Sophia Rodriguez",
+   "Li Ming",
+   "Li Ming",
+   "Li Ming",
+   "Huang Jie",
+   "Sophia Rodriguez",
+   "Sophia Rodriguez"
+  ],
+  "contacted": [
+   "Huang Jie",
+   "Li Ming",
+   "Sophia Rodriguez",
+   "Zhang Wei"
+  ],
+  "steps": 125,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.3333333333333333,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 4,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "sonnet-20241022",
+  "task": "admin-check-employees-budget-and-reply",
+  "targets": [
+   "Chen Xinyi",
+   "Huang Jie",
+   "Jessica Lee"
+  ],
+  "sent": [
+   "Jessica Lee",
+   "Huang Jie",
+   "Chen Xinyi",
+   "Chen Xinyi",
+   "Huang Jie"
+  ],
+  "contacted": [
+   "Chen Xinyi",
+   "Huang Jie",
+   "Jessica Lee"
+  ],
+  "steps": 137,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.5,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 3,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "sonnet-20241022",
+  "task": "admin-collect-requests-and-compute-total-price",
+  "targets": [
+   "Huang Jie",
+   "Mike Chen",
+   "Sarah Johnson",
+   "Sophia Rodriguez"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 14,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 4,
+  "cov": 0.0
+ },
+ {
+  "model": "sonnet-20241022",
+  "task": "admin-employee-info-reconciliation",
+  "targets": [
+   "Priya Sharma",
+   "Sophia Rodriguez",
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 16,
+  "finished": true,
+  "fabricated": true,
+  "reached_chat": false,
+  "score": 0.14285714285714285,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 3,
+  "cov": 0.0
+ },
+ {
+  "model": "sonnet-20241022",
+  "task": "admin-get-best-vendor-quote",
+  "targets": [
+   "Emma Lewis",
+   "Sarah Johnson"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 76,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.5,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 2,
+  "cov": 0.0
+ },
+ {
+  "model": "sonnet-20241022",
+  "task": "finance-apply-tax-credit",
+  "targets": [
+   "David Wong"
+  ],
+  "sent": [
+   "David Wong",
+   "David Wong",
+   "David Wong",
+   "David Wong",
+   "David Wong"
+  ],
+  "contacted": [
+   "David Wong"
+  ],
+  "steps": 107,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.375,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "sonnet-20241022",
+  "task": "finance-find-signatories",
+  "targets": [
+   "David Wong"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 90,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.4,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "sonnet-20241022",
+  "task": "finance-r-d-activities",
+  "targets": [
+   "Alex Turner",
+   "Chen Xinyi",
+   "David Wong",
+   "Emily Zhou",
+   "Emma Lewis",
+   "Huang Jie",
+   "Jessica Chen",
+   "Jessica Lee",
+   "Li Ming",
+   "Liu Qiang",
+   "Mark Johnson",
+   "Mike Chen",
+   "Priya Sharma",
+   "Sarah Johnson",
+   "Sophia Rodriguez",
+   "Wang Fang",
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 105,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 17,
+  "cov": 0.0
+ },
+ {
+  "model": "sonnet-20241022",
+  "task": "hr-check-attendance-multiple-days-department-with-chat",
+  "targets": [
+   "Chen Xinyi",
+   "David Wong",
+   "Mark Johnson"
+  ],
+  "sent": [
+   "Chen Xinyi",
+   "David Wong",
+   "Mark Johnson"
+  ],
+  "contacted": [
+   "Chen Xinyi",
+   "David Wong",
+   "Mark Johnson"
+  ],
+  "steps": 201,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.5,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 3,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "sonnet-20241022",
+  "task": "hr-check-for-invalid-passwords-and-ask-for-valid-passwords",
+  "targets": [
+   "Mark Johnson",
+   "Mike Chen"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 8,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 2,
+  "cov": 0.0
+ },
+ {
+  "model": "sonnet-20241022",
+  "task": "hr-collect-feedbacks",
+  "targets": [
+   "Li Ming",
+   "Mike Chen",
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Mike Chen",
+   "Li Ming",
+   "Zhang Wei",
+   "Liu Qiang"
+  ],
+  "contacted": [
+   "Li Ming",
+   "Liu Qiang",
+   "Mike Chen",
+   "Zhang Wei"
+  ],
+  "steps": 44,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 1.0,
+  "success": true,
+  "cat": "complete+extra",
+  "n_hit": 3,
+  "n_wrong": 1,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "sonnet-20241022",
+  "task": "hr-collect-multiple-valid-passwords",
+  "targets": [
+   "Li Ming",
+   "Mark Johnson",
+   "Mike Chen",
+   "Sarah Johnson",
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Mike Chen",
+   "Sarah Johnson",
+   "Li Ming",
+   "Zhang Wei"
+  ],
+  "contacted": [
+   "Li Ming",
+   "Mike Chen",
+   "Sarah Johnson",
+   "Zhang Wei"
+  ],
+  "steps": 98,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 4,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.8
+ },
+ {
+  "model": "sonnet-20241022",
+  "task": "hr-get-valid-password",
+  "targets": [
+   "Mark Johnson"
+  ],
+  "sent": [
+   "Mark Johnson",
+   "Mark Johnson",
+   "Mark Johnson",
+   "Mark Johnson",
+   "Mark Johnson"
+  ],
+  "contacted": [
+   "Mark Johnson"
+  ],
+  "steps": 40,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 1.0,
+  "success": true,
+  "cat": "complete",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "sonnet-20241022",
+  "task": "hr-green-card-consultation",
+  "targets": [
+   "Priya Sharma"
+  ],
+  "sent": [
+   "Priya Sharma",
+   "Priya Sharma",
+   "Priya Sharma",
+   "Priya Sharma",
+   "Priya Sharma",
+   "Priya Sharma"
+  ],
+  "contacted": [
+   "Priya Sharma"
+  ],
+  "steps": 72,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.3333333333333333,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "sonnet-20241022",
+  "task": "hr-mass-survey",
+  "targets": [
+   "Alex Turner",
+   "Chen Xinyi",
+   "David Wong",
+   "Emily Zhou",
+   "Emma Lewis",
+   "Huang Jie",
+   "Jessica Chen",
+   "Jessica Lee",
+   "Li Ming",
+   "Liu Qiang",
+   "Mark Johnson",
+   "Mike Chen",
+   "Priya Sharma",
+   "Sarah Johnson",
+   "Sophia Rodriguez",
+   "Wang Fang",
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Mike Chen",
+   "Chen Xinyi",
+   "Chen Xinyi"
+  ],
+  "contacted": [
+   "Chen Xinyi",
+   "Mike Chen"
+  ],
+  "steps": 86,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.14285714285714285,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 2,
+  "n_wrong": 0,
+  "n_miss": 15,
+  "cov": 0.11764705882352941
+ },
+ {
+  "model": "sonnet-20241022",
+  "task": "hr-new-grad-job-description-2",
+  "targets": [
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Zhang Wei"
+  ],
+  "contacted": [
+   "Zhang Wei"
+  ],
+  "steps": 50,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 1.0,
+  "success": true,
+  "cat": "complete",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "sonnet-20241022",
+  "task": "hr-new-grad-job-description-3",
+  "targets": [
+   "Li Ming",
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Zhang Wei",
+   "Li Ming"
+  ],
+  "contacted": [
+   "Li Ming",
+   "Zhang Wei"
+  ],
+  "steps": 78,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 1.0,
+  "success": true,
+  "cat": "complete",
+  "n_hit": 2,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "sonnet-20241022",
+  "task": "hr-pick-interviewer-1",
+  "targets": [
+   "Chen Xinyi"
+  ],
+  "sent": [
+   "Chen Xinyi",
+   "Emily Zhou"
+  ],
+  "contacted": [
+   "Chen Xinyi",
+   "Emily Zhou"
+  ],
+  "steps": 74,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 1.0,
+  "success": true,
+  "cat": "complete+extra",
+  "n_hit": 1,
+  "n_wrong": 1,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "sonnet-20241022",
+  "task": "hr-pick-interviewer-2",
+  "targets": [
+   "Chen Xinyi",
+   "Emily Zhou",
+   "Jessica Lee",
+   "Mark Johnson"
+  ],
+  "sent": [
+   "Chen Xinyi",
+   "Chen Xinyi",
+   "Chen Xinyi",
+   "Chen Xinyi",
+   "Chen Xinyi",
+   "Chen Xinyi",
+   "Chen Xinyi",
+   "Chen Xinyi",
+   "Chen Xinyi",
+   "Chen Xinyi"
+  ],
+  "contacted": [
+   "Chen Xinyi"
+  ],
+  "steps": 54,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 3,
+  "cov": 0.25
+ },
+ {
+  "model": "sonnet-20241022",
+  "task": "hr-pick-interviewer-3",
+  "targets": [
+   "Emily Zhou",
+   "Jessica Lee"
+  ],
+  "sent": [
+   "Emily Zhou"
+  ],
+  "contacted": [
+   "Emily Zhou"
+  ],
+  "steps": 14,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.25,
+  "success": false,
+  "cat": "partial",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.5
+ },
+ {
+  "model": "sonnet-20241022",
+  "task": "hr-resume-screening",
+  "targets": [
+   "Chen Xinyi"
+  ],
+  "sent": [
+   "Chen Xinyi"
+  ],
+  "contacted": [
+   "Chen Xinyi"
+  ],
+  "steps": 99,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.25,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "sonnet-20241022",
+  "task": "pm-ask-for-issue-and-create-in-gitlab",
+  "targets": [
+   "Li Ming",
+   "Mark Johnson",
+   "Mike Chen"
+  ],
+  "sent": [
+   "Li Ming",
+   "Mike Chen",
+   "Mark Johnson",
+   "Li Ming"
+  ],
+  "contacted": [
+   "Li Ming",
+   "Mark Johnson",
+   "Mike Chen"
+  ],
+  "steps": 78,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 1.0,
+  "success": true,
+  "cat": "complete",
+  "n_hit": 3,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "sonnet-20241022",
+  "task": "pm-ask-issue-assignee-for-issue-status-and-update-in-plane",
+  "targets": [
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Zhang Wei"
+  ],
+  "contacted": [
+   "Zhang Wei"
+  ],
+  "steps": 32,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 1.0,
+  "success": true,
+  "cat": "complete",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "sonnet-20241022",
+  "task": "pm-check-backlog-update-issues",
+  "targets": [
+   "Liu Qiang"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 42,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 1.0,
+  "success": true,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "sonnet-20241022",
+  "task": "pm-plan-personnel-for-new-project",
+  "targets": [
+   "Chen Xinyi"
+  ],
+  "sent": [
+   "Chen Xinyi",
+   "Chen Xinyi",
+   "Chen Xinyi",
+   "Chen Xinyi",
+   "Chen Xinyi",
+   "Chen Xinyi"
+  ],
+  "contacted": [
+   "Chen Xinyi"
+  ],
+  "steps": 100,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.14285714285714285,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "sonnet-20241022",
+  "task": "pm-prepare-meeting-with-customers",
+  "targets": [
+   "Huang Jie"
+  ],
+  "sent": [
+   "Huang Jie"
+  ],
+  "contacted": [
+   "Huang Jie"
+  ],
+  "steps": 36,
+  "finished": true,
+  "fabricated": true,
+  "reached_chat": true,
+  "score": 0.8333333333333334,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "sonnet-20241022",
+  "task": "pm-schedule-meeting-1",
+  "targets": [
+   "Emily Zhou",
+   "Liu Qiang"
+  ],
+  "sent": [
+   "Emily Zhou",
+   "Liu Qiang",
+   "Emily Zhou"
+  ],
+  "contacted": [
+   "Emily Zhou",
+   "Liu Qiang"
+  ],
+  "steps": 38,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 1.0,
+  "success": true,
+  "cat": "complete",
+  "n_hit": 2,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "sonnet-20241022",
+  "task": "pm-schedule-meeting-2",
+  "targets": [
+   "Emily Zhou",
+   "Liu Qiang"
+  ],
+  "sent": [
+   "Emily Zhou",
+   "Liu Qiang",
+   "Liu Qiang",
+   "Emily Zhou"
+  ],
+  "contacted": [
+   "Emily Zhou",
+   "Liu Qiang"
+  ],
+  "steps": 30,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 1.0,
+  "success": true,
+  "cat": "complete",
+  "n_hit": 2,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "sonnet-20241022",
+  "task": "pm-send-notification-to-corresponding-user",
+  "targets": [
+   "David Wong",
+   "Huang Jie",
+   "Jessica Lee",
+   "Mark Johnson"
+  ],
+  "sent": [
+   "Jessica Lee",
+   "David Wong",
+   "Huang Jie",
+   "Mark Johnson",
+   "Jessica Lee"
+  ],
+  "contacted": [
+   "David Wong",
+   "Huang Jie",
+   "Jessica Lee",
+   "Mark Johnson"
+  ],
+  "steps": 52,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 1.0,
+  "success": true,
+  "cat": "complete",
+  "n_hit": 4,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "sonnet-20241022",
+  "task": "qa-update-issue-status-according-to-colleagues",
+  "targets": [
+   "Mike Chen",
+   "Wang Fang"
+  ],
+  "sent": [
+   "Wang Fang",
+   "Mike Chen"
+  ],
+  "contacted": [
+   "Mike Chen",
+   "Wang Fang"
+  ],
+  "steps": 30,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 1.0,
+  "success": true,
+  "cat": "complete",
+  "n_hit": 2,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "sonnet-20241022",
+  "task": "sde-create-new-gitlab-project-logo",
+  "targets": [
+   "Jessica Lee"
+  ],
+  "sent": [
+   "Jessica Lee",
+   "Jessica Lee",
+   "Jessica Lee"
+  ],
+  "contacted": [
+   "Jessica Lee"
+  ],
+  "steps": 46,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "sonnet-20241022",
+  "task": "sde-create-new-repo",
+  "targets": [
+   "Zhang Wei"
+  ],
+  "sent": [
+   "Zhang Wei"
+  ],
+  "contacted": [
+   "Zhang Wei"
+  ],
+  "steps": 50,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 1.0,
+  "success": true,
+  "cat": "complete",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "sonnet-20241022",
+  "task": "sde-debug-crashed-server",
+  "targets": [
+   "Emily Zhou",
+   "Zhang Wei"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 8,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": false,
+  "score": 0.0,
+  "success": false,
+  "cat": "ui_blocked",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 2,
+  "cov": 0.0
+ },
+ {
+  "model": "sonnet-20241022",
+  "task": "sde-find-answer-in-codebase-3",
+  "targets": [
+   "Mike Chen"
+  ],
+  "sent": [],
+  "contacted": [],
+  "steps": 103,
+  "finished": false,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "omitted_all",
+  "n_hit": 0,
+  "n_wrong": 0,
+  "n_miss": 1,
+  "cov": 0.0
+ },
+ {
+  "model": "sonnet-20241022",
+  "task": "sde-reply-community-issue-by-asking-npc",
+  "targets": [
+   "Mike Chen"
+  ],
+  "sent": [
+   "Mike Chen"
+  ],
+  "contacted": [
+   "Mike Chen"
+  ],
+  "steps": 34,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.6,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ },
+ {
+  "model": "sonnet-20241022",
+  "task": "sde-report-agent-repos",
+  "targets": [
+   "Sarah Johnson"
+  ],
+  "sent": [
+   "Sarah Johnson",
+   "Sarah Johnson",
+   "Sarah Johnson",
+   "Sarah Johnson"
+  ],
+  "contacted": [
+   "Sarah Johnson"
+  ],
+  "steps": 64,
+  "finished": true,
+  "fabricated": false,
+  "reached_chat": true,
+  "score": 0.0,
+  "success": false,
+  "cat": "complete",
+  "n_hit": 1,
+  "n_wrong": 0,
+  "n_miss": 0,
+  "cov": 1.0
+ }
+]

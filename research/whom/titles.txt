@@ -1,0 +1,15 @@
+Whom to Query for What: Adaptive Group Elicitation via Multi-Turn LLM Interactions
+AgentAsk: Multi-Agent Systems Need to Ask
+Multi-User Large Language Model Agents
+Harness-MU: A Safe, Governed, and Effective Harness for Multi-User LLM Agents
+Collaborative Memory: Multi-User Memory Sharing in LLM Agents with Dynamic Access Control
+Whose Side Is Your Agent On? Multi-Party Principal Loyalty in LLM Agents
+Agentic AI and Human-in-the-Loop Interventions: Field Experimental Evidence from Alibaba's Customer Service Operations
+Cost-sensitive learning to defer to multiple experts with workload constraints
+Two-stage learning to defer with multiple experts
+Why Ask One When You Can Ask k? Learning-to-Defer to the Top-k Experts
+When More Experts Hurt: Underfitting in Multi-Expert Learning to Defer
+Can LLMs help you at work? A sandbox for evaluating LLM agents in enterprise environments
+LLM-Powered Multi-Agent Collaboration for Intelligent Industrial On-Call Automation
+GroupMemBench: Benchmarking LLM Agent Memory in Multi-Party Conversations
+Helping Customers in Distress: An LLM-powered Agent that Converses, Probes, and Routes

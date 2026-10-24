@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.12.1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Agent Failure Survey</title>
+  <style>
+
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+</style>
+  <style type="text/css">:root{--bg:#fafaf8;--fg:#1d1d1f;--mut:#666;--line:#e3e3e0;--acc:#2f5fb3;--th:#f0f0ec}
+@media (prefers-color-scheme:dark){:root{--bg:#18181a;--fg:#e8e8e6;--mut:#a0a0a0;--line:#333;--acc:#7aa7ff;--th:#24242a}}
+body{background:var(--bg);color:var(--fg);font:15px/1.65 -apple-system,"Segoe UI","Microsoft YaHei",sans-serif;max-width:1200px;margin:0 auto;padding:24px 16px}
+h1{font-size:1.6em}h2{margin-top:2em;border-bottom:2px solid var(--line);padding-bottom:4px}
+a{color:var(--acc)}table{border-collapse:collapse;width:100%;font-size:13.5px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:6px 8px;vertical-align:top}th{background:var(--th);position:sticky;top:0}
+tr:nth-child(even) td{background:color-mix(in srgb,var(--th) 40%,transparent)}
+blockquote{border-left:4px solid var(--acc);margin:0;padding:4px 12px;color:var(--mut)}
+nav#TOC{background:var(--th);padding:8px 16px;border-radius:8px;font-size:14px}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Agent Failure Survey</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#企业式工作流中-ai-agent-的失败诊断与缓解文献调研v0.2" id="toc-企业式工作流中-ai-agent-的失败诊断与缓解文献调研v0.2">企业式工作流中
+AI Agent 的失败、诊断与缓解：文献调研（v0.2）</a>
+<ul>
+<li><a href="#检索记录" id="toc-检索记录">0. 检索记录</a></li>
+<li><a href="#定义与边界" id="toc-定义与边界">1. 定义与边界</a></li>
+<li><a href="#代表性公开环境" id="toc-代表性公开环境">2.
+代表性公开环境</a></li>
+<li><a href="#研究分类图谱" id="toc-研究分类图谱">3.
+研究分类图谱</a></li>
+<li><a href="#b.-领域详解各方向在研究什么具体贡献是什么" id="toc-b.-领域详解各方向在研究什么具体贡献是什么">3b.
+领域详解：各方向在研究什么、具体贡献是什么</a>
+<ul>
+<li><a href="#领域-1企业工作流基准agent-到底能做多少真实工作" id="toc-领域-1企业工作流基准agent-到底能做多少真实工作">领域
+1：企业工作流基准——“agent 到底能做多少真实工作？”</a></li>
+<li><a href="#领域-2失败分类与失败归因它为什么失败是谁在哪一步出的错" id="toc-领域-2失败分类与失败归因它为什么失败是谁在哪一步出的错">领域
+2：失败分类与失败归因——“它为什么失败？是谁、在哪一步出的错？”</a></li>
+<li><a href="#领域-3工具调用失败参数填错读错返回值调错工具" id="toc-领域-3工具调用失败参数填错读错返回值调错工具">领域
+3：工具调用失败——“参数填错、读错返回值、调错工具”</a></li>
+<li><a href="#领域-4歧义澄清与能力边界意识" id="toc-领域-4歧义澄清与能力边界意识">领域
+4：歧义、澄清与”能力边界意识”</a></li>
+<li><a href="#领域-5安全提示注入权限记忆投毒" id="toc-领域-5安全提示注入权限记忆投毒">领域
+5：安全——提示注入、权限、记忆投毒</a></li>
+<li><a href="#领域-6可靠性假成功与成本" id="toc-领域-6可靠性假成功与成本">领域
+6：可靠性、“假成功”与成本</a></li>
+<li><a href="#各领域之间怎么连起来读者导航" id="toc-各领域之间怎么连起来读者导航">各领域之间怎么连起来（读者导航）</a></li>
+</ul></li>
+<li><a href="#入门必读-已核对其余" id="toc-入门必读-已核对其余">4.
+入门必读（✅ 已核对，其余 ⚠️）</a></li>
+<li><a href="#b.-候选清单按主题发现来源google-scholar2026-10-23" id="toc-b.-候选清单按主题发现来源google-scholar2026-10-23">4b.
+候选清单（按主题；发现来源：Google Scholar，2026-10-23）</a></li>
+<li><a href="#失败模式缓解矩阵仅列有证据支持的控制点" id="toc-失败模式缓解矩阵仅列有证据支持的控制点">5.
+失败模式—缓解矩阵（仅列有证据支持的控制点）</a></li>
+<li><a href="#发表渠道不列影响因子" id="toc-发表渠道不列影响因子">6.
+发表渠道（不列影响因子）</a></li>
+<li><a href="#选题建议" id="toc-选题建议">7. 选题建议</a></li>
+<li><a href="#阅读路线" id="toc-阅读路线">8. 阅读路线</a></li>
+<li><a href="#下一步未完成项" id="toc-下一步未完成项">9.
+下一步（未完成项）</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="企业式工作流中-ai-agent-的失败诊断与缓解文献调研v0.2">企业式工作流中
+AI Agent 的失败、诊断与缓解：文献调研（v0.2）</h1>
+<ul>
+<li>检索日：2026-10-23；时间窗：<strong>2023-10-23 至
+2026-10-23</strong></li>
+<li>状态说明：✅=已核对官方页面，或 Google Scholar 结果直接链接到官方
+proceedings/Anthology 页面；🔶=只有 GS
+元数据，官方页尚未打开核对；⚠️=依据背景知识，<strong>未核实</strong>。</li>
+<li>方法声明：这是<strong>叙述性调研</strong>，不是系统综述。没有执行可复现的
+PRISMA 式筛选。Google Scholar 有 CAPTCHA，自动抓取被拦截（见
+memory.md），因此本轮通过 Web 搜索加官方页面核对完成。</li>
+</ul>
+<h2 id="检索记录">0. 检索记录</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>项</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>数据源</td>
+<td>Web 搜索 → arXiv、PMLR、NeurIPS Proceedings、ACL Anthology、ICML
+官网</td>
+</tr>
+<tr>
+<td>检索式（示例）</td>
+<td><code>enterprise workflow agent benchmark failure analysis</code>；<code>&quot;Why Do Multi-Agent LLM Systems Fail&quot;</code>；<code>Who&amp;When failure attribution</code>；<code>AgentDojo / CaMeL / tau2-bench / AppWorld</code></td>
+</tr>
+<tr>
+<td>纳入标准</td>
+<td>①多步、有状态、调用工具的
+agent；②企业式任务或其直接前置能力；③涉及失败分析、诊断或缓解</td>
+</tr>
+<tr>
+<td>排除标准</td>
+<td>单轮问答、纯游戏环境（除非作为对照）</td>
+</tr>
+<tr>
+<td>数量</td>
+<td>v0.2：Google Scholar 25 个检索式（限 2023 年及以后），每个取前 10
+条，去重后 237 条 → 按标题和摘要人工初筛，保留约 60 篇（见
+§4b）。原始结果在 research/gs/q*.json</td>
+</tr>
+</tbody>
+</table>
+<h2 id="定义与边界">1. 定义与边界</h2>
+<ul>
+<li><strong>LLM agent</strong>：以 LLM
+作为策略，在“观察→推理→动作（工具/API/GUI）”的循环中运行的系统，带有跨步状态。</li>
+<li><strong>工具增强型 LLM（tool-augmented
+LLM）</strong>：单次或少次调用工具，没有自主循环和长期状态。</li>
+<li><strong>Agentic workflow</strong>：由开发者预先编排的固定流程，LLM
+只在节点上做决策。</li>
+<li><strong>传统 MAS / 自主 agent</strong>：BDI、强化学习等非 LLM
+体系，只作为对照。</li>
+<li><strong>企业式工作流</strong>：多步骤、有状态、跨工具或跨角色的业务任务。</li>
+<li><strong>可复现分级</strong>：
+<ul>
+<li>R3：任务、环境、评测脚本全部公开，可本地或 Docker 重跑</li>
+<li>R2：数据和代码公开，但依赖闭源 API 或商业实例（如
+ServiceNow、Salesforce）</li>
+<li>R1：只公开数据或 trace</li>
+<li>R0：不公开</li>
+<li>无法确认时标“未核实”。</li>
+</ul></li>
+</ul>
+<h2 id="代表性公开环境">2. 代表性公开环境</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>环境</th>
+<th>领域</th>
+<th>状态</th>
+<th>可复现</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://proceedings.neurips.cc/paper_files/paper/2025/hash/0d744742f6fac4d1134c019b7cef3c8a-Abstract-Datasets_and_Benchmarks_Track.html">TheAgentCompany</a></td>
+<td>模拟软件公司，覆盖 SWE、HR、财务、PM，含模拟同事</td>
+<td>NeurIPS 2025 D&amp;B ✅</td>
+<td>R3（自托管 GitLab/ownCloud 等，依据论文）</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2406.12045">τ-bench</a> / <a href="https://proceedings.mlr.press/v306/barres26a.html">τ²-bench</a></td>
+<td>零售、航空、电信客服，带策略文档与用户模拟</td>
+<td>τ：<a href="https://proceedings.iclr.cc/paper_files/paper/2025/hash/1b126cc38b8638e07bef37e7b2bb72bf-Abstract-Conference.html">ICLR
+2025</a> ✅；τ²：ICML 2026 ✅</td>
+<td>R3（GitHub sierra-research，⚠️）</td>
+</tr>
+<tr>
+<td><a href="https://aclanthology.org/2024.acl-long.850/">AppWorld</a></td>
+<td>9 个 app、457 个 API、750 个任务</td>
+<td>ACL 2024 Best Resource ✅</td>
+<td>R3</td>
+</tr>
+<tr>
+<td><a href="https://proceedings.neurips.cc/paper_files/paper/2024/file/97091a5177d8dc64b1da8bf3e1f6fb54-Paper-Datasets_and_Benchmarks_Track.pdf">AgentDojo</a></td>
+<td>邮件、银行、旅行，含注入测试</td>
+<td>NeurIPS 2024 D&amp;B ✅</td>
+<td>R3（<a href="https://github.com/ethz-spylab/agentdojo">code</a>）</td>
+</tr>
+<tr>
+<td>WorkArena / <a href="https://proceedings.neurips.cc/paper_files/paper/2024/hash/0b82662b6c32e887bb252a74d8cb2d5e-Abstract-Datasets_and_Benchmarks_Track.html">WorkArena++</a></td>
+<td>ServiceNow 知识工作</td>
+<td>WorkArena：ICML 2024 🔶（GS 只指向 arXiv）；WorkArena++：NeurIPS
+2024 D&amp;B ✅</td>
+<td>R2（需 ServiceNow 开发者实例）</td>
+</tr>
+<tr>
+<td><a href="https://aclanthology.org/2025.naacl-long.194/">CRMArena</a>
+/ CRMArena-Pro</td>
+<td>Salesforce CRM</td>
+<td>NAACL 2025 ✅ / 预印本</td>
+<td>R2</td>
+</tr>
+<tr>
+<td><a href="https://proceedings.neurips.cc/paper_files/paper/2024/hash/5d413e48f84dc61244b6be550f1cd8f5-Abstract-Datasets_and_Benchmarks_Track.html">OSWorld</a>、WebArena、SWE-bench</td>
+<td>桌面、网页、软件工程</td>
+<td>OSWorld：NeurIPS 2024 D&amp;B ✅；另两项 ICLR 2024 🔶</td>
+<td>R3</td>
+</tr>
+</tbody>
+</table>
+<h2 id="研究分类图谱">3. 研究分类图谱</h2>
+<p>重叠关系： - “诊断/归因”（D 类）横跨所有类别。 - 安全（S
+类）与记忆（M 类）在“记忆投毒”上交叉。 - 多 agent 失败（MA
+类）多数可以还原为规格（规划类）和验证（V 类）问题，MAST
+的结论即如此。</p>
+<table style="width:99%;">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr>
+<th>大类/小类</th>
+<th>典型失败</th>
+<th>诊断</th>
+<th>缓解</th>
+<th>环境</th>
+<th>代表论文</th>
+<th>企业相关性</th>
+<th>可复现</th>
+<th>空白</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>U 任务理解/澄清</td>
+<td>歧义下擅自假设、违背策略</td>
+<td>用户模拟、对照有无澄清</td>
+<td>主动澄清、约束确认</td>
+<td>τ/τ²-bench</td>
+<td>τ²-bench ✅</td>
+<td>高（客服）</td>
+<td>R3</td>
+<td>澄清成本与收益的量化</td>
+</tr>
+<tr>
+<td>P 规划/长时程</td>
+<td>步骤遗漏、提前宣告完成、重复步骤</td>
+<td>trace 标注（MAST）</td>
+<td>计划验证、分阶段验收</td>
+<td>TheAgentCompany、AppWorld</td>
+<td><a href="https://proceedings.neurips.cc/paper_files/paper/2025/file/b1041e52d3be19f0a9bc491657488e4a-Paper-Datasets_and_Benchmarks_Track.pdf">MAST</a>
+✅</td>
+<td>高</td>
+<td>R3</td>
+<td>长任务中的状态检查点</td>
+</tr>
+<tr>
+<td>T 工具/API</td>
+<td>参数错误、误读工具返回</td>
+<td>状态差分评测（AppWorld）</td>
+<td>schema 校验、dry-run</td>
+<td>AppWorld、BFCL ⚠️</td>
+<td>AppWorld ✅</td>
+<td>高</td>
+<td>R3</td>
+<td>跨系统事务一致性</td>
+</tr>
+<tr>
+<td>GUI 操作</td>
+<td>卡在弹窗、点错元素</td>
+<td>截图与 trace 回放</td>
+<td>grounding 模型</td>
+<td>OSWorld、WorkArena</td>
+<td>TheAgentCompany §7.3 ✅</td>
+<td>中-高</td>
+<td>R2-R3</td>
+<td>企业 UI 分布外泛化</td>
+</tr>
+<tr>
+<td>M 记忆/检索</td>
+<td>记忆污染、过时知识</td>
+<td>触发器检索分析</td>
+<td>provenance、可撤销写入</td>
+<td>AgentPoison ⚠️</td>
+<td>AgentPoison ⚠️</td>
+<td>高</td>
+<td>R3 ⚠️</td>
+<td>记忆治理基准缺失</td>
+</tr>
+<tr>
+<td>S 安全</td>
+<td>间接提示注入、数据外泄、越权</td>
+<td>注入用例攻击成功率</td>
+<td>检测器、CaMeL 式控制流/数据流隔离</td>
+<td>AgentDojo、InjecAgent ⚠️</td>
+<td>AgentDojo ✅、<a href="https://arxiv.org/abs/2503.18813">CaMeL</a>
+✅</td>
+<td>极高</td>
+<td>R3</td>
+<td>效用损失（CaMeL 77% vs 无防御 84%）</td>
+</tr>
+<tr>
+<td>MA 多 agent</td>
+<td>角色违背、通信失配、缺少验证</td>
+<td>LLM-as-judge 标注、失败归因</td>
+<td>改进角色规格（ChatDev +9.4%）</td>
+<td>MAST-Data、<a href="https://proceedings.mlr.press/v267/zhang25cq.html">Who&amp;When</a></td>
+<td>MAST ✅、Who&amp;When ✅</td>
+<td>中（企业数据少）</td>
+<td>R1-R3</td>
+<td>步骤级归因准确率仅 14.2%</td>
+</tr>
+<tr>
+<td>H 人机协作</td>
+<td>不跟进同事回复、不升级</td>
+<td>模拟同事交互</td>
+<td>升级策略、人工审批</td>
+<td>TheAgentCompany</td>
+<td>✅</td>
+<td>高</td>
+<td>R3</td>
+<td>审批点放置的最优化</td>
+</tr>
+<tr>
+<td>R 可靠性/成本</td>
+<td>多次运行一致性差</td>
+<td>pass^k</td>
+<td>投票、重试</td>
+<td>τ-bench、<a href="https://arxiv.org/abs/2511.14136">CLEAR</a></td>
+<td>CLEAR（预印本）✅</td>
+<td>极高</td>
+<td>—</td>
+<td>成本与可靠性的帕累托前沿</td>
+</tr>
+<tr>
+<td>V 验证/审计</td>
+<td>“成功”但结果错误、自欺式捷径</td>
+<td>结果状态检查、对账</td>
+<td>独立验证器、测试</td>
+<td>SWE-bench、TheAgentCompany</td>
+<td>✅</td>
+<td>高</td>
+<td>R3</td>
+<td>无标准答案任务的验证</td>
+</tr>
+</tbody>
+</table>
+<h2 id="b.-领域详解各方向在研究什么具体贡献是什么">3b.
+领域详解：各方向在研究什么、具体贡献是什么</h2>
+<blockquote>
+<p>本节内容依据各论文的 <strong>arXiv 摘要</strong>（2026-10-23 通过
+arXiv API 获取，原文存于
+<code>research/abs/abs.json</code>）。数字都直接取自摘要。“我的解读”段落是推断，不是论文的结论。</p>
+</blockquote>
+<h3 id="领域-1企业工作流基准agent-到底能做多少真实工作">领域
+1：企业工作流基准——“agent 到底能做多少真实工作？”</h3>
+<p><strong>核心问题</strong>：从”会不会调用
+API”转向”能否在有状态、多应用、有规则约束的业务环境里把事情做完”。
+<strong>主要研究路线</strong>：①仿真公司或业务系统；②真实 SaaS
+平台；③办公软件或桌面；④软件工程。</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>论文</th>
+<th>环境与规模</th>
+<th>主要发现 / 贡献</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TheAgentCompany</strong>（Xu et al.，NeurIPS’25
+D&amp;B）</td>
+<td>自托管的”小软件公司”：内部网站、数据、模拟同事；agent
+可以浏览网页、写代码、和同事沟通</td>
+<td>最强 agent 自主完成 <strong>30%</strong>
+的任务；简单任务可以自动化，长时程任务仍做不到。代码、数据、环境全部公开</td>
+</tr>
+<tr>
+<td><strong>τ-bench</strong>（Yao et al.，ICLR’25）</td>
+<td>零售、航空客服；LLM 模拟用户 + 领域 API +
+<strong>策略文档</strong></td>
+<td>用”对话结束时的数据库状态 vs 目标状态”做评测；提出
+<strong>pass^k</strong>（k 次都成功）。GPT-4o 成功率 &lt;50%，零售域
+pass^8 &lt;25%，说明 agent 很<strong>不稳定</strong></td>
+</tr>
+<tr>
+<td><strong>τ²-bench</strong>（Barres et al.，ICML’26）</td>
+<td>新增电信 <strong>dual-control</strong>
+域（用户也要操作设备），建模为 Dec-POMDP</td>
+<td>从”没有用户”切换到”双方都要操作”时性能大幅下降；能分开统计<strong>推理错误</strong>和<strong>沟通/协调错误</strong>；带组合式任务生成器</td>
+</tr>
+<tr>
+<td><strong>AppWorld</strong>（Trivedi et al.，ACL’24 最佳资源）</td>
+<td>9 个日常 app、457 个 API、约 100 个虚拟用户；750 个任务</td>
+<td>用<strong>基于状态的单元测试</strong>评测，允许多种解法，同时检查
+<strong>collateral damage</strong>（附带破坏）。GPT-4o 普通任务约
+49%，挑战任务约 30%</td>
+</tr>
+<tr>
+<td><strong>WorkArena / WorkArena++</strong>（ServiceNow）</td>
+<td>真实 ServiceNow 平台；第一代 33 个任务 → 第二代 682 个工作流</td>
+<td>第一代同时推出
+BrowserGym，开源和闭源模型差距明显；第二代考察规划、算术推理、检索，并能自动生成大量
+ground-truth 轨迹用于微调</td>
+</tr>
+<tr>
+<td><strong>CRMArena / Pro</strong>（Salesforce）</td>
+<td>16 类 CRM 对象，含潜变量（如投诉习惯、违规）；Pro 版有 19
+个任务，覆盖 B2B/B2C</td>
+<td>第一代：ReAct &lt;40%，函数调用 &lt;55%。Pro：单轮约
+58%，<strong>多轮降到约 35%</strong>；agent
+<strong>几乎没有保密意识</strong>，靠提示改善保密又会<strong>损害任务表现</strong></td>
+</tr>
+<tr>
+<td><strong>OSWorld</strong>（NeurIPS’24 D&amp;B）</td>
+<td>真实操作系统（Ubuntu/Windows/macOS），369 个跨应用任务</td>
+<td>人类 72.36%，最佳模型 <strong>12.24%</strong>；主要卡在 <strong>GUI
+grounding</strong>（定位界面元素）和<strong>操作知识</strong></td>
+</tr>
+<tr>
+<td><strong>OfficeBench</strong> / <strong>OdysseyBench</strong></td>
+<td>Office 多应用；Odyssey 有 602
+个长时程任务（Word/Excel/PDF/邮件/日历）</td>
+<td>OfficeBench：GPT-4o
+47%，失败主要来自<strong>冗余操作、幻觉、应用切换</strong>。Odyssey：需要从<strong>很长的交互历史</strong>中提取信息，并提出
+HomerAgents 自动造题</td>
+</tr>
+<tr>
+<td><strong>SWE-Bench Pro</strong></td>
+<td>1,865 题，41 个仓库，含商业私有仓库</td>
+<td>抗数据污染；任务需要专业工程师花数小时到数天；对失败轨迹做了<strong>失败模式聚类</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>我的解读</strong>：这些基准反复指向三类共性短板——<strong>多轮/人机交互</strong>（τ²、CRMArena-Pro）、<strong>规则遵循</strong>（τ、CRMArena）、<strong>长时程状态保持</strong>（TheAgentCompany、Odyssey）。另外，“单次成功率”会高估真实可用性。</p>
+<h3 id="领域-2失败分类与失败归因它为什么失败是谁在哪一步出的错">领域
+2：失败分类与失败归因——“它为什么失败？是谁、在哪一步出的错？”</h3>
+<p><strong>核心问题</strong>：不只是报一个成功率，而是把失败<strong>拆解到原因</strong>。演进路线如下：
+人工建分类法 → 标注数据集 → 用 LLM 自动归因 → 训练专门的归因模型 →
+<strong>用干预来验证归因</strong>。</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>论文</th>
+<th>方法</th>
+<th>贡献 / 数字</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>MAST</strong>（Cemri et al.，NeurIPS’25 D&amp;B）</td>
+<td>对 150 条 trace 做 grounded theory 建分类法，再用 LLM-judge
+扩展标注</td>
+<td>14 种失败模式、3 大类（系统设计、agent 间失配、任务验证）；1,600+
+条标注 trace，覆盖 7 个框架；κ=0.88。结论：多 agent
+系统（MAS）的收益常常很小，很多失败源于<strong>系统设计</strong>而不是模型本身</td>
+</tr>
+<tr>
+<td><strong>Who&amp;When</strong>（Zhang et al.，ICML’25）</td>
+<td>定义”自动失败归因”任务；127 个 MAS 的失败日志</td>
+<td>最好的方法：找出责任 agent 53.5%，定位错误步骤
+<strong>14.2%</strong>；o1、R1 也达不到实用水平</td>
+</tr>
+<tr>
+<td><strong>AgenTracer</strong>（ICLR’26）</td>
+<td>用<strong>反事实重放 +
+程序化故障注入</strong>自动造标注数据（TracerTraj），再用 RL 训练 8B
+归因模型</td>
+<td>在 Who&amp;When 上比 Gemini-2.5-Pro、Claude-4-Sonnet 高至多
+18%；把归因结果反馈给 MetaGPT 等，带来 4.8–14.2% 的提升</td>
+</tr>
+<tr>
+<td><strong>DoVer</strong>（ICLR’26）</td>
+<td>指出两点：只看日志的归因<strong>无法验证</strong>，“单一步骤归因”本身常常<strong>定义不当</strong>（多种修改都能修好）。改用<strong>主动干预</strong>（改消息、改计划）检验假设</td>
+<td>18–28% 的失败试次被翻转为成功；验证或否定了 30–60% 的假设</td>
+</tr>
+<tr>
+<td><strong>WebSuite</strong></td>
+<td>把 web 任务拆成原子动作分类法</td>
+<td>任务失败可以<strong>直接归因到具体的 web 动作</strong></td>
+</tr>
+<tr>
+<td><strong>Code agent 轨迹研究</strong>（Majgaonkar et al.）</td>
+<td>比较 OpenHands、SWE-agent、Prometheus 的成功与失败轨迹</td>
+<td>失败轨迹<strong>更长、方差更大</strong>；72–81%
+的失败轨迹其实找对了文件，成败取决于修改是否”大致正确”</td>
+</tr>
+<tr>
+<td><strong>Characterizing Faults in Agentic AI</strong></td>
+<td>从 40 个仓库的 13,602 个 issue/PR 中分层抽样 385 个故障，用 grounded
+theory 分析</td>
+<td>34 种故障类型；根因包括 <strong>schema
+不匹配、依赖漂移、状态管理、模型接口不稳定</strong>；145
+名从业者验证。这是<strong>工程视角</strong>的分类</td>
+</tr>
+<tr>
+<td><strong>AgentOps</strong></td>
+<td>对现有 AgentOps 工具做系统映射研究</td>
+<td>列出 agent
+全生命周期中应该追踪的工件和数据，作为可观测性的参考模板</td>
+</tr>
+</tbody>
+</table>
+<p><strong>分歧与张力</strong>：Who&amp;When 和 AgenTracer
+把”准确定位到单一 agent 和步骤”当作目标；DoVer
+认为这个目标常常<strong>不成立</strong>，应改用”能否修复”来评测。这是一个开放的方法论争议，也适合拿来做研究切入点。</p>
+<h3 id="领域-3工具调用失败参数填错读错返回值调错工具">领域
+3：工具调用失败——“参数填错、读错返回值、调错工具”</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>论文</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Butterfly Effects in Toolchains</strong>（Findings
+EMNLP’25）</td>
+<td>建立了 5 类<strong>参数失败</strong>分类，并用 15
+种输入扰动做实验：<strong>参数名幻觉</strong>主要源于 LLM
+本身的局限，其余失败主要由输入来源（用户指令、工具返回等）引起。建议标准化工具返回格式、改进错误反馈、保证参数一致</td>
+</tr>
+<tr>
+<td><strong>ToolScan</strong></td>
+<td>定义 7 种 tool-use 错误模式，并为每种构造测试；主流 LLM
+都会出现这些错误</td>
+</tr>
+<tr>
+<td><strong>Characterizing Faults</strong>（见上）</td>
+<td>工程侧证据：结构化输出解析和 schema 不匹配是高频根因</td>
+</tr>
+</tbody>
+</table>
+<h3 id="领域-4歧义澄清与能力边界意识">领域
+4：歧义、澄清与”能力边界意识”</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>论文</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Learning to Ask</strong>（EMNLP’25）</td>
+<td>分析真实用户指令，构建 NoisyToolBench。发现 LLM 因 next-token
+训练目标会<strong>编造缺失的参数</strong>；提出
+Ask-when-Needed（AwN），并用 ToolEvaluator 自动评估准确率和效率</td>
+</tr>
+<tr>
+<td><strong>CAR-bench</strong>（ACL’26）</td>
+<td>车载助手场景，58 个工具。设计了 <strong>Hallucination
+任务</strong>（缺工具或缺信息时是否承认）和 <strong>Disambiguation
+任务</strong>。前沿推理模型在消歧任务上的稳定通过率
+&lt;50%，主要原因是<strong>过早行动</strong>；还会<strong>为了满足用户而违反策略或编造信息</strong></td>
+</tr>
+<tr>
+<td>ASPI（预印本，摘要未获取）</td>
+<td>GS
+标题显示：主动澄清<strong>会放大提示注入风险</strong>。这说明”多澄清”并不是免费的，与安全领域有交叉</td>
+</tr>
+</tbody>
+</table>
+<h3 id="领域-5安全提示注入权限记忆投毒">领域
+5：安全——提示注入、权限、记忆投毒</h3>
+<p><strong>攻击与评测</strong> - <strong>InjecAgent</strong>（Findings
+ACL’24）：1,054 个用例，17 个用户工具、62
+个攻击工具。攻击意图分为<strong>直接伤害</strong>和<strong>窃取数据</strong>两类。ReAct-GPT-4
+有 24% 的概率中招，加入”hacking prompt”后成功率接近翻倍。 -
+<strong>AgentDojo</strong>（NeurIPS’24 D&amp;B）：97
+个任务（邮件、网银、旅行），629
+个安全用例。它不是静态测试集，而是<strong>可扩展的攻防环境</strong>。 -
+<strong>Adaptive Attacks</strong>（Findings NAACL’25）：测试了 8
+种防御，用<strong>自适应攻击全部绕过</strong>，攻击成功率
+&gt;50%。结论：防御论文必须用自适应攻击来评测。 -
+<strong>AgentPoison</strong>（NeurIPS’24）：通过优化后门触发器来<strong>投毒长期记忆或
+RAG 知识库</strong>。投毒率 &lt;0.1%，攻击成功率
+&gt;80%，对正常任务的影响 &lt;1%。 -
+<strong>MemoryGraft</strong>（预印本）：把恶意的”成功经验”植入经验记忆，利用
+agent
+<strong>模仿过去成功做法</strong>的倾向，造成<strong>跨会话的持久行为漂移</strong>。这对”自我改进型
+agent”是新的攻击面。</p>
+<p><strong>防御（从”检测”到”按设计保证安全”）</strong> - <strong>Task
+Shield</strong>（ACL’25）：把安全问题重新表述为<strong>任务对齐</strong>，即每个动作都要服务于用户目标。在
+AgentDojo 上，GPT-4o 的攻击成功率降到 2.07%，任务效用 69.79%。 -
+<strong>CaMeL</strong>（预印本，Google
+DeepMind/ETH）：从<strong>可信的用户查询</strong>中提取控制流和数据流，不可信数据无法改变程序流；再用
+capability 机制阻止数据外泄。可证明安全的前提下解决 77%
+的任务，无防御时是 84%。 - <strong>AgentSpec</strong>（ICSE’26）：一种
+DSL，规则由”触发器 + 谓词 + 执行动作”组成，在运行时强制执行。代码 agent
+中 &gt;90% 的不安全执行被阻止，开销在毫秒级；还尝试用 o1 自动生成规则。
+-
+<strong>Progent</strong>（预印本）：可编程的权限控制。本轮没有拿到摘要，细节待补。</p>
+<p><strong>安全行为评测（不局限于注入）</strong> -
+<strong>ToolEmu</strong>（ICLR’24）：用 LM
+<strong>模拟工具执行</strong>来低成本发现高风险失败。经人工验证，68.8%
+的失败是真实有效的；最安全的 agent 也有 23.9% 的情况出现风险行为。 -
+<strong>ST-WebAgentBench</strong>（ICLR’26）：222 个企业 web
+任务，每个都配有策略。提出 <strong>CuP（Completion under
+Policy，遵守策略的完成率）</strong>：CuP 不到名义完成率的 2/3。 -
+<strong>OpenAgentSafety</strong>（ICLR’26）：使用真实工具（浏览器、bash、文件系统、消息平台），350+
+个多轮、多用户任务。在易出安全问题的任务中，不安全行为占
+51.2%（Claude-3.7）到 72.7%（o3-mini）。 -
+<strong>Agent-SafetyBench</strong>：2,000 个用例，没有一个 agent
+的安全分超过
+60%。主要缺陷是<strong>缺乏鲁棒性</strong>和<strong>缺乏风险意识</strong>；只靠防御提示不够。
+- <strong>Contextual
+Integrity</strong>（Google）：把”隐私”定义为<strong>信息流是否符合语境</strong>，用于引导
+agent 的表单填写行为。</p>
+<p><strong>结论差异</strong>：AgentDojo
+的检测器在非自适应攻击下能把攻击成功率降到约
+8%，但会被自适应攻击打穿。Task Shield 报告
+2.07%，但这是<strong>非自适应</strong>设置下的数字，需要和 Adaptive
+Attacks 那篇对照着看。CaMeL
+一类”系统设计型”防御更难被绕过，代价是效用下降和工程复杂度上升。（我的解读）</p>
+<h3 id="领域-6可靠性假成功与成本">领域 6：可靠性、“假成功”与成本</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>论文</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CLEAR</strong>（预印本）</td>
+<td>分析了 12 个基准：同等精度下成本相差 <strong>50 倍</strong>；单次
+60% → 8 次一致 25%。只优化准确率得到的 agent 贵 4.4–10.8 倍。15
+名专家评估：CLEAR 与生产成功的相关 ρ=0.83，只看准确率时 ρ=0.41</td>
+</tr>
+<tr>
+<td><strong>ReliabilityBench</strong>（预印本）</td>
+<td>三个维度：一致性 pass^k、语义扰动 ε、<strong>故障注入</strong>
+λ（超时、限流、部分响应、schema 漂移）。扰动让成功率从 96.9% 降到
+88.1%；<strong>限流</strong>伤害最大；ReAct 比 Reflexion 更稳</td>
+</tr>
+<tr>
+<td><strong>Procedure-Aware Evaluation / Corrupt
+Success</strong>（预印本）</td>
+<td>在 τ-bench 上，<strong>27–78%
+的”成功”其实是腐败成功</strong>，即结果对了但过程违规；加入过程门控后排名改变；还暴露了基准本身的缺陷（模拟器伪影、矛盾的奖励信号）</td>
+</tr>
+<tr>
+<td><strong>SWE-PRM</strong>（预印本）</td>
+<td>推理时用过程奖励模型<strong>中途纠偏</strong>（循环、冗余探索、不停止）。SWE-bench
+Verified 从 40.0% 提升到 50.6%，额外成本低至 $0.2</td>
+</tr>
+<tr>
+<td><strong>Efficient Agents</strong>（预印本）</td>
+<td>在 GAIA 上用 cost-of-pass 分析：保留 OWL 96.7% 的性能，成本从 $0.398
+降到 $0.228</td>
+</tr>
+</tbody>
+</table>
+<p><strong>我的解读</strong>：这一组论文共同说明，“<strong>成功率</strong>”这个指标本身就是失败来源之一。它掩盖了不一致、违规过程和成本，企业落地的评测应该是多维的。</p>
+<h3 id="各领域之间怎么连起来读者导航">各领域之间怎么连起来（读者导航）</h3>
+<ul>
+<li>基准（领域 1）提供<strong>失败样本</strong> → 分类与归因（领域
+2）解释<strong>原因</strong> → 工具、澄清、安全（领域
+3–5）是<strong>具体失败机制</strong>及其防御 → 可靠性评测（领域
+6）检验<strong>修好没有</strong>。</li>
+<li>交叉热点：
+<ul>
+<li>澄清 × 注入（ASPI）</li>
+<li>保密意识 × 效用（CRMArena-Pro）</li>
+<li>记忆 × 安全（AgentPoison、MemoryGraft）</li>
+<li>归因 × 修复（AgenTracer、DoVer）</li>
+</ul></li>
+</ul>
+<h2 id="入门必读-已核对其余">4. 入门必读（✅ 已核对，其余 ⚠️）</h2>
+<ol type="1">
+<li>MAST – Cemri et al., NeurIPS 2025 D&amp;B ✅：14 种失败模式，1600+
+条 trace，κ=0.88</li>
+<li>Who&amp;When – Zhang et al., ICML 2025 ✅：最佳方法定位责任 agent
+准确率 53.5%，定位错误步骤 14.2%（<a href="https://github.com/mingyin1/Agents_Failure_Attribution">code</a>）</li>
+<li>TheAgentCompany – Xu et al., NeurIPS 2025 D&amp;B ✅：最佳 agent 约
+30% 完成率</li>
+<li>τ²-bench – Barres et al., ICML 2026 ✅</li>
+<li>τ-bench – Yao et al., ICLR 2025 ✅：提出 pass^k 指标</li>
+<li>AppWorld – Trivedi et al., ACL 2024 ✅</li>
+<li>AgentDojo – Debenedetti et al., NeurIPS 2024 D&amp;B ✅</li>
+<li>CaMeL – Debenedetti et al., arXiv 2025 ✅</li>
+<li>CLEAR – arXiv 2511.14136 ✅（预印本）：单次运行 60%，8 次一致仅
+25%</li>
+<li>WorkArena – Drouin et al., ICML 2024 ⚠️</li>
+<li>OSWorld – Xie et al., NeurIPS 2024 D&amp;B ✅</li>
+<li>SWE-bench – Jimenez et al., ICLR 2024 ⚠️</li>
+<li>ToolEmu – Ruan et al., <a href="https://proceedings.iclr.cc/paper_files/paper/2024/hash/7274ed909a312d4d869cc328ad1c5f04-Abstract-Conference.html">ICLR
+2024</a> ✅（用 LM 模拟工具做风险评测）</li>
+<li>InjecAgent – Zhan et al., <a href="https://aclanthology.org/2024.findings-acl.624/">Findings ACL
+2024</a> ✅</li>
+<li>AgentPoison – Chen et al., <a href="https://proceedings.neurips.cc/paper_files/paper/2024/hash/eb113910e9c3f6242541c1652e30dfd6-Abstract-Conference.html">NeurIPS
+2024</a> ✅</li>
+</ol>
+<h2 id="b.-候选清单按主题发现来源google-scholar2026-10-23">4b.
+候选清单（按主题；发现来源：Google Scholar，2026-10-23）</h2>
+<p>Venue 依据 GS 链接的域名判断：proceedings.* 和 aclanthology
+视为已发表（✅）；arXiv 视为预印本；其余标
+🔶。<strong>是否开源本轮未逐篇核实。</strong></p>
+<p><strong>企业基准与环境</strong> - <a href="https://proceedings.neurips.cc/paper_files/paper/2024/hash/0b82662b6c32e887bb252a74d8cb2d5e-Abstract-Datasets_and_Benchmarks_Track.html">WorkArena++</a>：Boisvert
+et al., NeurIPS 2024 D&amp;B ✅ - <a href="https://aclanthology.org/2025.naacl-long.194/">CRMArena</a>：Huang
+et al., NAACL 2025 ✅；CRMArena-Pro：arXiv 2025（预印本） - <a href="https://aclanthology.org/2024.findings-emnlp.638/">FlowBench</a>：Xiao
+et al., Findings EMNLP 2024 ✅ - <a href="https://arxiv.org/abs/2407.19056">OfficeBench</a>：Wang et al.,
+arXiv 2024 - <a href="https://arxiv.org/abs/2508.09124">OdysseyBench</a>：Wang et al.,
+arXiv 2025，长时程 Office 工作流 - <a href="https://aclanthology.org/2026.acl-industry.103/">CI-Work</a>：Fu
+et al., ACL 2026 Industry ✅，企业 agent 的上下文完整性与隐私 - <a href="https://arxiv.org/abs/2601.22130">World of Workflows</a>：Gupta et
+al., arXiv 2026 - <a href="https://openreview.net/forum?id=RQjUpeINII">Top of the
+CLASS</a>：Wornow et al., ICLR 2025 Workshop（workshop，非主会） - <a href="https://arxiv.org/abs/2409.08264">Windows Agent Arena</a>：Bonatti
+et al., arXiv 2024 - <a href="https://arxiv.org/abs/2509.16941">SWE-bench Pro</a>：Deng et al.,
+arXiv 2025 - <a href="https://proceedings.neurips.cc/paper_files/paper/2025/hash/d83c4a745789690f82e86d0ef752ae7c-Abstract-Datasets_and_Benchmarks_Track.html">SWE-bench
+Goes Live!</a>：Zhang et al., NeurIPS 2025 D&amp;B ✅ - OSWorld-MCP：Jia
+et al., ICLR 2026（据 GS）🔶 - DataSciBench：Zhang et al., Findings ACL
+2026（据 GS）🔶</p>
+<p><strong>失败归因与诊断</strong> - DoVer（干预驱动的自动调试）：Ma et
+al., ICLR 2026（GS 指向 proceedings.iclr.cc）✅ - AgenTracer：Zhang et
+al., ICLR 2026（同上）✅ - Seeing the Whole
+Elephant（失败归因基准）：Chen et al., ACL 2026（据 GS）🔶 -
+StepFinder：Zhu et al., KDD 2026（据 GS）🔶 - <a href="https://arxiv.org/abs/2602.19843">MAS-FIRE</a>：故障注入，arXiv
+2026 - <a href="https://arxiv.org/abs/2603.06847">Characterizing Faults
+in Agentic AI</a>：Shah et al., arXiv 2026 - <a href="https://arxiv.org/abs/2411.05285">AgentOps</a>：Dong et al., arXiv
+2024，可观测性 - <a href="https://arxiv.org/abs/2602.10133">AgentTrace</a>：arXiv 2026 -
+TRAJDEBUG：Qi et al., arXiv 2026（链接待补）🔶 - <a href="https://arxiv.org/abs/2511.00197">Understanding Code Agent
+Behaviour</a>：Majgaonkar et al., arXiv 2025 - <a href="https://arxiv.org/abs/2406.01623">WebSuite</a>：Li &amp; Waldo,
+arXiv 2024，分析 web agent 为何失败 - <a href="https://dl.acm.org/doi/abs/10.1145/3772318.3790696">Characterizing
+Unintended Consequences of GUI Agents</a>：Zhang et al., CHI 2026 🔶</p>
+<p><strong>工具调用</strong> - <a href="https://aclanthology.org/2025.findings-emnlp.907/">Butterfly
+Effects in Toolchains</a>：Xiong et al., Findings EMNLP 2025
+✅，参数填充失败 - <a href="https://arxiv.org/abs/2411.13547">ToolScan</a>：Kokane et al.,
+arXiv 2024 - Benchmarking LLM Tool-Use in the Wild：Yu et al., ICLR
+2026（GS 指向 proceedings.iclr.cc）✅</p>
+<p><strong>澄清与意图</strong> - <a href="https://aclanthology.org/2025.emnlp-main.1104/">Learning to
+Ask</a>：Wang et al., EMNLP 2025 ✅ - <a href="https://aclanthology.org/2026.acl-long.1886/">CAR-bench</a>：Kirmayr
+et al., ACL 2026 ✅ - CLAMBER：Zhang et al., ACL 2024（据 GS）🔶 -
+ASPI：Sehwag et al., arXiv
+2026（链接待补）🔶。发现澄清行为会放大提示注入风险，是与安全类的交叉点。</p>
+<p><strong>安全：注入、权限、记忆</strong> - <a href="https://aclanthology.org/2025.findings-naacl.395/">Adaptive
+Attacks Break IPI Defenses</a>：Zhan et al., Findings NAACL 2025 ✅ - <a href="https://aclanthology.org/2025.acl-long.1435/">Task Shield</a>：Jia
+et al., ACL 2025 ✅ - <a href="https://aclanthology.org/2025.emnlp-main.53/">IPIGuard</a>：An et
+al., EMNLP 2025 ✅ - <a href="https://arxiv.org/abs/2504.11703">Progent</a>：Shi et al., arXiv
+2025，权限控制 - <a href="https://arxiv.org/abs/2508.01249">AgentArmor</a>、<a href="https://arxiv.org/abs/2507.15219">PromptArmor</a>：arXiv 2025 - <a href="https://dl.acm.org/doi/abs/10.1145/3744916.3764546">AgentSpec</a>：Wang
+et al., ICSE 2026（据 GS；ACM 页面返回 403）🔶 -
+InfrastructureSentinel：Kumar et al., AAAI 2026（据 GS）🔶 - <a href="https://dl.acm.org/doi/abs/10.1145/3803437.3805554">Evaluating
+Privilege Usage of Agents with Real-World Tools</a>：2026 🔶 - <a href="https://arxiv.org/abs/2607.27080">MemSecBench</a>：arXiv 2026 - <a href="https://arxiv.org/abs/2601.05504">Memory Poisoning Attack and
+Defense</a>：arXiv 2026 - <a href="https://proceedings.iclr.cc/paper_files/paper/2026/hash/c6c29e590e3c62e37e6b39cdd6baf2e8-Abstract-Conference.html">ST-WebAgentBench</a>：ICLR
+2026 ✅ - <a href="https://proceedings.iclr.cc/paper_files/paper/2026/hash/a0f6c06b8d6114bb37688c2dc19b4d74-Abstract-Conference.html">OpenAgentSafety</a>：ICLR
+2026 ✅ - <a href="https://arxiv.org/abs/2412.14470">Agent-SafetyBench</a>：arXiv
+2024</p>
+<p><strong>可靠性、成本、人机协作</strong> - <a href="https://arxiv.org/abs/2601.06112">ReliabilityBench</a>：arXiv 2026
+- <a href="https://arxiv.org/abs/2603.29231">Beyond pass@1</a>：arXiv
+2026 - <a href="https://arxiv.org/abs/2603.03116">Corrupt Success /
+Procedure-Aware Evaluation</a>：arXiv 2026；另有 ECML-PKDD 2026 版本 🔶
+- <a href="https://arxiv.org/abs/2509.02360">When Agents Go
+Astray</a>：arXiv 2025，用 PRM 纠偏 SWE agent - <a href="https://arxiv.org/abs/2608.03222">Fail-fast,
+Restart-smart</a>：arXiv 2026 - <a href="https://arxiv.org/abs/2508.02694">Efficient Agents</a>：arXiv 2025
+- Optima：Findings ACL 2025；AI-LieDar：NAACL 2025（均据 GS）🔶 - When
+to Act, When to Ask：SSRN 2026（非同行评审），研究企业 agent
+的人机协作（HITL）策略</p>
+<p><strong>综述（用于建立分类，不作为关键证据）</strong> - <a href="https://dl.acm.org/doi/abs/10.1145/3711896.3736570">Evaluation and
+Benchmarking of LLM Agents</a>：Mohammadi et al., KDD 2025 🔶 - <a href="https://arxiv.org/abs/2503.23434">Towards Trustworthy GUI
+Agents</a>：arXiv 2025</p>
+<blockquote>
+<p>GS 结果中有不少 SSRN、ResearchGate、TechRxiv 和小型期刊条目，例如
+“Why enterprise agent deployments
+fail”（IJCTECE）。它们标题相关，但同行评审质量无法确认，<strong>没有</strong>被当作证据使用。</p>
+</blockquote>
+<h2 id="失败模式缓解矩阵仅列有证据支持的控制点">5.
+失败模式—缓解矩阵（仅列有证据支持的控制点）</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>失败</th>
+<th>控制点</th>
+<th>证据</th>
+<th>适用条件/局限</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>违背任务或角色规格</td>
+<td>改写角色规格</td>
+<td>MAST：ChatDev +9.4% ✅</td>
+<td>单一框架、单一模型，未必能推广</td>
+</tr>
+<tr>
+<td>提前宣告完成、不跟进</td>
+<td>完成条件检查、升级</td>
+<td>TheAgentCompany §7.3 ✅</td>
+<td>失败分析是定性的</td>
+</tr>
+<tr>
+<td>外部内容注入</td>
+<td>检测器（ASR 降到约 8%）；控制流/数据流隔离</td>
+<td>AgentDojo ✅；CaMeL ✅</td>
+<td><strong>结论不一致</strong>：<a href="https://aclanthology.org/2025.findings-naacl.395/">Zhan et
+al. 2025</a> 用自适应攻击攻破了多种检测器类防御；AgentDojo 的约 8%
+是在非自适应攻击下得到的。CaMeL 有效用损失</td>
+</tr>
+<tr>
+<td>多次运行不一致</td>
+<td>pass^k 评测、投票</td>
+<td>CLEAR ✅、τ-bench ⚠️</td>
+<td>成本线性增长</td>
+</tr>
+<tr>
+<td>失败难以定位</td>
+<td>LLM 归因、MAST 标注器（κ=0.77）</td>
+<td>Who&amp;When ✅、MAST ✅</td>
+<td>步骤级定位远未可用</td>
+</tr>
+<tr>
+<td>工具调用后状态错误</td>
+<td>状态差分单元测试</td>
+<td>AppWorld ✅</td>
+<td>需要可程序化检查的状态</td>
+</tr>
+</tbody>
+</table>
+<h2 id="发表渠道不列影响因子">6. 发表渠道（不列影响因子）</h2>
+<ul>
+<li><strong>Agent 专门</strong>：AAMAS（MAS 理论与系统）</li>
+<li><strong>ML 主流</strong>：NeurIPS（含 D&amp;B
+track，适合基准）、ICML、ICLR</li>
+<li><strong>NLP</strong>：ACL / EMNLP /
+NAACL（资源、工具使用类工作）</li>
+<li><strong>SE 与安全</strong>：ICSE、FSE、ASE（SWE agent）；IEEE
+S&amp;P、USENIX Security、CCS（注入与权限）；SaTML</li>
+<li><strong>交叉</strong>：CHI、CSCW（人机协作）；SIGIR、WWW（检索、网页
+agent）；CoRL（机器人）</li>
+<li>会议排名（如 CORE）与期刊 IF（如
+TMLR、JAIR）需要分开核实，本轮<strong>未核实</strong>。</li>
+</ul>
+<h2 id="选题建议">7. 选题建议</h2>
+<table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr>
+<th>#</th>
+<th>问题</th>
+<th>环境</th>
+<th>指标</th>
+<th>基线</th>
+<th>难点</th>
+<th>venue</th>
+<th>新颖性风险</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>步骤级失败归因能否借助环境状态差分提升？</td>
+<td>Who&amp;When + AppWorld</td>
+<td>步骤定位准确率（基线 14.2%）</td>
+<td>Who&amp;When 的三种方法</td>
+<td>需要标注</td>
+<td>ICML/NeurIPS</td>
+<td>中（后续工作较多，⚠️）</td>
+</tr>
+<tr>
+<td>2</td>
+<td>澄清策略在 dual-control 下的成本与收益</td>
+<td>τ²-bench</td>
+<td>pass^k、轮数</td>
+<td>不澄清 / 总是澄清</td>
+<td>用户模拟偏差</td>
+<td>ACL/EMNLP</td>
+<td>中</td>
+</tr>
+<tr>
+<td>3</td>
+<td>企业记忆治理基准（provenance + 回滚）</td>
+<td>AppWorld 扩展</td>
+<td>投毒 ASR、效用</td>
+<td>AgentPoison 设置</td>
+<td>需自建任务</td>
+<td>NeurIPS D&amp;B</td>
+<td>低-中</td>
+</tr>
+<tr>
+<td>4</td>
+<td>CaMeL 式隔离的效用损失归因</td>
+<td>AgentDojo</td>
+<td>效用差（84→77）</td>
+<td>CaMeL</td>
+<td>需理解其解释器</td>
+<td>SaTML/USENIX</td>
+<td>中</td>
+</tr>
+<tr>
+<td>5</td>
+<td>成本-可靠性帕累托前沿</td>
+<td>τ-bench、TheAgentCompany</td>
+<td>美元/成功、pass^8</td>
+<td>单次运行</td>
+<td>API 费用</td>
+<td>TMLR</td>
+<td>中</td>
+</tr>
+<tr>
+<td>6</td>
+<td>人工审批点的最优放置</td>
+<td>TheAgentCompany</td>
+<td>严重错误率与人工调用次数</td>
+<td>全审批 / 无审批</td>
+<td>需要人工模拟</td>
+<td>CHI/CSCW</td>
+<td>低</td>
+</tr>
+<tr>
+<td>7</td>
+<td>结果层面的“假成功”检测</td>
+<td>TheAgentCompany</td>
+<td>漏检率</td>
+<td>LLM judge</td>
+<td>定义真值</td>
+<td>ICSE/FSE</td>
+<td>中</td>
+</tr>
+</tbody>
+</table>
+<h2 id="阅读路线">8. 阅读路线</h2>
+<ul>
+<li><strong>广度优先</strong>：CLEAR → TheAgentCompany → τ²-bench →
+AppWorld → AgentDojo → MAST → Who&amp;When → CaMeL</li>
+<li><strong>深入“诊断/归因”</strong>：MAST → Who&amp;When →
+TheAgentCompany §7.3 → AppWorld（状态评测）→ τ-bench（pass^k）</li>
+</ul>
+<h2 id="下一步未完成项">9. 下一步（未完成项）</h2>
+<ul>
+<li><p>🔶
+条目需要打开官方页面复核；各篇是否开源代码或数据，尚未逐篇核实。</p></li>
+<li><p>待补检索的方向：上下文管理与长期记忆更新（非安全视角）；跨系统事务与回滚；企业真实部署的实证研究。</p></li>
+</ul>
+</body>
+</html>

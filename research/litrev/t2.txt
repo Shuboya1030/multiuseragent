@@ -1,0 +1,3 @@
+Current and future use of large language models for knowledge work
+Read the Room: Exploring When LLM Agents Should Participate in Everyday Mixed-Context Group Chats on Mobile Messaging Platforms
+Role-aware language models for secure and contextualized access control in organizations

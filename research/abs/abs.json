@@ -1,0 +1,617 @@
+{
+ "TheAgentCompany: Benchmarking LLM Agents on Consequential Real World Tasks": {
+  "title": "TheAgentCompany: Benchmarking LLM Agents on Consequential Real World Tasks",
+  "id": "http://arxiv.org/abs/2412.14161v3",
+  "published": "2024-12-18",
+  "abs": "We interact with computers on an everyday basis, be it in everyday life or work, and many aspects of work can be done entirely with access to a computer and the Internet. At the same time, thanks to improvements in large language models (LLMs), there has also been a rapid development in AI agents that interact with and affect change in their surrounding environments. But how performant are AI agents at accelerating or even autonomously performing work-related tasks? The answer to this question has important implications both for industry looking to adopt AI into their workflows and for economic policy to understand the effects that adoption of AI may have on the labor market. To measure the progress of these LLM agents' performance on performing real-world professional tasks, in this paper we introduce TheAgentCompany, an extensible benchmark for evaluating AI agents that interact with the world in similar ways to those of a digital worker: by browsing the Web, writing code, running programs, and communicating with other coworkers. We build a self-contained environment with internal web sites and data that mimics a small software company environment, and create a variety of tasks that may be performed by workers in such a company. We test baseline agents powered by both closed API-based and open-weights language models (LMs), and find that the most competitive agent can complete 30% of tasks autonomously. This paints a nuanced picture on task automation with LM agents--in a setting simulating a real workplace, a good portion of simpler tasks could be solved autonomously, but more difficult long-horizon tasks are still beyond the reach of current systems. We release code, data, environment, and experiments on https://the-agent-company.com.",
+  "authors": [
+   "Frank F. Xu",
+   "Yufan Song",
+   "Boxuan Li",
+   "Yuxuan Tang",
+   "Kritanjali Jain",
+   "Mengxue Bao"
+  ],
+  "comment": "Preprint"
+ },
+ "A Benchmark for Tool-Agent-User Interaction in Real-World Domains": {
+  "title": "$τ$-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains",
+  "id": "http://arxiv.org/abs/2406.12045v1",
+  "published": "2024-06-17",
+  "abs": "Existing benchmarks do not test language agents on their interaction with human users or ability to follow domain-specific rules, both of which are vital for deploying them in real world applications. We propose $τ$-bench, a benchmark emulating dynamic conversations between a user (simulated by language models) and a language agent provided with domain-specific API tools and policy guidelines. We employ an efficient and faithful evaluation process that compares the database state at the end of a conversation with the annotated goal state. We also propose a new metric (pass^k) to evaluate the reliability of agent behavior over multiple trials. Our experiments show that even state-of-the-art function calling agents (like gpt-4o) succeed on &lt;50% of the tasks, and are quite inconsistent (pass^8 &lt;25% in retail). Our findings point to the need for methods that can improve the ability of agents to act consistently and follow rules reliably.",
+  "authors": [
+   "Shunyu Yao",
+   "Noah Shinn",
+   "Pedram Razavi",
+   "Karthik Narasimhan"
+  ],
+  "comment": ""
+ },
+ "Evaluating Conversational Agents in a Dual-Control Environment": {
+  "title": "$τ^2$-Bench: Evaluating Conversational Agents in a Dual-Control Environment",
+  "id": "http://arxiv.org/abs/2506.07982v1",
+  "published": "2025-06-09",
+  "abs": "Existing benchmarks for conversational AI agents simulate single-control environments, where only the AI agent can use tools to interact with the world, while the user remains a passive information provider. This differs from real-world scenarios like technical support, where users need to actively participate in modifying the state of the (shared) world. In order to address this gap, we introduce $τ^2$-bench, with four key contributions: 1) A novel Telecom dual-control domain modeled as a Dec-POMDP, where both agent and user make use of tools to act in a shared, dynamic environment that tests both agent coordination and communication, 2) A compositional task generator that programmatically creates diverse, verifiable tasks from atomic components, ensuring domain coverage and controlled complexity, 3) A reliable user simulator tightly coupled with the environment, whose behavior is constrained by tools and observable states, improving simulation fidelity, 4) Fine-grained analysis of agent performance through multiple ablations including separating errors arising from reasoning vs communication/coordination. In particular, our experiments show significant performance drops when agents shift from no-user to dual-control, highlighting the challenges of guiding users. Overall, $τ^2$-bench provides a controlled testbed for agents that must both reason effectively and guide user actions.",
+  "authors": [
+   "Victor Barres",
+   "Honghua Dong",
+   "Soham Ray",
+   "Xujie Si",
+   "Karthik Narasimhan"
+  ],
+  "comment": ""
+ },
+ "AppWorld: A Controllable World of Apps and People for Benchmarking Interactive Coding Agents": {
+  "title": "AppWorld: A Controllable World of Apps and People for Benchmarking Interactive Coding Agents",
+  "id": "http://arxiv.org/abs/2407.18901v1",
+  "published": "2024-07-26",
+  "abs": "Autonomous agents that address day-to-day digital tasks (e.g., ordering groceries for a household), must not only operate multiple apps (e.g., notes, messaging, shopping app) via APIs, but also generate rich code with complex control flow in an iterative manner based on their interaction with the environment. However, existing benchmarks for tool use are inadequate, as they only cover tasks that require a simple sequence of API calls. To remedy this gap, we built $\\textbf{AppWorld Engine}$, a high-quality execution environment (60K lines of code) of 9 day-to-day apps operable via 457 APIs and populated with realistic digital activities simulating the lives of ~100 fictitious users. We then created $\\textbf{AppWorld Benchmark}$ (40K lines of code), a suite of 750 natural, diverse, and challenging autonomous agent tasks requiring rich and interactive code generation. It supports robust programmatic evaluation with state-based unit tests, allowing for different ways of completing a task while also checking for unexpected changes, i.e., collateral damage. The state-of-the-art LLM, GPT-4o, solves only ~49% of our 'normal' tasks and ~30% of 'challenge' tasks, while other models solve at least 16% fewer. This highlights the benchmark's difficulty and AppWorld's potential to push the frontiers of interactive coding agents. The project website is available at https://appworld.dev/.",
+  "authors": [
+   "Harsh Trivedi",
+   "Tushar Khot",
+   "Mareike Hartmann",
+   "Ruskin Manku",
+   "Vinty Dong",
+   "Edward Li"
+  ],
+  "comment": "ACL'24 Camera Ready"
+ },
+ "WorkArena: How Capable Are Web Agents at Solving Common Knowledge Work Tasks": {
+  "title": "WorkArena: How Capable Are Web Agents at Solving Common Knowledge Work Tasks?",
+  "id": "http://arxiv.org/abs/2403.07718v5",
+  "published": "2024-03-12",
+  "abs": "We study the use of large language model-based agents for interacting with software via web browsers. Unlike prior work, we focus on measuring the agents' ability to perform tasks that span the typical daily work of knowledge workers utilizing enterprise software systems. To this end, we propose WorkArena, a remote-hosted benchmark of 33 tasks based on the widely-used ServiceNow platform. We also introduce BrowserGym, an environment for the design and evaluation of such agents, offering a rich set of actions as well as multimodal observations. Our empirical evaluation reveals that while current agents show promise on WorkArena, there remains a considerable gap towards achieving full task automation. Notably, our analysis uncovers a significant performance disparity between open and closed-source LLMs, highlighting a critical area for future exploration and development in the field.",
+  "authors": [
+   "Alexandre Drouin",
+   "Maxime Gasse",
+   "Massimo Caccia",
+   "Issam H. Laradji",
+   "Manuel Del Verme",
+   "Tom Marty"
+  ],
+  "comment": "21 pages, 11 figures, preprint"
+ },
+ "WorkArena++: Towards Compositional Planning and Reasoning-based Common Knowledge Work Tasks": {
+  "title": "WorkArena++: Towards Compositional Planning and Reasoning-based Common Knowledge Work Tasks",
+  "id": "http://arxiv.org/abs/2407.05291v2",
+  "published": "2024-07-07",
+  "abs": "The ability of large language models (LLMs) to mimic human-like intelligence has led to a surge in LLM-based autonomous agents. Though recent LLMs seem capable of planning and reasoning given user instructions, their effectiveness in applying these capabilities for autonomous task solving remains underexplored. This is especially true in enterprise settings, where automated agents hold the promise of a high impact. To fill this gap, we propose WorkArena++, a novel benchmark consisting of 682 tasks corresponding to realistic workflows routinely performed by knowledge workers. WorkArena++ is designed to evaluate the planning, problem-solving, logical/arithmetic reasoning, retrieval, and contextual understanding abilities of web agents. Our empirical studies across state-of-the-art LLMs and vision-language models (VLMs), as well as human workers, reveal several challenges for such models to serve as useful assistants in the workplace. In addition to the benchmark, we provide a mechanism to effortlessly generate thousands of ground-truth observation/action traces, which can be used for fine-tuning existing models. Overall, we expect this work to serve as a useful resource to help the community progress toward capable autonomous agents. The benchmark can be found at https://github.com/ServiceNow/WorkArena.",
+  "authors": [
+   "Léo Boisvert",
+   "Megh Thakkar",
+   "Maxime Gasse",
+   "Massimo Caccia",
+   "Thibault Le Sellier De Chezelles",
+   "Quentin Cappart"
+  ],
+  "comment": ""
+ },
+ "CRMArena: Understanding the Capacity of LLM Agents to Perform Professional CRM Tasks in Realistic Environments": {
+  "title": "CRMArena: Understanding the Capacity of LLM Agents to Perform Professional CRM Tasks in Realistic Environments",
+  "id": "http://arxiv.org/abs/2411.02305v2",
+  "published": "2024-11-04",
+  "abs": "Customer Relationship Management (CRM) systems are vital for modern enterprises, providing a foundation for managing customer interactions and data. Integrating AI agents into CRM systems can automate routine processes and enhance personalized service. However, deploying and evaluating these agents is challenging due to the lack of realistic benchmarks that reflect the complexity of real-world CRM tasks. To address this issue, we introduce CRMArena, a novel benchmark designed to evaluate AI agents on realistic tasks grounded in professional work environments. Following guidance from CRM experts and industry best practices, we designed CRMArena with nine customer service tasks distributed across three personas: service agent, analyst, and manager. The benchmark includes 16 commonly used industrial objects (e.g., account, order, knowledge article, case) with high interconnectivity, along with latent variables (e.g., complaint habits, policy violations) to simulate realistic data distributions. Experimental results reveal that state-of-the-art LLM agents succeed in less than 40% of the tasks with ReAct prompting, and less than 55% even with function-calling abilities. Our findings highlight the need for enhanced agent capabilities in function-calling and rule-following to be deployed in real-world work environments. CRMArena is an open challenge to the community: systems that can reliably complete tasks showcase direct business value in a popular work environment.",
+  "authors": [
+   "Kung-Hsiang Huang",
+   "Akshara Prabhakar",
+   "Sidharth Dhawan",
+   "Yixin Mao",
+   "Huan Wang",
+   "Silvio Savarese"
+  ],
+  "comment": "NAACL 2025"
+ },
+ "CRMArena-Pro: Holistic Assessment of LLM Agents Across Diverse Business Scenarios and Interactions": {
+  "title": "CRMArena-Pro: Holistic Assessment of LLM Agents Across Diverse Business Scenarios and Interactions",
+  "id": "http://arxiv.org/abs/2505.18878v1",
+  "published": "2025-05-24",
+  "abs": "While AI agents hold transformative potential in business, effective performance benchmarking is hindered by the scarcity of public, realistic business data on widely used platforms. Existing benchmarks often lack fidelity in their environments, data, and agent-user interactions, with limited coverage of diverse business scenarios and industries. To address these gaps, we introduce CRMArena-Pro, a novel benchmark for holistic, realistic assessment of LLM agents in diverse professional settings. CRMArena-Pro expands on CRMArena with nineteen expert-validated tasks across sales, service, and 'configure, price, and quote' processes, for both Business-to-Business and Business-to-Customer scenarios. It distinctively incorporates multi-turn interactions guided by diverse personas and robust confidentiality awareness assessments. Experiments reveal leading LLM agents achieve only around 58% single-turn success on CRMArena-Pro, with performance dropping significantly to approximately 35% in multi-turn settings. While Workflow Execution proves more tractable for top agents (over 83% single-turn success), other evaluated business skills present greater challenges. Furthermore, agents exhibit near-zero inherent confidentiality awareness; though targeted prompting can improve this, it often compromises task performance. These findings highlight a substantial gap between current LLM capabilities and enterprise demands, underscoring the need for advancements in multi-turn reasoning, confidentiality adherence, and versatile skill acquisition.",
+  "authors": [
+   "Kung-Hsiang Huang",
+   "Akshara Prabhakar",
+   "Onkar Thorat",
+   "Divyansh Agarwal",
+   "Prafulla Kumar Choubey",
+   "Yixin Mao"
+  ],
+  "comment": ""
+ },
+ "OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments": {
+  "title": "OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments",
+  "id": "http://arxiv.org/abs/2404.07972v2",
+  "published": "2024-04-11",
+  "abs": "Autonomous agents that accomplish complex computer tasks with minimal human interventions have the potential to transform human-computer interaction, significantly enhancing accessibility and productivity. However, existing benchmarks either lack an interactive environment or are limited to environments specific to certain applications or domains, failing to reflect the diverse and complex nature of real-world computer use, thereby limiting the scope of tasks and agent scalability. To address this issue, we introduce OSWorld, the first-of-its-kind scalable, real computer environment for multimodal agents, supporting task setup, execution-based evaluation, and interactive learning across various operating systems such as Ubuntu, Windows, and macOS. OSWorld can serve as a unified, integrated computer environment for assessing open-ended computer tasks that involve arbitrary applications. Building upon OSWorld, we create a benchmark of 369 computer tasks involving real web and desktop apps in open domains, OS file I/O, and workflows spanning multiple applications. Each task example is derived from real-world computer use cases and includes a detailed initial state setup configuration and a custom execution-based evaluation script for reliable, reproducible evaluation. Extensive evaluation of state-of-the-art LLM/VLM-based agents on OSWorld reveals significant deficiencies in their ability to serve as computer assistants. While humans can accomplish over 72.36% of the tasks, the best model achieves only 12.24% success, primarily struggling with GUI grounding and operational knowledge. Comprehensive analysis using OSWorld provides valuable insights for developing multimodal generalist agents that were not possible with previous benchmarks. Our code, environment, baseline models, and data are publicly available at https://os-world.github.io.",
+  "authors": [
+   "Tianbao Xie",
+   "Danyang Zhang",
+   "Jixuan Chen",
+   "Xiaochuan Li",
+   "Siheng Zhao",
+   "Ruisheng Cao"
+  ],
+  "comment": "51 pages, 21 figures"
+ },
+ "OfficeBench: Benchmarking Language Agents across Multiple Applications for Office Automation": {
+  "title": "OfficeBench: Benchmarking Language Agents across Multiple Applications for Office Automation",
+  "id": "http://arxiv.org/abs/2407.19056v1",
+  "published": "2024-07-26",
+  "abs": "Office automation significantly enhances human productivity by automatically finishing routine tasks in the workflow. Beyond the basic information extraction studied in much of the prior document AI literature, the office automation research should be extended to more realistic office tasks which require to integrate various information sources in the office system and produce outputs through a series of decision-making processes. We introduce OfficeBench, one of the first office automation benchmarks for evaluating current LLM agents' capability to address office tasks in realistic office workflows. OfficeBench requires LLM agents to perform feasible long-horizon planning, proficiently switch between applications in a timely manner, and accurately ground their actions within a large combined action space, based on the contextual demands of the workflow. Applying our customized evaluation methods on each task, we find that GPT-4 Omni achieves the highest pass rate of 47.00%, demonstrating a decent performance in handling office tasks. However, this is still far below the human performance and accuracy standards required by real-world office workflows. We further observe that most issues are related to operation redundancy and hallucinations, as well as limitations in switching between multiple applications, which may provide valuable insights for developing effective agent frameworks for office automation.",
+  "authors": [
+   "Zilong Wang",
+   "Yuedong Cui",
+   "Li Zhong",
+   "Zimin Zhang",
+   "Da Yin",
+   "Bill Yuchen Lin"
+  ],
+  "comment": "Preprint"
+ },
+ "OdysseyBench: Evaluating LLM Agents on Long-Horizon Complex Office Application Workflows": {
+  "title": "OdysseyBench: Evaluating LLM Agents on Long-Horizon Complex Office Application Workflows",
+  "id": "http://arxiv.org/abs/2508.09124v1",
+  "published": "2025-08-12",
+  "abs": "Autonomous agents powered by large language models (LLMs) are increasingly deployed in real-world applications requiring complex, long-horizon workflows. However, existing benchmarks predominantly focus on atomic tasks that are self-contained and independent, failing to capture the long-term contextual dependencies and multi-interaction coordination required in realistic scenarios. To address this gap, we introduce OdysseyBench, a comprehensive benchmark for evaluating LLM agents on long-horizon workflows across diverse office applications including Word, Excel, PDF, Email, and Calendar. Our benchmark comprises two complementary splits: OdysseyBench+ with 300 tasks derived from real-world use cases, and OdysseyBench-Neo with 302 newly synthesized complex tasks. Each task requires agent to identify essential information from long-horizon interaction histories and perform multi-step reasoning across various applications. To enable scalable benchmark creation, we propose HomerAgents, a multi-agent framework that automates the generation of long-horizon workflow benchmarks through systematic environment exploration, task generation, and dialogue synthesis. Our extensive evaluation demonstrates that OdysseyBench effectively challenges state-of-the-art LLM agents, providing more accurate assessment of their capabilities in complex, real-world contexts compared to existing atomic task benchmarks. We believe that OdysseyBench will serve as a valuable resource for advancing the development and evaluation of LLM agents in real-world productivity scenarios. In addition, we release OdysseyBench and HomerAgents to foster research along this line.",
+  "authors": [
+   "Weixuan Wang",
+   "Dongge Han",
+   "Daniel Madrigal Diaz",
+   "Jin Xu",
+   "Victor Rühle",
+   "Saravan Rajmohan"
+  ],
+  "comment": ""
+ },
+ "FlowBench: Revisiting and Benchmarking Workflow-Guided Planning for LLM-based Agents": {
+  "title": "FlowBench: Revisiting and Benchmarking Workflow-Guided Planning for LLM-based Agents",
+  "id": "http://arxiv.org/abs/2406.14884v1",
+  "published": "2024-06-21",
+  "abs": "LLM-based agents have emerged as promising tools, which are crafted to fulfill complex tasks by iterative planning and action. However, these agents are susceptible to undesired planning hallucinations when lacking specific knowledge for expertise-intensive tasks. To address this, preliminary attempts are made to enhance planning reliability by incorporating external workflow-related knowledge. Despite the promise, such infused knowledge is mostly disorganized and diverse in formats, lacking rigorous formalization and comprehensive comparisons. Motivated by this, we formalize different formats of workflow knowledge and present FlowBench, the first benchmark for workflow-guided planning. FlowBench covers 51 different scenarios from 6 domains, with knowledge presented in diverse formats. To assess different LLMs on FlowBench, we design a multi-tiered evaluation framework. We evaluate the efficacy of workflow knowledge across multiple formats, and the results indicate that current LLM agents need considerable improvements for satisfactory planning. We hope that our challenging benchmark can pave the way for future agent planning research.",
+  "authors": [
+   "Ruixuan Xiao",
+   "Wentao Ma",
+   "Ke Wang",
+   "Yuchuan Wu",
+   "Junbo Zhao",
+   "Haobo Wang"
+  ],
+  "comment": ""
+ },
+ "SWE-bench Pro: Can AI Agents Solve Long-Horizon Software Engineering Tasks": {
+  "title": "SWE-Bench Pro: Can AI Agents Solve Long-Horizon Software Engineering Tasks?",
+  "id": "http://arxiv.org/abs/2509.16941v2",
+  "published": "2025-09-21",
+  "abs": "We introduce SWE-Bench Pro, a substantially more challenging benchmark that builds upon the best practices of SWE-BENCH [25], but is explicitly designed to capture realistic, complex, enterprise-level problems beyond the scope of SWE-BENCH. SWE-BENCH PRO contains 1,865 problems sourced from a diverse set of 41 actively maintained repositories spanning business applications, B2B services, and developer tools. The benchmark is partitioned into a public set with open access to problems sourced from 11 repositories, a held-out set of 12 repositories and a commercial set of 18 proprietary repositories where we have formal partnership agreements with early-stage startups. Problems in the held-out and the commercial set are not publicly accessible, but we release results on the commercial set. Our benchmark features long-horizon tasks that may require hours to days for a professional software engineer to complete, often involving patches across multiple files and substantial code modifications. All tasks are human-verified and augmented with sufficient context to ensure resolvability. To better understand these limitations, we cluster the failure modes observed in the collected agent trajectories for a clearer characterization of the error patterns exhibited by current models. Overall, SWE-BENCH PRO provides a contamination-resistant testbed that more faithfully captures the complexity and diversity of real-world software development, advancing the pursuit of truly autonomous software engineering agents at a professional level.",
+  "authors": [
+   "Xiang Deng",
+   "Jeff Da",
+   "Edwin Pan",
+   "Yannis Yiming He",
+   "Charles Ide",
+   "Kanak Garg"
+  ],
+  "comment": ""
+ },
+ "Why Do Multi-Agent LLM Systems Fail": {
+  "title": "Why Do Multi-Agent LLM Systems Fail?",
+  "id": "http://arxiv.org/abs/2503.13657v3",
+  "published": "2025-03-17",
+  "abs": "Despite enthusiasm for Multi-Agent LLM Systems (MAS), their performance gains on popular benchmarks are often minimal. This gap highlights a critical need for a principled understanding of why MAS fail. Addressing this question requires systematic identification and analysis of failure patterns. We introduce MAST-Data, a comprehensive dataset of 1600+ annotated traces collected across 7 popular MAS frameworks. MAST-Data is the first multi-agent system dataset to outline the failure dynamics in MAS for guiding the development of better future systems. To enable systematic classification of failures for MAST-Data, we build the first Multi-Agent System Failure Taxonomy (MAST). We develop MAST through rigorous analysis of 150 traces, guided closely by expert human annotators and validated by high inter-annotator agreement (kappa = 0.88). This process identifies 14 unique modes, clustered into 3 categories: (i) system design issues, (ii) inter-agent misalignment, and (iii) task verification. To enable scalable annotation, we develop an LLM-as-a-Judge pipeline with high agreement with human annotations. We leverage MAST and MAST-Data to analyze failure patterns across models (GPT4, Claude 3, Qwen2.5, CodeLlama) and tasks (coding, math, general agent), demonstrating improvement headrooms from better MAS design. Our analysis provides insights revealing that identified failures require more sophisticated solutions, highlighting a clear roadmap for future research. We publicly release our comprehensive dataset (MAST-Data), the MAST, and our LLM annotator to facilitate widespread research and development in MAS.",
+  "authors": [
+   "Mert Cemri",
+   "Melissa Z. Pan",
+   "Shuyi Yang",
+   "Lakshya A. Agrawal",
+   "Bhavya Chopra",
+   "Rishabh Tiwari"
+  ],
+  "comment": "ArXiv v3"
+ },
+ "Which Agent Causes Task Failures and When? On Automated Failure Attribution of LLM Multi-Agent Systems": {
+  "title": "Which Agent Causes Task Failures and When? On Automated Failure Attribution of LLM Multi-Agent Systems",
+  "id": "http://arxiv.org/abs/2505.00212v3",
+  "published": "2025-04-30",
+  "abs": "Failure attribution in LLM multi-agent systems-identifying the agent and step responsible for task failures-provides crucial clues for systems debugging but remains underexplored and labor-intensive. In this paper, we propose and formulate a new research area: automated failure attribution for LLM multi-agent systems. To support this initiative, we introduce the Who&amp;When dataset, comprising extensive failure logs from 127 LLM multi-agent systems with fine-grained annotations linking failures to specific agents and decisive error steps. Using the Who&amp;When, we develop and evaluate three automated failure attribution methods, summarizing their corresponding pros and cons. The best method achieves 53.5% accuracy in identifying failure-responsible agents but only 14.2% in pinpointing failure steps, with some methods performing below random. Even SOTA reasoning models, such as OpenAI o1 and DeepSeek R1, fail to achieve practical usability. These results highlight the task's complexity and the need for further research in this area. Code and dataset are available at https://github.com/mingyin1/Agents_Failure_Attribution",
+  "authors": [
+   "Shaokun Zhang",
+   "Ming Yin",
+   "Jieyu Zhang",
+   "Jiale Liu",
+   "Zhiguang Han",
+   "Jingyang Zhang"
+  ],
+  "comment": "camera-ready"
+ },
+ "AgenTracer: Who Is Inducing Failure in the LLM Agentic Systems": {
+  "title": "AgenTracer: Who Is Inducing Failure in the LLM Agentic Systems?",
+  "id": "http://arxiv.org/abs/2509.03312v2",
+  "published": "2025-09-03",
+  "abs": "Large Language Model (LLM)-based agentic systems, often comprising multiple models, complex tool invocations, and orchestration protocols, substantially outperform monolithic agents. Yet this very sophistication amplifies their fragility, making them more prone to system failure. Pinpointing the specific agent or step responsible for an error within long execution traces defines the task of agentic system failure attribution. Current state-of-the-art reasoning LLMs, however, remain strikingly inadequate for this challenge, with accuracy generally below 10%. To address this gap, we propose AgenTracer, the first automated framework for annotating failed multi-agent trajectories via counterfactual replay and programmed fault injection, producing the curated dataset TracerTraj. Leveraging this resource, we develop AgenTracer-8B, a lightweight failure tracer trained with multi-granular reinforcement learning, capable of efficiently diagnosing errors in verbose multi-agent interactions. On the Who&amp;When benchmark, AgenTracer-8B outperforms giant proprietary LLMs like Gemini-2.5-Pro and Claude-4-Sonnet by up to 18.18%, setting a new standard in LLM agentic failure attribution. More importantly, AgenTracer-8B delivers actionable feedback to off-the-shelf multi-agent systems like MetaGPT and MaAS with 4.8-14.2% performance gains, empowering self-correcting and self-evolving agentic AI.",
+  "authors": [
+   "Guibin Zhang",
+   "Junhao Wang",
+   "Junjie Chen",
+   "Wangchunshu Zhou",
+   "Kun Wang",
+   "Shuicheng Yan"
+  ],
+  "comment": ""
+ },
+ "DoVer: Intervention-Driven Auto Debugging for LLM Multi-Agent Systems": {
+  "title": "DoVer: Intervention-Driven Auto Debugging for LLM Multi-Agent Systems",
+  "id": "http://arxiv.org/abs/2512.06749v3",
+  "published": "2025-12-07",
+  "abs": "Large language model (LLM)-based multi-agent systems are challenging to debug because failures often arise from long, branching interaction traces. The prevailing practice is to leverage LLMs for log-based failure localization, attributing errors to a specific agent and step. However, this paradigm has two key limitations: (i) log-only debugging lacks validation, producing untested hypotheses, and (ii) single-step or single-agent attribution is often ill-posed, as we find that multiple distinct interventions can independently repair the failed task. To address the first limitation, we introduce DoVer, an intervention-driven debugging framework, which augments hypothesis generation with active verification through targeted interventions (e.g., editing messages, altering plans). For the second limitation, rather than evaluating on attribution accuracy, we focus on measuring whether the system resolves the failure or makes quantifiable progress toward task success, reflecting a more outcome-oriented view of debugging. Within the Magnetic-One agent framework, on the datasets derived from GAIA and AssistantBench, DoVer flips 18-28% of failed trials into successes, achieves up to 16% milestone progress, and validates or refutes 30-60% of failure hypotheses. DoVer also performs effectively on a different dataset (GSMPlus) and agent framework (AG2), where it recovers 49% of failed trials. These results highlight intervention as a practical mechanism for improving reliability in agentic systems and open opportunities for more robust, scalable debugging methods for LLM-based multi-agent systems. Project website and code will be available at https://aka.ms/DoVer.",
+  "authors": [
+   "Ming Ma",
+   "Jue Zhang",
+   "Fangkai Yang",
+   "Yu Kang",
+   "Qingwei Lin",
+   "Saravan Rajmohan"
+  ],
+  "comment": ""
+ },
+ "WebSuite: Systematically Evaluating Why Web Agents Fail": {
+  "title": "WebSuite: Systematically Evaluating Why Web Agents Fail",
+  "id": "http://arxiv.org/abs/2406.01623v1",
+  "published": "2024-06-01",
+  "abs": "We describe WebSuite, the first diagnostic benchmark for generalist web agents, designed to systematically evaluate why agents fail. Advances in AI have led to the rise of numerous web agents that autonomously operate a browser to complete tasks. However, most existing benchmarks focus on strictly measuring whether an agent can or cannot complete a task, without giving insight on why. In this paper, we 1) develop a taxonomy of web actions to facilitate identifying common failure patterns, and 2) create an extensible benchmark suite to assess agents' performance on our taxonomized actions. This benchmark suite consists of both individual tasks, such as clicking a button, and end-to-end tasks, such as adding an item to a cart, and is designed such that any failure of a task can be attributed directly to a failure of a specific web action. We evaluate two popular generalist web agents, one text-based and one multimodal, and identify unique weaknesses for each agent. Because WebSuite can disaggregate task failures into specific action failures, this enables granular identification of which UX flows an individual agent has trouble with and immediately highlights promising avenues for improvement. These findings highlight the need for more focused benchmarking on where web agents go wrong to effectively improve agents beyond their weaker performance today.",
+  "authors": [
+   "Eric Li",
+   "Jim Waldo"
+  ],
+  "comment": ""
+ },
+ "Understanding Code Agent Behaviour: An Empirical Study of Success and Failure Trajectories": {
+  "title": "Understanding Code Agent Behaviour: An Empirical Study of Success and Failure Trajectories",
+  "id": "http://arxiv.org/abs/2511.00197v1",
+  "published": "2025-10-31",
+  "abs": "The increasing deployment of Large Language Model (LLM) agents for complex software engineering tasks has created a need to understand their problem-solving behaviours beyond simple success metrics. While these agents demonstrate impressive capabilities in automated issue resolution, their decision-making processes remain largely opaque. This paper presents an empirical study of agent trajectories, namely the execution traces capturing the steps agents take when attempting to resolve software issues. We analyse trajectories from three state-of-the-art code agents (OpenHands, SWE-agent, and Prometheus) on the SWE-Bench benchmark, examining both successful and failed attempts. Our investigation reveals several key insights into agent behaviour. First, we identify how distinct problem-solving strategies, such as defensive programming and context gathering, enable success in different scenarios. Second, we find that failed trajectories are consistently longer and exhibit higher variance than successful ones, with failure patterns differing significantly between agents. Third, our fault localisation analysis shows that while most trajectories correctly identify problematic files (72-81\\% even in failures), success depends more on achieving approximate rather than exact code modifications. These and other findings unveiled by our study, provide a foundation for understanding agent behaviour through trajectory analysis, contributing to the development of more robust and interpretable autonomous software engineering systems.",
+  "authors": [
+   "Oorja Majgaonkar",
+   "Zhiwei Fei",
+   "Xiang Li",
+   "Federica Sarro",
+   "He Ye"
+  ],
+  "comment": ""
+ },
+ "Characterizing Faults in Agentic AI: A Taxonomy of Types, Symptoms, and Root Causes": {
+  "title": "Characterizing Faults in Agentic AI: A Taxonomy of Types, Symptoms, and Root Causes",
+  "id": "http://arxiv.org/abs/2603.06847v2",
+  "published": "2026-03-06",
+  "abs": "Agentic AI systems combine LLM-based reasoning, orchestration, tool invocation, and interaction with external environments. These systems introduce faults that are difficult to characterize using existing taxonomies. To address this gap, we present an empirical study of faults in agentic AI systems. We collected 13,602 issues and pull requests from 40 repositories and, using stratified sampling, selected 385 faults for analysis. Through grounded theory, we derived taxonomies of fault types, symptoms, and root causes. We then used Apriori-based association rule mining to identify relationships among faults, symptoms, and root causes, and validated the taxonomy through a developer study with 145 practitioners. Our analysis produced a taxonomy of 34 fault types, organized into four architectural dimensions. These faults manifested as failures in structured-output interpretation, tool calls, runtime execution, and exception handling, with root causes including data schema mismatches, dependency drift, state management complexity, and model interface instability. Furthermore, association rules showed recurring cross-component propagation, linking structured data, dependency, and state management faults to their symptoms and root causes. Practitioners considered the taxonomy representative of agentic AI failures and suggested refinements related to multi-agent coordination and observability. These findings provide an empirical basis for diagnosing faults and improving reliability in agentic AI systems.",
+  "authors": [
+   "Mehil B Shah",
+   "Mohammad Mehdi Morovati",
+   "Mohammad Masudur Rahman",
+   "Foutse Khomh"
+  ],
+  "comment": ""
+ },
+ "AgentOps: Enabling Observability of LLM Agents": {
+  "title": "AgentOps: Enabling Observability of LLM Agents",
+  "id": "http://arxiv.org/abs/2411.05285v2",
+  "published": "2024-11-08",
+  "abs": "Large language model (LLM) agents have demonstrated remarkable capabilities across various domains, gaining extensive attention from academia and industry. However, these agents raise significant concerns on AI safety due to their autonomous and non-deterministic behavior, as well as continuous evolving nature . From a DevOps perspective, enabling observability in agents is necessary to ensuring AI safety, as stakeholders can gain insights into the agents' inner workings, allowing them to proactively understand the agents, detect anomalies, and prevent potential failures. Therefore, in this paper, we present a comprehensive taxonomy of AgentOps, identifying the artifacts and associated data that should be traced throughout the entire lifecycle of agents to achieve effective observability. The taxonomy is developed based on a systematic mapping study of existing AgentOps tools. Our taxonomy serves as a reference template for developers to design and implement AgentOps infrastructure that supports monitoring, logging, and analytics. thereby ensuring AI safety.",
+  "authors": [
+   "Liming Dong",
+   "Qinghua Lu",
+   "Liming Zhu"
+  ],
+  "comment": "12 pages, 3 figures"
+ },
+ "Butterfly Effects in Toolchains: A Comprehensive Analysis of Failed Parameter Filling in LLM Tool-Agent Systems": {
+  "title": "Butterfly Effects in Toolchains: A Comprehensive Analysis of Failed Parameter Filling in LLM Tool-Agent Systems",
+  "id": "http://arxiv.org/abs/2507.15296v1",
+  "published": "2025-07-21",
+  "abs": "The emergence of the tool agent paradigm has broadened the capability boundaries of the Large Language Model (LLM), enabling it to complete more complex tasks. However, the effectiveness of this paradigm is limited due to the issue of parameter failure during its execution. To explore this phenomenon and propose corresponding suggestions, we first construct a parameter failure taxonomy in this paper. We derive five failure categories from the invocation chain of a mainstream tool agent. Then, we explore the correlation between three different input sources and failure categories by applying 15 input perturbation methods to the input. Experimental results show that parameter name hallucination failure primarily stems from inherent LLM limitations, while issues with input sources mainly cause other failure patterns. To improve the reliability and effectiveness of tool-agent interactions, we propose corresponding improvement suggestions, including standardizing tool return formats, improving error feedback mechanisms, and ensuring parameter consistency.",
+  "authors": [
+   "Qian Xiong",
+   "Yuekai Huang",
+   "Ziyou Jiang",
+   "Zhiyuan Chang",
+   "Yujia Zheng",
+   "Tianhao Li"
+  ],
+  "comment": ""
+ },
+ "ToolScan: A Benchmark for Characterizing Errors in Tool-Use LLMs": {
+  "title": "ToolScan: A Benchmark for Characterizing Errors in Tool-Use LLMs",
+  "id": "http://arxiv.org/abs/2411.13547v2",
+  "published": "2024-11-20",
+  "abs": "Evaluating Large Language Models (LLMs) is one of the most critical aspects of building a performant compound AI system. Since the output from LLMs propagate to downstream steps, identifying LLM errors is crucial to system performance. A common task for LLMs in AI systems is tool use. While there are several benchmark environments for evaluating LLMs on this task, they typically only give a success rate without any explanation of the failure cases. To solve this problem, we introduce TOOLSCAN, a new benchmark to identify error patterns in LLM output on tool-use tasks. Our benchmark data set comprises of queries from diverse environments that can be used to test for the presence of seven newly characterized error patterns. Using TOOLSCAN, we show that even the most prominent LLMs exhibit these error patterns in their outputs. Researchers can use these insights from TOOLSCAN to guide their error mitigation strategies.",
+  "authors": [
+   "Shirley Kokane",
+   "Ming Zhu",
+   "Tulika Awalgaonkar",
+   "Jianguo Zhang",
+   "Thai Hoang",
+   "Akshara Prabhakar"
+  ],
+  "comment": ""
+ },
+ "Learning to Ask: When LLM Agents Meet Unclear Instruction": {
+  "title": "Learning to Ask: When LLM Agents Meet Unclear Instruction",
+  "id": "http://arxiv.org/abs/2409.00557v4",
+  "published": "2024-08-31",
+  "abs": "Equipped with the capability to call functions, modern large language models (LLMs) can leverage external tools for addressing a range of tasks unattainable through language skills alone. However, the effective execution of these tools relies heavily not just on the advanced capabilities of LLMs but also on precise user instructions, which often cannot be ensured in the real world. To evaluate the performance of LLMs tool-use under imperfect instructions, we meticulously examine the real-world instructions queried from users, analyze the error patterns, and build a challenging tool-use benchmark called Noisy ToolBench (NoisyToolBench). We find that due to the next-token prediction training objective, LLMs tend to arbitrarily generate the missed argument, which may lead to hallucinations and risks. To address this issue, we propose a novel framework, Ask-when-Needed (AwN), which prompts LLMs to ask questions to users whenever they encounter obstacles due to unclear instructions. Moreover, to reduce the manual labor involved in user-LLM interaction and assess LLMs performance in tool utilization from both accuracy and efficiency perspectives, we design an automated evaluation tool named ToolEvaluator. Our experiments demonstrate that the AwN significantly outperforms existing frameworks for tool learning in the NoisyToolBench. We will release all related code and datasets to support future research.",
+  "authors": [
+   "Wenxuan Wang",
+   "Juluan Shi",
+   "Zixuan Ling",
+   "Yuk-Kit Chan",
+   "Chaozheng Wang",
+   "Cheryl Lee"
+  ],
+  "comment": "EMNLP 2025"
+ },
+ "CAR-bench: Evaluating the Consistency and Limit-Awareness of LLM Agents under Real-World Uncertainty": {
+  "title": "CAR-bench: Evaluating the Consistency and Limit-Awareness of LLM Agents under Real-World Uncertainty",
+  "id": "http://arxiv.org/abs/2601.22027v1",
+  "published": "2026-01-29",
+  "abs": "Existing benchmarks for Large Language Model (LLM) agents focus on task completion under idealistic settings but overlook reliability in real-world, user-facing applications. In domains, such as in-car voice assistants, users often issue incomplete or ambiguous requests, creating intrinsic uncertainty that agents must manage through dialogue, tool use, and policy adherence. We introduce CAR-bench, a benchmark for evaluating consistency, uncertainty handling, and capability awareness in multi-turn, tool-using LLM agents in an in-car assistant domain. The environment features an LLM-simulated user, domain policies, and 58 interconnected tools spanning navigation, productivity, charging, and vehicle control. Beyond standard task completion, CAR-bench introduces Hallucination tasks that test agents' limit-awareness under missing tools or information, and Disambiguation tasks that require resolving uncertainty through clarification or internal information gathering. Baseline results reveal large gaps between occasional and consistent success on all task types. Even frontier reasoning LLMs achieve less than 50% consistent pass rate on Disambiguation tasks due to premature actions, and frequently violate policies or fabricate information to satisfy user requests in Hallucination tasks, underscoring the need for more reliable and self-aware LLM agents in real-world settings.",
+  "authors": [
+   "Johannes Kirmayr",
+   "Lukas Stappen",
+   "Elisabeth André"
+  ],
+  "comment": ""
+ },
+ "AgentDojo: A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for LLM Agents": {
+  "title": "AgentDojo: A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for LLM Agents",
+  "id": "http://arxiv.org/abs/2406.13352v3",
+  "published": "2024-06-19",
+  "abs": "AI agents aim to solve complex tasks by combining text-based reasoning with external tool calls. Unfortunately, AI agents are vulnerable to prompt injection attacks where data returned by external tools hijacks the agent to execute malicious tasks. To measure the adversarial robustness of AI agents, we introduce AgentDojo, an evaluation framework for agents that execute tools over untrusted data. To capture the evolving nature of attacks and defenses, AgentDojo is not a static test suite, but rather an extensible environment for designing and evaluating new agent tasks, defenses, and adaptive attacks. We populate the environment with 97 realistic tasks (e.g., managing an email client, navigating an e-banking website, or making travel bookings), 629 security test cases, and various attack and defense paradigms from the literature. We find that AgentDojo poses a challenge for both attacks and defenses: state-of-the-art LLMs fail at many tasks (even in the absence of attacks), and existing prompt injection attacks break some security properties but not all. We hope that AgentDojo can foster research on new design principles for AI agents that solve common tasks in a reliable and robust manner.. We release the code for AgentDojo at https://github.com/ethz-spylab/agentdojo.",
+  "authors": [
+   "Edoardo Debenedetti",
+   "Jie Zhang",
+   "Mislav Balunović",
+   "Luca Beurer-Kellner",
+   "Marc Fischer",
+   "Florian Tramèr"
+  ],
+  "comment": "Updated version after fixing a bug in the Llama implementation and updating the travel suite"
+ },
+ "InjecAgent: Benchmarking Indirect Prompt Injections in Tool-Integrated Large Language Model Agents": {
+  "title": "InjecAgent: Benchmarking Indirect Prompt Injections in Tool-Integrated Large Language Model Agents",
+  "id": "http://arxiv.org/abs/2403.02691v3",
+  "published": "2024-03-05",
+  "abs": "Recent work has embodied LLMs as agents, allowing them to access tools, perform actions, and interact with external content (e.g., emails or websites). However, external content introduces the risk of indirect prompt injection (IPI) attacks, where malicious instructions are embedded within the content processed by LLMs, aiming to manipulate these agents into executing detrimental actions against users. Given the potentially severe consequences of such attacks, establishing benchmarks to assess and mitigate these risks is imperative. In this work, we introduce InjecAgent, a benchmark designed to assess the vulnerability of tool-integrated LLM agents to IPI attacks. InjecAgent comprises 1,054 test cases covering 17 different user tools and 62 attacker tools. We categorize attack intentions into two primary types: direct harm to users and exfiltration of private data. We evaluate 30 different LLM agents and show that agents are vulnerable to IPI attacks, with ReAct-prompted GPT-4 vulnerable to attacks 24% of the time. Further investigation into an enhanced setting, where the attacker instructions are reinforced with a hacking prompt, shows additional increases in success rates, nearly doubling the attack success rate on the ReAct-prompted GPT-4. Our findings raise questions about the widespread deployment of LLM Agents. Our benchmark is available at https://github.com/uiuc-kang-lab/InjecAgent.",
+  "authors": [
+   "Qiusi Zhan",
+   "Zhixiang Liang",
+   "Zifan Ying",
+   "Daniel Kang"
+  ],
+  "comment": "36 pages, 6 figures, 13 tables (ACL 2024 Findings)"
+ },
+ "Adaptive Attacks Break Defenses Against Indirect Prompt Injection Attacks on LLM Agents": {
+  "title": "Adaptive Attacks Break Defenses Against Indirect Prompt Injection Attacks on LLM Agents",
+  "id": "http://arxiv.org/abs/2503.00061v2",
+  "published": "2025-02-27",
+  "abs": "Large Language Model (LLM) agents exhibit remarkable performance across diverse applications by using external tools to interact with environments. However, integrating external tools introduces security risks, such as indirect prompt injection (IPI) attacks. Despite defenses designed for IPI attacks, their robustness remains questionable due to insufficient testing against adaptive attacks. In this paper, we evaluate eight different defenses and bypass all of them using adaptive attacks, consistently achieving an attack success rate of over 50%. This reveals critical vulnerabilities in current defenses. Our research underscores the need for adaptive attack evaluation when designing defenses to ensure robustness and reliability. The code is available at https://github.com/uiuc-kang-lab/AdaptiveAttackAgent.",
+  "authors": [
+   "Qiusi Zhan",
+   "Richard Fang",
+   "Henil Shalin Panchal",
+   "Daniel Kang"
+  ],
+  "comment": "17 pages, 5 figures, 6 tables (NAACL 2025 Findings)"
+ },
+ "Defeating Prompt Injections by Design": {
+  "title": "Defeating Prompt Injections by Design",
+  "id": "http://arxiv.org/abs/2503.18813v2",
+  "published": "2025-03-24",
+  "abs": "Large Language Models (LLMs) are increasingly deployed in agentic systems that interact with an untrusted environment. However, LLM agents are vulnerable to prompt injection attacks when handling untrusted data. In this paper we propose CaMeL, a robust defense that creates a protective system layer around the LLM, securing it even when underlying models are susceptible to attacks. To operate, CaMeL explicitly extracts the control and data flows from the (trusted) query; therefore, the untrusted data retrieved by the LLM can never impact the program flow. To further improve security, CaMeL uses a notion of a capability to prevent the exfiltration of private data over unauthorized data flows by enforcing security policies when tools are called. We demonstrate effectiveness of CaMeL by solving $77\\%$ of tasks with provable security (compared to $84\\%$ with an undefended system) in AgentDojo. We release CaMeL at https://github.com/google-research/camel-prompt-injection.",
+  "authors": [
+   "Edoardo Debenedetti",
+   "Ilia Shumailov",
+   "Tianqi Fan",
+   "Jamie Hayes",
+   "Nicholas Carlini",
+   "Daniel Fabian"
+  ],
+  "comment": "Updated version with newer models and link to the code"
+ },
+ "The Task Shield: Enforcing Task Alignment to Defend Against Indirect Prompt Injection in LLM Agents": {
+  "title": "The Task Shield: Enforcing Task Alignment to Defend Against Indirect Prompt Injection in LLM Agents",
+  "id": "http://arxiv.org/abs/2412.16682v1",
+  "published": "2024-12-21",
+  "abs": "Large Language Model (LLM) agents are increasingly being deployed as conversational assistants capable of performing complex real-world tasks through tool integration. This enhanced ability to interact with external systems and process various data sources, while powerful, introduces significant security vulnerabilities. In particular, indirect prompt injection attacks pose a critical threat, where malicious instructions embedded within external data sources can manipulate agents to deviate from user intentions. While existing defenses based on rule constraints, source spotlighting, and authentication protocols show promise, they struggle to maintain robust security while preserving task functionality. We propose a novel and orthogonal perspective that reframes agent security from preventing harmful actions to ensuring task alignment, requiring every agent action to serve user objectives. Based on this insight, we develop Task Shield, a test-time defense mechanism that systematically verifies whether each instruction and tool call contributes to user-specified goals. Through experiments on the AgentDojo benchmark, we demonstrate that Task Shield reduces attack success rates (2.07\\%) while maintaining high task utility (69.79\\%) on GPT-4o.",
+  "authors": [
+   "Feiran Jia",
+   "Tong Wu",
+   "Xin Qin",
+   "Anna Squicciarini"
+  ],
+  "comment": ""
+ },
+ "Progent: Programmable Privilege Control for LLM Agents": null,
+ "AgentSpec: Customizable Runtime Enforcement for Safe and Reliable LLM Agents": {
+  "title": "AgentSpec: Customizable Runtime Enforcement for Safe and Reliable LLM Agents",
+  "id": "http://arxiv.org/abs/2503.18666v3",
+  "published": "2025-03-24",
+  "abs": "Agents built on LLMs are increasingly deployed across diverse domains, automating complex decision-making and task execution. However, their autonomy introduces safety risks, including security vulnerabilities, legal violations, and unintended harmful actions. Existing mitigation methods, such as model-based safeguards and early enforcement strategies, fall short in robustness, interpretability, and adaptability. To address these challenges, we propose AgentSpec, a lightweight domain-specific language for specifying and enforcing runtime constraints on LLM agents. With AgentSpec, users define structured rules that incorporate triggers, predicates, and enforcement mechanisms, ensuring agents operate within predefined safety boundaries. We implement AgentSpec across multiple domains, including code execution, embodied agents, and autonomous driving, demonstrating its adaptability and effectiveness. Our evaluation shows that AgentSpec successfully prevents unsafe executions in over 90% of code agent cases, eliminates all hazardous actions in embodied agent tasks, and enforces 100% compliance by autonomous vehicles (AVs). Despite its strong safety guarantees, AgentSpec remains computationally lightweight, with overheads in milliseconds. By combining interpretability, modularity, and efficiency, AgentSpec provides a practical and scalable solution for enforcing LLM agent safety across diverse applications. We also automate the generation of rules using LLMs and assess their effectiveness. Our evaluation shows that the rules generated by OpenAI o1 achieve a precision of 95.56% and recall of 70.96% for embodied agents, successfully identify 87.26% of the risky code, and prevent AVs from breaking laws in 5 out of 8 scenarios.",
+  "authors": [
+   "Haoyu Wang",
+   "Christopher M. Poskitt",
+   "Jun Sun"
+  ],
+  "comment": "Accepted by the 48th IEEE/ACM International Conference on Software Engineering (ICSE 2026)"
+ },
+ "AgentPoison: Red-teaming LLM Agents via Poisoning Memory or Knowledge Bases": {
+  "title": "AgentPoison: Red-teaming LLM Agents via Poisoning Memory or Knowledge Bases",
+  "id": "http://arxiv.org/abs/2407.12784v1",
+  "published": "2024-07-17",
+  "abs": "LLM agents have demonstrated remarkable performance across various applications, primarily due to their advanced capabilities in reasoning, utilizing external knowledge and tools, calling APIs, and executing actions to interact with environments. Current agents typically utilize a memory module or a retrieval-augmented generation (RAG) mechanism, retrieving past knowledge and instances with similar embeddings from knowledge bases to inform task planning and execution. However, the reliance on unverified knowledge bases raises significant concerns about their safety and trustworthiness. To uncover such vulnerabilities, we propose a novel red teaming approach AgentPoison, the first backdoor attack targeting generic and RAG-based LLM agents by poisoning their long-term memory or RAG knowledge base. In particular, we form the trigger generation process as a constrained optimization to optimize backdoor triggers by mapping the triggered instances to a unique embedding space, so as to ensure that whenever a user instruction contains the optimized backdoor trigger, the malicious demonstrations are retrieved from the poisoned memory or knowledge base with high probability. In the meantime, benign instructions without the trigger will still maintain normal performance. Unlike conventional backdoor attacks, AgentPoison requires no additional model training or fine-tuning, and the optimized backdoor trigger exhibits superior transferability, in-context coherence, and stealthiness. Extensive experiments demonstrate AgentPoison's effectiveness in attacking three types of real-world LLM agents: RAG-based autonomous driving agent, knowledge-intensive QA agent, and healthcare EHRAgent. On each agent, AgentPoison achieves an average attack success rate higher than 80% with minimal impact on benign performance (less than 1%) with a poison rate less than 0.1%.",
+  "authors": [
+   "Zhaorun Chen",
+   "Zhen Xiang",
+   "Chaowei Xiao",
+   "Dawn Song",
+   "Bo Li"
+  ],
+  "comment": "22 pages, 13 figures, 7 tables"
+ },
+ "Identifying the Risks of LM Agents with an LM-Emulated Sandbox": {
+  "title": "Identifying the Risks of LM Agents with an LM-Emulated Sandbox",
+  "id": "http://arxiv.org/abs/2309.15817v2",
+  "published": "2023-09-25",
+  "abs": "Recent advances in Language Model (LM) agents and tool use, exemplified by applications like ChatGPT Plugins, enable a rich set of capabilities but also amplify potential risks - such as leaking private data or causing financial losses. Identifying these risks is labor-intensive, necessitating implementing the tools, setting up the environment for each test scenario manually, and finding risky cases. As tools and agents become more complex, the high cost of testing these agents will make it increasingly difficult to find high-stakes, long-tailed risks. To address these challenges, we introduce ToolEmu: a framework that uses an LM to emulate tool execution and enables the testing of LM agents against a diverse range of tools and scenarios, without manual instantiation. Alongside the emulator, we develop an LM-based automatic safety evaluator that examines agent failures and quantifies associated risks. We test both the tool emulator and evaluator through human evaluation and find that 68.8% of failures identified with ToolEmu would be valid real-world agent failures. Using our curated initial benchmark consisting of 36 high-stakes tools and 144 test cases, we provide a quantitative risk analysis of current LM agents and identify numerous failures with potentially severe outcomes. Notably, even the safest LM agent exhibits such failures 23.9% of the time according to our evaluator, underscoring the need to develop safer LM agents for real-world deployment.",
+  "authors": [
+   "Yangjun Ruan",
+   "Honghua Dong",
+   "Andrew Wang",
+   "Silviu Pitis",
+   "Yongchao Zhou",
+   "Jimmy Ba"
+  ],
+  "comment": ""
+ },
+ "ST-WebAgentBench: A Benchmark for Evaluating Safety and Trustworthiness in Web Agents": {
+  "title": "ST-WebAgentBench: A Benchmark for Evaluating Safety and Trustworthiness in Web Agents",
+  "id": "http://arxiv.org/abs/2410.06703v7",
+  "published": "2024-10-09",
+  "abs": "Autonomous web agents solve complex browsing tasks, yet existing benchmarks measure only whether an agent finishes a task, ignoring whether it does so safely or in a way enterprises can trust. To integrate these agents into critical workflows, safety and trustworthiness (ST) are prerequisite conditions for adoption. We introduce \\textbf{\\textsc{ST-WebAgentBench}}, a configurable and easily extensible suite for evaluating web agent ST across realistic enterprise scenarios. Each of its 222 tasks is paired with ST policies, concise rules that encode constraints, and is scored along six orthogonal dimensions (e.g., user consent, robustness). Beyond raw task success, we propose the \\textit{Completion Under Policy} (\\textit{CuP}) metric, which credits only completions that respect all applicable policies, and the \\textit{Risk Ratio}, which quantifies ST breaches across dimensions. Evaluating three open state-of-the-art agents reveals that their average CuP is less than two-thirds of their nominal completion rate, exposing critical safety gaps. By releasing code, evaluation templates, and a policy-authoring interface, \\href{https://sites.google.com/view/st-webagentbench/home}{\\textsc{ST-WebAgentBench}} provides an actionable first step toward deploying trustworthy web agents at scale.",
+  "authors": [
+   "Ido Levy",
+   "Ben Wiesel",
+   "Sami Marreed",
+   "Alon Oved",
+   "Avi Yaeli",
+   "Nir Mashkif"
+  ],
+  "comment": "The Fourteenth International Conference on Learning Representations (ICLR 2026)"
+ },
+ "OpenAgentSafety: A Comprehensive Framework for Evaluating Real-World AI Agent Safety": {
+  "title": "OpenAgentSafety: A Comprehensive Framework for Evaluating Real-World AI Agent Safety",
+  "id": "http://arxiv.org/abs/2507.06134v2",
+  "published": "2025-07-08",
+  "abs": "Recent advances in AI agents capable of solving complex, everyday tasks, from scheduling to customer service, have enabled deployment in real-world settings, but their possibilities for unsafe behavior demands rigorous evaluation. While prior benchmarks have attempted to assess agent safety, most fall short by relying on simulated environments, narrow task domains, or unrealistic tool abstractions. We introduce OpenAgentSafety, a comprehensive and modular framework for evaluating agent behavior across eight critical risk categories. Unlike prior work, our framework evaluates agents that interact with real tools, including web browsers, code execution environments, file systems, bash shells, and messaging platforms; and supports over 350 multi-turn, multi-user tasks spanning both benign and adversarial user intents. OpenAgentSafety is designed for extensibility, allowing researchers to add tools, tasks, websites, and adversarial strategies with minimal effort. It combines rule-based analysis with LLM-as-judge assessments to detect both overt and subtle unsafe behaviors. Empirical analysis of five prominent LLMs in agentic scenarios reveals unsafe behavior in 51.2% of safety-vulnerable tasks with Claude-Sonnet-3.7, to 72.7% with o3-mini, highlighting critical safety vulnerabilities and the need for stronger safeguards before real-world deployment.",
+  "authors": [
+   "Sanidhya Vijayvargiya",
+   "Aditya Bharat Soni",
+   "Xuhui Zhou",
+   "Zora Zhiruo Wang",
+   "Nouha Dziri",
+   "Graham Neubig"
+  ],
+  "comment": "26 pages, 10 figures, Accepted at ICLR 2026 and IASEAI 2026"
+ },
+ "Operationalizing Contextual Integrity in Privacy-Conscious Assistants": {
+  "title": "Operationalizing Contextual Integrity in Privacy-Conscious Assistants",
+  "id": "http://arxiv.org/abs/2408.02373v2",
+  "published": "2024-08-05",
+  "abs": "Advanced AI assistants combine frontier LLMs and tool access to autonomously perform complex tasks on behalf of users. While the helpfulness of such assistants can increase dramatically with access to user information including emails and documents, this raises privacy concerns about assistants sharing inappropriate information with third parties without user supervision. To steer information-sharing assistants to behave in accordance with privacy expectations, we propose to operationalize contextual integrity (CI), a framework that equates privacy with the appropriate flow of information in a given context. In particular, we design and evaluate a number of strategies to steer assistants' information-sharing actions to be CI compliant. Our evaluation is based on a novel form filling benchmark composed of human annotations of common webform applications, and it reveals that prompting frontier LLMs to perform CI-based reasoning yields strong results.",
+  "authors": [
+   "Sahra Ghalebikesabi",
+   "Eugene Bagdasaryan",
+   "Ren Yi",
+   "Itay Yona",
+   "Ilia Shumailov",
+   "Aneesh Pappu"
+  ],
+  "comment": ""
+ },
+ "Beyond Accuracy: A Multi-Dimensional Framework for Evaluating Enterprise Agentic AI Systems": {
+  "title": "Beyond Accuracy: A Multi-Dimensional Framework for Evaluating Enterprise Agentic AI Systems",
+  "id": "http://arxiv.org/abs/2511.14136v1",
+  "published": "2025-11-18",
+  "abs": "Current agentic AI benchmarks predominantly evaluate task completion accuracy, while overlooking critical enterprise requirements such as cost-efficiency, reliability, and operational stability. Through systematic analysis of 12 main benchmarks and empirical evaluation of state-of-the-art agents, we identify three fundamental limitations: (1) absence of cost-controlled evaluation leading to 50x cost variations for similar precision, (2) inadequate reliability assessment where agent performance drops from 60\\% (single run) to 25\\% (8-run consistency), and (3) missing multidimensional metrics for security, latency, and policy compliance. We propose \\textbf{CLEAR} (Cost, Latency, Efficacy, Assurance, Reliability), a holistic evaluation framework specifically designed for enterprise deployment. Evaluation of six leading agents on 300 enterprise tasks demonstrates that optimizing for accuracy alone yields agents 4.4-10.8x more expensive than cost-aware alternatives with comparable performance. Expert evaluation (N=15) confirms that CLEAR better predicts production success (correlation $ρ=0.83$) compared to accuracy-only evaluation ($ρ=0.41$).",
+  "authors": [
+   "Sushant Mehta"
+  ],
+  "comment": ""
+ },
+ "ReliabilityBench: Evaluating LLM Agent Reliability Under Production-Like Stress Conditions": {
+  "title": "ReliabilityBench: Evaluating LLM Agent Reliability Under Production-Like Stress Conditions",
+  "id": "http://arxiv.org/abs/2601.06112v1",
+  "published": "2026-01-03",
+  "abs": "Existing benchmarks for tool-using LLM agents primarily report single-run success rates and miss reliability properties required in production. We introduce \\textbf{ReliabilityBench}, a benchmark for evaluating agent reliability across three dimensions: (i) consistency under repeated execution using $\\mathrm{pass}^k$, (ii) robustness to semantically equivalent task perturbations at intensity $ε$, and (iii) fault tolerance under controlled tool/API failures at intensity $λ$. ReliabilityBench contributes a unified reliability surface $R(k,ε,λ)$, \\textit{action metamorphic relations} that define correctness via end-state equivalence rather than text similarity, and a chaos-engineering-style fault injection framework (timeouts, rate limits, partial responses, schema drift). We evaluate two models (Gemini 2.0 Flash, GPT-4o) and two agent architectures (ReAct, Reflexion) across four domains (scheduling, travel, customer support, e-commerce) over 1,280 episodes. Perturbations alone reduce success from 96.9% at $ε=0$ to 88.1% at $ε=0.2$. Rate limiting is the most damaging fault in ablations. ReAct is more robust than Reflexion under combined stress, and Gemini 2.0 Flash achieves comparable reliability to GPT-4o at much lower cost. ReliabilityBench provides a systematic framework for assessing production readiness of LLM agents.",
+  "authors": [
+   "Aayush Gupta"
+  ],
+  "comment": "18 pages, 5 figures, 8 tables. Evaluates ReAct vs Reflexion across four tool-using domains with perturbation (epsilon) and fault-injection (lambda) stress testing; 1,280 total episodes"
+ },
+ "Beyond Task Completion: Revealing Corrupt Success in LLM Agents through Procedure-Aware Evaluation": {
+  "title": "Beyond Task Completion: Revealing Corrupt Success in LLM Agents through Procedure-Aware Evaluation",
+  "id": "http://arxiv.org/abs/2603.03116v1",
+  "published": "2026-03-03",
+  "abs": "Large Language Model (LLM)-based agents are increasingly adopted in high-stakes settings, but current benchmarks evaluate mainly whether a task was completed, not how. We introduce Procedure-Aware Evaluation (PAE), a framework that formalizes agent procedures as structured observations and exposes consistency relationships between what agents observe, communicate, and execute. PAE evaluates agents along complementary axes (Utility, Efficiency, Interaction Quality, Procedural Integrity) and applies multi-dimensional gating that categorically disqualifies corrupt outcomes. Evaluating state-of-the-art LLM agents on tau-bench yields findings at the axis, compliance, and benchmark levels. At the axis level, the dimensions capture non-redundant failure modes: utility masks reliability gaps, speed does not imply precision, and conciseness does not predict intent adherence. At the procedural compliance level, 27-78% of benchmark reported successes are corrupt successes concealing violations across interaction and integrity. Furthermore, gating substantially collapses Pass^4 rate and affects model rankings. The analysis of corrupt success cases reveals distinctive per-model failure signatures: GPT-5 spreads errors across policy, execution, and intent dimensions; Kimi-K2-Thinking concentrates 78% of violations in policy faithfulness and compliance; and Mistral-Large-3 is dominated by faithfulness failures. At the benchmark level, our analysis exposes structural flaws in the benchmark design, including task scope gaps, contradictory reward signals, and simulator artifacts that produce accidental successes.",
+  "authors": [
+   "Hongliu Cao",
+   "Ilias Driouich",
+   "Eoin Thomas"
+  ],
+  "comment": ""
+ },
+ "When Agents Go Astray: Course-Correcting SWE Agents with PRMs": {
+  "title": "When Agents go Astray: Course-Correcting SWE Agents with PRMs",
+  "id": "http://arxiv.org/abs/2509.02360v2",
+  "published": "2025-09-02",
+  "abs": "Large Language Model (LLM) agents are increasingly deployed for complex, multi-step software engineering (SWE) tasks. However, their trajectories often contain costly inefficiencies, such as redundant exploration, looping, and failure to terminate once a solution is reached. Prior work has largely treated these errors in a post-hoc manner, diagnosing failures only after execution. In this paper, we introduce SWE-PRM, an inference-time Process Reward Model (PRM) that intervenes during execution to detect and course-correct trajectory-level errors. Our PRM design leverages a taxonomy of common inefficiencies and delivers lightweight, interpretable feedback without modifying the underlying policy. On SWE-bench Verified, closed-source PRMs improve resolution from 40.0% to 50.6% (+10.6 p.p.), with the largest gains on medium and hard tasks. Among feedback strategies, taxonomy-guided PRMs outperform unguided or explicit action-prescriptive variants, increasing success rate while reducing trajectory length. These benefits come at an acceptable added inference cost of as low as $0.2, making PRMs a practical and scalable mechanism for improving SWE agents' reliability and efficiency.",
+  "authors": [
+   "Shubham Gandhi",
+   "Jason Tsay",
+   "Jatin Ganhotra",
+   "Kiran Kate",
+   "Yara Rizk"
+  ],
+  "comment": ""
+ },
+ "Efficient Agents: Building Effective Agents While Reducing Cost": {
+  "title": "Efficient Agents: Building Effective Agents While Reducing Cost",
+  "id": "http://arxiv.org/abs/2508.02694v1",
+  "published": "2025-07-24",
+  "abs": "The remarkable capabilities of Large Language Model (LLM)-driven agents have enabled sophisticated systems to tackle complex, multi-step tasks, but their escalating costs threaten scalability and accessibility. This work presents the first systematic study of the efficiency-effectiveness trade-off in modern agent systems, addressing the critical need for cost-effective designs without sacrificing performance. We investigate three key questions: (1) How much complexity do agentic tasks inherently require? (2) When do additional modules yield diminishing returns? (3) How much efficiency can be gained through the design of efficient agent frameworks? Through an empirical analysis on the GAIA benchmark, we evaluate the impact of LLM backbone selection, agent framework designs, and test-time scaling strategies. Using the cost-of-pass metric, we quantify the efficiency-performance trade-off across these dimensions. Our findings inform the development of Efficient Agents , a novel agent framework that has an optimal complexity to task requirements. Efficient Agents retains 96.7% of the performance of OWL, one leading open-source agent framework, while reducing operational costs from $0.398 to $0.228, resulting in a 28.4% improvement in cost-of-pass. Our work provides actionable insights for designing efficient, high-performing agent systems, advancing the accessibility and sustainability of AI-driven solutions.",
+  "authors": [
+   "Ningning Wang",
+   "Xavier Hu",
+   "Pai Liu",
+   "He Zhu",
+   "Yue Hou",
+   "Heyuan Huang"
+  ],
+  "comment": "Work in progress. For GitHub repository, see https://github.com/OPPO-PersonalAI/OAgents"
+ },
+ "Evaluation and Benchmarking of LLM Agents: A Survey": {
+  "title": "Evaluation and Benchmarking of LLM Agents: A Survey",
+  "id": "http://arxiv.org/abs/2507.21504v1",
+  "published": "2025-07-29",
+  "abs": "The rise of LLM-based agents has opened new frontiers in AI applications, yet evaluating these agents remains a complex and underdeveloped area. This survey provides an in-depth overview of the emerging field of LLM agent evaluation, introducing a two-dimensional taxonomy that organizes existing work along (1) evaluation objectives -- what to evaluate, such as agent behavior, capabilities, reliability, and safety -- and (2) evaluation process -- how to evaluate, including interaction modes, datasets and benchmarks, metric computation methods, and tooling. In addition to taxonomy, we highlight enterprise-specific challenges, such as role-based access to data, the need for reliability guarantees, dynamic and long-horizon interactions, and compliance, which are often overlooked in current research. We also identify future research directions, including holistic, more realistic, and scalable evaluation. This work aims to bring clarity to the fragmented landscape of agent evaluation and provide a framework for systematic assessment, enabling researchers and practitioners to evaluate LLM agents for real-world deployment.",
+  "authors": [
+   "Mahmoud Mohammadi",
+   "Yipeng Li",
+   "Jane Lo",
+   "Wendy Yip"
+  ],
+  "comment": ""
+ },
+ "MemoryGraft: Persistent Compromise of LLM Agents via Poisoned Experience Retrieval": {
+  "title": "MemoryGraft: Persistent Compromise of LLM Agents via Poisoned Experience Retrieval",
+  "id": "http://arxiv.org/abs/2512.16962v1",
+  "published": "2025-12-18",
+  "abs": "Large Language Model (LLM) agents increasingly rely on long-term memory and Retrieval-Augmented Generation (RAG) to persist experiences and refine future performance. While this experience learning capability enhances agentic autonomy, it introduces a critical, unexplored attack surface, i.e., the trust boundary between an agent's reasoning core and its own past. In this paper, we introduce MemoryGraft. It is a novel indirect injection attack that compromises agent behavior not through immediate jailbreaks, but by implanting malicious successful experiences into the agent's long-term memory. Unlike traditional prompt injections that are transient, or standard RAG poisoning that targets factual knowledge, MemoryGraft exploits the agent's semantic imitation heuristic which is the tendency to replicate patterns from retrieved successful tasks. We demonstrate that an attacker who can supply benign ingestion-level artifacts that the agent reads during execution can induce it to construct a poisoned RAG store where a small set of malicious procedure templates is persisted alongside benign experiences. When the agent later encounters semantically similar tasks, union retrieval over lexical and embedding similarity reliably surfaces these grafted memories, and the agent adopts the embedded unsafe patterns, leading to persistent behavioral drift across sessions. We validate MemoryGraft on MetaGPT's DataInterpreter agent with GPT-4o and find that a small number of poisoned records can account for a large fraction of retrieved experiences on benign workloads, turning experience-based self-improvement into a vector for stealthy and durable compromise. To facilitate reproducibility and future research, our code and evaluation data are available at https://github.com/Jacobhhy/Agent-Memory-Poisoning.",
+  "authors": [
+   "Saksham Sahai Srivastava",
+   "Haoyu He"
+  ],
+  "comment": "14 pages, 1 figure, includes appendix"
+ },
+ "Agent-SafetyBench: Evaluating the Safety of LLM Agents": {
+  "title": "Agent-SafetyBench: Evaluating the Safety of LLM Agents",
+  "id": "http://arxiv.org/abs/2412.14470v2",
+  "published": "2024-12-19",
+  "abs": "As large language models (LLMs) are increasingly deployed as agents, their integration into interactive environments and tool use introduce new safety challenges beyond those associated with the models themselves. However, the absence of comprehensive benchmarks for evaluating agent safety presents a significant barrier to effective assessment and further improvement. In this paper, we introduce Agent-SafetyBench, a comprehensive benchmark designed to evaluate the safety of LLM agents. Agent-SafetyBench encompasses 349 interaction environments and 2,000 test cases, evaluating 8 categories of safety risks and covering 10 common failure modes frequently encountered in unsafe interactions. Our evaluation of 16 popular LLM agents reveals a concerning result: none of the agents achieves a safety score above 60%. This highlights significant safety challenges in LLM agents and underscores the considerable need for improvement. Through failure mode and helpfulness analysis, we summarize two fundamental safety defects in current LLM agents: lack of robustness and lack of risk awareness. Furthermore, our findings suggest that reliance on defense prompts alone may be insufficient to address these safety issues, emphasizing the need for more advanced and robust strategies. To drive progress in this area, Agent-SafetyBench has been released at https://github.com/thu-coai/Agent-SafetyBench/ to facilitate further research in agent safety evaluation and improvement.",
+  "authors": [
+   "Zhexin Zhang",
+   "Shiyao Cui",
+   "Yida Lu",
+   "Jingzhuo Zhou",
+   "Junxiao Yang",
+   "Hongning Wang"
+  ],
+  "comment": "26 pages"
+ }
+}

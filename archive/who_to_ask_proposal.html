@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.12.1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Who to Ask Proposal</title>
+  <style>
+
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+</style>
+  <style type="text/css">:root{--bg:#fafaf8;--fg:#1d1d1f;--mut:#666;--line:#e3e3e0;--acc:#2f5fb3;--th:#f0f0ec}
+@media (prefers-color-scheme:dark){:root{--bg:#18181a;--fg:#e8e8e6;--mut:#a0a0a0;--line:#333;--acc:#7aa7ff;--th:#24242a}}
+body{background:var(--bg);color:var(--fg);font:15px/1.65 -apple-system,"Segoe UI","Microsoft YaHei",sans-serif;max-width:1200px;margin:0 auto;padding:24px 16px}
+h1{font-size:1.6em}h2{margin-top:2em;border-bottom:2px solid var(--line);padding-bottom:4px}
+a{color:var(--acc)}table{border-collapse:collapse;width:100%;font-size:13.5px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:6px 8px;vertical-align:top}th{background:var(--th);position:sticky;top:0}
+tr:nth-child(even) td{background:color-mix(in srgb,var(--th) 40%,transparent)}
+blockquote{border-left:4px solid var(--acc);margin:0;padding:4px 12px;color:var(--mut)}
+nav#TOC{background:var(--th);padding:8px 16px;border-radius:8px;font-size:14px}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Who to Ask Proposal</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#role-aware-help-seeking研究方案-v0.1" id="toc-role-aware-help-seeking研究方案-v0.1">Role-Aware
+Help-Seeking：研究方案 v0.1</a>
+<ul>
+<li><a href="#一句话问题" id="toc-一句话问题">0. 一句话问题</a></li>
+<li><a href="#三个贡献对照-rehac" id="toc-三个贡献对照-rehac">1.
+三个贡献（对照 ReHAC）</a>
+<ul>
+<li><a href="#c1-方法框架when-whom-联合建模" id="toc-c1-方法框架when-whom-联合建模">C1 方法框架：when + whom
+联合建模</a></li>
+<li><a href="#c2-训练模型" id="toc-c2-训练模型">C2 训练模型</a></li>
+<li><a href="#c3-对比分析具体化你说的按什么权重比较" id="toc-c3-对比分析具体化你说的按什么权重比较">C3
+对比分析（具体化你说的”按什么权重比较”）</a></li>
+</ul></li>
+<li><a href="#环境whobench暂定名基于-theagentcompany-扩展" id="toc-环境whobench暂定名基于-theagentcompany-扩展">2.
+环境：WhoBench（暂定名），基于 TheAgentCompany 扩展</a></li>
+<li><a href="#实证诊断实证-设计框架中的实证部分也是论文的动机证据" id="toc-实证诊断实证-设计框架中的实证部分也是论文的动机证据">3.
+实证诊断（“实证 + 设计框架”中的实证部分，也是论文的动机证据）</a></li>
+<li><a href="#一个需要你确认的取舍" id="toc-一个需要你确认的取舍">4.
+一个需要你确认的取舍</a></li>
+<li><a href="#时间线以-aaai-workshop-为第一里程碑" id="toc-时间线以-aaai-workshop-为第一里程碑">5. 时间线（以 AAAI workshop
+为第一里程碑）</a></li>
+<li><a href="#已知风险" id="toc-已知风险">6. 已知风险</a></li>
+<li><a href="#待你决定" id="toc-待你决定">7. 待你决定</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="role-aware-help-seeking研究方案-v0.1">Role-Aware
+Help-Seeking：研究方案 v0.1</h1>
+<blockquote>
+<p>依据：<code>who_to_ask_survey.md</code>（文献核查），以及 ReHAC（Feng
+et al., Findings EMNLP 2024）的贡献结构。
+本文是研究设计，<strong>不是已有结论</strong>。标”估计”的数字是粗略预估，需要做小规模试跑来校准。</p>
+</blockquote>
+<h2 id="一句话问题">0. 一句话问题</h2>
+<p>多人共用一个企业 agent 时，agent
+卡住了，<strong>应该在什么时候、去找哪个人</strong>？每个人的知识、权限、打扰成本都不一样。目标是：任务成功率尽量高，打扰成本和越权风险尽量低。</p>
+<h2 id="三个贡献对照-rehac">1. 三个贡献（对照 ReHAC）</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th></th>
+<th>ReHAC</th>
+<th>本研究</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C1 方法框架</td>
+<td>MDP；动作是”人 或 agent”；奖励 = 任务得分 − λ·人工介入次数</td>
+<td>MDP；动作是”agent 自己做 或
+问人₁…人ₙ”；每个人有<strong>角色档案</strong>；奖励同时包含<strong>按人计价的打扰成本</strong>和<strong>越权惩罚</strong></td>
+</tr>
+<tr>
+<td>C2 训练模型</td>
+<td>Llama-2-7B + LoRA，离线 REINFORCE</td>
+<td>7–8B 开源模型 + LoRA，离线 RL，输出”是否求助 + 找谁”</td>
+</tr>
+<tr>
+<td>C3 对比分析</td>
+<td>基线：只用 agent、只用人、随机、Prompt、IL</td>
+<td><strong>多个 LLM 直接当路由器</strong> ×
+<strong>角色信息条件</strong> × <strong>成本权重扫描</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="c1-方法框架when-whom-联合建模">C1 方法框架：when + whom
+联合建模</h3>
+<ul>
+<li><strong>状态</strong>
+sₜ：任务描述、到目前为止的轨迹、候选人列表及其角色档案。</li>
+<li><strong>动作</strong> aₜ ∈ {SELF} ∪ {ASK(hᵢ, q) | i = 1..n}，即
+agent 自己做这一步，或者带着问题 q 去问某个人 hᵢ。</li>
+<li><strong>角色档案</strong> Pᵢ = ⟨知识域 Kᵢ，权限 Aᵢ，打扰成本
+cᵢ，可用性 vᵢ，可信度
+ρᵢ⟩。前两项决定”问他有没有用”，后三项决定”问他值不值”。</li>
+<li><strong>奖励</strong>：</li>
+</ul>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mo>=</mo><mi>T</mi><mspace width="0.278em"></mspace><mo>−</mo><mspace width="0.278em"></mspace><mi>λ</mi><munder><mo>∑</mo><mi>t</mi></munder><msub><mi>c</mi><msub><mi>h</mi><mi>t</mi></msub></msub><mspace width="0.278em"></mspace><mo>−</mo><mspace width="0.278em"></mspace><mi>μ</mi><mo>⋅</mo><msub><mi>N</mi><mtext mathvariant="normal">越权</mtext></msub><mspace width="0.278em"></mspace><mo>−</mo><mspace width="0.278em"></mspace><mi>ν</mi><mo>⋅</mo><msub><mi>N</mi><mtext mathvariant="normal">问错人</mtext></msub></mrow><annotation encoding="application/x-tex">R = T \;-\; \lambda \sum_t c_{h_t} \;-\; \mu \cdot N_{\text{越权}} \;-\; \nu \cdot N_{\text{问错人}}</annotation></semantics></math></p>
+<ul>
+<li>T：任务得分，沿用 TheAgentCompany 的检查点得分。</li>
+<li>λ：打扰成本的权重（对应 ReHAC 的 λ）。</li>
+<li>μ：越权惩罚。例如去找没有审批权限的人批预算，或者把信息透露给不该知道的人。</li>
+<li>ν：问错人的惩罚，即对方没有所需知识，造成一轮无效询问。</li>
+<li><strong>框架层面要说清楚的设计选择</strong>（论文里的 design
+space）：
+<ul>
+<li>角色档案用自然语言写，还是结构化表示？</li>
+<li>档案是给定的，还是从交互历史中学出来的？</li>
+<li>when 和 whom 是两阶段先后决策，还是一个策略同时决定？</li>
+</ul></li>
+</ul>
+<h3 id="c2-训练模型">C2 训练模型</h3>
+<ul>
+<li><strong>策略模型</strong>：Qwen2.5-7B 或 Llama-3.1-8B + LoRA。不选
+Llama-2，是因为它太旧，审稿人会问。</li>
+<li><strong>数据收集</strong>：仿照 ReHAC
+的”随机分配”。每一步按一定概率让 agent
+自己做，或者随机问某个人，记录最终得分和成本。人由 LLM 扮演，NPC 的
+profile 和私有信息来自 TheAgentCompany。</li>
+<li><strong>训练</strong>：离线 REINFORCE 或
+GRPO，优势函数用同一状态下的平均回报做基线。</li>
+<li><strong>对照</strong>：再训练一个只决定 when、whom 交给 prompt
+的模型，用来检验”联合决策是否更好”。</li>
+<li><strong>算力（估计）</strong>：7B 模型 + QLoRA 用单卡 24–48GB
+就能训练。主要开销在<strong>收集轨迹时调用
+API</strong>。按每条轨迹十几轮调用、几千条轨迹算，大约在几百美元量级（估计，需要试跑校准）。</li>
+</ul>
+<h3 id="c3-对比分析具体化你说的按什么权重比较">C3
+对比分析（具体化你说的”按什么权重比较”）</h3>
+<p>三个维度交叉：</p>
+<ol type="1">
+<li><strong>不同 LLM 直接当路由器（零样本）</strong>：GPT-4o /
+GPT-4.1、Claude Sonnet、Gemini，以及开源的 Qwen 和
+Llama。问题是：<strong>哪些模型天然更会找人？</strong></li>
+<li><strong>角色信息条件</strong>：
+<ul>
+<li>R0：只给名字</li>
+<li>R1：给自然语言职责描述，即 TheAgentCompany 现有的
+<code>public_info</code></li>
+<li>R2：给结构化角色档案（知识、权限、成本）</li>
+</ul>
+问题是：<strong>显式的角色模型带来多少提升？</strong></li>
+<li><strong>成本权重扫描</strong>：
+<ul>
+<li>λ 从小到大：打扰便宜 → 打扰昂贵</li>
+<li>μ：越权零容忍 → 宽松</li>
+<li>让 cᵢ 随职级变化，比如问 CTO 的成本 &gt; 问工程师</li>
+</ul>
+问题是：<strong>模型的找人行为会不会随成本合理调整？</strong>
+输出成本–成功率的帕累托曲线。</li>
+</ol>
+<p><strong>指标</strong>： - 任务成功率 -
+首次求助命中率（第一次就问对人） - 总打扰成本 - 越权次数 - 无效询问次数
+- 该问没问的比例</p>
+<h2 id="环境whobench暂定名基于-theagentcompany-扩展">2.
+环境：WhoBench（暂定名），基于 TheAgentCompany 扩展</h2>
+<ul>
+<li><strong>底座</strong>：TheAgentCompany 中有 17
+个人类角色（<code>npc_definition.json</code>）。有 41 个任务带
+<code>scenarios.json</code>，规定了哪个人持有哪条信息。</li>
+<li><strong>需要扩展的地方</strong>：给每个任务加入<strong>干扰候选人</strong>：
+<ul>
+<li>知情但<strong>没有权限</strong>的人</li>
+<li>有权限但<strong>不知情</strong>的人</li>
+<li>两者都具备、但<strong>打扰成本很高</strong>的人（比如 CTO）</li>
+<li>只知道<strong>部分信息</strong>的人</li>
+</ul></li>
+<li><strong>轻量化实现（建议）</strong>：不跑完整的 Docker
+环境（GitLab、Plane、ownCloud
+等），只抽出”找人”这部分，做成<strong>纯文本模拟器</strong>：NPC 由 LLM
+扮演，任务结果由规则评测器判定。这样成本和工程量都会大幅下降。代价是生态有效性变弱，需要在论文里说明。</li>
+<li><strong>规模目标（估计）</strong>：100–200 个任务。可以手工改写 41
+个现有任务，再用 EnterpriseBench 的组织元数据生成管线补充。</li>
+</ul>
+<h2 id="实证诊断实证-设计框架中的实证部分也是论文的动机证据">3.
+实证诊断（“实证 + 设计框架”中的实证部分，也是论文的动机证据）</h2>
+<ul>
+<li>在 TheAgentCompany 已公开的约 1.9k 条轨迹中，选出涉及 NPC
+交互的任务，标注每一次求助：
+<ul>
+<li>问对人</li>
+<li>问错人</li>
+<li>该问没问</li>
+<li>问了但没有跟进（TheAgentCompany 论文自己也报告过这类失败：agent
+问了同事，但没有接着处理对方的回答）</li>
+</ul></li>
+<li>输出：“找人”相关失败在所有失败中占多大比例，以及各模型分别在哪类找人错误上出问题。</li>
+<li>先用 LLM 预标注，再人工抽检，并报告一致性 κ。</li>
+</ul>
+<h2 id="一个需要你确认的取舍">4. 一个需要你确认的取舍</h2>
+<p>“实证 + 设计框架”偏 HCI 包装（CHI/CSCW）；“训练一个模型”偏 NLP/ML
+包装（ACL/EMNLP）。<strong>两者都写进同一篇论文是可以的</strong>，ReHAC
+本身就是 NLP
+论文，带一个真人实验。但不同的投稿目标，侧重点要不一样：</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>版本</th>
+<th>内容</th>
+<th>目标 venue</th>
+<th>时间</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>v1 workshop 版</strong></td>
+<td>C1 框架 + §3 诊断 + C3 的零样本 LLM 对比（不训练模型）</td>
+<td><strong>AAAI-27 Human-AI Collaboration workshop（11-20
+截稿）</strong></td>
+<td>约 4 周，可行</td>
+</tr>
+<tr>
+<td><strong>v2 完整版</strong></td>
+<td>加上 C2 训练模型 + WhoBench + 完整的权重扫描</td>
+<td>ACL/EMNLP 2027（ARR），或 NeurIPS D&amp;B</td>
+<td>约 3–5 个月</td>
+</tr>
+<tr>
+<td><strong>v2′ HCI 版</strong>（可选）</td>
+<td>加一个小规模真人实验（真人扮演角色，或真人判断 agent
+有没有找对人）</td>
+<td>CHI 2028 / CSCW</td>
+<td>更长</td>
+</tr>
+</tbody>
+</table>
+<p><strong>我的建议</strong>：按 v1 → v2 推进。4
+周内训练出一个好模型风险很高，而零样本 LLM 对比本身就能撑起一篇 workshop
+论文。</p>
+<h2 id="时间线以-aaai-workshop-为第一里程碑">5. 时间线（以 AAAI workshop
+为第一里程碑）</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>周</th>
+<th>任务</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第 1 周（10/24–10/31）</td>
+<td>确定形式化；从 TheAgentCompany 抽出 41 个 NPC
+任务；搭纯文本模拟器原型</td>
+</tr>
+<tr>
+<td>第 2 周（11/1–11/7）</td>
+<td>轨迹诊断（§3）；加入干扰候选人，扩出约 50 个任务</td>
+</tr>
+<tr>
+<td>第 3 周（11/8–11/14）</td>
+<td>在 R0/R1/R2 三种条件下跑 3–5 个 LLM；做 λ 扫描</td>
+</tr>
+<tr>
+<td>第 4 周（11/15–11/20）</td>
+<td>写论文，4–6 页，AAAI 格式</td>
+</tr>
+<tr>
+<td>12 月–次年 2 月</td>
+<td>收集随机分配的轨迹 → 训练 C2 → 完整版；同时看 CHI/ICLR 2027 的
+workshop 征稿</td>
+</tr>
+</tbody>
+</table>
+<h2 id="已知风险">6. 已知风险</h2>
+<ul>
+<li><strong>新颖性</strong>：多用户 agent 方向（Multi-User LLM
+Agents、Harness-MU）2026
+年很活跃，要尽早占位，并在相关工作中明确区分：它们研究<strong>被动地听谁的</strong>，我们研究<strong>主动地找谁</strong>。</li>
+<li><strong>模拟的真实性</strong>：NPC 由 LLM
+扮演，打扰成本是人为设定的。缓解办法：成本做敏感性分析（在 C3
+的权重扫描中顺带完成）；动机案例用你观察到的企业场景（需脱敏，并确认公司的发表政策）。</li>
+<li><strong>TheAgentCompany 许可证</strong>：主仓库和 experiments
+仓库的许可证都还没有确认。如果要发布衍生数据集，需要先确认。</li>
+<li><strong>评测器偏差</strong>：如果用 LLM
+判断”有没有问对人”，需要有人工抽检。</li>
+</ul>
+<h2 id="待你决定">7. 待你决定</h2>
+<ol type="1">
+<li>第一目标定为 AAAI workshop（11-20）吗？</li>
+<li>环境用纯文本模拟器（快），还是完整的 TheAgentCompany
+Docker（真实但重）？</li>
+<li>API
+和算力预算大概多少？是否要用公司资源？如果用，需要先确认合规。</li>
+</ol>
+</body>
+</html>

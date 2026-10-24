@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.12.1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Role-Aware Help-Seeking Proposal</title>
+  <style>
+
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+</style>
+  <style type="text/css">:root{--bg:#fafaf8;--fg:#1d1d1f;--mut:#666;--line:#e3e3e0;--acc:#2f5fb3;--th:#f0f0ec}
+@media (prefers-color-scheme:dark){:root{--bg:#18181a;--fg:#e8e8e6;--mut:#a0a0a0;--line:#333;--acc:#7aa7ff;--th:#24242a}}
+body{background:var(--bg);color:var(--fg);font:15px/1.65 -apple-system,"Segoe UI","Microsoft YaHei",sans-serif;max-width:1200px;margin:0 auto;padding:24px 16px}
+h1{font-size:1.6em}h2{margin-top:2em;border-bottom:2px solid var(--line);padding-bottom:4px}
+a{color:var(--acc)}table{border-collapse:collapse;width:100%;font-size:13.5px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:6px 8px;vertical-align:top}th{background:var(--th);position:sticky;top:0}
+tr:nth-child(even) td{background:color-mix(in srgb,var(--th) 40%,transparent)}
+blockquote{border-left:4px solid var(--acc);margin:0;padding:4px 12px;color:var(--mut)}
+nav#TOC{background:var(--th);padding:8px 16px;border-radius:8px;font-size:14px}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Role-Aware Help-Seeking Proposal</h1>
+</header>
+<h1 id="whom-should-the-agent-ask-role-aware-help-seeking-in-multi-user-llm-agent-systems">Whom
+Should the Agent Ask? Role-Aware Help-Seeking in Multi-User LLM Agent
+Systems</h1>
+<p><strong>Research Proposal</strong> · Shuya Zong · Draft v0.5, October
+2026</p>
+<hr />
+<h2 id="overview">1. Overview</h2>
+<p><strong>Motivation.</strong> LLM-based agents are increasingly
+embedded in organizational workflows. In these settings a single agent
+often serves multiple users who differ in role, expertise, and
+authority. Current agent systems, however, are designed under a
+<em>single-principal interaction paradigm</em> (Yang et al., 2026): one
+user is treated as the sole source of authority and information. In
+practice, the information and approvals an agent needs to complete a
+task are distributed across an organization. When an agent is blocked by
+missing information, an ambiguous requirement, or an action that
+requires approval, it must decide not only <strong>when</strong> to
+involve a human but also <strong>whom</strong> to involve. A query
+directed to a colleague who lacks the relevant knowledge wastes effort.
+An approval obtained from someone without authority is invalid.
+Escalating a routine question to a senior stakeholder incurs unnecessary
+interruption cost.</p>
+<p><strong>Aim.</strong> This research aims to establish
+<strong>role-aware help-seeking</strong> as a research problem in
+multi-user LLM agent systems. It will develop the empirical, conceptual,
+and methodological foundations for agents that select the appropriate
+human collaborator based on that person’s knowledge, authority, and
+interruption cost.</p>
+<p><strong>Significance.</strong> As agents move from individual
+assistants to shared team infrastructure, principal selection becomes a
+core determinant of task success, efficiency, and governance. Addressing
+it informs the design of enterprise agents, the allocation of human
+oversight, and the evaluation of human–agent systems beyond single-user
+benchmarks.</p>
+<h2 id="background-and-research-gap">2. Background and Research Gap</h2>
+<p><strong>Human–agent collaboration.</strong> Fully autonomous agents
+remain unreliable on complex workplace tasks. In a simulated software
+company, the strongest agent completed about 30% of tasks (Xu et al.,
+2025). This has motivated <em>conditional automation</em>, in which
+humans intervene only at critical steps. ReHAC (Feng et al., 2024)
+formulates human intervention as a sequential decision problem and
+learns a policy that trades off task reward against the number of
+interventions. Related work studies proactive clarification (Wang et
+al., 2025) and benchmarks with configurable human participation (Shao et
+al., 2024; Wu et al., 2026). These approaches model the human as a
+<strong>single, homogeneous collaborator</strong>.</p>
+<p><strong>Multi-user and multi-principal agents.</strong> Recent work
+formalizes the <em>multiple principal–agent scenario</em>. In it, an
+agent serves a principal set in which each principal holds a private
+context and an authority level. This work shows that frontier LLMs
+struggle with conflicting instructions, privacy preservation, and
+coordination (Yang et al., 2026). Complementary systems enforce
+role-based permissions (Fan et al., 2026) and access-controlled memory
+(Rezazadeh et al., 2025). These studies address a
+<strong>reactive</strong> question: how should an agent respond to
+instructions from multiple principals?</p>
+<p><strong>Deferral to multiple experts.</strong> Multi-expert
+learning-to-defer allocates predictions among experts under cost and
+workload constraints (Alves et al., 2024; Montreuil et al., 2026). It
+operates on single-step classification, and it characterizes experts
+only by accuracy and cost.</p>
+<p><strong>Human–agent teaming.</strong> Human factors research
+characterizes human–agent teams along structural dimensions. Chung et
+al. (2024) adapt a human–human team classification to nine dimensions:
+team composition, task interdependence, role structure, leadership
+structure, authority differentiation, communication structure,
+communication direction, communication medium, and team life span.
+Applying the scheme to 25 testbeds from 68 empirical studies, they find
+that most research examines teams of one human and one agent with human
+leadership and static structure. Multi-human teams that share an agent
+remain understudied.</p>
+<p><strong>Gap.</strong> No existing work addresses the
+<strong>proactive</strong> counterpart of the multi-principal problem in
+multi-step, interactive tasks: <em>when the agent lacks the information
+or authority to proceed, which principal should it consult?</em> Three
+properties distinguish this problem from single-human deferral: 1.
+<strong>Information asymmetry.</strong> Knowledge is distributed across
+principals. 2. <strong>Authority asymmetry.</strong> A correct answer
+from an unauthorized principal is insufficient. 3. <strong>Heterogeneous
+interruption costs.</strong> Consulting different principals carries
+different costs.</p>
+<h2 id="research-questions">3. Research Questions</h2>
+<ul>
+<li><strong>RQ1 (Characterization).</strong> How prevalent are
+help-seeking failures among current LLM agents in enterprise tasks, and
+what forms do they take? Examples include consulting the wrong
+principal, omitting a needed consultation, and failing to act on a
+response.</li>
+<li><strong>RQ2 (Representation).</strong> Does explicit role
+information about collaborators (knowledge, authority, cost) improve
+help-seeking, and does its effect depend on whether knowledge and
+authority reside in the same principal?</li>
+<li><strong>RQ3 (Adaptation).</strong> Do LLM agents adapt their
+help-seeking appropriately to interruption costs and authority
+constraints, relative to an oracle policy?</li>
+<li><strong>RQ4 (Learning).</strong> Can a learned policy that jointly
+decides <em>when</em> and <em>whom</em> to ask outperform
+prompting-based help-seeking, and does it generalize to unseen
+organizational structures?</li>
+<li><strong>RQ5 (Team structure).</strong> Do properties of the
+human–agent team moderate help-seeking behavior and its effectiveness?
+The properties considered are task interdependence, team life span, and
+communication structure. <em>We hypothesize that sequential
+interdependence and short-lived teams increase help-seeking errors, and
+that persistent teams allow agents to learn role profiles from
+interaction history.</em></li>
+</ul>
+<h2 id="methodology">4. Methodology</h2>
+<p><strong>Formulation.</strong> We model help-seeking as a Markov
+decision process. - At each step, the agent either acts autonomously or
+sends a query to a principal uᵢ. - Each principal has a role profile Pᵢ
+= ⟨knowledge, authority, interruption cost, availability, reliability⟩.
+- The objective balances task success T against cumulative interruption
+cost, authority violations, and uninformative queries:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mo>=</mo><mi>T</mi><mo>−</mo><mi>λ</mi><munder><mo>∑</mo><mi>t</mi></munder><msub><mi>c</mi><msub><mi>u</mi><mi>t</mi></msub></msub><mo>−</mo><mi>μ</mi><msub><mi>N</mi><mtext mathvariant="normal">auth</mtext></msub><mo>−</mo><mi>ν</mi><msub><mi>N</mi><mtext mathvariant="normal">waste</mtext></msub></mrow><annotation encoding="application/x-tex">R = T - \lambda \sum_t c_{u_t} - \mu N_{\text{auth}} - \nu N_{\text{waste}}</annotation></semantics></math></p>
+<p>This generalizes the single-human formulation of ReHAC, which is the
+case N = 1 with uniform cost. Authority is encoded at the level of
+actions and information items rather than as a single per-person label.
+For example, a principal may approve a budget but may not access
+personnel records. The evaluator determines whether each approval is
+valid.</p>
+<p><strong>Team configuration.</strong> We specify the environment using
+the nine-dimension team classification scheme of Chung et al. (2024).
+This makes explicit the class of teams to which our findings apply.</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Configuration in this study</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Team composition</td>
+<td>Multiple humans, one agent</td>
+</tr>
+<tr>
+<td>Task interdependence</td>
+<td>Independent information requests, or sequential (consult an
+informant, then an approver)</td>
+</tr>
+<tr>
+<td>Role structure</td>
+<td>Functionally differentiated (e.g., engineering, product, HR,
+finance)</td>
+</tr>
+<tr>
+<td>Leadership structure</td>
+<td>No designated coordinator; the agent selects collaborators</td>
+</tr>
+<tr>
+<td>Authority differentiation</td>
+<td>Action-level authority (who may approve which actions)</td>
+</tr>
+<tr>
+<td>Communication structure</td>
+<td>Agent-to-individual, one principal at a time (Studies 1–3)</td>
+</tr>
+<tr>
+<td>Communication direction</td>
+<td>Agent-initiated</td>
+</tr>
+<tr>
+<td>Communication medium</td>
+<td>Text chat</td>
+</tr>
+<tr>
+<td>Team life span</td>
+<td>Single-task (Studies 1–3); persistent team (later work)</td>
+</tr>
+</tbody>
+</table>
+<p>Studies 1–4 hold the team structure fixed at the configuration above.
+The only structural factor they manipulate is whether knowledge and
+authority reside in the same principal. Fixing the structure keeps
+simulation and interpretation tractable, and it scopes the claims of the
+early papers to this class of teams. Team structure itself is examined
+in Study 5.</p>
+<p><strong>Environment and data.</strong> The study builds on
+TheAgentCompany (Xu et al., 2025), a public simulation of a software
+company. - It includes LLM-simulated colleagues with defined roles, such
+as CTO, HR manager, finance director, product managers, and engineers. -
+It includes tasks that require information held by specific colleagues.
+- It provides publicly released agent trajectories from multiple
+models.</p>
+<p>We will extend these tasks by manipulating the <strong>alignment of
+knowledge and authority</strong>: whether the information and the
+approval rights a task requires reside in the same principal or in
+different principals. We will also add distractor principals: colleagues
+who are knowledgeable but unauthorized, authorized but uninformed, or
+adequate but costly to consult. For each task we specify the set of
+<strong>valid help-seeking paths</strong> (for example, consulting an
+informant and then an approver), which enables rule-based evaluation. To
+assess generality, organizational metadata from EnterpriseBench
+(Vishwakarma et al., 2025) will be used to construct additional
+organizations.</p>
+<p><strong>Study 1: Characterization (RQ1).</strong> - Annotate
+help-seeking events in the public trajectories using a coding scheme:
+correct, wrong principal, omitted, no follow-up, redundant. The scheme
+also records who initiated each exchange, the role of the consulted
+principal, and whether the task required subsequent approval. -
+Annotation is LLM-assisted. Following the procedure of Chung et
+al. (2024), two researchers independently code a subset and resolve
+disagreements through discussion; we report inter-annotator agreement. -
+Analyses relate error types to task outcomes and compare models.</p>
+<p><strong>Study 2: Role-information ablation (RQ2).</strong> - Evaluate
+several open and proprietary LLMs in a design that crosses role
+information (names only / natural-language role descriptions /
+structured role profiles) with knowledge–authority alignment (aligned /
+separated). - Primary outcomes: task success, <strong>path
+validity</strong> (whether the agent followed a valid help-seeking
+path), <strong>approval validity</strong>, number of queries, and
+cumulative interruption cost. First-query accuracy is reported as a
+secondary measure, because a valid path may consult an informant before
+an approver.</p>
+<p><strong>Study 3: Cost and authority sensitivity (RQ3).</strong> -
+Systematically vary interruption costs and authority penalties. -
+Compare agent behavior with an oracle policy derived from the
+ground-truth task specification. - Report regret and success–cost
+trade-off curves.</p>
+<p><strong>Study 4: Learned policy (RQ4).</strong> - Collect
+trajectories under randomized help-seeking assignments. - Train a
+lightweight open-weight policy model with offline reinforcement
+learning. - Baselines: prompting, sequential when-then-whom decisions,
+adapted multi-expert deferral, and the oracle. - Generalization is
+tested on held-out organizational structures.</p>
+<p><strong>Study 5: Team structure as a moderator (RQ5).</strong> - Vary
+one structural dimension at a time, building on the environment and
+metrics of Studies 1–3: - task interdependence: independent
+vs. sequential; - team life span: single-task vs. persistent; -
+communication structure: one-to-one vs. broadcast. - Each variant
+requires its own scenario specification and valid-path definitions. This
+is why the study is scoped as separate work.</p>
+<p><strong>Risks and mitigation.</strong> - <em>Validity of simulated
+colleagues.</em> LLM-simulated colleagues may not reflect human
+behavior. Their responses will be constrained by task specifications,
+and a later human-participant study will validate key findings. -
+<em>Assumed costs.</em> Interruption costs are assumed rather than
+measured. Sensitivity analyses will test whether conclusions hold across
+cost settings. - <em>Limited trajectory coverage.</em> If public
+trajectories cover too few help-seeking events, Study 1 will be
+supplemented with newly collected trajectories.</p>
+<p><strong>Ethics.</strong> Studies 1–4 use only public resources and
+simulated users. A future human-participant study would require research
+ethics board approval.</p>
+<h2 id="expected-contributions">5. Expected Contributions</h2>
+<ol type="1">
+<li>A <strong>formal problem definition</strong> of role-aware
+help-seeking in multi-user LLM agent systems, which generalizes
+single-human deferral to heterogeneous principals.</li>
+<li>A <strong>specification of the help-seeking environment</strong>
+grounded in an established human–agent team taxonomy, extended with
+action-level authority and valid help-seeking paths.</li>
+<li><strong>Empirical evidence</strong> on the prevalence and forms of
+help-seeking failures in current agents.</li>
+<li>An <strong>evaluation environment</strong> with distractor
+principals and rule-based metrics for principal selection.</li>
+<li>A <strong>comparative analysis</strong> of how LLMs use role
+information and respond to cost and authority constraints.</li>
+<li>A <strong>learned help-seeking policy</strong>, together with an
+analysis of its generalization across organizational structures.</li>
+</ol>
+<h2 id="planned-outputs">6. Planned Outputs</h2>
+<p>The research is organized as a sequence of papers. Each paper has a
+self-contained scope.</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Paper</th>
+<th>Research questions</th>
+<th>Treatment of team structure</th>
+<th>Candidate venues</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Characterizing role-aware help-seeking</td>
+<td>RQ1–RQ3 (Studies 1–3)</td>
+<td>Fixed; knowledge–authority alignment manipulated</td>
+<td>Workshop version (AAAI-27 Workshop on Human-AI Collaboration); full
+version at ACL/EMNLP</td>
+</tr>
+<tr>
+<td>2. Learning when and whom to ask</td>
+<td>RQ4 (Study 4)</td>
+<td>Fixed; role compositions vary</td>
+<td>ACL/EMNLP, NeurIPS</td>
+</tr>
+<tr>
+<td>3. Team structure and help-seeking</td>
+<td>RQ5 (Study 5)</td>
+<td>Independent variable</td>
+<td>HFES, CSCW</td>
+</tr>
+<tr>
+<td>4. Human-participant validation</td>
+<td>Key findings of Papers 1–3</td>
+<td>Real teams</td>
+<td>CHI, CSCW</td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References</h2>
+<p>Alves, J. V., Leitão, D., Jesus, S., Sampaio, M. O. P., Liébana, J.,
+Saleiro, P., et al. (2024). <em>Cost-sensitive learning to defer to
+multiple experts with workload constraints</em> (arXiv:2403.06906).
+arXiv. https://doi.org/10.48550/arXiv.2403.06906</p>
+<p>Chung, H., Holder, T., Shah, J., &amp; Yang, X. J. (2024). Developing
+a team classification scheme for human-agent teaming. <em>Proceedings of
+the Human Factors and Ergonomics Society Annual Meeting, 68</em>(1),
+1394–1399. https://doi.org/10.1177/10711813241260387</p>
+<p>Fan, W., Nie, X., &amp; Dai, Z. (2026). <em>Harness-MU: A safe,
+governed, and effective harness for multi-user LLM agents</em>
+(arXiv:2606.21856). arXiv. https://doi.org/10.48550/arXiv.2606.21856</p>
+<p>Feng, X., Chen, Z.-Y., Qin, Y., Lin, Y., Chen, X., Liu, Z., &amp;
+Wen, J.-R. (2024). Large language model-based human-agent collaboration
+for complex task solving. In <em>Findings of the Association for
+Computational Linguistics: EMNLP 2024</em> (pp. 1336–1357). Association
+for Computational Linguistics.
+https://doi.org/10.18653/v1/2024.findings-emnlp.72</p>
+<p>Montreuil, Y., Carlier, A., Ng, L. X., &amp; Ooi, W. T. (2026). Why
+ask one when you can ask <em>k</em>? Learning-to-defer to the
+top-<em>k</em> experts. In <em>Proceedings of the International
+Conference on Learning Representations (ICLR 2026)</em>.
+https://doi.org/10.48550/arXiv.2504.12988</p>
+<p>Rezazadeh, A., Li, Z., Lou, A., Zhao, Y., Wei, W., &amp; Bao, Y.
+(2025). <em>Collaborative memory: Multi-user memory sharing in LLM
+agents with dynamic access control</em> (arXiv:2505.18279). arXiv.
+https://doi.org/10.48550/arXiv.2505.18279</p>
+<p>Shao, Y., Samuel, V., Jiang, Y., Yang, J., &amp; Yang, D. (2024).
+<em>Collaborative Gym: A framework for enabling and evaluating
+human-agent collaboration</em> (arXiv:2412.15701). arXiv.
+https://doi.org/10.48550/arXiv.2412.15701</p>
+<p>Vishwakarma, H., Agarwal, A., Patil, O., Devaguptapu, C., &amp;
+Chandran, M. (2025). Can LLMs help you at work? A sandbox for evaluating
+LLM agents in enterprise environments. In <em>Proceedings of the 2025
+Conference on Empirical Methods in Natural Language Processing</em>.
+Association for Computational Linguistics.
+https://doi.org/10.48550/arXiv.2510.27287</p>
+<p>Wang, W., Shi, J., Ling, Z., Chan, Y.-K., Wang, C., Lee, C., et
+al. (2025). Learning to ask: When LLM agents meet unclear instruction.
+In <em>Proceedings of the 2025 Conference on Empirical Methods in
+Natural Language Processing</em>. Association for Computational
+Linguistics. https://aclanthology.org/2025.emnlp-main.1104/</p>
+<p>Wu, Y., Huang, W.-X., Guo, J., Li, D., &amp; Jiang, R. (2026).
+<em>HAS-Bench: Evaluating LLM-based human-agent systems under
+configurable human participation</em> (arXiv:2607.04329). arXiv.
+https://doi.org/10.48550/arXiv.2607.04329</p>
+<p>Xu, F. F., Song, Y., Li, B., Tang, Y., Jain, K., Bao, M., et
+al. (2025). TheAgentCompany: Benchmarking LLM agents on consequential
+real world tasks. In <em>Advances in Neural Information Processing
+Systems 38: Datasets and Benchmarks Track</em>.
+https://doi.org/10.48550/arXiv.2412.14161</p>
+<p>Yang, S., Zhu, S., Zhu, H., Enríquez, J. R., Wang, D., Pentland, A.,
+et al. (2026). <em>Multi-user large language model agents</em>
+(arXiv:2604.08567). arXiv. https://doi.org/10.48550/arXiv.2604.08567</p>
+</body>
+</html>
