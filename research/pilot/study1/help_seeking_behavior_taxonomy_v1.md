@@ -100,17 +100,20 @@ The 457 transcript-confirmed messages recover most, but not all, recipient sets 
 
 ## Cross-source and language scope
 
+The trajectory labels are now being connected to a separate, literature- and industry-informed framework. That synthesis distinguishes **team structure** (macro context), **help/coordination episodes** (interaction purpose, trigger, recipient, timing, response and uptake), and **workflow control** (who delegates, approves, or owns the decision). It adapts the established HAT structural dimensions while adding episode types such as fact seeking, clarification, expertise consultation, approval, blocker removal, coordination, escalation, and notification. See `literature_industry_help_modes_synthesis_v1.md` for the source review and crosswalk from current TAC labels. This is a candidate integrated codebook; it still requires contextual annotation and revision.
+
 The agreed Study 1 taxonomy can be applied to TAC, HiL-Bench, and AskBench traces, but each source must retain its own task relation and responder structure. HiL-Bench and AskBench use a generic human/user response rather than an organizational roster, so they can inform help timing, clarification, question quality, reply use, and outcome patterns; they cannot validate coworker recipient selection.
 
 The current TAC sample is English-language. It supports a **multi-model / multi-configuration** comparison, not a multilingual comparison. If “Multilingual” means cross-language behavior literally, that is a different research question and requires non-English tasks and traces.
 
 ## Next annotation steps
 
-1. Manually inspect the 19 recipient-set discrepancy episodes and reconcile the message-to-recipient parser.
-2. Contextually adjudicate a stratified pilot of message events (including each task-relation type, message-function type, and model configuration); revise the codebook once.
-3. Add task-level opportunity/trigger and recipient evidence to the pilot; only then freeze eligible tasks and episode labels.
-4. Expand to the full TAC panel. Keep message-function distributions descriptive; test model differences on matched task-level rates, and report uncertainty and sparse cells.
-5. Generate and annotate HiL-Bench / AskBench trajectories only if cross-source trajectory patterns remain a claim in the paper; task records alone do not provide behavior traces.
+1. Use the literature/industry synthesis to freeze a versioned integrated codebook, while keeping structural labels separate from episode labels.
+2. Manually inspect the 19 recipient-set discrepancy episodes and reconcile the message-to-recipient parser.
+3. Contextually adjudicate a stratified pilot of message events (including each task-relation type, episode mode, and model configuration); revise the codebook once.
+4. Add task-level opportunity/trigger, recipient justification, reply quality and uptake evidence to the pilot; only then freeze eligible episodes.
+5. Expand to the full TAC panel. Keep descriptive counts separate from rates; compare configurations on matched task-level opportunities and report uncertainty/sparse cells.
+6. Generate and annotate HiL-Bench / AskBench trajectories only if cross-source trajectory patterns remain a claim in the paper; task records alone do not provide behavior traces.
 
 
 
