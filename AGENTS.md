@@ -37,3 +37,4 @@
 | Broad Research folder | Broad Research/ | agent_failure_survey, hai_enterprise_survey (.md+.html), plus HTML views of who_to_ask_survey / hypotheses / related_work_patterns; user needs these HTMLs — never delete |
 | Archive folder | archive/ | superseded proposal versions; user said do NOT delete |
 | Publication plan | 06_Publication_Plan_20261023-1921.md | 4 papers + workshop; deadlines marked confirmed/estimated |
+| GitHub repo (private) | https://github.com/Shuboya1030/partimephd | personal account Shuboya1030; memory.md renamed to AGENTS.md (2026-10-23) |
