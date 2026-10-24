@@ -38,3 +38,5 @@
 | Archive folder | archive/ | superseded proposal versions; user said do NOT delete |
 | Publication plan | 06_Publication_Plan_20261023-1921.md | 4 papers + workshop; deadlines marked confirmed/estimated |
 | GitHub repo (private) | https://github.com/Shuboya1030/partimephd | personal account Shuboya1030; memory.md renamed to AGENTS.md (2026-10-23) |
+
+| Paper 0 workshop brainstorm | 07_Paper_0_Brainstorm_20261023.md | Discussion draft; not a finalized protocol |
