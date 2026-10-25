@@ -38,3 +38,4 @@
 | Archive folder | archive/ | superseded proposal versions; user said do NOT delete |
 | Publication plan | 06_Publication_Plan_20261023-1921.md | 4 papers + workshop; deadlines marked confirmed/estimated |
 | GitHub repo (private) | https://github.com/Shuboya1030/partimephd | personal account Shuboya1030; memory.md renamed to AGENTS.md (2026-10-23) |
+| Study 1 design | 07_Study1_Design_20261023-2053.md | inputs/outputs, formal defs, mixed-effects + checkpoint-level analysis |
