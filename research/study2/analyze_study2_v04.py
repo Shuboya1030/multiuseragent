@@ -9,6 +9,7 @@ ROOT = Path(__file__).resolve().parent
 DER = ROOT / "derived"
 RUNS = ROOT / "runs.jsonl"
 OUTCOMES = [
+    ("total_tokens", "Input + output tokens per episode"),
     ("strict_first_information_step_valid", "Strict first information step"),
     ("valid_path", "Valid path completion"),
     ("task_score_T", "Task score T"),
@@ -27,6 +28,7 @@ def read_jsonl(p):
 def mean(xs): return sum(xs)/len(xs) if xs else float("nan")
 def template(task_id): return task_id.removeprefix("S2_").removesuffix("_aligned").removesuffix("_separated")
 def num(r,k):
+    if k=="total_tokens":return float(r.get("input_tokens",0) or 0)+float(r.get("output_tokens",0) or 0)
     v=r.get(k)
     return float(bool(v)) if isinstance(v,bool) else float(v or 0)
 def write_csv(path, rows):
@@ -117,6 +119,13 @@ def main():
         {"model":m,"condition":c,"n_episodes":len(g),"mean_profile_char_count":mean([int(x.get("profile_char_count",0)) for x in g]),"min_chars":min(int(x.get("profile_char_count",0)) for x in g),"max_chars":max(int(x.get("profile_char_count",0)) for x in g)}
         for (m,c),g in sorted(_group(rows,lambda r:(r["model_id"],r["profile_condition"])).items())
     ])
+    token_rows=[]
+    for c in ("R0","R1","R2"):
+        g=[r for r in rows if r["profile_condition"]==c]
+        n_success=sum(bool(r.get("valid_path_recomputed")) for r in g)
+        total=sum(num(r,"total_tokens") for r in g)
+        token_rows.append({"condition":c,"n_episodes":len(g),"task_successes":n_success,"task_success_rate":n_success/len(g),"mean_input_tokens_per_episode":mean([float(r.get("input_tokens",0) or 0) for r in g]),"mean_output_tokens_per_episode":mean([float(r.get("output_tokens",0) or 0) for r in g]),"mean_total_tokens_per_episode":mean([num(r,"total_tokens") for r in g]),"median_total_tokens_per_episode":sorted(num(r,"total_tokens") for r in g)[len(g)//2],"aggregate_tokens_per_success":total/n_success if n_success else float("nan"),"mean_total_tokens_among_successes":mean([num(r,"total_tokens") for r in g if r.get("valid_path_recomputed")])})
+    write_csv(DER/"study2_v04_token_costs.csv",token_rows)
     write_csv(DER/"study2_v04_cell_summary.csv",[
         {"model":m,"alignment":a,"condition":c,"template_origin":o,"n_episodes":len(g),**{k:mean([num(x,k) for x in g]) for k,_ in OUTCOMES}}
         for (m,a,c,o),g in sorted(_group(rows,lambda r:(r["model_id"],r["alignment"],r["profile_condition"],r["template_origin"])).items())
@@ -165,6 +174,12 @@ def main():
       if r["model"]=="fixed_model_average" and r["alignment"]=="all" and r["outcome"] in ("strict_first_information_step_valid","valid_path","task_score_T","reward_R","total_cost","N_auth_recomputed","N_knowledge_miss"):
        adj=(f'; Holm-adjusted p={r["holm_p_primary_family"]:.4f}' if "holm_p_primary_family" in r else "")
        md.append(f'- {r["outcome_label"]}, {r["contrast"]}: {r["mean_difference"]:+.3f} (95% CI {r["ci_low"]:+.3f} to {r["ci_high"]:+.3f}; {r["n_template_clusters"]} templates; Monte Carlo sign-flip p={r["signflip_p_mc"]:.4f}{adj}).')
+    md += ["", "## Token use (input plus output tokens)", "", "Token counts are summed over every model call in an episode. They are a usage measure, not billed-dollar cost; this Codex CLI run does not provide a comparable monetary price.", ""]
+    for r in token_rows:
+       md.append(f'- {r["condition"]}: mean {r["mean_total_tokens_per_episode"]:,.0f} tokens/episode; {r["task_successes"]}/{r["n_episodes"]} valid-path successes; {r["aggregate_tokens_per_success"]:,.0f} aggregate tokens per successful task.')
+    for r in res:
+       if r["model"]=="fixed_model_average" and r["alignment"]=="all" and r["outcome"]=="total_tokens":
+          md.append(f'- {r["contrast"]}: {r["mean_difference"]:,.0f} tokens/episode (95% CI {r["ci_low"]:,.0f} to {r["ci_high"]:,.0f}; template-cluster bootstrap).')
     md += ["", "## Model-stratified estimates", "", "These describe two fixed model configurations, not a comparison of model families.", ""]
     for r in res:
       if r["model"]!="fixed_model_average" and r["alignment"]=="all" and r["outcome"] in ("strict_first_information_step_valid","valid_path","task_score_T","reward_R","total_cost","N_auth_recomputed","N_knowledge_miss"):
@@ -178,7 +193,7 @@ def main():
     def sha256(path):return hashlib.sha256(path.read_bytes()).hexdigest()
     try:commit=subprocess.run(["git","rev-parse","HEAD"],cwd=ROOT,check=True,capture_output=True,text=True).stdout.strip()
     except Exception:commit="unavailable"
-    manifest={"generated_at_utc":datetime.now(timezone.utc).isoformat(),"code_commit_at_analysis":commit,"working_tree_changes_at_analysis":True,"task_version":"0.4","profile_version":"profile-0.4","prompt_version":"S2-prompt-0.3","n_episodes":len(rows),"n_templates":len({template(r['task_id']) for r in rows}),"models":models,"model_cli_versions":sorted({r.get("codex_cli_version","unknown") for r in rows}),"conditions":["R0","R1","R2"],"reps":1,"seed":20261024,"analysis_script":"analyze_study2_v04.py","primary_outcomes":["strict_first_information_step_valid","valid_path_recomputed","task_score_recomputed"],"cluster_bootstrap_draws":20000,"signflip_monte_carlo_draws":50000,"multiple_testing":"Holm across 6 fixed-model-average primary contrasts","no_reward_weight_sensitivity_scan":True,"sha256_task_blueprints_v0_4":sha256(ROOT/"task_blueprints_v0.4.jsonl"),"sha256_analysis_script":sha256(ROOT/"analyze_study2_v04.py"),"sha256_protocol":sha256(ROOT/"confirmatory_extension_protocol_v0.2.md"),"sha256_raw_runs":sha256(RUNS),"sha256_raw_events":sha256(ROOT/"events.jsonl"),"sha256_trace_recomputed_metrics":sha256(DER/"run_level_metrics_all.jsonl")}
+    manifest={"generated_at_utc":datetime.now(timezone.utc).isoformat(),"code_commit_at_analysis":commit,"working_tree_changes_at_analysis":True,"task_version":"0.4","profile_version":"profile-0.4","prompt_version":"S2-prompt-0.3","n_episodes":len(rows),"n_templates":len({template(r['task_id']) for r in rows}),"models":models,"model_cli_versions":sorted({r.get("codex_cli_version","unknown") for r in rows}),"conditions":["R0","R1","R2"],"reps":1,"seed":20261024,"analysis_script":"analyze_study2_v04.py","primary_outcomes":["strict_first_information_step_valid","valid_path_recomputed","task_score_recomputed"],"secondary_resource_outcome":"sum(input_tokens, output_tokens) across calls in each episode; usage proxy, not billed-dollar cost","cluster_bootstrap_draws":20000,"signflip_monte_carlo_draws":50000,"multiple_testing":"Holm across 6 fixed-model-average primary contrasts","no_reward_weight_sensitivity_scan":True,"sha256_task_blueprints_v0_4":sha256(ROOT/"task_blueprints_v0.4.jsonl"),"sha256_analysis_script":sha256(ROOT/"analyze_study2_v04.py"),"sha256_protocol":sha256(ROOT/"confirmatory_extension_protocol_v0.2.md"),"sha256_raw_runs":sha256(RUNS),"sha256_raw_events":sha256(ROOT/"events.jsonl"),"sha256_trace_recomputed_metrics":sha256(DER/"run_level_metrics_all.jsonl")}
     (DER/"study2_v04_analysis_manifest.json").write_text(json.dumps(manifest,indent=2),encoding="utf-8")
     print(f"Analyzed {len(rows)} v0.4 episodes across {len(tasks)} task variants; wrote contrast tables, report and SVG figures.")
 

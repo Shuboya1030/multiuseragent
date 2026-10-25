@@ -3,17 +3,17 @@
 <text x="30" y="32" font-family="Arial" font-size="21" font-weight="bold">Study 2 v0.4: error and interaction changes, R1 minus R0</text>
 <line x1="680.0" y1="58" x2="680.0" y2="260" stroke="#666" stroke-dasharray="4 4"/>
 <text x="28" y="83" font-family="Arial" font-size="13">fixed_model_average · R1-R0 · Knowledge misses</text>
-<line x1="489.2" y1="78" x2="589.5" y2="78" stroke="#2463a6" stroke-width="2"/>
-<line x1="489.2" y1="73" x2="489.2" y2="83" stroke="#2463a6"/>
-<line x1="589.5" y1="73" x2="589.5" y2="83" stroke="#2463a6"/>
-<circle cx="540.2" cy="78" r="4.5" fill="#d35400"/>
-<text x="597.5" y="82" font-family="Arial" font-size="11">-1.52</text>
+<line x1="488.8" y1="78" x2="590.1" y2="78" stroke="#2463a6" stroke-width="2"/>
+<line x1="488.8" y1="73" x2="488.8" y2="83" stroke="#2463a6"/>
+<line x1="590.1" y1="73" x2="590.1" y2="83" stroke="#2463a6"/>
+<circle cx="541.1" cy="78" r="4.5" fill="#d35400"/>
+<text x="598.1" y="82" font-family="Arial" font-size="11">-1.52</text>
 <text x="28" y="121" font-family="Arial" font-size="13">fixed_model_average · R1-R0 · Unauthorized approval attempts</text>
-<line x1="533.6" y1="116" x2="566.5" y2="116" stroke="#2463a6" stroke-width="2"/>
-<line x1="533.6" y1="111" x2="533.6" y2="121" stroke="#2463a6"/>
-<line x1="566.5" y1="111" x2="566.5" y2="121" stroke="#2463a6"/>
-<circle cx="550.1" cy="116" r="4.5" fill="#d35400"/>
-<text x="574.5" y="120" font-family="Arial" font-size="11">-1.41</text>
+<line x1="534.6" y1="116" x2="567.3" y2="116" stroke="#2463a6" stroke-width="2"/>
+<line x1="534.6" y1="111" x2="534.6" y2="121" stroke="#2463a6"/>
+<line x1="567.3" y1="111" x2="567.3" y2="121" stroke="#2463a6"/>
+<circle cx="550.9" cy="116" r="4.5" fill="#d35400"/>
+<text x="575.3" y="120" font-family="Arial" font-size="11">-1.41</text>
 <text x="28" y="159" font-family="Arial" font-size="13">fixed_model_average · R1-R0 · Premature approval requests</text>
 <line x1="680.0" y1="154" x2="680.0" y2="154" stroke="#2463a6" stroke-width="2"/>
 <line x1="680.0" y1="149" x2="680.0" y2="159" stroke="#2463a6"/>
@@ -21,16 +21,16 @@
 <circle cx="680.0" cy="154" r="4.5" fill="#d35400"/>
 <text x="688.0" y="158" font-family="Arial" font-size="11">+0.00</text>
 <text x="28" y="197" font-family="Arial" font-size="13">fixed_model_average · R1-R0 · Repeated requests</text>
-<line x1="599.4" y1="192" x2="676.7" y2="192" stroke="#2463a6" stroke-width="2"/>
-<line x1="599.4" y1="187" x2="599.4" y2="197" stroke="#2463a6"/>
+<line x1="599.9" y1="192" x2="676.7" y2="192" stroke="#2463a6" stroke-width="2"/>
+<line x1="599.9" y1="187" x2="599.9" y2="197" stroke="#2463a6"/>
 <line x1="676.7" y1="187" x2="676.7" y2="197" stroke="#2463a6"/>
-<circle cx="643.8" cy="192" r="4.5" fill="#d35400"/>
+<circle cx="644.1" cy="192" r="4.5" fill="#d35400"/>
 <text x="684.7" y="196" font-family="Arial" font-size="11">-0.39</text>
 <text x="28" y="235" font-family="Arial" font-size="13">fixed_model_average · R1-R0 · Unhelpful requests</text>
-<line x1="430.0" y1="230" x2="576.4" y2="230" stroke="#2463a6" stroke-width="2"/>
+<line x1="430.0" y1="230" x2="577.1" y2="230" stroke="#2463a6" stroke-width="2"/>
 <line x1="430.0" y1="225" x2="430.0" y2="235" stroke="#2463a6"/>
-<line x1="576.4" y1="225" x2="576.4" y2="235" stroke="#2463a6"/>
-<circle cx="508.9" cy="230" r="4.5" fill="#d35400"/>
-<text x="584.4" y="234" font-family="Arial" font-size="11">-1.86</text>
+<line x1="577.1" y1="225" x2="577.1" y2="235" stroke="#2463a6"/>
+<circle cx="510.1" cy="230" r="4.5" fill="#d35400"/>
+<text x="585.1" y="234" font-family="Arial" font-size="11">-1.86</text>
 <text x="390" y="277" font-family="Arial" font-size="11">← negative contrast · zero reference · positive contrast →</text>
 </svg>

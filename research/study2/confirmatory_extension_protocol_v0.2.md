@@ -27,7 +27,7 @@ Primary behavioral outcomes:
 2. Valid-path completion: the task fact is obtained and the required authorization is actually granted by an authorized person.
 3. Task score `T` (0, 0.5, or 1).
 
-Secondary outcomes: first request target/purpose match, information and approval request counts, total query cost, knowledge misses, unauthorized approval attempts, premature approval requests, unhelpful requests, repeated requests, final task success, and fixed-composite `R`.
+Secondary outcomes: first request target/purpose match, information and approval request counts, total query cost, knowledge misses, unauthorized approval attempts, premature approval requests, unhelpful requests, repeated requests, final task success, fixed-composite `R`, and aggregate input-plus-output tokens per episode. Token volume is an API-usage proxy, not monetary cost.
 
 The legacy field `first_valid` is not used as the strict first-step measure: it treats an approval-first request as valid when addressed to the approver. The corrected strict outcome is reconstructed from event traces.
 

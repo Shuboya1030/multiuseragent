@@ -12,7 +12,7 @@ Study 2 tests whether role information, and the way it is represented, changes a
 2. **Design and task set:** episode flow, aligned/separated cases, four-candidate profile examples, role-profile information parity, fixed prompts and model configurations.
 3. **Hypotheses:** H2a role facts vs. names; H2b matched structure vs. prose; H2c interaction with aligned/separated configuration; H2d knowledge and authority failure mechanisms.
 4. **Measures:** strict first information-step validity, full valid-path completion, task score T, direct request/cost/error components, with fixed composite R secondary and no weight scan.
-5. **Results:** primary paired contrasts and confidence intervals over workflow-template clusters; model-stratified fixed-configuration estimates; alignment interactions; error-mechanism results; historical duplicate sensitivity; task-template replication vs. extension boundary.
+5. **Results:** primary paired contrasts and confidence intervals over workflow-template clusters; model-stratified fixed-configuration estimates; alignment interactions; error-mechanism results; historical duplicate sensitivity; task-template replication vs. extension boundary; token-use comparison per episode and successful task.
 6. **Limitations:** synthetic rules and NPC replies; fixed costs; small number of independent workflow templates; two fixed model aliases; non-pinned provider versions and unobserved decoding temperature; no real human response variance.
 
 ## Planned figures and tables

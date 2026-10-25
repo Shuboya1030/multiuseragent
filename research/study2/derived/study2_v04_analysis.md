@@ -11,20 +11,30 @@
 
 ## Primary contrasts (fixed-model average)
 
-- Strict first information step, R1-R0: +0.732 (95% CI +0.518 to +0.929; 14 templates; Monte Carlo sign-flip p=0.0003; Holm-adjusted p=0.0020).
+- Strict first information step, R1-R0: +0.732 (95% CI +0.518 to +0.929; 14 templates; Monte Carlo sign-flip p=0.0006; Holm-adjusted p=0.0035).
 - Strict first information step, R2-R1: -0.018 (95% CI -0.054 to +0.000; 14 templates; Monte Carlo sign-flip p=1.0000; Holm-adjusted p=1.0000).
-- Valid path completion, R1-R0: +0.089 (95% CI +0.000 to +0.214; 14 templates; Monte Carlo sign-flip p=0.2500; Holm-adjusted p=1.0000).
+- Valid path completion, R1-R0: +0.089 (95% CI +0.000 to +0.214; 14 templates; Monte Carlo sign-flip p=0.2498; Holm-adjusted p=1.0000).
 - Valid path completion, R2-R1: +0.000 (95% CI +0.000 to +0.000; 14 templates; Monte Carlo sign-flip p=1.0000; Holm-adjusted p=1.0000).
-- Task score T, R1-R0: +0.089 (95% CI +0.000 to +0.214; 14 templates; Monte Carlo sign-flip p=0.2498; Holm-adjusted p=1.0000).
+- Task score T, R1-R0: +0.089 (95% CI +0.000 to +0.214; 14 templates; Monte Carlo sign-flip p=0.2511; Holm-adjusted p=1.0000).
 - Task score T, R2-R1: +0.000 (95% CI +0.000 to +0.000; 14 templates; Monte Carlo sign-flip p=1.0000; Holm-adjusted p=1.0000).
-- Fixed composite R, R1-R0: +0.528 (95% CI +0.376 to +0.713; 14 templates; Monte Carlo sign-flip p=0.0002).
-- Fixed composite R, R2-R1: +0.005 (95% CI -0.003 to +0.017; 14 templates; Monte Carlo sign-flip p=0.7489).
-- Query cost, R1-R0: -3.196 (95% CI -4.089 to -2.375; 14 templates; Monte Carlo sign-flip p=0.0002).
+- Fixed composite R, R1-R0: +0.528 (95% CI +0.374 to +0.717; 14 templates; Monte Carlo sign-flip p=0.0002).
+- Fixed composite R, R2-R1: +0.005 (95% CI -0.003 to +0.017; 14 templates; Monte Carlo sign-flip p=0.7495).
+- Query cost, R1-R0: -3.196 (95% CI -4.071 to -2.393; 14 templates; Monte Carlo sign-flip p=0.0001).
 - Query cost, R2-R1: -0.036 (95% CI -0.161 to +0.054; 14 templates; Monte Carlo sign-flip p=1.0000).
-- Knowledge misses, R1-R0: -1.518 (95% CI -2.071 to -0.982; 14 templates; Monte Carlo sign-flip p=0.0003).
+- Knowledge misses, R1-R0: -1.518 (95% CI -2.089 to -0.982; 14 templates; Monte Carlo sign-flip p=0.0004).
 - Knowledge misses, R2-R1: +0.018 (95% CI +0.000 to +0.054; 14 templates; Monte Carlo sign-flip p=1.0000).
 - Unauthorized approval attempts, R1-R0: -1.411 (95% CI -1.589 to -1.232; 14 templates; Monte Carlo sign-flip p=0.0002).
 - Unauthorized approval attempts, R2-R1: +0.000 (95% CI +0.000 to +0.000; 14 templates; Monte Carlo sign-flip p=1.0000).
+
+## Token use (input plus output tokens)
+
+Token counts are summed over every model call in an episode. They are a usage measure, not billed-dollar cost; this Codex CLI run does not provide a comparable monetary price.
+
+- R0: mean 98,342 tokens/episode; 51/56 valid-path successes; 107,983 aggregate tokens per successful task.
+- R1: mean 49,175 tokens/episode; 56/56 valid-path successes; 49,175 aggregate tokens per successful task.
+- R2: mean 48,852 tokens/episode; 56/56 valid-path successes; 48,852 aggregate tokens per successful task.
+- R1-R0: -49,166 tokens/episode (95% CI -61,895 to -37,018; template-cluster bootstrap).
+- R2-R1: -323 tokens/episode (95% CI -2,435 to 1,276; template-cluster bootstrap).
 
 ## Model-stratified estimates
 
@@ -42,9 +52,9 @@ These describe two fixed model configurations, not a comparison of model familie
 - gpt-5.6-terra, Task score T, R2-R1: +0.000 (95% CI +0.000 to +0.000).
 - gpt-6-luna, Task score T, R1-R0: +0.107 (95% CI +0.000 to +0.214).
 - gpt-6-luna, Task score T, R2-R1: +0.000 (95% CI +0.000 to +0.000).
-- gpt-5.6-terra, Fixed composite R, R1-R0: +0.439 (95% CI +0.283 to +0.659).
+- gpt-5.6-terra, Fixed composite R, R1-R0: +0.439 (95% CI +0.281 to +0.656).
 - gpt-5.6-terra, Fixed composite R, R2-R1: +0.007 (95% CI +0.000 to +0.020).
-- gpt-6-luna, Fixed composite R, R1-R0: +0.617 (95% CI +0.422 to +0.841).
+- gpt-6-luna, Fixed composite R, R1-R0: +0.617 (95% CI +0.422 to +0.834).
 - gpt-6-luna, Fixed composite R, R2-R1: +0.004 (95% CI -0.006 to +0.015).
 - gpt-5.6-terra, Query cost, R1-R0: -2.857 (95% CI -3.929 to -1.929).
 - gpt-5.6-terra, Query cost, R2-R1: -0.071 (95% CI -0.214 to +0.000).
@@ -52,7 +62,7 @@ These describe two fixed model configurations, not a comparison of model familie
 - gpt-6-luna, Query cost, R2-R1: +0.000 (95% CI -0.107 to +0.107).
 - gpt-5.6-terra, Knowledge misses, R1-R0: -1.500 (95% CI -2.143 to -0.893).
 - gpt-5.6-terra, Knowledge misses, R2-R1: +0.000 (95% CI +0.000 to +0.000).
-- gpt-6-luna, Knowledge misses, R1-R0: -1.536 (95% CI -2.107 to -1.000).
+- gpt-6-luna, Knowledge misses, R1-R0: -1.536 (95% CI -2.107 to -1.036).
 - gpt-6-luna, Knowledge misses, R2-R1: +0.036 (95% CI +0.000 to +0.107).
 - gpt-5.6-terra, Unauthorized approval attempts, R1-R0: -1.107 (95% CI -1.429 to -0.821).
 - gpt-5.6-terra, Unauthorized approval attempts, R2-R1: +0.000 (95% CI +0.000 to +0.000).
@@ -67,7 +77,7 @@ These describe two fixed model configurations, not a comparison of model familie
 - Valid path completion, R2-R1, separated-minus-aligned difference-in-differences: +0.000 (95% CI +0.000 to +0.000).
 - Task score T, R1-R0, separated-minus-aligned difference-in-differences: -0.036 (95% CI -0.143 to +0.071).
 - Task score T, R2-R1, separated-minus-aligned difference-in-differences: +0.000 (95% CI +0.000 to +0.000).
-- Fixed composite R, R1-R0, separated-minus-aligned difference-in-differences: -0.022 (95% CI -0.279 to +0.235).
+- Fixed composite R, R1-R0, separated-minus-aligned difference-in-differences: -0.022 (95% CI -0.276 to +0.240).
 - Fixed composite R, R2-R1, separated-minus-aligned difference-in-differences: -0.010 (95% CI -0.035 to +0.005).
 
 ## Interpretation guardrails
