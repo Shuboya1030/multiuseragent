@@ -17,9 +17,8 @@ STUDY = OUT.parents[1]
 DATA = STUDY / "derived" / "run_level_metrics_all.jsonl"
 TASKS = STUDY / "task_blueprints_v0.4.jsonl"
 CONDITIONS = ["R0", "R1", "R2"]
-LABELS = {"R0": "R0 Names", "R1": "R1 Prose", "R2": "R2 Structured"}
-COLORS = {"R0": "#0072B2", "R1": "#E69F00", "R2": "#009E73"}  # Okabe-Ito
-MARKERS = {"R0": "circle", "R1": "square", "R2": "triangle"}
+LABELS = {"R0": "Names only", "R1": "Natural-language roles", "R2": "Structured roles"}
+COLORS = {"R0": "#667085", "R1": "#007C91", "R2": "#C77700"}
 MODELS = ["gpt-5.6-terra", "gpt-6-luna"]
 MODEL_LABELS = {"gpt-5.6-terra": "Terra", "gpt-6-luna": "Luna", "fixed_model_average": "Average"}
 MODEL_COLORS = {"gpt-5.6-terra": "#0072B2", "gpt-6-luna": "#D55E00", "fixed_model_average": "#222222"}
@@ -85,7 +84,7 @@ def ratio_tokens_per_success(rows, condition):
 
 def c(hexcolor): return HexColor(hexcolor)
 
-def add_text(d, x, y, text, size=8, color="#20242A", anchor="start", font="Helvetica", angle=0):
+def add_text(d, x, y, text, size=9, color="#20242A", anchor="start", font="Times-Roman", angle=0):
     d.add(String(x, y, str(text), fontName=font, fontSize=size, fillColor=c(color), textAnchor=anchor, angle=angle))
 
 def line(d, x1, y1, x2, y2, color="#C9CED4", width=.55, dash=None):
@@ -93,12 +92,9 @@ def line(d, x1, y1, x2, y2, color="#C9CED4", width=.55, dash=None):
     if dash: obj.strokeDashArray=dash
     d.add(obj)
 
-def marker(d, x, y, condition, size=3.3):
+def marker(d, x, y, condition, size=4):
     fill=c(COLORS[condition]); stroke=c("#FFFFFF")
-    kind=MARKERS[condition]
-    if kind=="circle": d.add(Circle(x,y,size,fillColor=fill,strokeColor=stroke,strokeWidth=.7))
-    elif kind=="square": d.add(Rect(x-size,y-size,2*size,2*size,fillColor=fill,strokeColor=stroke,strokeWidth=.7))
-    else: d.add(Polygon([x,y+size+0.5,x-size-0.5,y-size,x+size+0.5,y-size],fillColor=fill,strokeColor=stroke,strokeWidth=.7))
+    d.add(Circle(x,y,size,fillColor=fill,strokeColor=stroke,strokeWidth=.8))
 
 def error_point(d, x, y, lo, hi, color, width=1.1, cap=3.2):
     line(d,x,y,x,y,color,width)
@@ -110,23 +106,23 @@ def save(d, stem):
     renderPDF.drawToFile(d, str(OUT / f"{stem}.pdf"), title=stem.replace("_"," "))
     renderSVG.drawToFile(d, str(OUT / f"{stem}.svg"))
 
-def legend(d, x, y, size=8):
+def legend(d, x, y, size=10):
     xx=x
     for cond in CONDITIONS:
-        marker(d,xx,y+2,cond,3)
-        add_text(d,xx+7,y,LABELS[cond],size=size)
-        xx+=82
+        marker(d,xx,y+3,cond,3.4)
+        add_text(d,xx+8,y,LABELS[cond],size=size)
+        xx += {"R0": 105, "R1": 174, "R2": 145}[cond]
 
-def panel_means(d, rows, x, title, metric, bounds, ticks, y_label, seed, value_scale=1, fmt=".0f", panel_w=160, y0=55, y1=202):
-    left=x+34; right=x+panel_w-9; top=y1; bottom=y0
-    add_text(d,(left+right)/2,top+17,title,size=9,anchor="middle",font="Helvetica-Bold")
+def panel_means(d, rows, x, title, metric, bounds, ticks, seed, value_scale=1, panel_w=236, y0=66, y1=268):
+    left=x+48; right=x+panel_w-13; top=y1; bottom=y0
+    add_text(d,(left+right)/2,top+21,title,size=12,anchor="middle",font="Times-Bold")
     ymin,ymax=bounds
     for tick in ticks:
         yy=bottom+(tick-ymin)/(ymax-ymin)*(top-bottom)
-        line(d,left,yy,right,yy,"#E4E7EA",.45)
-        add_text(d,left-5,yy-2.5,f"{tick:g}",size=8,color="#4D555E",anchor="end")
-    line(d,left,bottom,left,top,"#5F6872",.7);line(d,left,bottom,right,bottom,"#5F6872",.7)
-    xpos=[left+13, (left+right)/2, right-13]
+        line(d,left,yy,right,yy,"#E1E4E8",.55)
+        add_text(d,left-7,yy-3,f"{tick:g}",size=9,color="#4D555E",anchor="end")
+    line(d,left,bottom,left,top,"#56606B",.8);line(d,left,bottom,right,bottom,"#56606B",.8)
+    xpos=[left+18, (left+right)/2, right-18]
     for j,cond in enumerate(CONDITIONS):
         est,lo,hi=summarize_condition(rows,cond,metric,seed+j)
         est*=value_scale;lo*=value_scale;hi*=value_scale
@@ -134,18 +130,17 @@ def panel_means(d, rows, x, title, metric, bounds, ticks, y_label, seed, value_s
         yy=bottom+(est-ymin)/(ymax-ymin)*(top-bottom)
         ylo=bottom+(max(ymin,lo)-ymin)/(ymax-ymin)*(top-bottom)
         yhi=bottom+(min(ymax,hi)-ymin)/(ymax-ymin)*(top-bottom)
-        error_point(d,xx,yy,ylo,yhi,COLORS[cond])
-        marker(d,xx,yy,cond,3.6)
-        add_text(d,xx,bottom-15,cond,size=8,anchor="middle",color="#343A40")
-        add_text(d,xx, min(top-10,yy+9),format(est,fmt),size=8,anchor="middle",color=COLORS[cond],font="Helvetica-Bold")
+        error_point(d,xx,yy,ylo,yhi,COLORS[cond],1.3,4)
+        marker(d,xx,yy,cond,4.2)
+        add_text(d,xx,bottom-18,cond,size=10,anchor="middle",color="#343A40")
 
 def fig1(rows):
-    W,H=504,274; d=Drawing(W,H)
-    legend(d,116,H-18,8)
-    panel_means(d,rows,5,"First contact valid (%)","strict_first_information_step_valid",(0,100),[0,25,50,75,100],"",101,value_scale=100,fmt=".0f")
-    panel_means(d,rows,173,"Valid path complete (%)","valid_path_recomputed",(0,100),[0,25,50,75,100],"",201,value_scale=100,fmt=".0f")
-    panel_means(d,rows,341,"Total tokens (thousands)","total_tokens",(0,120),[0,30,60,90,120],"",301,value_scale=.001,fmt=".1f")
-    add_text(d,W/2,13,"Points show condition means; whiskers show 95% workflow-template bootstrap CIs (14 templates).",size=7,color="#555D66",anchor="middle")
+    W,H=720,340; d=Drawing(W,H)
+    legend(d,168,H-28,10)
+    panel_means(d,rows,2,"First-contact validity (%)","strict_first_information_step_valid",(0,100),[0,25,50,75,100],101,value_scale=100)
+    panel_means(d,rows,242,"Valid-path completion (%)","valid_path_recomputed",(0,100),[0,25,50,75,100],201,value_scale=100)
+    panel_means(d,rows,482,"Total tokens per episode (×1,000)","total_tokens",(0,120),[0,30,60,90,120],301,value_scale=.001)
+    add_text(d,W/2,20,"Points = condition means; bars = 95% bootstrap CIs over 14 workflow templates.",size=9,color="#555D66",anchor="middle")
     save(d,"figure_01_profile_effects")
 
 def nice_ticks(ymax):
@@ -155,35 +150,33 @@ def nice_ticks(ymax):
     return [i*step for i in range(int(top/step)+1)]
 
 def fig2(rows):
-    W,H=504,350;d=Drawing(W,H);legend(d,116,H-17,8)
+    W,H=720,470;d=Drawing(W,H);legend(d,168,H-28,10)
     panels=[
         ("Knowledge misses", "N_knowledge_miss", 0),
         ("Unauthorized approval attempts", "N_auth_recomputed", 7),
         ("Repeated requests", "N_repeat_requests", 13),
         ("Unhelpful requests", "N_unhelpful_recomputed", 19),
     ]
-    positions=[(18,183),(263,183),(18,35),(263,35)]
+    positions=[(18,249),(373,249),(18,48),(373,48)]
     for (title,metric,seed),(x,ybase) in zip(panels,positions):
         stats=[summarize_condition(rows,cnd,metric,seed+i) for i,cnd in enumerate(CONDITIONS)]
         ymax=max(hi for _,_,hi in stats)
         if ymax==0:ymax=.5
         ticks=nice_ticks(ymax); ymax=ticks[-1]
-        left=x+37;right=x+224;bottom=ybase+27;top=ybase+112
-        add_text(d,(left+right)/2,top+14,title,size=8.5,anchor="middle",font="Helvetica-Bold")
+        left=x+55;right=x+337;bottom=ybase+42;top=ybase+158
+        add_text(d,(left+right)/2,top+18,title,size=12,anchor="middle",font="Times-Bold")
         for tick in ticks:
             yy=bottom+(tick/ymax)*(top-bottom)
-            line(d,left,yy,right,yy,"#E4E7EA",.45)
-            add_text(d,left-5,yy-2.5,f"{tick:g}",size=8,color="#4D555E",anchor="end")
-        line(d,left,bottom,left,top,"#5F6872",.7);line(d,left,bottom,right,bottom,"#5F6872",.7)
-        xpos=[left+24,(left+right)/2,right-24]
+            line(d,left,yy,right,yy,"#E1E4E8",.55)
+            add_text(d,left-7,yy-3,f"{tick:g}",size=9,color="#4D555E",anchor="end")
+        line(d,left,bottom,left,top,"#56606B",.8);line(d,left,bottom,right,bottom,"#56606B",.8)
+        xpos=[left+35,(left+right)/2,right-35]
         for i,(cond,(est,lo,hi)) in enumerate(zip(CONDITIONS,stats)):
             xx=xpos[i]; yy=bottom+(est/ymax)*(top-bottom)
             ylo=bottom+(max(0,lo)/ymax)*(top-bottom); yhi=bottom+(min(ymax,hi)/ymax)*(top-bottom)
-            error_point(d,xx,yy,ylo,yhi,COLORS[cond]);marker(d,xx,yy,cond,3.3)
-            add_text(d,xx,bottom-14,cond,size=8,anchor="middle",color="#343A40")
-            add_text(d,xx,min(top-9,yy+9),f"{est:.1f}",size=8,anchor="middle",color=COLORS[cond],font="Helvetica-Bold")
-        add_text(d,(left+right)/2,ybase+7,"Mean events per episode",size=8,color="#555D66",anchor="middle")
-    add_text(d,W/2,11,"Whiskers: 95% workflow-template bootstrap CIs; means average across models and both task alignments.",size=8,color="#555D66",anchor="middle")
+            error_point(d,xx,yy,ylo,yhi,COLORS[cond],1.3,4);marker(d,xx,yy,cond,4.2)
+            add_text(d,xx,bottom-19,cond,size=10,anchor="middle",color="#343A40")
+    add_text(d,W/2,18,"Means average across two fixed models and both task alignments; intervals resample workflow templates.",size=9,color="#555D66",anchor="middle")
     save(d,"figure_02_help_seeking_errors")
 
 def contrast_by_model(rows, high, low, model):
@@ -191,24 +184,24 @@ def contrast_by_model(rows, high, low, model):
     return boot_mean(vals,20264100 + MODELS.index(model) + (0 if high=="R1" else 20))
 
 def fig3(rows):
-    W,H=504,276;d=Drawing(W,H)
+    W,H=720,350;d=Drawing(W,H)
     panels=[
         ("Role facts vs. names (R1 - R0)","R1","R0",-75,5,[-60,-40,-20,0]),
         ("Structured vs. prose (R2 - R1)","R2","R1",-6,6,[-6,-3,0,3,6]),
     ]
     for p,(title,high,low,xmin,xmax,ticks) in enumerate(panels):
-        x=12+p*250; left=x+70;right=x+238;top=219;bottom=59
-        add_text(d,(left+right)/2,top+22,title,size=8.5,anchor="middle",font="Helvetica-Bold")
+        x=8+p*356; left=x+86;right=x+342;top=267;bottom=86
+        add_text(d,(left+right)/2,top+25,title,size=12,anchor="middle",font="Times-Bold")
         for tick in ticks:
             xx=left+(tick-xmin)/(xmax-xmin)*(right-left)
-            line(d,xx,bottom,xx,top,"#E4E7EA",.45)
-            add_text(d,xx,bottom-14,f"{tick:g}",size=8,anchor="middle",color="#4D555E")
+            line(d,xx,bottom,xx,top,"#E1E4E8",.55)
+            add_text(d,xx,bottom-17,f"{tick:g}",size=9,anchor="middle",color="#4D555E")
         zero=left+(0-xmin)/(xmax-xmin)*(right-left)
-        line(d,zero,bottom,zero,top,"#6E747B",.75,[3,2])
-        line(d,left,bottom,right,bottom,"#5F6872",.7)
+        line(d,zero,bottom,zero,top,"#56606B",.85,[4,3])
+        line(d,left,bottom,right,bottom,"#56606B",.8)
         models=["gpt-5.6-terra","gpt-6-luna","fixed-model average"]
         labels=["Terra","Luna","Average"]
-        ys=[top-28,top-72,top-116]
+        ys=[top-42,top-94,top-146]
         for model,label,y in zip(models,labels,ys):
             if model=="fixed-model average":
                 vals=contrast_values(rows,high,low,None)
@@ -220,14 +213,15 @@ def fig3(rows):
             xx=left+(est/1000-xmin)/(xmax-xmin)*(right-left)
             xl=left+(lo/1000-xmin)/(xmax-xmin)*(right-left);xh=left+(hi/1000-xmin)/(xmax-xmin)*(right-left)
             yy=y
-            error_point(d,xx,yy,xl,xh,col,1.1,3)
-            if shape=="circle":d.add(Circle(xx,yy,3.5,fillColor=c(col),strokeColor=c("#FFFFFF"),strokeWidth=.6))
-            elif shape=="square":d.add(Rect(xx-3.3,yy-3.3,6.6,6.6,fillColor=c(col),strokeColor=c("#FFFFFF"),strokeWidth=.6))
-            else:d.add(Polygon([xx,yy+4,xx-4,yy,xx,yy-4,xx+4,yy],fillColor=c(col),strokeColor=c("#FFFFFF"),strokeWidth=.6))
-            add_text(d,left-7,yy-2.5,MODEL_LABELS.get(model,label),size=8,anchor="end",color="#343A40")
-            add_text(d,min(right-2,max(left+2,xh+4)),yy+6,f"{est/1000:+.1f}",size=8,color=col)
-        add_text(d,(left+right)/2,30,"Difference in total tokens per episode (thousands)",size=8,color="#555D66",anchor="middle")
-    add_text(d,W/2,12,"Negative values mean fewer tokens in the higher-information condition; intervals resample 14 workflow templates.",size=8,color="#555D66",anchor="middle")
+            line(d,xl,yy,xh,yy,col,1.4)
+            line(d,xl,yy-4,xl,yy+4,col,1.4)
+            line(d,xh,yy-4,xh,yy+4,col,1.4)
+            if shape=="circle":d.add(Circle(xx,yy,4.3,fillColor=c(col),strokeColor=c("#FFFFFF"),strokeWidth=.7))
+            elif shape=="square":d.add(Rect(xx-4,yy-4,8,8,fillColor=c(col),strokeColor=c("#FFFFFF"),strokeWidth=.7))
+            else:d.add(Polygon([xx,yy+5,xx-5,yy,xx,yy-5,xx+5,yy],fillColor=c(col),strokeColor=c("#FFFFFF"),strokeWidth=.7))
+            add_text(d,left-9,yy-3,MODEL_LABELS.get(model,label),size=10,anchor="end",color="#343A40")
+        add_text(d,(left+right)/2,43,"Difference in tokens per episode (×1,000)",size=10,color="#555D66",anchor="middle")
+    add_text(d,W/2,18,"Negative values indicate fewer tokens in the higher-information condition; 95% CIs resample 14 templates.",size=9,color="#555D66",anchor="middle")
     save(d,"figure_03_token_contrasts")
 
 def main():
