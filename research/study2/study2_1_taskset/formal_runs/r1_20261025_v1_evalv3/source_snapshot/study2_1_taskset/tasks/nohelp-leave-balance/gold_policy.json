@@ -1,0 +1,61 @@
+{
+  "task_id": "nohelp-leave-balance",
+  "template_id": "nohelp-leave-balance",
+  "help_need_class": "no_help",
+  "classification_rationale": "The full source data, rule, authority, and task constraints are visible. No colleague controls a missing fact or approval, and scripted NPCs are prohibited from adding information that could change the correct output or evaluator score.",
+  "visible_information": {
+    "employees": [
+      {
+        "name": "Ava",
+        "allowance": 25,
+        "used": 17
+      },
+      {
+        "name": "Ben",
+        "allowance": 20,
+        "used": 12
+      },
+      {
+        "name": "Chen",
+        "allowance": 22,
+        "used": 22
+      }
+    ]
+  },
+  "required_information_ids": [],
+  "required_authority": null,
+  "expected_output": {
+    "balances": {
+      "Ava": 8,
+      "Ben": 8,
+      "Chen": 0
+    }
+  },
+  "admissible_help_steps": [],
+  "valid_paths": [
+    [
+      "submit:answer_without_contact"
+    ]
+  ],
+  "unnecessary_contact_definition": "Any coworker contact is unnecessary for the defined task; it cannot change the expected output or improve the scored quality.",
+  "counterfactual_outcomes": {
+    "no_contact": {
+      "task_success": true,
+      "score": 1
+    },
+    "contact": {
+      "task_success": true,
+      "score": 1,
+      "quality_change": 0
+    }
+  },
+  "hard_constraints": [
+    "preserve_supplied_data",
+    "do_not_invent_unprovided_records"
+  ],
+  "checkpoint_ids": [
+    "artifact_complete",
+    "answer_exact",
+    "no_unnecessary_contact"
+  ]
+}

@@ -284,8 +284,9 @@ def initial_prompt(task_text, profiles):
     return system, [{"role": "user", "content": user}]
 
 
-def run_episode(task_id, alignment, seed, out_dir, api_key):
+def run_episode(task_id, alignment, seed, out_dir, api_key, run_context=None):
     global AUDIT_DIR, CURRENT_RUN_ID, CURRENT_TURN
+    context = run_context or {}
     start_time = datetime.now(timezone.utc).isoformat()
     run_started_clock = time.monotonic()
     task_dir = TASKS / task_id
@@ -295,6 +296,7 @@ def run_episode(task_id, alignment, seed, out_dir, api_key):
     help_class = meta["help_need_class"]
     cfg = MODELS[CURRENT_MODEL]
     run_id = f"pilot-r1-{CURRENT_MODEL}-{task_id}-{alignment}-{seed}" + (f"-{RUN_TAG}" if RUN_TAG else "")
+    run_id = context.get("run_id", run_id)
     episode_dir = out_dir / "episodes" / run_id
     episode_dir.mkdir(parents=True, exist_ok=False)
     AUDIT_DIR, CURRENT_RUN_ID = episode_dir, run_id
@@ -429,7 +431,7 @@ def run_episode(task_id, alignment, seed, out_dir, api_key):
     manifest = read_json(episode_dir / "run_manifest.json")
     record = {
         "schema_version": "study21-run-v2", "run_id": run_id, "study_id": "study2.1",
-        "run_type": "pilot", "collection_stage": "pilot", "protocol_version": PROTOCOL_VERSION,
+        "run_type": context.get("run_type", "pilot"), "collection_stage": context.get("collection_stage", "pilot"), "protocol_version": context.get("protocol_version", PROTOCOL_VERSION),
         "task_id": task_id, "task_version": meta["task_version"], "template_id": meta["template_id"],
         "help_need_class": help_class, "variant_id": alignment if help_class == "must_ask" else None,
         "alignment": alignment if help_class == "must_ask" else "not_applicable",
@@ -475,6 +477,8 @@ def run_episode(task_id, alignment, seed, out_dir, api_key):
         record["artifact_refs"][key] = str(Path(value).relative_to(out_dir))
     record["mapping_ref"] = str((episode_dir / "identity_mapping.json").relative_to(out_dir))
     record["sampling_parameters"]["max_request_attempts"] = MAX_REQUEST_ATTEMPTS
+    if context.get("finalize_record"):
+        context["finalize_record"](record)
     jsonschema.validate(record, read_json(HERE.parent / "study2_1_run_metadata_schema.json"))
     write_json(episode_dir / "run_record.json", record)
     append_jsonl(out_dir / "run_status.jsonl", {"run_id": run_id, "status": record["status"], "timestamp": record["ended_at"]})

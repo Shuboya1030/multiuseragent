@@ -1,0 +1,27 @@
+{
+  "method": "Scale the nine latest pilots (one per provider/class) using current list prices; planning estimate, not a guaranteed bound",
+  "rows": [
+    {
+      "provider": "openai",
+      "pilot_n": 3,
+      "projected_R1_60_usd": 0.13761
+    },
+    {
+      "provider": "moonshot",
+      "pilot_n": 3,
+      "projected_R1_60_usd": 0.3984098
+    },
+    {
+      "provider": "anthropic",
+      "pilot_n": 3,
+      "projected_R1_60_usd": 0.072266
+    }
+  ],
+  "R1_180_usd": 0.6082858,
+  "paired_360_usd": 1.2165716,
+  "hypothetical_1080_usd": 3.6497148,
+  "authorized_block_only": "R1 180",
+  "user_cap_usd": 10,
+  "operating_cap_usd": 9,
+  "worst_case_guard": "reserve each episode before starting; uncertain usage charged full request reservation"
+}

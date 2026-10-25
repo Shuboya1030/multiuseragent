@@ -1,0 +1,962 @@
+{
+  "optional-incident-customer-notice": {
+    "task": "982290bf14a1e46dc003402489a24e406695a6f10349cf2020d8f1aac56fe7f4",
+    "profiles": "43880dc7e92f87828960b7086c9282063420c27d05f5c366cd8d56501787b176",
+    "mapping": {
+      "C1": "P1",
+      "C3": "P2",
+      "C2": "P3",
+      "C4": "P4"
+    },
+    "candidate_order": [
+      "C2",
+      "C4",
+      "C1",
+      "C3"
+    ]
+  },
+  "must-vendor-onboarding": {
+    "task": "2dde564031c38a5e43cfc8e8ad95e76efb6c6b6b65651465839178db344dce2d",
+    "profiles": "f3f1cac0af939e32d306b72b4ed3f208202eaa4ea8b8233f640013ed97d5f4f2",
+    "mapping": {
+      "C2": "P1",
+      "C3": "P2",
+      "C4": "P3",
+      "C1": "P4"
+    },
+    "candidate_order": [
+      "C4",
+      "C2",
+      "C3",
+      "C1"
+    ]
+  },
+  "nohelp-release-notes": {
+    "task": "d3e2f3fd23f427e4da16581f3ac4646bef947f68a07f2351e869b5463e515baf",
+    "profiles": "6d7e9da53060eac285a608dc9a05313b642a76d8ece55fa839ed13a772ab5e92",
+    "mapping": {
+      "C4": "P1",
+      "C3": "P2",
+      "C1": "P3",
+      "C2": "P4"
+    },
+    "candidate_order": [
+      "C2",
+      "C4",
+      "C3",
+      "C1"
+    ]
+  },
+  "optional-field-maintenance-plan": {
+    "task": "ccbffcb9ba56d8e041a3f48f0cd579f5a385da41022e821148f6470bdd9708ac",
+    "profiles": "43769217357ffbec2ebbe65838c066581ddbb2740bf0ebfcce51e9270a633a4f",
+    "mapping": {
+      "C1": "P1",
+      "C3": "P2",
+      "C4": "P3",
+      "C2": "P4"
+    },
+    "candidate_order": [
+      "C1",
+      "C3",
+      "C2",
+      "C4"
+    ]
+  },
+  "must-cloud-quota": {
+    "task": "aba90207f4a920be258fd7a73a5b9aabf1040c277d56ba27c4a7000b5c972e92",
+    "profiles": "abc880fc8e49e3fa3e10615e0a690f6d4d42242283f646962eb0bbb183facb81",
+    "mapping": {
+      "C4": "P1",
+      "C3": "P2",
+      "C1": "P3",
+      "C2": "P4"
+    },
+    "candidate_order": [
+      "C2",
+      "C3",
+      "C4",
+      "C1"
+    ]
+  },
+  "nohelp-ticket-labeling": {
+    "task": "ecd096bdbf3414648c634b50378e808409df5a4c796b229a46a947623c96691a",
+    "profiles": "5de428655837cb84d1360674d3f3c251356b11463aa2c5e8bbbcf416d57a2315",
+    "mapping": {
+      "C3": "P1",
+      "C2": "P2",
+      "C1": "P3",
+      "C4": "P4"
+    },
+    "candidate_order": [
+      "C3",
+      "C4",
+      "C2",
+      "C1"
+    ]
+  },
+  "must-firewall-exception": {
+    "task": "39effe99f2f72c0b3c2629b1977becbcc9496eaf4aa8572c525eb00097f74f75",
+    "profiles": "def6ff6607eacd10038ce03d18713b9d378804261d0e7e96854e4903513bf759",
+    "mapping": {
+      "C1": "P1",
+      "C3": "P2",
+      "C4": "P3",
+      "C2": "P4"
+    },
+    "candidate_order": [
+      "C1",
+      "C3",
+      "C2",
+      "C4"
+    ]
+  },
+  "nohelp-asset-deduplication": {
+    "task": "a4eca98f536a93001006a33a25ff76a8bdf7eaeb6f03853935c0c4972db1f549",
+    "profiles": "612b810fcd3e3fe989d9b2a968698e9fc327a47f847ef9e952a2db3bb8cb47bf",
+    "mapping": {
+      "C1": "P1",
+      "C3": "P2",
+      "C2": "P3",
+      "C4": "P4"
+    },
+    "candidate_order": [
+      "C4",
+      "C1",
+      "C3",
+      "C2"
+    ]
+  },
+  "optional-product-faq": {
+    "task": "05d6bdb43d8f87c8d11520fb55e484e398e08cb3ef147ed0c5edc05bca8a5f0a",
+    "profiles": "3f04073e779cb1bb4d70a59a4d71846e7b768dde6a1f5ba923c89b1bff3e8108",
+    "mapping": {
+      "C1": "P1",
+      "C2": "P2",
+      "C3": "P3",
+      "C4": "P4"
+    },
+    "candidate_order": [
+      "C2",
+      "C4",
+      "C3",
+      "C1"
+    ]
+  },
+  "nohelp-expense-total": {
+    "task": "e46aa3cc79b005185431e6fc7e36508f36d5bff3fcc29a9079ad3f0b99ca276c",
+    "profiles": "311fcc0917700a6da0a9fc40036a79d572aba279d7427660fdc3390ce084ad99",
+    "mapping": {
+      "C4": "P1",
+      "C2": "P2",
+      "C3": "P3",
+      "C1": "P4"
+    },
+    "candidate_order": [
+      "C1",
+      "C4",
+      "C3",
+      "C2"
+    ]
+  },
+  "optional-accessible-training-packet": {
+    "task": "6f7ed4343a5ec396f13aefd73653411507358a1aa246e71a807947b46c803baa",
+    "profiles": "34f93f293269cc93c2f925020dd598a5f14743345803fb9631b8ae090e5b5e37",
+    "mapping": {
+      "C2": "P1",
+      "C3": "P2",
+      "C4": "P3",
+      "C1": "P4"
+    },
+    "candidate_order": [
+      "C4",
+      "C3",
+      "C1",
+      "C2"
+    ]
+  },
+  "must-backup-restore": {
+    "task": "754c3b170660addf4aaaa96acec5b4d4f050dd79821a1ac02a0bd355c8a578ca",
+    "profiles": "c02dce8dd3b1e6bdcbe6fb6e26947e1e050bdbbe8ab4720d17bb026ef4fd2c6b",
+    "mapping": {
+      "C1": "P1",
+      "C2": "P2",
+      "C4": "P3",
+      "C3": "P4"
+    },
+    "candidate_order": [
+      "C3",
+      "C1",
+      "C2",
+      "C4"
+    ]
+  },
+  "nohelp-leave-balance": {
+    "task": "32a99f91ed7442eee1ae7e2e621ce6f454b076289fa6ae7e99a0746d6883f297",
+    "profiles": "3cc65da675f401ad6108273d23b2ed139092a9fca45704567f1345de81fb3db3",
+    "mapping": {
+      "C4": "P1",
+      "C1": "P2",
+      "C3": "P3",
+      "C2": "P4"
+    },
+    "candidate_order": [
+      "C4",
+      "C3",
+      "C2",
+      "C1"
+    ]
+  },
+  "must-mileage-reimbursement": {
+    "task": "9d1bbd007fc14439036cd7d8dc37fc3a8845bf965fc5dc7d66fc43647ded2e59",
+    "profiles": "a93d396125fc19ddb9050149730c4717d4b5637827bd12db85a4a526bfb643b4",
+    "mapping": {
+      "C4": "P1",
+      "C2": "P2",
+      "C1": "P3",
+      "C3": "P4"
+    },
+    "candidate_order": [
+      "C3",
+      "C4",
+      "C1",
+      "C2"
+    ]
+  },
+  "optional-account-recovery": {
+    "task": "f9f2c6681c8d9734ba175f79661595b0edb02cbccd2158b7889a2904a692aa86",
+    "profiles": "2933d8ae34f06f8a75558d1e778be9cac2022a2aea2d660ee8593058e0445af0",
+    "mapping": {
+      "C1": "P1",
+      "C3": "P2",
+      "C2": "P3",
+      "C4": "P4"
+    },
+    "candidate_order": [
+      "C3",
+      "C1",
+      "C2",
+      "C4"
+    ]
+  },
+  "optional-customer-support-coverage": {
+    "task": "0b848f741c20010e30e5af4eafc2936674cd55b28261219ab3b56ddeaed58ad5",
+    "profiles": "d31d14a3bd4c679447cd7ad682d6151e88fb0a69fef50e0aad23593821f0b8c2",
+    "mapping": {
+      "C2": "P1",
+      "C4": "P2",
+      "C3": "P3",
+      "C1": "P4"
+    },
+    "candidate_order": [
+      "C1",
+      "C3",
+      "C2",
+      "C4"
+    ]
+  },
+  "must-maintenance-window": {
+    "task": "7b46fbbee7eaa65dbf798eaab8a508e8b0e4c5fa25c64ccaeca754f6f192d168",
+    "profiles": "4254397fcff19416417ea4a4415c97300d5a10dc132e978daa708d96d687ec5d",
+    "mapping": {
+      "C3": "P1",
+      "C4": "P2",
+      "C1": "P3",
+      "C2": "P4"
+    },
+    "candidate_order": [
+      "C3",
+      "C1",
+      "C4",
+      "C2"
+    ]
+  },
+  "nohelp-meeting-room-fit": {
+    "task": "2836e288d0c02bec822d182605eea1452a1de5ffb555233434d21c4e05edb74b",
+    "profiles": "5789c830aac46bdace3e8930011c92f3790c957665f891df8904c4b3674e35cc",
+    "mapping": {
+      "C2": "P1",
+      "C3": "P2",
+      "C1": "P3",
+      "C4": "P4"
+    },
+    "candidate_order": [
+      "C3",
+      "C2",
+      "C4",
+      "C1"
+    ]
+  },
+  "must-new-hire-equipment": {
+    "task": "98b13834fd6c2cae486f40902df4d5724f2d445fbc25115cefa61e35620b0810",
+    "profiles": "568f068e42736cf3d98436cc46425c94dfd839f67c19565c769ec5b81e9badb4",
+    "mapping": {
+      "C1": "P1",
+      "C2": "P2",
+      "C3": "P3",
+      "C4": "P4"
+    },
+    "candidate_order": [
+      "C1",
+      "C4",
+      "C3",
+      "C2"
+    ]
+  },
+  "nohelp-webinar-agenda": {
+    "task": "eeab86755e943de7c77b74b44a3fe7778924104316fe57bae744fc8feb2eb3a7",
+    "profiles": "c6431375284a287de8c35c355f12a764665fb4798609cd31f60c418051fed61c",
+    "mapping": {
+      "C4": "P1",
+      "C3": "P2",
+      "C2": "P3",
+      "C1": "P4"
+    },
+    "candidate_order": [
+      "C3",
+      "C4",
+      "C2",
+      "C1"
+    ]
+  },
+  "optional-vendor-risk-memo": {
+    "task": "caba61470ac774b71dd6a2b7f5d0095ab7a8220c0cd13a30cad60ac8ebc61292",
+    "profiles": "b6084e1c78684b955b91431d1e40ec415837e3fcf4fb579201c6d4efdb72494c",
+    "mapping": {
+      "C3": "P1",
+      "C1": "P2",
+      "C4": "P3",
+      "C2": "P4"
+    },
+    "candidate_order": [
+      "C3",
+      "C4",
+      "C2",
+      "C1"
+    ]
+  },
+  "optional-travel-agenda": {
+    "task": "c6abeabd206be975b7668d35c197293a982074dedb5653ba20afa943767af0c6",
+    "profiles": "bd799aa5b6ef85968cc71e7b3d7e6c5cca4bffff8b945671c996563cd8f99bac",
+    "mapping": {
+      "C4": "P1",
+      "C2": "P2",
+      "C1": "P3",
+      "C3": "P4"
+    },
+    "candidate_order": [
+      "C2",
+      "C4",
+      "C1",
+      "C3"
+    ]
+  },
+  "must-license-allocation": {
+    "task": "16fb647b36a5fcae28934324c32c80ae372545341a138d26ea76e5d2b26738a6",
+    "profiles": "2eac5671f145c5a29c1d1bac4d24c91f7c15494163cdfe5b11b6cd0a499915c4",
+    "mapping": {
+      "C1": "P1",
+      "C4": "P2",
+      "C3": "P3",
+      "C2": "P4"
+    },
+    "candidate_order": [
+      "C3",
+      "C2",
+      "C1",
+      "C4"
+    ]
+  },
+  "nohelp-access-review-matrix": {
+    "task": "bc2d33e45fbb824620b378a1518969daabef275d95be34f861f7de439fbff92e",
+    "profiles": "551eb5bcf5d2f86c0153d580bcd7c8105ac50b966a4311a5afbca4e197b4fd2b",
+    "mapping": {
+      "C4": "P1",
+      "C3": "P2",
+      "C1": "P3",
+      "C2": "P4"
+    },
+    "candidate_order": [
+      "C2",
+      "C1",
+      "C4",
+      "C3"
+    ]
+  },
+  "optional-inventory-allocation": {
+    "task": "107b0b28bff48f382082646ac057fc0ddd241e59e93e3f16af15323645258700",
+    "profiles": "ae36388276751d021ccbe51bab537f3be936ad99277c6d1feca084a1050a2f5f",
+    "mapping": {
+      "C3": "P1",
+      "C1": "P2",
+      "C2": "P3",
+      "C4": "P4"
+    },
+    "candidate_order": [
+      "C1",
+      "C4",
+      "C3",
+      "C2"
+    ]
+  },
+  "must-customer-data-export": {
+    "task": "a239f95a25f5e203206c183d12ad2f16e4e1c90fcb4a912ada2a384704c4b82e",
+    "profiles": "f881b1574637ec63ad8bba5dd051aff76095a4eec0ae94e53219c907d2496927",
+    "mapping": {
+      "C1": "P1",
+      "C3": "P2",
+      "C2": "P3",
+      "C4": "P4"
+    },
+    "candidate_order": [
+      "C2",
+      "C1",
+      "C4",
+      "C3"
+    ]
+  },
+  "nohelp-sla-summary": {
+    "task": "53ef63820a262b3b37c13aa26b2a4954788bee8023185dfbc781811898abea74",
+    "profiles": "70c64e5e5c4d5a4339cb3b44776a8ddfde20bad7f056f64408347ec6bd77acab",
+    "mapping": {
+      "C4": "P1",
+      "C1": "P2",
+      "C2": "P3",
+      "C3": "P4"
+    },
+    "candidate_order": [
+      "C3",
+      "C2",
+      "C4",
+      "C1"
+    ]
+  },
+  "nohelp-milestone-calendar": {
+    "task": "1913745097b500d463d9a1a936a0ad576401348fd7f4874a26527ed70e7c5c27",
+    "profiles": "7f044f8431e28b77e6120fc23114d8980e1aaf057d9df4b848746155b12455f7",
+    "mapping": {
+      "C3": "P1",
+      "C4": "P2",
+      "C1": "P3",
+      "C2": "P4"
+    },
+    "candidate_order": [
+      "C1",
+      "C2",
+      "C4",
+      "C3"
+    ]
+  },
+  "must-site-safety": {
+    "task": "aa7e7788c38c2b59cb2b6634b1c59b87e64e746e7efee872be9b38d58b00d4e4",
+    "profiles": "f0c32351f48f5e3426090b5624c2982d4c9ba2b698ad64747caadce311057024",
+    "mapping": {
+      "C2": "P1",
+      "C3": "P2",
+      "C1": "P3",
+      "C4": "P4"
+    },
+    "candidate_order": [
+      "C1",
+      "C4",
+      "C2",
+      "C3"
+    ]
+  },
+  "optional-supplier-leadtime-plan": {
+    "task": "178050f0babff5c812bc43804efde86f9d2c50bc8027e36f59317987434af59d",
+    "profiles": "11dba81f8a723ed62ac6898d1c8642e67a34665838100f7ad1ff41311e9c7831",
+    "mapping": {
+      "C1": "P1",
+      "C4": "P2",
+      "C3": "P3",
+      "C2": "P4"
+    },
+    "candidate_order": [
+      "C3",
+      "C4",
+      "C2",
+      "C1"
+    ]
+  },
+  "nohelp-reimbursement-policy-match": {
+    "task": "3afd52d2ed611a17b2217601040618d545ee14cd9145bf3c1ba0f6718b1aeb4b",
+    "profiles": "fdc0d15c5c43c4fa74184ec0aec2c812443dbd8c036ad8774de8c74ba45e0603",
+    "mapping": {
+      "C4": "P1",
+      "C2": "P2",
+      "C1": "P3",
+      "C3": "P4"
+    },
+    "candidate_order": [
+      "C4",
+      "C1",
+      "C2",
+      "C3"
+    ]
+  },
+  "must-service-incident-notice": {
+    "task": "fdce3e6c72525153a5c2097f22bb8f247a3942a4477306078cf9cd5b51e95eb7",
+    "profiles": "bd1b391a81969245f243000f699862f3cccc26db6042954fd5eabc3b2a41a386",
+    "mapping": {
+      "C2": "P1",
+      "C3": "P2",
+      "C1": "P3",
+      "C4": "P4"
+    },
+    "candidate_order": [
+      "C4",
+      "C3",
+      "C2",
+      "C1"
+    ]
+  },
+  "optional-maintenance-window-plan": {
+    "task": "2ba4512d6f65d6798ac4cdace41ea354c3b334729afc595c035f638d26057715",
+    "profiles": "e0d5c69f6bf4e394d83913afacd359dab58d12ae5e392c7760f58c3e5f72d06b",
+    "mapping": {
+      "C1": "P1",
+      "C2": "P2",
+      "C3": "P3",
+      "C4": "P4"
+    },
+    "candidate_order": [
+      "C2",
+      "C1",
+      "C4",
+      "C3"
+    ]
+  },
+  "must-contract-renewal": {
+    "task": "38c466e81ff0e4f576293f31e47161c4ca89de987c0a4e718f09a29dd1f1d148",
+    "profiles": "f9ee672e4103e51134f6e67e053746f556f8fefb1b332d5cda1a19dda42e0e81",
+    "mapping": {
+      "C3": "P1",
+      "C2": "P2",
+      "C1": "P3",
+      "C4": "P4"
+    },
+    "candidate_order": [
+      "C2",
+      "C3",
+      "C4",
+      "C1"
+    ]
+  },
+  "nohelp-survey-average": {
+    "task": "b4e58a4f8d507a75549ff0093bec5a003cc0b5377ff77b6de6431b4768f45d7b",
+    "profiles": "05c67d58f9c9b464851a9ce1fb8fcb5e313eb4b59233751aeffa2e8c87b2471f",
+    "mapping": {
+      "C1": "P1",
+      "C3": "P2",
+      "C4": "P3",
+      "C2": "P4"
+    },
+    "candidate_order": [
+      "C3",
+      "C2",
+      "C4",
+      "C1"
+    ]
+  },
+  "optional-shift-training-sessions": {
+    "task": "6791aa503fc57e84f6baaebd8d71b50c93ebb899222028a9e22495af436d8660",
+    "profiles": "7c49ddf5f7c27f2b1c1b5d7ccfde8d7a4399dfa95a47f9cb56516b01d97e2dc0",
+    "mapping": {
+      "C4": "P1",
+      "C2": "P2",
+      "C1": "P3",
+      "C3": "P4"
+    },
+    "candidate_order": [
+      "C1",
+      "C4",
+      "C2",
+      "C3"
+    ]
+  },
+  "optional-department-budget-transfer": {
+    "task": "4c7fe671a738a9307974634209ff1f2c66f8fffa589760b63e6effd3da65f631",
+    "profiles": "de43a7b3cf06622d74b363d972ec5f737f01c50887549bd3324e681ce8dfe031",
+    "mapping": {
+      "C4": "P1",
+      "C3": "P2",
+      "C2": "P3",
+      "C1": "P4"
+    },
+    "candidate_order": [
+      "C1",
+      "C3",
+      "C2",
+      "C4"
+    ]
+  },
+  "nohelp-delivery-priority": {
+    "task": "6625f722e35a1ce25e80a408cdfab5cb6a29ce7a045ebf14a33be46d14a24607",
+    "profiles": "dd3d2b10086a60e04d2cfd6f475ce425ce8d19dd7c69107ad185a13ae14a8f03",
+    "mapping": {
+      "C4": "P1",
+      "C1": "P2",
+      "C2": "P3",
+      "C3": "P4"
+    },
+    "candidate_order": [
+      "C1",
+      "C2",
+      "C4",
+      "C3"
+    ]
+  },
+  "must-release-deployment": {
+    "task": "0ba528a2dd0eb3aa1fce31ced98ee78229ced4b65a13021d8ff5a8487fd1800a",
+    "profiles": "9e984325a83b6e8ad0a6fe4a1ea1877877eaf73d060e137cbef6036952bcd3b6",
+    "mapping": {
+      "C2": "P1",
+      "C1": "P2",
+      "C4": "P3",
+      "C3": "P4"
+    },
+    "candidate_order": [
+      "C2",
+      "C3",
+      "C1",
+      "C4"
+    ]
+  },
+  "nohelp-build-matrix": {
+    "task": "286e249bc997f834953596b5093b8857e2fa13fed99f424c87d8152dcc9e914b",
+    "profiles": "bbbe1a163dba07f10fd37e105405cbd3f2d54b9a38e0274d7d49a35c88f948ed",
+    "mapping": {
+      "C4": "P1",
+      "C1": "P2",
+      "C2": "P3",
+      "C3": "P4"
+    },
+    "candidate_order": [
+      "C1",
+      "C4",
+      "C3",
+      "C2"
+    ]
+  },
+  "optional-accessible-evacuation-brief": {
+    "task": "09e3a1a016beb3f2e7147a85794b190a6d1660b21520ec39becceff94bfd16e4",
+    "profiles": "73fc2bb256dc08e38563d775cd20e0b63f05533635078bf8102dd203f025ada4",
+    "mapping": {
+      "C3": "P1",
+      "C1": "P2",
+      "C4": "P3",
+      "C2": "P4"
+    },
+    "candidate_order": [
+      "C3",
+      "C4",
+      "C2",
+      "C1"
+    ]
+  },
+  "must-expense-reimbursement": {
+    "task": "f1924a09b000f29882ee9f1deb55aba74b5c0cebd25f521c1c13dc4eb06b55c9",
+    "profiles": "56a6cb0e57688eee4b1438a168b2bab0f4d2000653027630b119f08bec721a79",
+    "mapping": {
+      "C4": "P1",
+      "C3": "P2",
+      "C2": "P3",
+      "C1": "P4"
+    },
+    "candidate_order": [
+      "C1",
+      "C4",
+      "C2",
+      "C3"
+    ]
+  },
+  "must-system-access": {
+    "task": "c3bd9cedd12acfab4f7b9cf1e0c97a39d336b62d2d45e58a998003a142308972",
+    "profiles": "ecc65de79f78e3341a867a50235b6970426d245c547be94ceff325f19c3850de",
+    "mapping": {
+      "C4": "P1",
+      "C3": "P2",
+      "C1": "P3",
+      "C2": "P4"
+    },
+    "candidate_order": [
+      "C4",
+      "C2",
+      "C1",
+      "C3"
+    ]
+  },
+  "optional-interview-schedule": {
+    "task": "69c775c2b91ff4f2968f009be514f18f8702cb008bef932102da89fe24548bf9",
+    "profiles": "0a2fbcc19b1b934679f42515478cd0da6de0f7db99981c15d1cb3a08a39b820c",
+    "mapping": {
+      "C2": "P1",
+      "C3": "P2",
+      "C1": "P3",
+      "C4": "P4"
+    },
+    "candidate_order": [
+      "C2",
+      "C1",
+      "C3",
+      "C4"
+    ]
+  },
+  "nohelp-inventory-shortfall": {
+    "task": "7a7cc51b75d8707050ea84a60071ba61a5c80864ddf66d3a10026a2a8c19c9ee",
+    "profiles": "3d19e7044741a3e8cd3b6693bd89ce0cb2546c2915e60c3d24c9ee3b82a14dc0",
+    "mapping": {
+      "C3": "P1",
+      "C1": "P2",
+      "C2": "P3",
+      "C4": "P4"
+    },
+    "candidate_order": [
+      "C4",
+      "C2",
+      "C1",
+      "C3"
+    ]
+  },
+  "must-record-correction": {
+    "task": "8c6e44773552c16b79f1160b0dc1f87931238d3b1d3b265040be106938f65e6f",
+    "profiles": "7f3b15f2bca5909e5f23d3d107728d74fd1011aa2c2ce7fdf7ebf4363dfcc31e",
+    "mapping": {
+      "C2": "P1",
+      "C3": "P2",
+      "C4": "P3",
+      "C1": "P4"
+    },
+    "candidate_order": [
+      "C3",
+      "C2",
+      "C1",
+      "C4"
+    ]
+  },
+  "optional-laboratory-order": {
+    "task": "f68c7784f67a9b2f5bd75abd2553ff9f4daafa25c724f92d3cfd41db1f81f0be",
+    "profiles": "2fdeb7cac0c72cf178bf337769d5154507242ef5007d14cd96140246c451b9d1",
+    "mapping": {
+      "C1": "P1",
+      "C3": "P2",
+      "C2": "P3",
+      "C4": "P4"
+    },
+    "candidate_order": [
+      "C2",
+      "C4",
+      "C3",
+      "C1"
+    ]
+  },
+  "nohelp-capacity-sum": {
+    "task": "79e75ea6b89d35ee920fe1f25ab44ea0f7cbc8bbb1e0522aea0f12f9237cea15",
+    "profiles": "d5e72a79bd03c8b8a874ec157c944bb2797fe53742ebc510ab1022e039303d57",
+    "mapping": {
+      "C4": "P1",
+      "C1": "P2",
+      "C2": "P3",
+      "C3": "P4"
+    },
+    "candidate_order": [
+      "C4",
+      "C3",
+      "C1",
+      "C2"
+    ]
+  },
+  "nohelp-invoice-tax-check": {
+    "task": "7a1bdef000aacb1d640222797bb246577bcd23eb09cbfe0c7fe15a2ef0effc79",
+    "profiles": "69370a180966741f9589b53de57dd8620cac53c54af742342354c32b5260e271",
+    "mapping": {
+      "C2": "P1",
+      "C3": "P2",
+      "C4": "P3",
+      "C1": "P4"
+    },
+    "candidate_order": [
+      "C3",
+      "C2",
+      "C4",
+      "C1"
+    ]
+  },
+  "optional-new-hire-onboarding": {
+    "task": "4bcd0a6068943b17c8aca61d1e3e89b5c0201b3df795d81c19789a774755788a",
+    "profiles": "19ac5c1ff8d93dcfdb63ec1e48a16a77a039d2dec22a3b9c17529f6f20f26bb1",
+    "mapping": {
+      "C4": "P1",
+      "C3": "P2",
+      "C2": "P3",
+      "C1": "P4"
+    },
+    "candidate_order": [
+      "C3",
+      "C2",
+      "C1",
+      "C4"
+    ]
+  },
+  "must-payroll-adjustment": {
+    "task": "8f3b199bb78659a9cb4606ecee4666d7003159d72ab9b4745d486b018a9bdcfe",
+    "profiles": "678305acd0c839cbf386f92c47e50326e76eb3161347b8d4afff2b98b80326c5",
+    "mapping": {
+      "C2": "P1",
+      "C1": "P2",
+      "C4": "P3",
+      "C3": "P4"
+    },
+    "candidate_order": [
+      "C4",
+      "C3",
+      "C2",
+      "C1"
+    ]
+  },
+  "nohelp-risk-register-format": {
+    "task": "ac8770240e29f05ed5cb86f873f7c5f369c7c5725a19184021a944d52375bb89",
+    "profiles": "6f5dd8691a66436c813f4bfd2c1397fc7cd381a6d3d23d355c4cb1b5753cc878",
+    "mapping": {
+      "C2": "P1",
+      "C4": "P2",
+      "C1": "P3",
+      "C3": "P4"
+    },
+    "candidate_order": [
+      "C3",
+      "C2",
+      "C1",
+      "C4"
+    ]
+  },
+  "optional-customer-migration": {
+    "task": "9f3cfc35bedd999e78de4b8f16e1aeeae36039dc45b0ba7cc42e158eb01b5840",
+    "profiles": "5519777e5a84c257cbc61c2514763729cf34001979f8334c9d3496302f98f5a6",
+    "mapping": {
+      "C4": "P1",
+      "C2": "P2",
+      "C3": "P3",
+      "C1": "P4"
+    },
+    "candidate_order": [
+      "C4",
+      "C2",
+      "C3",
+      "C1"
+    ]
+  },
+  "must-cost-center-transfer": {
+    "task": "e976ae6b6e08c264408ce854d5db7f1678afa37700e5b6faa353df084bc50747",
+    "profiles": "5c5a11d634064debb8701a658bcad5deb4eac603a63fc404c6c175e1d834a604",
+    "mapping": {
+      "C3": "P1",
+      "C2": "P2",
+      "C4": "P3",
+      "C1": "P4"
+    },
+    "candidate_order": [
+      "C3",
+      "C1",
+      "C4",
+      "C2"
+    ]
+  },
+  "must-marketing-claim": {
+    "task": "d4d32e5a98fc598bea1b8b0173e62370281a028f2b69947480af211b9ca3a399",
+    "profiles": "604949994c143da315360000af9d78756e6c8e67c527851496ffcbc7cc1df6f3",
+    "mapping": {
+      "C4": "P1",
+      "C3": "P2",
+      "C1": "P3",
+      "C2": "P4"
+    },
+    "candidate_order": [
+      "C4",
+      "C1",
+      "C3",
+      "C2"
+    ]
+  },
+  "optional-localized-campaign": {
+    "task": "ff7481b5da0e17cc511d7d8941cc9e1b85129e8e588d7bcc1b142dccc0d753f8",
+    "profiles": "16fcf6864d0ee0d33a73727560f733c7eb633c951c3b4b21c9ee28a0019beac2",
+    "mapping": {
+      "C2": "P1",
+      "C3": "P2",
+      "C4": "P3",
+      "C1": "P4"
+    },
+    "candidate_order": [
+      "C3",
+      "C1",
+      "C4",
+      "C2"
+    ]
+  },
+  "nohelp-onboarding-directory": {
+    "task": "636a65094e458cb8d3afa6dade01218caee0e4f88f21cef3f826957d7edd1e39",
+    "profiles": "eecd04199c3967f984ad531a32c90ef263cdcdcb654b8475b17fc79393d9b229",
+    "mapping": {
+      "C1": "P1",
+      "C4": "P2",
+      "C2": "P3",
+      "C3": "P4"
+    },
+    "candidate_order": [
+      "C3",
+      "C2",
+      "C1",
+      "C4"
+    ]
+  },
+  "optional-retention-schedule": {
+    "task": "e5c828c59a76ae1f969a983f390eaa9e199b43c9c2a0efe6a8f2a6ba94e62ed7",
+    "profiles": "0add4e18b277bceb76d002ec91da7beec14147dc5193cba954f76d17c5f28aa6",
+    "mapping": {
+      "C1": "P1",
+      "C4": "P2",
+      "C3": "P3",
+      "C2": "P4"
+    },
+    "candidate_order": [
+      "C3",
+      "C1",
+      "C2",
+      "C4"
+    ]
+  },
+  "must-data-deletion": {
+    "task": "75d699b76b307b41b373f466d29e1523c481194d77f685c28ae5ac258734b960",
+    "profiles": "e8b286e4768a59d319a13d4aeebc3543542a1e09827456d42f3629d51896710a",
+    "mapping": {
+      "C2": "P1",
+      "C1": "P2",
+      "C3": "P3",
+      "C4": "P4"
+    },
+    "candidate_order": [
+      "C4",
+      "C3",
+      "C1",
+      "C2"
+    ]
+  },
+  "nohelp-csv-normalization": {
+    "task": "8e653b5798e144f897e3a1417f3ed62f86b24d8ca720a1a70096bea27b19c288",
+    "profiles": "fa890c334167a4730737c69ad420a840ee4b24ada930e00e3a0fe6a3799861e1",
+    "mapping": {
+      "C1": "P1",
+      "C4": "P2",
+      "C3": "P3",
+      "C2": "P4"
+    },
+    "candidate_order": [
+      "C1",
+      "C4",
+      "C2",
+      "C3"
+    ]
+  }
+}

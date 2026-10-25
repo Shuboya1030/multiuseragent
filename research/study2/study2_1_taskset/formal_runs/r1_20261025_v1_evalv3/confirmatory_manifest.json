@@ -1,0 +1,56 @@
+{
+  "protocol_version": "study21-formal-r1-v1-evalv3",
+  "frozen_at": "2026-10-25T18:45:17.832121+00:00",
+  "base_commit": "e1d354415a6f88027823cf4d02c30924ad4e0a4a",
+  "run_type": "confirmatory",
+  "collection_stage": "R1",
+  "episodes": 180,
+  "replicate": 1,
+  "models": {
+    "openai": {
+      "provider": "OpenAI",
+      "model": "gpt-5.4-mini",
+      "env": "OPENAI_API_KEY",
+      "endpoint": "https://api.openai.com/v1/chat/completions"
+    },
+    "moonshot": {
+      "provider": "Moonshot",
+      "model": "kimi-k2.6",
+      "env": "MOONSHOT_API_KEY",
+      "endpoint": "https://api.moonshot.ai/v1/chat/completions"
+    },
+    "anthropic": {
+      "provider": "Anthropic",
+      "model": "claude-haiku-5-5",
+      "env": "ANTHROPIC_API_KEY",
+      "endpoint": "https://api.anthropic.com/v1/messages"
+    }
+  },
+  "expected_returned_models": {
+    "openai": "gpt-5.4-mini-2026-03-17",
+    "moonshot": "kimi-k2.6",
+    "anthropic": "claude-haiku-5-5"
+  },
+  "max_turns": 8,
+  "max_output_tokens": 1600,
+  "request_attempts": 1,
+  "moonshot_min_interval_seconds": 21,
+  "user_budget_usd": 10.0,
+  "operating_ceiling_usd": 9.0,
+  "max_input_token_reservation": 32768,
+  "randomization_seed": 2026102501,
+  "extension_rule": "fixed n; no automatic repeats or R0",
+  "precision_reporting_target_half_width": 0.1,
+  "accepted_limitations": [
+    "user explicitly retains known No-help output ambiguity",
+    "independent content review not completed",
+    "optional lexical quality proxy not independently validated",
+    "provider reasoning defaults differ"
+  ],
+  "frozen_files": {
+    "schedule.json": "32739626e3001db980d1bb49e68c8989f48cdcb1fee0067a8f4d07948a81521a",
+    "instance_fingerprints.json": "dd297d09da4b4046b69e5decb180a2a086d51fe9d4f1fca84a92f2b24e97a45a",
+    "source_manifest.json": "26678c1b2caa33dcc496a1638c86695f250110b14fd467674c154d284ec7f5d0",
+    "pricing_snapshot.json": "af4043b367bf6624167a344b33f9afc0287a2a98a5f86be4cc21ecd4d7e7cd27"
+  }
+}

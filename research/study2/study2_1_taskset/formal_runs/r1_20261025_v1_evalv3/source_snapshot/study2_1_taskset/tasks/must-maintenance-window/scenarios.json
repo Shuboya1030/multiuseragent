@@ -1,0 +1,185 @@
+{
+  "variants": {
+    "aligned": {
+      "P1": {
+        "public_profile": "P1 works in the site reliability operations domain. Their expertise is general team coordination; their familiarity is no stated task-domain expertise beyond general team coordination. Their decision authority is no approval authority for this action. They are available.",
+        "structured_profile": {
+          "person": "P1",
+          "organization_domain": "site reliability operations",
+          "domain_expertise": "general team coordination",
+          "familiarity": "no stated task-domain expertise beyond general team coordination",
+          "decision_authority": "no approval authority for this action",
+          "availability": "available"
+        },
+        "knowledge": {},
+        "authority": "no approval authority for this action",
+        "may_approve": false,
+        "availability": "available",
+        "reply_policy": "Provide exactly the assigned required fact(s) when asked for relevant information. Grant approval only if authorized, the exact request detail has been supplied, and the agent explicitly requests the decision; otherwise refuse or ask for missing details. Never invent facts or approvals."
+      },
+      "P2": {
+        "public_profile": "P2 works in the site reliability operations domain. Their expertise is service maintenance plans and incident runbooks; their familiarity is specialist familiarity with service maintenance plans and incident runbooks. Their decision authority is approve customer-impacting maintenance windows. They are available.",
+        "structured_profile": {
+          "person": "P2",
+          "organization_domain": "site reliability operations",
+          "domain_expertise": "service maintenance plans and incident runbooks",
+          "familiarity": "specialist familiarity with service maintenance plans and incident runbooks",
+          "decision_authority": "approve customer-impacting maintenance windows",
+          "availability": "available"
+        },
+        "knowledge": {
+          "expected_service_downtime": "18 minutes"
+        },
+        "authority": "approve customer-impacting maintenance windows",
+        "may_approve": true,
+        "availability": "available",
+        "reply_policy": "Provide exactly the assigned required fact(s) when asked for relevant information. Grant approval only if authorized, the exact request detail has been supplied, and the agent explicitly requests the decision; otherwise refuse or ask for missing details. Never invent facts or approvals."
+      },
+      "P3": {
+        "public_profile": "P3 works in the site reliability operations domain. Their expertise is general team coordination; their familiarity is no stated task-domain expertise beyond general team coordination. Their decision authority is no approval authority for this action. They are available.",
+        "structured_profile": {
+          "person": "P3",
+          "organization_domain": "site reliability operations",
+          "domain_expertise": "general team coordination",
+          "familiarity": "no stated task-domain expertise beyond general team coordination",
+          "decision_authority": "no approval authority for this action",
+          "availability": "available"
+        },
+        "knowledge": {},
+        "authority": "no approval authority for this action",
+        "may_approve": false,
+        "availability": "available",
+        "reply_policy": "Provide exactly the assigned required fact(s) when asked for relevant information. Grant approval only if authorized, the exact request detail has been supplied, and the agent explicitly requests the decision; otherwise refuse or ask for missing details. Never invent facts or approvals."
+      },
+      "P4": {
+        "public_profile": "P4 works in the site reliability operations domain. Their expertise is general team coordination; their familiarity is no stated task-domain expertise beyond general team coordination. Their decision authority is no approval authority for this action. They are available.",
+        "structured_profile": {
+          "person": "P4",
+          "organization_domain": "site reliability operations",
+          "domain_expertise": "general team coordination",
+          "familiarity": "no stated task-domain expertise beyond general team coordination",
+          "decision_authority": "no approval authority for this action",
+          "availability": "available"
+        },
+        "knowledge": {},
+        "authority": "no approval authority for this action",
+        "may_approve": false,
+        "availability": "available",
+        "reply_policy": "Provide exactly the assigned required fact(s) when asked for relevant information. Grant approval only if authorized, the exact request detail has been supplied, and the agent explicitly requests the decision; otherwise refuse or ask for missing details. Never invent facts or approvals."
+      }
+    },
+    "separated": {
+      "P1": {
+        "public_profile": "P1 works in the site reliability operations domain. Their expertise is general team coordination; their familiarity is no stated task-domain expertise beyond general team coordination. Their decision authority is no approval authority for this action. They are available.",
+        "structured_profile": {
+          "person": "P1",
+          "organization_domain": "site reliability operations",
+          "domain_expertise": "general team coordination",
+          "familiarity": "no stated task-domain expertise beyond general team coordination",
+          "decision_authority": "no approval authority for this action",
+          "availability": "available"
+        },
+        "knowledge": {},
+        "authority": "no approval authority for this action",
+        "may_approve": false,
+        "availability": "available",
+        "reply_policy": "Provide exactly the assigned required fact(s) when asked for relevant information. Grant approval only if authorized, the exact request detail has been supplied, and the agent explicitly requests the decision; otherwise refuse or ask for missing details. Never invent facts or approvals."
+      },
+      "P2": {
+        "public_profile": "P2 works in the site reliability operations domain. Their expertise is service maintenance plans and incident runbooks; their familiarity is specialist familiarity with service maintenance plans and incident runbooks. Their decision authority is no approval authority for this action. They are available.",
+        "structured_profile": {
+          "person": "P2",
+          "organization_domain": "site reliability operations",
+          "domain_expertise": "service maintenance plans and incident runbooks",
+          "familiarity": "specialist familiarity with service maintenance plans and incident runbooks",
+          "decision_authority": "no approval authority for this action",
+          "availability": "available"
+        },
+        "knowledge": {
+          "expected_service_downtime": "18 minutes"
+        },
+        "authority": "no approval authority for this action",
+        "may_approve": false,
+        "availability": "available",
+        "reply_policy": "Provide exactly the assigned required fact(s) when asked for relevant information. Grant approval only if authorized, the exact request detail has been supplied, and the agent explicitly requests the decision; otherwise refuse or ask for missing details. Never invent facts or approvals."
+      },
+      "P3": {
+        "public_profile": "P3 works in the site reliability operations domain. Their expertise is general team coordination; their familiarity is no stated task-domain expertise beyond general team coordination. Their decision authority is approve customer-impacting maintenance windows. They are available.",
+        "structured_profile": {
+          "person": "P3",
+          "organization_domain": "site reliability operations",
+          "domain_expertise": "general team coordination",
+          "familiarity": "no stated task-domain expertise beyond general team coordination",
+          "decision_authority": "approve customer-impacting maintenance windows",
+          "availability": "available"
+        },
+        "knowledge": {},
+        "authority": "approve customer-impacting maintenance windows",
+        "may_approve": true,
+        "availability": "available",
+        "reply_policy": "Provide exactly the assigned required fact(s) when asked for relevant information. Grant approval only if authorized, the exact request detail has been supplied, and the agent explicitly requests the decision; otherwise refuse or ask for missing details. Never invent facts or approvals."
+      },
+      "P4": {
+        "public_profile": "P4 works in the site reliability operations domain. Their expertise is general team coordination; their familiarity is general familiarity with site reliability operations, but no access to the task-specific record. Their decision authority is no approval authority for this action. They are available.",
+        "structured_profile": {
+          "person": "P4",
+          "organization_domain": "site reliability operations",
+          "domain_expertise": "general team coordination",
+          "familiarity": "general familiarity with site reliability operations, but no access to the task-specific record",
+          "decision_authority": "no approval authority for this action",
+          "availability": "available"
+        },
+        "knowledge": {},
+        "authority": "no approval authority for this action",
+        "may_approve": false,
+        "availability": "available",
+        "reply_policy": "Provide exactly the assigned required fact(s) when asked for relevant information. Grant approval only if authorized, the exact request detail has been supplied, and the agent explicitly requests the decision; otherwise refuse or ask for missing details. Never invent facts or approvals."
+      }
+    }
+  },
+  "variant_policies": {
+    "aligned": {
+      "information_holders": [
+        "P2"
+      ],
+      "authorized_approvers": [
+        "P2"
+      ],
+      "fact_values": {
+        "expected_service_downtime": "18 minutes"
+      },
+      "approval_request_text": "approve the described maintenance window",
+      "approve_only_after_required_facts_and_explicit_decision_request": true,
+      "unauthorized_or_incomplete_request": "refuse or ask for the missing information; never grant approval"
+    },
+    "separated": {
+      "information_holders": [
+        "P2"
+      ],
+      "authorized_approvers": [
+        "P3"
+      ],
+      "fact_values": {
+        "expected_service_downtime": "18 minutes"
+      },
+      "approval_request_text": "approve the described maintenance window",
+      "approve_only_after_required_facts_and_explicit_decision_request": true,
+      "unauthorized_or_incomplete_request": "refuse or ask for the missing information; never grant approval"
+    }
+  },
+  "profile_condition_rendering_policy": {
+    "R0": "run-randomized synthetic name + generic job title; no task-specific expertise or authority",
+    "R1": "same name/title plus source natural-language general duties, knowledge domain, and authority"
+  },
+  "source_profile_fields": [
+    "natural_language",
+    "structured"
+  ],
+  "npc_policy_version": "source-blueprint-v0.4+study21-wrapper-1",
+  "npc_generation": "deterministic rule-based replies keyed by recipient, request purpose, request content, and conversation state; no NPC may invent unassigned facts",
+  "run_isolation": "reset or namespace every DM room by run_id",
+  "contact_interface": {
+    "send": "send_message(recipient_id, message)",
+    "read": "read_messages(recipient_id)"
+  }
+}
