@@ -25,6 +25,10 @@ Use existing TheAgentCompany/OpenHands traces to test whether archived trajector
 ## Decision / inference limits
 
 The statistical tests evaluate this fixed benchmark sample. Ten configurations may differ in provider, model generation, prompting, or infrastructure; thus “model effect” means observed configuration-level difference, not isolated architecture or scale. The recipient policy audit helps qualify the proxy but does not repair ground truth: the trace study requires a second annotator and event-level correctness rubric before it can claim wrong-recipient, missed-recipient, or follow-up error prevalence.
+
+## Role information and condition labels
+
+Study 1 is a retrospective analysis of archived traces, not a randomized profile-information experiment. Do not assign R0/R1/R2 labels to these traces unless the exact information shown to the agent can be reconstructed from the run. For future controlled studies, use **R0 = basic organizational directory** (name + generic job title, optionally team/department) and **R1 = enriched natural-language role dossier** (R0 plus general duties, knowledge domains, and authority boundaries); R2 is the semantically matched structured form of R1. The title in R0 is ordinary directory metadata and must not be treated as evidence that the agent received a detailed expertise or authorization profile. Study 1 can describe the roster/context visible in a trace, but cannot estimate a causal R1−R0 profile effect.
 ## 2026-10-24 update: behavior taxonomy and task-instruction audit
 
 The initial scenario-roster coverage analysis is only a coarse contact proxy. A separate task-level review now distinguishes task-mandated contact from contact conditional on a task trigger: among 40 TAC NPC-related tasks, 32 explicitly require contact, 6 specify conditional contact, and 2 do not specify interpersonal help. This means the existing traces can support a taxonomy and analysis of how model configurations carry out prescribed or condition-triggered interactions; they do not, by themselves, identify spontaneous uncertainty-driven help-seeking.
