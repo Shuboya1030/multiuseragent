@@ -1,5 +1,7 @@
 # Study 2 confirmatory collection: first-pass results
 
+> **Historical first pass, superseded for final interpretation.** This summary is retained as the original analysis record. Subsequent trace audit found that legacy `first_valid` can count approval-first behavior as valid, and old R2 profiles omit organization-domain facts present in R1. See `historical_confirmatory_reanalysis.md` for corrected outcomes and `study2_v04_analysis.md` for the matched-profile replication. Historical R2−R1 is not a clean representation-format effect. No R-weight sensitivity analysis is part of the final plan.
+
 **Analysis set:** 168 unique planned episodes, 14 task-template clusters, two fixed model configurations, three role-information conditions, aligned/separated variants. The source file contains 44 extra duplicate-cell rows; see `confirmatory_data_integrity.md`. The analysis retains the first appended record per planned cell and preserves all source rows.
 
 ## Main results

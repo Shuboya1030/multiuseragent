@@ -1,0 +1,17 @@
+{
+  "checked_at_utc": "2026-10-25T00:55:13.402816+00:00",
+  "v0_4_blueprints": 52,
+  "v0_4_templates": 26,
+  "v0_4_profile_semantic_issues": [],
+  "evaluator_cases": 8,
+  "evaluator_failures": [],
+  "stored_runs_checked": 433,
+  "stored_runs_missing_events": 0,
+  "saved_vs_recomputed_mismatches": [],
+  "historical_confirmatory_raw_rows": 212,
+  "historical_confirmatory_unique_cells": 168,
+  "confirmatory_duplicate_cells": 44,
+  "confirmatory_extra_rows": 44,
+  "v0_4_confirmatory_raw_rows_including_interrupted_pilot": 173,
+  "old_profile_structured_missing_domain_entries": 160
+}

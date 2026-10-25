@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1050" height="475" viewBox="0 0 1050 475">
+<rect width="100%" height="100%" fill="white"/>
+<text x="30" y="32" font-family="Arial" font-size="21" font-weight="bold">Study 2 v0.4: paired profile-condition effects (95% template-cluster bootstrap CI)</text>
+<line x1="680.0" y1="58" x2="680.0" y2="450" stroke="#666" stroke-dasharray="4 4"/>
+<text x="28" y="83" font-family="Arial" font-size="13">fixed_model_average · R1-R0 · Strict first information step</text>
+<line x1="711.7" y1="78" x2="736.8" y2="78" stroke="#2463a6" stroke-width="2"/>
+<line x1="711.7" y1="73" x2="711.7" y2="83" stroke="#2463a6"/>
+<line x1="736.8" y1="73" x2="736.8" y2="83" stroke="#2463a6"/>
+<circle cx="724.8" cy="78" r="4.5" fill="#d35400"/>
+<text x="744.8" y="82" font-family="Arial" font-size="11">+0.73</text>
+<text x="28" y="121" font-family="Arial" font-size="13">fixed_model_average · R2-R1 · Strict first information step</text>
+<line x1="676.7" y1="116" x2="680.0" y2="116" stroke="#2463a6" stroke-width="2"/>
+<line x1="676.7" y1="111" x2="676.7" y2="121" stroke="#2463a6"/>
+<line x1="680.0" y1="111" x2="680.0" y2="121" stroke="#2463a6"/>
+<circle cx="678.9" cy="116" r="4.5" fill="#d35400"/>
+<text x="688.0" y="120" font-family="Arial" font-size="11">-0.02</text>
+<text x="28" y="159" font-family="Arial" font-size="13">fixed_model_average · R1-R0 · Valid path completion</text>
+<line x1="680.0" y1="154" x2="693.1" y2="154" stroke="#2463a6" stroke-width="2"/>
+<line x1="680.0" y1="149" x2="680.0" y2="159" stroke="#2463a6"/>
+<line x1="693.1" y1="149" x2="693.1" y2="159" stroke="#2463a6"/>
+<circle cx="685.5" cy="154" r="4.5" fill="#d35400"/>
+<text x="701.1" y="158" font-family="Arial" font-size="11">+0.09</text>
+<text x="28" y="197" font-family="Arial" font-size="13">fixed_model_average · R2-R1 · Valid path completion</text>
+<line x1="680.0" y1="192" x2="680.0" y2="192" stroke="#2463a6" stroke-width="2"/>
+<line x1="680.0" y1="187" x2="680.0" y2="197" stroke="#2463a6"/>
+<line x1="680.0" y1="187" x2="680.0" y2="197" stroke="#2463a6"/>
+<circle cx="680.0" cy="192" r="4.5" fill="#d35400"/>
+<text x="688.0" y="196" font-family="Arial" font-size="11">+0.00</text>
+<text x="28" y="235" font-family="Arial" font-size="13">fixed_model_average · R1-R0 · Task score T</text>
+<line x1="680.0" y1="230" x2="693.1" y2="230" stroke="#2463a6" stroke-width="2"/>
+<line x1="680.0" y1="225" x2="680.0" y2="235" stroke="#2463a6"/>
+<line x1="693.1" y1="225" x2="693.1" y2="235" stroke="#2463a6"/>
+<circle cx="685.5" cy="230" r="4.5" fill="#d35400"/>
+<text x="701.1" y="234" font-family="Arial" font-size="11">+0.09</text>
+<text x="28" y="273" font-family="Arial" font-size="13">fixed_model_average · R2-R1 · Task score T</text>
+<line x1="680.0" y1="268" x2="680.0" y2="268" stroke="#2463a6" stroke-width="2"/>
+<line x1="680.0" y1="263" x2="680.0" y2="273" stroke="#2463a6"/>
+<line x1="680.0" y1="263" x2="680.0" y2="273" stroke="#2463a6"/>
+<circle cx="680.0" cy="268" r="4.5" fill="#d35400"/>
+<text x="688.0" y="272" font-family="Arial" font-size="11">+0.00</text>
+<text x="28" y="311" font-family="Arial" font-size="13">fixed_model_average · R1-R0 · Fixed composite R</text>
+<line x1="703.0" y1="306" x2="723.6" y2="306" stroke="#2463a6" stroke-width="2"/>
+<line x1="703.0" y1="301" x2="703.0" y2="311" stroke="#2463a6"/>
+<line x1="723.6" y1="301" x2="723.6" y2="311" stroke="#2463a6"/>
+<circle cx="712.3" cy="306" r="4.5" fill="#d35400"/>
+<text x="731.6" y="310" font-family="Arial" font-size="11">+0.53</text>
+<text x="28" y="349" font-family="Arial" font-size="13">fixed_model_average · R2-R1 · Fixed composite R</text>
+<line x1="679.8" y1="344" x2="681.1" y2="344" stroke="#2463a6" stroke-width="2"/>
+<line x1="679.8" y1="339" x2="679.8" y2="349" stroke="#2463a6"/>
+<line x1="681.1" y1="339" x2="681.1" y2="349" stroke="#2463a6"/>
+<circle cx="680.3" cy="344" r="4.5" fill="#d35400"/>
+<text x="689.1" y="348" font-family="Arial" font-size="11">+0.01</text>
+<text x="28" y="387" font-family="Arial" font-size="13">fixed_model_average · R1-R0 · Query cost</text>
+<line x1="430.0" y1="382" x2="534.8" y2="382" stroke="#2463a6" stroke-width="2"/>
+<line x1="430.0" y1="377" x2="430.0" y2="387" stroke="#2463a6"/>
+<line x1="534.8" y1="377" x2="534.8" y2="387" stroke="#2463a6"/>
+<circle cx="484.6" cy="382" r="4.5" fill="#d35400"/>
+<text x="542.8" y="386" font-family="Arial" font-size="11">-3.20</text>
+<text x="28" y="425" font-family="Arial" font-size="13">fixed_model_average · R2-R1 · Query cost</text>
+<line x1="670.2" y1="420" x2="683.3" y2="420" stroke="#2463a6" stroke-width="2"/>
+<line x1="670.2" y1="415" x2="670.2" y2="425" stroke="#2463a6"/>
+<line x1="683.3" y1="415" x2="683.3" y2="425" stroke="#2463a6"/>
+<circle cx="677.8" cy="420" r="4.5" fill="#d35400"/>
+<text x="691.3" y="424" font-family="Arial" font-size="11">-0.04</text>
+<text x="390" y="467" font-family="Arial" font-size="11">← negative contrast · zero reference · positive contrast →</text>
+</svg>

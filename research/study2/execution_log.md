@@ -1,8 +1,8 @@
 # Study 2 execution log
 
 **Date:** 2026-10-24  
-**Status:** Approved by user; execution underway.  
-**Inference status:** No confirmatory results yet.
+**Status:** Study 2 collection and closeout analysis complete.
+**Inference status:** The final matched-profile estimates are reported in `derived/study2_v04_analysis.md`. Historical R1-vs-R2 is not a clean format test because old R2 profiles omitted an organization-domain fact present in R1. No R-weight sensitivity analysis was run, per user decision.
 
 ## Environment and task set
 
@@ -28,9 +28,27 @@
 - Claude Code reports authenticated, but noninteractive inference did not return after repeated waits, so no Claude output was recorded.
 - A minimal Codex CLI inference succeeded using the logged-in account. The pilot runner is configured for model `gpt-6-luna`, Codex CLI 0.163.0-alpha.11.2, isolated empty working directory, ephemeral sessions, and read-only sandbox. CLI does not expose a sampling-temperature setting in this run path; this is recorded as a reproducibility limitation.
 
-## Next execution stage
+## Corrected profile audit and closeout plan — 2026-10-25
 
-Run the eight `pilot_locked` task variants × three profile conditions (24 episodes, one model, one repetition) as a feasibility pilot. If the profile condition still produces a ceiling, revise only on the development split and freeze a new version before collecting further locked data. The pilot is too small (four matched workflow templates) to support final confirmatory inference; expand the task set and determine power before the main Study 2 collection.
+- Full trace audit checked all 260 historical episodes: each had corresponding events and all stored terminal scores/rewards matched a fresh replay. Eight deterministic evaluator boundary cases passed.
+- The audit found 160 historical structured candidate profiles missing the organization-domain field included in prose profiles. Thus, historical R2−R1 cannot isolate representation format. Historical data are retained, but that contrast is labeled confounded.
+- The original `first_valid` outcome counted an approval-first request to an authorized person as valid. New analyses use strict first information-step validity, reconstructed from the trace.
+- Built 52 v0.4 blueprints: the 14 prior workflow templates (28 aligned/separated variants) with matched prose/structured semantics, plus 12 newly authored templates (24 variants). The latter are retained as an audited extension set, outside the Study 2 confirmatory closeout.
+- A three-repetition 936-episode collection was started and interrupted after five records when its scale proved disproportionate to the original Study 2 scope. Those raw records remain intact and are excluded from primary estimates. The closeout replication is 14 templates × 2 fixed model configurations × 3 profile conditions × 1 episode = 168 planned cells; existing v0.4 runs were resumed where they matched this design. Of the 173 total v0.4 confirmatory-split records, 168 enter the primary set; five are preserved as pilot/excluded records (including one new-template record).
+- The runner now records invocation/task/profile/prompt versions and enforces a single active writer. Fixed R remains a descriptive composite; no reward-weight sensitivity scan is planned.
+- Protocol, analysis, outcome definition, cluster-based uncertainty, task/evaluator audit, duplicate handling, and figure outputs are being documented separately. Results remain bounded to a synthetic simulator and two fixed model configurations.
+
+## Corrected-profile replication and final analysis — 2026-10-25
+
+- Completed all 168 planned v0.4 replication episodes: 28 task variants (14 workflow templates × aligned/separated) × two fixed model configurations × three profile conditions. There were 163 completed episodes and 5 max-turn episodes; all remain in the analysis as observed outcomes. Candidate order was identical within every matched task/repetition block.
+- The v0.4 profile/task audit flagged no semantic parity or gold-recipient leakage issues. The 8 deterministic evaluator boundary cases passed. Across all 433 historical, pilot, interrupted-batch and replication runs, every run had a trace and all recomputed outcomes matched saved terminal values.
+- Historical confirmatory data remain 212 rows / 168 planned cells / 44 retained extra duplicate rows. Duplicate sensitivity compares the first appended row with cell means over all attempts; the old raw records were not edited.
+- Main v0.4 estimates (template-cluster bootstrap, 14 clusters): R1−R0 strict first-information-step validity +0.732 (95% CI +0.518 to +0.929; Holm-adjusted p=.002 across six primary contrasts); valid-path completion +0.089 (95% CI 0.000 to +0.214); task score T +0.089 (same CI); fixed R +0.528 (95% CI +0.376 to +0.713); contacts/query cost −3.196 (95% CI −4.089 to −2.375); knowledge misses −1.518 and unauthorized approval attempts −1.411 per episode on average.
+- Marginal condition rates across the 56 runs per condition: R0 valid-path completion 91.1%, strict first-step validity 26.8%, mean contacts 5.25, mean R=.425; R1: 100%, 100%, 2.05, R=.954; R2: 100%, 98.2%, 2.02, R=.959.
+- R2−R1: no evidence of a useful structured-profile advantage in this sample (R difference +.005, 95% CI −.003 to +.017; strict first-step difference −.018, 95% CI −.054 to 0). The representations encode matched facts, but R2 text is about 8% longer than R1; interpret this as a structured-profile package contrast, not a length-controlled typography-only effect.
+- No clear alignment moderation: R1−R0 separated-minus-aligned DID for R was −.022 (95% CI −.279 to +.235); task completion DID was −.036 (95% CI −.143 to +.071).
+- Current interpretation: role facts substantially improve route quality and reduce wasted contacts/authority mistakes in this simulation; the task-success gain is smaller because R0 already succeeds in about 91% of runs. Structured presentation adds no demonstrated benefit over prose. This is evidence for the two tested fixed configurations and 14 synthetic templates only.
+- Figures/tables and full estimates: `derived/study2_v04_analysis.md`, `study2_v04_contrasts.csv`, `study2_v04_alignment_interactions.csv`, `study2_v04_cell_summary.csv`, `study2_v04_main_effects.svg`, `study2_v04_error_effects.svg`; trace-level replay and evaluator audit: `derived/quality_audit.md`; historical corrected analysis and duplicate check: `derived/historical_confirmatory_reanalysis.md` and `historical_confirmatory_contrasts.csv`.
 
 ## Locked pilot and confirmatory collection — 2026-10-24
 

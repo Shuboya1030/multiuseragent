@@ -1,12 +1,12 @@
-"""Pilot runner using the logged-in Codex CLI model; writes run and event JSONL."""
-import argparse, json, random, re, subprocess, uuid
+"""Checkpointed Study 2 runner using logged-in Codex CLI models."""
+import argparse, json, os, random, re, subprocess, uuid
 from datetime import datetime, timezone
 from pathlib import Path
 import run_study2 as sim
 
 ROOT=Path(__file__).resolve().parent
 CTX=Path(r'C:\Users\shuyazong\.codex\visualizations\2026\10\23\01a16a1c-4623-7842-8729-cb51914490e4\study2_llm_context')
-RUNS=ROOT/'runs.jsonl'; EVENTS=ROOT/'events.jsonl'
+RUNS=ROOT/'runs.jsonl'; EVENTS=ROOT/'events.jsonl'; LOCK=ROOT/'.run_study2_codex.lock'
 DEFAULT_MODELS=['gpt-6-luna','gpt-5.6-terra']; SEED=20261024
 
 def ask_model(prompt,model):
@@ -39,7 +39,7 @@ def action_prompt(task,condition,order,transcript):
       '\nReturn your next action now.'
     )
 
-def run_one(task,condition,rep,model):
+def run_one(task,condition,rep,model,prompt_version,invocation_id):
     rng=random.Random(f"{task['task_id']}|{rep}|{SEED}"); order=task['candidate_ids'][:]; rng.shuffle(order)
     people={p['person_id']:p for p in task['candidates']}
     info=task['gold_admissible_recipients_by_step']['information'][0]
@@ -83,15 +83,39 @@ def run_one(task,condition,rep,model):
     T=(int(fact_ok)+int(approval_ok))/2; path_ok=bool(fact_ok and approval_ok and known)
     reward=T-sim.LAM*total_cost-sim.MU*n_auth-sim.NU*n_waste
     run_id=str(uuid.uuid4())
-    row={'run_id':run_id,'task_id':task['task_id'],'model_id':model,'backend':'codex_cli','profile_condition':condition,
-      'alignment':task['alignment'],'split':task['split'],'task_version':task['task_version'],'prompt_version':'S2-prompt-0.2','codex_cli_version':'0.163.0-alpha.11.2','rep':rep,'seed':SEED,'candidate_order':order,'profile_char_count':len(sim.profiles(task,condition,order)),
+    row={'run_id':run_id,'invocation_id':invocation_id,'task_id':task['task_id'],'model_id':model,'backend':'codex_cli','profile_condition':condition,
+      'alignment':task['alignment'],'split':task['split'],'task_version':task['task_version'],'profile_version':task.get('profile_version','profile-unknown'),'prompt_version':prompt_version,'codex_cli_version':'0.163.0-alpha.11.2','rep':rep,'seed':SEED,'candidate_order':order,'profile_char_count':len(sim.profiles(task,condition,order)),
       'status':status,'first_target':first_target,'first_valid':first_valid,'fact_correct':fact_ok,'approval_correct':approval_ok,
       'valid_path':path_ok,'task_score_T':T,'task_success':path_ok,'total_cost':total_cost,'N_auth':n_auth,'N_waste':n_waste,
       'lambda':sim.LAM,'mu':sim.MU,'nu':sim.NU,'reward_R':reward,'oracle_reward_R':1-2*sim.LAM,
       'regret':1-2*sim.LAM-reward,'input_tokens':input_tokens,'output_tokens':output_tokens,
       'finished_at_utc':datetime.now(timezone.utc).isoformat()}
-    for event in events: event.update({'run_id':run_id,'task_id':task['task_id'],'model_id':model,'profile_condition':condition,'alignment':task['alignment']})
+    for event in events: event.update({'run_id':run_id,'invocation_id':invocation_id,'task_id':task['task_id'],'task_version':task['task_version'],'profile_version':task.get('profile_version','profile-unknown'),'prompt_version':prompt_version,'model_id':model,'profile_condition':condition,'alignment':task['alignment']})
     return row,events
+
+def _run(args,invocation_id):
+    task_path=Path(args.taskset) if args.taskset else sim.TASKS
+    tasks=sim.jl(task_path)
+    tasks=tasks if args.split=='all' else [t for t in tasks if t['split']==args.split]
+    if args.task_version:
+        tasks=[t for t in tasks if t.get('task_version')==args.task_version]
+    if args.template_origin:
+        tasks=[t for t in tasks if t.get('template_origin')==args.template_origin]
+    models=[m.strip() for m in args.models.split(',') if m.strip()]
+    done=set()
+    if args.resume and RUNS.exists():
+        done={(r['task_id'],r['model_id'],r['profile_condition'],r['rep'],r.get('task_version'),r.get('profile_version','profile-unknown'),r.get('prompt_version')) for r in sim.jl(RUNS)}
+    jobs=[(t,m,c,r) for t in tasks for m in models for c in ('R0','R1','R2') for r in range(args.reps)
+          if (t['task_id'],m,c,r,t.get('task_version'),t.get('profile_version','profile-unknown'),args.prompt_version) not in done]
+    random.Random(SEED).shuffle(jobs)
+    print(f'Scheduled {len(jobs)} episodes: {len(tasks)} task variants x {len(models)} models x 3 profiles x {args.reps} reps.',flush=True)
+    for task,model,condition,rep in jobs:
+        row,events=run_one(task,condition,rep,model,args.prompt_version,invocation_id)
+        with RUNS.open('a',encoding='utf-8',newline='\n') as f:
+            f.write(json.dumps(row,ensure_ascii=False)+'\n')
+        with EVENTS.open('a',encoding='utf-8',newline='\n') as f:
+            for event in events: f.write(json.dumps(event,ensure_ascii=False)+'\n')
+        print(f"{task['task_id']} {model} {condition} rep={rep}: valid_path={row['valid_path']} T={row['task_score_T']:.2f} R={row['reward_R']:.3f}",flush=True)
 
 def main():
     p=argparse.ArgumentParser()
@@ -99,24 +123,22 @@ def main():
     p.add_argument('--models',default=','.join(DEFAULT_MODELS))
     p.add_argument('--reps',type=int,default=1)
     p.add_argument('--resume',action='store_true')
+    p.add_argument('--taskset',default=None,help='Optional versioned task blueprint JSONL.')
+    p.add_argument('--task-version',default=None,help='Optional exact task_version filter.')
+    p.add_argument('--template-origin',default=None,help='Optional exact template_origin filter.')
+    p.add_argument('--prompt-version',default='S2-prompt-0.3')
     args=p.parse_args()
-    tasks=sim.jl(sim.TASKS)
-    tasks=tasks if args.split=='all' else [t for t in tasks if t['split']==args.split]
-    models=[m.strip() for m in args.models.split(',') if m.strip()]
-    done=set()
-    if args.resume and RUNS.exists():
-        done={(r['task_id'],r['model_id'],r['profile_condition'],r['rep']) for r in sim.jl(RUNS)}
-    jobs=[(t,m,c,r) for t in tasks for m in models for c in ('R0','R1','R2') for r in range(args.reps)
-          if (t['task_id'],m,c,r) not in done]
-    random.Random(SEED).shuffle(jobs)
-    print(f'Scheduled {len(jobs)} episodes: {len(tasks)} task variants x {len(models)} models x 3 profiles.',flush=True)
-    for task,model,condition,rep in jobs:
-        row,events=run_one(task,condition,rep,model)
-        with RUNS.open('a',encoding='utf-8',newline='\n') as f:
-            f.write(json.dumps(row,ensure_ascii=False)+'\n')
-        with EVENTS.open('a',encoding='utf-8',newline='\n') as f:
-            for event in events: f.write(json.dumps(event,ensure_ascii=False)+'\n')
-        print(f"{task['task_id']} {model} {condition} rep={rep}: valid_path={row['valid_path']} T={row['task_score_T']:.2f} R={row['reward_R']:.3f}",flush=True)
+    invocation_id=str(uuid.uuid4())
+    try:
+        fd=os.open(str(LOCK),os.O_CREAT|os.O_EXCL|os.O_WRONLY)
+    except FileExistsError:
+        raise SystemExit(f'Another Study 2 runner holds {LOCK}; no episodes started.')
+    try:
+        with os.fdopen(fd,'w',encoding='utf-8') as f:
+            f.write(json.dumps({'invocation_id':invocation_id,'pid':os.getpid(),'started_at_utc':datetime.now(timezone.utc).isoformat()}))
+        _run(args,invocation_id)
+    finally:
+        LOCK.unlink(missing_ok=True)
 if __name__=='__main__': main()
 
 

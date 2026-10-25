@@ -7,6 +7,7 @@ the gold state and rendered into semantically matched R1/R2 profiles.
 from __future__ import annotations
 
 import json
+import argparse
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
@@ -83,14 +84,37 @@ TEMPLATES = [
     {"id":"service_incident_notice","domain":"customer reliability","goal":"prepare a service incident notice","fact_label":"affected_service","fact_value":"Northstar Analytics API","expertise":"service ownership and incident impact records","authority":"approve customer-facing incident notices","ask":"which customer-facing service is listed as affected","approval":"approve sending the described incident notice","split":"confirmatory"}
 ]
 
+EXTENSION_TEMPLATES = [
+    {"id":"license_allocation","domain":"software asset management","goal":"prepare a software license allocation","fact_label":"license_seat_count","fact_value":"24 seats","expertise":"software license inventory and allocation records","authority":"approve license allocation for the department","ask":"how many seats are available for this allocation","approval":"approve allocating the requested software licenses","split":"confirmatory"},
+    {"id":"data_deletion","domain":"records management","goal":"prepare a records deletion request","fact_label":"retention_hold_date","fact_value":"January 15, 2027","expertise":"records retention schedules and legal holds","authority":"approve deletion of archived business records","ask":"what date does the current retention hold expire","approval":"approve deletion after the applicable hold expires","split":"confirmatory"},
+    {"id":"firewall_exception","domain":"network security","goal":"prepare a firewall exception request","fact_label":"required_destination_port","fact_value":"8443","expertise":"network service configurations and firewall rules","authority":"approve firewall exceptions for production systems","ask":"which destination port does the service require","approval":"approve the described production firewall exception","split":"confirmatory"},
+    {"id":"customer_refund","domain":"customer finance operations","goal":"prepare a customer refund","fact_label":"refund_reason_code","fact_value":"duplicate annual subscription charge","expertise":"billing adjustments and customer refund records","authority":"approve customer refunds above the routine threshold","ask":"which reason code is recorded for this refund","approval":"approve the described customer refund","split":"confirmatory"},
+    {"id":"payroll_adjustment","domain":"payroll operations","goal":"prepare a payroll adjustment","fact_label":"adjustment_pay_period","fact_value":"the pay period ending October 16","expertise":"payroll corrections and employee pay-period records","authority":"approve payroll adjustments for the department","ask":"which pay period does this adjustment apply to","approval":"approve the described payroll adjustment","split":"confirmatory"},
+    {"id":"accessibility_format","domain":"accessibility services","goal":"prepare an accessible training packet","fact_label":"required_document_format","fact_value":"tagged accessible PDF","expertise":"accessible document standards and accommodation requests","authority":"approve accessible training materials for release","ask":"which accessible format was requested","approval":"approve releasing the training packet in the requested format","split":"confirmatory"},
+    {"id":"lab_equipment","domain":"research operations","goal":"prepare a laboratory equipment request","fact_label":"required_sensor_range","fact_value":"0 to 200 degrees Celsius","expertise":"laboratory equipment specifications and instrument records","authority":"approve laboratory equipment purchases","ask":"what measurement range is required for the sensor","approval":"approve purchasing the specified laboratory sensor","split":"confirmatory"},
+    {"id":"marketing_claim","domain":"marketing compliance","goal":"prepare a customer-facing product claim","fact_label":"approved_claim_evidence","fact_value":"a 12 percent reduction in setup time in the Q3 trial","expertise":"product claim substantiation and trial evidence","authority":"approve external product marketing claims","ask":"what result is supported by the Q3 trial","approval":"approve publishing the described product claim","split":"confirmatory"},
+    {"id":"security_key_rotation","domain":"identity security","goal":"prepare a service credential rotation","fact_label":"rotation_deadline","fact_value":"November 12","expertise":"service credentials and rotation schedules","authority":"authorize production credential rotations","ask":"what deadline is recorded for this credential rotation","approval":"authorize the described production credential rotation","split":"confirmatory"},
+    {"id":"office_relocation","domain":"workplace operations","goal":"prepare a team office relocation","fact_label":"assigned_floor","fact_value":"the fourth floor","expertise":"office assignments and workplace move plans","authority":"approve team office relocations","ask":"which floor is assigned to the team","approval":"approve the described team relocation","split":"confirmatory"},
+    {"id":"vendor_payment","domain":"accounts payable","goal":"prepare a vendor payment","fact_label":"payment_reference","fact_value":"INV-80431","expertise":"vendor invoices and payment references","authority":"approve vendor payments over the delegated limit","ask":"what invoice reference is associated with this payment","approval":"approve the described vendor payment","split":"confirmatory"},
+    {"id":"backup_restore","domain":"data reliability engineering","goal":"prepare a backup restoration","fact_label":"latest_verified_backup","fact_value":"backup snapshot from 02:00 UTC on October 22","expertise":"backup catalogs and restoration runbooks","authority":"authorize restoration of production data","ask":"which verified snapshot is the latest available","approval":"authorize restoring the described production data","split":"confirmatory"},
+]
+
 NAMES = ["P1", "P2", "P3", "P4"]
 
 
 def make_profile(person_id: str, domain: str, expertise: str, knows: bool,
                  authority: str, can_approve: bool, partial: bool = False) -> dict:
+    if partial:
+        familiarity = f"general familiarity with {domain}, but no access to the task-specific record"
+    elif knows:
+        familiarity = f"specialist familiarity with {expertise}"
+    else:
+        familiarity = "no stated task-domain expertise beyond general team coordination"
     role = {
         "person_id": person_id,
+        "organization_domain": domain,
         "domain_expertise": expertise if knows else "general team coordination",
+        "familiarity": familiarity,
         "knows_request_details": knows,
         "decision_authority": authority if can_approve else "no approval authority for this action",
         "can_approve_action": can_approve,
@@ -102,18 +126,21 @@ def make_profile(person_id: str, domain: str, expertise: str, knows: bool,
 
 
     role["natural_language"] = (
-        f"{person_id} works in {domain}. Their expertise is {role['domain_expertise']}. "
-        f"Their decision authority is {role['decision_authority']}. They are available."
+        f"{person_id} works in the {domain} domain. Their expertise is {role['domain_expertise']}; "
+        f"their familiarity is {familiarity}. Their decision authority is {role['decision_authority']}. "
+        "They are available."
     )
     role["structured"] = {
         "person": person_id,
+        "organization_domain": domain,
         "domain_expertise": role["domain_expertise"],
+        "familiarity": familiarity,
         "decision_authority": role["decision_authority"],
         "availability": "available",
     }
     return role
 
-def build(template: dict, alignment: str, rotation: int) -> dict:
+def build(template: dict, alignment: str, rotation: int, version: str = "0.2") -> dict:
     info_id = NAMES[rotation % len(NAMES)]
     auth_id = info_id if alignment == "aligned" else NAMES[(rotation + 1) % len(NAMES)]
     partial_id = NAMES[(rotation + 2) % len(NAMES)]
@@ -135,8 +162,10 @@ def build(template: dict, alignment: str, rotation: int) -> dict:
     )
     return {
         "task_id": f"S2_{template['id']}_{alignment}",
-        "task_version": "0.2" if template["id"] in {"procurement_display", "infrastructure_server", "travel_booking", "interview_panel", "incident_notification", "retention_change"} else "0.3",
+        "task_version": version if version == "0.4" else ("0.2" if template["id"] in {"procurement_display", "infrastructure_server", "travel_booking", "interview_panel", "incident_notification", "retention_change"} else "0.3"),
+        "profile_version": "profile-0.4" if version == "0.4" else "profile-0.3",
         "source": "original synthetic scenario; broad workplace workflow inspired by TAC, wording and values newly authored",
+        "template_origin": template.get("template_origin", "legacy_task_template"),
         "domain": template["domain"],
         "alignment": alignment,
         "goal": template["goal"],
@@ -156,11 +185,25 @@ def build(template: dict, alignment: str, rotation: int) -> dict:
 
 
 def main() -> None:
-    rows = [build(t, a, i) for i, t in enumerate(TEMPLATES) for a in ("aligned", "separated")]
-    with OUT.open("w", encoding="utf-8", newline="\n") as f:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--output", type=Path, default=OUT)
+    parser.add_argument("--extension-confirmatory", action="store_true", help="Generate a clean v0.4 collection from prior confirmatory templates plus the 12 extension templates.")
+    args = parser.parse_args()
+    if args.extension_confirmatory:
+        base = [dict(t, template_origin="previously_seen_template") for t in TEMPLATES if t.get("split") == "confirmatory"]
+        extension = [dict(t, template_origin="new_extension_template") for t in EXTENSION_TEMPLATES]
+        templates = base + extension
+        templates = [dict(t, split="confirmatory") for t in templates]
+        version = "0.4"
+    else:
+        templates = TEMPLATES
+        version = "0.3"
+    rows = [build(t, a, i, version=version) for i, t in enumerate(templates) for a in ("aligned", "separated")]
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    with args.output.open("w", encoding="utf-8", newline="\n") as f:
         for row in rows:
             f.write(json.dumps(row, ensure_ascii=False) + "\n")
-    print(f"Wrote {len(rows)} matched blueprints to {OUT}")
+    print(f"Wrote {len(rows)} matched blueprints to {args.output}")
 
 
 if __name__ == "__main__":

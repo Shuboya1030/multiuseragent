@@ -3,6 +3,8 @@
 **Frozen before confirmatory model calls:** 2026-10-24  
 **Status:** Collection underway after a 48-episode feasibility pilot.
 
+> **Historical protocol note:** This document records the v0.1 plan as originally frozen. It is superseded for final Study 2 interpretation by [`confirmatory_extension_protocol_v0.2.md`](confirmatory_extension_protocol_v0.2.md). In particular, historical R1/R2 profile facts were not fully matched, and the originally contemplated R-weight sensitivity analysis was later explicitly dropped by the user. The final closeout uses the corrected-profile v0.4 replication and does not scan R weights.
+
 ## Scope and design
 
 - Task set: the 28 version-0.3 confirmatory task variants (14 workflow templates, each with aligned and separated knowledge/authority structure).
