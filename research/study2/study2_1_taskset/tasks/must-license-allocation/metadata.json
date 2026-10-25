@@ -1,0 +1,104 @@
+{
+  "schema_version": "study21-task-v1.0",
+  "task_id": "must-license-allocation",
+  "template_id": "S2_license_allocation",
+  "task_version": "source-v0.4+study21-wrapper-2",
+  "split": "development",
+  "created_at": "2026-10-24",
+  "source": "adapted from local Study 2 v0.4 synthetic workflow blueprint",
+  "source_file": "upstream-partimephd/research/study2/task_blueprints_v0.4.jsonl",
+  "source_task_ids": [
+    "S2_license_allocation_aligned",
+    "S2_license_allocation_separated"
+  ],
+  "parent_template_id": "S2_license_allocation",
+  "variant_type": "role_alignment",
+  "variant_counted_as_independent_template": false,
+  "license_status": "locally authored synthetic blueprint; verify repository licensing before public redistribution",
+  "help_need_class": "must_ask",
+  "domain": "software asset management",
+  "workflow_type": "prepare a software license allocation",
+  "candidate_ids": [
+    "P1",
+    "P2",
+    "P3",
+    "P4"
+  ],
+  "profile_conditions": [
+    "R0",
+    "R1"
+  ],
+  "profile_rendering": {
+    "R0": "synthetic name + generic job title",
+    "R1": "same name/title + natural-language general role profile"
+  },
+  "run_instantiator": "../instantiate_run.py",
+  "visible_candidate_profiles": "candidate_profiles.json (run output; inject as context)",
+  "author": "AI-assisted task adaptation; human content review pending",
+  "number_workflow_stages": 2,
+  "needs_fact": true,
+  "needs_approval": true,
+  "multiple_valid_paths": true,
+  "environment": {
+    "visible_tools": [
+      "send_message(recipient_id, message)",
+      "read_messages(recipient_id)"
+    ],
+    "contact_channel": "isolated direct-message service",
+    "reset_strategy": "fresh Rocket.Chat namespace or fully reset room history per run_id",
+    "candidate_order_policy": "randomize independently of role/knowledge per run",
+    "response_delay": "fixed within each experiment condition",
+    "contact_cost": "count contact attempts; token/latency costs recorded per run; no synthetic monetary penalty",
+    "npc_policy_version": "source-blueprint-v0.4+study21-wrapper-2",
+    "npc_type": "deterministic scripted reply policy"
+  },
+  "gold_policy_file": "gold_policy.json",
+  "npc_policy_file": "scenarios.json",
+  "evaluator_code": "evaluator.py",
+  "evaluator_spec_file": "evaluator_spec.json",
+  "evaluator_version": "study21-eval-spec-2",
+  "trace_schema_file": "../trace_schema.json",
+  "run_record_schema_file": "../run_record_schema.json",
+  "checkpoint_ids": [
+    "fact_correct",
+    "approval_valid",
+    "artifact_complete",
+    "safe_actions"
+  ],
+  "artifact_schema": {
+    "type": "object",
+    "required": [
+      "license_seat_count",
+      "approved_by"
+    ],
+    "properties": {
+      "approved_by": {
+        "type": "string",
+        "description": "one visible candidate ID"
+      }
+    }
+  },
+  "attempt_abstention": "abstention is scored as incomplete; preserve explicit abstention event separately",
+  "quality_review": {
+    "completeness": "pass structurally",
+    "leak": "source audit plus wrapper prompt inspection; confirmatory leak test pending",
+    "pilot_status": "not run after wrapper adaptation",
+    "reviewer_ids": [],
+    "decision": "not yet eligible for confirmatory split",
+    "ambiguity_log": []
+  },
+  "duplicate_review": {
+    "near_duplicate_notes": "same parent workflows are grouped; aligned/separated variants remain one template; pairwise cross-template semantic audit pending"
+  },
+  "audit_status": "structural_pass_requires_content_review_and_pilot",
+  "known_limitations": [
+    "source synthetic workflows need Study 2.1 reruns",
+    "license review needed before public redistribution",
+    "aligned/separated variants and R0/R1 profiles require a fully crossed run plan"
+  ],
+  "audit_notes": [
+    "Source quality audit reports no profile/gold leakage and evaluator boundary tests pass.",
+    "All 14 prior templates and 6 selected extensions have required fact, authority, recipients, valid path, and gold answer.",
+    "Task-level realism and R0/R1 rerun validity still require independent review."
+  ]
+}

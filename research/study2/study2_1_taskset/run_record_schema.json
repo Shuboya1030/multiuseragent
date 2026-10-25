@@ -1,0 +1,30 @@
+{
+  "schema_version": "study21-run-v1",
+  "required_fields": [
+    "run_id",
+    "task_id",
+    "task_version",
+    "template_id",
+    "variant_id",
+    "model_provider",
+    "model_version_or_unpinned_alias",
+    "endpoint",
+    "sampling_parameters",
+    "prompt_hashes",
+    "profile_condition",
+    "candidate_order",
+    "seed",
+    "replicate",
+    "runtime_version",
+    "started_at",
+    "ended_at",
+    "retries",
+    "errors",
+    "agent_tokens",
+    "npc_tokens_or_unavailable",
+    "latency_ms",
+    "evaluator_version",
+    "checkpoint_vector",
+    "artifact_refs"
+  ]
+}

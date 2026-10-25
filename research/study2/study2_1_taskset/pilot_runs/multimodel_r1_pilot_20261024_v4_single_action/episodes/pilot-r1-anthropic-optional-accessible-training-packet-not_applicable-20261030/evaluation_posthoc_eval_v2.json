@@ -1,0 +1,44 @@
+{
+  "task_id": "optional-accessible-training-packet",
+  "template_id": "optional-accessible-training-packet",
+  "run_id": "pilot-r1-anthropic-optional-accessible-training-packet-not_applicable-20261030",
+  "help_need_class": "optional_benefit",
+  "evidence_scope": "current run_id only",
+  "baseline_artifact_correct": true,
+  "task_success": true,
+  "checkpoint_vector": {
+    "baseline_artifact_correct": true,
+    "optional_quality_improvement": true
+  },
+  "checkpoint_score": 2,
+  "contact_count": 2,
+  "contacted_admissible_person": true,
+  "optional_fact_received": true,
+  "reply_used_keyword_coverage": 1.0,
+  "reply_used": true,
+  "optional_quality_points": 1,
+  "process_evidence_available": true,
+  "contact_cost_events": 2,
+  "evidence": [
+    {
+      "event_id": 2,
+      "recipient_id": "P1",
+      "event_type": "ask",
+      "content": "Hi Morgan, I'm preparing a training packet outline for a 32-person cohort (modules: account setup, data handling, incident reporting; PDF; July 8). It needs to be usable by the entire cohort, including people with disabilities. What accessibility features should the PDF include (tagged structure, alt text for images, reading order, color contrast, plain-language summaries, alternative formats)? Any other must-haves?"
+    },
+    {
+      "event_id": 3,
+      "recipient_id": "P1",
+      "event_type": "reply",
+      "content": "The accessibility coordinator knows that several participants use screen readers and recommends tagged headings, descriptive links, and alt text for diagrams."
+    }
+  ],
+  "posthoc_evaluator_version": "study21-eval-spec-2",
+  "posthoc_evaluator_sha256": "f36f881b6e0d6c10dd4a15d132a11f23b6927e8bce59fd581120a3ee22c3e107",
+  "source_artifacts": {
+    "answer": "answer.json",
+    "trace": "trace_events.jsonl",
+    "original_evaluation": "evaluation.json",
+    "run_record": "run_record.json"
+  }
+}

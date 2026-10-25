@@ -1,0 +1,13 @@
+{
+  "run_id": "pilot-r1-openai-must-record-correction-separated-20261028",
+  "task_id": "must-record-correction",
+  "seed": 20261028,
+  "profile_condition": "R1",
+  "alignment": "separated",
+  "candidate_order": [
+    "C3",
+    "C4",
+    "C2",
+    "C1"
+  ]
+}

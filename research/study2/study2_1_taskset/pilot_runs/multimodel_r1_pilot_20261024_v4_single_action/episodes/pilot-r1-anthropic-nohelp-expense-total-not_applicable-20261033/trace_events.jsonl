@@ -1,0 +1,1 @@
+{"run_id": "pilot-r1-anthropic-nohelp-expense-total-not_applicable-20261033", "event_id": 0, "timestamp": "2026-10-25T06:29:45.467240+00:00", "actor": "agent", "event_type": "submit", "recipient_id": null, "purpose": null, "content": "{\"eligible_total\": 70.0, \"excluded_count\": 1, \"currency\": \"USD\"}", "authorized": null}

@@ -1,0 +1,19 @@
+{
+  "run_id": "pilot-r1-moonshot-must-record-correction-separated-20261028",
+  "task_id": "must-record-correction",
+  "seed": 20261028,
+  "profile_condition": "R1",
+  "alignment": "separated",
+  "alias_to_canonical": {
+    "C4": "P1",
+    "C1": "P2",
+    "C3": "P3",
+    "C2": "P4"
+  },
+  "canonical_to_alias": {
+    "P2": "C1",
+    "P4": "C2",
+    "P3": "C3",
+    "P1": "C4"
+  }
+}

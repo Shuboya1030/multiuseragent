@@ -1,0 +1,26 @@
+[
+  {
+    "candidate_id": "C2",
+    "name": "Kai Sullivan",
+    "job_title": "Project Team Member",
+    "profile": "Kai Sullivan — Project Team Member. Kai Sullivan coordinates security operations workflows."
+  },
+  {
+    "candidate_id": "C4",
+    "name": "Jamie Rivera",
+    "job_title": "Operations Associate",
+    "profile": "Jamie Rivera — Operations Associate. Jamie Rivera is a specialist in security operations."
+  },
+  {
+    "candidate_id": "C1",
+    "name": "Rowan Diaz",
+    "job_title": "Program Associate",
+    "profile": "Rowan Diaz — Program Associate. Rowan Diaz is a neighboring-team colleague."
+  },
+  {
+    "candidate_id": "C3",
+    "name": "Robin Shah",
+    "job_title": "Business Associate",
+    "profile": "Robin Shah — Business Associate. Robin Shah is a general project manager."
+  }
+]

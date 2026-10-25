@@ -1,0 +1,13 @@
+{
+  "run_id": "pilot-r1-moonshot-optional-field-maintenance-plan-not_applicable-20261031",
+  "task_id": "optional-field-maintenance-plan",
+  "seed": 20261031,
+  "profile_condition": "R1",
+  "alignment": "not_applicable",
+  "candidate_order": [
+    "C2",
+    "C4",
+    "C3",
+    "C1"
+  ]
+}

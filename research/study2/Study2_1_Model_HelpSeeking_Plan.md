@@ -61,6 +61,10 @@
 
 **Task-set 实现状态：** R0 renderer 已修复为运行随机化的合成人名 + 通用职务；R1 保留相同姓名/职务并增加一般职责、知识领域和权限信息。60 个模板的静态验证已通过（任务包结构、类别计数、渲染检查和 evaluator 合成夹具）；这不等于独立内容审查或真实模型端到端验证已通过。此前 12-episode GPT-5 Nano pilot 只运行了 R1，仍只是旧版运行时的可行性材料，不能当作正式数据或 R0/R1 对照。
 
+**评分器修订（2026-10-24）：** must-ask 输出字段 `approved_by` 在 v1 中没有声明 JSON 类型，gold 使用单元素数组，导致部分正确的字符串候选人 ID 被误判。当前 v2 契约统一为一个候选人 ID 字符串；评分器为历史数据兼容单元素数组，不会把多人数组折叠。重新生成后的 60 个 task packages 通过 182 个正/负及兼容性 evaluator fixture，零结构错误。已有三家 v4 与 Moonshot v5 共 36 条 pilot episode 已用 v2 离线重新评分，原 trace 和原评分文件均未覆盖；其中 5 条 must-ask 假阴性被更正为成功。细节见 `study2_1_taskset/Taskset_Audit_Report.md` 与 `study2_1_taskset/pilot_runs/posthoc_evaluator_v2_summary.json`。v4/v5 使用旧 wrapper，故仍需对当前 v2 包执行完整的 27 条 R1 pilot。
+
+**当前启动态：** 可以启动新的 R1 分层 pilot，不应开始正式 confirmatory R1。独立任务内容审查、v2 taskset 端到端 pilot 通过、数值化精度/追加规则、费用预算和不可变 confirmatory manifest 尚未全部完成；正式 R1 runner 也须冻结。委派运行说明见 `Study2_1_R1_Agent_Handoff.md`。
+
 ## 三、具体实验步骤
 
 ### 步骤 1：冻结协议和评估规则

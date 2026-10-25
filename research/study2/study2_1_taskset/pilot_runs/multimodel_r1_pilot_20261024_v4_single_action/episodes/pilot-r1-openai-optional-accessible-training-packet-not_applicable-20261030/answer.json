@@ -1,0 +1,18 @@
+{
+  "baseline_summary": {
+    "date": "July 8",
+    "modules": [
+      "account setup",
+      "data handling",
+      "incident reporting"
+    ],
+    "format": "PDF",
+    "cohort_size": 32
+  },
+  "recommendation": "Training packet outline for the full invited cohort (32 participants): cover the three visible modules in a concise PDF with a title page, agenda, learning objectives, module-by-module sections, quick reference steps, and a closing Q&A/feedback page. Suggested structure: 1) Welcome and session goals; 2) Account setup — access requirements, sign-in steps, password/reset guidance, common issues; 3) Data handling — approved storage, sharing rules, retention basics, do/don’t examples; 4) Incident reporting — what to report, how to report, escalation contacts, response expectations; 5) Summary and resources — key takeaways, links/contact list, next steps. Format for all attendees: readable headings, short bullet points, simple diagrams or screenshots if available, and space for notes. Keep the content general enough for the entire cohort while still providing practical checklists.",
+  "quality_notes": [
+    "Baseline summary preserved from the work packet.",
+    "No colleague input was needed to draft the outline.",
+    "Recommendation is usable for the entire invited cohort and stays within the visible modules."
+  ]
+}

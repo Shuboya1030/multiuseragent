@@ -1,0 +1,31 @@
+{
+  "task_id": "optional-vendor-risk-memo",
+  "template_id": "optional-vendor-risk-memo",
+  "run_id": "pilot-r1-openai-optional-vendor-risk-memo-not_applicable-20261029",
+  "help_need_class": "optional_benefit",
+  "evidence_scope": "current run_id only",
+  "baseline_artifact_correct": true,
+  "task_success": true,
+  "checkpoint_vector": {
+    "baseline_artifact_correct": true,
+    "optional_quality_improvement": false
+  },
+  "checkpoint_score": 1,
+  "contact_count": 0,
+  "contacted_admissible_person": false,
+  "optional_fact_received": false,
+  "reply_used_keyword_coverage": 0.3333333333333333,
+  "reply_used": false,
+  "optional_quality_points": 0,
+  "process_evidence_available": true,
+  "contact_cost_events": 0,
+  "evidence": [],
+  "posthoc_evaluator_version": "study21-eval-spec-2",
+  "posthoc_evaluator_sha256": "f36f881b6e0d6c10dd4a15d132a11f23b6927e8bce59fd581120a3ee22c3e107",
+  "source_artifacts": {
+    "answer": "answer.json",
+    "trace": "trace_events.jsonl",
+    "original_evaluation": "evaluation.json",
+    "run_record": "run_record.json"
+  }
+}

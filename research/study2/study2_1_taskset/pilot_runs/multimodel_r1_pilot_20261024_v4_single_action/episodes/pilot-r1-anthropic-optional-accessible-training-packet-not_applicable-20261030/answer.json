@@ -1,0 +1,20 @@
+{
+  "baseline_summary": {
+    "date": "July 8",
+    "modules": [
+      "account setup",
+      "data handling",
+      "incident reporting"
+    ],
+    "format": "PDF",
+    "cohort_size": 32
+  },
+  "recommendation": "Build the training packet as a single accessible PDF with one section per module, in this order: account setup, data handling, incident reporting. Start with a short overview page listing the three modules, the July 8 date, and how to request an alternative format. Use real document structure: tagged PDF, logical heading levels (H1 for the packet, H2 for each module, H3 for subsections), a reading order that matches the visual order, and descriptive link text (not 'click here'). Provide alt text for every diagram or screenshot and do not rely on color alone to convey meaning. Keep text legible with good contrast. Because several cohort members use screen readers, test the final PDF with a screen reader before distribution. Also offer the packet in at least one alternative format (for example, an accessible Word or plain-text version) on request, so the full cohort of 32 can use it. Coordinate final accessibility review with the accessibility services team.",
+  "quality_notes": [
+    "The work packet lists module titles only; no module content, learning objectives, or durations were provided, so the outline covers structure and accessibility rather than substantive training content.",
+    "Accessibility requirements (tagged headings, descriptive links, alt text for diagrams, screen-reader use) come from colleague C1, who relayed the accessibility coordinator's recommendation; C4 had no additional task-specific information.",
+    "Date, module list, format, and cohort size are taken unchanged from the work packet.",
+    "Recommended accessibility review and screen-reader testing have not yet been performed; they remain to be completed before distribution.",
+    "Module order follows the order given in the work packet; no content was verified or invented."
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "purpose": "three-provider R1 tool/runtime/evaluator feasibility pilot; not confirmatory",
+  "models": {
+    "openai": {
+      "provider": "OpenAI",
+      "model": "gpt-5.4-mini",
+      "endpoint": "https://api.openai.com/v1/chat/completions"
+    },
+    "moonshot": {
+      "provider": "Moonshot",
+      "model": "kimi-k2.6",
+      "endpoint": "https://api.moonshot.ai/v1/chat/completions"
+    },
+    "anthropic": {
+      "provider": "Anthropic",
+      "model": "claude-haiku-5-5",
+      "endpoint": "https://api.anthropic.com/v1/messages"
+    }
+  },
+  "profile_condition": "R1",
+  "seed": 20261025,
+  "selection": "3 separated must-ask templates, 3 optional, 3 no-help; one episode each per provider",
+  "taskset_root": "C:\\Users\\shuyazong\\repos\\parttimephd\\research\\study2\\study2_1_taskset\\tasks",
+  "episodes_planned": 9,
+  "providers": [
+    "openai",
+    "moonshot",
+    "anthropic"
+  ],
+  "total_episodes_planned": 27,
+  "limitations": [
+    "pilot only; not confirmatory and not a R0/R1 comparison",
+    "candidate runtime is a local rule-NPC pilot, not full AgentCompany",
+    "pilot templates were AI-authored/adapted and remain development drafts"
+  ]
+}

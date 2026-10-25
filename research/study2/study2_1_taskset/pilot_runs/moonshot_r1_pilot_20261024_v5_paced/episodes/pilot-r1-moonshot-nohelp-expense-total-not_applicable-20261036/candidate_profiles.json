@@ -1,0 +1,26 @@
+[
+  {
+    "candidate_id": "C3",
+    "name": "Riley Park",
+    "job_title": "Business Associate",
+    "profile": "Riley Park — Business Associate. Riley Park is a neighboring-team colleague."
+  },
+  {
+    "candidate_id": "C4",
+    "name": "Rowan Diaz",
+    "job_title": "Program Associate",
+    "profile": "Rowan Diaz — Program Associate. Rowan Diaz coordinates finance operations workflows."
+  },
+  {
+    "candidate_id": "C2",
+    "name": "Reese Wang",
+    "job_title": "Operations Associate",
+    "profile": "Reese Wang — Operations Associate. Reese Wang is a specialist in finance operations."
+  },
+  {
+    "candidate_id": "C1",
+    "name": "Jordan Lee",
+    "job_title": "Project Team Member",
+    "profile": "Jordan Lee — Project Team Member. Jordan Lee is a general project manager."
+  }
+]

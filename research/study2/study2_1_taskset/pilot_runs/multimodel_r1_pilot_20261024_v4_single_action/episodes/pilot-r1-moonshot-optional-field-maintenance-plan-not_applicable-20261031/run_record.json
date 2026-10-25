@@ -1,0 +1,97 @@
+{
+  "schema_version": "study21-run-v2",
+  "run_id": "pilot-r1-moonshot-optional-field-maintenance-plan-not_applicable-20261031",
+  "study_id": "study2.1",
+  "run_type": "pilot",
+  "collection_stage": "pilot",
+  "protocol_version": "study21-r1-pilot-v0.1",
+  "task_id": "optional-field-maintenance-plan",
+  "task_version": "1.0-draft",
+  "template_id": "optional-field-maintenance-plan",
+  "help_need_class": "optional_benefit",
+  "variant_id": null,
+  "alignment": "not_applicable",
+  "model_provider": "Moonshot",
+  "model_requested": "kimi-k2.6",
+  "model_returned": null,
+  "endpoint": "https://api.moonshot.ai/v1/chat/completions",
+  "adapter_name": "moonshot-native-tools",
+  "adapter_version": "pilot-adapter-v0.1",
+  "profile_condition": "R1",
+  "instance_seed": 20261031,
+  "replicate": 1,
+  "candidate_order": [
+    "C2",
+    "C4",
+    "C3",
+    "C1"
+  ],
+  "mapping_ref": "research\\study2\\study2_1_taskset\\pilot_runs\\multimodel_r1_pilot_20261024_v4_single_action\\episodes\\pilot-r1-moonshot-optional-field-maintenance-plan-not_applicable-20261031\\identity_mapping.json",
+  "mapping_hash": "ad6f41fedf8c88d2c030ecbc936f336e7d5181a258e7aa4698dee11c2bdb94f5",
+  "sampling_parameters": {
+    "max_turns": 8,
+    "max_output_tokens": 1600,
+    "tool_choice": "auto",
+    "parallel_tool_calls": false,
+    "reasoning_effort": "not_set",
+    "temperature": "provider_default"
+  },
+  "prompt_hashes": {
+    "system": "0312affafd86ab54063d2e7d72ed9ba3bff10e53e16d5ac6901620ca2ab6f1ff",
+    "task": "a54497fbf7345d8e2b7b8bce9b5b95e954f8bf6d2cc6483649a8932947102031",
+    "tool_schema": "e4b1f0999f312c4d624ac8f8d68809d1304722e03b5dbd134ba88b10fad72f3c"
+  },
+  "task_hashes": {
+    "task": "a54497fbf7345d8e2b7b8bce9b5b95e954f8bf6d2cc6483649a8932947102031",
+    "gold": "db62af84aa6e8803810847a791096aaf10040607611f8bab01b14f4265f7e31c",
+    "scenario": "600629bd54ceecf266f440460cf77c664b70c30c5a0ed8d77bac9feb6e12a8d9",
+    "evaluator": "68c6bbf94cd52ebe4e059488596b222294429f9394e2f6c4f343b9ae3e6c75d4"
+  },
+  "runtime_version": "cfd955fe08b364cd21e0bbddf8cdedec9f5561653b8d4943884dad16ae1e7608",
+  "npc_policy_version": "1.0-draft",
+  "evaluator_version": "study21-eval-spec-1",
+  "started_at": "2026-10-25T06:28:32.969016+00:00",
+  "ended_at": "2026-10-25T06:28:33.847281+00:00",
+  "status": "failed",
+  "api_request_ids": [],
+  "retries": [],
+  "errors": [
+    {
+      "turn": 0,
+      "type": "api_error",
+      "detail": "Moonshot HTTP 429: Your account [redacted-account-id]<[redacted-account-id]> request reached organization max RPM: 3, please try again after 1 seconds"
+    }
+  ],
+  "agent_tokens": {
+    "input": 0,
+    "output": 0,
+    "cached_input": 0
+  },
+  "npc_tokens_or_unavailable": "unavailable",
+  "estimated_cost_usd": null,
+  "cost_status": "unavailable",
+  "latency_ms": 875,
+  "checkpoint_vector": {
+    "baseline_artifact_correct": false,
+    "optional_quality_improvement": false
+  },
+  "behavior_metrics": {
+    "episode_outcome": "api_error",
+    "ask_count": 0,
+    "task_success": false,
+    "underhelp": null,
+    "overhelp": null,
+    "first_contact_valid": null,
+    "checkpoint_score": 0
+  },
+  "artifact_refs": {
+    "trace": "research\\study2\\study2_1_taskset\\pilot_runs\\multimodel_r1_pilot_20261024_v4_single_action\\episodes\\pilot-r1-moonshot-optional-field-maintenance-plan-not_applicable-20261031\\trace_events.jsonl",
+    "answer": "research\\study2\\study2_1_taskset\\pilot_runs\\multimodel_r1_pilot_20261024_v4_single_action\\episodes\\pilot-r1-moonshot-optional-field-maintenance-plan-not_applicable-20261031\\answer.json",
+    "evaluation": "research\\study2\\study2_1_taskset\\pilot_runs\\multimodel_r1_pilot_20261024_v4_single_action\\episodes\\pilot-r1-moonshot-optional-field-maintenance-plan-not_applicable-20261031\\evaluation.json",
+    "visible_instance": "research\\study2\\study2_1_taskset\\pilot_runs\\multimodel_r1_pilot_20261024_v4_single_action\\episodes\\pilot-r1-moonshot-optional-field-maintenance-plan-not_applicable-20261031",
+    "request_response": "research\\study2\\study2_1_taskset\\pilot_runs\\multimodel_r1_pilot_20261024_v4_single_action\\episodes\\pilot-r1-moonshot-optional-field-maintenance-plan-not_applicable-20261031\\model_turns.jsonl"
+  },
+  "retry_of": null,
+  "supersedes": null,
+  "exclusion_reason": null
+}

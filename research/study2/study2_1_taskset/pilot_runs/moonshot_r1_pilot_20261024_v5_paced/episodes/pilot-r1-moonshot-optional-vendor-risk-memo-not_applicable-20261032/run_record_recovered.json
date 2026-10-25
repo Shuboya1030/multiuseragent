@@ -1,0 +1,83 @@
+{
+  "schema_version": "study21-run-v2",
+  "run_id": "pilot-r1-moonshot-optional-vendor-risk-memo-not_applicable-20261032",
+  "study_id": "study2.1",
+  "run_type": "pilot",
+  "collection_stage": "pilot",
+  "protocol_version": "study21-r1-pilot-v0.3",
+  "task_id": "optional-vendor-risk-memo",
+  "task_version": "1.0-draft",
+  "template_id": "optional-vendor-risk-memo",
+  "help_need_class": "optional_benefit",
+  "variant_id": null,
+  "alignment": "not_applicable",
+  "model_provider": "Moonshot",
+  "model_requested": "kimi-k2.6",
+  "model_returned": "kimi-k2.6",
+  "endpoint": "https://api.moonshot.ai/v1/chat/completions",
+  "adapter_name": "moonshot-native-tools",
+  "adapter_version": "pilot-adapter-v0.3",
+  "profile_condition": "R1",
+  "instance_seed": 20261032,
+  "replicate": 1,
+  "candidate_order": [],
+  "mapping_ref": "",
+  "mapping_hash": "",
+  "sampling_parameters": {
+    "max_turns": 8,
+    "max_output_tokens": 1600,
+    "min_request_interval_seconds": 21.0
+  },
+  "prompt_hashes": {
+    "system": "",
+    "task": "",
+    "tool_schema": ""
+  },
+  "task_hashes": {
+    "task": "",
+    "gold": "",
+    "scenario": "",
+    "evaluator": ""
+  },
+  "runtime_version": "1066f5d247bb287fc39a3e867bf24cb56c5d97a4024901ed2b67bde866482170",
+  "npc_policy_version": "unknown",
+  "evaluator_version": "unknown",
+  "started_at": "2026-10-25T06:42:33.275629+00:00",
+  "ended_at": "2026-10-25T06:42:33.275629+00:00",
+  "status": "completed",
+  "api_request_ids": [],
+  "retries": [],
+  "errors": [
+    {
+      "type": "evaluator_stdout_encoding",
+      "detail": "Original evaluator JSON could not be printed under Windows cp1252; offline UTF-8 evaluator completed successfully."
+    }
+  ],
+  "agent_tokens": {
+    "input": 4951,
+    "output": 2037,
+    "cached_input": "unavailable"
+  },
+  "npc_tokens_or_unavailable": "unavailable",
+  "estimated_cost_usd": null,
+  "cost_status": "unavailable",
+  "latency_ms": null,
+  "checkpoint_vector": {},
+  "behavior_metrics": {
+    "episode_outcome": "submitted",
+    "ask_count": 2,
+    "task_success": true,
+    "overhelp": null,
+    "checkpoint_score": 2
+  },
+  "artifact_refs": {
+    "trace": "research\\study2\\study2_1_taskset\\pilot_runs\\moonshot_r1_pilot_20261024_v5_paced\\episodes\\pilot-r1-moonshot-optional-vendor-risk-memo-not_applicable-20261032\\trace_events.jsonl",
+    "answer": "research\\study2\\study2_1_taskset\\pilot_runs\\moonshot_r1_pilot_20261024_v5_paced\\episodes\\pilot-r1-moonshot-optional-vendor-risk-memo-not_applicable-20261032\\answer.json",
+    "evaluation": "research\\study2\\study2_1_taskset\\pilot_runs\\moonshot_r1_pilot_20261024_v5_paced\\episodes\\pilot-r1-moonshot-optional-vendor-risk-memo-not_applicable-20261032\\evaluation_posthoc_singleton_normalized.json",
+    "visible_instance": "research\\study2\\study2_1_taskset\\pilot_runs\\moonshot_r1_pilot_20261024_v5_paced\\episodes\\pilot-r1-moonshot-optional-vendor-risk-memo-not_applicable-20261032",
+    "request_response": "research\\study2\\study2_1_taskset\\pilot_runs\\moonshot_r1_pilot_20261024_v5_paced\\episodes\\pilot-r1-moonshot-optional-vendor-risk-memo-not_applicable-20261032\\model_turns.jsonl"
+  },
+  "retry_of": null,
+  "supersedes": null,
+  "exclusion_reason": null
+}

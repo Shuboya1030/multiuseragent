@@ -1,0 +1,71 @@
+{
+  "candidates": {
+    "P1": {
+      "public_profile": "P1 is a specialist in security operations.",
+      "structured_profile": {
+        "role": "P1 is a specialist in security operations.",
+        "domain": "security operations"
+      },
+      "private_fact": null,
+      "reply_policy": {
+        "version": "1.0",
+        "trigger": "any request",
+        "response": "The packet provides the data needed for this task; I have no additional task-specific facts or approvals.",
+        "otherwise": "do not introduce facts or alter the task gold"
+      }
+    },
+    "P2": {
+      "public_profile": "P2 coordinates security operations workflows.",
+      "structured_profile": {
+        "role": "P2 coordinates security operations workflows.",
+        "domain": "security operations"
+      },
+      "private_fact": null,
+      "reply_policy": {
+        "version": "1.0",
+        "trigger": "any request",
+        "response": "The packet provides the data needed for this task; I have no additional task-specific facts or approvals.",
+        "otherwise": "do not introduce facts or alter the task gold"
+      }
+    },
+    "P3": {
+      "public_profile": "P3 is a general project manager.",
+      "structured_profile": {
+        "role": "P3 is a general project manager.",
+        "domain": "security operations"
+      },
+      "private_fact": null,
+      "reply_policy": {
+        "version": "1.0",
+        "trigger": "any request",
+        "response": "The packet provides the data needed for this task; I have no additional task-specific facts or approvals.",
+        "otherwise": "do not introduce facts or alter the task gold"
+      }
+    },
+    "P4": {
+      "public_profile": "P4 is a neighboring-team colleague.",
+      "structured_profile": {
+        "role": "P4 is a neighboring-team colleague.",
+        "domain": "security operations"
+      },
+      "private_fact": null,
+      "reply_policy": {
+        "version": "1.0",
+        "trigger": "any request",
+        "response": "The packet provides the data needed for this task; I have no additional task-specific facts or approvals.",
+        "otherwise": "do not introduce facts or alter the task gold"
+      }
+    }
+  },
+  "profile_condition_rendering_policy": {
+    "R0": "run-randomized synthetic name + generic job title; no task-specific expertise or authority",
+    "R1": "same name/title plus natural-language general duties and knowledge domain"
+  },
+  "npc_policy_version": "1.0-draft",
+  "npc_policy_type": "deterministic scripted replies",
+  "run_isolation": "room namespace or reset by run_id; evaluator reads current run only",
+  "contact_interface": {
+    "send": "send_message(recipient_id, message)",
+    "read": "read_messages(recipient_id)"
+  }
+}

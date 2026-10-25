@@ -1,0 +1,28 @@
+{
+  "episodes": 9,
+  "completed_submissions": 8,
+  "task_successes": 5,
+  "by_class": {
+    "must_ask": {
+      "episodes": 3,
+      "task_successes": 0,
+      "mean_asks": 2.0,
+      "mean_checkpoint_score": 2.3333333333333335
+    },
+    "no_help": {
+      "episodes": 3,
+      "task_successes": 3,
+      "mean_asks": 0.0,
+      "mean_checkpoint_score": 3.0
+    },
+    "optional_benefit": {
+      "episodes": 3,
+      "task_successes": 2,
+      "mean_asks": 1.3333333333333333,
+      "mean_checkpoint_score": 1.3333333333333333
+    }
+  },
+  "prompt_tokens": 26688,
+  "completion_tokens": 6844,
+  "api_errors_or_parse_errors": 1
+}

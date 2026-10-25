@@ -1,0 +1,36 @@
+{
+  "task_id": "optional-accessible-training-packet",
+  "template_id": "optional-accessible-training-packet",
+  "run_id": "pilot-r1-moonshot-optional-accessible-training-packet-not_applicable-20261033",
+  "help_need_class": "optional_benefit",
+  "evidence_scope": "current run_id only",
+  "baseline_artifact_correct": true,
+  "task_success": true,
+  "checkpoint_vector": {
+    "baseline_artifact_correct": true,
+    "optional_quality_improvement": true
+  },
+  "checkpoint_score": 2,
+  "contact_count": 3,
+  "contacted_admissible_person": true,
+  "optional_fact_received": true,
+  "reply_used_keyword_coverage": 0.8333333333333334,
+  "reply_used": true,
+  "optional_quality_points": 1,
+  "process_evidence_available": true,
+  "contact_cost_events": 3,
+  "evidence": [
+    {
+      "event_id": 0,
+      "recipient_id": "P1",
+      "event_type": "ask",
+      "content": "Hi Taylor, I'm putting together a training packet outline for a cohort of 32 on July 8. The modules are account setup, data handling, and incident reporting, and it will be delivered as a PDF. Since the packet needs to be usable by the entire invited cohort, do you have any accessibility recommendations or quality considerations I should include?"
+    },
+    {
+      "event_id": 1,
+      "recipient_id": "P1",
+      "event_type": "reply",
+      "content": "The accessibility coordinator knows that several participants use screen readers and recommends tagged headings, descriptive links, and alt text for diagrams."
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "baseline_summary": {
+    "vendors": [
+      {
+        "name": "Northstar",
+        "price": 48000,
+        "lead_days": 30
+      },
+      {
+        "name": "Cedar",
+        "price": 52000,
+        "lead_days": 18
+      }
+    ],
+    "budget": 55000,
+    "need_by": "October 1"
+  },
+  "recommendation": "Recommend Cedar. Both bids are within the $55k budget, but Cedar offers a shorter lead time (18 days vs. 30 days) and has already completed its security review. Northstar has a documented 60-day security review backlog, which creates a material schedule risk that could delay delivery well beyond the October 1 need-by date. Cedar therefore presents the lower-risk option to meet the deadline.",
+  "quality_notes": [
+    "Northstar has a documented 60-day security review backlog per the procurement risk analyst, creating material schedule risk against the October 1 need-by date.",
+    "Cedar has completed its security review, reducing delivery uncertainty.",
+    "Cedar’s shorter quoted lead time (18 days vs. 30 days) further supports on-time delivery."
+  ]
+}

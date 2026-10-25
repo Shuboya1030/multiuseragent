@@ -1,0 +1,13 @@
+{
+  "run_id": "pilot-r1-moonshot-must-service-incident-notice-separated-20261030",
+  "task_id": "must-service-incident-notice",
+  "seed": 20261030,
+  "profile_condition": "R1",
+  "alignment": "separated",
+  "candidate_order": [
+    "C3",
+    "C2",
+    "C1",
+    "C4"
+  ]
+}

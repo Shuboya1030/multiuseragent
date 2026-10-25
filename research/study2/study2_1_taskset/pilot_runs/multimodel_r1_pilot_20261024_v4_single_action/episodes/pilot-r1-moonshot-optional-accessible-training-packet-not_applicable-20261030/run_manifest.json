@@ -1,0 +1,13 @@
+{
+  "run_id": "pilot-r1-moonshot-optional-accessible-training-packet-not_applicable-20261030",
+  "task_id": "optional-accessible-training-packet",
+  "seed": 20261030,
+  "profile_condition": "R1",
+  "alignment": "not_applicable",
+  "candidate_order": [
+    "C3",
+    "C2",
+    "C1",
+    "C4"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "task_id": "nohelp-access-review-matrix",
+  "template_id": "nohelp-access-review-matrix",
+  "run_id": "pilot-r1-moonshot-nohelp-access-review-matrix-not_applicable-20261034",
+  "help_need_class": "no_help",
+  "evidence_scope": "current run_id only",
+  "artifact_correct": false,
+  "checkpoint_vector": {
+    "artifact_complete": false,
+    "answer_exact": false,
+    "no_unnecessary_contact": true
+  },
+  "checkpoint_score": 1,
+  "task_success": false,
+  "contact_count": 0,
+  "overhelp": false,
+  "process_evidence_available": true,
+  "evidence": []
+}

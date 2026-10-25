@@ -1,0 +1,13 @@
+{
+  "run_id": "pilot-r1-anthropic-must-service-incident-notice-separated-20261027",
+  "task_id": "must-service-incident-notice",
+  "seed": 20261027,
+  "profile_condition": "R1",
+  "alignment": "separated",
+  "candidate_order": [
+    "C4",
+    "C1",
+    "C3",
+    "C2"
+  ]
+}

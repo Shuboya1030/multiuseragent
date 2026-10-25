@@ -1,0 +1,13 @@
+{
+  "run_id": "pilot-r1-anthropic-optional-vendor-risk-memo-not_applicable-20261029",
+  "task_id": "optional-vendor-risk-memo",
+  "seed": 20261029,
+  "profile_condition": "R1",
+  "alignment": "not_applicable",
+  "candidate_order": [
+    "C3",
+    "C1",
+    "C2",
+    "C4"
+  ]
+}

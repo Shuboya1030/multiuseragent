@@ -1,0 +1,26 @@
+[
+  {
+    "candidate_id": "C2",
+    "name": "Alex Rivera",
+    "job_title": "Business Associate",
+    "profile": "Alex Rivera — Business Associate. Alex Rivera works in the data stewardship domain. Their expertise is general team coordination; their familiarity is general familiarity with data stewardship, but no access to the task-specific record. Their decision authority is no approval authority for this action. They are available."
+  },
+  {
+    "candidate_id": "C4",
+    "name": "Jamie Rivera",
+    "job_title": "Operations Associate",
+    "profile": "Jamie Rivera — Operations Associate. Jamie Rivera works in the data stewardship domain. Their expertise is general team coordination; their familiarity is no stated task-domain expertise beyond general team coordination. Their decision authority is no approval authority for this action. They are available."
+  },
+  {
+    "candidate_id": "C3",
+    "name": "Quinn Zhao",
+    "job_title": "Project Team Member",
+    "profile": "Quinn Zhao — Project Team Member. Quinn Zhao works in the data stewardship domain. Their expertise is general team coordination; their familiarity is no stated task-domain expertise beyond general team coordination. Their decision authority is approve corrections to customer master records. They are available."
+  },
+  {
+    "candidate_id": "C1",
+    "name": "Samira Cole",
+    "job_title": "Program Associate",
+    "profile": "Samira Cole — Program Associate. Samira Cole works in the data stewardship domain. Their expertise is customer record provenance and data-quality cases; their familiarity is specialist familiarity with customer record provenance and data-quality cases. Their decision authority is no approval authority for this action. They are available."
+  }
+]

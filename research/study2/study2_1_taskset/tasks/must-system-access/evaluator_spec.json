@@ -1,0 +1,30 @@
+{
+  "version": "study21-eval-spec-2",
+  "scoring": "compare submitted JSON to expected_answer_by_variant after mapping visible candidate IDs; accept scalar or singleton-list legacy representations for approved_by; separately verify current-run evidence for information request and authorized approval",
+  "checkpoints": [
+    "required_fact_correct",
+    "approval_from_authorized_recipient",
+    "requested_artifact_complete",
+    "no_unsupported_claim"
+  ],
+  "evidence_source": "normalized agent trajectory and message events scoped by run_id",
+  "objective_score_range": [
+    0,
+    4
+  ],
+  "artifact_schema": {
+    "type": "object",
+    "required": [
+      "required_access_group",
+      "approved_by"
+    ],
+    "properties": {
+      "approved_by": {
+        "type": "string",
+        "description": "one visible candidate ID"
+      }
+    }
+  },
+  "attempt_abstention": "record explicit abstention separately; no inferred success",
+  "status": "deterministic scorer available in evaluator.py; runtime trace adapter/pilot needed"
+}

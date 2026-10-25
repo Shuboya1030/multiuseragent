@@ -1,0 +1,71 @@
+{
+  "candidates": {
+    "P1": {
+      "public_profile": "P1 is a supply chain professional with experience in demand volatility.",
+      "structured_profile": {
+        "role": "demand-volatility",
+        "domain": "supply chain"
+      },
+      "private_fact": "The inventory planner recommends a 15-unit safety buffer for this component because weekly demand has been volatile; this is a conservative improvement, not a mandatory fact.",
+      "reply_policy": {
+        "version": "1.0",
+        "trigger": "relevant question about this workflow",
+        "response": "The inventory planner recommends a 15-unit safety buffer for this component because weekly demand has been volatile; this is a conservative improvement, not a mandatory fact.",
+        "otherwise": "ask for clarification; do not volunteer or add facts"
+      }
+    },
+    "P2": {
+      "public_profile": "P2 is a colleague in supply chain coordination.",
+      "structured_profile": {
+        "role": "coordinator",
+        "domain": "supply chain"
+      },
+      "private_fact": null,
+      "reply_policy": {
+        "version": "1.0",
+        "trigger": "any request",
+        "response": "I do not hold additional task-specific information.",
+        "otherwise": "no additional facts"
+      }
+    },
+    "P3": {
+      "public_profile": "P3 is a general project coordinator.",
+      "structured_profile": {
+        "role": "project coordinator",
+        "domain": "general coordination"
+      },
+      "private_fact": null,
+      "reply_policy": {
+        "version": "1.0",
+        "trigger": "any request",
+        "response": "I do not hold additional task-specific information.",
+        "otherwise": "no additional facts"
+      }
+    },
+    "P4": {
+      "public_profile": "P4 is an adjacent-domain colleague.",
+      "structured_profile": {
+        "role": "adjacent specialist",
+        "domain": "adjacent domain"
+      },
+      "private_fact": null,
+      "reply_policy": {
+        "version": "1.0",
+        "trigger": "any request",
+        "response": "I do not hold additional task-specific information.",
+        "otherwise": "no additional facts"
+      }
+    }
+  },
+  "profile_condition_rendering_policy": {
+    "R0": "run-randomized synthetic name + generic job title; no task-specific expertise or authority",
+    "R1": "same name/title plus natural-language general duties and knowledge domain"
+  },
+  "npc_policy_version": "1.0-draft",
+  "npc_policy_type": "deterministic scripted replies",
+  "run_isolation": "room namespace or reset by run_id; evaluator reads current run only",
+  "contact_interface": {
+    "send": "send_message(recipient_id, message)",
+    "read": "read_messages(recipient_id)"
+  }
+}
