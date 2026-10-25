@@ -36,6 +36,6 @@ Study 2 tests whether role information, and the way it is represented, changes a
 - [x] Primary analysis and figures are generated from versioned raw data.
 - [x] Manuscript-facing results distinguish historical confounded contrasts from the corrected-profile replication.
 - [x] Study 2 limitations and external-validity boundaries are explicit.
-- [ ] Changes and artifacts are committed and pushed to the user's GitHub repository.
+- [x] Changes and artifacts are committed and pushed to the user's GitHub repository (commit `8b1df70`; final checklist sync follows).
 
 Automated structural and evaluator checks do not replace a separate human review of scenario realism and profile plausibility. The analysis reports that limitation rather than claiming independent human validation.
