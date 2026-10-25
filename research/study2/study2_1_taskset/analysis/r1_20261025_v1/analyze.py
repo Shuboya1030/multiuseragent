@@ -33,7 +33,7 @@ for r in records:
 assert len(rows)==180 and len({r['run_id'] for r in rows})==180
 write('episode_metrics.json',rows)
 with (OUT/'episode_metrics.csv').open('w') as f:
- w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
+ w=csv.DictWriter(f,fieldnames=list(rows[0]),lineterminator='\n');w.writeheader();w.writerows(rows)
 def wilson(x,n):
  if not n:return None
  z=1.959963984540054;p=x/n;den=1+z*z/n;mid=(p+z*z/(2*n))/den;half=z*math.sqrt(p*(1-p)/n+z*z/(4*n*n))/den
