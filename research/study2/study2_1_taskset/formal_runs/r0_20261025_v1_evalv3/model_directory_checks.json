@@ -1,0 +1,155 @@
+[
+  {
+    "provider": "openai",
+    "checked_at": "2026-10-25T20:55:05.127141+00:00",
+    "endpoint": "https://api.openai.com/v1/models",
+    "http_status": 200,
+    "requested_model": "gpt-5.4-mini",
+    "matching_directory_entries": [
+      {
+        "id": "gpt-5.4-mini",
+        "object": "model",
+        "created": 1773451123,
+        "owned_by": "system",
+        "shutdown_date": null
+      },
+      {
+        "id": "gpt-5.4-mini-2026-03-17",
+        "object": "model",
+        "created": 1773451076,
+        "owned_by": "system",
+        "shutdown_date": null
+      }
+    ],
+    "response_limits": {}
+  },
+  {
+    "provider": "moonshot",
+    "checked_at": "2026-10-25T20:55:05.393320+00:00",
+    "endpoint": "https://api.moonshot.ai/v1/models",
+    "http_status": 200,
+    "requested_model": "kimi-k2.6",
+    "matching_directory_entries": [
+      {
+        "created": 1792805392,
+        "id": "kimi-k2.6",
+        "object": "model",
+        "owned_by": "moonshot",
+        "permission": [
+          {
+            "created": 0,
+            "id": "",
+            "object": "",
+            "organization": "moonshot",
+            "group": "moonshot",
+            "is_blocking": false
+          }
+        ],
+        "root": "",
+        "parent": "",
+        "supports_image_in": true,
+        "supports_video_in": true,
+        "supports_reasoning": true,
+        "context_length": 262144,
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "tools": {
+          "dynamic_load": false
+        },
+        "limit": {
+          "context": 262144
+        }
+      }
+    ],
+    "response_limits": {}
+  },
+  {
+    "provider": "anthropic",
+    "checked_at": "2026-10-25T20:55:05.654966+00:00",
+    "endpoint": "https://api.anthropic.com/v1/models",
+    "http_status": 200,
+    "requested_model": "claude-haiku-5-5",
+    "matching_directory_entries": [
+      {
+        "type": "model",
+        "id": "claude-haiku-5-5",
+        "display_name": "Claude Haiku 5.5",
+        "created_at": "2026-10-07T18:00:00Z",
+        "line": "haiku",
+        "max_input_tokens": 1000000,
+        "max_tokens": 128000,
+        "capabilities": {
+          "batch": {
+            "supported": true
+          },
+          "citations": {
+            "supported": true
+          },
+          "code_execution": {
+            "supported": true
+          },
+          "context_management": {
+            "supported": true,
+            "clear_tool_uses_20250919": {
+              "supported": true
+            },
+            "clear_thinking_20251015": {
+              "supported": true
+            },
+            "compact_20260112": {
+              "supported": true
+            }
+          },
+          "effort": {
+            "supported": true,
+            "low": {
+              "supported": true
+            },
+            "medium": {
+              "supported": true
+            },
+            "high": {
+              "supported": true
+            },
+            "xhigh": {
+              "supported": true
+            },
+            "max": {
+              "supported": true
+            }
+          },
+          "image_input": {
+            "supported": true
+          },
+          "pdf_input": {
+            "supported": true
+          },
+          "server_tools": {
+            "supported": true,
+            "code_execution": {
+              "supported": true
+            },
+            "web_search": {
+              "supported": true
+            }
+          },
+          "structured_outputs": {
+            "supported": true
+          }
+        },
+        "lifecycle": "active",
+        "deprecated_at": null,
+        "retires_at": null
+      }
+    ],
+    "response_limits": {}
+  }
+]

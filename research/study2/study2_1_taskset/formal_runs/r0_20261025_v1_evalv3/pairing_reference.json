@@ -1,0 +1,10 @@
+{
+  "R1_batch": "../r1_20261025_v1_evalv3",
+  "R1_data_snapshot_sha256": "767f8b9c5a1f247f86b0fc0cb76f72d6a680fe357b848320238a00f8aae89d38",
+  "R1_schedule_sha256": "32739626e3001db980d1bb49e68c8989f48cdcb1fee0067a8f4d07948a81521a",
+  "paired_cells": 180,
+  "task_gold_npc_evaluator_unchanged": true,
+  "name_title_mapping_order_unchanged": true,
+  "only_visible_treatment": "R0 omits the R1 role-description suffix",
+  "prior_R1_safety_charge_usd": 0.5393235399999999
+}

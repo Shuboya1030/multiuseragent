@@ -1,0 +1,31 @@
+{
+  "checked_at": "2026-10-25T20:54:56.764439+00:00",
+  "rates_verified_date": "2026-10-25",
+  "pricing_basis": "same dated official price snapshot as R1",
+  "currency": "USD",
+  "unit": "per_million_tokens",
+  "rates": {
+    "openai": {
+      "input": 0.75,
+      "cached": 0.075,
+      "output": 4.5,
+      "source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini"
+    },
+    "moonshot": {
+      "input": 0.95,
+      "cached": 0.16,
+      "output": 4.0,
+      "source": "https://platform.kimi.ai/docs/pricing/chat"
+    },
+    "anthropic": {
+      "input": 0.1,
+      "cached": 0.01,
+      "output": 0.5,
+      "cache_write": 0.2,
+      "source": "https://platform.claude.com/docs/en/models/haiku-5-5/overview"
+    }
+  },
+  "actual_billing": "unavailable",
+  "taxes": "excluded; USD 1 reserve below user budget",
+  "cache_policy": "automatic reads billed by reported usage; no cache_control writes requested"
+}

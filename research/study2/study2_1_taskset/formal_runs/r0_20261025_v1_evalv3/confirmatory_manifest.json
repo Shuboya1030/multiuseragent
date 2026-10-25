@@ -1,0 +1,59 @@
+{
+  "protocol_version": "study21-formal-r0-v1-evalv3",
+  "frozen_at": "2026-10-25T20:54:56.764973+00:00",
+  "base_commit": "a3ec3a48db52574c1a2b751084fce4ae07765c8c",
+  "run_type": "confirmatory",
+  "collection_stage": "R0",
+  "episodes": 180,
+  "replicate": 1,
+  "models": {
+    "openai": {
+      "provider": "OpenAI",
+      "model": "gpt-5.4-mini",
+      "env": "OPENAI_API_KEY",
+      "endpoint": "https://api.openai.com/v1/chat/completions"
+    },
+    "moonshot": {
+      "provider": "Moonshot",
+      "model": "kimi-k2.6",
+      "env": "MOONSHOT_API_KEY",
+      "endpoint": "https://api.moonshot.ai/v1/chat/completions"
+    },
+    "anthropic": {
+      "provider": "Anthropic",
+      "model": "claude-haiku-5-5",
+      "env": "ANTHROPIC_API_KEY",
+      "endpoint": "https://api.anthropic.com/v1/messages"
+    }
+  },
+  "expected_returned_models": {
+    "openai": "gpt-5.4-mini-2026-03-17",
+    "moonshot": "kimi-k2.6",
+    "anthropic": "claude-haiku-5-5"
+  },
+  "max_turns": 8,
+  "max_output_tokens": 1600,
+  "request_attempts": 1,
+  "moonshot_min_interval_seconds": 21,
+  "user_budget_usd": 10.0,
+  "operating_ceiling_usd": 8.46067646,
+  "budget_scope": "R1 plus R0, with USD 1 reserve",
+  "prior_R1_safety_charge_usd": 0.5393235399999999,
+  "max_input_token_reservation": 32768,
+  "randomization_seed": 2026102501,
+  "extension_rule": "fixed paired R0 n; no automatic additional replicates",
+  "precision_reporting_target_half_width": 0.1,
+  "accepted_limitations": [
+    "user explicitly retains known No-help output ambiguity",
+    "independent content review not completed",
+    "optional lexical quality proxy not independently validated",
+    "provider reasoning defaults differ"
+  ],
+  "frozen_files": {
+    "schedule.json": "acacc357e06eb3cfa356aeac5ad699dc2cd332e23121c36dbc944bb2ed5f146d",
+    "instance_fingerprints.json": "724dc90ccfd59c4571dfdd23c7f93bf4fb3d0ba407d8ccdb427067e72c3cadc4",
+    "source_manifest.json": "06d7b06359bae40cfa1203744986b1630e52fc94503a1b0c95127a40bbd2753b",
+    "pricing_snapshot.json": "f82e85ebca15e258dba2bb2ed9b9a125d1a193fbd76bf12d4138d411f76920d8",
+    "pairing_reference.json": "3ae96bf5bc612aadd0b658c278154a245063af19addf98c63c39ed3a992508e8"
+  }
+}

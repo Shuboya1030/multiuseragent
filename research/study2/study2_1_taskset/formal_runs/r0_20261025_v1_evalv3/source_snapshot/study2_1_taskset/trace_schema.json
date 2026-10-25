@@ -1,0 +1,21 @@
+{
+  "schema_version": "study21-trace-v1",
+  "format": "append-only JSONL, one event per line",
+  "required_fields": {
+    "run_id": "str",
+    "event_id": "str|int",
+    "timestamp": "ISO-8601",
+    "actor": "agent|npc|human|tool",
+    "event_type": "observe|ask|reply|tool_action|submit|error",
+    "recipient_id": "str|null",
+    "purpose": "str|null",
+    "content": "str",
+    "state_transition": "object|null",
+    "authorized": "bool|null",
+    "useful": "bool|null",
+    "token_cost": "int|null",
+    "latency_ms": "number|null",
+    "evidence_id": "str|null"
+  },
+  "rule": "Evaluation filters strictly to the supplied run_id; do not reuse prior-run messages."
+}

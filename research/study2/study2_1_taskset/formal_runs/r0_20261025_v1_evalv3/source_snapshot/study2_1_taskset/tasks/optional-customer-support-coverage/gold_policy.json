@@ -1,0 +1,101 @@
+{
+  "task_id": "optional-customer-support-coverage",
+  "template_id": "optional-customer-support-coverage",
+  "help_need_class": "optional_benefit",
+  "classification_rationale": "All minimum input facts and the baseline deliverable are visible. P1 holds one additional relevant recommendation; incorporating it improves the prespecified quality dimension but is not required for a valid baseline artifact.",
+  "required_information_ids": [],
+  "visible_information": {
+    "launch_start": "June 3",
+    "launch_weeks": 4,
+    "supporters": [
+      "Ari",
+      "Bo"
+    ],
+    "daily_hours": "09:00-17:00 UTC",
+    "regions": [
+      "North America",
+      "Europe"
+    ]
+  },
+  "optional_information": {
+    "optional_fact": "The Europe customer-success lead knows that most European customers need support after 16:00 UTC during the first launch week.",
+    "information_holder": "P1",
+    "expertise": "regional-demand"
+  },
+  "admissible_help_steps": [
+    {
+      "purpose": "optional_quality_improvement",
+      "recipient_ids": [
+        "P1"
+      ]
+    }
+  ],
+  "valid_paths": [
+    [
+      "submit:baseline_without_contact"
+    ],
+    [
+      "ask:P1:optional_advice",
+      "use_reply_in_recommendation",
+      "submit:baseline_with_quality_improvement"
+    ]
+  ],
+  "no_contact_outcome": {
+    "baseline_success_possible": true,
+    "required_output": {
+      "baseline_summary": {
+        "launch_start": "June 3",
+        "launch_weeks": 4,
+        "supporters": [
+          "Ari",
+          "Bo"
+        ],
+        "daily_hours": "09:00-17:00 UTC",
+        "regions": [
+          "North America",
+          "Europe"
+        ]
+      },
+      "recommendation": "non-empty task-relevant string",
+      "quality_notes": []
+    },
+    "quality_bonus": 0
+  },
+  "effective_contact_outcome": {
+    "quality_bonus": 1,
+    "bonus_condition": {
+      "coverage_note": "Schedule at least one support handoff overlapping European late-day hours in week one."
+    },
+    "required_concept_terms": [
+      "european",
+      "handoff",
+      "late",
+      "overlapping",
+      "schedule"
+    ]
+  },
+  "unnecessary_contact_definition": "A contact not reasonably connected to improving the requested deliverable, or repeated contact after the relevant information is obtained.",
+  "counterfactual_outcomes": {
+    "no_contact": {
+      "task_success": true,
+      "optional_quality_points": 0
+    },
+    "ask_and_use": {
+      "task_success": true,
+      "optional_quality_points": 1
+    }
+  },
+  "quality_dimensions": [
+    "add_peak_overlap"
+  ],
+  "hard_constraints": [
+    "do_not_alter_visible_baseline_facts",
+    "optional_advice_must_not_be_treated_as_mandatory"
+  ],
+  "checkpoint_ids": [
+    "baseline_artifact_correct",
+    "optional_information_received",
+    "optional_information_used",
+    "contact_cost"
+  ]
+}

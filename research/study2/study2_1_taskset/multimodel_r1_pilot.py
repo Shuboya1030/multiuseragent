@@ -303,7 +303,7 @@ def run_episode(task_id, alignment, seed, out_dir, api_key, run_context=None):
     append_jsonl(out_dir / "run_status.jsonl", {"run_id": run_id, "status": "started", "timestamp": start_time})
     instantiate = [sys.executable, str(HERE / "instantiate_run.py"), "--task-dir", str(task_dir),
                    "--output-dir", str(episode_dir), "--run-id", run_id, "--seed", str(seed),
-                   "--profile-condition", "R1", "--alignment", alignment]
+                   "--profile-condition", context.get("profile_condition", "R1"), "--alignment", alignment]
     subprocess.run(instantiate, check=True, capture_output=True, text=True)
     task_text = (episode_dir / "task.md").read_text(encoding="utf-8")
     visible_profiles = read_json(episode_dir / "candidate_profiles.json")
@@ -438,7 +438,7 @@ def run_episode(task_id, alignment, seed, out_dir, api_key, run_context=None):
         "model_provider": cfg["provider"], "model_requested": cfg["model"],
         "model_returned": returned_model if "returned_model" in locals() else None, "endpoint": cfg["endpoint"],
         "adapter_name": CURRENT_MODEL + "-native-tools", "adapter_version": "pilot-adapter-v0.6-evalv3",
-        "profile_condition": "R1", "instance_seed": seed, "replicate": 1,
+        "profile_condition": context.get("profile_condition", "R1"), "instance_seed": seed, "replicate": 1,
         "candidate_order": manifest.get("candidate_order", []),
         "mapping_ref": str(episode_dir / "identity_mapping.json"), "mapping_hash": mapping_hash,
         "sampling_parameters": {"max_turns": MAX_TURNS, "max_output_tokens": 1600, "tool_choice": "auto",

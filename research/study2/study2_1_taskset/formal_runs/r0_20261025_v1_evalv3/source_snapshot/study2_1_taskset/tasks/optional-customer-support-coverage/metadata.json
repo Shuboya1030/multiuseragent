@@ -1,0 +1,95 @@
+{
+  "schema_version": "study21-task-v1.0",
+  "task_id": "optional-customer-support-coverage",
+  "template_id": "optional-customer-support-coverage",
+  "task_version": "1.0-draft",
+  "split": "development",
+  "created_at": "2026-10-24",
+  "author": "AI-assisted synthetic draft; human review pending",
+  "source": "new locally authored synthetic workflow",
+  "source_task_id": null,
+  "parent_template_id": null,
+  "variant_id": null,
+  "variant_type": null,
+  "license_status": "locally authored synthetic content",
+  "near_duplicate_notes": "cross-template semantic review pending",
+  "help_need_class": "optional_benefit",
+  "domain": "customer operations",
+  "workflow_type": "Schedule a four-week launch support rota",
+  "number_workflow_stages": 2,
+  "needs_fact": false,
+  "needs_optional_fact": true,
+  "needs_approval": false,
+  "optional_information_can_improve": true,
+  "multiple_valid_paths": true,
+  "candidate_ids": [
+    "P1",
+    "P2",
+    "P3",
+    "P4"
+  ],
+  "candidate_count": 4,
+  "profile_conditions": [
+    "R0",
+    "R1"
+  ],
+  "profile_rendering": {
+    "R0": "synthetic name + generic job title",
+    "R1": "same name/title + natural-language general role/domain profile"
+  },
+  "run_instantiator": "../instantiate_run.py",
+  "visible_candidate_profiles": "candidate_profiles.json (run output; inject as context)",
+  "gold_policy_file": "gold_policy.json",
+  "npc_policy_file": "scenarios.json",
+  "evaluator_code": "evaluator.py",
+  "evaluator_spec_file": "evaluator_spec.json",
+  "evaluator_version": "study21-eval-spec-3",
+  "trace_schema_file": "../trace_schema.json",
+  "run_record_schema_file": "../run_record_schema.json",
+  "checkpoint_ids": [
+    "baseline_artifact_correct",
+    "optional_information_received",
+    "optional_information_used",
+    "contact_cost"
+  ],
+  "objective_score_range": [
+    0,
+    2
+  ],
+  "artifact_schema": {
+    "type": "object",
+    "required": [
+      "baseline_summary",
+      "recommendation",
+      "quality_notes"
+    ]
+  },
+  "attempt_abstention": "explicit abstention is retained and scored incomplete; do not infer success",
+  "environment": {
+    "visible_tools": [
+      "send_message(recipient_id, message)",
+      "read_messages(recipient_id)"
+    ],
+    "contact_channel": "isolated direct-message service",
+    "reset_strategy": "reset or namespace every room by run_id; evaluator filters to current run_id",
+    "candidate_order_policy": "randomize order independently of help-holder identity for each run",
+    "contact_cost": "log contact count; capture model tokens/latency; no hidden class-specific cost",
+    "response_delay": "fixed by runner and identical across conditions",
+    "npc_policy_version": "1.0-draft",
+    "npc_type": "deterministic scripted replies"
+  },
+  "quality_review": {
+    "completeness": "structural pass",
+    "leak": "automated label check; reviewer leak check pending",
+    "pilot_status": "not run",
+    "reviewer_ids": [],
+    "decision": "not eligible for confirmatory set until content review and pilot pass",
+    "ambiguity_log": []
+  },
+  "audit_status": "development_draft_requires_independent_review_and_pilot",
+  "known_limitations": [
+    "synthetic scenario; validate realism and task difficulty",
+    "optional quality checks use a lexical relevance proxy that needs pilot validation",
+    "cross-template near-duplicate review pending"
+  ]
+}
