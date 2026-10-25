@@ -7,7 +7,7 @@ All figures are generated from the trace-recomputed v0.4 confirmatory set (168 e
 - **Files:** `figure_01_profile_effects.pdf` / `.svg`
 - **Purpose:** Show how profile information relates to first-contact validity, complete valid-path success, and total model-token use.
 - **Panels:** (A) strict first information request to the admissible knowledge holder (%); (B) valid-path completion (%); (C) input plus output tokens per episode (thousands). Conditions are names only (R0), natural-language profile (R1), and structured profile (R2).
-- **Caption:** Points are condition means over 56 episodes (28 task variants × two fixed model configurations). Whiskers are 95% percentile bootstrap intervals obtained by resampling 14 workflow-template clusters. R1/R2 profile facts are semantically matched; their text length is not matched.
+- **Caption:** Points are condition means over 56 episodes (28 task variants × two fixed model configurations). Whiskers are 95% percentile bootstrap intervals obtained by resampling 14 workflow-template clusters. A zero-width interval coincides with its point (R1's first-contact validity is 100% in every template). R1/R2 profile facts are semantically matched; their text length is not matched.
 - **Observation:** R1 and R2 substantially exceed R0 on first-contact validity and use roughly half the tokens. Valid-path completion has a smaller difference because R0 already succeeds in most episodes.
 - **Interpretation:** Role information appears to improve routing efficiency in this simulator; the figure alone does not establish improvement in deployed organizations.
 - **Caveat:** The CIs are template-cluster intervals; condition-level R1/R2 success intervals are degenerate at 100% because every observed episode succeeded.
