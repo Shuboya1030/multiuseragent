@@ -1,0 +1,8 @@
+{
+  "source_freeze_verified": true,
+  "historical_files_unchanged": true,
+  "historical_v3_replays": 39,
+  "supplement_batch_audits_pass": true,
+  "full_snapshot_log_credential_scan_pass": true,
+  "note": "Manifests exclude themselves; final files are independently hashed after report generation."
+}

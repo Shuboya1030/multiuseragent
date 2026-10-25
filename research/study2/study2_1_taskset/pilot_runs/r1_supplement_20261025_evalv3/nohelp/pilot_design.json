@@ -1,0 +1,50 @@
+{
+  "purpose": "three-provider R1 tool/runtime/evaluator feasibility pilot; not confirmatory",
+  "protocol_version": "study21-r1-pilot-v0.6-evalv3",
+  "models": {
+    "openai": {
+      "provider": "OpenAI",
+      "model": "gpt-5.4-mini",
+      "endpoint": "https://api.openai.com/v1/chat/completions"
+    },
+    "moonshot": {
+      "provider": "Moonshot",
+      "model": "kimi-k2.6",
+      "endpoint": "https://api.moonshot.ai/v1/chat/completions"
+    },
+    "anthropic": {
+      "provider": "Anthropic",
+      "model": "claude-haiku-5-5",
+      "endpoint": "https://api.anthropic.com/v1/messages"
+    }
+  },
+  "profile_condition": "R1",
+  "seed": 20261027,
+  "selection": [
+    {
+      "task_id": "nohelp-webinar-agenda",
+      "alignment": "not_applicable"
+    }
+  ],
+  "scope": "reduced feasibility smoke test",
+  "max_request_attempts": 1,
+  "run_tag": "supplement20261025v3-nohelp",
+  "request_pacing_seconds": {
+    "openai": 0.0,
+    "moonshot": 21.0,
+    "anthropic": 0.0
+  },
+  "taskset_root": "/Users/shuyazong/Documents/ChatGPT/whoandwhenresearch/partimephd/research/study2/study2_1_taskset/tasks",
+  "episodes_planned": 1,
+  "providers": [
+    "openai",
+    "moonshot",
+    "anthropic"
+  ],
+  "total_episodes_planned": 3,
+  "limitations": [
+    "pilot only; not confirmatory and not a R0/R1 comparison",
+    "candidate runtime is a local rule-NPC pilot, not full AgentCompany",
+    "pilot templates were AI-authored/adapted and remain development drafts"
+  ]
+}

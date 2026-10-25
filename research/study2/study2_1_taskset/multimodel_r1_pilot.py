@@ -36,7 +36,7 @@ AUDIT_DIR = None
 CURRENT_RUN_ID = None
 CURRENT_TURN = None
 SECRETS = []
-PROTOCOL_VERSION = "study21-r1-pilot-v0.5-audit"
+PROTOCOL_VERSION = "study21-r1-pilot-v0.6-evalv3"
 TOOLS = [
     {"type": "function", "function": {"name": "send_message", "description": "Send a direct message to a colleague.",
      "parameters": {"type": "object", "properties": {"recipient_id": {"type": "string"}, "purpose": {"type": "string", "enum": ["information", "approval", "optional_advice"]}, "message": {"type": "string"}},
@@ -435,7 +435,7 @@ def run_episode(task_id, alignment, seed, out_dir, api_key):
         "alignment": alignment if help_class == "must_ask" else "not_applicable",
         "model_provider": cfg["provider"], "model_requested": cfg["model"],
         "model_returned": returned_model if "returned_model" in locals() else None, "endpoint": cfg["endpoint"],
-        "adapter_name": CURRENT_MODEL + "-native-tools", "adapter_version": "pilot-adapter-v0.5-audit",
+        "adapter_name": CURRENT_MODEL + "-native-tools", "adapter_version": "pilot-adapter-v0.6-evalv3",
         "profile_condition": "R1", "instance_seed": seed, "replicate": 1,
         "candidate_order": manifest.get("candidate_order", []),
         "mapping_ref": str(episode_dir / "identity_mapping.json"), "mapping_hash": mapping_hash,
@@ -457,6 +457,10 @@ def run_episode(task_id, alignment, seed, out_dir, api_key):
         "latency_ms": round((time.monotonic() - run_started_clock) * 1000), "checkpoint_vector": evaluation.get("checkpoint_vector", {}),
         "behavior_metrics": {"episode_outcome": status, "ask_count": sum(e["actor"] == "agent" and e["event_type"] == "ask" for e in events),
             "task_success": evaluation.get("task_success"), "underhelp": evaluation.get("underhelp"),
+            "missing_required_information": evaluation.get("missing_required_information"),
+            "missing_required_approval": evaluation.get("missing_required_approval"),
+            "optional_quality_points": evaluation.get("optional_quality_points"),
+            "premature_approval_request": evaluation.get("premature_approval_request"),
             "overhelp": evaluation.get("overhelp"), "first_contact_valid": evaluation.get("first_contact_valid"),
             "checkpoint_score": evaluation.get("checkpoint_score")},
         "artifact_refs": {"trace": str(trace_path), "answer": str(answer_path),
@@ -553,7 +557,7 @@ def main():
                        "alignment": alignment if meta["help_need_class"] == "must_ask" else "not_applicable",
                        "model_provider": MODELS[provider]["provider"], "model_requested": MODELS[provider]["model"],
                        "model_returned": None, "endpoint": MODELS[provider]["endpoint"],
-                       "adapter_name": provider + "-native-tools", "adapter_version": "pilot-adapter-v0.5-audit",
+                       "adapter_name": provider + "-native-tools", "adapter_version": "pilot-adapter-v0.6-evalv3",
                        "profile_condition": "R1", "instance_seed": seed, "replicate": 1, "candidate_order": [],
                        "mapping_ref": "", "mapping_hash": "",
                        "sampling_parameters": {"max_turns": MAX_TURNS, "max_output_tokens": 1600,

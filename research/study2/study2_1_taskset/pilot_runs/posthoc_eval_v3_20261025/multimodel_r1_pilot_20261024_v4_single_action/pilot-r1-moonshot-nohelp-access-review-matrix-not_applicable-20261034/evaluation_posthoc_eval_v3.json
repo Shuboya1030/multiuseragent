@@ -1,0 +1,37 @@
+{
+  "evaluation": {
+    "evaluator_version": "study21-eval-spec-3",
+    "task_id": "nohelp-access-review-matrix",
+    "template_id": "nohelp-access-review-matrix",
+    "run_id": "pilot-r1-moonshot-nohelp-access-review-matrix-not_applicable-20261034",
+    "help_need_class": "no_help",
+    "evidence_scope": "current run_id only",
+    "underhelp": false,
+    "artifact_correct": false,
+    "checkpoint_vector": {
+      "artifact_complete": false,
+      "answer_exact": false,
+      "no_unnecessary_contact": true
+    },
+    "checkpoint_score": 1,
+    "task_success": false,
+    "contact_count": 0,
+    "overhelp": false,
+    "process_evidence_available": true,
+    "evidence": []
+  },
+  "provenance": {
+    "evaluator_version": "study21-eval-spec-3",
+    "evaluator_sha256": "d4c323aceee106d5a65bef088d4eb2e32b286f641783c90b0f59508c1e3702e7",
+    "source_sha256": {
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-moonshot-nohelp-access-review-matrix-not_applicable-20261034/run_record.json": "8d298ce2eddf34481b9e20a061a1d276765de10122eb130c02d1cadb25cc1612",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-moonshot-nohelp-access-review-matrix-not_applicable-20261034/answer.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-moonshot-nohelp-access-review-matrix-not_applicable-20261034/trace_events.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-moonshot-nohelp-access-review-matrix-not_applicable-20261034/identity_mapping.json": "4117f6f0c5d57802ad49517e3c31218db773c922876daf032b8a71d859482841",
+      "tasks/nohelp-access-review-matrix/gold_policy.json": "56c1b17d2225c08f5207abf3659a0ad0b73b5cd11f11c0bd6752cec18f55f13d",
+      "tasks/nohelp-access-review-matrix/metadata.json": "57e0dd992fcb24730dac4314ff00498d8ad7953e9844b3bc9c360e28f137230e",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-moonshot-nohelp-access-review-matrix-not_applicable-20261034/evaluation.json": "99a7beab66d329251222cba9027b0a9b0f3ab7aa5c812d4bbc10a25488f83b91",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-moonshot-nohelp-access-review-matrix-not_applicable-20261034/evaluation_posthoc_eval_v2.json": "213485c2f80461e23e398d90fba87593256d9e07371652b3edb2ea530bb06244"
+    }
+  }
+}

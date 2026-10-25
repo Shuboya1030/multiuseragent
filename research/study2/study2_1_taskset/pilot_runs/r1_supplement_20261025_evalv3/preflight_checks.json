@@ -1,0 +1,23 @@
+[
+  {
+    "command": [
+      "/Users/shuyazong/opt/anaconda3/bin/python3",
+      "-m",
+      "unittest",
+      "test_evaluator_v3.py",
+      "test_pilot_audit.py"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "................\n----------------------------------------------------------------------\nRan 16 tests in 0.510s\n\nOK\n"
+  },
+  {
+    "command": [
+      "/Users/shuyazong/opt/anaconda3/bin/python3",
+      "validate_taskset.py"
+    ],
+    "returncode": 0,
+    "stdout": "Validated package count: 60\nClass counts: {'must_ask': 20, 'no_help': 20, 'optional_benefit': 20}\nEvaluator fixture cases: 182\nStructural errors: 0\n",
+    "stderr": ""
+  }
+]

@@ -1,5 +1,9 @@
 # Study 2.1 Task Set: audit and readiness report
 
+## 2026-10-25 evaluator-v3 correction
+
+Missing required approval now contributes to Must underhelp. Valid evidence must be current-run delivered replies paired with admissible pending requests before submission; approval requires explicit authorization after information receipt. All 60 current metadata/spec files and the generator carry v3; task prompts, gold answers and NPC policies are unchanged. Unit boundaries and 182 package fixtures pass. Historical raw batches are preserved; 39 offline v3 derivatives are stored separately. These checks do not replace independent content review or formal collection gates.
+
 **Status: 60 draft templates generated; not ready for confirmatory runs.**
 
 ## 1. Counts and independent-template unit

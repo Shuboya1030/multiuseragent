@@ -1,0 +1,74 @@
+[
+  {
+    "provider": "OpenAI",
+    "schema_same": true,
+    "top_level_keys_added": [],
+    "top_level_keys_removed": [],
+    "legacy_files_preserved": [
+      "answer.json",
+      "candidate_profiles.json",
+      "evaluation.json",
+      "identity_mapping.json",
+      "model_turns.jsonl",
+      "run_manifest.json",
+      "run_record.json",
+      "task.md",
+      "trace_events.jsonl"
+    ],
+    "additional_files": [
+      "api_io.jsonl",
+      "prompt_snapshot.json"
+    ],
+    "historical_reference": "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-openai-nohelp-webinar-agenda-not_applicable-20261032",
+    "path_semantics": "new artifact_refs relative to batch; historical Windows absolute paths unchanged",
+    "trace_extension": "additional tool_action/error events and nullable fields; contact count still uses ask only"
+  },
+  {
+    "provider": "Moonshot",
+    "schema_same": true,
+    "top_level_keys_added": [],
+    "top_level_keys_removed": [],
+    "legacy_files_preserved": [
+      "answer.json",
+      "candidate_profiles.json",
+      "evaluation.json",
+      "identity_mapping.json",
+      "model_turns.jsonl",
+      "run_manifest.json",
+      "run_record.json",
+      "task.md",
+      "trace_events.jsonl"
+    ],
+    "additional_files": [
+      "api_io.jsonl",
+      "prompt_snapshot.json"
+    ],
+    "historical_reference": "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-moonshot-nohelp-webinar-agenda-not_applicable-20261032",
+    "path_semantics": "new artifact_refs relative to batch; historical Windows absolute paths unchanged",
+    "trace_extension": "additional tool_action/error events and nullable fields; contact count still uses ask only"
+  },
+  {
+    "provider": "Anthropic",
+    "schema_same": true,
+    "top_level_keys_added": [],
+    "top_level_keys_removed": [],
+    "legacy_files_preserved": [
+      "answer.json",
+      "candidate_profiles.json",
+      "evaluation.json",
+      "identity_mapping.json",
+      "model_turns.jsonl",
+      "run_manifest.json",
+      "run_record.json",
+      "task.md",
+      "trace_events.jsonl"
+    ],
+    "additional_files": [
+      "api_io.jsonl",
+      "prompt_snapshot.json"
+    ],
+    "historical_reference": "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-anthropic-nohelp-webinar-agenda-not_applicable-20261032",
+    "path_semantics": "new artifact_refs relative to batch; historical Windows absolute paths unchanged",
+    "trace_extension": "additional tool_action/error events and nullable fields; contact count still uses ask only"
+  }
+]

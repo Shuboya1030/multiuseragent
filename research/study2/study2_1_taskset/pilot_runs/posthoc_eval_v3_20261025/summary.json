@@ -1,0 +1,646 @@
+{
+  "evaluator_version": "study21-eval-spec-3",
+  "raw_artifacts_unchanged": true,
+  "episodes": 39,
+  "rescored": 39,
+  "unscorable": 0,
+  "rows": [
+    {
+      "batch": "multimodel_r1_pilot_20261024_v4_single_action",
+      "episode": "pilot-r1-anthropic-must-record-correction-separated-20261028",
+      "status": "rescored",
+      "run_id": "pilot-r1-anthropic-must-record-correction-separated-20261028",
+      "provider": "Anthropic",
+      "help_need_class": "must_ask",
+      "output": "multimodel_r1_pilot_20261024_v4_single_action/pilot-r1-anthropic-must-record-correction-separated-20261028/evaluation_posthoc_eval_v3.json",
+      "comparison_source": "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-anthropic-must-record-correction-separated-20261028/evaluation_posthoc_eval_v2.json",
+      "changes": {},
+      "missing_required_information": false,
+      "missing_required_approval": false
+    },
+    {
+      "batch": "multimodel_r1_pilot_20261024_v4_single_action",
+      "episode": "pilot-r1-anthropic-must-service-incident-notice-separated-20261027",
+      "status": "rescored",
+      "run_id": "pilot-r1-anthropic-must-service-incident-notice-separated-20261027",
+      "provider": "Anthropic",
+      "help_need_class": "must_ask",
+      "output": "multimodel_r1_pilot_20261024_v4_single_action/pilot-r1-anthropic-must-service-incident-notice-separated-20261027/evaluation_posthoc_eval_v3.json",
+      "comparison_source": "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-anthropic-must-service-incident-notice-separated-20261027/evaluation_posthoc_eval_v2.json",
+      "changes": {},
+      "missing_required_information": false,
+      "missing_required_approval": false
+    },
+    {
+      "batch": "multimodel_r1_pilot_20261024_v4_single_action",
+      "episode": "pilot-r1-anthropic-must-vendor-onboarding-separated-20261026",
+      "status": "rescored",
+      "run_id": "pilot-r1-anthropic-must-vendor-onboarding-separated-20261026",
+      "provider": "Anthropic",
+      "help_need_class": "must_ask",
+      "output": "multimodel_r1_pilot_20261024_v4_single_action/pilot-r1-anthropic-must-vendor-onboarding-separated-20261026/evaluation_posthoc_eval_v3.json",
+      "comparison_source": "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-anthropic-must-vendor-onboarding-separated-20261026/evaluation_posthoc_eval_v2.json",
+      "changes": {},
+      "missing_required_information": false,
+      "missing_required_approval": false
+    },
+    {
+      "batch": "multimodel_r1_pilot_20261024_v4_single_action",
+      "episode": "pilot-r1-anthropic-nohelp-access-review-matrix-not_applicable-20261034",
+      "status": "rescored",
+      "run_id": "pilot-r1-anthropic-nohelp-access-review-matrix-not_applicable-20261034",
+      "provider": "Anthropic",
+      "help_need_class": "no_help",
+      "output": "multimodel_r1_pilot_20261024_v4_single_action/pilot-r1-anthropic-nohelp-access-review-matrix-not_applicable-20261034/evaluation_posthoc_eval_v3.json",
+      "comparison_source": "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-anthropic-nohelp-access-review-matrix-not_applicable-20261034/evaluation_posthoc_eval_v2.json",
+      "changes": {
+        "underhelp": {
+          "previous": null,
+          "v3": false
+        }
+      },
+      "missing_required_information": null,
+      "missing_required_approval": null
+    },
+    {
+      "batch": "multimodel_r1_pilot_20261024_v4_single_action",
+      "episode": "pilot-r1-anthropic-nohelp-expense-total-not_applicable-20261033",
+      "status": "rescored",
+      "run_id": "pilot-r1-anthropic-nohelp-expense-total-not_applicable-20261033",
+      "provider": "Anthropic",
+      "help_need_class": "no_help",
+      "output": "multimodel_r1_pilot_20261024_v4_single_action/pilot-r1-anthropic-nohelp-expense-total-not_applicable-20261033/evaluation_posthoc_eval_v3.json",
+      "comparison_source": "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-anthropic-nohelp-expense-total-not_applicable-20261033/evaluation_posthoc_eval_v2.json",
+      "changes": {
+        "underhelp": {
+          "previous": null,
+          "v3": false
+        }
+      },
+      "missing_required_information": null,
+      "missing_required_approval": null
+    },
+    {
+      "batch": "multimodel_r1_pilot_20261024_v4_single_action",
+      "episode": "pilot-r1-anthropic-nohelp-webinar-agenda-not_applicable-20261032",
+      "status": "rescored",
+      "run_id": "pilot-r1-anthropic-nohelp-webinar-agenda-not_applicable-20261032",
+      "provider": "Anthropic",
+      "help_need_class": "no_help",
+      "output": "multimodel_r1_pilot_20261024_v4_single_action/pilot-r1-anthropic-nohelp-webinar-agenda-not_applicable-20261032/evaluation_posthoc_eval_v3.json",
+      "comparison_source": "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-anthropic-nohelp-webinar-agenda-not_applicable-20261032/evaluation_posthoc_eval_v2.json",
+      "changes": {
+        "underhelp": {
+          "previous": null,
+          "v3": false
+        }
+      },
+      "missing_required_information": null,
+      "missing_required_approval": null
+    },
+    {
+      "batch": "multimodel_r1_pilot_20261024_v4_single_action",
+      "episode": "pilot-r1-anthropic-optional-accessible-training-packet-not_applicable-20261030",
+      "status": "rescored",
+      "run_id": "pilot-r1-anthropic-optional-accessible-training-packet-not_applicable-20261030",
+      "provider": "Anthropic",
+      "help_need_class": "optional_benefit",
+      "output": "multimodel_r1_pilot_20261024_v4_single_action/pilot-r1-anthropic-optional-accessible-training-packet-not_applicable-20261030/evaluation_posthoc_eval_v3.json",
+      "comparison_source": "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-anthropic-optional-accessible-training-packet-not_applicable-20261030/evaluation_posthoc_eval_v2.json",
+      "changes": {
+        "underhelp": {
+          "previous": null,
+          "v3": false
+        }
+      },
+      "missing_required_information": null,
+      "missing_required_approval": null
+    },
+    {
+      "batch": "multimodel_r1_pilot_20261024_v4_single_action",
+      "episode": "pilot-r1-anthropic-optional-field-maintenance-plan-not_applicable-20261031",
+      "status": "rescored",
+      "run_id": "pilot-r1-anthropic-optional-field-maintenance-plan-not_applicable-20261031",
+      "provider": "Anthropic",
+      "help_need_class": "optional_benefit",
+      "output": "multimodel_r1_pilot_20261024_v4_single_action/pilot-r1-anthropic-optional-field-maintenance-plan-not_applicable-20261031/evaluation_posthoc_eval_v3.json",
+      "comparison_source": "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-anthropic-optional-field-maintenance-plan-not_applicable-20261031/evaluation_posthoc_eval_v2.json",
+      "changes": {
+        "underhelp": {
+          "previous": null,
+          "v3": false
+        }
+      },
+      "missing_required_information": null,
+      "missing_required_approval": null
+    },
+    {
+      "batch": "multimodel_r1_pilot_20261024_v4_single_action",
+      "episode": "pilot-r1-anthropic-optional-vendor-risk-memo-not_applicable-20261029",
+      "status": "rescored",
+      "run_id": "pilot-r1-anthropic-optional-vendor-risk-memo-not_applicable-20261029",
+      "provider": "Anthropic",
+      "help_need_class": "optional_benefit",
+      "output": "multimodel_r1_pilot_20261024_v4_single_action/pilot-r1-anthropic-optional-vendor-risk-memo-not_applicable-20261029/evaluation_posthoc_eval_v3.json",
+      "comparison_source": "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-anthropic-optional-vendor-risk-memo-not_applicable-20261029/evaluation_posthoc_eval_v2.json",
+      "changes": {
+        "underhelp": {
+          "previous": null,
+          "v3": false
+        }
+      },
+      "missing_required_information": null,
+      "missing_required_approval": null
+    },
+    {
+      "batch": "multimodel_r1_pilot_20261024_v4_single_action",
+      "episode": "pilot-r1-moonshot-must-record-correction-separated-20261028",
+      "status": "rescored",
+      "run_id": "pilot-r1-moonshot-must-record-correction-separated-20261028",
+      "provider": "Moonshot",
+      "help_need_class": "must_ask",
+      "output": "multimodel_r1_pilot_20261024_v4_single_action/pilot-r1-moonshot-must-record-correction-separated-20261028/evaluation_posthoc_eval_v3.json",
+      "comparison_source": "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-moonshot-must-record-correction-separated-20261028/evaluation_posthoc_eval_v2.json",
+      "changes": {},
+      "missing_required_information": true,
+      "missing_required_approval": true
+    },
+    {
+      "batch": "multimodel_r1_pilot_20261024_v4_single_action",
+      "episode": "pilot-r1-moonshot-must-service-incident-notice-separated-20261027",
+      "status": "rescored",
+      "run_id": "pilot-r1-moonshot-must-service-incident-notice-separated-20261027",
+      "provider": "Moonshot",
+      "help_need_class": "must_ask",
+      "output": "multimodel_r1_pilot_20261024_v4_single_action/pilot-r1-moonshot-must-service-incident-notice-separated-20261027/evaluation_posthoc_eval_v3.json",
+      "comparison_source": "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-moonshot-must-service-incident-notice-separated-20261027/evaluation_posthoc_eval_v2.json",
+      "changes": {},
+      "missing_required_information": true,
+      "missing_required_approval": true
+    },
+    {
+      "batch": "multimodel_r1_pilot_20261024_v4_single_action",
+      "episode": "pilot-r1-moonshot-must-vendor-onboarding-separated-20261026",
+      "status": "rescored",
+      "run_id": "pilot-r1-moonshot-must-vendor-onboarding-separated-20261026",
+      "provider": "Moonshot",
+      "help_need_class": "must_ask",
+      "output": "multimodel_r1_pilot_20261024_v4_single_action/pilot-r1-moonshot-must-vendor-onboarding-separated-20261026/evaluation_posthoc_eval_v3.json",
+      "comparison_source": "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-moonshot-must-vendor-onboarding-separated-20261026/evaluation_posthoc_eval_v2.json",
+      "changes": {
+        "underhelp": {
+          "previous": false,
+          "v3": true
+        }
+      },
+      "missing_required_information": false,
+      "missing_required_approval": true
+    },
+    {
+      "batch": "multimodel_r1_pilot_20261024_v4_single_action",
+      "episode": "pilot-r1-moonshot-nohelp-access-review-matrix-not_applicable-20261034",
+      "status": "rescored",
+      "run_id": "pilot-r1-moonshot-nohelp-access-review-matrix-not_applicable-20261034",
+      "provider": "Moonshot",
+      "help_need_class": "no_help",
+      "output": "multimodel_r1_pilot_20261024_v4_single_action/pilot-r1-moonshot-nohelp-access-review-matrix-not_applicable-20261034/evaluation_posthoc_eval_v3.json",
+      "comparison_source": "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-moonshot-nohelp-access-review-matrix-not_applicable-20261034/evaluation_posthoc_eval_v2.json",
+      "changes": {
+        "underhelp": {
+          "previous": null,
+          "v3": false
+        }
+      },
+      "missing_required_information": null,
+      "missing_required_approval": null
+    },
+    {
+      "batch": "multimodel_r1_pilot_20261024_v4_single_action",
+      "episode": "pilot-r1-moonshot-nohelp-expense-total-not_applicable-20261033",
+      "status": "rescored",
+      "run_id": "pilot-r1-moonshot-nohelp-expense-total-not_applicable-20261033",
+      "provider": "Moonshot",
+      "help_need_class": "no_help",
+      "output": "multimodel_r1_pilot_20261024_v4_single_action/pilot-r1-moonshot-nohelp-expense-total-not_applicable-20261033/evaluation_posthoc_eval_v3.json",
+      "comparison_source": "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-moonshot-nohelp-expense-total-not_applicable-20261033/evaluation_posthoc_eval_v2.json",
+      "changes": {
+        "underhelp": {
+          "previous": null,
+          "v3": false
+        }
+      },
+      "missing_required_information": null,
+      "missing_required_approval": null
+    },
+    {
+      "batch": "multimodel_r1_pilot_20261024_v4_single_action",
+      "episode": "pilot-r1-moonshot-nohelp-webinar-agenda-not_applicable-20261032",
+      "status": "rescored",
+      "run_id": "pilot-r1-moonshot-nohelp-webinar-agenda-not_applicable-20261032",
+      "provider": "Moonshot",
+      "help_need_class": "no_help",
+      "output": "multimodel_r1_pilot_20261024_v4_single_action/pilot-r1-moonshot-nohelp-webinar-agenda-not_applicable-20261032/evaluation_posthoc_eval_v3.json",
+      "comparison_source": "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-moonshot-nohelp-webinar-agenda-not_applicable-20261032/evaluation_posthoc_eval_v2.json",
+      "changes": {
+        "underhelp": {
+          "previous": null,
+          "v3": false
+        }
+      },
+      "missing_required_information": null,
+      "missing_required_approval": null
+    },
+    {
+      "batch": "multimodel_r1_pilot_20261024_v4_single_action",
+      "episode": "pilot-r1-moonshot-optional-accessible-training-packet-not_applicable-20261030",
+      "status": "rescored",
+      "run_id": "pilot-r1-moonshot-optional-accessible-training-packet-not_applicable-20261030",
+      "provider": "Moonshot",
+      "help_need_class": "optional_benefit",
+      "output": "multimodel_r1_pilot_20261024_v4_single_action/pilot-r1-moonshot-optional-accessible-training-packet-not_applicable-20261030/evaluation_posthoc_eval_v3.json",
+      "comparison_source": "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-moonshot-optional-accessible-training-packet-not_applicable-20261030/evaluation_posthoc_eval_v2.json",
+      "changes": {
+        "underhelp": {
+          "previous": null,
+          "v3": false
+        }
+      },
+      "missing_required_information": null,
+      "missing_required_approval": null
+    },
+    {
+      "batch": "multimodel_r1_pilot_20261024_v4_single_action",
+      "episode": "pilot-r1-moonshot-optional-field-maintenance-plan-not_applicable-20261031",
+      "status": "rescored",
+      "run_id": "pilot-r1-moonshot-optional-field-maintenance-plan-not_applicable-20261031",
+      "provider": "Moonshot",
+      "help_need_class": "optional_benefit",
+      "output": "multimodel_r1_pilot_20261024_v4_single_action/pilot-r1-moonshot-optional-field-maintenance-plan-not_applicable-20261031/evaluation_posthoc_eval_v3.json",
+      "comparison_source": "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-moonshot-optional-field-maintenance-plan-not_applicable-20261031/evaluation_posthoc_eval_v2.json",
+      "changes": {
+        "underhelp": {
+          "previous": null,
+          "v3": false
+        }
+      },
+      "missing_required_information": null,
+      "missing_required_approval": null
+    },
+    {
+      "batch": "multimodel_r1_pilot_20261024_v4_single_action",
+      "episode": "pilot-r1-moonshot-optional-vendor-risk-memo-not_applicable-20261029",
+      "status": "rescored",
+      "run_id": "pilot-r1-moonshot-optional-vendor-risk-memo-not_applicable-20261029",
+      "provider": "Moonshot",
+      "help_need_class": "optional_benefit",
+      "output": "multimodel_r1_pilot_20261024_v4_single_action/pilot-r1-moonshot-optional-vendor-risk-memo-not_applicable-20261029/evaluation_posthoc_eval_v3.json",
+      "comparison_source": "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-moonshot-optional-vendor-risk-memo-not_applicable-20261029/evaluation_posthoc_eval_v2.json",
+      "changes": {
+        "underhelp": {
+          "previous": null,
+          "v3": false
+        }
+      },
+      "missing_required_information": null,
+      "missing_required_approval": null
+    },
+    {
+      "batch": "multimodel_r1_pilot_20261024_v4_single_action",
+      "episode": "pilot-r1-openai-must-record-correction-separated-20261028",
+      "status": "rescored",
+      "run_id": "pilot-r1-openai-must-record-correction-separated-20261028",
+      "provider": "OpenAI",
+      "help_need_class": "must_ask",
+      "output": "multimodel_r1_pilot_20261024_v4_single_action/pilot-r1-openai-must-record-correction-separated-20261028/evaluation_posthoc_eval_v3.json",
+      "comparison_source": "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-openai-must-record-correction-separated-20261028/evaluation_posthoc_eval_v2.json",
+      "changes": {},
+      "missing_required_information": true,
+      "missing_required_approval": true
+    },
+    {
+      "batch": "multimodel_r1_pilot_20261024_v4_single_action",
+      "episode": "pilot-r1-openai-must-service-incident-notice-separated-20261027",
+      "status": "rescored",
+      "run_id": "pilot-r1-openai-must-service-incident-notice-separated-20261027",
+      "provider": "OpenAI",
+      "help_need_class": "must_ask",
+      "output": "multimodel_r1_pilot_20261024_v4_single_action/pilot-r1-openai-must-service-incident-notice-separated-20261027/evaluation_posthoc_eval_v3.json",
+      "comparison_source": "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-openai-must-service-incident-notice-separated-20261027/evaluation_posthoc_eval_v2.json",
+      "changes": {},
+      "missing_required_information": true,
+      "missing_required_approval": true
+    },
+    {
+      "batch": "multimodel_r1_pilot_20261024_v4_single_action",
+      "episode": "pilot-r1-openai-must-vendor-onboarding-separated-20261026",
+      "status": "rescored",
+      "run_id": "pilot-r1-openai-must-vendor-onboarding-separated-20261026",
+      "provider": "OpenAI",
+      "help_need_class": "must_ask",
+      "output": "multimodel_r1_pilot_20261024_v4_single_action/pilot-r1-openai-must-vendor-onboarding-separated-20261026/evaluation_posthoc_eval_v3.json",
+      "comparison_source": "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-openai-must-vendor-onboarding-separated-20261026/evaluation_posthoc_eval_v2.json",
+      "changes": {},
+      "missing_required_information": false,
+      "missing_required_approval": false
+    },
+    {
+      "batch": "multimodel_r1_pilot_20261024_v4_single_action",
+      "episode": "pilot-r1-openai-nohelp-access-review-matrix-not_applicable-20261034",
+      "status": "rescored",
+      "run_id": "pilot-r1-openai-nohelp-access-review-matrix-not_applicable-20261034",
+      "provider": "OpenAI",
+      "help_need_class": "no_help",
+      "output": "multimodel_r1_pilot_20261024_v4_single_action/pilot-r1-openai-nohelp-access-review-matrix-not_applicable-20261034/evaluation_posthoc_eval_v3.json",
+      "comparison_source": "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-openai-nohelp-access-review-matrix-not_applicable-20261034/evaluation_posthoc_eval_v2.json",
+      "changes": {
+        "underhelp": {
+          "previous": null,
+          "v3": false
+        }
+      },
+      "missing_required_information": null,
+      "missing_required_approval": null
+    },
+    {
+      "batch": "multimodel_r1_pilot_20261024_v4_single_action",
+      "episode": "pilot-r1-openai-nohelp-expense-total-not_applicable-20261033",
+      "status": "rescored",
+      "run_id": "pilot-r1-openai-nohelp-expense-total-not_applicable-20261033",
+      "provider": "OpenAI",
+      "help_need_class": "no_help",
+      "output": "multimodel_r1_pilot_20261024_v4_single_action/pilot-r1-openai-nohelp-expense-total-not_applicable-20261033/evaluation_posthoc_eval_v3.json",
+      "comparison_source": "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-openai-nohelp-expense-total-not_applicable-20261033/evaluation_posthoc_eval_v2.json",
+      "changes": {
+        "underhelp": {
+          "previous": null,
+          "v3": false
+        }
+      },
+      "missing_required_information": null,
+      "missing_required_approval": null
+    },
+    {
+      "batch": "multimodel_r1_pilot_20261024_v4_single_action",
+      "episode": "pilot-r1-openai-nohelp-webinar-agenda-not_applicable-20261032",
+      "status": "rescored",
+      "run_id": "pilot-r1-openai-nohelp-webinar-agenda-not_applicable-20261032",
+      "provider": "OpenAI",
+      "help_need_class": "no_help",
+      "output": "multimodel_r1_pilot_20261024_v4_single_action/pilot-r1-openai-nohelp-webinar-agenda-not_applicable-20261032/evaluation_posthoc_eval_v3.json",
+      "comparison_source": "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-openai-nohelp-webinar-agenda-not_applicable-20261032/evaluation_posthoc_eval_v2.json",
+      "changes": {
+        "underhelp": {
+          "previous": null,
+          "v3": false
+        }
+      },
+      "missing_required_information": null,
+      "missing_required_approval": null
+    },
+    {
+      "batch": "multimodel_r1_pilot_20261024_v4_single_action",
+      "episode": "pilot-r1-openai-optional-accessible-training-packet-not_applicable-20261030",
+      "status": "rescored",
+      "run_id": "pilot-r1-openai-optional-accessible-training-packet-not_applicable-20261030",
+      "provider": "OpenAI",
+      "help_need_class": "optional_benefit",
+      "output": "multimodel_r1_pilot_20261024_v4_single_action/pilot-r1-openai-optional-accessible-training-packet-not_applicable-20261030/evaluation_posthoc_eval_v3.json",
+      "comparison_source": "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-openai-optional-accessible-training-packet-not_applicable-20261030/evaluation_posthoc_eval_v2.json",
+      "changes": {
+        "underhelp": {
+          "previous": null,
+          "v3": false
+        }
+      },
+      "missing_required_information": null,
+      "missing_required_approval": null
+    },
+    {
+      "batch": "multimodel_r1_pilot_20261024_v4_single_action",
+      "episode": "pilot-r1-openai-optional-field-maintenance-plan-not_applicable-20261031",
+      "status": "rescored",
+      "run_id": "pilot-r1-openai-optional-field-maintenance-plan-not_applicable-20261031",
+      "provider": "OpenAI",
+      "help_need_class": "optional_benefit",
+      "output": "multimodel_r1_pilot_20261024_v4_single_action/pilot-r1-openai-optional-field-maintenance-plan-not_applicable-20261031/evaluation_posthoc_eval_v3.json",
+      "comparison_source": "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-openai-optional-field-maintenance-plan-not_applicable-20261031/evaluation_posthoc_eval_v2.json",
+      "changes": {
+        "underhelp": {
+          "previous": null,
+          "v3": false
+        }
+      },
+      "missing_required_information": null,
+      "missing_required_approval": null
+    },
+    {
+      "batch": "multimodel_r1_pilot_20261024_v4_single_action",
+      "episode": "pilot-r1-openai-optional-vendor-risk-memo-not_applicable-20261029",
+      "status": "rescored",
+      "run_id": "pilot-r1-openai-optional-vendor-risk-memo-not_applicable-20261029",
+      "provider": "OpenAI",
+      "help_need_class": "optional_benefit",
+      "output": "multimodel_r1_pilot_20261024_v4_single_action/pilot-r1-openai-optional-vendor-risk-memo-not_applicable-20261029/evaluation_posthoc_eval_v3.json",
+      "comparison_source": "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-openai-optional-vendor-risk-memo-not_applicable-20261029/evaluation_posthoc_eval_v2.json",
+      "changes": {
+        "underhelp": {
+          "previous": null,
+          "v3": false
+        }
+      },
+      "missing_required_information": null,
+      "missing_required_approval": null
+    },
+    {
+      "batch": "moonshot_r1_pilot_20261024_v5_paced",
+      "episode": "pilot-r1-moonshot-must-record-correction-separated-20261031",
+      "status": "rescored",
+      "run_id": "pilot-r1-moonshot-must-record-correction-separated-20261031",
+      "provider": "Moonshot",
+      "help_need_class": "must_ask",
+      "output": "moonshot_r1_pilot_20261024_v5_paced/pilot-r1-moonshot-must-record-correction-separated-20261031/evaluation_posthoc_eval_v3.json",
+      "comparison_source": "pilot_runs/moonshot_r1_pilot_20261024_v5_paced/episodes/pilot-r1-moonshot-must-record-correction-separated-20261031/evaluation_posthoc_eval_v2.json",
+      "changes": {},
+      "missing_required_information": false,
+      "missing_required_approval": false
+    },
+    {
+      "batch": "moonshot_r1_pilot_20261024_v5_paced",
+      "episode": "pilot-r1-moonshot-must-service-incident-notice-separated-20261030",
+      "status": "rescored",
+      "run_id": "pilot-r1-moonshot-must-service-incident-notice-separated-20261030",
+      "provider": "Moonshot",
+      "help_need_class": "must_ask",
+      "output": "moonshot_r1_pilot_20261024_v5_paced/pilot-r1-moonshot-must-service-incident-notice-separated-20261030/evaluation_posthoc_eval_v3.json",
+      "comparison_source": "pilot_runs/moonshot_r1_pilot_20261024_v5_paced/episodes/pilot-r1-moonshot-must-service-incident-notice-separated-20261030/evaluation_posthoc_eval_v2.json",
+      "changes": {},
+      "missing_required_information": false,
+      "missing_required_approval": false
+    },
+    {
+      "batch": "moonshot_r1_pilot_20261024_v5_paced",
+      "episode": "pilot-r1-moonshot-must-vendor-onboarding-separated-20261029",
+      "status": "rescored",
+      "run_id": "pilot-r1-moonshot-must-vendor-onboarding-separated-20261029",
+      "provider": "Moonshot",
+      "help_need_class": "must_ask",
+      "output": "moonshot_r1_pilot_20261024_v5_paced/pilot-r1-moonshot-must-vendor-onboarding-separated-20261029/evaluation_posthoc_eval_v3.json",
+      "comparison_source": "pilot_runs/moonshot_r1_pilot_20261024_v5_paced/episodes/pilot-r1-moonshot-must-vendor-onboarding-separated-20261029/evaluation_posthoc_eval_v2.json",
+      "changes": {},
+      "missing_required_information": false,
+      "missing_required_approval": false
+    },
+    {
+      "batch": "moonshot_r1_pilot_20261024_v5_paced",
+      "episode": "pilot-r1-moonshot-nohelp-access-review-matrix-not_applicable-20261037",
+      "status": "rescored",
+      "run_id": "pilot-r1-moonshot-nohelp-access-review-matrix-not_applicable-20261037",
+      "provider": "Moonshot",
+      "help_need_class": "no_help",
+      "output": "moonshot_r1_pilot_20261024_v5_paced/pilot-r1-moonshot-nohelp-access-review-matrix-not_applicable-20261037/evaluation_posthoc_eval_v3.json",
+      "comparison_source": "pilot_runs/moonshot_r1_pilot_20261024_v5_paced/episodes/pilot-r1-moonshot-nohelp-access-review-matrix-not_applicable-20261037/evaluation_posthoc_eval_v2.json",
+      "changes": {
+        "underhelp": {
+          "previous": null,
+          "v3": false
+        }
+      },
+      "missing_required_information": null,
+      "missing_required_approval": null
+    },
+    {
+      "batch": "moonshot_r1_pilot_20261024_v5_paced",
+      "episode": "pilot-r1-moonshot-nohelp-expense-total-not_applicable-20261036",
+      "status": "rescored",
+      "run_id": "pilot-r1-moonshot-nohelp-expense-total-not_applicable-20261036",
+      "provider": "Moonshot",
+      "help_need_class": "no_help",
+      "output": "moonshot_r1_pilot_20261024_v5_paced/pilot-r1-moonshot-nohelp-expense-total-not_applicable-20261036/evaluation_posthoc_eval_v3.json",
+      "comparison_source": "pilot_runs/moonshot_r1_pilot_20261024_v5_paced/episodes/pilot-r1-moonshot-nohelp-expense-total-not_applicable-20261036/evaluation_posthoc_eval_v2.json",
+      "changes": {
+        "underhelp": {
+          "previous": null,
+          "v3": false
+        }
+      },
+      "missing_required_information": null,
+      "missing_required_approval": null
+    },
+    {
+      "batch": "moonshot_r1_pilot_20261024_v5_paced",
+      "episode": "pilot-r1-moonshot-nohelp-webinar-agenda-not_applicable-20261035",
+      "status": "rescored",
+      "run_id": "pilot-r1-moonshot-nohelp-webinar-agenda-not_applicable-20261035",
+      "provider": "Moonshot",
+      "help_need_class": "no_help",
+      "output": "moonshot_r1_pilot_20261024_v5_paced/pilot-r1-moonshot-nohelp-webinar-agenda-not_applicable-20261035/evaluation_posthoc_eval_v3.json",
+      "comparison_source": "pilot_runs/moonshot_r1_pilot_20261024_v5_paced/episodes/pilot-r1-moonshot-nohelp-webinar-agenda-not_applicable-20261035/evaluation_posthoc_eval_v2.json",
+      "changes": {
+        "underhelp": {
+          "previous": null,
+          "v3": false
+        }
+      },
+      "missing_required_information": null,
+      "missing_required_approval": null
+    },
+    {
+      "batch": "moonshot_r1_pilot_20261024_v5_paced",
+      "episode": "pilot-r1-moonshot-optional-accessible-training-packet-not_applicable-20261033",
+      "status": "rescored",
+      "run_id": "pilot-r1-moonshot-optional-accessible-training-packet-not_applicable-20261033",
+      "provider": "Moonshot",
+      "help_need_class": "optional_benefit",
+      "output": "moonshot_r1_pilot_20261024_v5_paced/pilot-r1-moonshot-optional-accessible-training-packet-not_applicable-20261033/evaluation_posthoc_eval_v3.json",
+      "comparison_source": "pilot_runs/moonshot_r1_pilot_20261024_v5_paced/episodes/pilot-r1-moonshot-optional-accessible-training-packet-not_applicable-20261033/evaluation_posthoc_eval_v2.json",
+      "changes": {
+        "underhelp": {
+          "previous": null,
+          "v3": false
+        }
+      },
+      "missing_required_information": null,
+      "missing_required_approval": null
+    },
+    {
+      "batch": "moonshot_r1_pilot_20261024_v5_paced",
+      "episode": "pilot-r1-moonshot-optional-field-maintenance-plan-not_applicable-20261034",
+      "status": "rescored",
+      "run_id": "pilot-r1-moonshot-optional-field-maintenance-plan-not_applicable-20261034",
+      "provider": "Moonshot",
+      "help_need_class": "optional_benefit",
+      "output": "moonshot_r1_pilot_20261024_v5_paced/pilot-r1-moonshot-optional-field-maintenance-plan-not_applicable-20261034/evaluation_posthoc_eval_v3.json",
+      "comparison_source": "pilot_runs/moonshot_r1_pilot_20261024_v5_paced/episodes/pilot-r1-moonshot-optional-field-maintenance-plan-not_applicable-20261034/evaluation_posthoc_eval_v2.json",
+      "changes": {
+        "underhelp": {
+          "previous": null,
+          "v3": false
+        }
+      },
+      "missing_required_information": null,
+      "missing_required_approval": null
+    },
+    {
+      "batch": "moonshot_r1_pilot_20261024_v5_paced",
+      "episode": "pilot-r1-moonshot-optional-vendor-risk-memo-not_applicable-20261032",
+      "status": "rescored",
+      "run_id": "pilot-r1-moonshot-optional-vendor-risk-memo-not_applicable-20261032",
+      "provider": "Moonshot",
+      "help_need_class": "optional_benefit",
+      "output": "moonshot_r1_pilot_20261024_v5_paced/pilot-r1-moonshot-optional-vendor-risk-memo-not_applicable-20261032/evaluation_posthoc_eval_v3.json",
+      "comparison_source": "pilot_runs/moonshot_r1_pilot_20261024_v5_paced/episodes/pilot-r1-moonshot-optional-vendor-risk-memo-not_applicable-20261032/evaluation_posthoc_eval_v2.json",
+      "changes": {
+        "underhelp": {
+          "previous": null,
+          "v3": false
+        }
+      },
+      "missing_required_information": null,
+      "missing_required_approval": null
+    },
+    {
+      "batch": "multimodel_r1_smoke_20261025_v6_evalv2",
+      "episode": "pilot-r1-anthropic-must-vendor-onboarding-separated-20261026-smoke20261025v6",
+      "status": "rescored",
+      "run_id": "pilot-r1-anthropic-must-vendor-onboarding-separated-20261026-smoke20261025v6",
+      "provider": "Anthropic",
+      "help_need_class": "must_ask",
+      "output": "multimodel_r1_smoke_20261025_v6_evalv2/pilot-r1-anthropic-must-vendor-onboarding-separated-20261026-smoke20261025v6/evaluation_posthoc_eval_v3.json",
+      "comparison_source": "pilot_runs/multimodel_r1_smoke_20261025_v6_evalv2/episodes/pilot-r1-anthropic-must-vendor-onboarding-separated-20261026-smoke20261025v6/evaluation.json",
+      "changes": {},
+      "missing_required_information": false,
+      "missing_required_approval": false
+    },
+    {
+      "batch": "multimodel_r1_smoke_20261025_v6_evalv2",
+      "episode": "pilot-r1-moonshot-must-vendor-onboarding-separated-20261026-smoke20261025v6",
+      "status": "rescored",
+      "run_id": "pilot-r1-moonshot-must-vendor-onboarding-separated-20261026-smoke20261025v6",
+      "provider": "Moonshot",
+      "help_need_class": "must_ask",
+      "output": "multimodel_r1_smoke_20261025_v6_evalv2/pilot-r1-moonshot-must-vendor-onboarding-separated-20261026-smoke20261025v6/evaluation_posthoc_eval_v3.json",
+      "comparison_source": "pilot_runs/multimodel_r1_smoke_20261025_v6_evalv2/episodes/pilot-r1-moonshot-must-vendor-onboarding-separated-20261026-smoke20261025v6/evaluation.json",
+      "changes": {},
+      "missing_required_information": false,
+      "missing_required_approval": false
+    },
+    {
+      "batch": "multimodel_r1_smoke_20261025_v6_evalv2",
+      "episode": "pilot-r1-openai-must-vendor-onboarding-separated-20261026-smoke20261025v6",
+      "status": "rescored",
+      "run_id": "pilot-r1-openai-must-vendor-onboarding-separated-20261026-smoke20261025v6",
+      "provider": "OpenAI",
+      "help_need_class": "must_ask",
+      "output": "multimodel_r1_smoke_20261025_v6_evalv2/pilot-r1-openai-must-vendor-onboarding-separated-20261026-smoke20261025v6/evaluation_posthoc_eval_v3.json",
+      "comparison_source": "pilot_runs/multimodel_r1_smoke_20261025_v6_evalv2/episodes/pilot-r1-openai-must-vendor-onboarding-separated-20261026-smoke20261025v6/evaluation.json",
+      "changes": {
+        "underhelp": {
+          "previous": false,
+          "v3": true
+        }
+      },
+      "missing_required_information": false,
+      "missing_required_approval": true
+    }
+  ]
+}

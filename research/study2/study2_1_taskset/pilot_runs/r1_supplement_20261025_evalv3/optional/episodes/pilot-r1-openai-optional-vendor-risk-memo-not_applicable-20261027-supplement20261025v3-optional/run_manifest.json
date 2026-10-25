@@ -1,0 +1,13 @@
+{
+  "run_id": "pilot-r1-openai-optional-vendor-risk-memo-not_applicable-20261027-supplement20261025v3-optional",
+  "task_id": "optional-vendor-risk-memo",
+  "seed": 20261027,
+  "profile_condition": "R1",
+  "alignment": "not_applicable",
+  "candidate_order": [
+    "C4",
+    "C1",
+    "C3",
+    "C2"
+  ]
+}

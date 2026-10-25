@@ -1,0 +1,54 @@
+{
+  "evaluation": {
+    "evaluator_version": "study21-eval-spec-3",
+    "task_id": "optional-vendor-risk-memo",
+    "template_id": "optional-vendor-risk-memo",
+    "run_id": "pilot-r1-anthropic-optional-vendor-risk-memo-not_applicable-20261029",
+    "help_need_class": "optional_benefit",
+    "evidence_scope": "current run_id only",
+    "underhelp": false,
+    "baseline_artifact_correct": true,
+    "task_success": true,
+    "checkpoint_vector": {
+      "baseline_artifact_correct": true,
+      "optional_quality_improvement": true
+    },
+    "checkpoint_score": 2,
+    "contact_count": 1,
+    "contacted_admissible_person": true,
+    "optional_fact_received": true,
+    "reply_used_keyword_coverage": 0.8333333333333334,
+    "reply_used": true,
+    "optional_quality_points": 1,
+    "process_evidence_available": true,
+    "contact_cost_events": 1,
+    "evidence": [
+      {
+        "event_id": 0,
+        "recipient_id": "P1",
+        "event_type": "ask",
+        "content": "Hi Reese, I'm comparing two vendor bids for a need-by date of October 1: Northstar ($48,000, 30-day lead) and Cedar ($52,000, 18-day lead), budget $55,000. Do you have any information on security reviews or risk issues for either vendor, or on today's date so I can confirm the latest order date that still meets the lead time? Please reply with only what you know."
+      },
+      {
+        "event_id": 1,
+        "recipient_id": "P1",
+        "event_type": "reply",
+        "content": "The procurement risk analyst knows Northstar has a documented 60-day security review backlog; Cedar has completed the review."
+      }
+    ]
+  },
+  "provenance": {
+    "evaluator_version": "study21-eval-spec-3",
+    "evaluator_sha256": "d4c323aceee106d5a65bef088d4eb2e32b286f641783c90b0f59508c1e3702e7",
+    "source_sha256": {
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-anthropic-optional-vendor-risk-memo-not_applicable-20261029/run_record.json": "f7897ccb90849bce664c39958394c898050776751a11419676457f0d7487ac9e",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-anthropic-optional-vendor-risk-memo-not_applicable-20261029/answer.json": "a22f9ddf03abb43e5c36c673863e34ec12d716914ea926fb3a134f535691e676",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-anthropic-optional-vendor-risk-memo-not_applicable-20261029/trace_events.jsonl": "ad20df826837b6862769f693cfff53b0ee5cf7f7ea93a351b5a1a6e23f82adbe",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-anthropic-optional-vendor-risk-memo-not_applicable-20261029/identity_mapping.json": "e43331dd443637937790dc67af77fe07ff10418d88543d6d80204531db687183",
+      "tasks/optional-vendor-risk-memo/gold_policy.json": "03d04a1b9c990cdcb9ea79facbd50ed9e788b40b34e36afbeccbd313f47f74ce",
+      "tasks/optional-vendor-risk-memo/metadata.json": "6e56c21760df86ecbcf71be64f17f0e51ca9cbbafb57c2c0a2547e28dd4800ce",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-anthropic-optional-vendor-risk-memo-not_applicable-20261029/evaluation.json": "aa157e4ca28dd4b2832fa9c88b8a59da26a61efbe728fa8f571f4312ddccd5b4",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-anthropic-optional-vendor-risk-memo-not_applicable-20261029/evaluation_posthoc_eval_v2.json": "70acb15b6e91fc03073a34bb7e2b7b8254eb066c2d3a3fcd427335193eb8fa8a"
+    }
+  }
+}

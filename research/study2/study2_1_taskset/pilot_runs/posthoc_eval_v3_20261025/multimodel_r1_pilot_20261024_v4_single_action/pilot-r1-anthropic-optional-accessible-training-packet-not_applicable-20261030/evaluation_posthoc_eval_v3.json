@@ -1,0 +1,54 @@
+{
+  "evaluation": {
+    "evaluator_version": "study21-eval-spec-3",
+    "task_id": "optional-accessible-training-packet",
+    "template_id": "optional-accessible-training-packet",
+    "run_id": "pilot-r1-anthropic-optional-accessible-training-packet-not_applicable-20261030",
+    "help_need_class": "optional_benefit",
+    "evidence_scope": "current run_id only",
+    "underhelp": false,
+    "baseline_artifact_correct": true,
+    "task_success": true,
+    "checkpoint_vector": {
+      "baseline_artifact_correct": true,
+      "optional_quality_improvement": true
+    },
+    "checkpoint_score": 2,
+    "contact_count": 2,
+    "contacted_admissible_person": true,
+    "optional_fact_received": true,
+    "reply_used_keyword_coverage": 1.0,
+    "reply_used": true,
+    "optional_quality_points": 1,
+    "process_evidence_available": true,
+    "contact_cost_events": 2,
+    "evidence": [
+      {
+        "event_id": 2,
+        "recipient_id": "P1",
+        "event_type": "ask",
+        "content": "Hi Morgan, I'm preparing a training packet outline for a 32-person cohort (modules: account setup, data handling, incident reporting; PDF; July 8). It needs to be usable by the entire cohort, including people with disabilities. What accessibility features should the PDF include (tagged structure, alt text for images, reading order, color contrast, plain-language summaries, alternative formats)? Any other must-haves?"
+      },
+      {
+        "event_id": 3,
+        "recipient_id": "P1",
+        "event_type": "reply",
+        "content": "The accessibility coordinator knows that several participants use screen readers and recommends tagged headings, descriptive links, and alt text for diagrams."
+      }
+    ]
+  },
+  "provenance": {
+    "evaluator_version": "study21-eval-spec-3",
+    "evaluator_sha256": "d4c323aceee106d5a65bef088d4eb2e32b286f641783c90b0f59508c1e3702e7",
+    "source_sha256": {
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-anthropic-optional-accessible-training-packet-not_applicable-20261030/run_record.json": "9a0724c2ae70badb2041cd5bdf4e9077b107a9856f5d1b6fc69888af67a4ff63",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-anthropic-optional-accessible-training-packet-not_applicable-20261030/answer.json": "696d86973d5f2d753ca231dbc3e1dcfaf5f0eb13c3605b6239daa76e72bd5805",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-anthropic-optional-accessible-training-packet-not_applicable-20261030/trace_events.jsonl": "6cf092eef0d59bca1a769d695085913794bcdbe33adb08fe45246f92ac89499e",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-anthropic-optional-accessible-training-packet-not_applicable-20261030/identity_mapping.json": "cc889f6c80c8e1bf0854a9c841a2b1291825c218641941cbb2198e6c0737f1ca",
+      "tasks/optional-accessible-training-packet/gold_policy.json": "8091dbff01c66a29be443fb713b5df5e8b16bb46aabf8f40e128644629cb80b9",
+      "tasks/optional-accessible-training-packet/metadata.json": "48ed5edba9bb2a68d1791c181a6b80f5fdde23378a0f45435e4e103196b4f2d9",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-anthropic-optional-accessible-training-packet-not_applicable-20261030/evaluation.json": "00141f993507f827074bd960d0b3a6da0d1a3f8450e720bed8c1b643eab3eac5",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-anthropic-optional-accessible-training-packet-not_applicable-20261030/evaluation_posthoc_eval_v2.json": "9c08592d1dea93c858e02c71eaa2ca7c22ec427b8b71fcf8a7a92656ffa9c717"
+    }
+  }
+}

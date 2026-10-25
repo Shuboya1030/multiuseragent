@@ -64,18 +64,13 @@ def audit(batch):
             assert sum(t["usage"].get("prompt_tokens", 0) for t in turns) == record["agent_tokens"]["input"], "input token sum"
             assert sum(t["usage"].get("completion_tokens", 0) for t in turns) == record["agent_tokens"]["output"], "output token sum"
             visible = read(ep / "candidate_profiles.json")
-            inputs.append((prompt, visible, mapping["alias_to_canonical"]))
+            inputs.append(((record["task_id"], record["profile_condition"], record["instance_seed"]), (prompt, visible, mapping["alias_to_canonical"])))
             alias = mapping["alias_to_canonical"]
             gold = read(HERE / "tasks" / record["task_id"] / "gold_policy.json")
-            admissible = gold["admissible_recipients_by_step"][record["alignment"]]
             asks = [e for e in events if e["actor"] == "agent" and e["event_type"] == "ask"]
-            first = asks[0] if asks else None
-            first_valid = bool(first and alias.get(first["recipient_id"]) in admissible.get(first["purpose"], []))
-            first_step_valid = bool(first_valid and first["purpose"] == "information")
-            info_reply_indices = [i for i,e in enumerate(events) if e["event_type"] == "reply" and e.get("useful") and alias.get(e["recipient_id"]) in admissible["information"]]
-            approval_reply_indices = [i for i,e in enumerate(events) if e["event_type"] == "reply" and e.get("authorized") and alias.get(e["recipient_id"]) in admissible["approval"]]
-            submit_indices = [i for i,e in enumerate(events) if e["event_type"] == "submit"]
-            ordered_evidence = bool(info_reply_indices and approval_reply_indices and submit_indices and min(info_reply_indices) < min(approval_reply_indices) < min(submit_indices))
+            first_valid = saved.get("first_contact_valid")
+            first_step_valid = saved.get("first_step_valid")
+            ordered_evidence = saved.get("ordered_information_approval_submission")
             api_failures = [e for e in api if e["event"] == "error"]
             metrics.append({"run_id": rid, "provider": record["model_provider"], "model_requested": record["model_requested"], "model_returned": record["model_returned"],
                 "status": record["status"], "submitted": record["behavior_metrics"]["episode_outcome"] == "submitted",
@@ -83,12 +78,16 @@ def audit(batch):
                 "first_recipient_valid": first_valid, "first_step_valid": first_step_valid,
                 "required_fact_received": saved.get("required_fact_in_reply"), "authorized_approval_received": saved.get("approval_in_reply"),
                 "ordered_information_approval_submission": ordered_evidence,
-                "protocol_underhelp_missing_required_evidence": not ordered_evidence,
+                "protocol_underhelp_missing_required_evidence": saved.get("underhelp") if record["help_need_class"] == "must_ask" else None,
+                "help_need_class": record["help_need_class"], "task_id": record["task_id"],
+                "missing_required_information": saved.get("missing_required_information"), "missing_required_approval": saved.get("missing_required_approval"),
+                "overhelp": saved.get("overhelp"), "optional_quality_points": saved.get("optional_quality_points"),
+                "reply_used_keyword_coverage": saved.get("reply_used_keyword_coverage"),
                 "evaluator_underhelp": saved.get("underhelp"), "evaluator_task_success": saved.get("task_success"),
                 "checkpoint_score": saved.get("checkpoint_score"), "checkpoint_vector": saved.get("checkpoint_vector"),
                 "tokens": record["agent_tokens"], "latency_ms": record["latency_ms"], "cost_status": record["cost_status"],
                 "infrastructure_smoke_pass": record["status"] == "completed" and not record["errors"] and not api_failures})
-            historical = next(r for r in old_records if r["model_provider"] == record["model_provider"])
+            historical = next(r for r in old_records if r["model_provider"] == record["model_provider"] and r["task_id"] == record["task_id"])
             old_ep = old_batch / "episodes" / historical["run_id"]
             original_files = {"task.md", "candidate_profiles.json", "identity_mapping.json", "run_manifest.json", "run_record.json", "model_turns.jsonl", "trace_events.jsonl", "answer.json", "evaluation.json"}
             assert all((ep / name).exists() for name in original_files), "missing legacy file"
@@ -99,8 +98,11 @@ def audit(batch):
                 "trace_extension": "additional tool_action/error events and nullable fields; contact count still uses ask only"})
         except Exception as exc:
             problems.append({"run_id": rid, "error_type": type(exc).__name__, "detail": str(exc)[:300]})
-    if inputs and any(item != inputs[0] for item in inputs[1:]):
-        problems.append("Model-visible inputs or candidate mappings differ across providers")
+    matched = {}
+    for cell, value in inputs:
+        if cell in matched and value != matched[cell]:
+            problems.append("Model-visible inputs or candidate mappings differ within matched cell: " + str(cell))
+        matched[cell] = value
     keys = [os.environ.get(k, "") for k in ("OPENAI_API_KEY", "MOONSHOT_API_KEY", "ANTHROPIC_API_KEY")]
     secret_hits = []
     if not all(keys): problems.append("Credential leak scan could not load every configured key")
@@ -111,7 +113,7 @@ def audit(batch):
     if secret_hits: problems.append({"credential_leak_files": secret_hits})
     report = {"passed": not problems, "episodes": len(records), "problems": problems,
               "checks": ["study21-run-v2 JSON Schema", "trace required fields/order/run isolation", "portable artifact references", "score replay equality", "mapping hash", "request/response completeness", "stable returned model per episode", "token sums", "matched inputs across providers", "legacy file/field compatibility", "exact configured credential scan"],
-              "interpretation": "Audit completeness is separate from task success; three episodes on one template do not pass full stratified pilot gates."}
+              "interpretation": "Audit completeness is separate from task success; a diagnostic sample does not pass full stratified pilot gates."}
     write(batch / "artifact_audit.json", report)
     write(batch / "episode_metrics.json", metrics)
     write(batch / "format_comparison.json", format_rows)

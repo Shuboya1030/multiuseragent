@@ -1,0 +1,13 @@
+{
+  "run_id": "pilot-r1-anthropic-nohelp-webinar-agenda-not_applicable-20261028-supplement20261025v3-nohelp",
+  "task_id": "nohelp-webinar-agenda",
+  "seed": 20261028,
+  "profile_condition": "R1",
+  "alignment": "not_applicable",
+  "candidate_order": [
+    "C3",
+    "C4",
+    "C2",
+    "C1"
+  ]
+}

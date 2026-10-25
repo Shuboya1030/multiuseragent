@@ -1,0 +1,37 @@
+{
+  "evaluation": {
+    "evaluator_version": "study21-eval-spec-3",
+    "task_id": "nohelp-webinar-agenda",
+    "template_id": "nohelp-webinar-agenda",
+    "run_id": "pilot-r1-openai-nohelp-webinar-agenda-not_applicable-20261032",
+    "help_need_class": "no_help",
+    "evidence_scope": "current run_id only",
+    "underhelp": false,
+    "artifact_correct": false,
+    "checkpoint_vector": {
+      "artifact_complete": true,
+      "answer_exact": false,
+      "no_unnecessary_contact": true
+    },
+    "checkpoint_score": 2,
+    "task_success": false,
+    "contact_count": 0,
+    "overhelp": false,
+    "process_evidence_available": true,
+    "evidence": []
+  },
+  "provenance": {
+    "evaluator_version": "study21-eval-spec-3",
+    "evaluator_sha256": "d4c323aceee106d5a65bef088d4eb2e32b286f641783c90b0f59508c1e3702e7",
+    "source_sha256": {
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-openai-nohelp-webinar-agenda-not_applicable-20261032/run_record.json": "7e7b6bd9079bec09ea6ee7b172fb175e65ab0b8174927a0fd198dbee89a965d0",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-openai-nohelp-webinar-agenda-not_applicable-20261032/answer.json": "2a77cf0637aa6e14172deda2a218716d9e173b199389744eaecf20058e518cf8",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-openai-nohelp-webinar-agenda-not_applicable-20261032/trace_events.jsonl": "dc6622c1b7745b834dacca68a09544cd8524420b644e49619a461d12a818928c",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-openai-nohelp-webinar-agenda-not_applicable-20261032/identity_mapping.json": "72a138f3b3e9d462efd3ebda68af8d038138004e839b4349357c0f85e5993c86",
+      "tasks/nohelp-webinar-agenda/gold_policy.json": "8f6df75ae4f480fe17a72335266d4150a35dcd4cef2af9d0d9ff02dadbd83b68",
+      "tasks/nohelp-webinar-agenda/metadata.json": "c0318e6a744617ff371619b03493e8cc0352a7bebd8c0f6569eb821a06045ea0",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-openai-nohelp-webinar-agenda-not_applicable-20261032/evaluation.json": "97591ca07a5806dc0b706af53bd4b427fe6aca8e91c6827f34b2eb0387b8f3b3",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-openai-nohelp-webinar-agenda-not_applicable-20261032/evaluation_posthoc_eval_v2.json": "e7baf734dcb2fe71c4645690cf9981f627433b9ddce7df1b22cf9042f848dbdc"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "run_id": "pilot-r1-moonshot-optional-vendor-risk-memo-not_applicable-20261027-supplement20261025v3-optional",
+  "task_id": "optional-vendor-risk-memo",
+  "seed": 20261027,
+  "profile_condition": "R1",
+  "alignment": "not_applicable",
+  "alias_to_canonical": {
+    "C3": "P1",
+    "C4": "P2",
+    "C2": "P3",
+    "C1": "P4"
+  },
+  "canonical_to_alias": {
+    "P4": "C1",
+    "P3": "C2",
+    "P1": "C3",
+    "P2": "C4"
+  }
+}

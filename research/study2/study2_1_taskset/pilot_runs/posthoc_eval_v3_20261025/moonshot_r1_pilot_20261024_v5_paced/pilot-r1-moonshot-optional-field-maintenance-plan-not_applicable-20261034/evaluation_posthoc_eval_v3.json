@@ -1,0 +1,54 @@
+{
+  "evaluation": {
+    "evaluator_version": "study21-eval-spec-3",
+    "task_id": "optional-field-maintenance-plan",
+    "template_id": "optional-field-maintenance-plan",
+    "run_id": "pilot-r1-moonshot-optional-field-maintenance-plan-not_applicable-20261034",
+    "help_need_class": "optional_benefit",
+    "evidence_scope": "current run_id only",
+    "underhelp": false,
+    "baseline_artifact_correct": true,
+    "task_success": true,
+    "checkpoint_vector": {
+      "baseline_artifact_correct": true,
+      "optional_quality_improvement": true
+    },
+    "checkpoint_score": 2,
+    "contact_count": 1,
+    "contacted_admissible_person": true,
+    "optional_fact_received": true,
+    "reply_used_keyword_coverage": 0.8,
+    "reply_used": true,
+    "optional_quality_points": 1,
+    "process_evidence_available": true,
+    "contact_cost_events": 1,
+    "evidence": [
+      {
+        "event_id": 0,
+        "recipient_id": "P1",
+        "event_type": "ask",
+        "content": "Hi Jamie, I’m putting together a visit plan for Riverside plant on December 2. We have a crew of 3 entering through the north gate to work on pump P-14. Do you have any practical tips or precautions I should include in the plan?"
+      },
+      {
+        "event_id": 1,
+        "recipient_id": "P1",
+        "event_type": "reply",
+        "content": "The site coordinator recommends using the south gate because it is closer to pump P-14 and may save walking time; the north gate remains open and valid."
+      }
+    ]
+  },
+  "provenance": {
+    "evaluator_version": "study21-eval-spec-3",
+    "evaluator_sha256": "d4c323aceee106d5a65bef088d4eb2e32b286f641783c90b0f59508c1e3702e7",
+    "source_sha256": {
+      "pilot_runs/moonshot_r1_pilot_20261024_v5_paced/episodes/pilot-r1-moonshot-optional-field-maintenance-plan-not_applicable-20261034/run_record.json": "7f3e9cd64056191da1dedc5343438fc5e6e4b970a0771552a285111735ff4f25",
+      "pilot_runs/moonshot_r1_pilot_20261024_v5_paced/episodes/pilot-r1-moonshot-optional-field-maintenance-plan-not_applicable-20261034/answer.json": "2152ba68c9f94189dfbdcc0508b4a8f5df778fa4bdbce8b7ac1979db63e954de",
+      "pilot_runs/moonshot_r1_pilot_20261024_v5_paced/episodes/pilot-r1-moonshot-optional-field-maintenance-plan-not_applicable-20261034/trace_events.jsonl": "24cc18327b7e92a5fe0447deb7c95e2c1602582eff87807109382212fdad04f5",
+      "pilot_runs/moonshot_r1_pilot_20261024_v5_paced/episodes/pilot-r1-moonshot-optional-field-maintenance-plan-not_applicable-20261034/identity_mapping.json": "2a78ad47ca07e724c77bcfb412fdec7468e28b4ec5e04c68d9bca72704b8fa8d",
+      "tasks/optional-field-maintenance-plan/gold_policy.json": "b8de51579159311fc18cf9dd30dd02af2827b41ced368da0c6e3392b911ec70b",
+      "tasks/optional-field-maintenance-plan/metadata.json": "fa5979490f1adfebdcb1820b178d11564fbabc4337e9eb03cf561cbf031300fe",
+      "pilot_runs/moonshot_r1_pilot_20261024_v5_paced/episodes/pilot-r1-moonshot-optional-field-maintenance-plan-not_applicable-20261034/evaluation.json": "53a746d7c070e884b36634f5dc197df1158bb769bbea2e929e01171e81ef245d",
+      "pilot_runs/moonshot_r1_pilot_20261024_v5_paced/episodes/pilot-r1-moonshot-optional-field-maintenance-plan-not_applicable-20261034/evaluation_posthoc_eval_v2.json": "8b6b3fff43ee3f9a293314102baf907c5f85943cd2b117ed244ecbc59ee83808"
+    }
+  }
+}

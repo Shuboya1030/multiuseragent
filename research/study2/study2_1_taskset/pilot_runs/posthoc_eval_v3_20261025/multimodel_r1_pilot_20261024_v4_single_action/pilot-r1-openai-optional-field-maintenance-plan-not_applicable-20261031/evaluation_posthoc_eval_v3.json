@@ -1,0 +1,41 @@
+{
+  "evaluation": {
+    "evaluator_version": "study21-eval-spec-3",
+    "task_id": "optional-field-maintenance-plan",
+    "template_id": "optional-field-maintenance-plan",
+    "run_id": "pilot-r1-openai-optional-field-maintenance-plan-not_applicable-20261031",
+    "help_need_class": "optional_benefit",
+    "evidence_scope": "current run_id only",
+    "underhelp": false,
+    "baseline_artifact_correct": true,
+    "task_success": true,
+    "checkpoint_vector": {
+      "baseline_artifact_correct": true,
+      "optional_quality_improvement": false
+    },
+    "checkpoint_score": 1,
+    "contact_count": 0,
+    "contacted_admissible_person": false,
+    "optional_fact_received": false,
+    "reply_used_keyword_coverage": 0.4,
+    "reply_used": false,
+    "optional_quality_points": 0,
+    "process_evidence_available": true,
+    "contact_cost_events": 0,
+    "evidence": []
+  },
+  "provenance": {
+    "evaluator_version": "study21-eval-spec-3",
+    "evaluator_sha256": "d4c323aceee106d5a65bef088d4eb2e32b286f641783c90b0f59508c1e3702e7",
+    "source_sha256": {
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-openai-optional-field-maintenance-plan-not_applicable-20261031/run_record.json": "65f2acdab6131f880aa43e9ee11bf75ff8d571c3770087b278fd7e15094d2219",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-openai-optional-field-maintenance-plan-not_applicable-20261031/answer.json": "30ed070617aef5ae07828941ac56cd5ef6247f6f74993c02862869cb31653d61",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-openai-optional-field-maintenance-plan-not_applicable-20261031/trace_events.jsonl": "6b0c8791c7bdb6557bb0634dcedf90f05c622645e2d8f5d22e8576f349f1b844",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-openai-optional-field-maintenance-plan-not_applicable-20261031/identity_mapping.json": "b83265bbf362975f9f8cb17aa5ab84c4e25f55c3ec7f8efdd18cd8a7eb068c56",
+      "tasks/optional-field-maintenance-plan/gold_policy.json": "b8de51579159311fc18cf9dd30dd02af2827b41ced368da0c6e3392b911ec70b",
+      "tasks/optional-field-maintenance-plan/metadata.json": "fa5979490f1adfebdcb1820b178d11564fbabc4337e9eb03cf561cbf031300fe",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-openai-optional-field-maintenance-plan-not_applicable-20261031/evaluation.json": "0ad7c375e85c2b63f8be526283521224a97f3067a43c671d7c2e7a5468593bb5",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-openai-optional-field-maintenance-plan-not_applicable-20261031/evaluation_posthoc_eval_v2.json": "f10f22e8c9805f008f08b1dd21d8068b04670436f39b24aebd47ba270cf98a97"
+    }
+  }
+}

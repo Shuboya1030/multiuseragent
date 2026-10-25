@@ -1,0 +1,37 @@
+{
+  "evaluation": {
+    "evaluator_version": "study21-eval-spec-3",
+    "task_id": "nohelp-expense-total",
+    "template_id": "nohelp-expense-total",
+    "run_id": "pilot-r1-moonshot-nohelp-expense-total-not_applicable-20261033",
+    "help_need_class": "no_help",
+    "evidence_scope": "current run_id only",
+    "underhelp": false,
+    "artifact_correct": false,
+    "checkpoint_vector": {
+      "artifact_complete": false,
+      "answer_exact": false,
+      "no_unnecessary_contact": true
+    },
+    "checkpoint_score": 1,
+    "task_success": false,
+    "contact_count": 0,
+    "overhelp": false,
+    "process_evidence_available": true,
+    "evidence": []
+  },
+  "provenance": {
+    "evaluator_version": "study21-eval-spec-3",
+    "evaluator_sha256": "d4c323aceee106d5a65bef088d4eb2e32b286f641783c90b0f59508c1e3702e7",
+    "source_sha256": {
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-moonshot-nohelp-expense-total-not_applicable-20261033/run_record.json": "74b022f1d1769cc9e23b98c90cf86ed05d581a9da144c753fff5fd8e848b3fd0",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-moonshot-nohelp-expense-total-not_applicable-20261033/answer.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-moonshot-nohelp-expense-total-not_applicable-20261033/trace_events.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-moonshot-nohelp-expense-total-not_applicable-20261033/identity_mapping.json": "591dcef6bcc146aae7d4fffb3d4158a51592cfd9e175774bf86975bf8cdf980e",
+      "tasks/nohelp-expense-total/gold_policy.json": "43ff1647403e04f017653833d201d8fb6c54e3bbd96dfbea4277b5cafa63356c",
+      "tasks/nohelp-expense-total/metadata.json": "d5ee0355344603226161671a54d412f5a3bd6bdf5223e6d374277a65a0de0a87",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-moonshot-nohelp-expense-total-not_applicable-20261033/evaluation.json": "38722a62e181ddd20f886a9bf1efbdfdaf344a95148817b8932e1b9e7303609b",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-moonshot-nohelp-expense-total-not_applicable-20261033/evaluation_posthoc_eval_v2.json": "4ac8277c22d87d162640f77756971d89d3e9ca8ad89d71933b7b0594056f71d4"
+    }
+  }
+}

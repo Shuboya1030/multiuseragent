@@ -1,0 +1,41 @@
+{
+  "evaluation": {
+    "evaluator_version": "study21-eval-spec-3",
+    "task_id": "optional-vendor-risk-memo",
+    "template_id": "optional-vendor-risk-memo",
+    "run_id": "pilot-r1-moonshot-optional-vendor-risk-memo-not_applicable-20261029",
+    "help_need_class": "optional_benefit",
+    "evidence_scope": "current run_id only",
+    "underhelp": false,
+    "baseline_artifact_correct": false,
+    "task_success": false,
+    "checkpoint_vector": {
+      "baseline_artifact_correct": false,
+      "optional_quality_improvement": false
+    },
+    "checkpoint_score": 0,
+    "contact_count": 0,
+    "contacted_admissible_person": false,
+    "optional_fact_received": false,
+    "reply_used_keyword_coverage": 0.0,
+    "reply_used": false,
+    "optional_quality_points": 0,
+    "process_evidence_available": true,
+    "contact_cost_events": 0,
+    "evidence": []
+  },
+  "provenance": {
+    "evaluator_version": "study21-eval-spec-3",
+    "evaluator_sha256": "d4c323aceee106d5a65bef088d4eb2e32b286f641783c90b0f59508c1e3702e7",
+    "source_sha256": {
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-moonshot-optional-vendor-risk-memo-not_applicable-20261029/run_record.json": "9d2a6e026e5806844307e708a3406efa35b6b1b0571ddaa6809cd11442414131",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-moonshot-optional-vendor-risk-memo-not_applicable-20261029/answer.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-moonshot-optional-vendor-risk-memo-not_applicable-20261029/trace_events.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-moonshot-optional-vendor-risk-memo-not_applicable-20261029/identity_mapping.json": "1fa733bf253ac2d8587e75a004391321c4d04ea90e0e35e86480f0f38394ac24",
+      "tasks/optional-vendor-risk-memo/gold_policy.json": "03d04a1b9c990cdcb9ea79facbd50ed9e788b40b34e36afbeccbd313f47f74ce",
+      "tasks/optional-vendor-risk-memo/metadata.json": "6e56c21760df86ecbcf71be64f17f0e51ca9cbbafb57c2c0a2547e28dd4800ce",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-moonshot-optional-vendor-risk-memo-not_applicable-20261029/evaluation.json": "3444aa6001f862eff4c7b47a3b6b05e77597614641825e1cffbe5a70f375d4bf",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-moonshot-optional-vendor-risk-memo-not_applicable-20261029/evaluation_posthoc_eval_v2.json": "789ac57bf6857327062d2e58ebc203dc46e107c6b45adf29972d685d06575bbd"
+    }
+  }
+}

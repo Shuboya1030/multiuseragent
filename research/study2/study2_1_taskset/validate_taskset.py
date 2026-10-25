@@ -103,6 +103,7 @@ try:
                         {"run_id":"fixture","event_id":2,"actor":"npc","event_type":"reply","recipient_id":ih,"content":fact},
                         {"run_id":"fixture","event_id":3,"actor":"agent","event_type":"ask","recipient_id":ap,"purpose":"approval","content":"Please approve this request."},
                         {"run_id":"fixture","event_id":4,"actor":"npc","event_type":"reply","recipient_id":ap,"authorized":True,"content":"Approved."}]
+                    trace.append({"run_id":"fixture","event_id":5,"actor":"agent","event_type":"submit"})
                     (td/"answer.json").write_text(json.dumps(expected),encoding="utf-8")
                     (td/"trace.jsonl").write_text("\n".join(json.dumps(x) for x in trace),encoding="utf-8")
                     res=evaluate_task(d,td/"answer.json",td/"trace.jsonl","fixture",variant)
@@ -153,6 +154,7 @@ try:
         remapped={k:([alias_for[x] for x in v] if k=="approved_by" and isinstance(v,list) else alias_for[v] if k=="approved_by" and isinstance(v,str) else v) for k,v in expected.items()}
         (td/"answer.json").write_text(json.dumps(remapped),encoding="utf-8")
         events=[{"run_id":"fixture-map","event_id":1,"actor":"agent","event_type":"ask","recipient_id":alias_for[ih],"purpose":"information","content":"Please provide the fact."},{"run_id":"fixture-map","event_id":2,"actor":"npc","event_type":"reply","recipient_id":alias_for[ih],"content":fact},{"run_id":"fixture-map","event_id":3,"actor":"agent","event_type":"ask","recipient_id":alias_for[ap],"purpose":"approval","content":"Please approve this request."},{"run_id":"fixture-map","event_id":4,"actor":"npc","event_type":"reply","recipient_id":alias_for[ap],"authorized":True,"content":"Approved."}]
+        events.append({"run_id":"fixture-map","event_id":5,"actor":"agent","event_type":"submit"})
         (td/"trace.jsonl").write_text("\n".join(json.dumps(x) for x in events),encoding="utf-8")
         (td/"mapping.json").write_text(json.dumps({"alias_to_canonical":alias_to}),encoding="utf-8")
         res=evaluate_task(d,td/"answer.json",td/"trace.jsonl","fixture-map","aligned",td/"mapping.json")

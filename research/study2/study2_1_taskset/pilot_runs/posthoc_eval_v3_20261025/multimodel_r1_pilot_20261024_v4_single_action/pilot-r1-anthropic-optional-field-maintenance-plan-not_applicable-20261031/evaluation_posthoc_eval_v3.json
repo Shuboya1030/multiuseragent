@@ -1,0 +1,54 @@
+{
+  "evaluation": {
+    "evaluator_version": "study21-eval-spec-3",
+    "task_id": "optional-field-maintenance-plan",
+    "template_id": "optional-field-maintenance-plan",
+    "run_id": "pilot-r1-anthropic-optional-field-maintenance-plan-not_applicable-20261031",
+    "help_need_class": "optional_benefit",
+    "evidence_scope": "current run_id only",
+    "underhelp": false,
+    "baseline_artifact_correct": true,
+    "task_success": true,
+    "checkpoint_vector": {
+      "baseline_artifact_correct": true,
+      "optional_quality_improvement": false
+    },
+    "checkpoint_score": 1,
+    "contact_count": 1,
+    "contacted_admissible_person": true,
+    "optional_fact_received": true,
+    "reply_used_keyword_coverage": 0.6,
+    "reply_used": false,
+    "optional_quality_points": 0,
+    "process_evidence_available": true,
+    "contact_cost_events": 1,
+    "evidence": [
+      {
+        "event_id": 0,
+        "recipient_id": "P1",
+        "event_type": "ask",
+        "content": "Hi Quinn, I'm preparing a visit plan for pump P-14 at the Riverside plant on December 2 with a crew of 3. The north gate is listed as open. Do you have any site logistics notes I should include, such as access steps, required PPE, lockout requirements, or timing constraints for this pump?"
+      },
+      {
+        "event_id": 1,
+        "recipient_id": "P1",
+        "event_type": "reply",
+        "content": "The site coordinator recommends using the south gate because it is closer to pump P-14 and may save walking time; the north gate remains open and valid."
+      }
+    ]
+  },
+  "provenance": {
+    "evaluator_version": "study21-eval-spec-3",
+    "evaluator_sha256": "d4c323aceee106d5a65bef088d4eb2e32b286f641783c90b0f59508c1e3702e7",
+    "source_sha256": {
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-anthropic-optional-field-maintenance-plan-not_applicable-20261031/run_record.json": "b2b116752e99827b5cc85ebc9a3ba2f950ca331588528924df49844f5d10aa2d",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-anthropic-optional-field-maintenance-plan-not_applicable-20261031/answer.json": "1e1576fea9ee47bb2fc159747bc26d6d344f4bfe19d1f9ef550cc6b0828d9ef5",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-anthropic-optional-field-maintenance-plan-not_applicable-20261031/trace_events.jsonl": "fb8ba60e8fb2262cae325c4f5971b929ed406baced52b02dba9307ca806a1af4",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-anthropic-optional-field-maintenance-plan-not_applicable-20261031/identity_mapping.json": "d28f7ec3d507de4c600bdb266fc1c3a4b2ea054e8ed3f941801c26803e3d4b9c",
+      "tasks/optional-field-maintenance-plan/gold_policy.json": "b8de51579159311fc18cf9dd30dd02af2827b41ced368da0c6e3392b911ec70b",
+      "tasks/optional-field-maintenance-plan/metadata.json": "fa5979490f1adfebdcb1820b178d11564fbabc4337e9eb03cf561cbf031300fe",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-anthropic-optional-field-maintenance-plan-not_applicable-20261031/evaluation.json": "2c510f066e3cf1dbc22b975cfe91195aba97f230edadd2b5f2ea56f0bdecc060",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-anthropic-optional-field-maintenance-plan-not_applicable-20261031/evaluation_posthoc_eval_v2.json": "64613188809de3db26f448dd775c5caecb1f7258b32c4398a2feced416dd4bef"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "candidate_id": "C4",
+    "name": "Sasha Nguyen",
+    "job_title": "Business Associate",
+    "profile": "Sasha Nguyen — Business Associate. Sasha Nguyen is a colleague in procurement coordination."
+  },
+  {
+    "candidate_id": "C1",
+    "name": "Avery Chen",
+    "job_title": "Program Associate",
+    "profile": "Avery Chen — Program Associate. Avery Chen is an adjacent-domain colleague."
+  },
+  {
+    "candidate_id": "C3",
+    "name": "Morgan Patel",
+    "job_title": "Operations Associate",
+    "profile": "Morgan Patel — Operations Associate. Morgan Patel is a procurement professional with experience in security review risk."
+  },
+  {
+    "candidate_id": "C2",
+    "name": "Jamie Rivera",
+    "job_title": "Project Team Member",
+    "profile": "Jamie Rivera — Project Team Member. Jamie Rivera is a general project coordinator."
+  }
+]

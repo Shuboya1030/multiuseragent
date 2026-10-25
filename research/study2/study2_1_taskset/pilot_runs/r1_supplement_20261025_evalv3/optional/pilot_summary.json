@@ -1,0 +1,16 @@
+{
+  "episodes": 3,
+  "completed_submissions": 3,
+  "task_successes": 3,
+  "by_class": {
+    "optional_benefit": {
+      "episodes": 3,
+      "task_successes": 3,
+      "mean_asks": 1.0,
+      "mean_checkpoint_score": 1.6666666666666667
+    }
+  },
+  "prompt_tokens": 13407,
+  "completion_tokens": 3166,
+  "api_errors_or_parse_errors": 0
+}

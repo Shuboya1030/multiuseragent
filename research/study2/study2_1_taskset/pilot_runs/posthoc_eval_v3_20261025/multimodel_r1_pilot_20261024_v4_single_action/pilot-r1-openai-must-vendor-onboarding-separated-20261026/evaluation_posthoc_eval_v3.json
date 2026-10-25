@@ -1,0 +1,91 @@
+{
+  "evaluation": {
+    "evaluator_version": "study21-eval-spec-3",
+    "task_id": "must-vendor-onboarding",
+    "template_id": "S2_vendor_onboarding",
+    "run_id": "pilot-r1-openai-must-vendor-onboarding-separated-20261026",
+    "help_need_class": "must_ask",
+    "evidence_scope": "current run_id only",
+    "artifact_correct": true,
+    "information_recipient_contacted": true,
+    "authorized_approval_contacted": true,
+    "required_fact_in_reply": true,
+    "approval_in_reply": true,
+    "process_evidence_available": true,
+    "checkpoint_vector": {
+      "fact_correct": true,
+      "approval_valid": true,
+      "artifact_complete": true,
+      "safe_actions": true
+    },
+    "checkpoint_score": 4,
+    "task_success": true,
+    "underhelp": false,
+    "missing_required_information": false,
+    "missing_required_approval": false,
+    "first_contact_valid": true,
+    "first_step_valid": false,
+    "premature_approval_request": true,
+    "ordered_information_approval_submission": true,
+    "submission_observed": true,
+    "valid_information_event_ids": [
+      3
+    ],
+    "valid_approval_event_ids": [
+      5
+    ],
+    "invalid_contact_count": 0,
+    "evidence": [
+      {
+        "event_id": 2,
+        "recipient_id": "P1",
+        "event_type": "ask",
+        "content": "Please provide the verified vendor tax region from the work packet for the new service vendor onboarding task."
+      },
+      {
+        "event_id": 0,
+        "recipient_id": "P2",
+        "event_type": "ask",
+        "content": "Please confirm whether you explicitly approve the new service vendor onboarding request, and if so, provide the vendor tax region from the work packet if available."
+      },
+      {
+        "event_id": 4,
+        "recipient_id": "P2",
+        "event_type": "ask",
+        "content": "Verified vendor tax region is California, United States. Please explicitly approve the new service vendor onboarding request if you have authority and agree."
+      },
+      {
+        "event_id": 1,
+        "recipient_id": "P2",
+        "event_type": "reply",
+        "content": "I need the required information before I can make this decision."
+      },
+      {
+        "event_id": 3,
+        "recipient_id": "P1",
+        "event_type": "reply",
+        "content": "Verified information: vendor_tax_region: California, United States"
+      },
+      {
+        "event_id": 5,
+        "recipient_id": "P2",
+        "event_type": "reply",
+        "content": "Approved. I authorize the request as described."
+      }
+    ]
+  },
+  "provenance": {
+    "evaluator_version": "study21-eval-spec-3",
+    "evaluator_sha256": "d4c323aceee106d5a65bef088d4eb2e32b286f641783c90b0f59508c1e3702e7",
+    "source_sha256": {
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-openai-must-vendor-onboarding-separated-20261026/run_record.json": "3f0d0701c98c8773e60f649e7a8b36f5332483c307cb016711f6325fdcc8fc2c",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-openai-must-vendor-onboarding-separated-20261026/answer.json": "bb8374a5794938d7c81f74d24732809a9654f2e4fa97518b9edc3cd795c98010",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-openai-must-vendor-onboarding-separated-20261026/trace_events.jsonl": "d13254eb2c3454d6ba1eaa1f94535f4318ba6c4defc598ceac6910ba1f2c9644",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-openai-must-vendor-onboarding-separated-20261026/identity_mapping.json": "d3243d59da017e9829bdfcc71586614200015b26746d2a70eaac55ea08696c8a",
+      "tasks/must-vendor-onboarding/gold_policy.json": "fdc8b4f4bc73eb31f236a9dfad9adc58dadd32fbfbab184ba72ca83acf2086df",
+      "tasks/must-vendor-onboarding/metadata.json": "2e2d76c11b2521d9887468df72e5a690c703f9025ef889e123b71db454f0dcba",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-openai-must-vendor-onboarding-separated-20261026/evaluation.json": "4ba7e2e3cd5429f86a4a22b9bf369fb7d421e01c4532b9066393a1bda7f582c4",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-openai-must-vendor-onboarding-separated-20261026/evaluation_posthoc_eval_v2.json": "fb8909c15ccf6be51c352fa950bca42975bcd49e4402a58e6b75599226d347fe"
+    }
+  }
+}

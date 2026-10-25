@@ -1,0 +1,21 @@
+{
+  "evaluator_version": "study21-eval-spec-3",
+  "task_id": "nohelp-webinar-agenda",
+  "template_id": "nohelp-webinar-agenda",
+  "run_id": "pilot-r1-anthropic-nohelp-webinar-agenda-not_applicable-20261028-supplement20261025v3-nohelp",
+  "help_need_class": "no_help",
+  "evidence_scope": "current run_id only",
+  "underhelp": false,
+  "artifact_correct": true,
+  "checkpoint_vector": {
+    "artifact_complete": true,
+    "answer_exact": true,
+    "no_unnecessary_contact": true
+  },
+  "checkpoint_score": 3,
+  "task_success": true,
+  "contact_count": 0,
+  "overhelp": false,
+  "process_evidence_available": true,
+  "evidence": []
+}

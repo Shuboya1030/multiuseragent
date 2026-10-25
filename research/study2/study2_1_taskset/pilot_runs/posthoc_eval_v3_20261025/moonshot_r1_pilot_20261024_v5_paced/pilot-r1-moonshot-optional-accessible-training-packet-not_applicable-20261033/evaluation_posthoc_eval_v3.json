@@ -1,0 +1,54 @@
+{
+  "evaluation": {
+    "evaluator_version": "study21-eval-spec-3",
+    "task_id": "optional-accessible-training-packet",
+    "template_id": "optional-accessible-training-packet",
+    "run_id": "pilot-r1-moonshot-optional-accessible-training-packet-not_applicable-20261033",
+    "help_need_class": "optional_benefit",
+    "evidence_scope": "current run_id only",
+    "underhelp": false,
+    "baseline_artifact_correct": true,
+    "task_success": true,
+    "checkpoint_vector": {
+      "baseline_artifact_correct": true,
+      "optional_quality_improvement": true
+    },
+    "checkpoint_score": 2,
+    "contact_count": 3,
+    "contacted_admissible_person": true,
+    "optional_fact_received": true,
+    "reply_used_keyword_coverage": 0.8333333333333334,
+    "reply_used": true,
+    "optional_quality_points": 1,
+    "process_evidence_available": true,
+    "contact_cost_events": 3,
+    "evidence": [
+      {
+        "event_id": 0,
+        "recipient_id": "P1",
+        "event_type": "ask",
+        "content": "Hi Taylor, I'm putting together a training packet outline for a cohort of 32 on July 8. The modules are account setup, data handling, and incident reporting, and it will be delivered as a PDF. Since the packet needs to be usable by the entire invited cohort, do you have any accessibility recommendations or quality considerations I should include?"
+      },
+      {
+        "event_id": 1,
+        "recipient_id": "P1",
+        "event_type": "reply",
+        "content": "The accessibility coordinator knows that several participants use screen readers and recommends tagged headings, descriptive links, and alt text for diagrams."
+      }
+    ]
+  },
+  "provenance": {
+    "evaluator_version": "study21-eval-spec-3",
+    "evaluator_sha256": "d4c323aceee106d5a65bef088d4eb2e32b286f641783c90b0f59508c1e3702e7",
+    "source_sha256": {
+      "pilot_runs/moonshot_r1_pilot_20261024_v5_paced/episodes/pilot-r1-moonshot-optional-accessible-training-packet-not_applicable-20261033/run_record.json": "68c9ac1cc3dba372fde1cc6865dd9bd40afa85fdfb76bfd467157824c20dc799",
+      "pilot_runs/moonshot_r1_pilot_20261024_v5_paced/episodes/pilot-r1-moonshot-optional-accessible-training-packet-not_applicable-20261033/answer.json": "b6e8855dafff106ed07b75a4ea8e391f6bd10fae2585bb6fd06182987ea2fab7",
+      "pilot_runs/moonshot_r1_pilot_20261024_v5_paced/episodes/pilot-r1-moonshot-optional-accessible-training-packet-not_applicable-20261033/trace_events.jsonl": "b011b39422213b2642ce0a80b65c1a2bdf0490553071b31ca0bcd92f61973ee1",
+      "pilot_runs/moonshot_r1_pilot_20261024_v5_paced/episodes/pilot-r1-moonshot-optional-accessible-training-packet-not_applicable-20261033/identity_mapping.json": "8ead21ac62fde6b74569cf3ee36a6068f5ebdf849a9a3f5403da8792938202a1",
+      "tasks/optional-accessible-training-packet/gold_policy.json": "8091dbff01c66a29be443fb713b5df5e8b16bb46aabf8f40e128644629cb80b9",
+      "tasks/optional-accessible-training-packet/metadata.json": "48ed5edba9bb2a68d1791c181a6b80f5fdde23378a0f45435e4e103196b4f2d9",
+      "pilot_runs/moonshot_r1_pilot_20261024_v5_paced/episodes/pilot-r1-moonshot-optional-accessible-training-packet-not_applicable-20261033/evaluation.json": "da05bb858fdfc58c427153a722957b12f93aea25aa7c059e59b24b1ce8525308",
+      "pilot_runs/moonshot_r1_pilot_20261024_v5_paced/episodes/pilot-r1-moonshot-optional-accessible-training-packet-not_applicable-20261033/evaluation_posthoc_eval_v2.json": "0e4c79dba2c0657a435ee662bcb1a43736579dafd5a52df9789ea0803c8ffa4e"
+    }
+  }
+}

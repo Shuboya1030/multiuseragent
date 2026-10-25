@@ -1,0 +1,7 @@
+[openai 1/1] nohelp-webinar-agenda (not_applicable)
+  status=completed asks=0 success=False score=2
+[moonshot 1/1] nohelp-webinar-agenda (not_applicable)
+  status=completed asks=1 success=False score=1
+[anthropic 1/1] nohelp-webinar-agenda (not_applicable)
+  status=completed asks=0 success=True score=3
+PILOT SUMMARY {"episodes": 3, "completed_submissions": 3, "task_successes": 1, "by_class": {"no_help": {"episodes": 3, "task_successes": 1, "mean_asks": 0.3333333333333333, "mean_checkpoint_score": 2.0}}, "prompt_tokens": 4961, "completion_tokens": 1777, "api_errors_or_parse_errors": 0}

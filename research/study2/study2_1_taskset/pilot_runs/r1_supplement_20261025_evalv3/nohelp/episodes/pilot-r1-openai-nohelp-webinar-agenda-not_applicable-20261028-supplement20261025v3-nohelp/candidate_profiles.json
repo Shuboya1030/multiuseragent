@@ -1,0 +1,26 @@
+[
+  {
+    "candidate_id": "C3",
+    "name": "Reese Wang",
+    "job_title": "Business Associate",
+    "profile": "Reese Wang — Business Associate. Reese Wang is a general project manager."
+  },
+  {
+    "candidate_id": "C4",
+    "name": "Avery Chen",
+    "job_title": "Project Team Member",
+    "profile": "Avery Chen — Project Team Member. Avery Chen is a specialist in learning operations."
+  },
+  {
+    "candidate_id": "C2",
+    "name": "Skyler Kim",
+    "job_title": "Program Associate",
+    "profile": "Skyler Kim — Program Associate. Skyler Kim is a neighboring-team colleague."
+  },
+  {
+    "candidate_id": "C1",
+    "name": "Jamie Rivera",
+    "job_title": "Operations Associate",
+    "profile": "Jamie Rivera — Operations Associate. Jamie Rivera coordinates learning operations workflows."
+  }
+]

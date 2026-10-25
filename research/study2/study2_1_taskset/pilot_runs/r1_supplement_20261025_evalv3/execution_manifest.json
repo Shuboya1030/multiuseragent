@@ -1,0 +1,46 @@
+{
+  "started_at": "2026-10-25T18:34:26.102232+00:00",
+  "python": "/Users/shuyazong/opt/anaconda3/bin/python3",
+  "base_commit": "f65d8f250fb7ee861411087ceaef829de19417fa",
+  "source_dirty": true,
+  "planned_episodes": 6,
+  "commands": [
+    {
+      "label": "optional",
+      "argv": [
+        "/Users/shuyazong/opt/anaconda3/bin/python3",
+        "/Users/shuyazong/Documents/ChatGPT/whoandwhenresearch/partimephd/research/study2/study2_1_taskset/multimodel_r1_pilot.py",
+        "--output",
+        "/Users/shuyazong/Documents/ChatGPT/whoandwhenresearch/partimephd/research/study2/study2_1_taskset/pilot_runs/r1_supplement_20261025_evalv3/optional",
+        "--start-index",
+        "3",
+        "--limit-per-provider",
+        "1",
+        "--seed",
+        "20261026",
+        "--run-tag",
+        "supplement20261025v3-optional"
+      ],
+      "instance_seed": 20261027
+    },
+    {
+      "label": "nohelp",
+      "argv": [
+        "/Users/shuyazong/opt/anaconda3/bin/python3",
+        "/Users/shuyazong/Documents/ChatGPT/whoandwhenresearch/partimephd/research/study2/study2_1_taskset/multimodel_r1_pilot.py",
+        "--output",
+        "/Users/shuyazong/Documents/ChatGPT/whoandwhenresearch/partimephd/research/study2/study2_1_taskset/pilot_runs/r1_supplement_20261025_evalv3/nohelp",
+        "--start-index",
+        "6",
+        "--limit-per-provider",
+        "1",
+        "--seed",
+        "20261027",
+        "--run-tag",
+        "supplement20261025v3-nohelp"
+      ],
+      "instance_seed": 20261028
+    }
+  ],
+  "automatic_retries": false
+}

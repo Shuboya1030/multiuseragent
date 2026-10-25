@@ -1,0 +1,43 @@
+[
+  {
+    "claim_id": "C1",
+    "claim": "Required approval omission contributes to underhelp",
+    "verdict": "verified_on_boundary_tests_and_saved_regression",
+    "evidence": "16 tests, 182 task fixtures; historical GPT smoke false -> true with missing_required_approval=true",
+    "limitations": "Existing checkpoint aggregation unchanged; not a full metric redesign"
+  },
+  {
+    "claim_id": "C2",
+    "claim": "Six requested conditions complete API/tool/submission/trace/scoring pipeline",
+    "verdict": "supported_for_this_smoke_sample",
+    "evidence": {
+      "episodes_planned": 6,
+      "episodes_recorded": 6,
+      "completed_submissions": 6,
+      "infrastructure_passes": 6,
+      "task_successes": 4,
+      "api_requests": 14,
+      "api_failures": 0,
+      "parse_errors": 0,
+      "retries": 0,
+      "contacts": 4,
+      "tokens": {
+        "input": 18368,
+        "output": 4943,
+        "cached_input": 2304
+      },
+      "summed_episode_latency_ms": 112009,
+      "estimated_cost_usd": null,
+      "cost_status": "unavailable",
+      "confirmatory_ready": false
+    },
+    "limitations": "One instance per model/category, not broad validation"
+  },
+  {
+    "claim_id": "C3",
+    "claim": "Observe help behavior and optional quality separately",
+    "verdict": "descriptive_only",
+    "evidence": "Optional contacts 0/1/2; bonus 0/1/1. No-help contacts 0/1/0; two exact-answer failures.",
+    "limitations": "No model ranking; keyword bonus is a lexical proxy; no-help prompt/schema ambiguity confounds interpretation"
+  }
+]

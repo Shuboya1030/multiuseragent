@@ -1,0 +1,37 @@
+{
+  "evaluation": {
+    "evaluator_version": "study21-eval-spec-3",
+    "task_id": "nohelp-webinar-agenda",
+    "template_id": "nohelp-webinar-agenda",
+    "run_id": "pilot-r1-anthropic-nohelp-webinar-agenda-not_applicable-20261032",
+    "help_need_class": "no_help",
+    "evidence_scope": "current run_id only",
+    "underhelp": false,
+    "artifact_correct": true,
+    "checkpoint_vector": {
+      "artifact_complete": true,
+      "answer_exact": true,
+      "no_unnecessary_contact": true
+    },
+    "checkpoint_score": 3,
+    "task_success": true,
+    "contact_count": 0,
+    "overhelp": false,
+    "process_evidence_available": true,
+    "evidence": []
+  },
+  "provenance": {
+    "evaluator_version": "study21-eval-spec-3",
+    "evaluator_sha256": "d4c323aceee106d5a65bef088d4eb2e32b286f641783c90b0f59508c1e3702e7",
+    "source_sha256": {
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-anthropic-nohelp-webinar-agenda-not_applicable-20261032/run_record.json": "37e0b30ebbb3da74783d522f059eadd2d2a3088d3b0b7da2085c7c994bd177cb",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-anthropic-nohelp-webinar-agenda-not_applicable-20261032/answer.json": "53f69900c6d5012a714ca986183628d1a0195023e77e3de8de98f624157b8c0b",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-anthropic-nohelp-webinar-agenda-not_applicable-20261032/trace_events.jsonl": "d810cea580469d27f0774f73ebc9b1dd02160a55f5e70c011149439aa9e55db7",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-anthropic-nohelp-webinar-agenda-not_applicable-20261032/identity_mapping.json": "99228e2836dbcb59c376548c7bf441a163276301ed16b53a7d07a0bb6c50fb2f",
+      "tasks/nohelp-webinar-agenda/gold_policy.json": "8f6df75ae4f480fe17a72335266d4150a35dcd4cef2af9d0d9ff02dadbd83b68",
+      "tasks/nohelp-webinar-agenda/metadata.json": "c0318e6a744617ff371619b03493e8cc0352a7bebd8c0f6569eb821a06045ea0",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-anthropic-nohelp-webinar-agenda-not_applicable-20261032/evaluation.json": "daa91983fcd186c8cd3d2648c2fc63e128cf1d9a3bf16dbeff33d9f530a3de5f",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-anthropic-nohelp-webinar-agenda-not_applicable-20261032/evaluation_posthoc_eval_v2.json": "1b198956bc6efeb475dac880b54e305d91e78c97b5391482625ef076ebeab3b2"
+    }
+  }
+}

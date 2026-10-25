@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "episodes": 3,
+  "problems": [],
+  "checks": [
+    "study21-run-v2 JSON Schema",
+    "trace required fields/order/run isolation",
+    "portable artifact references",
+    "score replay equality",
+    "mapping hash",
+    "request/response completeness",
+    "stable returned model per episode",
+    "token sums",
+    "matched inputs across providers",
+    "legacy file/field compatibility",
+    "exact configured credential scan"
+  ],
+  "interpretation": "Audit completeness is separate from task success; a diagnostic sample does not pass full stratified pilot gates."
+}

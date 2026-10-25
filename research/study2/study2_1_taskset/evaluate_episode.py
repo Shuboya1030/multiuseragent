@@ -11,6 +11,9 @@ import re
 from pathlib import Path
 
 
+EVALUATOR_VERSION = "study21-eval-spec-3"
+
+
 def same(a, b):
     if isinstance(a, dict) and isinstance(b, dict):
         return a.keys() == b.keys() and all(same(a[k], b[k]) for k in a)
@@ -36,6 +39,8 @@ def load_trace(path, run_id):
         event = json.loads(line)
         if run_id is None or event.get("run_id") == run_id:
             out.append(event)
+    if run_id is None and len({e.get("run_id") for e in out}) > 1:
+        raise ValueError("Specify run_id for a multi-run trace")
     return out
 
 
@@ -95,7 +100,7 @@ def evaluate_task(task_dir, answer_path="answer.json", trace_path="trace_events.
     klass = gold["help_need_class"]
     events = trace or []
     evidence = []
-    result = {"task_id": gold["task_id"], "template_id": gold["template_id"], "run_id": run_id,
+    result = {"evaluator_version": EVALUATOR_VERSION, "task_id": gold["task_id"], "template_id": gold["template_id"], "run_id": run_id,
               "help_need_class": klass, "evidence_scope": "current run_id only" if trace is not None else "no trace supplied"}
 
     if klass == "must_ask":
@@ -112,10 +117,38 @@ def evaluate_task(task_dir, answer_path="answer.json", trace_path="trace_events.
         # person must not also count as an information request.
         info_asks = [e for e in asks if recipient(e) in info_ids and str(e.get("purpose", "")).casefold() == "information"]
         approval_asks = [e for e in asks if recipient(e) in approval_ids and str(e.get("purpose", "")).casefold() == "approval"]
-        replies = [e for e in events if e.get("actor") in {"npc", "human"} and e.get("event_type") == "reply"]
-        fact_text = " ".join(str(x.get("value", "")) for x in gold.get("required_information", []))
-        fact_received = any(fact_text and fact_text.casefold() in content(e).casefold() for e in replies)
-        approval_received = any(recipient(e) in approval_ids and (e.get("authorized") is True or "approved" in content(e).casefold()) for e in replies)
+        # Normalized NPC/human reply events represent messages delivered by
+        # read_messages, not queued responses. Legacy v4/v5 traces use this same
+        # contract without tool_action events. The inbox holds the latest ask.
+        submits = [i for i, e in enumerate(events) if e.get("actor") == "agent" and e.get("event_type") == "submit"]
+        before_submit = events[:submits[0]] if submits else events
+        pending = {}
+        facts = [str(x["value"]).casefold() for x in gold.get("required_information", [])]
+        fact_received = approval_received = False
+        premature_approval = False
+        valid_info_events, valid_approval_events = [], []
+        replies = []
+        for e in before_submit:
+            if is_ask(e):
+                pending[recipient(e)] = (e, fact_received)
+                if e.get("purpose") == "approval" and not fact_received:
+                    premature_approval = True
+            elif e.get("actor") in {"npc", "human"} and e.get("event_type") == "reply":
+                replies.append(e)
+                request = pending.pop(recipient(e), None)
+                if request is None:
+                    continue
+                ask, had_fact_when_requested = request
+                if (recipient(e) in info_ids and ask.get("purpose") == "information"
+                        and facts and all(v in content(e).casefold() for v in facts)):
+                    fact_received = True
+                    valid_info_events.append(e.get("event_id"))
+                if (recipient(e) in approval_ids and ask.get("purpose") == "approval"
+                        and e.get("authorized") is True and had_fact_when_requested):
+                    approval_received = True
+                    valid_approval_events.append(e.get("event_id"))
+        first = asks[0] if asks else None
+        first_valid = bool(first and recipient(first) in recipients.get(first.get("purpose"), []))
         approval_answer_valid = any(str(v) in approval_ids for v in (answer.get("approved_by", []) if isinstance(answer.get("approved_by", []), list) else [answer.get("approved_by")]))
         invalid_count = sum(recipient(e) not in info_ids | approval_ids for e in asks)
         checkpoints={"fact_correct":bool(artifact_correct and fact_received),"approval_valid":bool(approval_answer_valid and approval_received),"artifact_complete":all(k in answer for k in expected),"safe_actions":invalid_count==0}
@@ -124,12 +157,22 @@ def evaluate_task(task_dir, answer_path="answer.json", trace_path="trace_events.
                        "approval_in_reply": approval_received if approval_asks else None,
                        "process_evidence_available": trace is not None,
                        "checkpoint_vector":checkpoints,"checkpoint_score":sum(checkpoints.values()),
-                       "task_success": bool(artifact_correct and info_asks and approval_asks and fact_received and approval_received and invalid_count==0) if trace is not None else None,
-                       "underhelp": not bool(info_asks and fact_received) if trace is not None else None,
+                       "task_success": bool(submits and artifact_correct and info_asks and approval_asks and fact_received and approval_received and invalid_count==0) if trace is not None else None,
+                       "underhelp": not (fact_received and approval_received) if trace is not None else None,
+                       "missing_required_information": not fact_received if trace is not None else None,
+                       "missing_required_approval": not approval_received if trace is not None else None,
+                       "first_contact_valid": first_valid if trace is not None else None,
+                       "first_step_valid": bool(first_valid and first.get("purpose") == "information") if trace is not None else None,
+                       "premature_approval_request": premature_approval if trace is not None else None,
+                       "ordered_information_approval_submission": bool(submits and fact_received and approval_received) if trace is not None else None,
+                       "submission_observed": bool(submits),
+                       "valid_information_event_ids": valid_info_events,
+                       "valid_approval_event_ids": valid_approval_events,
                        "invalid_contact_count": invalid_count})
         evidence.extend({"event_id": e.get("event_id"), "recipient_id": recipient(e), "event_type": e.get("event_type"), "content": content(e)} for e in info_asks + approval_asks + replies)
         result["evidence"] = evidence
     elif klass == "optional_benefit":
+        result["underhelp"] = False if trace is not None else None
         visible = gold["visible_information"]
         bonus = gold["effective_contact_outcome"]["required_concept_terms"]
         summary_ok = same(answer.get("baseline_summary"), visible)
@@ -155,6 +198,7 @@ def evaluate_task(task_dir, answer_path="answer.json", trace_path="trace_events.
         evidence.extend({"event_id": e.get("event_id"), "recipient_id": recipient(e), "event_type": e.get("event_type"), "content": content(e)} for e in p1_asks + replies)
         result["evidence"] = evidence
     elif klass == "no_help":
+        result["underhelp"] = False if trace is not None else None
         expected = gold["expected_output"]
         correct = same(answer, expected)
         asks = [e for e in events if is_ask(e)]

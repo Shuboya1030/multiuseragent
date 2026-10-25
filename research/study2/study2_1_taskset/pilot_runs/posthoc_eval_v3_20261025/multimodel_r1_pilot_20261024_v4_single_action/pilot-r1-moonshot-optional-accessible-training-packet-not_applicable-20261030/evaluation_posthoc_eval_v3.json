@@ -1,0 +1,41 @@
+{
+  "evaluation": {
+    "evaluator_version": "study21-eval-spec-3",
+    "task_id": "optional-accessible-training-packet",
+    "template_id": "optional-accessible-training-packet",
+    "run_id": "pilot-r1-moonshot-optional-accessible-training-packet-not_applicable-20261030",
+    "help_need_class": "optional_benefit",
+    "evidence_scope": "current run_id only",
+    "underhelp": false,
+    "baseline_artifact_correct": false,
+    "task_success": false,
+    "checkpoint_vector": {
+      "baseline_artifact_correct": false,
+      "optional_quality_improvement": false
+    },
+    "checkpoint_score": 0,
+    "contact_count": 0,
+    "contacted_admissible_person": false,
+    "optional_fact_received": false,
+    "reply_used_keyword_coverage": 0.0,
+    "reply_used": false,
+    "optional_quality_points": 0,
+    "process_evidence_available": true,
+    "contact_cost_events": 0,
+    "evidence": []
+  },
+  "provenance": {
+    "evaluator_version": "study21-eval-spec-3",
+    "evaluator_sha256": "d4c323aceee106d5a65bef088d4eb2e32b286f641783c90b0f59508c1e3702e7",
+    "source_sha256": {
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-moonshot-optional-accessible-training-packet-not_applicable-20261030/run_record.json": "3e51543fd1c64e7ff645848c0769f1e28eb6b64ed116eaf8a8bf74dabb60bcac",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-moonshot-optional-accessible-training-packet-not_applicable-20261030/answer.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-moonshot-optional-accessible-training-packet-not_applicable-20261030/trace_events.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-moonshot-optional-accessible-training-packet-not_applicable-20261030/identity_mapping.json": "b2ccc5a634657baefdcbac5bb0f163db1a885dc76dae131535fcbe0b601c611a",
+      "tasks/optional-accessible-training-packet/gold_policy.json": "8091dbff01c66a29be443fb713b5df5e8b16bb46aabf8f40e128644629cb80b9",
+      "tasks/optional-accessible-training-packet/metadata.json": "48ed5edba9bb2a68d1791c181a6b80f5fdde23378a0f45435e4e103196b4f2d9",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-moonshot-optional-accessible-training-packet-not_applicable-20261030/evaluation.json": "0f2bdb9308e60d0e4a4ffae9f43a77bdb4b54858f76067a38d1e901671d8ca3f",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-moonshot-optional-accessible-training-packet-not_applicable-20261030/evaluation_posthoc_eval_v2.json": "4f037ebc971a31d2198f4ebc4ddeaa43c09b1536698eb494954b6cbb370b4e6b"
+    }
+  }
+}

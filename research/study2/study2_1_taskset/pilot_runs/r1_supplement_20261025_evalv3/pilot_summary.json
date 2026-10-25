@@ -1,0 +1,21 @@
+{
+  "episodes_planned": 6,
+  "episodes_recorded": 6,
+  "completed_submissions": 6,
+  "infrastructure_passes": 6,
+  "task_successes": 4,
+  "api_requests": 14,
+  "api_failures": 0,
+  "parse_errors": 0,
+  "retries": 0,
+  "contacts": 4,
+  "tokens": {
+    "input": 18368,
+    "output": 4943,
+    "cached_input": 2304
+  },
+  "summed_episode_latency_ms": 112009,
+  "estimated_cost_usd": null,
+  "cost_status": "unavailable",
+  "confirmatory_ready": false
+}

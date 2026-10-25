@@ -56,7 +56,7 @@
   "npc_policy_file": "scenarios.json",
   "evaluator_code": "evaluator.py",
   "evaluator_spec_file": "evaluator_spec.json",
-  "evaluator_version": "study21-eval-spec-2",
+  "evaluator_version": "study21-eval-spec-3",
   "trace_schema_file": "../trace_schema.json",
   "run_record_schema_file": "../run_record_schema.json",
   "checkpoint_ids": [

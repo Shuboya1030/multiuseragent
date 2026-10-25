@@ -1,5 +1,13 @@
 # Study 2.1 Task Set v1 (Draft)
 
+## Evaluator v3 and six-episode supplement (2026-10-25)
+
+Current evaluator version is `study21-eval-spec-3`. Must underhelp now includes missing required approval as well as missing information, using current-run delivered replies before submission and explicit `authorized=true`. First-contact and ordering diagnostics remain separate. Optional and no-help non-contact are not underhelp. See [the frozen supplemental decision](../Study2_1_R1_Supplement_Decision_20261025.md).
+
+The historical v4/v5/v6 batches remain immutable. Their 39 v3 re-scores and per-file source hashes are in `pilot_runs/posthoc_eval_v3_20261025/`; new six-episode results and frozen sources are in `pilot_runs/r1_supplement_20261025_evalv3/`. Original evaluators must be replayed with their original source snapshots, not interpreted as v3. Do not run `posthoc_rescore_v2.py` with the current evaluator: it is a historical script whose version label is fixed to v2. Use `posthoc_rescore_v3.py` with a new output directory for current scoring.
+
+The normalized `reply` event means the agent actually read a response. The runtime emits it only on `read_messages`, including legacy v4/v5 traces; merely sending a request does not emit a reply. Must evidence at trace end without a submission is diagnostic only and cannot yield task success. Optional keyword coverage remains a lexical proxy, and `safe_actions` is not a comprehensive safety check.
+
 This directory contains **60 unique workflow-template packages** for the three Study 2.1 help-need strata. Each template has `task.md`, `metadata.json`, `gold_policy.json`, `scenarios.json`, `evaluator_spec.json`, and an `evaluator.py` entry point. Shared evaluator code and trace/run schemas live at this directory level.
 
 | Stratum | Templates | Construction |

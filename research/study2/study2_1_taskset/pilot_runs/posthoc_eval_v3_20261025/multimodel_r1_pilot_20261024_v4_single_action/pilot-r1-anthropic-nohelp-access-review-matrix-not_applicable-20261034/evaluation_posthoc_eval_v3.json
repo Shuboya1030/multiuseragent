@@ -1,0 +1,37 @@
+{
+  "evaluation": {
+    "evaluator_version": "study21-eval-spec-3",
+    "task_id": "nohelp-access-review-matrix",
+    "template_id": "nohelp-access-review-matrix",
+    "run_id": "pilot-r1-anthropic-nohelp-access-review-matrix-not_applicable-20261034",
+    "help_need_class": "no_help",
+    "evidence_scope": "current run_id only",
+    "underhelp": false,
+    "artifact_correct": true,
+    "checkpoint_vector": {
+      "artifact_complete": true,
+      "answer_exact": true,
+      "no_unnecessary_contact": true
+    },
+    "checkpoint_score": 3,
+    "task_success": true,
+    "contact_count": 0,
+    "overhelp": false,
+    "process_evidence_available": true,
+    "evidence": []
+  },
+  "provenance": {
+    "evaluator_version": "study21-eval-spec-3",
+    "evaluator_sha256": "d4c323aceee106d5a65bef088d4eb2e32b286f641783c90b0f59508c1e3702e7",
+    "source_sha256": {
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-anthropic-nohelp-access-review-matrix-not_applicable-20261034/run_record.json": "63e102118152730880df9237a1029042a399cf3f7602e25c1e94716fed7c3e3c",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-anthropic-nohelp-access-review-matrix-not_applicable-20261034/answer.json": "e949940519d5d5aef78190eb4de74fa70439cf366cc2d1adfa86c1a0035b8df5",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-anthropic-nohelp-access-review-matrix-not_applicable-20261034/trace_events.jsonl": "fdc15aa646036a0f231f75d073d7a0612ab212e3adbfc8af37e16098f1787a7e",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-anthropic-nohelp-access-review-matrix-not_applicable-20261034/identity_mapping.json": "3ee04a84b2ae65ea0dd446c8b29874b7e2af889fc28be1c34cc19a5fdcb2d135",
+      "tasks/nohelp-access-review-matrix/gold_policy.json": "56c1b17d2225c08f5207abf3659a0ad0b73b5cd11f11c0bd6752cec18f55f13d",
+      "tasks/nohelp-access-review-matrix/metadata.json": "57e0dd992fcb24730dac4314ff00498d8ad7953e9844b3bc9c360e28f137230e",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-anthropic-nohelp-access-review-matrix-not_applicable-20261034/evaluation.json": "c4b51422a6fb33100c9964b801b7b629fd75f42fad15192d4a04918bdd5d7d8c",
+      "pilot_runs/multimodel_r1_pilot_20261024_v4_single_action/episodes/pilot-r1-anthropic-nohelp-access-review-matrix-not_applicable-20261034/evaluation_posthoc_eval_v2.json": "f1d903e2f5db59ccb0c78432ef427cfbcda2425bbebdcaa0a52bd6f0e574c180"
+    }
+  }
+}
