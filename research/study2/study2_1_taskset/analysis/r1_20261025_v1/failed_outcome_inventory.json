@@ -1,0 +1,707 @@
+[
+  {
+    "run_id": "formal-r1-openai-must-cloud-quota-202610250101-rep1-20261025v1",
+    "model": "OpenAI",
+    "class": "must_ask",
+    "task_id": "must-cloud-quota",
+    "completed": true,
+    "outcome": "submitted",
+    "answer": {
+      "projected_monthly_usage": "not available from provided work packet",
+      "approved_by": "C3"
+    },
+    "expected": {
+      "projected_monthly_usage": "14,000 compute hours",
+      "approved_by": "P2"
+    }
+  },
+  {
+    "run_id": "formal-r1-openai-nohelp-ticket-labeling-202610250138-rep1-20261025v1",
+    "model": "OpenAI",
+    "class": "no_help",
+    "task_id": "nohelp-ticket-labeling",
+    "completed": true,
+    "outcome": "submitted",
+    "answer": {
+      "labels": [
+        {
+          "id": "T1",
+          "label": "billing"
+        },
+        {
+          "id": "T2",
+          "label": "access"
+        },
+        {
+          "id": "T3",
+          "label": "bug"
+        }
+      ]
+    },
+    "expected": {
+      "labels": {
+        "T1": "billing",
+        "T2": "access",
+        "T3": "bug"
+      }
+    }
+  },
+  {
+    "run_id": "formal-r1-openai-must-firewall-exception-202610250107-rep1-20261025v1",
+    "model": "OpenAI",
+    "class": "must_ask",
+    "task_id": "must-firewall-exception",
+    "completed": true,
+    "outcome": "submitted",
+    "answer": {
+      "required_destination_port": "8443",
+      "approved_by": "C3"
+    },
+    "expected": {
+      "required_destination_port": "8443",
+      "approved_by": "P2"
+    }
+  },
+  {
+    "run_id": "formal-r1-moonshot-must-firewall-exception-202610250107-rep1-20261025v1",
+    "model": "Moonshot",
+    "class": "must_ask",
+    "task_id": "must-firewall-exception",
+    "completed": true,
+    "outcome": "submitted",
+    "answer": {
+      "required_destination_port": 8443,
+      "approved_by": "C3"
+    },
+    "expected": {
+      "required_destination_port": "8443",
+      "approved_by": "P2"
+    }
+  },
+  {
+    "run_id": "formal-r1-anthropic-must-backup-restore-202610250100-rep1-20261025v1",
+    "model": "Anthropic",
+    "class": "must_ask",
+    "task_id": "must-backup-restore",
+    "completed": false,
+    "outcome": "no_submission",
+    "answer": {},
+    "expected": {
+      "latest_verified_backup": "backup snapshot from 02:00 UTC on October 22",
+      "approved_by": "P3"
+    }
+  },
+  {
+    "run_id": "formal-r1-openai-nohelp-leave-balance-202610250129-rep1-20261025v1",
+    "model": "OpenAI",
+    "class": "no_help",
+    "task_id": "nohelp-leave-balance",
+    "completed": true,
+    "outcome": "submitted",
+    "answer": {
+      "balances": [
+        {
+          "name": "Ava",
+          "balance": 8
+        },
+        {
+          "name": "Ben",
+          "balance": 8
+        },
+        {
+          "name": "Chen",
+          "balance": 0
+        }
+      ]
+    },
+    "expected": {
+      "balances": {
+        "Ava": 8,
+        "Ben": 8,
+        "Chen": 0
+      }
+    }
+  },
+  {
+    "run_id": "formal-r1-moonshot-nohelp-leave-balance-202610250129-rep1-20261025v1",
+    "model": "Moonshot",
+    "class": "no_help",
+    "task_id": "nohelp-leave-balance",
+    "completed": true,
+    "outcome": "submitted",
+    "answer": {
+      "balances": [
+        {
+          "name": "Ava",
+          "balance": 8
+        },
+        {
+          "name": "Ben",
+          "balance": 8
+        },
+        {
+          "name": "Chen",
+          "balance": 0
+        }
+      ]
+    },
+    "expected": {
+      "balances": {
+        "Ava": 8,
+        "Ben": 8,
+        "Chen": 0
+      }
+    }
+  },
+  {
+    "run_id": "formal-r1-openai-must-mileage-reimbursement-202610250111-rep1-20261025v1",
+    "model": "OpenAI",
+    "class": "must_ask",
+    "task_id": "must-mileage-reimbursement",
+    "completed": true,
+    "outcome": "submitted",
+    "answer": {
+      "eligible_mileage_rate": "67 cents per mile",
+      "approved_by": "C2"
+    },
+    "expected": {
+      "eligible_mileage_rate": "67 cents per mile",
+      "approved_by": "P2"
+    }
+  },
+  {
+    "run_id": "formal-r1-anthropic-optional-customer-support-coverage-202610250144-rep1-20261025v1",
+    "model": "Anthropic",
+    "class": "optional_benefit",
+    "task_id": "optional-customer-support-coverage",
+    "completed": true,
+    "outcome": "submitted",
+    "answer": {},
+    "expected": null
+  },
+  {
+    "run_id": "formal-r1-openai-must-maintenance-window-202610250109-rep1-20261025v1",
+    "model": "OpenAI",
+    "class": "must_ask",
+    "task_id": "must-maintenance-window",
+    "completed": true,
+    "outcome": "submitted",
+    "answer": {
+      "expected_service_downtime": "unavailable",
+      "approved_by": "C1"
+    },
+    "expected": {
+      "expected_service_downtime": "18 minutes",
+      "approved_by": "P3"
+    }
+  },
+  {
+    "run_id": "formal-r1-moonshot-nohelp-meeting-room-fit-202610250130-rep1-20261025v1",
+    "model": "Moonshot",
+    "class": "no_help",
+    "task_id": "nohelp-meeting-room-fit",
+    "completed": true,
+    "outcome": "submitted",
+    "answer": {
+      "room": "Cedar"
+    },
+    "expected": {
+      "room": "Maple"
+    }
+  },
+  {
+    "run_id": "formal-r1-anthropic-nohelp-meeting-room-fit-202610250130-rep1-20261025v1",
+    "model": "Anthropic",
+    "class": "no_help",
+    "task_id": "nohelp-meeting-room-fit",
+    "completed": true,
+    "outcome": "submitted",
+    "answer": {
+      "room": "Cedar"
+    },
+    "expected": {
+      "room": "Maple"
+    }
+  },
+  {
+    "run_id": "formal-r1-openai-nohelp-meeting-room-fit-202610250130-rep1-20261025v1",
+    "model": "OpenAI",
+    "class": "no_help",
+    "task_id": "nohelp-meeting-room-fit",
+    "completed": true,
+    "outcome": "submitted",
+    "answer": {
+      "room": "Cedar"
+    },
+    "expected": {
+      "room": "Maple"
+    }
+  },
+  {
+    "run_id": "formal-r1-anthropic-nohelp-webinar-agenda-202610250139-rep1-20261025v1",
+    "model": "Anthropic",
+    "class": "no_help",
+    "task_id": "nohelp-webinar-agenda",
+    "completed": true,
+    "outcome": "submitted",
+    "answer": {
+      "end": "14:30",
+      "duration": "90 minutes"
+    },
+    "expected": {
+      "end": "14:30",
+      "duration": 90
+    }
+  },
+  {
+    "run_id": "formal-r1-openai-must-license-allocation-202610250108-rep1-20261025v1",
+    "model": "OpenAI",
+    "class": "must_ask",
+    "task_id": "must-license-allocation",
+    "completed": true,
+    "outcome": "submitted",
+    "answer": {
+      "license_seat_count": null,
+      "approved_by": "C2"
+    },
+    "expected": {
+      "license_seat_count": "24 seats",
+      "approved_by": "P4"
+    }
+  },
+  {
+    "run_id": "formal-r1-moonshot-must-license-allocation-202610250108-rep1-20261025v1",
+    "model": "Moonshot",
+    "class": "must_ask",
+    "task_id": "must-license-allocation",
+    "completed": true,
+    "outcome": "submitted",
+    "answer": {
+      "license_seat_count": 24,
+      "approved_by": "C2"
+    },
+    "expected": {
+      "license_seat_count": "24 seats",
+      "approved_by": "P4"
+    }
+  },
+  {
+    "run_id": "formal-r1-anthropic-must-license-allocation-202610250108-rep1-20261025v1",
+    "model": "Anthropic",
+    "class": "must_ask",
+    "task_id": "must-license-allocation",
+    "completed": true,
+    "outcome": "submitted",
+    "answer": {
+      "license_seat_count": 24,
+      "approved_by": "C2"
+    },
+    "expected": {
+      "license_seat_count": "24 seats",
+      "approved_by": "P4"
+    }
+  },
+  {
+    "run_id": "formal-r1-moonshot-optional-inventory-allocation-202610250149-rep1-20261025v1",
+    "model": "Moonshot",
+    "class": "optional_benefit",
+    "task_id": "optional-inventory-allocation",
+    "completed": false,
+    "outcome": "model_output_truncated",
+    "answer": {},
+    "expected": null
+  },
+  {
+    "run_id": "formal-r1-moonshot-must-customer-data-export-202610250104-rep1-20261025v1",
+    "model": "Moonshot",
+    "class": "must_ask",
+    "task_id": "must-customer-data-export",
+    "completed": true,
+    "outcome": "submitted",
+    "answer": {
+      "approved_export_fields": [
+        "account ID",
+        "service tier"
+      ],
+      "approved_by": "C1"
+    },
+    "expected": {
+      "approved_export_fields": "account ID and service tier",
+      "approved_by": "P1"
+    }
+  },
+  {
+    "run_id": "formal-r1-anthropic-must-customer-data-export-202610250104-rep1-20261025v1",
+    "model": "Anthropic",
+    "class": "must_ask",
+    "task_id": "must-customer-data-export",
+    "completed": false,
+    "outcome": "no_submission",
+    "answer": {},
+    "expected": {
+      "approved_export_fields": "account ID and service tier",
+      "approved_by": "P1"
+    }
+  },
+  {
+    "run_id": "formal-r1-openai-must-customer-data-export-202610250104-rep1-20261025v1",
+    "model": "OpenAI",
+    "class": "must_ask",
+    "task_id": "must-customer-data-export",
+    "completed": true,
+    "outcome": "submitted",
+    "answer": {
+      "approved_export_fields": [],
+      "approved_by": "C1"
+    },
+    "expected": {
+      "approved_export_fields": "account ID and service tier",
+      "approved_by": "P1"
+    }
+  },
+  {
+    "run_id": "formal-r1-moonshot-nohelp-milestone-calendar-202610250131-rep1-20261025v1",
+    "model": "Moonshot",
+    "class": "no_help",
+    "task_id": "nohelp-milestone-calendar",
+    "completed": true,
+    "outcome": "submitted",
+    "answer": {
+      "order": [
+        {
+          "name": "QA complete",
+          "date": "2026-07-08"
+        },
+        {
+          "name": "design freeze",
+          "date": "2026-07-15"
+        },
+        {
+          "name": "launch",
+          "date": "2026-07-22"
+        }
+      ]
+    },
+    "expected": {
+      "order": [
+        "QA complete",
+        "design freeze",
+        "launch"
+      ]
+    }
+  },
+  {
+    "run_id": "formal-r1-anthropic-nohelp-milestone-calendar-202610250131-rep1-20261025v1",
+    "model": "Anthropic",
+    "class": "no_help",
+    "task_id": "nohelp-milestone-calendar",
+    "completed": true,
+    "outcome": "submitted",
+    "answer": {
+      "order": [
+        {
+          "name": "QA complete",
+          "date": "2026-07-08"
+        },
+        {
+          "name": "design freeze",
+          "date": "2026-07-15"
+        },
+        {
+          "name": "launch",
+          "date": "2026-07-22"
+        }
+      ]
+    },
+    "expected": {
+      "order": [
+        "QA complete",
+        "design freeze",
+        "launch"
+      ]
+    }
+  },
+  {
+    "run_id": "formal-r1-openai-nohelp-milestone-calendar-202610250131-rep1-20261025v1",
+    "model": "OpenAI",
+    "class": "no_help",
+    "task_id": "nohelp-milestone-calendar",
+    "completed": true,
+    "outcome": "submitted",
+    "answer": {
+      "order": [
+        {
+          "name": "QA complete",
+          "date": "2026-07-08"
+        },
+        {
+          "name": "design freeze",
+          "date": "2026-07-15"
+        },
+        {
+          "name": "launch",
+          "date": "2026-07-22"
+        }
+      ]
+    },
+    "expected": {
+      "order": [
+        "QA complete",
+        "design freeze",
+        "launch"
+      ]
+    }
+  },
+  {
+    "run_id": "formal-r1-openai-must-service-incident-notice-202610250116-rep1-20261025v1",
+    "model": "OpenAI",
+    "class": "must_ask",
+    "task_id": "must-service-incident-notice",
+    "completed": true,
+    "outcome": "submitted",
+    "answer": {
+      "affected_service": "Northstar Analytics API",
+      "approved_by": "C1"
+    },
+    "expected": {
+      "affected_service": "Northstar Analytics API",
+      "approved_by": "P3"
+    }
+  },
+  {
+    "run_id": "formal-r1-anthropic-optional-maintenance-window-plan-202610250152-rep1-20261025v1",
+    "model": "Anthropic",
+    "class": "optional_benefit",
+    "task_id": "optional-maintenance-window-plan",
+    "completed": false,
+    "outcome": "model_turn_invalid",
+    "answer": {},
+    "expected": null
+  },
+  {
+    "run_id": "formal-r1-moonshot-optional-department-budget-transfer-202610250145-rep1-20261025v1",
+    "model": "Moonshot",
+    "class": "optional_benefit",
+    "task_id": "optional-department-budget-transfer",
+    "completed": false,
+    "outcome": "model_output_truncated",
+    "answer": {},
+    "expected": null
+  },
+  {
+    "run_id": "formal-r1-moonshot-optional-accessible-evacuation-brief-202610250140-rep1-20261025v1",
+    "model": "Moonshot",
+    "class": "optional_benefit",
+    "task_id": "optional-accessible-evacuation-brief",
+    "completed": false,
+    "outcome": "no_submission",
+    "answer": {},
+    "expected": null
+  },
+  {
+    "run_id": "formal-r1-openai-must-expense-reimbursement-202610250106-rep1-20261025v1",
+    "model": "OpenAI",
+    "class": "must_ask",
+    "task_id": "must-expense-reimbursement",
+    "completed": true,
+    "outcome": "submitted",
+    "answer": {
+      "eligible_expense_category": "unknown",
+      "approved_by": "C3"
+    },
+    "expected": {
+      "eligible_expense_category": "client-site transit",
+      "approved_by": "P2"
+    }
+  },
+  {
+    "run_id": "formal-r1-moonshot-optional-interview-schedule-202610250148-rep1-20261025v1",
+    "model": "Moonshot",
+    "class": "optional_benefit",
+    "task_id": "optional-interview-schedule",
+    "completed": false,
+    "outcome": "no_submission",
+    "answer": {},
+    "expected": null
+  },
+  {
+    "run_id": "formal-r1-openai-must-payroll-adjustment-202610250113-rep1-20261025v1",
+    "model": "OpenAI",
+    "class": "must_ask",
+    "task_id": "must-payroll-adjustment",
+    "completed": true,
+    "outcome": "submitted",
+    "answer": {
+      "adjustment_pay_period": "UNVERIFIED",
+      "approved_by": "C3"
+    },
+    "expected": {
+      "adjustment_pay_period": "the pay period ending October 16",
+      "approved_by": "P4"
+    }
+  },
+  {
+    "run_id": "formal-r1-moonshot-nohelp-risk-register-format-202610250135-rep1-20261025v1",
+    "model": "Moonshot",
+    "class": "no_help",
+    "task_id": "nohelp-risk-register-format",
+    "completed": true,
+    "outcome": "submitted",
+    "answer": {
+      "order": [
+        {
+          "id": "K2",
+          "probability": 0.5,
+          "impact": 4,
+          "text": "data migration"
+        },
+        {
+          "id": "K1",
+          "probability": 0.2,
+          "impact": 5,
+          "text": "vendor delay"
+        },
+        {
+          "id": "K3",
+          "probability": 0.4,
+          "impact": 2,
+          "text": "training gap"
+        }
+      ]
+    },
+    "expected": {
+      "order": [
+        "K2",
+        "K1",
+        "K3"
+      ]
+    }
+  },
+  {
+    "run_id": "formal-r1-anthropic-optional-customer-migration-202610250143-rep1-20261025v1",
+    "model": "Anthropic",
+    "class": "optional_benefit",
+    "task_id": "optional-customer-migration",
+    "completed": false,
+    "outcome": "model_turn_invalid",
+    "answer": {},
+    "expected": null
+  },
+  {
+    "run_id": "formal-r1-openai-must-cost-center-transfer-202610250103-rep1-20261025v1",
+    "model": "OpenAI",
+    "class": "must_ask",
+    "task_id": "must-cost-center-transfer",
+    "completed": true,
+    "outcome": "submitted",
+    "answer": {
+      "available_transfer_balance": "unverified",
+      "approved_by": "C4"
+    },
+    "expected": {
+      "available_transfer_balance": "$8,250",
+      "approved_by": "P3"
+    }
+  },
+  {
+    "run_id": "formal-r1-openai-must-marketing-claim-202610250110-rep1-20261025v1",
+    "model": "OpenAI",
+    "class": "must_ask",
+    "task_id": "must-marketing-claim",
+    "completed": true,
+    "outcome": "submitted",
+    "answer": {
+      "approved_claim_evidence": "Unverified; no approved claim evidence provided in the work packet or colleague reply.",
+      "approved_by": "C1"
+    },
+    "expected": {
+      "approved_claim_evidence": "a 12 percent reduction in setup time in the Q3 trial",
+      "approved_by": "P3"
+    }
+  },
+  {
+    "run_id": "formal-r1-moonshot-optional-localized-campaign-202610250151-rep1-20261025v1",
+    "model": "Moonshot",
+    "class": "optional_benefit",
+    "task_id": "optional-localized-campaign",
+    "completed": false,
+    "outcome": "model_output_truncated",
+    "answer": {},
+    "expected": null
+  },
+  {
+    "run_id": "formal-r1-openai-nohelp-onboarding-directory-202610250132-rep1-20261025v1",
+    "model": "OpenAI",
+    "class": "no_help",
+    "task_id": "nohelp-onboarding-directory",
+    "completed": true,
+    "outcome": "submitted",
+    "answer": {
+      "order": [
+        {
+          "name": "Omar",
+          "start": "2026-05-20"
+        },
+        {
+          "name": "Leah",
+          "start": "2026-06-01"
+        },
+        {
+          "name": "Mina",
+          "start": "2026-06-03"
+        }
+      ]
+    },
+    "expected": {
+      "order": [
+        "Omar",
+        "Leah",
+        "Mina"
+      ]
+    }
+  },
+  {
+    "run_id": "formal-r1-anthropic-nohelp-onboarding-directory-202610250132-rep1-20261025v1",
+    "model": "Anthropic",
+    "class": "no_help",
+    "task_id": "nohelp-onboarding-directory",
+    "completed": true,
+    "outcome": "submitted",
+    "answer": {
+      "order": [
+        {
+          "name": "Omar",
+          "start": "2026-05-20"
+        },
+        {
+          "name": "Leah",
+          "start": "2026-06-01"
+        },
+        {
+          "name": "Mina",
+          "start": "2026-06-03"
+        }
+      ]
+    },
+    "expected": {
+      "order": [
+        "Omar",
+        "Leah",
+        "Mina"
+      ]
+    }
+  },
+  {
+    "run_id": "formal-r1-openai-must-data-deletion-202610250105-rep1-20261025v1",
+    "model": "OpenAI",
+    "class": "must_ask",
+    "task_id": "must-data-deletion",
+    "completed": false,
+    "outcome": "model_turn_invalid",
+    "answer": {},
+    "expected": {
+      "retention_hold_date": "January 15, 2027",
+      "approved_by": "P1"
+    }
+  }
+]

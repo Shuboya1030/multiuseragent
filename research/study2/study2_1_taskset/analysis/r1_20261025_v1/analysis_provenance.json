@@ -1,0 +1,12 @@
+{
+  "data_snapshot_sha256": "767f8b9c5a1f247f86b0fc0cb76f72d6a680fe357b848320238a00f8aae89d38",
+  "source_commit": "93dff14",
+  "n_templates": 60,
+  "n_episodes": 180,
+  "raw_hashes_verified": true,
+  "analysis_script_sha256": "fe131006875b70cc808f0c1d23166cc2c8cd9e94dcef8bbd5d56d4825ae174ad",
+  "bootstrap_seed": 2026102502,
+  "bootstrap_resamples": 10000,
+  "frozen_scores_modified": false,
+  "calibration_proxy_note": "Posthoc operationalization: Must no missing evidence/no premature approval/exactly two contacts/no invalid recipient; Optional valid baseline and zero contacts OR one useful contact with lexical bonus; No-help no contacts. Failures unknown. Do not label this a separately validated preregistered score."
+}

@@ -1,0 +1,82 @@
+[
+  {
+    "model": "OpenAI",
+    "contacted": false,
+    "n": 19,
+    "completed": 19,
+    "task_success": 19,
+    "bonus": 0,
+    "mean_contacts": 0.0,
+    "mean_tokens": 1015.0526315789474
+  },
+  {
+    "model": "OpenAI",
+    "contacted": true,
+    "n": 1,
+    "completed": 1,
+    "task_success": 1,
+    "bonus": 1,
+    "mean_contacts": 1.0,
+    "mean_tokens": 3124.0
+  },
+  {
+    "model": "Moonshot",
+    "contacted": false,
+    "n": 2,
+    "completed": 2,
+    "task_success": 2,
+    "bonus": 0,
+    "mean_contacts": 0.0,
+    "mean_tokens": 1908.5
+  },
+  {
+    "model": "Moonshot",
+    "contacted": true,
+    "n": 18,
+    "completed": 13,
+    "task_success": 13,
+    "bonus": 7,
+    "mean_contacts": 1.6666666666666667,
+    "mean_tokens": 5907.277777777777
+  },
+  {
+    "model": "Anthropic",
+    "contacted": false,
+    "n": 12,
+    "completed": 11,
+    "task_success": 10,
+    "bonus": 0,
+    "mean_contacts": 0.0,
+    "mean_tokens": 2614.6666666666665
+  },
+  {
+    "model": "Anthropic",
+    "contacted": true,
+    "n": 8,
+    "completed": 7,
+    "task_success": 7,
+    "bonus": 5,
+    "mean_contacts": 1.5,
+    "mean_tokens": 9092.75
+  },
+  {
+    "model": "pooled_descriptive_only",
+    "contacted": false,
+    "n": 33,
+    "completed": 32,
+    "task_success": 31,
+    "bonus": 0,
+    "mean_contacts": 0.0,
+    "mean_tokens": 1650.878787878788
+  },
+  {
+    "model": "pooled_descriptive_only",
+    "contacted": true,
+    "n": 27,
+    "completed": 21,
+    "task_success": 21,
+    "bonus": 13,
+    "mean_contacts": 1.5925925925925926,
+    "mean_tokens": 6748.037037037037
+  }
+]

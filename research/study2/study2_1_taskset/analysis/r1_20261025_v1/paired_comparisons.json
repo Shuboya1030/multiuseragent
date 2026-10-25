@@ -1,0 +1,146 @@
+[
+  {
+    "class": "must_ask",
+    "metric": "underhelp",
+    "model_a": "OpenAI",
+    "model_b": "Moonshot",
+    "paired_n": 19,
+    "risk_difference_a_minus_b": 0.5789473684210527,
+    "bootstrap95": [
+      0.3684210526315789,
+      0.7894736842105263
+    ],
+    "discordant_a_only": 11,
+    "discordant_b_only": 0,
+    "p_exact_mcnemar": 0.0009765625,
+    "p_holm_9": 0.0087890625
+  },
+  {
+    "class": "must_ask",
+    "metric": "underhelp",
+    "model_a": "OpenAI",
+    "model_b": "Anthropic",
+    "paired_n": 17,
+    "risk_difference_a_minus_b": 0.5882352941176471,
+    "bootstrap95": [
+      0.35294117647058826,
+      0.8235294117647058
+    ],
+    "discordant_a_only": 10,
+    "discordant_b_only": 0,
+    "p_exact_mcnemar": 0.001953125,
+    "p_holm_9": 0.015625
+  },
+  {
+    "class": "must_ask",
+    "metric": "underhelp",
+    "model_a": "Moonshot",
+    "model_b": "Anthropic",
+    "paired_n": 18,
+    "risk_difference_a_minus_b": 0.0,
+    "bootstrap95": [
+      0.0,
+      0.0
+    ],
+    "discordant_a_only": 0,
+    "discordant_b_only": 0,
+    "p_exact_mcnemar": 1.0,
+    "p_holm_9": 1.0
+  },
+  {
+    "class": "no_help",
+    "metric": "overhelp",
+    "model_a": "OpenAI",
+    "model_b": "Moonshot",
+    "paired_n": 20,
+    "risk_difference_a_minus_b": -0.05,
+    "bootstrap95": [
+      -0.15,
+      0.0
+    ],
+    "discordant_a_only": 0,
+    "discordant_b_only": 1,
+    "p_exact_mcnemar": 1.0,
+    "p_holm_9": 1.0
+  },
+  {
+    "class": "no_help",
+    "metric": "overhelp",
+    "model_a": "OpenAI",
+    "model_b": "Anthropic",
+    "paired_n": 20,
+    "risk_difference_a_minus_b": -0.05,
+    "bootstrap95": [
+      -0.15,
+      0.0
+    ],
+    "discordant_a_only": 0,
+    "discordant_b_only": 1,
+    "p_exact_mcnemar": 1.0,
+    "p_holm_9": 1.0
+  },
+  {
+    "class": "no_help",
+    "metric": "overhelp",
+    "model_a": "Moonshot",
+    "model_b": "Anthropic",
+    "paired_n": 20,
+    "risk_difference_a_minus_b": 0.0,
+    "bootstrap95": [
+      0.0,
+      0.0
+    ],
+    "discordant_a_only": 0,
+    "discordant_b_only": 0,
+    "p_exact_mcnemar": 1.0,
+    "p_holm_9": 1.0
+  },
+  {
+    "class": "optional_benefit",
+    "metric": "optional_ineffective",
+    "model_a": "OpenAI",
+    "model_b": "Moonshot",
+    "paired_n": 15,
+    "risk_difference_a_minus_b": -0.4666666666666667,
+    "bootstrap95": [
+      -0.7333333333333333,
+      -0.2
+    ],
+    "discordant_a_only": 0,
+    "discordant_b_only": 7,
+    "p_exact_mcnemar": 0.015625,
+    "p_holm_9": 0.109375
+  },
+  {
+    "class": "optional_benefit",
+    "metric": "optional_ineffective",
+    "model_a": "OpenAI",
+    "model_b": "Anthropic",
+    "paired_n": 18,
+    "risk_difference_a_minus_b": -0.2222222222222222,
+    "bootstrap95": [
+      -0.4444444444444444,
+      -0.05555555555555555
+    ],
+    "discordant_a_only": 0,
+    "discordant_b_only": 4,
+    "p_exact_mcnemar": 0.125,
+    "p_holm_9": 0.75
+  },
+  {
+    "class": "optional_benefit",
+    "metric": "optional_ineffective",
+    "model_a": "Moonshot",
+    "model_b": "Anthropic",
+    "paired_n": 13,
+    "risk_difference_a_minus_b": 0.15384615384615385,
+    "bootstrap95": [
+      -0.23076923076923078,
+      0.5384615384615384
+    ],
+    "discordant_a_only": 5,
+    "discordant_b_only": 3,
+    "p_exact_mcnemar": 0.7265625,
+    "p_holm_9": 1.0
+  }
+]

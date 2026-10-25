@@ -1,0 +1,118 @@
+{
+  "must": {
+    "OpenAI": {
+      "artifact_correct": 11,
+      "artifact_correct_without_required_help": 3,
+      "help_complete_artifact_wrong": 0,
+      "approval_before_fact_denials": 15,
+      "request_missing_verified_details_denials": 4
+    },
+    "Moonshot": {
+      "artifact_correct": 17,
+      "artifact_correct_without_required_help": 0,
+      "help_complete_artifact_wrong": 3,
+      "approval_before_fact_denials": 1,
+      "request_missing_verified_details_denials": 2
+    },
+    "Anthropic": {
+      "artifact_correct": 17,
+      "artifact_correct_without_required_help": 0,
+      "help_complete_artifact_wrong": 2,
+      "approval_before_fact_denials": 4,
+      "request_missing_verified_details_denials": 3
+    }
+  },
+  "nohelp_failures": [
+    {
+      "run_id": "formal-r1-openai-nohelp-ticket-labeling-202610250138-rep1-20261025v1",
+      "task_id": "nohelp-ticket-labeling",
+      "provider": "OpenAI",
+      "diagnostic_category": "representation_or_type_mismatch",
+      "classification": "posthoc manual diagnostic; original strict score retained"
+    },
+    {
+      "run_id": "formal-r1-openai-nohelp-leave-balance-202610250129-rep1-20261025v1",
+      "task_id": "nohelp-leave-balance",
+      "provider": "OpenAI",
+      "diagnostic_category": "representation_or_type_mismatch",
+      "classification": "posthoc manual diagnostic; original strict score retained"
+    },
+    {
+      "run_id": "formal-r1-moonshot-nohelp-leave-balance-202610250129-rep1-20261025v1",
+      "task_id": "nohelp-leave-balance",
+      "provider": "Moonshot",
+      "diagnostic_category": "representation_or_type_mismatch",
+      "classification": "posthoc manual diagnostic; original strict score retained"
+    },
+    {
+      "run_id": "formal-r1-moonshot-nohelp-meeting-room-fit-202610250130-rep1-20261025v1",
+      "task_id": "nohelp-meeting-room-fit",
+      "provider": "Moonshot",
+      "diagnostic_category": "task_missing_group_size",
+      "classification": "posthoc manual diagnostic; original strict score retained"
+    },
+    {
+      "run_id": "formal-r1-anthropic-nohelp-meeting-room-fit-202610250130-rep1-20261025v1",
+      "task_id": "nohelp-meeting-room-fit",
+      "provider": "Anthropic",
+      "diagnostic_category": "task_missing_group_size",
+      "classification": "posthoc manual diagnostic; original strict score retained"
+    },
+    {
+      "run_id": "formal-r1-openai-nohelp-meeting-room-fit-202610250130-rep1-20261025v1",
+      "task_id": "nohelp-meeting-room-fit",
+      "provider": "OpenAI",
+      "diagnostic_category": "task_missing_group_size",
+      "classification": "posthoc manual diagnostic; original strict score retained"
+    },
+    {
+      "run_id": "formal-r1-anthropic-nohelp-webinar-agenda-202610250139-rep1-20261025v1",
+      "task_id": "nohelp-webinar-agenda",
+      "provider": "Anthropic",
+      "diagnostic_category": "representation_or_type_mismatch",
+      "classification": "posthoc manual diagnostic; original strict score retained"
+    },
+    {
+      "run_id": "formal-r1-moonshot-nohelp-milestone-calendar-202610250131-rep1-20261025v1",
+      "task_id": "nohelp-milestone-calendar",
+      "provider": "Moonshot",
+      "diagnostic_category": "representation_or_type_mismatch",
+      "classification": "posthoc manual diagnostic; original strict score retained"
+    },
+    {
+      "run_id": "formal-r1-anthropic-nohelp-milestone-calendar-202610250131-rep1-20261025v1",
+      "task_id": "nohelp-milestone-calendar",
+      "provider": "Anthropic",
+      "diagnostic_category": "representation_or_type_mismatch",
+      "classification": "posthoc manual diagnostic; original strict score retained"
+    },
+    {
+      "run_id": "formal-r1-openai-nohelp-milestone-calendar-202610250131-rep1-20261025v1",
+      "task_id": "nohelp-milestone-calendar",
+      "provider": "OpenAI",
+      "diagnostic_category": "representation_or_type_mismatch",
+      "classification": "posthoc manual diagnostic; original strict score retained"
+    },
+    {
+      "run_id": "formal-r1-moonshot-nohelp-risk-register-format-202610250135-rep1-20261025v1",
+      "task_id": "nohelp-risk-register-format",
+      "provider": "Moonshot",
+      "diagnostic_category": "representation_or_type_mismatch",
+      "classification": "posthoc manual diagnostic; original strict score retained"
+    },
+    {
+      "run_id": "formal-r1-openai-nohelp-onboarding-directory-202610250132-rep1-20261025v1",
+      "task_id": "nohelp-onboarding-directory",
+      "provider": "OpenAI",
+      "diagnostic_category": "representation_or_type_mismatch",
+      "classification": "posthoc manual diagnostic; original strict score retained"
+    },
+    {
+      "run_id": "formal-r1-anthropic-nohelp-onboarding-directory-202610250132-rep1-20261025v1",
+      "task_id": "nohelp-onboarding-directory",
+      "provider": "Anthropic",
+      "diagnostic_category": "representation_or_type_mismatch",
+      "classification": "posthoc manual diagnostic; original strict score retained"
+    }
+  ]
+}

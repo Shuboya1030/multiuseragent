@@ -1,0 +1,1982 @@
+[
+  {
+    "class": "must_ask",
+    "model": "OpenAI",
+    "n": 20,
+    "completed": {
+      "numerator": 19,
+      "n": 20,
+      "proportion": 0.95,
+      "wilson95": [
+        0.763868806553258,
+        0.9911185511992047
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.95,
+        0.95
+      ]
+    },
+    "task_success": {
+      "numerator": 8,
+      "n": 20,
+      "proportion": 0.4,
+      "wilson95": [
+        0.21880653237281705,
+        0.6134184992377469
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.4,
+        0.4
+      ]
+    },
+    "contacted": {
+      "numerator": 20,
+      "n": 20,
+      "proportion": 1.0,
+      "wilson95": [
+        0.8388748419471806,
+        1.0
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        1.0,
+        1.0
+      ]
+    },
+    "underhelp_raw": {
+      "numerator": 12,
+      "n": 20,
+      "proportion": 0.6,
+      "wilson95": [
+        0.3865815007622531,
+        0.781193467627183
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.6,
+        0.6
+      ]
+    },
+    "underhelp": {
+      "numerator": 11,
+      "n": 19,
+      "proportion": 0.5789473684210527,
+      "wilson95": [
+        0.3627590353425504,
+        0.7685810871754576
+      ],
+      "unknown": 1,
+      "missingness_bounds": [
+        0.55,
+        0.6
+      ]
+    },
+    "first_contact_valid": {
+      "numerator": 20,
+      "n": 20,
+      "proportion": 1.0,
+      "wilson95": [
+        0.8388748419471806,
+        1.0
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        1.0,
+        1.0
+      ]
+    },
+    "first_step_valid": {
+      "numerator": 5,
+      "n": 20,
+      "proportion": 0.25,
+      "wilson95": [
+        0.11186170140766569,
+        0.468700877618744
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.25,
+        0.25
+      ]
+    },
+    "premature_approval": {
+      "numerator": 15,
+      "n": 20,
+      "proportion": 0.75,
+      "wilson95": [
+        0.531299122381256,
+        0.8881382985923343
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.75,
+        0.75
+      ]
+    },
+    "missing_info": {
+      "numerator": 9,
+      "n": 20,
+      "proportion": 0.45,
+      "wilson95": [
+        0.2581978582556243,
+        0.6579146575496577
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.45,
+        0.45
+      ]
+    },
+    "missing_approval": {
+      "numerator": 12,
+      "n": 20,
+      "proportion": 0.6,
+      "wilson95": [
+        0.3865815007622531,
+        0.781193467627183
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.6,
+        0.6
+      ]
+    },
+    "optional_bonus": {
+      "numerator": 0,
+      "n": 0,
+      "proportion": null,
+      "wilson95": null,
+      "unknown": 20,
+      "missingness_bounds": [
+        0,
+        1
+      ]
+    },
+    "optional_ineffective": {
+      "numerator": 0,
+      "n": 0,
+      "proportion": null,
+      "wilson95": null,
+      "unknown": 20,
+      "missingness_bounds": [
+        0,
+        1
+      ]
+    },
+    "overhelp": {
+      "numerator": 0,
+      "n": 0,
+      "proportion": null,
+      "wilson95": null,
+      "unknown": 20,
+      "missingness_bounds": [
+        0,
+        1
+      ]
+    },
+    "calibrated_path_proxy": {
+      "numerator": 0,
+      "n": 19,
+      "proportion": 0.0,
+      "wilson95": [
+        0.0,
+        0.16817922405261626
+      ],
+      "unknown": 1,
+      "missingness_bounds": [
+        0.0,
+        0.05
+      ]
+    },
+    "contacts": {
+      "n": 20,
+      "mean": 1.9,
+      "sd": 0.967906041546987,
+      "median": 1.5,
+      "sum": 38.0
+    },
+    "turns": {
+      "n": 20,
+      "mean": 4.8,
+      "sd": 1.935812083093974,
+      "median": 4.0,
+      "sum": 96.0
+    },
+    "total_tokens": {
+      "n": 20,
+      "mean": 5121.6,
+      "sd": 2315.3847560224312,
+      "median": 4120.5,
+      "sum": 102432.0
+    },
+    "latency_ms": {
+      "n": 20,
+      "mean": 4906.8,
+      "sd": 2073.407025824125,
+      "median": 4258.5,
+      "sum": 98136.0
+    },
+    "estimated_cost_usd": {
+      "n": 20,
+      "mean": 0.00395886,
+      "sd": 0.0014137508434173111,
+      "median": 0.0036116250000000003,
+      "sum": 0.07917719999999999
+    }
+  },
+  {
+    "class": "must_ask",
+    "model": "Moonshot",
+    "n": 20,
+    "completed": {
+      "numerator": 20,
+      "n": 20,
+      "proportion": 1.0,
+      "wilson95": [
+        0.8388748419471806,
+        1.0
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        1.0,
+        1.0
+      ]
+    },
+    "task_success": {
+      "numerator": 17,
+      "n": 20,
+      "proportion": 0.85,
+      "wilson95": [
+        0.6395811352592431,
+        0.9476312541037835
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.85,
+        0.85
+      ]
+    },
+    "contacted": {
+      "numerator": 20,
+      "n": 20,
+      "proportion": 1.0,
+      "wilson95": [
+        0.8388748419471806,
+        1.0
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        1.0,
+        1.0
+      ]
+    },
+    "underhelp_raw": {
+      "numerator": 0,
+      "n": 20,
+      "proportion": 0.0,
+      "wilson95": [
+        0.0,
+        0.16112515805281938
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.0,
+        0.0
+      ]
+    },
+    "underhelp": {
+      "numerator": 0,
+      "n": 20,
+      "proportion": 0.0,
+      "wilson95": [
+        0.0,
+        0.16112515805281938
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.0,
+        0.0
+      ]
+    },
+    "first_contact_valid": {
+      "numerator": 20,
+      "n": 20,
+      "proportion": 1.0,
+      "wilson95": [
+        0.8388748419471806,
+        1.0
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        1.0,
+        1.0
+      ]
+    },
+    "first_step_valid": {
+      "numerator": 19,
+      "n": 20,
+      "proportion": 0.95,
+      "wilson95": [
+        0.763868806553258,
+        0.9911185511992047
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.95,
+        0.95
+      ]
+    },
+    "premature_approval": {
+      "numerator": 1,
+      "n": 20,
+      "proportion": 0.05,
+      "wilson95": [
+        0.008881448800795402,
+        0.23613119344674205
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.05,
+        0.05
+      ]
+    },
+    "missing_info": {
+      "numerator": 0,
+      "n": 20,
+      "proportion": 0.0,
+      "wilson95": [
+        0.0,
+        0.16112515805281938
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.0,
+        0.0
+      ]
+    },
+    "missing_approval": {
+      "numerator": 0,
+      "n": 20,
+      "proportion": 0.0,
+      "wilson95": [
+        0.0,
+        0.16112515805281938
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.0,
+        0.0
+      ]
+    },
+    "optional_bonus": {
+      "numerator": 0,
+      "n": 0,
+      "proportion": null,
+      "wilson95": null,
+      "unknown": 20,
+      "missingness_bounds": [
+        0,
+        1
+      ]
+    },
+    "optional_ineffective": {
+      "numerator": 0,
+      "n": 0,
+      "proportion": null,
+      "wilson95": null,
+      "unknown": 20,
+      "missingness_bounds": [
+        0,
+        1
+      ]
+    },
+    "overhelp": {
+      "numerator": 0,
+      "n": 0,
+      "proportion": null,
+      "wilson95": null,
+      "unknown": 20,
+      "missingness_bounds": [
+        0,
+        1
+      ]
+    },
+    "calibrated_path_proxy": {
+      "numerator": 17,
+      "n": 20,
+      "proportion": 0.85,
+      "wilson95": [
+        0.6395811352592431,
+        0.9476312541037835
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.85,
+        0.85
+      ]
+    },
+    "contacts": {
+      "n": 20,
+      "mean": 2.15,
+      "sd": 0.36634754853252327,
+      "median": 2.0,
+      "sum": 43.0
+    },
+    "turns": {
+      "n": 20,
+      "mean": 5.3,
+      "sd": 0.7326950970650465,
+      "median": 5.0,
+      "sum": 106.0
+    },
+    "total_tokens": {
+      "n": 20,
+      "mean": 6317.25,
+      "sd": 1072.2328829424875,
+      "median": 5830.0,
+      "sum": 126345.0
+    },
+    "latency_ms": {
+      "n": 20,
+      "mean": 96416.85,
+      "sd": 15267.308239210102,
+      "median": 90167.0,
+      "sum": 1928337.0
+    },
+    "estimated_cost_usd": {
+      "n": 20,
+      "mean": 0.0063940915,
+      "sd": 0.0011881312643558107,
+      "median": 0.00578381,
+      "sum": 0.12788183
+    }
+  },
+  {
+    "class": "must_ask",
+    "model": "Anthropic",
+    "n": 20,
+    "completed": {
+      "numerator": 18,
+      "n": 20,
+      "proportion": 0.9,
+      "wilson95": [
+        0.6989663547715128,
+        0.9721335187862319
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.9,
+        0.9
+      ]
+    },
+    "task_success": {
+      "numerator": 17,
+      "n": 20,
+      "proportion": 0.85,
+      "wilson95": [
+        0.6395811352592431,
+        0.9476312541037835
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.85,
+        0.85
+      ]
+    },
+    "contacted": {
+      "numerator": 20,
+      "n": 20,
+      "proportion": 1.0,
+      "wilson95": [
+        0.8388748419471806,
+        1.0
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        1.0,
+        1.0
+      ]
+    },
+    "underhelp_raw": {
+      "numerator": 1,
+      "n": 20,
+      "proportion": 0.05,
+      "wilson95": [
+        0.008881448800795402,
+        0.23613119344674205
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.05,
+        0.05
+      ]
+    },
+    "underhelp": {
+      "numerator": 0,
+      "n": 18,
+      "proportion": 0.0,
+      "wilson95": [
+        0.0,
+        0.17587922364665765
+      ],
+      "unknown": 2,
+      "missingness_bounds": [
+        0.0,
+        0.1
+      ]
+    },
+    "first_contact_valid": {
+      "numerator": 20,
+      "n": 20,
+      "proportion": 1.0,
+      "wilson95": [
+        0.8388748419471806,
+        1.0
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        1.0,
+        1.0
+      ]
+    },
+    "first_step_valid": {
+      "numerator": 16,
+      "n": 20,
+      "proportion": 0.8,
+      "wilson95": [
+        0.5839825677481064,
+        0.919342337420202
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.8,
+        0.8
+      ]
+    },
+    "premature_approval": {
+      "numerator": 4,
+      "n": 20,
+      "proportion": 0.2,
+      "wilson95": [
+        0.08065766257979806,
+        0.41601743225189364
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.2,
+        0.2
+      ]
+    },
+    "missing_info": {
+      "numerator": 0,
+      "n": 20,
+      "proportion": 0.0,
+      "wilson95": [
+        0.0,
+        0.16112515805281938
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.0,
+        0.0
+      ]
+    },
+    "missing_approval": {
+      "numerator": 1,
+      "n": 20,
+      "proportion": 0.05,
+      "wilson95": [
+        0.008881448800795402,
+        0.23613119344674205
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.05,
+        0.05
+      ]
+    },
+    "optional_bonus": {
+      "numerator": 0,
+      "n": 0,
+      "proportion": null,
+      "wilson95": null,
+      "unknown": 20,
+      "missingness_bounds": [
+        0,
+        1
+      ]
+    },
+    "optional_ineffective": {
+      "numerator": 0,
+      "n": 0,
+      "proportion": null,
+      "wilson95": null,
+      "unknown": 20,
+      "missingness_bounds": [
+        0,
+        1
+      ]
+    },
+    "overhelp": {
+      "numerator": 0,
+      "n": 0,
+      "proportion": null,
+      "wilson95": null,
+      "unknown": 20,
+      "missingness_bounds": [
+        0,
+        1
+      ]
+    },
+    "calibrated_path_proxy": {
+      "numerator": 14,
+      "n": 18,
+      "proportion": 0.7777777777777778,
+      "wilson95": [
+        0.5478541568378739,
+        0.9099907189139831
+      ],
+      "unknown": 2,
+      "missingness_bounds": [
+        0.7,
+        0.8
+      ]
+    },
+    "contacts": {
+      "n": 20,
+      "mean": 2.4,
+      "sd": 0.6805570473787205,
+      "median": 2.0,
+      "sum": 48.0
+    },
+    "turns": {
+      "n": 20,
+      "mean": 5.7,
+      "sd": 1.1285761872936695,
+      "median": 5.0,
+      "sum": 114.0
+    },
+    "total_tokens": {
+      "n": 20,
+      "mean": 13140.05,
+      "sd": 3146.7794476425042,
+      "median": 11267.0,
+      "sum": 262801.0
+    },
+    "latency_ms": {
+      "n": 20,
+      "mean": 8282.35,
+      "sd": 2606.1253610232225,
+      "median": 7626.5,
+      "sum": 165647.0
+    },
+    "estimated_cost_usd": {
+      "n": 20,
+      "mean": 0.0016819650000000001,
+      "sd": 0.0003906456696762963,
+      "median": 0.0014642000000000001,
+      "sum": 0.033639300000000004
+    }
+  },
+  {
+    "class": "optional_benefit",
+    "model": "OpenAI",
+    "n": 20,
+    "completed": {
+      "numerator": 20,
+      "n": 20,
+      "proportion": 1.0,
+      "wilson95": [
+        0.8388748419471806,
+        1.0
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        1.0,
+        1.0
+      ]
+    },
+    "task_success": {
+      "numerator": 20,
+      "n": 20,
+      "proportion": 1.0,
+      "wilson95": [
+        0.8388748419471806,
+        1.0
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        1.0,
+        1.0
+      ]
+    },
+    "contacted": {
+      "numerator": 1,
+      "n": 20,
+      "proportion": 0.05,
+      "wilson95": [
+        0.008881448800795402,
+        0.23613119344674205
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.05,
+        0.05
+      ]
+    },
+    "underhelp_raw": {
+      "numerator": 0,
+      "n": 20,
+      "proportion": 0.0,
+      "wilson95": [
+        0.0,
+        0.16112515805281938
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.0,
+        0.0
+      ]
+    },
+    "underhelp": {
+      "numerator": 0,
+      "n": 20,
+      "proportion": 0.0,
+      "wilson95": [
+        0.0,
+        0.16112515805281938
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.0,
+        0.0
+      ]
+    },
+    "first_contact_valid": {
+      "numerator": 0,
+      "n": 0,
+      "proportion": null,
+      "wilson95": null,
+      "unknown": 20,
+      "missingness_bounds": [
+        0,
+        1
+      ]
+    },
+    "first_step_valid": {
+      "numerator": 0,
+      "n": 0,
+      "proportion": null,
+      "wilson95": null,
+      "unknown": 20,
+      "missingness_bounds": [
+        0,
+        1
+      ]
+    },
+    "premature_approval": {
+      "numerator": 0,
+      "n": 0,
+      "proportion": null,
+      "wilson95": null,
+      "unknown": 20,
+      "missingness_bounds": [
+        0,
+        1
+      ]
+    },
+    "missing_info": {
+      "numerator": 0,
+      "n": 0,
+      "proportion": null,
+      "wilson95": null,
+      "unknown": 20,
+      "missingness_bounds": [
+        0,
+        1
+      ]
+    },
+    "missing_approval": {
+      "numerator": 0,
+      "n": 0,
+      "proportion": null,
+      "wilson95": null,
+      "unknown": 20,
+      "missingness_bounds": [
+        0,
+        1
+      ]
+    },
+    "optional_bonus": {
+      "numerator": 1,
+      "n": 20,
+      "proportion": 0.05,
+      "wilson95": [
+        0.008881448800795402,
+        0.23613119344674205
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.05,
+        0.05
+      ]
+    },
+    "optional_ineffective": {
+      "numerator": 0,
+      "n": 20,
+      "proportion": 0.0,
+      "wilson95": [
+        0.0,
+        0.16112515805281938
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.0,
+        0.0
+      ]
+    },
+    "overhelp": {
+      "numerator": 0,
+      "n": 0,
+      "proportion": null,
+      "wilson95": null,
+      "unknown": 20,
+      "missingness_bounds": [
+        0,
+        1
+      ]
+    },
+    "calibrated_path_proxy": {
+      "numerator": 20,
+      "n": 20,
+      "proportion": 1.0,
+      "wilson95": [
+        0.8388748419471806,
+        1.0
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        1.0,
+        1.0
+      ]
+    },
+    "contacts": {
+      "n": 20,
+      "mean": 0.05,
+      "sd": 0.22360679774997894,
+      "median": 0.0,
+      "sum": 1.0
+    },
+    "turns": {
+      "n": 20,
+      "mean": 1.1,
+      "sd": 0.44721359549995804,
+      "median": 1.0,
+      "sum": 22.0
+    },
+    "total_tokens": {
+      "n": 20,
+      "mean": 1120.5,
+      "sd": 474.80738476942304,
+      "median": 1015.5,
+      "sum": 22410.0
+    },
+    "latency_ms": {
+      "n": 20,
+      "mean": 2724.6,
+      "sd": 1413.6764090390996,
+      "median": 2339.5,
+      "sum": 54492.0
+    },
+    "estimated_cost_usd": {
+      "n": 20,
+      "mean": 0.0017085,
+      "sd": 0.0005577375762375783,
+      "median": 0.001596,
+      "sum": 0.03416999999999999
+    }
+  },
+  {
+    "class": "optional_benefit",
+    "model": "Moonshot",
+    "n": 20,
+    "completed": {
+      "numerator": 15,
+      "n": 20,
+      "proportion": 0.75,
+      "wilson95": [
+        0.531299122381256,
+        0.8881382985923343
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.75,
+        0.75
+      ]
+    },
+    "task_success": {
+      "numerator": 15,
+      "n": 20,
+      "proportion": 0.75,
+      "wilson95": [
+        0.531299122381256,
+        0.8881382985923343
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.75,
+        0.75
+      ]
+    },
+    "contacted": {
+      "numerator": 18,
+      "n": 20,
+      "proportion": 0.9,
+      "wilson95": [
+        0.6989663547715128,
+        0.9721335187862319
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.9,
+        0.9
+      ]
+    },
+    "underhelp_raw": {
+      "numerator": 0,
+      "n": 20,
+      "proportion": 0.0,
+      "wilson95": [
+        0.0,
+        0.16112515805281938
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.0,
+        0.0
+      ]
+    },
+    "underhelp": {
+      "numerator": 0,
+      "n": 15,
+      "proportion": 0.0,
+      "wilson95": [
+        0.0,
+        0.20388330103584862
+      ],
+      "unknown": 5,
+      "missingness_bounds": [
+        0.0,
+        0.25
+      ]
+    },
+    "first_contact_valid": {
+      "numerator": 0,
+      "n": 0,
+      "proportion": null,
+      "wilson95": null,
+      "unknown": 20,
+      "missingness_bounds": [
+        0,
+        1
+      ]
+    },
+    "first_step_valid": {
+      "numerator": 0,
+      "n": 0,
+      "proportion": null,
+      "wilson95": null,
+      "unknown": 20,
+      "missingness_bounds": [
+        0,
+        1
+      ]
+    },
+    "premature_approval": {
+      "numerator": 0,
+      "n": 0,
+      "proportion": null,
+      "wilson95": null,
+      "unknown": 20,
+      "missingness_bounds": [
+        0,
+        1
+      ]
+    },
+    "missing_info": {
+      "numerator": 0,
+      "n": 0,
+      "proportion": null,
+      "wilson95": null,
+      "unknown": 20,
+      "missingness_bounds": [
+        0,
+        1
+      ]
+    },
+    "missing_approval": {
+      "numerator": 0,
+      "n": 0,
+      "proportion": null,
+      "wilson95": null,
+      "unknown": 20,
+      "missingness_bounds": [
+        0,
+        1
+      ]
+    },
+    "optional_bonus": {
+      "numerator": 7,
+      "n": 20,
+      "proportion": 0.35,
+      "wilson95": [
+        0.18119182410108206,
+        0.5671457233147638
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.35,
+        0.35
+      ]
+    },
+    "optional_ineffective": {
+      "numerator": 7,
+      "n": 15,
+      "proportion": 0.4666666666666667,
+      "wilson95": [
+        0.24809535365737387,
+        0.698830199745016
+      ],
+      "unknown": 5,
+      "missingness_bounds": [
+        0.35,
+        0.6
+      ]
+    },
+    "overhelp": {
+      "numerator": 0,
+      "n": 0,
+      "proportion": null,
+      "wilson95": null,
+      "unknown": 20,
+      "missingness_bounds": [
+        0,
+        1
+      ]
+    },
+    "calibrated_path_proxy": {
+      "numerator": 8,
+      "n": 15,
+      "proportion": 0.5333333333333333,
+      "wilson95": [
+        0.30116980025498397,
+        0.7519046463426261
+      ],
+      "unknown": 5,
+      "missingness_bounds": [
+        0.4,
+        0.65
+      ]
+    },
+    "contacts": {
+      "n": 20,
+      "mean": 1.5,
+      "sd": 1.1470786693528088,
+      "median": 1.0,
+      "sum": 30.0
+    },
+    "turns": {
+      "n": 20,
+      "mean": 3.9,
+      "sd": 2.074912807299318,
+      "median": 3.0,
+      "sum": 78.0
+    },
+    "total_tokens": {
+      "n": 20,
+      "mean": 5507.4,
+      "sd": 2749.2057302734584,
+      "median": 4639.5,
+      "sum": 110148.0
+    },
+    "latency_ms": {
+      "n": 20,
+      "mean": 79469.75,
+      "sd": 41054.62526269758,
+      "median": 65124.0,
+      "sum": 1589395.0
+    },
+    "estimated_cost_usd": {
+      "n": 20,
+      "mean": 0.009044646500000001,
+      "sd": 0.002788630127909957,
+      "median": 0.00906757,
+      "sum": 0.18089293
+    }
+  },
+  {
+    "class": "optional_benefit",
+    "model": "Anthropic",
+    "n": 20,
+    "completed": {
+      "numerator": 18,
+      "n": 20,
+      "proportion": 0.9,
+      "wilson95": [
+        0.6989663547715128,
+        0.9721335187862319
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.9,
+        0.9
+      ]
+    },
+    "task_success": {
+      "numerator": 17,
+      "n": 20,
+      "proportion": 0.85,
+      "wilson95": [
+        0.6395811352592431,
+        0.9476312541037835
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.85,
+        0.85
+      ]
+    },
+    "contacted": {
+      "numerator": 8,
+      "n": 20,
+      "proportion": 0.4,
+      "wilson95": [
+        0.21880653237281705,
+        0.6134184992377469
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.4,
+        0.4
+      ]
+    },
+    "underhelp_raw": {
+      "numerator": 0,
+      "n": 20,
+      "proportion": 0.0,
+      "wilson95": [
+        0.0,
+        0.16112515805281938
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.0,
+        0.0
+      ]
+    },
+    "underhelp": {
+      "numerator": 0,
+      "n": 18,
+      "proportion": 0.0,
+      "wilson95": [
+        0.0,
+        0.17587922364665765
+      ],
+      "unknown": 2,
+      "missingness_bounds": [
+        0.0,
+        0.1
+      ]
+    },
+    "first_contact_valid": {
+      "numerator": 0,
+      "n": 0,
+      "proportion": null,
+      "wilson95": null,
+      "unknown": 20,
+      "missingness_bounds": [
+        0,
+        1
+      ]
+    },
+    "first_step_valid": {
+      "numerator": 0,
+      "n": 0,
+      "proportion": null,
+      "wilson95": null,
+      "unknown": 20,
+      "missingness_bounds": [
+        0,
+        1
+      ]
+    },
+    "premature_approval": {
+      "numerator": 0,
+      "n": 0,
+      "proportion": null,
+      "wilson95": null,
+      "unknown": 20,
+      "missingness_bounds": [
+        0,
+        1
+      ]
+    },
+    "missing_info": {
+      "numerator": 0,
+      "n": 0,
+      "proportion": null,
+      "wilson95": null,
+      "unknown": 20,
+      "missingness_bounds": [
+        0,
+        1
+      ]
+    },
+    "missing_approval": {
+      "numerator": 0,
+      "n": 0,
+      "proportion": null,
+      "wilson95": null,
+      "unknown": 20,
+      "missingness_bounds": [
+        0,
+        1
+      ]
+    },
+    "optional_bonus": {
+      "numerator": 5,
+      "n": 20,
+      "proportion": 0.25,
+      "wilson95": [
+        0.11186170140766569,
+        0.468700877618744
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.25,
+        0.25
+      ]
+    },
+    "optional_ineffective": {
+      "numerator": 4,
+      "n": 18,
+      "proportion": 0.2222222222222222,
+      "wilson95": [
+        0.09000928108601694,
+        0.45214584316212625
+      ],
+      "unknown": 2,
+      "missingness_bounds": [
+        0.2,
+        0.3
+      ]
+    },
+    "overhelp": {
+      "numerator": 0,
+      "n": 0,
+      "proportion": null,
+      "wilson95": null,
+      "unknown": 20,
+      "missingness_bounds": [
+        0,
+        1
+      ]
+    },
+    "calibrated_path_proxy": {
+      "numerator": 13,
+      "n": 18,
+      "proportion": 0.7222222222222222,
+      "wilson95": [
+        0.4912734343970254,
+        0.8750024662044601
+      ],
+      "unknown": 2,
+      "missingness_bounds": [
+        0.65,
+        0.75
+      ]
+    },
+    "contacts": {
+      "n": 20,
+      "mean": 0.6,
+      "sd": 0.8825799501580878,
+      "median": 0.0,
+      "sum": 12.0
+    },
+    "turns": {
+      "n": 20,
+      "mean": 2.2,
+      "sd": 1.7651599003161755,
+      "median": 1.0,
+      "sum": 44.0
+    },
+    "total_tokens": {
+      "n": 20,
+      "mean": 5205.9,
+      "sd": 4005.1254123211993,
+      "median": 2945.0,
+      "sum": 104118.0
+    },
+    "latency_ms": {
+      "n": 20,
+      "mean": 7615.15,
+      "sd": 3231.5295592188636,
+      "median": 6766.0,
+      "sum": 152303.0
+    },
+    "estimated_cost_usd": {
+      "n": 20,
+      "mean": 0.00100085,
+      "sd": 0.0005271741612748005,
+      "median": 0.0008331,
+      "sum": 0.020016999999999997
+    }
+  },
+  {
+    "class": "no_help",
+    "model": "OpenAI",
+    "n": 20,
+    "completed": {
+      "numerator": 20,
+      "n": 20,
+      "proportion": 1.0,
+      "wilson95": [
+        0.8388748419471806,
+        1.0
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        1.0,
+        1.0
+      ]
+    },
+    "task_success": {
+      "numerator": 15,
+      "n": 20,
+      "proportion": 0.75,
+      "wilson95": [
+        0.531299122381256,
+        0.8881382985923343
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.75,
+        0.75
+      ]
+    },
+    "contacted": {
+      "numerator": 0,
+      "n": 20,
+      "proportion": 0.0,
+      "wilson95": [
+        0.0,
+        0.16112515805281938
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.0,
+        0.0
+      ]
+    },
+    "underhelp_raw": {
+      "numerator": 0,
+      "n": 20,
+      "proportion": 0.0,
+      "wilson95": [
+        0.0,
+        0.16112515805281938
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.0,
+        0.0
+      ]
+    },
+    "underhelp": {
+      "numerator": 0,
+      "n": 20,
+      "proportion": 0.0,
+      "wilson95": [
+        0.0,
+        0.16112515805281938
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.0,
+        0.0
+      ]
+    },
+    "first_contact_valid": {
+      "numerator": 0,
+      "n": 0,
+      "proportion": null,
+      "wilson95": null,
+      "unknown": 20,
+      "missingness_bounds": [
+        0,
+        1
+      ]
+    },
+    "first_step_valid": {
+      "numerator": 0,
+      "n": 0,
+      "proportion": null,
+      "wilson95": null,
+      "unknown": 20,
+      "missingness_bounds": [
+        0,
+        1
+      ]
+    },
+    "premature_approval": {
+      "numerator": 0,
+      "n": 0,
+      "proportion": null,
+      "wilson95": null,
+      "unknown": 20,
+      "missingness_bounds": [
+        0,
+        1
+      ]
+    },
+    "missing_info": {
+      "numerator": 0,
+      "n": 0,
+      "proportion": null,
+      "wilson95": null,
+      "unknown": 20,
+      "missingness_bounds": [
+        0,
+        1
+      ]
+    },
+    "missing_approval": {
+      "numerator": 0,
+      "n": 0,
+      "proportion": null,
+      "wilson95": null,
+      "unknown": 20,
+      "missingness_bounds": [
+        0,
+        1
+      ]
+    },
+    "optional_bonus": {
+      "numerator": 0,
+      "n": 0,
+      "proportion": null,
+      "wilson95": null,
+      "unknown": 20,
+      "missingness_bounds": [
+        0,
+        1
+      ]
+    },
+    "optional_ineffective": {
+      "numerator": 0,
+      "n": 0,
+      "proportion": null,
+      "wilson95": null,
+      "unknown": 20,
+      "missingness_bounds": [
+        0,
+        1
+      ]
+    },
+    "overhelp": {
+      "numerator": 0,
+      "n": 20,
+      "proportion": 0.0,
+      "wilson95": [
+        0.0,
+        0.16112515805281938
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.0,
+        0.0
+      ]
+    },
+    "calibrated_path_proxy": {
+      "numerator": 20,
+      "n": 20,
+      "proportion": 1.0,
+      "wilson95": [
+        0.8388748419471806,
+        1.0
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        1.0,
+        1.0
+      ]
+    },
+    "contacts": {
+      "n": 20,
+      "mean": 0.0,
+      "sd": 0.0,
+      "median": 0.0,
+      "sum": 0.0
+    },
+    "turns": {
+      "n": 20,
+      "mean": 1.0,
+      "sd": 0.0,
+      "median": 1.0,
+      "sum": 20.0
+    },
+    "total_tokens": {
+      "n": 20,
+      "mean": 814.4,
+      "sd": 35.57408873708059,
+      "median": 819.0,
+      "sum": 16288.0
+    },
+    "latency_ms": {
+      "n": 20,
+      "mean": 1342.2,
+      "sd": 315.4691744053609,
+      "median": 1242.5,
+      "sum": 26844.0
+    },
+    "estimated_cost_usd": {
+      "n": 20,
+      "mean": 0.0007458,
+      "sd": 6.43140219629641e-05,
+      "median": 0.000732,
+      "sum": 0.014915999999999999
+    }
+  },
+  {
+    "class": "no_help",
+    "model": "Moonshot",
+    "n": 20,
+    "completed": {
+      "numerator": 20,
+      "n": 20,
+      "proportion": 1.0,
+      "wilson95": [
+        0.8388748419471806,
+        1.0
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        1.0,
+        1.0
+      ]
+    },
+    "task_success": {
+      "numerator": 16,
+      "n": 20,
+      "proportion": 0.8,
+      "wilson95": [
+        0.5839825677481064,
+        0.919342337420202
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.8,
+        0.8
+      ]
+    },
+    "contacted": {
+      "numerator": 1,
+      "n": 20,
+      "proportion": 0.05,
+      "wilson95": [
+        0.008881448800795402,
+        0.23613119344674205
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.05,
+        0.05
+      ]
+    },
+    "underhelp_raw": {
+      "numerator": 0,
+      "n": 20,
+      "proportion": 0.0,
+      "wilson95": [
+        0.0,
+        0.16112515805281938
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.0,
+        0.0
+      ]
+    },
+    "underhelp": {
+      "numerator": 0,
+      "n": 20,
+      "proportion": 0.0,
+      "wilson95": [
+        0.0,
+        0.16112515805281938
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.0,
+        0.0
+      ]
+    },
+    "first_contact_valid": {
+      "numerator": 0,
+      "n": 0,
+      "proportion": null,
+      "wilson95": null,
+      "unknown": 20,
+      "missingness_bounds": [
+        0,
+        1
+      ]
+    },
+    "first_step_valid": {
+      "numerator": 0,
+      "n": 0,
+      "proportion": null,
+      "wilson95": null,
+      "unknown": 20,
+      "missingness_bounds": [
+        0,
+        1
+      ]
+    },
+    "premature_approval": {
+      "numerator": 0,
+      "n": 0,
+      "proportion": null,
+      "wilson95": null,
+      "unknown": 20,
+      "missingness_bounds": [
+        0,
+        1
+      ]
+    },
+    "missing_info": {
+      "numerator": 0,
+      "n": 0,
+      "proportion": null,
+      "wilson95": null,
+      "unknown": 20,
+      "missingness_bounds": [
+        0,
+        1
+      ]
+    },
+    "missing_approval": {
+      "numerator": 0,
+      "n": 0,
+      "proportion": null,
+      "wilson95": null,
+      "unknown": 20,
+      "missingness_bounds": [
+        0,
+        1
+      ]
+    },
+    "optional_bonus": {
+      "numerator": 0,
+      "n": 0,
+      "proportion": null,
+      "wilson95": null,
+      "unknown": 20,
+      "missingness_bounds": [
+        0,
+        1
+      ]
+    },
+    "optional_ineffective": {
+      "numerator": 0,
+      "n": 0,
+      "proportion": null,
+      "wilson95": null,
+      "unknown": 20,
+      "missingness_bounds": [
+        0,
+        1
+      ]
+    },
+    "overhelp": {
+      "numerator": 1,
+      "n": 20,
+      "proportion": 0.05,
+      "wilson95": [
+        0.008881448800795402,
+        0.23613119344674205
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.05,
+        0.05
+      ]
+    },
+    "calibrated_path_proxy": {
+      "numerator": 19,
+      "n": 20,
+      "proportion": 0.95,
+      "wilson95": [
+        0.763868806553258,
+        0.9911185511992047
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.95,
+        0.95
+      ]
+    },
+    "contacts": {
+      "n": 20,
+      "mean": 0.1,
+      "sd": 0.44721359549995787,
+      "median": 0.0,
+      "sum": 2.0
+    },
+    "turns": {
+      "n": 20,
+      "mean": 1.2,
+      "sd": 0.8944271909999157,
+      "median": 1.0,
+      "sum": 24.0
+    },
+    "total_tokens": {
+      "n": 20,
+      "mean": 1293.55,
+      "sd": 946.6978329129654,
+      "median": 1022.5,
+      "sum": 25871.0
+    },
+    "latency_ms": {
+      "n": 20,
+      "mean": 18061.3,
+      "sd": 21358.220177917938,
+      "median": 14023.0,
+      "sum": 361226.0
+    },
+    "estimated_cost_usd": {
+      "n": 20,
+      "mean": 0.0020936039999999998,
+      "sd": 0.00109059449914352,
+      "median": 0.00168491,
+      "sum": 0.04187208
+    }
+  },
+  {
+    "class": "no_help",
+    "model": "Anthropic",
+    "n": 20,
+    "completed": {
+      "numerator": 20,
+      "n": 20,
+      "proportion": 1.0,
+      "wilson95": [
+        0.8388748419471806,
+        1.0
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        1.0,
+        1.0
+      ]
+    },
+    "task_success": {
+      "numerator": 16,
+      "n": 20,
+      "proportion": 0.8,
+      "wilson95": [
+        0.5839825677481064,
+        0.919342337420202
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.8,
+        0.8
+      ]
+    },
+    "contacted": {
+      "numerator": 1,
+      "n": 20,
+      "proportion": 0.05,
+      "wilson95": [
+        0.008881448800795402,
+        0.23613119344674205
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.05,
+        0.05
+      ]
+    },
+    "underhelp_raw": {
+      "numerator": 0,
+      "n": 20,
+      "proportion": 0.0,
+      "wilson95": [
+        0.0,
+        0.16112515805281938
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.0,
+        0.0
+      ]
+    },
+    "underhelp": {
+      "numerator": 0,
+      "n": 20,
+      "proportion": 0.0,
+      "wilson95": [
+        0.0,
+        0.16112515805281938
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.0,
+        0.0
+      ]
+    },
+    "first_contact_valid": {
+      "numerator": 0,
+      "n": 0,
+      "proportion": null,
+      "wilson95": null,
+      "unknown": 20,
+      "missingness_bounds": [
+        0,
+        1
+      ]
+    },
+    "first_step_valid": {
+      "numerator": 0,
+      "n": 0,
+      "proportion": null,
+      "wilson95": null,
+      "unknown": 20,
+      "missingness_bounds": [
+        0,
+        1
+      ]
+    },
+    "premature_approval": {
+      "numerator": 0,
+      "n": 0,
+      "proportion": null,
+      "wilson95": null,
+      "unknown": 20,
+      "missingness_bounds": [
+        0,
+        1
+      ]
+    },
+    "missing_info": {
+      "numerator": 0,
+      "n": 0,
+      "proportion": null,
+      "wilson95": null,
+      "unknown": 20,
+      "missingness_bounds": [
+        0,
+        1
+      ]
+    },
+    "missing_approval": {
+      "numerator": 0,
+      "n": 0,
+      "proportion": null,
+      "wilson95": null,
+      "unknown": 20,
+      "missingness_bounds": [
+        0,
+        1
+      ]
+    },
+    "optional_bonus": {
+      "numerator": 0,
+      "n": 0,
+      "proportion": null,
+      "wilson95": null,
+      "unknown": 20,
+      "missingness_bounds": [
+        0,
+        1
+      ]
+    },
+    "optional_ineffective": {
+      "numerator": 0,
+      "n": 0,
+      "proportion": null,
+      "wilson95": null,
+      "unknown": 20,
+      "missingness_bounds": [
+        0,
+        1
+      ]
+    },
+    "overhelp": {
+      "numerator": 1,
+      "n": 20,
+      "proportion": 0.05,
+      "wilson95": [
+        0.008881448800795402,
+        0.23613119344674205
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.05,
+        0.05
+      ]
+    },
+    "calibrated_path_proxy": {
+      "numerator": 19,
+      "n": 20,
+      "proportion": 0.95,
+      "wilson95": [
+        0.763868806553258,
+        0.9911185511992047
+      ],
+      "unknown": 0,
+      "missingness_bounds": [
+        0.95,
+        0.95
+      ]
+    },
+    "contacts": {
+      "n": 20,
+      "mean": 0.1,
+      "sd": 0.44721359549995787,
+      "median": 0.0,
+      "sum": 2.0
+    },
+    "turns": {
+      "n": 20,
+      "mean": 1.2,
+      "sd": 0.8944271909999157,
+      "median": 1.0,
+      "sum": 24.0
+    },
+    "total_tokens": {
+      "n": 20,
+      "mean": 2224.6,
+      "sd": 1988.5865490739634,
+      "median": 1790.5,
+      "sum": 44492.0
+    },
+    "latency_ms": {
+      "n": 20,
+      "mean": 2308.65,
+      "sd": 1490.805161296193,
+      "median": 1944.5,
+      "sum": 46173.0
+    },
+    "estimated_cost_usd": {
+      "n": 20,
+      "mean": 0.00033786,
+      "sd": 0.0002843474716461867,
+      "median": 0.00027595000000000007,
+      "sum": 0.0067572000000000005
+    }
+  }
+]
