@@ -1,0 +1,6 @@
+{"run_id": "pilot-r1-openai-must-vendor-onboarding-separated-20261026-smoke20261025v6", "status": "started", "timestamp": "2026-10-25T18:04:21.288281+00:00"}
+{"run_id": "pilot-r1-openai-must-vendor-onboarding-separated-20261026-smoke20261025v6", "status": "completed", "timestamp": "2026-10-25T18:04:28.169406+00:00"}
+{"run_id": "pilot-r1-moonshot-must-vendor-onboarding-separated-20261026-smoke20261025v6", "status": "started", "timestamp": "2026-10-25T18:04:28.188772+00:00"}
+{"run_id": "pilot-r1-moonshot-must-vendor-onboarding-separated-20261026-smoke20261025v6", "status": "completed", "timestamp": "2026-10-25T18:05:55.066687+00:00"}
+{"run_id": "pilot-r1-anthropic-must-vendor-onboarding-separated-20261026-smoke20261025v6", "status": "started", "timestamp": "2026-10-25T18:05:55.087035+00:00"}
+{"run_id": "pilot-r1-anthropic-must-vendor-onboarding-separated-20261026-smoke20261025v6", "status": "completed", "timestamp": "2026-10-25T18:06:01.400375+00:00"}

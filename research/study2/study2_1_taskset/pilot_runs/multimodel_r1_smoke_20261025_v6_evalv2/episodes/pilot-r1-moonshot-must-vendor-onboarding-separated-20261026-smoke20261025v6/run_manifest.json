@@ -1,0 +1,13 @@
+{
+  "run_id": "pilot-r1-moonshot-must-vendor-onboarding-separated-20261026-smoke20261025v6",
+  "task_id": "must-vendor-onboarding",
+  "seed": 20261026,
+  "profile_condition": "R1",
+  "alignment": "separated",
+  "candidate_order": [
+    "C3",
+    "C1",
+    "C2",
+    "C4"
+  ]
+}

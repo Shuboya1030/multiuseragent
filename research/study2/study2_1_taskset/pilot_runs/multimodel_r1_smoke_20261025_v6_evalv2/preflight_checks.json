@@ -1,0 +1,15 @@
+{
+  "task_packages": 60,
+  "classes": {
+    "must_ask": 20,
+    "optional_benefit": 20,
+    "no_help": 20
+  },
+  "evaluator_fixtures": 182,
+  "structural_errors": 0,
+  "audit_regression_tests": {
+    "passed": 3,
+    "failed": 0
+  },
+  "environment_resolution": "System Python 3.14 lacked jsonschema; offline tests initially failed. Switched before all live calls to explicit Anaconda Python 3.9 with jsonschema 4.4.0. All three tests passed."
+}

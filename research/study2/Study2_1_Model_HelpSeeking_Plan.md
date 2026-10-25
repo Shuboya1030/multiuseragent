@@ -65,6 +65,8 @@
 
 **当前启动态：** 可以启动新的 R1 分层 pilot，不应开始正式 confirmatory R1。独立任务内容审查、v2 taskset 端到端 pilot 通过、数值化精度/追加规则、费用预算和不可变 confirmatory manifest 尚未全部完成；正式 R1 runner 也须冻结。委派运行说明见 `Study2_1_R1_Agent_Handoff.md`。
 
+**2026-10-25 执行补记：** 用户将本次运行明确缩减为每个模型一个相同任务，仅验证可跑通。三条 R1 smoke episode 均完成 API→工具→NPC→提交→评分流程；任务成功 2/3，不能作为完整 27 条分层 pilot 已通过的证据。原始结果、完整脱敏 API I/O、trace、metadata、源码快照及审计保存在 `study2_1_taskset/pilot_runs/multimodel_r1_smoke_20261025_v6_evalv2/`。现有 evaluator 的 underhelp 未覆盖“已获取信息但未获批准”，已单列诊断并保留原评分，正式采集前需要统一口径。详见 `Study2_1_R1_Smoke_Decision_20261025.md` 和批次 `pilot_review.md`。
+
 ## 三、具体实验步骤
 
 ### 步骤 1：冻结协议和评估规则

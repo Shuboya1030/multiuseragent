@@ -1,0 +1,7 @@
+[openai 1/1] must-vendor-onboarding (separated)
+  status=completed asks=2 success=False score=3
+[moonshot 1/1] must-vendor-onboarding (separated)
+  status=completed asks=2 success=True score=4
+[anthropic 1/1] must-vendor-onboarding (separated)
+  status=completed asks=2 success=True score=4
+PILOT SUMMARY {"episodes": 3, "completed_submissions": 3, "task_successes": 2, "by_class": {"must_ask": {"episodes": 3, "task_successes": 2, "mean_asks": 2.0, "mean_checkpoint_score": 3.6666666666666665}}, "prompt_tokens": 20331, "completion_tokens": 1852, "api_errors_or_parse_errors": 0}

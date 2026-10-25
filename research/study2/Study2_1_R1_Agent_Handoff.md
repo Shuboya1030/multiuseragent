@@ -5,6 +5,8 @@
 
 ## Readiness decision
 
+**2026-10-25 addendum:** At the user's explicit request, a reduced R1 smoke pilot ran **one shared must-ask task per model, three episodes total**, rather than the nine-task-per-model stratified pilot below. All three API/tool/submission/scoring pipelines completed; task success was 2/3 (OpenAI 3/4 checkpoints without received approval; Moonshot and Anthropic 4/4). See [the saved review](study2_1_taskset/pilot_runs/multimodel_r1_smoke_20261025_v6_evalv2/pilot_review.md) and [the pre-run decision](Study2_1_R1_Smoke_Decision_20261025.md). This satisfies the requested narrow smoke check, **not** the original full stratified acceptance gate. The evaluator's `underhelp` field was found to omit missing approval; original scores remain unchanged and the discrepancy is documented. Formal R1 remains not ready. New runner calls require a unique `--run-tag` and a fresh output directory, and preserve failed attempts without implicit retries.
+
 **Start with the R1 pilot; do not start confirmatory R1 yet.** The 60-template task set passes its static package checks (20 tasks in each of must-ask, optional-beneficial, and no-help; 182 evaluator fixtures; zero structural errors). The `approved_by` scoring contract has also been corrected: the prompt and current gold use one candidate-ID string, and the evaluator accepts a legacy one-element list.
 
 The existing three-provider v4 and paced Moonshot v5 runs used the prior wrapper version. Their 36 episodes have been re-scored offline with evaluator v2, but that does not validate the regenerated v2 prompts end to end. Run the current 27-episode stratified R1 pilot first, inspect every task-class/model combination, and report the pilot for review. The taskset audit still lists independent content review and runtime/task acceptance as open. The numeric precision rule, provider/model settings, budget freeze, confirmatory manifest, and a confirmatory runner also need to be finalized before formal collection.
@@ -37,7 +39,7 @@ Use a new, uniquely named output folder so earlier pilot artifacts cannot be ove
 ```powershell
 python research/study2/study2_1_taskset/multimodel_r1_pilot.py `
   --output research/study2/study2_1_taskset/pilot_runs/multimodel_r1_pilot_20261024_v6_evalv2 `
-  --seed 20261024
+  --seed 20261024 --run-tag stratified-evalv2-newbatch
 ```
 
 The runner reads `OPENAI_API_KEY`, `MOONSHOT_API_KEY`, and `ANTHROPIC_API_KEY` from the process environment and must never write them to files. Moonshot requests are paced by the runner; retain its pacing setting and record any 429/retry events. If any task/API/format/evaluator defect appears, stop the affected pilot, preserve the failed run, fix it under a new version, and rerun with new run IDs.

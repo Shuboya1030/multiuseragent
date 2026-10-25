@@ -8,6 +8,7 @@ This runner is for pilot feasibility only; it is not the confirmatory runtime.
 import argparse
 import hashlib
 import json
+import jsonschema
 import os
 import re
 import subprocess
@@ -29,6 +30,13 @@ CURRENT_MODEL = "openai"
 MAX_TURNS = 8
 LAST_API_REQUEST_AT = {}
 MIN_REQUEST_INTERVAL_SECONDS = {"moonshot": 21.0}
+MAX_REQUEST_ATTEMPTS = 1
+RUN_TAG = ""
+AUDIT_DIR = None
+CURRENT_RUN_ID = None
+CURRENT_TURN = None
+SECRETS = []
+PROTOCOL_VERSION = "study21-r1-pilot-v0.5-audit"
 TOOLS = [
     {"type": "function", "function": {"name": "send_message", "description": "Send a direct message to a colleague.",
      "parameters": {"type": "object", "properties": {"recipient_id": {"type": "string"}, "purpose": {"type": "string", "enum": ["information", "approval", "optional_advice"]}, "message": {"type": "string"}},
@@ -52,6 +60,49 @@ def load_lines(path):
     if not path.exists():
         return []
     return [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
+
+
+def redact(value):
+    """Preserve provider-visible output, excluding credentials/private reasoning."""
+    if isinstance(value, dict):
+        return {k: redact(v) for k, v in value.items()
+                if k.lower() not in {"authorization", "x-api-key", "api_key", "reasoning_content", "thinking", "signature"}
+                and not (k == "content" and value.get("type") in {"thinking", "redacted_thinking"})}
+    if isinstance(value, list):
+        return [redact(v) for v in value if not isinstance(v, dict) or v.get("type") not in {"thinking", "redacted_thinking"}]
+    if isinstance(value, str):
+        for secret in SECRETS:
+            if secret:
+                value = value.replace(secret, "[redacted-key]")
+        return re.sub(r"\b(?:sk|org|ak)-[A-Za-z0-9_-]+", "[redacted-credential-or-account]", value)
+    return value
+
+
+def append_jsonl(path, value):
+    with Path(path).open("a", encoding="utf-8") as stream:
+        stream.write(json.dumps(redact(value), ensure_ascii=False) + "\n")
+        stream.flush()
+        os.fsync(stream.fileno())
+
+
+def audit_api(event):
+    if AUDIT_DIR is not None:
+        append_jsonl(AUDIT_DIR / "api_io.jsonl", {"run_id": CURRENT_RUN_ID, "turn": CURRENT_TURN,
+                     "timestamp": datetime.now(timezone.utc).isoformat(), **event})
+
+
+class TraceEvents(list):
+    def __init__(self, path):
+        super().__init__()
+        self.path = path
+        self.path.touch(exist_ok=False)
+
+    def append(self, event):
+        for key in ("purpose", "recipient_id", "state_transition", "authorized", "useful", "token_cost", "latency_ms", "evidence_id"):
+            event.setdefault(key, None)
+        event["evidence_id"] = event["evidence_id"] or f"{CURRENT_RUN_ID}:event:{event['event_id']}"
+        super().append(event)
+        append_jsonl(self.path, event)
 
 
 def call_model(messages, api_key):
@@ -93,7 +144,7 @@ def call_model(messages, api_key):
     body = json.dumps(payload).encode("utf-8")
     req = urllib.request.Request(cfg["endpoint"], data=body, headers=headers, method="POST")
     last_error = None
-    for attempt in range(3):
+    for attempt in range(MAX_REQUEST_ATTEMPTS):
         try:
             min_interval = MIN_REQUEST_INTERVAL_SECONDS.get(CURRENT_MODEL, 0.0)
             previous = LAST_API_REQUEST_AT.get(CURRENT_MODEL)
@@ -102,9 +153,16 @@ def call_model(messages, api_key):
                 if wait_s > 0:
                     time.sleep(wait_s)
             LAST_API_REQUEST_AT[CURRENT_MODEL] = time.monotonic()
+            audit_api({"event": "request", "attempt": attempt, "endpoint": cfg["endpoint"],
+                       "payload": payload, "headers": {"Content-Type": "application/json",
+                       **({"anthropic-version": "2023-06-01"} if CURRENT_MODEL == "anthropic" else {})}})
+            request_start = time.monotonic()
             with urllib.request.urlopen(req, timeout=90) as response:
                 data = json.load(response)
                 response_headers = response.headers
+            audit_api({"event": "response", "attempt": attempt, "http_status": response.status,
+                       "latency_ms": round((time.monotonic() - request_start) * 1000), "payload": data,
+                       "request_id": response_headers.get("request-id") or response_headers.get("x-request-id")})
             if CURRENT_MODEL == "anthropic":
                 calls = []
                 text_parts = []
@@ -116,7 +174,8 @@ def call_model(messages, api_key):
                                       "function": {"name": block["name"], "arguments": json.dumps(block.get("input", {}), ensure_ascii=False)}})
                 message = {"role": "assistant", "content": "".join(text_parts), "tool_calls": calls}
                 usage = {"prompt_tokens": data.get("usage", {}).get("input_tokens", 0),
-                         "completion_tokens": data.get("usage", {}).get("output_tokens", 0)}
+                         "completion_tokens": data.get("usage", {}).get("output_tokens", 0),
+                         **{k: v for k, v in data.get("usage", {}).items() if k not in {"input_tokens", "output_tokens"}}}
                 return message, usage, data.get("model", cfg["model"]), data.get("stop_reason"), response_headers.get("request-id"), attempt
             choice = data["choices"][0]
             message = choice["message"]
@@ -132,7 +191,10 @@ def call_model(messages, api_key):
             except Exception:
                 detail = "provider returned a non-JSON error body"
             detail = re.sub(r"\b(?:org|ak)-[A-Za-z0-9_-]+", "[redacted-account-id]", str(detail))
-            if exc.code == 429 and attempt < 2:
+            audit_api({"event": "error", "attempt": attempt, "http_status": exc.code,
+                       "request_id": exc.headers.get("request-id") or exc.headers.get("x-request-id"),
+                       "detail": redact(detail), "latency_ms": round((time.monotonic() - request_start) * 1000)})
+            if exc.code == 429 and attempt < MAX_REQUEST_ATTEMPTS - 1:
                 retry_after = exc.headers.get("Retry-After", "")
                 try:
                     delay = float(retry_after)
@@ -142,10 +204,11 @@ def call_model(messages, api_key):
                 time.sleep(max(delay, MIN_REQUEST_INTERVAL_SECONDS.get(CURRENT_MODEL, 0.0)))
                 last_error = exc
                 continue
-            raise RuntimeError(f"{cfg['provider']} HTTP {exc.code}: {str(detail)[:300]}") from None
+            raise RuntimeError(f"{cfg['provider']} HTTP {exc.code}: {redact(str(detail))[:300]}") from None
         except Exception as exc:  # Preserve retries in the run record, not secret-bearing request data.
+            audit_api({"event": "error", "attempt": attempt, "error_type": type(exc).__name__})
             last_error = exc
-            if attempt < 2:
+            if attempt < MAX_REQUEST_ATTEMPTS - 1:
                 time.sleep(2 ** attempt)
     raise RuntimeError(f"{cfg['provider']} request failed: {type(last_error).__name__}") from None
 
@@ -222,6 +285,7 @@ def initial_prompt(task_text, profiles):
 
 
 def run_episode(task_id, alignment, seed, out_dir, api_key):
+    global AUDIT_DIR, CURRENT_RUN_ID, CURRENT_TURN
     start_time = datetime.now(timezone.utc).isoformat()
     run_started_clock = time.monotonic()
     task_dir = TASKS / task_id
@@ -230,9 +294,11 @@ def run_episode(task_id, alignment, seed, out_dir, api_key):
     scenarios = read_json(task_dir / "scenarios.json")
     help_class = meta["help_need_class"]
     cfg = MODELS[CURRENT_MODEL]
-    run_id = f"pilot-r1-{CURRENT_MODEL}-{task_id}-{alignment}-{seed}"
+    run_id = f"pilot-r1-{CURRENT_MODEL}-{task_id}-{alignment}-{seed}" + (f"-{RUN_TAG}" if RUN_TAG else "")
     episode_dir = out_dir / "episodes" / run_id
-    episode_dir.mkdir(parents=True, exist_ok=True)
+    episode_dir.mkdir(parents=True, exist_ok=False)
+    AUDIT_DIR, CURRENT_RUN_ID = episode_dir, run_id
+    append_jsonl(out_dir / "run_status.jsonl", {"run_id": run_id, "status": "started", "timestamp": start_time})
     instantiate = [sys.executable, str(HERE / "instantiate_run.py"), "--task-dir", str(task_dir),
                    "--output-dir", str(episode_dir), "--run-id", run_id, "--seed", str(seed),
                    "--profile-condition", "R1", "--alignment", alignment]
@@ -250,9 +316,10 @@ def run_episode(task_id, alignment, seed, out_dir, api_key):
         variant = None
     system, messages = initial_prompt(task_text, visible_profiles)
     messages.insert(0, {"role": "system", "content": system})
+    write_json(episode_dir / "prompt_snapshot.json", {"system": system, "messages": messages, "tools": TOOLS})
     inbox = {}
     got_fact = False
-    events = []
+    events = TraceEvents(episode_dir / "trace_events.jsonl")
     usage_total = {"prompt_tokens": 0, "completion_tokens": 0, "cached_input_tokens": 0}
     model_turns = []
     api_request_ids = []
@@ -262,13 +329,17 @@ def run_episode(task_id, alignment, seed, out_dir, api_key):
     errors = []
 
     for turn in range(MAX_TURNS):
+        CURRENT_TURN = turn
         try:
             assistant_message, usage, returned_model, finish_reason, request_id, retry_count = call_model(messages, api_key)
         except Exception as exc:
             errors.append({"turn": turn, "type": "api_error", "detail": str(exc)})
+            events.append({"run_id": run_id, "event_id": len(events), "timestamp": datetime.now(timezone.utc).isoformat(),
+                           "actor": "tool", "event_type": "error", "content": json.dumps(errors[-1])})
             status = "api_error"
             break
         model_turns.append({"turn": turn, "assistant_message": assistant_message, "finish_reason": finish_reason, "usage": usage, "model": returned_model})
+        append_jsonl(episode_dir / "model_turns.jsonl", model_turns[-1])
         if request_id:
             api_request_ids.append(request_id)
         if retry_count:
@@ -284,9 +355,14 @@ def run_episode(task_id, alignment, seed, out_dir, api_key):
                            "tool_count": len(assistant_message.get("tool_calls") or []),
                            "tool_names": [c.get("function", {}).get("name") for c in assistant_message.get("tool_calls") or []]})
             status = "model_output_truncated" if finish_reason == "length" else "model_turn_invalid"
+            events.append({"run_id": run_id, "event_id": len(events), "timestamp": datetime.now(timezone.utc).isoformat(),
+                           "actor": "tool", "event_type": "error", "content": json.dumps(errors[-1])})
             break
 
         action_type = action["action"]
+        events.append({"run_id": run_id, "event_id": len(events), "timestamp": datetime.now(timezone.utc).isoformat(),
+                       "actor": "agent", "event_type": "tool_action", "content": json.dumps(action, ensure_ascii=False),
+                       "recipient_id": action.get("recipient_id"), "purpose": action.get("purpose")})
         if action_type == "submit":
             submitted = action.get("answer", {})
             events.append({"run_id": run_id, "event_id": len(events), "timestamp": datetime.now(timezone.utc).isoformat(),
@@ -299,6 +375,8 @@ def run_episode(task_id, alignment, seed, out_dir, api_key):
         canonical = alias_to_canonical.get(alias)
         if alias not in alias_to_canonical:
             errors.append({"turn": turn, "type": "unknown_recipient", "recipient_id": alias})
+            events.append({"run_id": run_id, "event_id": len(events), "timestamp": datetime.now(timezone.utc).isoformat(),
+                           "actor": "tool", "event_type": "error", "content": json.dumps(errors[-1]), "recipient_id": alias})
             messages.append({"role": "tool", "tool_call_id": action.get("tool_call_id", "invalid"), "content": "Unknown candidate ID. Use an ID in the visible directory."})
             continue
         if action_type == "ask":
@@ -327,14 +405,12 @@ def run_episode(task_id, alignment, seed, out_dir, api_key):
 
     if submitted is None:
         submitted = {}
-        if status != "api_error":
+        if status == "max_turns":
             status = "no_submission"
     answer_path = episode_dir / "answer.json"
     trace_path = episode_dir / "trace_events.jsonl"
     write_json(answer_path, submitted)
-    trace_path.write_text("".join(json.dumps(e, ensure_ascii=False) + "\n" for e in events), encoding="utf-8")
-    (episode_dir / "model_turns.jsonl").write_text(
-        "".join(json.dumps(row, ensure_ascii=False) + "\n" for row in model_turns), encoding="utf-8")
+    (episode_dir / "model_turns.jsonl").touch(exist_ok=True)
     eval_cmd = [sys.executable, str(HERE / "evaluate_episode.py"), "--task-dir", str(task_dir),
                 "--answer", str(answer_path), "--trace", str(trace_path), "--run-id", run_id,
                 "--mapping", str(episode_dir / "identity_mapping.json")]
@@ -353,13 +429,13 @@ def run_episode(task_id, alignment, seed, out_dir, api_key):
     manifest = read_json(episode_dir / "run_manifest.json")
     record = {
         "schema_version": "study21-run-v2", "run_id": run_id, "study_id": "study2.1",
-        "run_type": "pilot", "collection_stage": "pilot", "protocol_version": "study21-r1-pilot-v0.4",
+        "run_type": "pilot", "collection_stage": "pilot", "protocol_version": PROTOCOL_VERSION,
         "task_id": task_id, "task_version": meta["task_version"], "template_id": meta["template_id"],
         "help_need_class": help_class, "variant_id": alignment if help_class == "must_ask" else None,
         "alignment": alignment if help_class == "must_ask" else "not_applicable",
         "model_provider": cfg["provider"], "model_requested": cfg["model"],
         "model_returned": returned_model if "returned_model" in locals() else None, "endpoint": cfg["endpoint"],
-        "adapter_name": CURRENT_MODEL + "-native-tools", "adapter_version": "pilot-adapter-v0.4",
+        "adapter_name": CURRENT_MODEL + "-native-tools", "adapter_version": "pilot-adapter-v0.5-audit",
         "profile_condition": "R1", "instance_seed": seed, "replicate": 1,
         "candidate_order": manifest.get("candidate_order", []),
         "mapping_ref": str(episode_dir / "identity_mapping.json"), "mapping_hash": mapping_hash,
@@ -374,7 +450,7 @@ def run_episode(task_id, alignment, seed, out_dir, api_key):
         "runtime_version": runtime_hash, "npc_policy_version": meta.get("environment", {}).get("npc_policy_version", "scenario-policy"),
         "evaluator_version": meta.get("evaluator_version", "unknown"),
         "started_at": start_time, "ended_at": datetime.now(timezone.utc).isoformat(),
-        "status": "failed" if status == "api_error" else "completed",
+        "status": "completed" if status == "submitted" else "failed",
         "api_request_ids": api_request_ids, "retries": retry_events, "errors": errors,
         "agent_tokens": {"input": usage_total["prompt_tokens"], "output": usage_total["completion_tokens"], "cached_input": usage_total["cached_input_tokens"]},
         "npc_tokens_or_unavailable": "unavailable", "estimated_cost_usd": None, "cost_status": "unavailable",
@@ -385,10 +461,19 @@ def run_episode(task_id, alignment, seed, out_dir, api_key):
             "checkpoint_score": evaluation.get("checkpoint_score")},
         "artifact_refs": {"trace": str(trace_path), "answer": str(answer_path),
             "evaluation": str(episode_dir / "evaluation.json"), "visible_instance": str(episode_dir),
-            "request_response": str(episode_dir / "model_turns.jsonl")},
+            "request_response": str(episode_dir / "api_io.jsonl"),
+            "model_turns": str(episode_dir / "model_turns.jsonl"),
+            "prompt_snapshot": str(episode_dir / "prompt_snapshot.json")},
         "retry_of": None, "supersedes": None, "exclusion_reason": None,
     }
+    # Portable artifact paths, resolved relative to this batch directory.
+    for key, value in record["artifact_refs"].items():
+        record["artifact_refs"][key] = str(Path(value).relative_to(out_dir))
+    record["mapping_ref"] = str((episode_dir / "identity_mapping.json").relative_to(out_dir))
+    record["sampling_parameters"]["max_request_attempts"] = MAX_REQUEST_ATTEMPTS
+    jsonschema.validate(record, read_json(HERE.parent / "study2_1_run_metadata_schema.json"))
     write_json(episode_dir / "run_record.json", record)
+    append_jsonl(out_dir / "run_status.jsonl", {"run_id": run_id, "status": record["status"], "timestamp": record["ended_at"]})
     return record
 
 
@@ -399,7 +484,13 @@ def main():
     parser.add_argument("--providers", default="openai,moonshot,anthropic")
     parser.add_argument("--limit-per-provider", type=int, help="Limit each provider to the first N pilot episodes.")
     parser.add_argument("--start-index", type=int, default=0, help="Zero-based start offset into the fixed pilot sample.")
+    parser.add_argument("--run-tag", required=True, help="Unique batch suffix; never reuse a prior output directory.")
     args = parser.parse_args()
+    global RUN_TAG, SECRETS
+    if not re.fullmatch(r"[A-Za-z0-9_-]+", args.run_tag):
+        raise SystemExit("run-tag must be alphanumeric with hyphens/underscores")
+    RUN_TAG = args.run_tag
+    SECRETS = [os.environ.get(cfg["env"], "") for cfg in MODELS.values()]
 
     # Stratified feasibility sample: three separated must-ask templates,
     # plus three optional and three no-help templates. One seed and R1 only.
@@ -423,13 +514,16 @@ def main():
             raise SystemExit(f"Unknown provider key: {provider}")
         if not os.environ.get(MODELS[provider]["env"]):
             raise SystemExit(f"{MODELS[provider]['env']} is unavailable to this process; key values are never written.")
-    args.output.mkdir(parents=True, exist_ok=True)
+    args.output.mkdir(parents=True, exist_ok=False)
     write_json(args.output / "pilot_design.json", {
         "purpose": "three-provider R1 tool/runtime/evaluator feasibility pilot; not confirmatory",
-        "protocol_version": "study21-r1-pilot-v0.4",
+        "protocol_version": PROTOCOL_VERSION,
         "models": {p: {"provider": MODELS[p]["provider"], "model": MODELS[p]["model"], "endpoint": MODELS[p]["endpoint"]} for p in providers},
         "profile_condition": "R1", "seed": args.seed,
-        "selection": "3 separated must-ask templates, 3 optional, 3 no-help; one episode each per provider",
+        "selection": [{"task_id": task_id, "alignment": alignment} for task_id, alignment in jobs],
+        "scope": "reduced feasibility smoke test" if len(jobs) < 9 else "stratified feasibility pilot",
+        "max_request_attempts": MAX_REQUEST_ATTEMPTS,
+        "run_tag": RUN_TAG,
         "request_pacing_seconds": {p: MIN_REQUEST_INTERVAL_SECONDS.get(p, 0.0) for p in providers},
         "taskset_root": str(TASKS), "episodes_planned": len(jobs),
         "providers": providers, "total_episodes_planned": len(jobs) * len(providers),
@@ -450,15 +544,16 @@ def main():
             except Exception as exc:
                 meta = read_json(TASKS / task_id / "metadata.json")
                 ts = datetime.now(timezone.utc).isoformat()
-                rec = {"schema_version": "study21-run-v2", "run_id": f"pilot-r1-{provider}-{task_id}-{alignment}-{seed}",
+                failed_run_id = f"pilot-r1-{provider}-{task_id}-{alignment}-{seed}-{RUN_TAG}"
+                rec = {"schema_version": "study21-run-v2", "run_id": failed_run_id,
                        "study_id": "study2.1", "run_type": "pilot", "collection_stage": "pilot",
-                       "protocol_version": "study21-r1-pilot-v0.4", "task_id": task_id,
+                       "protocol_version": PROTOCOL_VERSION, "task_id": task_id,
                        "task_version": meta["task_version"], "template_id": meta["template_id"],
                        "help_need_class": meta["help_need_class"], "variant_id": alignment if meta["help_need_class"] == "must_ask" else None,
                        "alignment": alignment if meta["help_need_class"] == "must_ask" else "not_applicable",
                        "model_provider": MODELS[provider]["provider"], "model_requested": MODELS[provider]["model"],
                        "model_returned": None, "endpoint": MODELS[provider]["endpoint"],
-                       "adapter_name": provider + "-native-tools", "adapter_version": "pilot-adapter-v0.4",
+                       "adapter_name": provider + "-native-tools", "adapter_version": "pilot-adapter-v0.5-audit",
                        "profile_condition": "R1", "instance_seed": seed, "replicate": 1, "candidate_order": [],
                        "mapping_ref": "", "mapping_hash": "",
                        "sampling_parameters": {"max_turns": MAX_TURNS, "max_output_tokens": 1600,
@@ -468,12 +563,17 @@ def main():
                        "runtime_version": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
                        "npc_policy_version": "unknown", "evaluator_version": "unknown",
                        "started_at": ts, "ended_at": ts, "status": "failed", "api_request_ids": [],
-                       "retries": [], "errors": [{"type": type(exc).__name__, "detail": str(exc)}],
+                       "retries": [], "errors": [{"type": type(exc).__name__, "detail": redact(str(exc))}],
                        "agent_tokens": {"input": None, "output": None, "cached_input": None},
                        "npc_tokens_or_unavailable": "unavailable", "estimated_cost_usd": None,
                        "cost_status": "unavailable", "latency_ms": None, "checkpoint_vector": {},
                        "behavior_metrics": {"episode_outcome": "runner_error"}, "artifact_refs": {},
                        "retry_of": None, "supersedes": None, "exclusion_reason": None}
+                failed_dir = args.output / "episodes" / failed_run_id
+                failed_dir.mkdir(parents=True, exist_ok=True)
+                rec["artifact_refs"] = {"preserved_episode_directory": str(failed_dir.relative_to(args.output))}
+                write_json(failed_dir / "run_record.json", rec)
+                append_jsonl(args.output / "run_status.jsonl", {"run_id": failed_run_id, "status": "failed", "timestamp": ts})
             records.append(rec)
             with (args.output / "runs.jsonl").open("a", encoding="utf-8", newline="\n") as stream:
                 stream.write(json.dumps(rec, ensure_ascii=False) + "\n")

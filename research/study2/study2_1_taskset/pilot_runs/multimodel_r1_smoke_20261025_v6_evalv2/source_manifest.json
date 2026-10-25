@@ -1,0 +1,26 @@
+{
+  "base_commit": "c9e305e6550d0b9fb351211896db514e453261b1",
+  "runtime_changes": "v0.5 audit instrumentation; current v2 prompts/evaluator unchanged",
+  "python": "3.9.12",
+  "platform": "macOS-26.2-x86_64-i386-64bit",
+  "jsonschema": "4.4.0",
+  "files": {
+    "research/study2/study2_1_taskset/multimodel_r1_pilot.py": "40de12a378b953f54f72a303964dc0a02186dbf4dc2d23e7555f3eaaccda9982",
+    "research/study2/study2_1_taskset/instantiate_run.py": "9ffd8148f59bcc57a9dc0d6f390fe589a8af6f8ee8004732dcdb42cafb3cac48",
+    "research/study2/study2_1_taskset/evaluate_episode.py": "f36f881b6e0d6c10dd4a15d132a11f23b6927e8bce59fd581120a3ee22c3e107",
+    "research/study2/study2_1_taskset/trace_schema.json": "5547f4c04a2cb46cc6720b1c09a8f8f9fb5212035fad30b30172e1540117dadd",
+    "research/study2/study2_1_taskset/run_record_schema.json": "ae56d652b9aa58fb969a559c47b0a2283366e5a4b416a84b544ff22f2988450e",
+    "research/study2/study2_1_taskset/test_pilot_audit.py": "63f3a4c3eb9912bc5ae6766a08e50248ee5e4f42eb5e9d5eb36bc096334f54ef",
+    "research/study2/study2_1_taskset/audit_pilot_batch.py": "9661478f98f4e14a8bbceb97d73e4333075025c9cffc78f06379377c238962ed",
+    "research/study2/study2_1_taskset/tasks/must-vendor-onboarding/evaluator_spec.json": "180cfd1805adfdb410c0a6d3ef77db5d1a9d2e0d52e49d6998dfaef048439f15",
+    "research/study2/study2_1_taskset/tasks/must-vendor-onboarding/metadata.json": "473abba2c26071e4832dae962e30749ee80fcc70fee30612bd5fe016416de21f",
+    "research/study2/study2_1_taskset/tasks/must-vendor-onboarding/gold_policy.json": "fdc8b4f4bc73eb31f236a9dfad9adc58dadd32fbfbab184ba72ca83acf2086df",
+    "research/study2/study2_1_taskset/tasks/must-vendor-onboarding/task.md": "4aad3e2b8552760a262460f550af93fba01e471b7ed926b8db1faf7d755a95bb",
+    "research/study2/study2_1_taskset/tasks/must-vendor-onboarding/scenarios.json": "3914068778889d9fc907418b6f055f43c8f8715f4f6818c4d7c923b6a0795322",
+    "research/study2/study2_1_taskset/tasks/must-vendor-onboarding/evaluator.py": "6dc0e263a616d28c5321398f0d6d0ebe2bd104a8346e578e4e3c4d335f840bf0",
+    "research/study2/study2_1_run_metadata_schema.json": "0e36f2762011a941fecfa70f0a25915360669a58f1b99065d6e9aa5dc72ec2ea",
+    "research/study2/Study2_1_Model_HelpSeeking_Plan.md": "3ab98eb376a43f0a701d4bca423b7856985758e261bddac558bf5b16a474766d",
+    "research/study2/Study2_1_R1_Agent_Handoff.md": "fa09142dcf1d1ee9b69676b6865ef878758d2a6255a484ab2fcf035314686115",
+    "research/study2/Study2_1_R1_Smoke_Decision_20261025.md": "2618f48ac3c35a1d8e4427ec2124e69c1a462f7dbb23b63a7b8fe6e235bde696"
+  }
+}

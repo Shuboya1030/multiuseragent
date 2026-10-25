@@ -1,0 +1,259 @@
+{
+  "schema_version": "study21-artifact-manifest-v1",
+  "created_at": "2026-10-25T18:15:36.820031+00:00",
+  "base_repository_commit": "c9e305e6550d0b9fb351211896db514e453261b1",
+  "scope": "Three-episode R1 smoke pilot; not confirmatory",
+  "manifest_excludes": [
+    "artifact_manifest.json"
+  ],
+  "files": {
+    "README.md": {
+      "sha256": "36607983cf0f3c6796342be94779ab5a85bc5b8d07c52eb33efd07ecddfbb422",
+      "bytes": 2170
+    },
+    "artifact_audit.json": {
+      "sha256": "d5c8e797d7c69cd62079db88f8c4a023a3ac8c6d10297774946b895ee9165431",
+      "bytes": 601
+    },
+    "console.log": {
+      "sha256": "33926495580898f842f08fdbcc6ffafffad37f091eac513601f82d73636b6f2b",
+      "bytes": 581
+    },
+    "episode_metrics.json": {
+      "sha256": "030b51f86446f66dff7e518281fd2ccd3cbb5eb228c1db968cafbb319e200070",
+      "bytes": 3122
+    },
+    "episodes/pilot-r1-anthropic-must-vendor-onboarding-separated-20261026-smoke20261025v6/answer.json": {
+      "sha256": "bb8374a5794938d7c81f74d24732809a9654f2e4fa97518b9edc3cd795c98010",
+      "bytes": 78
+    },
+    "episodes/pilot-r1-anthropic-must-vendor-onboarding-separated-20261026-smoke20261025v6/api_io.jsonl": {
+      "sha256": "b679b39d0f9e8ad49512d1f0978bf2ee444a51654a39d2cca4b6021f4cbfe1d5",
+      "bytes": 35344
+    },
+    "episodes/pilot-r1-anthropic-must-vendor-onboarding-separated-20261026-smoke20261025v6/candidate_profiles.json": {
+      "sha256": "534951445d434e972d7d2dd102ebc6d9ffef0b70dba119e50ad8d68e6dd9ab43",
+      "bytes": 1739
+    },
+    "episodes/pilot-r1-anthropic-must-vendor-onboarding-separated-20261026-smoke20261025v6/evaluation.json": {
+      "sha256": "0fb3527aa95d05ad7c75aa02b9c5bd073fba15302ceccd006e316aba56fbb678",
+      "bytes": 1815
+    },
+    "episodes/pilot-r1-anthropic-must-vendor-onboarding-separated-20261026-smoke20261025v6/identity_mapping.json": {
+      "sha256": "7d320db45c46268d480a01a15d03687bd8fcde59328764ebe5a1e6092514a650",
+      "bytes": 399
+    },
+    "episodes/pilot-r1-anthropic-must-vendor-onboarding-separated-20261026-smoke20261025v6/model_turns.jsonl": {
+      "sha256": "94c912f2ccfbb22258f45467e5810f6654fe2697fbf715c4b21db5b822daa421",
+      "bytes": 3933
+    },
+    "episodes/pilot-r1-anthropic-must-vendor-onboarding-separated-20261026-smoke20261025v6/prompt_snapshot.json": {
+      "sha256": "f4ad7eff97dc4cbcc29b9b7339f1cfb9eeb57e2cbf22e4ed751e201a97effe89",
+      "bytes": 6166
+    },
+    "episodes/pilot-r1-anthropic-must-vendor-onboarding-separated-20261026-smoke20261025v6/run_manifest.json": {
+      "sha256": "1e0bd19e04cfa89992bdc10504ee7528fdd9f897ddea7f4d7a9522d96ae43654",
+      "bytes": 278
+    },
+    "episodes/pilot-r1-anthropic-must-vendor-onboarding-separated-20261026-smoke20261025v6/run_record.json": {
+      "sha256": "d55077869b7c40725bb80dacca3a032ff651411891e20299f9c11c0b8ebb7794",
+      "bytes": 4127
+    },
+    "episodes/pilot-r1-anthropic-must-vendor-onboarding-separated-20261026-smoke20261025v6/task.md": {
+      "sha256": "4496292e0f328e3476c4f4cc1e79f0682d4caebeb88fe38a5ba4a2c309553152",
+      "bytes": 731
+    },
+    "episodes/pilot-r1-anthropic-must-vendor-onboarding-separated-20261026-smoke20261025v6/trace_events.jsonl": {
+      "sha256": "e07ec136c48d387365a4b3914c21e9b0d5aba086f155f34e734486b87e9b0db1",
+      "bytes": 6542
+    },
+    "episodes/pilot-r1-moonshot-must-vendor-onboarding-separated-20261026-smoke20261025v6/answer.json": {
+      "sha256": "bb8374a5794938d7c81f74d24732809a9654f2e4fa97518b9edc3cd795c98010",
+      "bytes": 78
+    },
+    "episodes/pilot-r1-moonshot-must-vendor-onboarding-separated-20261026-smoke20261025v6/api_io.jsonl": {
+      "sha256": "b956acc8fa7ff4b876b7991c3f2baeaf2c378367c64db0c679bcce73809ef6e4",
+      "bytes": 33991
+    },
+    "episodes/pilot-r1-moonshot-must-vendor-onboarding-separated-20261026-smoke20261025v6/candidate_profiles.json": {
+      "sha256": "534951445d434e972d7d2dd102ebc6d9ffef0b70dba119e50ad8d68e6dd9ab43",
+      "bytes": 1739
+    },
+    "episodes/pilot-r1-moonshot-must-vendor-onboarding-separated-20261026-smoke20261025v6/evaluation.json": {
+      "sha256": "4f3f10d0709473071e81785dae6e39fc256692d6a44af1fb5f13a49a1f176efb",
+      "bytes": 1627
+    },
+    "episodes/pilot-r1-moonshot-must-vendor-onboarding-separated-20261026-smoke20261025v6/identity_mapping.json": {
+      "sha256": "3a5c57f80c5defa298b24e550a5324b1e2897bbd60dcec9c23876367a44077d7",
+      "bytes": 398
+    },
+    "episodes/pilot-r1-moonshot-must-vendor-onboarding-separated-20261026-smoke20261025v6/model_turns.jsonl": {
+      "sha256": "d9e8f7a24eed1f426b102b248795ecb4dd414c8a761ab1ac5829c51baabe0cac",
+      "bytes": 2911
+    },
+    "episodes/pilot-r1-moonshot-must-vendor-onboarding-separated-20261026-smoke20261025v6/prompt_snapshot.json": {
+      "sha256": "f4ad7eff97dc4cbcc29b9b7339f1cfb9eeb57e2cbf22e4ed751e201a97effe89",
+      "bytes": 6166
+    },
+    "episodes/pilot-r1-moonshot-must-vendor-onboarding-separated-20261026-smoke20261025v6/run_manifest.json": {
+      "sha256": "f6dcc466bb2246efce077abb4164caeb7e72c8d7f9155c9ace37fafa185ff3f9",
+      "bytes": 277
+    },
+    "episodes/pilot-r1-moonshot-must-vendor-onboarding-separated-20261026-smoke20261025v6/run_record.json": {
+      "sha256": "8e5a4722efaea640e8a26aa7394c6dbfe5867330df0ea0671fbc006b993dc4c8",
+      "bytes": 3917
+    },
+    "episodes/pilot-r1-moonshot-must-vendor-onboarding-separated-20261026-smoke20261025v6/task.md": {
+      "sha256": "4496292e0f328e3476c4f4cc1e79f0682d4caebeb88fe38a5ba4a2c309553152",
+      "bytes": 731
+    },
+    "episodes/pilot-r1-moonshot-must-vendor-onboarding-separated-20261026-smoke20261025v6/trace_events.jsonl": {
+      "sha256": "806899aa912aa0e13f277f3f93691ff4cf40a69749f6494b8fea5fa7c5315551",
+      "bytes": 6116
+    },
+    "episodes/pilot-r1-openai-must-vendor-onboarding-separated-20261026-smoke20261025v6/answer.json": {
+      "sha256": "bb8374a5794938d7c81f74d24732809a9654f2e4fa97518b9edc3cd795c98010",
+      "bytes": 78
+    },
+    "episodes/pilot-r1-openai-must-vendor-onboarding-separated-20261026-smoke20261025v6/api_io.jsonl": {
+      "sha256": "22ad7ce92290e8e2f4cd4e6e7e30492dac74c9bb0aa6405d7a83f9e99bcc347d",
+      "bytes": 35281
+    },
+    "episodes/pilot-r1-openai-must-vendor-onboarding-separated-20261026-smoke20261025v6/candidate_profiles.json": {
+      "sha256": "534951445d434e972d7d2dd102ebc6d9ffef0b70dba119e50ad8d68e6dd9ab43",
+      "bytes": 1739
+    },
+    "episodes/pilot-r1-openai-must-vendor-onboarding-separated-20261026-smoke20261025v6/evaluation.json": {
+      "sha256": "3dc5d3c98f82339dcdd2455e11f1d20e48b8866e3da99772bbe6224946dd8071",
+      "bytes": 1533
+    },
+    "episodes/pilot-r1-openai-must-vendor-onboarding-separated-20261026-smoke20261025v6/identity_mapping.json": {
+      "sha256": "fd183474cb5dd7b52c83273a256a92895ad75a63ab387b30d1b9222b33a766d8",
+      "bytes": 396
+    },
+    "episodes/pilot-r1-openai-must-vendor-onboarding-separated-20261026-smoke20261025v6/model_turns.jsonl": {
+      "sha256": "76d64590fd27ed9afb73f82e0fbaea70b16feafd4a274eaa09d4f205bc52154c",
+      "bytes": 3483
+    },
+    "episodes/pilot-r1-openai-must-vendor-onboarding-separated-20261026-smoke20261025v6/prompt_snapshot.json": {
+      "sha256": "f4ad7eff97dc4cbcc29b9b7339f1cfb9eeb57e2cbf22e4ed751e201a97effe89",
+      "bytes": 6166
+    },
+    "episodes/pilot-r1-openai-must-vendor-onboarding-separated-20261026-smoke20261025v6/run_manifest.json": {
+      "sha256": "371cff7a1441ae9e9497440ded26b463f311a7e10ee977836724ff5173927d5d",
+      "bytes": 275
+    },
+    "episodes/pilot-r1-openai-must-vendor-onboarding-separated-20261026-smoke20261025v6/run_record.json": {
+      "sha256": "1a47d685be982dc690216a3d2d5c6cb09113dcebc9eb90ea4c12542c0c5f7962",
+      "bytes": 4127
+    },
+    "episodes/pilot-r1-openai-must-vendor-onboarding-separated-20261026-smoke20261025v6/task.md": {
+      "sha256": "4496292e0f328e3476c4f4cc1e79f0682d4caebeb88fe38a5ba4a2c309553152",
+      "bytes": 731
+    },
+    "episodes/pilot-r1-openai-must-vendor-onboarding-separated-20261026-smoke20261025v6/trace_events.jsonl": {
+      "sha256": "a0d167030acfc99a9096b7007eabbfe76a1266abcb35ead0941840ff484f2041",
+      "bytes": 5899
+    },
+    "format_comparison.json": {
+      "sha256": "8365b9592f7662fb2c4f5fa4e166a680abe2e5bc29e9fc021c5916c94b32ea45",
+      "bytes": 2590
+    },
+    "pilot_design.json": {
+      "sha256": "1b4dba9d6a7f74b51adb140bff3958d9465fd8ae9399bf515c343b330c12b13c",
+      "bytes": 1456
+    },
+    "pilot_review.md": {
+      "sha256": "3231dd3055e7d3b107ba933ad161a76fea00e2421ab22131775f7343990f5c57",
+      "bytes": 7138
+    },
+    "pilot_summary.json": {
+      "sha256": "67052dd95318054b2d600c61e3fb91231c8cbbb49b2e9a10277a999764e41da7",
+      "bytes": 330
+    },
+    "preflight_checks.json": {
+      "sha256": "79cefb9555a7c18016a2d8352729b32d4539e08d86287a9d3d9d6a3787842a91",
+      "bytes": 446
+    },
+    "run_status.jsonl": {
+      "sha256": "b9063c5c674954ce47befb06015eb07db01ca6983460eb44a4a9dc19767b43e8",
+      "bytes": 964
+    },
+    "runs.jsonl": {
+      "sha256": "1b8f9e5d2e0dd08d155dacfcf01b4de8039d528179e72f423bb5bcde1319faf2",
+      "bytes": 11259
+    },
+    "source_manifest.json": {
+      "sha256": "144cd71881c6f68ff498863673693dcd590d8d8fc17ebbfd22766205c5ea8bea",
+      "bytes": 2575
+    },
+    "source_snapshot/research/study2/Study2_1_Model_HelpSeeking_Plan.md": {
+      "sha256": "3ab98eb376a43f0a701d4bca423b7856985758e261bddac558bf5b16a474766d",
+      "bytes": 44280
+    },
+    "source_snapshot/research/study2/Study2_1_R1_Agent_Handoff.md": {
+      "sha256": "fa09142dcf1d1ee9b69676b6865ef878758d2a6255a484ab2fcf035314686115",
+      "bytes": 11905
+    },
+    "source_snapshot/research/study2/Study2_1_R1_Smoke_Decision_20261025.md": {
+      "sha256": "2618f48ac3c35a1d8e4427ec2124e69c1a462f7dbb23b63a7b8fe6e235bde696",
+      "bytes": 4946
+    },
+    "source_snapshot/research/study2/study2_1_run_metadata_schema.json": {
+      "sha256": "0e36f2762011a941fecfa70f0a25915360669a58f1b99065d6e9aa5dc72ec2ea",
+      "bytes": 4834
+    },
+    "source_snapshot/research/study2/study2_1_taskset/audit_pilot_batch.py": {
+      "sha256": "9661478f98f4e14a8bbceb97d73e4333075025c9cffc78f06379377c238962ed",
+      "bytes": 9211
+    },
+    "source_snapshot/research/study2/study2_1_taskset/evaluate_episode.py": {
+      "sha256": "f36f881b6e0d6c10dd4a15d132a11f23b6927e8bce59fd581120a3ee22c3e107",
+      "bytes": 10527
+    },
+    "source_snapshot/research/study2/study2_1_taskset/instantiate_run.py": {
+      "sha256": "9ffd8148f59bcc57a9dc0d6f390fe589a8af6f8ee8004732dcdb42cafb3cac48",
+      "bytes": 4042
+    },
+    "source_snapshot/research/study2/study2_1_taskset/multimodel_r1_pilot.py": {
+      "sha256": "40de12a378b953f54f72a303964dc0a02186dbf4dc2d23e7555f3eaaccda9982",
+      "bytes": 38222
+    },
+    "source_snapshot/research/study2/study2_1_taskset/run_record_schema.json": {
+      "sha256": "ae56d652b9aa58fb969a559c47b0a2283366e5a4b416a84b544ff22f2988450e",
+      "bytes": 584
+    },
+    "source_snapshot/research/study2/study2_1_taskset/tasks/must-vendor-onboarding/evaluator.py": {
+      "sha256": "6dc0e263a616d28c5321398f0d6d0ebe2bd104a8346e578e4e3c4d335f840bf0",
+      "bytes": 566
+    },
+    "source_snapshot/research/study2/study2_1_taskset/tasks/must-vendor-onboarding/evaluator_spec.json": {
+      "sha256": "180cfd1805adfdb410c0a6d3ef77db5d1a9d2e0d52e49d6998dfaef048439f15",
+      "bytes": 1035
+    },
+    "source_snapshot/research/study2/study2_1_taskset/tasks/must-vendor-onboarding/gold_policy.json": {
+      "sha256": "fdc8b4f4bc73eb31f236a9dfad9adc58dadd32fbfbab184ba72ca83acf2086df",
+      "bytes": 2402
+    },
+    "source_snapshot/research/study2/study2_1_taskset/tasks/must-vendor-onboarding/metadata.json": {
+      "sha256": "473abba2c26071e4832dae962e30749ee80fcc70fee30612bd5fe016416de21f",
+      "bytes": 4049
+    },
+    "source_snapshot/research/study2/study2_1_taskset/tasks/must-vendor-onboarding/scenarios.json": {
+      "sha256": "3914068778889d9fc907418b6f055f43c8f8715f4f6818c4d7c923b6a0795322",
+      "bytes": 11394
+    },
+    "source_snapshot/research/study2/study2_1_taskset/tasks/must-vendor-onboarding/task.md": {
+      "sha256": "4aad3e2b8552760a262460f550af93fba01e471b7ed926b8db1faf7d755a95bb",
+      "bytes": 731
+    },
+    "source_snapshot/research/study2/study2_1_taskset/test_pilot_audit.py": {
+      "sha256": "63f3a4c3eb9912bc5ae6766a08e50248ee5e4f42eb5e9d5eb36bc096334f54ef",
+      "bytes": 4434
+    },
+    "source_snapshot/research/study2/study2_1_taskset/trace_schema.json": {
+      "sha256": "5547f4c04a2cb46cc6720b1c09a8f8f9fb5212035fad30b30172e1540117dadd",
+      "bytes": 671
+    }
+  }
+}

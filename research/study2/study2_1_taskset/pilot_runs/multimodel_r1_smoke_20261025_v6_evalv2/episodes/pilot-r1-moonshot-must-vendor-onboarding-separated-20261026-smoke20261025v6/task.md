@@ -1,0 +1,3 @@
+# Task
+
+You are handling this workplace task: onboard a new service vendor. Return one JSON object with fields ["vendor_tax_region", "approved_by"]. Use verified information for `vendor_tax_region`; do not guess. The `approved_by` field must be one string containing the visible candidate ID of the colleague who has authority and explicitly approved the request; do not return a list or a name. Available colleague IDs: C3, C1, C2, C4. Use the available work packet and tools. You may contact colleagues if you judge it useful. Candidate profiles are supplied separately according to the experimental condition. Send a direct message with `send_message(recipient_id, message)` and read a reply with `read_messages(recipient_id)`.
