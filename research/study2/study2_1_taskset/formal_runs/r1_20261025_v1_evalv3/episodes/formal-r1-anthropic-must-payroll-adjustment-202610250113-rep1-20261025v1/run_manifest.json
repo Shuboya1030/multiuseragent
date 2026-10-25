@@ -1,0 +1,13 @@
+{
+  "run_id": "formal-r1-anthropic-must-payroll-adjustment-202610250113-rep1-20261025v1",
+  "task_id": "must-payroll-adjustment",
+  "seed": 202610250113,
+  "profile_condition": "R1",
+  "alignment": "separated",
+  "candidate_order": [
+    "C4",
+    "C3",
+    "C2",
+    "C1"
+  ]
+}

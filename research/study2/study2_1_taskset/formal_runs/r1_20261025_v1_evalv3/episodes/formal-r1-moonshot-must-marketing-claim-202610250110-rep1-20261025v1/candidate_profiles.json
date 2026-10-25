@@ -1,0 +1,26 @@
+[
+  {
+    "candidate_id": "C4",
+    "name": "Alex Rivera",
+    "job_title": "Project Team Member",
+    "profile": "Alex Rivera — Project Team Member. Alex Rivera works in the marketing compliance domain. Their expertise is general team coordination; their familiarity is no stated task-domain expertise beyond general team coordination. Their decision authority is no approval authority for this action. They are available."
+  },
+  {
+    "candidate_id": "C1",
+    "name": "Devon Li",
+    "job_title": "Program Associate",
+    "profile": "Devon Li — Program Associate. Devon Li works in the marketing compliance domain. Their expertise is general team coordination; their familiarity is no stated task-domain expertise beyond general team coordination. Their decision authority is approve external product marketing claims. They are available."
+  },
+  {
+    "candidate_id": "C3",
+    "name": "Rowan Diaz",
+    "job_title": "Business Associate",
+    "profile": "Rowan Diaz — Business Associate. Rowan Diaz works in the marketing compliance domain. Their expertise is product claim substantiation and trial evidence; their familiarity is specialist familiarity with product claim substantiation and trial evidence. Their decision authority is no approval authority for this action. They are available."
+  },
+  {
+    "candidate_id": "C2",
+    "name": "Taylor Wu",
+    "job_title": "Operations Associate",
+    "profile": "Taylor Wu — Operations Associate. Taylor Wu works in the marketing compliance domain. Their expertise is general team coordination; their familiarity is general familiarity with marketing compliance, but no access to the task-specific record. Their decision authority is no approval authority for this action. They are available."
+  }
+]

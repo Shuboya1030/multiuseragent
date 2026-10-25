@@ -1,0 +1,22 @@
+{
+  "baseline_summary": {
+    "duration_hours": 2,
+    "allowed_days": [
+      "Saturday",
+      "Sunday"
+    ],
+    "staff": [
+      "on-call A",
+      "on-call B"
+    ],
+    "deadline": "August 31"
+  },
+  "recommendation": "Schedule the maintenance window for Sunday 02:00–04:00 local time before August 31. Sunday early morning typically experiences the lowest customer traffic, minimizing disruption. Assign on-call A as the primary operator and on-call B as the backup/escalation contact. Mitigation steps: (1) Send customer notifications at least 48 hours in advance via status page and email; (2) Prepare a tested rollback procedure and keep it on standby; (3) Begin with a canary or limited-scope deployment to reduce blast radius; (4) Monitor error rates, latency, and traffic continuously during the window; (5) Keep a support channel open with on-call B handling incoming incidents while on-call A executes changes; (6) Abort and rollback if error thresholds exceed 5% or latency degrades beyond SLO for more than 10 minutes.",
+  "quality_notes": [
+    "Selected Sunday early morning to minimize customer impact based on typical weekend traffic patterns.",
+    "Window duration is exactly 2 hours, matching the packet constraint.",
+    "Both on-call staff are utilized: primary executor and backup/escalation.",
+    "Advance notification and rollback readiness reduce risk of extended outage.",
+    "Monitoring and abort criteria provide clear go/no-go decision points."
+  ]
+}

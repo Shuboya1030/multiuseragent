@@ -1,0 +1,18 @@
+{
+  "baseline_summary": {
+    "arrival_city": "Berlin",
+    "meeting_city": "Potsdam",
+    "arrival": "09:00",
+    "meeting": "11:00",
+    "date": "April 8",
+    "rail_minutes": 25,
+    "taxi_minutes": 40
+  },
+  "recommendation": "Agenda for April 8: Arrive Berlin at 09:00. Allow a 15-minute transfer buffer for station navigation (per local office coordinator). Depart Berlin by rail at 09:15, arriving in Potsdam at 09:40. This provides a comfortable 80-minute margin before the 11:00 meeting. Backup: if the rail route encounters delays, switch to taxi—depart Berlin by 10:00 latest to arrive in Potsdam by 10:40, preserving a 20-minute pre-meeting buffer. Keep both options active given both routes are currently operating.",
+  "quality_notes": [
+    "Rail is the preferred primary route due to shorter travel time (25 min vs. 40 min).",
+    "A 15-minute station-navigation buffer was recommended by colleague C4 as a contingency.",
+    "Taxi backup remains feasible if invoked by 10:00, still meeting the 11:00 appointment.",
+    "The primary schedule is feasible with significant time margin before the meeting."
+  ]
+}

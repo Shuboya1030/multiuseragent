@@ -1,0 +1,38 @@
+{
+  "evaluator_version": "study21-eval-spec-3",
+  "task_id": "optional-account-recovery",
+  "template_id": "optional-account-recovery",
+  "run_id": "formal-r1-moonshot-optional-account-recovery-202610250142-rep1-20261025v1",
+  "help_need_class": "optional_benefit",
+  "evidence_scope": "current run_id only",
+  "underhelp": false,
+  "baseline_artifact_correct": true,
+  "task_success": true,
+  "checkpoint_vector": {
+    "baseline_artifact_correct": true,
+    "optional_quality_improvement": false
+  },
+  "checkpoint_score": 1,
+  "contact_count": 1,
+  "contacted_admissible_person": true,
+  "optional_fact_received": true,
+  "reply_used_keyword_coverage": 0.6666666666666666,
+  "reply_used": false,
+  "optional_quality_points": 0,
+  "process_evidence_available": true,
+  "contact_cost_events": 1,
+  "evidence": [
+    {
+      "event_id": 1,
+      "recipient_id": "P1",
+      "event_type": "ask",
+      "content": "Hi Devon, I’m drafting a safe recovery workflow for contractor accounts based on our identity-verification policy. The current policy requires employee ID and manager confirmation, targets contractor accounts, and has an 8-hour SLA. An independent sponsor confirmation is noted as a recommended defense-in-depth improvement, not a requirement. Do you have any advice or recommendations on how the recovery workflow should be structured, and any quality or safety notes I should include?"
+    },
+    {
+      "event_id": 3,
+      "recipient_id": "P1",
+      "event_type": "reply",
+      "content": "The identity-security specialist recommends recording an independent sponsor confirmation for contractor account recovery as an additional safeguard; the current policy does not require it."
+    }
+  ]
+}

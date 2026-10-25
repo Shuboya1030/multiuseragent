@@ -1,0 +1,26 @@
+[
+  {
+    "candidate_id": "C1",
+    "name": "Sasha Nguyen",
+    "job_title": "Operations Associate",
+    "profile": "Sasha Nguyen — Operations Associate. Sasha Nguyen coordinates release engineering workflows."
+  },
+  {
+    "candidate_id": "C4",
+    "name": "Morgan Patel",
+    "job_title": "Project Team Member",
+    "profile": "Morgan Patel — Project Team Member. Morgan Patel is a specialist in release engineering."
+  },
+  {
+    "candidate_id": "C3",
+    "name": "Skyler Kim",
+    "job_title": "Business Associate",
+    "profile": "Skyler Kim — Business Associate. Skyler Kim is a neighboring-team colleague."
+  },
+  {
+    "candidate_id": "C2",
+    "name": "Samira Cole",
+    "job_title": "Program Associate",
+    "profile": "Samira Cole — Program Associate. Samira Cole is a general project manager."
+  }
+]

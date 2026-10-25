@@ -1,0 +1,26 @@
+[
+  {
+    "candidate_id": "C2",
+    "name": "Jordan Lee",
+    "job_title": "Project Team Member",
+    "profile": "Jordan Lee — Project Team Member. Jordan Lee is a colleague in site reliability coordination."
+  },
+  {
+    "candidate_id": "C1",
+    "name": "Reese Wang",
+    "job_title": "Program Associate",
+    "profile": "Reese Wang — Program Associate. Reese Wang is a site reliability professional with experience in tenant batch window."
+  },
+  {
+    "candidate_id": "C4",
+    "name": "Morgan Patel",
+    "job_title": "Operations Associate",
+    "profile": "Morgan Patel — Operations Associate. Morgan Patel is an adjacent-domain colleague."
+  },
+  {
+    "candidate_id": "C3",
+    "name": "Skyler Kim",
+    "job_title": "Business Associate",
+    "profile": "Skyler Kim — Business Associate. Skyler Kim is a general project coordinator."
+  }
+]

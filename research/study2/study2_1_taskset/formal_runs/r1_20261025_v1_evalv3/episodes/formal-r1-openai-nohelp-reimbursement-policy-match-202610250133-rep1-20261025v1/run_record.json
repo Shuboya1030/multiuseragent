@@ -1,0 +1,115 @@
+{
+  "schema_version": "study21-run-v2",
+  "run_id": "formal-r1-openai-nohelp-reimbursement-policy-match-202610250133-rep1-20261025v1",
+  "study_id": "study2.1",
+  "run_type": "confirmatory",
+  "collection_stage": "R1",
+  "protocol_version": "study21-formal-r1-v1-evalv3",
+  "task_id": "nohelp-reimbursement-policy-match",
+  "task_version": "1.0-draft",
+  "template_id": "nohelp-reimbursement-policy-match",
+  "help_need_class": "no_help",
+  "variant_id": null,
+  "alignment": "not_applicable",
+  "model_provider": "OpenAI",
+  "model_requested": "gpt-5.4-mini",
+  "model_returned": "gpt-5.4-mini-2026-03-17",
+  "endpoint": "https://api.openai.com/v1/chat/completions",
+  "adapter_name": "openai-native-tools",
+  "adapter_version": "pilot-adapter-v0.6-evalv3",
+  "profile_condition": "R1",
+  "instance_seed": 202610250133,
+  "replicate": 1,
+  "candidate_order": [
+    "C4",
+    "C1",
+    "C2",
+    "C3"
+  ],
+  "mapping_ref": "episodes/formal-r1-openai-nohelp-reimbursement-policy-match-202610250133-rep1-20261025v1/identity_mapping.json",
+  "mapping_hash": "64f63232274eed03b5598a6e7ebc9b168eadaa80020133ccd50cd4d8f9fb5ca6",
+  "sampling_parameters": {
+    "max_turns": 8,
+    "max_output_tokens": 1600,
+    "tool_choice": "auto",
+    "parallel_tool_calls": false,
+    "reasoning_effort": "none",
+    "temperature": "provider_default",
+    "min_request_interval_seconds": 0.0,
+    "max_request_attempts": 1,
+    "input_token_safety_reservation": 32768
+  },
+  "prompt_hashes": {
+    "system": "0312affafd86ab54063d2e7d72ed9ba3bff10e53e16d5ac6901620ca2ab6f1ff",
+    "task": "3afd52d2ed611a17b2217601040618d545ee14cd9145bf3c1ba0f6718b1aeb4b",
+    "tool_schema": "e4b1f0999f312c4d624ac8f8d68809d1304722e03b5dbd134ba88b10fad72f3c"
+  },
+  "task_hashes": {
+    "task": "3afd52d2ed611a17b2217601040618d545ee14cd9145bf3c1ba0f6718b1aeb4b",
+    "gold": "7b8f06ffa158634acdae612976abb32996c734fb364577f09e7518ece491ec57",
+    "scenario": "4992d573f77d67bfc98082ebd2c74145db4c3123a4a78b3a4916f326ca7b1bb7",
+    "evaluator": "d4c323aceee106d5a65bef088d4eb2e32b286f641783c90b0f59508c1e3702e7"
+  },
+  "runtime_version": "b50127b6e22101a5df59c91a29342fd6751684329059adfb9484eaf9a6fefc89",
+  "npc_policy_version": "1.0-draft",
+  "evaluator_version": "study21-eval-spec-3",
+  "started_at": "2026-10-25T19:30:10.871812+00:00",
+  "ended_at": "2026-10-25T19:30:11.994546+00:00",
+  "status": "completed",
+  "api_request_ids": [
+    "req_2ea7142251074736b4465edc388549a3"
+  ],
+  "retries": [],
+  "errors": [],
+  "agent_tokens": {
+    "input": 835,
+    "output": 30,
+    "cached_input": 0
+  },
+  "npc_tokens_or_unavailable": "unavailable",
+  "estimated_cost_usd": 0.00076125,
+  "cost_status": "estimated",
+  "latency_ms": 1123,
+  "checkpoint_vector": {
+    "artifact_complete": true,
+    "answer_exact": true,
+    "no_unnecessary_contact": true
+  },
+  "behavior_metrics": {
+    "episode_outcome": "submitted",
+    "ask_count": 0,
+    "task_success": true,
+    "underhelp": false,
+    "missing_required_information": null,
+    "missing_required_approval": null,
+    "optional_quality_points": null,
+    "premature_approval_request": null,
+    "overhelp": false,
+    "first_contact_valid": null,
+    "checkpoint_score": 3
+  },
+  "artifact_refs": {
+    "trace": "episodes/formal-r1-openai-nohelp-reimbursement-policy-match-202610250133-rep1-20261025v1/trace_events.jsonl",
+    "answer": "episodes/formal-r1-openai-nohelp-reimbursement-policy-match-202610250133-rep1-20261025v1/answer.json",
+    "evaluation": "episodes/formal-r1-openai-nohelp-reimbursement-policy-match-202610250133-rep1-20261025v1/evaluation.json",
+    "visible_instance": "episodes/formal-r1-openai-nohelp-reimbursement-policy-match-202610250133-rep1-20261025v1",
+    "request_response": "episodes/formal-r1-openai-nohelp-reimbursement-policy-match-202610250133-rep1-20261025v1/api_io.jsonl",
+    "model_turns": "episodes/formal-r1-openai-nohelp-reimbursement-policy-match-202610250133-rep1-20261025v1/model_turns.jsonl",
+    "prompt_snapshot": "episodes/formal-r1-openai-nohelp-reimbursement-policy-match-202610250133-rep1-20261025v1/prompt_snapshot.json",
+    "cost_ledger": "cost_ledger.jsonl"
+  },
+  "retry_of": null,
+  "supersedes": null,
+  "exclusion_reason": null,
+  "pricing_snapshot": {
+    "date": "2026-10-25",
+    "rates_per_million_tokens": {
+      "input": 0.75,
+      "cached": 0.075,
+      "output": 4.5,
+      "source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini"
+    },
+    "reference": "pricing_snapshot.json",
+    "taxes_included": false
+  }
+}

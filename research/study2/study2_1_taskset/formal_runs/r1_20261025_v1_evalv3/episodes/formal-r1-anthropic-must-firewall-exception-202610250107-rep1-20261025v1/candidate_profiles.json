@@ -1,0 +1,26 @@
+[
+  {
+    "candidate_id": "C1",
+    "name": "Quinn Zhao",
+    "job_title": "Operations Associate",
+    "profile": "Quinn Zhao — Operations Associate. Quinn Zhao works in the network security domain. Their expertise is network service configurations and firewall rules; their familiarity is specialist familiarity with network service configurations and firewall rules. Their decision authority is no approval authority for this action. They are available."
+  },
+  {
+    "candidate_id": "C3",
+    "name": "Morgan Patel",
+    "job_title": "Project Team Member",
+    "profile": "Morgan Patel — Project Team Member. Morgan Patel works in the network security domain. Their expertise is general team coordination; their familiarity is no stated task-domain expertise beyond general team coordination. Their decision authority is approve firewall exceptions for production systems. They are available."
+  },
+  {
+    "candidate_id": "C2",
+    "name": "Kai Sullivan",
+    "job_title": "Program Associate",
+    "profile": "Kai Sullivan — Program Associate. Kai Sullivan works in the network security domain. Their expertise is general team coordination; their familiarity is no stated task-domain expertise beyond general team coordination. Their decision authority is no approval authority for this action. They are available."
+  },
+  {
+    "candidate_id": "C4",
+    "name": "Avery Chen",
+    "job_title": "Business Associate",
+    "profile": "Avery Chen — Business Associate. Avery Chen works in the network security domain. Their expertise is general team coordination; their familiarity is general familiarity with network security, but no access to the task-specific record. Their decision authority is no approval authority for this action. They are available."
+  }
+]

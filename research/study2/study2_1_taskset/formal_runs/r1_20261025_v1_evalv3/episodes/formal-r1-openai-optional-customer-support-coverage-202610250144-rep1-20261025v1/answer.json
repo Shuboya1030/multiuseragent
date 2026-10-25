@@ -1,0 +1,22 @@
+{
+  "baseline_summary": {
+    "launch_start": "June 3",
+    "launch_weeks": 4,
+    "supporters": [
+      "Ari",
+      "Bo"
+    ],
+    "daily_hours": "09:00-17:00 UTC",
+    "regions": [
+      "North America",
+      "Europe"
+    ]
+  },
+  "recommendation": "Use Ari and Bo as the two daily launch supporters for the full 4-week window starting June 3. To optimize coverage for the affected regions, prioritize Europe late in the day during week 1: ensure one supporter remains available after 16:00 UTC, since European customers need the strongest post-16:00 coverage early in launch. A practical rota is to split the 09:00-17:00 UTC day into an early/late handoff, with one supporter focused on North America during the earlier UTC hours and the other covering Europe later in the shift; swap the late-duty assignment across days or midweek to avoid fatigue while maintaining consistent late-day Europe coverage in the first week. After week 1, maintain balanced regional coverage across both supporters for North America and Europe throughout the remaining 3 weeks.",
+  "quality_notes": [
+    "Used the visible launch dates and staffing exactly as provided.",
+    "Incorporated the colleague input that Europe needs support after 16:00 UTC during the first launch week.",
+    "No additional staffing assumptions were introduced beyond Ari and Bo.",
+    "Recommendation is framed as a rota approach rather than a fixed hour-by-hour schedule because the packet does not specify individual availability blocks."
+  ]
+}

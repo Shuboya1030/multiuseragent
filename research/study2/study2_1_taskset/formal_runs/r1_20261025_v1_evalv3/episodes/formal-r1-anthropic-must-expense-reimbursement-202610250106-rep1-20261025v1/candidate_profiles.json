@@ -1,0 +1,26 @@
+[
+  {
+    "candidate_id": "C1",
+    "name": "Casey Lin",
+    "job_title": "Program Associate",
+    "profile": "Casey Lin — Program Associate. Casey Lin works in the expense operations domain. Their expertise is general team coordination; their familiarity is no stated task-domain expertise beyond general team coordination. Their decision authority is no approval authority for this action. They are available."
+  },
+  {
+    "candidate_id": "C4",
+    "name": "Rowan Diaz",
+    "job_title": "Operations Associate",
+    "profile": "Rowan Diaz — Operations Associate. Rowan Diaz works in the expense operations domain. Their expertise is employee expense claims and reimbursement policy; their familiarity is specialist familiarity with employee expense claims and reimbursement policy. Their decision authority is no approval authority for this action. They are available."
+  },
+  {
+    "candidate_id": "C2",
+    "name": "Riley Park",
+    "job_title": "Project Team Member",
+    "profile": "Riley Park — Project Team Member. Riley Park works in the expense operations domain. Their expertise is general team coordination; their familiarity is general familiarity with expense operations, but no access to the task-specific record. Their decision authority is no approval authority for this action. They are available."
+  },
+  {
+    "candidate_id": "C3",
+    "name": "Drew Morgan",
+    "job_title": "Business Associate",
+    "profile": "Drew Morgan — Business Associate. Drew Morgan works in the expense operations domain. Their expertise is general team coordination; their familiarity is no stated task-domain expertise beyond general team coordination. Their decision authority is approve employee expense reimbursements. They are available."
+  }
+]

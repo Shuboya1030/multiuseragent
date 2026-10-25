@@ -1,0 +1,17 @@
+{
+  "baseline_summary": {
+    "service": "Search API",
+    "start": "10:10 UTC",
+    "resolved": "10:42 UTC",
+    "cause": "expired certificate",
+    "status": "resolved"
+  },
+  "recommendation": "Draft notice: Search API incident (resolved). Timeline: service disrupted from 10:10 UTC and resolved at 10:42 UTC (about 32 minutes). Cause: expired certificate. Status: resolved. Impact: two tenants experienced delayed indexing after service recovery, per customer support (C1); the full affected-tenant list is held by customer support. Next steps: follow-up actions have not been confirmed. Suggested for the incident owner to confirm before publishing: certificate renewal and expiry monitoring review, and a postmortem owner and date. Do not publish next steps as committed until confirmed.",
+  "quality_notes": [
+    "Baseline summary copied unchanged from the work packet.",
+    "Impact beyond the packet comes from C1 (Rowan Diaz), who reported two tenants with delayed indexing after recovery; the full affected-tenant list was not provided to me.",
+    "C3 (Jordan Lee) reported no additional task-specific information.",
+    "No confirmed next steps or owners were available; the listed follow-ups are suggestions requiring confirmation.",
+    "Duration of about 32 minutes is calculated from the packet's start and resolved times."
+  ]
+}

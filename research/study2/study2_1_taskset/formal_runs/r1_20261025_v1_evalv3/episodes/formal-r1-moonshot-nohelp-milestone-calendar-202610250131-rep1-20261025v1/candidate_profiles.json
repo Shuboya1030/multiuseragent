@@ -1,0 +1,26 @@
+[
+  {
+    "candidate_id": "C1",
+    "name": "Reese Wang",
+    "job_title": "Operations Associate",
+    "profile": "Reese Wang — Operations Associate. Reese Wang is a general project manager."
+  },
+  {
+    "candidate_id": "C2",
+    "name": "Avery Chen",
+    "job_title": "Program Associate",
+    "profile": "Avery Chen — Program Associate. Avery Chen is a neighboring-team colleague."
+  },
+  {
+    "candidate_id": "C4",
+    "name": "Morgan Patel",
+    "job_title": "Business Associate",
+    "profile": "Morgan Patel — Business Associate. Morgan Patel coordinates program management workflows."
+  },
+  {
+    "candidate_id": "C3",
+    "name": "Sasha Nguyen",
+    "job_title": "Project Team Member",
+    "profile": "Sasha Nguyen — Project Team Member. Sasha Nguyen is a specialist in program management."
+  }
+]

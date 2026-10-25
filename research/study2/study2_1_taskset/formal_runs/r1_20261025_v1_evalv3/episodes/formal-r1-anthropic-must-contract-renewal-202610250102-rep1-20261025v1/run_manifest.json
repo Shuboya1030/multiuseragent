@@ -1,0 +1,13 @@
+{
+  "run_id": "formal-r1-anthropic-must-contract-renewal-202610250102-rep1-20261025v1",
+  "task_id": "must-contract-renewal",
+  "seed": 202610250102,
+  "profile_condition": "R1",
+  "alignment": "separated",
+  "candidate_order": [
+    "C2",
+    "C3",
+    "C4",
+    "C1"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "baseline_summary": {
+    "feature": "scheduled exports",
+    "formats": [
+      "CSV",
+      "JSON"
+    ],
+    "max_rows": 10000,
+    "launch": "November 4"
+  },
+  "recommendation": "Draft customer FAQ for Scheduled Exports (launches November 4)\n\nQ: What is scheduled exports?\nA: It lets you set up exports of your data to run on a schedule, delivered in CSV or JSON format.\n\nQ: Is scheduled export real-time?\nA: No. Scheduled exports run on a schedule and are not real-time synchronization. Changes made between runs will not appear until the next export runs.\n\nQ: What file formats are supported?\nA: CSV and JSON.\n\nQ: How many rows can one export include?\nA: Up to 10,000 rows per export.\n\nQ: What happens if my data exceeds 10,000 rows?\nA: [OPEN ITEM - to be confirmed by product team before publishing: whether the export is truncated, fails with an error, or is split into multiple files.]\n\nQ: How often can exports run, and how long are files kept?\nA: [OPEN ITEM - schedule frequency options, file retention period, and time zone behavior are not in the work packet and must be confirmed before publishing.]\n\nQuality notes on this draft: The work packet supplies only formats, the row limit, and the launch date. Colleagues C1, C2, and C4 did not provide confirmation of overflow behavior, schedule frequency, or retention; C2 and C4 said they had no additional task-specific information. The real-time misconception comes from C1's reply. Do not publish the FAQ until the open items are answered by the feature owner.",
+  "quality_notes": [
+    "baseline_summary is copied exactly from the supplied work packet.",
+    "Overflow behavior above 10,000 rows is unconfirmed; the FAQ marks it as an open item rather than guessing.",
+    "Schedule frequency, retention, and time zone limits are not in the packet and were not confirmed by colleagues; marked as open items.",
+    "The 'not real-time' point is sourced from C1's reply (sales engineer's observation about customer confusion).",
+    "C2 and C4 reported no additional task-specific information; C3 was not contacted because the other colleagues did not hold the needed facts and C3's profile is general coordination.",
+    "Recommend the feature owner confirm open items before the November 4 launch."
+  ]
+}

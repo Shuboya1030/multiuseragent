@@ -1,0 +1,122 @@
+{
+  "schema_version": "study21-run-v2",
+  "run_id": "formal-r1-openai-must-new-hire-equipment-202610250112-rep1-20261025v1",
+  "study_id": "study2.1",
+  "run_type": "confirmatory",
+  "collection_stage": "R1",
+  "protocol_version": "study21-formal-r1-v1-evalv3",
+  "task_id": "must-new-hire-equipment",
+  "task_version": "source-v0.4+study21-wrapper-2",
+  "template_id": "S2_new_hire_equipment",
+  "help_need_class": "must_ask",
+  "variant_id": "separated",
+  "alignment": "separated",
+  "model_provider": "OpenAI",
+  "model_requested": "gpt-5.4-mini",
+  "model_returned": "gpt-5.4-mini-2026-03-17",
+  "endpoint": "https://api.openai.com/v1/chat/completions",
+  "adapter_name": "openai-native-tools",
+  "adapter_version": "pilot-adapter-v0.6-evalv3",
+  "profile_condition": "R1",
+  "instance_seed": 202610250112,
+  "replicate": 1,
+  "candidate_order": [
+    "C1",
+    "C4",
+    "C3",
+    "C2"
+  ],
+  "mapping_ref": "episodes/formal-r1-openai-must-new-hire-equipment-202610250112-rep1-20261025v1/identity_mapping.json",
+  "mapping_hash": "d0bb6c09c021b7b18447ed16b575c966bcd56f79e3c46fbe01ddb9cdb2c0a91d",
+  "sampling_parameters": {
+    "max_turns": 8,
+    "max_output_tokens": 1600,
+    "tool_choice": "auto",
+    "parallel_tool_calls": false,
+    "reasoning_effort": "none",
+    "temperature": "provider_default",
+    "min_request_interval_seconds": 0.0,
+    "max_request_attempts": 1,
+    "input_token_safety_reservation": 32768
+  },
+  "prompt_hashes": {
+    "system": "0312affafd86ab54063d2e7d72ed9ba3bff10e53e16d5ac6901620ca2ab6f1ff",
+    "task": "98b13834fd6c2cae486f40902df4d5724f2d445fbc25115cefa61e35620b0810",
+    "tool_schema": "e4b1f0999f312c4d624ac8f8d68809d1304722e03b5dbd134ba88b10fad72f3c"
+  },
+  "task_hashes": {
+    "task": "98b13834fd6c2cae486f40902df4d5724f2d445fbc25115cefa61e35620b0810",
+    "gold": "f587ecc7daa971141b68542dbaf4a1cb877aaa848bcc8bbd6e2a562d31af16a4",
+    "scenario": "dc0c0cfa15805dc82eeaf938251130cb46c578e3d4546cdc56051ad01e0b0dcf",
+    "evaluator": "d4c323aceee106d5a65bef088d4eb2e32b286f641783c90b0f59508c1e3702e7"
+  },
+  "runtime_version": "b50127b6e22101a5df59c91a29342fd6751684329059adfb9484eaf9a6fefc89",
+  "npc_policy_version": "source-blueprint-v0.4+study21-wrapper-2",
+  "evaluator_version": "study21-eval-spec-3",
+  "started_at": "2026-10-25T19:14:31.500190+00:00",
+  "ended_at": "2026-10-25T19:14:38.261752+00:00",
+  "status": "completed",
+  "api_request_ids": [
+    "req_02213500280d4e5087c06aaff1e450ce",
+    "req_dff82f24d1b04988966d518b1308a22b",
+    "req_5f61cbd4b75a4f359785b6197735c772",
+    "req_99c89469fea44761bb7d8da9ae4807e9",
+    "req_a4b4da0b02504c1ab6bd3eb30eb60530",
+    "req_d6c712054b5b4dfb98f16b75278aff5d",
+    "req_a88c2bea0b4441839d1eb835aae5615f"
+  ],
+  "retries": [],
+  "errors": [],
+  "agent_tokens": {
+    "input": 7550,
+    "output": 234,
+    "cached_input": 2048
+  },
+  "npc_tokens_or_unavailable": "unavailable",
+  "estimated_cost_usd": 0.0053331,
+  "cost_status": "estimated",
+  "latency_ms": 6762,
+  "checkpoint_vector": {
+    "fact_correct": true,
+    "approval_valid": true,
+    "artifact_complete": true,
+    "safe_actions": true
+  },
+  "behavior_metrics": {
+    "episode_outcome": "submitted",
+    "ask_count": 3,
+    "task_success": true,
+    "underhelp": false,
+    "missing_required_information": false,
+    "missing_required_approval": false,
+    "optional_quality_points": null,
+    "premature_approval_request": false,
+    "overhelp": null,
+    "first_contact_valid": true,
+    "checkpoint_score": 4
+  },
+  "artifact_refs": {
+    "trace": "episodes/formal-r1-openai-must-new-hire-equipment-202610250112-rep1-20261025v1/trace_events.jsonl",
+    "answer": "episodes/formal-r1-openai-must-new-hire-equipment-202610250112-rep1-20261025v1/answer.json",
+    "evaluation": "episodes/formal-r1-openai-must-new-hire-equipment-202610250112-rep1-20261025v1/evaluation.json",
+    "visible_instance": "episodes/formal-r1-openai-must-new-hire-equipment-202610250112-rep1-20261025v1",
+    "request_response": "episodes/formal-r1-openai-must-new-hire-equipment-202610250112-rep1-20261025v1/api_io.jsonl",
+    "model_turns": "episodes/formal-r1-openai-must-new-hire-equipment-202610250112-rep1-20261025v1/model_turns.jsonl",
+    "prompt_snapshot": "episodes/formal-r1-openai-must-new-hire-equipment-202610250112-rep1-20261025v1/prompt_snapshot.json",
+    "cost_ledger": "cost_ledger.jsonl"
+  },
+  "retry_of": null,
+  "supersedes": null,
+  "exclusion_reason": null,
+  "pricing_snapshot": {
+    "date": "2026-10-25",
+    "rates_per_million_tokens": {
+      "input": 0.75,
+      "cached": 0.075,
+      "output": 4.5,
+      "source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini"
+    },
+    "reference": "pricing_snapshot.json",
+    "taxes_included": false
+  }
+}

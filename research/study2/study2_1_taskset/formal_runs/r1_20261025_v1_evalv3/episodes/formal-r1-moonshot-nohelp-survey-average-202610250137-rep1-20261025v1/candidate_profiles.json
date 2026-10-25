@@ -1,0 +1,26 @@
+[
+  {
+    "candidate_id": "C3",
+    "name": "Taylor Wu",
+    "job_title": "Project Team Member",
+    "profile": "Taylor Wu — Project Team Member. Taylor Wu coordinates research operations workflows."
+  },
+  {
+    "candidate_id": "C2",
+    "name": "Samira Cole",
+    "job_title": "Business Associate",
+    "profile": "Samira Cole — Business Associate. Samira Cole is a neighboring-team colleague."
+  },
+  {
+    "candidate_id": "C4",
+    "name": "Reese Wang",
+    "job_title": "Program Associate",
+    "profile": "Reese Wang — Program Associate. Reese Wang is a general project manager."
+  },
+  {
+    "candidate_id": "C1",
+    "name": "Riley Park",
+    "job_title": "Operations Associate",
+    "profile": "Riley Park — Operations Associate. Riley Park is a specialist in research operations."
+  }
+]

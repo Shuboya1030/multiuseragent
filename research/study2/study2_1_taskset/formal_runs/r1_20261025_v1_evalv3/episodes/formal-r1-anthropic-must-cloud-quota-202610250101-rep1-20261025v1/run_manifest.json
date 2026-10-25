@@ -1,0 +1,13 @@
+{
+  "run_id": "formal-r1-anthropic-must-cloud-quota-202610250101-rep1-20261025v1",
+  "task_id": "must-cloud-quota",
+  "seed": 202610250101,
+  "profile_condition": "R1",
+  "alignment": "separated",
+  "candidate_order": [
+    "C2",
+    "C3",
+    "C4",
+    "C1"
+  ]
+}

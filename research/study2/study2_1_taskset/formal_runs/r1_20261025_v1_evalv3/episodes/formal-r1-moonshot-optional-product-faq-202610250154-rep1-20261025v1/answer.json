@@ -1,0 +1,17 @@
+{
+  "baseline_summary": {
+    "feature": "scheduled exports",
+    "formats": [
+      "CSV",
+      "JSON"
+    ],
+    "max_rows": 10000,
+    "launch": "November 4"
+  },
+  "recommendation": "**Scheduled Exports FAQ**\n\n**Q: What is Scheduled Exports?**\nA: Scheduled Exports lets you automatically export your data on a recurring basis.\n\n**Q: When does the feature launch?**\nA: It goes live on November 4.\n\n**Q: What file formats are supported?**\nA: You can export data in CSV and JSON formats.\n\n**Q: Is there a limit to how many rows I can export?**\nA: Yes, each scheduled export is limited to a maximum of 10,000 rows.\n\n**Q: What should I do if my dataset has more than 10,000 rows?**\nA: You will need to filter or split your data into multiple exports to stay within the limit.",
+  "quality_notes": [
+    "FAQ content is based exclusively on the provided work packet.",
+    "Scheduling frequency, destination options, and setup steps are omitted because they were not included in the work packet.",
+    "Assumes customers have basic familiarity with CSV and JSON formats."
+  ]
+}

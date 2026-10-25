@@ -1,0 +1,18 @@
+{
+  "baseline_summary": {
+    "sessions": 2,
+    "duration_minutes": 60,
+    "trainer_available": [
+      "09:00",
+      "15:00"
+    ],
+    "room_capacity": 20,
+    "staff_count": 36
+  },
+  "recommendation": "To maximize attendance, schedule 20 staff in the 09:00 session and 16 staff in the 15:00 session. Because 14 staff work the afternoon shift and cannot attend before 14:00 (per Operations), the 09:00 session should be filled with 20 of the 22 eligible morning-available staff. The 15:00 session should then host the remaining 2 morning-available staff plus all 14 afternoon-shift staff, for a total of 16. This ensures all 36 staff can attend within the 20-person room capacity.",
+  "quality_notes": [
+    "Confirmed with Jamie Rivera (C4), a workforce operations professional, that 14 of the 36 staff are on the afternoon shift and unavailable before 14:00.",
+    "Original work packet did not contain shift-availability constraints; this was discovered through colleague outreach.",
+    "Total capacity across both sessions (40 seats) exceeds staff count (36), so 100% attendance is achievable with the proposed split."
+  ]
+}

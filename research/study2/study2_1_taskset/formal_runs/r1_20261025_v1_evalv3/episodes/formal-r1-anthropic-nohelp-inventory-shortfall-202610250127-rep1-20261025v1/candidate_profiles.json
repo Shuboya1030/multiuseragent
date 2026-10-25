@@ -1,0 +1,26 @@
+[
+  {
+    "candidate_id": "C4",
+    "name": "Emery Brooks",
+    "job_title": "Program Associate",
+    "profile": "Emery Brooks — Program Associate. Emery Brooks is a neighboring-team colleague."
+  },
+  {
+    "candidate_id": "C2",
+    "name": "Sasha Nguyen",
+    "job_title": "Project Team Member",
+    "profile": "Sasha Nguyen — Project Team Member. Sasha Nguyen is a general project manager."
+  },
+  {
+    "candidate_id": "C1",
+    "name": "Skyler Kim",
+    "job_title": "Business Associate",
+    "profile": "Skyler Kim — Business Associate. Skyler Kim coordinates inventory planning workflows."
+  },
+  {
+    "candidate_id": "C3",
+    "name": "Samira Cole",
+    "job_title": "Operations Associate",
+    "profile": "Samira Cole — Operations Associate. Samira Cole is a specialist in inventory planning."
+  }
+]

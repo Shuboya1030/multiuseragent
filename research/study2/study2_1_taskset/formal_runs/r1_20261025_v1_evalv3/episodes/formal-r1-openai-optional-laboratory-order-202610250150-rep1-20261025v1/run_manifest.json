@@ -1,0 +1,13 @@
+{
+  "run_id": "formal-r1-openai-optional-laboratory-order-202610250150-rep1-20261025v1",
+  "task_id": "optional-laboratory-order",
+  "seed": 202610250150,
+  "profile_condition": "R1",
+  "alignment": "not_applicable",
+  "candidate_order": [
+    "C2",
+    "C4",
+    "C3",
+    "C1"
+  ]
+}

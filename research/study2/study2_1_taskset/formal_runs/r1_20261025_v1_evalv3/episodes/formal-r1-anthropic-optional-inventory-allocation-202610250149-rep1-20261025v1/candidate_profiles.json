@@ -1,0 +1,26 @@
+[
+  {
+    "candidate_id": "C1",
+    "name": "Morgan Patel",
+    "job_title": "Program Associate",
+    "profile": "Morgan Patel — Program Associate. Morgan Patel is a colleague in supply operations coordination."
+  },
+  {
+    "candidate_id": "C4",
+    "name": "Jordan Lee",
+    "job_title": "Operations Associate",
+    "profile": "Jordan Lee — Operations Associate. Jordan Lee is an adjacent-domain colleague."
+  },
+  {
+    "candidate_id": "C3",
+    "name": "Quinn Zhao",
+    "job_title": "Business Associate",
+    "profile": "Quinn Zhao — Business Associate. Quinn Zhao is a supply operations professional with experience in critical demand."
+  },
+  {
+    "candidate_id": "C2",
+    "name": "Rowan Diaz",
+    "job_title": "Project Team Member",
+    "profile": "Rowan Diaz — Project Team Member. Rowan Diaz is a general project coordinator."
+  }
+]

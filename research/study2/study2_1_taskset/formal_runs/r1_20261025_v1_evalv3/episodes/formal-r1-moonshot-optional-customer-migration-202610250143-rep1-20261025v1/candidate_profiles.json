@@ -1,0 +1,26 @@
+[
+  {
+    "candidate_id": "C4",
+    "name": "Morgan Patel",
+    "job_title": "Project Team Member",
+    "profile": "Morgan Patel — Project Team Member. Morgan Patel is a customer success professional with experience in customer readiness."
+  },
+  {
+    "candidate_id": "C2",
+    "name": "Alex Rivera",
+    "job_title": "Operations Associate",
+    "profile": "Alex Rivera — Operations Associate. Alex Rivera is a colleague in customer success coordination."
+  },
+  {
+    "candidate_id": "C3",
+    "name": "Devon Li",
+    "job_title": "Program Associate",
+    "profile": "Devon Li — Program Associate. Devon Li is a general project coordinator."
+  },
+  {
+    "candidate_id": "C1",
+    "name": "Casey Lin",
+    "job_title": "Business Associate",
+    "profile": "Casey Lin — Business Associate. Casey Lin is an adjacent-domain colleague."
+  }
+]

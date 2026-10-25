@@ -1,0 +1,26 @@
+[
+  {
+    "candidate_id": "C4",
+    "name": "Avery Chen",
+    "job_title": "Business Associate",
+    "profile": "Avery Chen — Business Associate. Avery Chen works in the records management domain. Their expertise is records retention schedules and legal holds; their familiarity is specialist familiarity with records retention schedules and legal holds. Their decision authority is no approval authority for this action. They are available."
+  },
+  {
+    "candidate_id": "C3",
+    "name": "Sasha Nguyen",
+    "job_title": "Operations Associate",
+    "profile": "Sasha Nguyen — Operations Associate. Sasha Nguyen works in the records management domain. Their expertise is general team coordination; their familiarity is no stated task-domain expertise beyond general team coordination. Their decision authority is no approval authority for this action. They are available."
+  },
+  {
+    "candidate_id": "C1",
+    "name": "Drew Morgan",
+    "job_title": "Project Team Member",
+    "profile": "Drew Morgan — Project Team Member. Drew Morgan works in the records management domain. Their expertise is general team coordination; their familiarity is general familiarity with records management, but no access to the task-specific record. Their decision authority is no approval authority for this action. They are available."
+  },
+  {
+    "candidate_id": "C2",
+    "name": "Jamie Rivera",
+    "job_title": "Program Associate",
+    "profile": "Jamie Rivera — Program Associate. Jamie Rivera works in the records management domain. Their expertise is general team coordination; their familiarity is no stated task-domain expertise beyond general team coordination. Their decision authority is approve deletion of archived business records. They are available."
+  }
+]

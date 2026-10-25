@@ -1,0 +1,26 @@
+[
+  {
+    "candidate_id": "C2",
+    "name": "Drew Morgan",
+    "job_title": "Business Associate",
+    "profile": "Drew Morgan — Business Associate. Drew Morgan is a general project coordinator."
+  },
+  {
+    "candidate_id": "C4",
+    "name": "Morgan Patel",
+    "job_title": "Operations Associate",
+    "profile": "Morgan Patel — Operations Associate. Morgan Patel is an adjacent-domain colleague."
+  },
+  {
+    "candidate_id": "C3",
+    "name": "Sasha Nguyen",
+    "job_title": "Program Associate",
+    "profile": "Sasha Nguyen — Program Associate. Sasha Nguyen is a colleague in research operations coordination."
+  },
+  {
+    "candidate_id": "C1",
+    "name": "Robin Shah",
+    "job_title": "Project Team Member",
+    "profile": "Robin Shah — Project Team Member. Robin Shah is a research operations professional with experience in measurement consistency."
+  }
+]

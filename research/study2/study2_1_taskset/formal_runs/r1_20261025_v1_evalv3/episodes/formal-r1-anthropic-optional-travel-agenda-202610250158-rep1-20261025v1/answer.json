@@ -1,0 +1,19 @@
+{
+  "baseline_summary": {
+    "arrival_city": "Berlin",
+    "meeting_city": "Potsdam",
+    "arrival": "09:00",
+    "meeting": "11:00",
+    "date": "April 8",
+    "rail_minutes": 25,
+    "taxi_minutes": 40
+  },
+  "recommendation": "Primary plan: take the rail route. Arrive in Berlin at 09:00, allow about 30 minutes to clear arrivals and reach the platform, and board a train at about 09:30. The 25-minute ride reaches Potsdam around 09:55-10:00, leaving roughly an hour of buffer before the 11:00 meeting. Suggested agenda: 09:00-09:30 deplane and transfer to rail platform; 09:30-09:55 rail to Potsdam; 10:00-10:45 short walk to the meeting venue, check-in and preparation, with any slack kept as buffer; 11:00 meeting. Contingency: if the 09:30 train is missed or delayed, take the next available train, which still arrives well before 11:00. Fallback transport: a taxi (40 minutes) should depart no later than about 10:10 to arrive around 10:50, which keeps a 10-minute margin. Taxi is the fallback only, since rail is faster and cheaper with more buffer.",
+  "quality_notes": [
+    "Baseline summary reproduced exactly from the supplied work packet.",
+    "The 30-minute allowance for deplaning and reaching the platform is my planning assumption; the packet does not provide it.",
+    "Both routes were stated as operating, so no colleague contact was needed to confirm service status.",
+    "Colleague contact was not used; the plan relies only on the work packet and the stated route operations.",
+    "Latest taxi departure of about 10:10 gives a 10-minute margin, which is tight; leaving earlier is safer if the fallback is used."
+  ]
+}

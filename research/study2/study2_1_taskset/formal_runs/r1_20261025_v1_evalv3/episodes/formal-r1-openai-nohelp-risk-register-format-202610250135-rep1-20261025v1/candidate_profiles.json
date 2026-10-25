@@ -1,0 +1,26 @@
+[
+  {
+    "candidate_id": "C3",
+    "name": "Sasha Nguyen",
+    "job_title": "Operations Associate",
+    "profile": "Sasha Nguyen — Operations Associate. Sasha Nguyen is a neighboring-team colleague."
+  },
+  {
+    "candidate_id": "C2",
+    "name": "Morgan Patel",
+    "job_title": "Business Associate",
+    "profile": "Morgan Patel — Business Associate. Morgan Patel is a specialist in project management."
+  },
+  {
+    "candidate_id": "C1",
+    "name": "Casey Lin",
+    "job_title": "Project Team Member",
+    "profile": "Casey Lin — Project Team Member. Casey Lin is a general project manager."
+  },
+  {
+    "candidate_id": "C4",
+    "name": "Samira Cole",
+    "job_title": "Program Associate",
+    "profile": "Samira Cole — Program Associate. Samira Cole coordinates project management workflows."
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "baseline_summary": {
+    "role": "data analyst",
+    "start_date": "September 9",
+    "manager": "Nora",
+    "accounts": [
+      "email",
+      "analytics workspace",
+      "issue tracker"
+    ]
+  },
+  "recommendation": "Onboarding checklist for data analyst starting September 9 (manager: Nora)\n\nBefore start (by late August / ahead of September 9):\n1. Confirm the start date year and final start logistics with Nora.\n2. Provision email account and send login details to the new hire.\n3. Create analytics workspace account and assign the role-appropriate permissions.\n4. Create issue tracker account and add to the relevant project or team.\n5. Request read-only access to the sanitized data warehouse before the first training session (suggested by colleague Cameron Yu, C4; not yet confirmed against access policy, so verify with the data owner/Nora).\n\nDay 1 (September 9):\n6. Welcome meeting with Nora; review role expectations and team priorities.\n7. Confirm login works for email, analytics workspace, and issue tracker.\n8. Walk through security and acceptable-use basics.\n\nFirst week:\n9. Complete the analytics workspace orientation and first training session.\n10. Review current analytics dashboards, data sources, and data definitions with the team.\n11. Get familiar with issue tracker workflow and log first onboarding tasks there.\n12. Schedule 30-minute check-ins with Nora at the end of day 1 and day 5.\n\nOwnership: Nora (manager) owns role-specific access approvals and check-ins; IT/provisioning team owns account creation.",
+  "quality_notes": [
+    "Start date lacks a year; the checklist assumes the next September 9 and should be confirmed.",
+    "Read-only warehouse access came from a single colleague's informal comment (C4) and is not verified against an access policy or approval; it is flagged as needing confirmation.",
+    "C4's reply was brief and did not address timing or owners; those items are my inferred suggestions, not confirmed process.",
+    "No approvals or account provisioning status were received or claimed; all steps are proposed.",
+    "baseline_summary is reproduced exactly as supplied in the work packet."
+  ]
+}

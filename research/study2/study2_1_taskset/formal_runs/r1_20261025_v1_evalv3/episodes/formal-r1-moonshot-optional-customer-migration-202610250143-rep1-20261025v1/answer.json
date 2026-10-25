@@ -1,0 +1,16 @@
+{
+  "baseline_summary": {
+    "workspaces": 120,
+    "deadline": "March 31",
+    "migration_capacity_per_day": 20,
+    "engineers": 2
+  },
+  "recommendation": "Schedule the migration across exactly 6 working days at 20 workspaces per day. With a March 31 deadline, the latest feasible start is March 24 assuming a Monday–Friday schedule (March 24–28 and March 31). Allocate the 2 engineers across the batches, confirm no blackout windows exist during that window, and complete validation by end-of-day March 31. If weekends or holidays apply, shift the start date earlier proportionally.",
+  "quality_notes": [
+    "Validate that all 120 workspaces are migration-ready before the first batch.",
+    "Confirm both engineers are available for the full 6-day execution window.",
+    "Monitor daily throughput to ensure the 20-workspace/day capacity is achievable with 2 engineers.",
+    "Have a rollback and support plan ready for each daily batch.",
+    "Account for any weekends or blackout windows; if present, start earlier than March 24."
+  ]
+}

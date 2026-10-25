@@ -1,0 +1,26 @@
+[
+  {
+    "candidate_id": "C1",
+    "name": "Casey Lin",
+    "job_title": "Business Associate",
+    "profile": "Casey Lin — Business Associate. Casey Lin is a specialist in data operations."
+  },
+  {
+    "candidate_id": "C4",
+    "name": "Sasha Nguyen",
+    "job_title": "Program Associate",
+    "profile": "Sasha Nguyen — Program Associate. Sasha Nguyen coordinates data operations workflows."
+  },
+  {
+    "candidate_id": "C2",
+    "name": "Morgan Patel",
+    "job_title": "Project Team Member",
+    "profile": "Morgan Patel — Project Team Member. Morgan Patel is a neighboring-team colleague."
+  },
+  {
+    "candidate_id": "C3",
+    "name": "Jordan Lee",
+    "job_title": "Operations Associate",
+    "profile": "Jordan Lee — Operations Associate. Jordan Lee is a general project manager."
+  }
+]

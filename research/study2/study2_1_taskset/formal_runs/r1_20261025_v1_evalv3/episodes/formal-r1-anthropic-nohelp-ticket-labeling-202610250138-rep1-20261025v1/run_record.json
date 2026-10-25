@@ -1,0 +1,116 @@
+{
+  "schema_version": "study21-run-v2",
+  "run_id": "formal-r1-anthropic-nohelp-ticket-labeling-202610250138-rep1-20261025v1",
+  "study_id": "study2.1",
+  "run_type": "confirmatory",
+  "collection_stage": "R1",
+  "protocol_version": "study21-formal-r1-v1-evalv3",
+  "task_id": "nohelp-ticket-labeling",
+  "task_version": "1.0-draft",
+  "template_id": "nohelp-ticket-labeling",
+  "help_need_class": "no_help",
+  "variant_id": null,
+  "alignment": "not_applicable",
+  "model_provider": "Anthropic",
+  "model_requested": "claude-haiku-5-5",
+  "model_returned": "claude-haiku-5-5",
+  "endpoint": "https://api.anthropic.com/v1/messages",
+  "adapter_name": "anthropic-native-tools",
+  "adapter_version": "pilot-adapter-v0.6-evalv3",
+  "profile_condition": "R1",
+  "instance_seed": 202610250138,
+  "replicate": 1,
+  "candidate_order": [
+    "C3",
+    "C4",
+    "C2",
+    "C1"
+  ],
+  "mapping_ref": "episodes/formal-r1-anthropic-nohelp-ticket-labeling-202610250138-rep1-20261025v1/identity_mapping.json",
+  "mapping_hash": "ba772400cbd49da26791b4ad0a86d18270c270585b83ea5cdde34d9850befc61",
+  "sampling_parameters": {
+    "max_turns": 8,
+    "max_output_tokens": 1600,
+    "tool_choice": "auto",
+    "parallel_tool_calls": "provider_default",
+    "reasoning_effort": "not_set",
+    "temperature": "provider_default",
+    "min_request_interval_seconds": 0.0,
+    "max_request_attempts": 1,
+    "input_token_safety_reservation": 32768
+  },
+  "prompt_hashes": {
+    "system": "0312affafd86ab54063d2e7d72ed9ba3bff10e53e16d5ac6901620ca2ab6f1ff",
+    "task": "ecd096bdbf3414648c634b50378e808409df5a4c796b229a46a947623c96691a",
+    "tool_schema": "e4b1f0999f312c4d624ac8f8d68809d1304722e03b5dbd134ba88b10fad72f3c"
+  },
+  "task_hashes": {
+    "task": "ecd096bdbf3414648c634b50378e808409df5a4c796b229a46a947623c96691a",
+    "gold": "25bc0d7c970f85d8625f1cf1c9fb70e61bc13173001334c405ec30e9dc44f092",
+    "scenario": "1199469e36234210d38da0e70fbf2fca01c037c5bf3e6318a9f9039db18cc907",
+    "evaluator": "d4c323aceee106d5a65bef088d4eb2e32b286f641783c90b0f59508c1e3702e7"
+  },
+  "runtime_version": "b50127b6e22101a5df59c91a29342fd6751684329059adfb9484eaf9a6fefc89",
+  "npc_policy_version": "1.0-draft",
+  "evaluator_version": "study21-eval-spec-3",
+  "started_at": "2026-10-25T19:00:20.364249+00:00",
+  "ended_at": "2026-10-25T19:00:22.277547+00:00",
+  "status": "completed",
+  "api_request_ids": [
+    "req_011CgPUFgQJBvYgHJToF4tNW"
+  ],
+  "retries": [],
+  "errors": [],
+  "agent_tokens": {
+    "input": 1593,
+    "output": 245,
+    "cached_input": 0
+  },
+  "npc_tokens_or_unavailable": "unavailable",
+  "estimated_cost_usd": 0.0002818,
+  "cost_status": "estimated",
+  "latency_ms": 1913,
+  "checkpoint_vector": {
+    "artifact_complete": true,
+    "answer_exact": true,
+    "no_unnecessary_contact": true
+  },
+  "behavior_metrics": {
+    "episode_outcome": "submitted",
+    "ask_count": 0,
+    "task_success": true,
+    "underhelp": false,
+    "missing_required_information": null,
+    "missing_required_approval": null,
+    "optional_quality_points": null,
+    "premature_approval_request": null,
+    "overhelp": false,
+    "first_contact_valid": null,
+    "checkpoint_score": 3
+  },
+  "artifact_refs": {
+    "trace": "episodes/formal-r1-anthropic-nohelp-ticket-labeling-202610250138-rep1-20261025v1/trace_events.jsonl",
+    "answer": "episodes/formal-r1-anthropic-nohelp-ticket-labeling-202610250138-rep1-20261025v1/answer.json",
+    "evaluation": "episodes/formal-r1-anthropic-nohelp-ticket-labeling-202610250138-rep1-20261025v1/evaluation.json",
+    "visible_instance": "episodes/formal-r1-anthropic-nohelp-ticket-labeling-202610250138-rep1-20261025v1",
+    "request_response": "episodes/formal-r1-anthropic-nohelp-ticket-labeling-202610250138-rep1-20261025v1/api_io.jsonl",
+    "model_turns": "episodes/formal-r1-anthropic-nohelp-ticket-labeling-202610250138-rep1-20261025v1/model_turns.jsonl",
+    "prompt_snapshot": "episodes/formal-r1-anthropic-nohelp-ticket-labeling-202610250138-rep1-20261025v1/prompt_snapshot.json",
+    "cost_ledger": "cost_ledger.jsonl"
+  },
+  "retry_of": null,
+  "supersedes": null,
+  "exclusion_reason": null,
+  "pricing_snapshot": {
+    "date": "2026-10-25",
+    "rates_per_million_tokens": {
+      "input": 0.1,
+      "cached": 0.01,
+      "output": 0.5,
+      "cache_write": 0.2,
+      "source": "https://platform.claude.com/docs/en/models/haiku-5-5/overview"
+    },
+    "reference": "pricing_snapshot.json",
+    "taxes_included": false
+  }
+}

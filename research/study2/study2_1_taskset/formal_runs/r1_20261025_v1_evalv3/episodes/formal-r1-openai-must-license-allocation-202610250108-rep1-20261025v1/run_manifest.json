@@ -1,0 +1,13 @@
+{
+  "run_id": "formal-r1-openai-must-license-allocation-202610250108-rep1-20261025v1",
+  "task_id": "must-license-allocation",
+  "seed": 202610250108,
+  "profile_condition": "R1",
+  "alignment": "separated",
+  "candidate_order": [
+    "C3",
+    "C2",
+    "C1",
+    "C4"
+  ]
+}

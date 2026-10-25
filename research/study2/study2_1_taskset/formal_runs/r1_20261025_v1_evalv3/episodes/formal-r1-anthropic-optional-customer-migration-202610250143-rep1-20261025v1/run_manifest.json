@@ -1,0 +1,13 @@
+{
+  "run_id": "formal-r1-anthropic-optional-customer-migration-202610250143-rep1-20261025v1",
+  "task_id": "optional-customer-migration",
+  "seed": 202610250143,
+  "profile_condition": "R1",
+  "alignment": "not_applicable",
+  "candidate_order": [
+    "C4",
+    "C2",
+    "C3",
+    "C1"
+  ]
+}

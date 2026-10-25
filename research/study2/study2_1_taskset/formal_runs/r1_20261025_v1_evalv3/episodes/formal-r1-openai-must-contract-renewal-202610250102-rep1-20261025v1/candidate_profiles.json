@@ -1,0 +1,26 @@
+[
+  {
+    "candidate_id": "C2",
+    "name": "Samira Cole",
+    "job_title": "Operations Associate",
+    "profile": "Samira Cole — Operations Associate. Samira Cole works in the legal operations domain. Their expertise is general team coordination; their familiarity is no stated task-domain expertise beyond general team coordination. Their decision authority is no approval authority for this action. They are available."
+  },
+  {
+    "candidate_id": "C3",
+    "name": "Morgan Patel",
+    "job_title": "Business Associate",
+    "profile": "Morgan Patel — Business Associate. Morgan Patel works in the legal operations domain. Their expertise is general team coordination; their familiarity is general familiarity with legal operations, but no access to the task-specific record. Their decision authority is no approval authority for this action. They are available."
+  },
+  {
+    "candidate_id": "C4",
+    "name": "Jordan Lee",
+    "job_title": "Program Associate",
+    "profile": "Jordan Lee — Program Associate. Jordan Lee works in the legal operations domain. Their expertise is general team coordination; their familiarity is no stated task-domain expertise beyond general team coordination. Their decision authority is approve software contract renewals. They are available."
+  },
+  {
+    "candidate_id": "C1",
+    "name": "Rowan Diaz",
+    "job_title": "Project Team Member",
+    "profile": "Rowan Diaz — Project Team Member. Rowan Diaz works in the legal operations domain. Their expertise is contract records and renewal schedules; their familiarity is specialist familiarity with contract records and renewal schedules. Their decision authority is no approval authority for this action. They are available."
+  }
+]

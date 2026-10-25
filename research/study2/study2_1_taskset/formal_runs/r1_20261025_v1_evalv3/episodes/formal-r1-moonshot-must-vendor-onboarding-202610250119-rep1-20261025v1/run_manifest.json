@@ -1,0 +1,13 @@
+{
+  "run_id": "formal-r1-moonshot-must-vendor-onboarding-202610250119-rep1-20261025v1",
+  "task_id": "must-vendor-onboarding",
+  "seed": 202610250119,
+  "profile_condition": "R1",
+  "alignment": "separated",
+  "candidate_order": [
+    "C4",
+    "C2",
+    "C3",
+    "C1"
+  ]
+}

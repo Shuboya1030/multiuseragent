@@ -1,0 +1,26 @@
+[
+  {
+    "candidate_id": "C2",
+    "name": "Taylor Wu",
+    "job_title": "Project Team Member",
+    "profile": "Taylor Wu — Project Team Member. Taylor Wu is a neighboring-team colleague."
+  },
+  {
+    "candidate_id": "C1",
+    "name": "Kai Sullivan",
+    "job_title": "Business Associate",
+    "profile": "Kai Sullivan — Business Associate. Kai Sullivan is a general project manager."
+  },
+  {
+    "candidate_id": "C4",
+    "name": "Sasha Nguyen",
+    "job_title": "Program Associate",
+    "profile": "Sasha Nguyen — Program Associate. Sasha Nguyen is a specialist in security operations."
+  },
+  {
+    "candidate_id": "C3",
+    "name": "Drew Morgan",
+    "job_title": "Operations Associate",
+    "profile": "Drew Morgan — Operations Associate. Drew Morgan coordinates security operations workflows."
+  }
+]

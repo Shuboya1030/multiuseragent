@@ -1,0 +1,26 @@
+[
+  {
+    "candidate_id": "C4",
+    "name": "Taylor Wu",
+    "job_title": "Program Associate",
+    "profile": "Taylor Wu — Program Associate. Taylor Wu works in the identity and access management domain. Their expertise is general team coordination; their familiarity is no stated task-domain expertise beyond general team coordination. Their decision authority is no approval authority for this action. They are available."
+  },
+  {
+    "candidate_id": "C2",
+    "name": "Jordan Lee",
+    "job_title": "Business Associate",
+    "profile": "Jordan Lee — Business Associate. Jordan Lee works in the identity and access management domain. Their expertise is general team coordination; their familiarity is general familiarity with identity and access management, but no access to the task-specific record. Their decision authority is no approval authority for this action. They are available."
+  },
+  {
+    "candidate_id": "C1",
+    "name": "Skyler Kim",
+    "job_title": "Project Team Member",
+    "profile": "Skyler Kim — Project Team Member. Skyler Kim works in the identity and access management domain. Their expertise is general team coordination; their familiarity is no stated task-domain expertise beyond general team coordination. Their decision authority is approve access to the project workspace. They are available."
+  },
+  {
+    "candidate_id": "C3",
+    "name": "Cameron Yu",
+    "job_title": "Operations Associate",
+    "profile": "Cameron Yu — Operations Associate. Cameron Yu works in the identity and access management domain. Their expertise is project workspace roles and access requests; their familiarity is specialist familiarity with project workspace roles and access requests. Their decision authority is no approval authority for this action. They are available."
+  }
+]

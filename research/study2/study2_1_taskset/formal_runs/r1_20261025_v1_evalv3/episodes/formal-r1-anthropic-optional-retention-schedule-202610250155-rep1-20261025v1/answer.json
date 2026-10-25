@@ -1,0 +1,17 @@
+{
+  "baseline_summary": {
+    "record_types": [
+      "support tickets",
+      "billing records"
+    ],
+    "default_years": 3,
+    "owner": "Records Operations"
+  },
+  "recommendation": "Retention schedule: (1) Support tickets - default retention 3 years; owner: Records Operations; review: quarterly for exceptions. (2) Billing records - default retention 3 years; owner: Records Operations; review: quarterly for exceptions. Each review should confirm the 3-year default still matches policy and record any exceptions. The packet names only Records Operations as owner and gives no individual owners or calendar dates, so named individual owners and specific review dates should be assigned by Records Operations before use. C1 (records management background) advised that the three-year rule is complete for this task and recommended adding a quarterly exception review date.",
+  "quality_notes": [
+    "Owners are set at the function level (Records Operations) because the packet names no individual owners; no individual was assigned.",
+    "Review cadence (quarterly) comes from C1's advice, not from the policy packet; confirm with Records Operations.",
+    "No specific calendar review dates were given in the packet, so none were invented.",
+    "Only one colleague (C1) was consulted; C2, C3, and C4 were not contacted."
+  ]
+}

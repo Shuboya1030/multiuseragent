@@ -1,0 +1,17 @@
+{
+  "baseline_summary": {
+    "stock_units": 80,
+    "weekly_demand": 30,
+    "reorder_point": 60,
+    "supplier": "Orion",
+    "lead_time_days": 21
+  },
+  "recommendation": "Place the Orion order now rather than waiting for stock to fall to the 60-unit reorder point. At 30 units/week (about 4.29/day), 80 units covers about 18.7 days, while the 21-day lead time needs about 90 units (30/7 x 21). The 60-unit reorder point covers only about 14 days, so it is too low for this lead time. Recommended reorder point: about 90 units of lead-time demand plus safety stock. No demand variability data was provided, so safety stock cannot be calculated from the packet. As a planning assumption, one week of demand (30 units) would give a reorder point of about 120 units. Replace this with a value based on demand variability once available. Because on-hand stock runs out roughly 2 to 3 days before a new order arrives, expedite, arrange interim supply, or confirm in-transit stock. The 21-day lead time is taken as given, as the task states, but the packet shows it does not support the existing 60-unit reorder point.",
+  "quality_notes": [
+    "The stated 21-day lead time is treated as current, per the task. The packet's 60-unit reorder point is inconsistent with it: 60 units covers about 14 days of demand.",
+    "On-hand stock of 80 units covers about 18.7 days, which is about 2.3 days short of the 21-day lead time if no order is already in transit.",
+    "C4 confirmed no additional task-specific information (no open POs or in-transit stock data, and no confirmation of lead time currency beyond the packet).",
+    "No demand variability or service-level target was provided, so the safety stock of 30 units is a stated assumption, not a calculated value.",
+    "Demand is assumed constant at 30 units/week; no seasonality or volatility data was available."
+  ]
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "candidate_id": "C4",
+    "name": "Casey Lin",
+    "job_title": "Project Team Member",
+    "profile": "Casey Lin — Project Team Member. Casey Lin is a specialist in cloud operations."
+  },
+  {
+    "candidate_id": "C3",
+    "name": "Emery Brooks",
+    "job_title": "Program Associate",
+    "profile": "Emery Brooks — Program Associate. Emery Brooks is a neighboring-team colleague."
+  },
+  {
+    "candidate_id": "C1",
+    "name": "Avery Chen",
+    "job_title": "Operations Associate",
+    "profile": "Avery Chen — Operations Associate. Avery Chen coordinates cloud operations workflows."
+  },
+  {
+    "candidate_id": "C2",
+    "name": "Skyler Kim",
+    "job_title": "Business Associate",
+    "profile": "Skyler Kim — Business Associate. Skyler Kim is a general project manager."
+  }
+]

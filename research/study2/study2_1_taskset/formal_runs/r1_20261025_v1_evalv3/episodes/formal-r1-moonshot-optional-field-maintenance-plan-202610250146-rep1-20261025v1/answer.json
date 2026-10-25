@@ -1,0 +1,14 @@
+{
+  "baseline_summary": {
+    "site": "Riverside plant",
+    "equipment": "pump P-14",
+    "visit_date": "December 2",
+    "crew": 3,
+    "entrance": "north gate open"
+  },
+  "recommendation": "Use the south gate for entry on December 2 if permitted, as it is closer to pump P-14 and reduces walking time for the 3-person crew. If south-gate access is unavailable, proceed through the confirmed-open north gate and build extra transit time into the schedule. Assign one crew member as the site-safety lead, ensure all members carry valid site access credentials, and bring pump-specific inspection checklists and basic PPE. Confirm the exact pump bay location with the site coordinator ahead of arrival to minimize on-site searching.",
+  "quality_notes": [
+    "Site coordinator (via Reese Wang, C1) recommended south gate for proximity to pump P-14; north gate remains valid.",
+    "Cameron Yu (C3) and Sasha Nguyen (C4) did not hold additional task-specific information."
+  ]
+}

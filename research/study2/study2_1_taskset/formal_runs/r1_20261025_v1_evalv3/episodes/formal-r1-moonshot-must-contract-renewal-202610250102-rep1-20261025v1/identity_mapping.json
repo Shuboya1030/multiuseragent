@@ -1,0 +1,19 @@
+{
+  "run_id": "formal-r1-moonshot-must-contract-renewal-202610250102-rep1-20261025v1",
+  "task_id": "must-contract-renewal",
+  "seed": 202610250102,
+  "profile_condition": "R1",
+  "alignment": "separated",
+  "alias_to_canonical": {
+    "C3": "P1",
+    "C2": "P2",
+    "C1": "P3",
+    "C4": "P4"
+  },
+  "canonical_to_alias": {
+    "P3": "C1",
+    "P2": "C2",
+    "P1": "C3",
+    "P4": "C4"
+  }
+}

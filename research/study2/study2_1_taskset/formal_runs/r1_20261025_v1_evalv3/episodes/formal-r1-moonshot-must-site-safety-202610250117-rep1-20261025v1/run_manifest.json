@@ -1,0 +1,13 @@
+{
+  "run_id": "formal-r1-moonshot-must-site-safety-202610250117-rep1-20261025v1",
+  "task_id": "must-site-safety",
+  "seed": 202610250117,
+  "profile_condition": "R1",
+  "alignment": "separated",
+  "candidate_order": [
+    "C1",
+    "C4",
+    "C2",
+    "C3"
+  ]
+}

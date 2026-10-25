@@ -1,0 +1,13 @@
+{
+  "run_id": "formal-r1-moonshot-nohelp-sla-summary-202610250136-rep1-20261025v1",
+  "task_id": "nohelp-sla-summary",
+  "seed": 202610250136,
+  "profile_condition": "R1",
+  "alignment": "not_applicable",
+  "candidate_order": [
+    "C3",
+    "C2",
+    "C4",
+    "C1"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "baseline_summary": {
+    "verification": [
+      "employee ID",
+      "manager confirmation"
+    ],
+    "target": "contractor account",
+    "sla_hours": 8
+  },
+  "recommendation": "Safe recovery workflow for a contractor account: (1) verify the requester using the visible policy checkpoints: obtain and validate employee ID plus manager confirmation; (2) confirm the account is a contractor account and that the request aligns with the stated 8-hour SLA; (3) perform the recovery action only after both policy verifications pass and document the outcome; (4) if available as a defense-in-depth measure, optionally seek an independent sponsor confirmation, but do not treat it as a requirement under the current policy; (5) if any verification step fails or is ambiguous, pause the recovery and escalate for manual review.",
+  "quality_notes": [
+    "Preserves the supplied baseline summary exactly.",
+    "Includes the required non-empty recommendation.",
+    "Mentions sponsor confirmation only as an optional defense-in-depth improvement, not a policy requirement.",
+    "Keeps the workflow aligned to the visible identity-verification policy and the contractor-account target."
+  ]
+}

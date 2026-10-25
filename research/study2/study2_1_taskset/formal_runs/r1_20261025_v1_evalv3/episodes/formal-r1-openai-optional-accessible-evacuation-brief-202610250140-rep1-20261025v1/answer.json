@@ -1,0 +1,19 @@
+{
+  "baseline_summary": {
+    "building": "West Annex",
+    "floors": 4,
+    "assembly_point": "south plaza",
+    "drill": "May 6 at 10:00",
+    "stairwells": [
+      "east",
+      "west"
+    ]
+  },
+  "recommendation": "Staff brief for the West Annex drill on May 6 at 10:00: Evacuate promptly when the alarm/drill notification begins and proceed to the south plaza assembly point using the nearest safe route. Because the building has 4 floors and two stairwells (east and west), staff should avoid elevators and use whichever stairwell is closest and safest for their location, keeping both stairwells clear and moving at a steady pace. Supervisors should do a quick visual sweep of nearby areas as they leave, close doors if time permits, and remind everyone to remain with their group once outside. For general accessibility planning, ensure routes are kept unobstructed, offer clear verbal directions and buddy support for anyone who may need assistance, and identify a reasonable stop point near each stairwell landing so people can regroup without blocking circulation. At the south plaza, conduct a headcount, report any missing persons or hazards through the designated emergency contact process, and do not re-enter the building until an all-clear is given.",
+  "quality_notes": [
+    "Includes the required baseline details without altering them.",
+    "Provides general accessibility planning only; no employee-specific accommodation is assumed.",
+    "Uses both stairwells and the 4-floor layout to frame safe evacuation guidance.",
+    "Keeps the assembly point and drill time explicit for a usable staff brief."
+  ]
+}

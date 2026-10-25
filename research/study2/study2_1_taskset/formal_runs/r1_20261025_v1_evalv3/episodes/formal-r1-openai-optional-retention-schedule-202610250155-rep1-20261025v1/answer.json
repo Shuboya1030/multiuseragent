@@ -1,0 +1,16 @@
+{
+  "baseline_summary": {
+    "record_types": [
+      "support tickets",
+      "billing records"
+    ],
+    "default_years": 3,
+    "owner": "Records Operations"
+  },
+  "recommendation": "Schedule review and retention ownership as follows: Records Operations owns the policy overall; support tickets should be reviewed every 3 years; billing records should be reviewed every 3 years. Suggested implementation date can be set on the next quarterly records review cycle, with future reviews aligned to the 3-year default interval for both record types.",
+  "quality_notes": [
+    "No colleague consultation was needed because the work packet already provided the necessary inputs.",
+    "The recommendation preserves the supplied baseline summary without modifying it.",
+    "Review cadence is derived directly from the default_years value of 3 and assigned to both listed record types."
+  ]
+}

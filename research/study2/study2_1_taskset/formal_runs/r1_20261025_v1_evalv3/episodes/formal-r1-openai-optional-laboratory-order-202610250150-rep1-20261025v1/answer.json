@@ -1,0 +1,19 @@
+{
+  "baseline_summary": {
+    "experiments": 24,
+    "tips_per_experiment": 80,
+    "boxes_contain": 1000,
+    "reserve_fraction": 0.1,
+    "compatible_types": [
+      "standard",
+      "low-retention"
+    ]
+  },
+  "recommendation": "Order 3 boxes total to cover the planned use with reserve. Calculation: 24 experiments × 80 tips = 1,920 tips required; adding 10% reserve brings this to 2,112 tips. With 1,000 tips per box, that rounds up to 3 boxes (3,000 tips). Compatible tip types: standard and low-retention.",
+  "quality_notes": [
+    "Computed total demand as 1,920 tips before reserve.",
+    "Applied 10% reserve to reach 2,112 tips.",
+    "Rounded up to 3 boxes to satisfy the requirement.",
+    "No colleague consultation was needed for this calculation."
+  ]
+}

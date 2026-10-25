@@ -1,0 +1,18 @@
+{
+  "baseline_summary": {
+    "stock": 25,
+    "requests": {
+      "Support": 12,
+      "Engineering": 10,
+      "Sales": 8
+    },
+    "next_delivery_days": 14
+  },
+  "recommendation": "Allocate the 25 units proportionally but with a fairness adjustment so every team receives some stock and higher-demand teams receive more. A practical split is Support 10, Engineering 8, Sales 7. This uses all stock and keeps the distribution close to the request ratios while avoiding a zero allocation for any group. Contingency plan: if demand changes before the next delivery in 14 days, hold back any newly arriving units for the most undersupplied team, and if one team cannot use its full share, reassign surplus to the other teams according to their unmet demand. If no changes occur, revisit the allocation at the next delivery and rebalance based on updated requests.",
+  "quality_notes": [
+    "Requests exceed stock, so full fulfillment is not possible from the current inventory alone.",
+    "The recommended allocation sums exactly to 25 units.",
+    "The split preserves fairness by giving each team stock and roughly tracking relative demand.",
+    "Next delivery is in 14 days, so the plan includes a short-term rebalancing contingency."
+  ]
+}

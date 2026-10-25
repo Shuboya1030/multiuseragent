@@ -1,0 +1,38 @@
+{
+  "evaluator_version": "study21-eval-spec-3",
+  "task_id": "optional-field-maintenance-plan",
+  "template_id": "optional-field-maintenance-plan",
+  "run_id": "formal-r1-moonshot-optional-field-maintenance-plan-202610250146-rep1-20261025v1",
+  "help_need_class": "optional_benefit",
+  "evidence_scope": "current run_id only",
+  "underhelp": false,
+  "baseline_artifact_correct": true,
+  "task_success": true,
+  "checkpoint_vector": {
+    "baseline_artifact_correct": true,
+    "optional_quality_improvement": false
+  },
+  "checkpoint_score": 1,
+  "contact_count": 3,
+  "contacted_admissible_person": true,
+  "optional_fact_received": true,
+  "reply_used_keyword_coverage": 0.6,
+  "reply_used": false,
+  "optional_quality_points": 0,
+  "process_evidence_available": true,
+  "contact_cost_events": 3,
+  "evidence": [
+    {
+      "event_id": 1,
+      "recipient_id": "P1",
+      "event_type": "ask",
+      "content": "Hi Reese, I’m putting together a visit plan for Riverside plant on December 2 to inspect pump P-14. We have a crew of 3 and will use the north gate. Do you have any site-specific logistics, safety requirements, or practical tips I should include in the plan?"
+    },
+    {
+      "event_id": 3,
+      "recipient_id": "P1",
+      "event_type": "reply",
+      "content": "The site coordinator recommends using the south gate because it is closer to pump P-14 and may save walking time; the north gate remains open and valid."
+    }
+  ]
+}

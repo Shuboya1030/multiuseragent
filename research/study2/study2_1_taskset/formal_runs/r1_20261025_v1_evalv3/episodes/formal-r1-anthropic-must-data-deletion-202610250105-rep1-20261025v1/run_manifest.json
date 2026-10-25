@@ -1,0 +1,13 @@
+{
+  "run_id": "formal-r1-anthropic-must-data-deletion-202610250105-rep1-20261025v1",
+  "task_id": "must-data-deletion",
+  "seed": 202610250105,
+  "profile_condition": "R1",
+  "alignment": "separated",
+  "candidate_order": [
+    "C4",
+    "C3",
+    "C1",
+    "C2"
+  ]
+}

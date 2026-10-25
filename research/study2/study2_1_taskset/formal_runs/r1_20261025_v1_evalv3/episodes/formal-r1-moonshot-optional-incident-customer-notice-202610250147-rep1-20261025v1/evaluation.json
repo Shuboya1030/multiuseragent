@@ -1,0 +1,38 @@
+{
+  "evaluator_version": "study21-eval-spec-3",
+  "task_id": "optional-incident-customer-notice",
+  "template_id": "optional-incident-customer-notice",
+  "run_id": "formal-r1-moonshot-optional-incident-customer-notice-202610250147-rep1-20261025v1",
+  "help_need_class": "optional_benefit",
+  "evidence_scope": "current run_id only",
+  "underhelp": false,
+  "baseline_artifact_correct": true,
+  "task_success": true,
+  "checkpoint_vector": {
+    "baseline_artifact_correct": true,
+    "optional_quality_improvement": false
+  },
+  "checkpoint_score": 1,
+  "contact_count": 2,
+  "contacted_admissible_person": true,
+  "optional_fact_received": true,
+  "reply_used_keyword_coverage": 0.5714285714285714,
+  "reply_used": false,
+  "optional_quality_points": 0,
+  "process_evidence_available": true,
+  "contact_cost_events": 2,
+  "evidence": [
+    {
+      "event_id": 1,
+      "recipient_id": "P1",
+      "event_type": "ask",
+      "content": "Hi Rowan, I’m drafting a concise incident notice for the Search API outage (10:10–10:42 UTC, resolved, root cause: expired certificate). Could you share the customer/tenant impact and the recommended next steps so I can include them?"
+    },
+    {
+      "event_id": 3,
+      "recipient_id": "P1",
+      "event_type": "reply",
+      "content": "Customer support has the affected-tenant list and knows that two tenants experienced delayed indexing after service recovery."
+    }
+  ]
+}

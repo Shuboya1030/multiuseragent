@@ -1,0 +1,38 @@
+{
+  "evaluator_version": "study21-eval-spec-3",
+  "task_id": "optional-retention-schedule",
+  "template_id": "optional-retention-schedule",
+  "run_id": "formal-r1-anthropic-optional-retention-schedule-202610250155-rep1-20261025v1",
+  "help_need_class": "optional_benefit",
+  "evidence_scope": "current run_id only",
+  "underhelp": false,
+  "baseline_artifact_correct": true,
+  "task_success": true,
+  "checkpoint_vector": {
+    "baseline_artifact_correct": true,
+    "optional_quality_improvement": true
+  },
+  "checkpoint_score": 2,
+  "contact_count": 1,
+  "contacted_admissible_person": true,
+  "optional_fact_received": true,
+  "reply_used_keyword_coverage": 1.0,
+  "reply_used": true,
+  "optional_quality_points": 1,
+  "process_evidence_available": true,
+  "contact_cost_events": 1,
+  "evidence": [
+    {
+      "event_id": 1,
+      "recipient_id": "P1",
+      "event_type": "ask",
+      "content": "Hi Drew, I'm building a retention schedule from a work packet covering support tickets and billing records, with a default retention of 3 years and Records Operations as owner. The packet doesn't name individual owners or review dates. Could you advise on a sensible review cadence and how owners should be assigned per record type? Please note anything you think should be confirmed with the policy owner before use."
+    },
+    {
+      "event_id": 3,
+      "recipient_id": "P1",
+      "event_type": "reply",
+      "content": "The records archivist recommends adding a quarterly review date for exceptions so schedule owners can catch policy changes; the current three-year rule is complete for this task."
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "evaluator_version": "study21-eval-spec-3",
+  "task_id": "optional-inventory-allocation",
+  "template_id": "optional-inventory-allocation",
+  "run_id": "formal-r1-moonshot-optional-inventory-allocation-202610250149-rep1-20261025v1",
+  "help_need_class": "optional_benefit",
+  "evidence_scope": "current run_id only",
+  "underhelp": false,
+  "baseline_artifact_correct": false,
+  "task_success": false,
+  "checkpoint_vector": {
+    "baseline_artifact_correct": false,
+    "optional_quality_improvement": false
+  },
+  "checkpoint_score": 0,
+  "contact_count": 1,
+  "contacted_admissible_person": true,
+  "optional_fact_received": true,
+  "reply_used_keyword_coverage": 0.0,
+  "reply_used": false,
+  "optional_quality_points": 0,
+  "process_evidence_available": true,
+  "contact_cost_events": 1,
+  "evidence": [
+    {
+      "event_id": 1,
+      "recipient_id": "P1",
+      "event_type": "ask",
+      "content": "We have 25 units in stock and requests from Support (12), Engineering (10), and Sales (8). The next delivery is in 14 days. How would you recommend fairly allocating the stock, and what contingency plan should we put in place?"
+    },
+    {
+      "event_id": 3,
+      "recipient_id": "P1",
+      "event_type": "reply",
+      "content": "The service desk lead knows Support has 5 critical-device failures and no loaner pool."
+    }
+  ]
+}

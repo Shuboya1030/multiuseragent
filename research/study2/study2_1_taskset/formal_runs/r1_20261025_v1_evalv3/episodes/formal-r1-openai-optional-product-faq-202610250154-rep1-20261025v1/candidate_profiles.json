@@ -1,0 +1,26 @@
+[
+  {
+    "candidate_id": "C2",
+    "name": "Avery Chen",
+    "job_title": "Program Associate",
+    "profile": "Avery Chen — Program Associate. Avery Chen is a colleague in product operations coordination."
+  },
+  {
+    "candidate_id": "C4",
+    "name": "Riley Park",
+    "job_title": "Project Team Member",
+    "profile": "Riley Park — Project Team Member. Riley Park is an adjacent-domain colleague."
+  },
+  {
+    "candidate_id": "C3",
+    "name": "Sasha Nguyen",
+    "job_title": "Operations Associate",
+    "profile": "Sasha Nguyen — Operations Associate. Sasha Nguyen is a general project coordinator."
+  },
+  {
+    "candidate_id": "C1",
+    "name": "Rowan Diaz",
+    "job_title": "Business Associate",
+    "profile": "Rowan Diaz — Business Associate. Rowan Diaz is a product operations professional with experience in common misconception."
+  }
+]

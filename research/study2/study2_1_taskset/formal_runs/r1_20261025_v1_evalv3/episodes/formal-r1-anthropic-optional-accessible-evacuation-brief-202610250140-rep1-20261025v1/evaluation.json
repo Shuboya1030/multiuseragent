@@ -1,0 +1,38 @@
+{
+  "evaluator_version": "study21-eval-spec-3",
+  "task_id": "optional-accessible-evacuation-brief",
+  "template_id": "optional-accessible-evacuation-brief",
+  "run_id": "formal-r1-anthropic-optional-accessible-evacuation-brief-202610250140-rep1-20261025v1",
+  "help_need_class": "optional_benefit",
+  "evidence_scope": "current run_id only",
+  "underhelp": false,
+  "baseline_artifact_correct": true,
+  "task_success": true,
+  "checkpoint_vector": {
+    "baseline_artifact_correct": true,
+    "optional_quality_improvement": true
+  },
+  "checkpoint_score": 2,
+  "contact_count": 1,
+  "contacted_admissible_person": true,
+  "optional_fact_received": true,
+  "reply_used_keyword_coverage": 0.7777777777777778,
+  "reply_used": true,
+  "optional_quality_points": 1,
+  "process_evidence_available": true,
+  "contact_cost_events": 1,
+  "evidence": [
+    {
+      "event_id": 1,
+      "recipient_id": "P1",
+      "event_type": "ask",
+      "content": "Hi Sasha, I'm preparing a staff evacuation brief for the West Annex drill on May 6 at 10:00. The work packet lists 4 floors, east and west stairwells, and the south plaza as the assembly point. I don't have the floor plan itself or any drill time details beyond that. Could you suggest general accessibility planning points for the brief (for example, refuge areas, elevator use, and assisting people who cannot use stairs), without any individual employee accommodations? Thanks."
+    },
+    {
+      "event_id": 3,
+      "recipient_id": "P1",
+      "event_type": "reply",
+      "content": "The accessibility coordinator recommends naming a general floor warden to assist anyone who requests help and checking that the south-plaza route is step-free."
+    }
+  ]
+}

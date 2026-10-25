@@ -1,0 +1,18 @@
+{
+  "baseline_summary": {
+    "experiments": 24,
+    "tips_per_experiment": 80,
+    "boxes_contain": 1000,
+    "reserve_fraction": 0.1,
+    "compatible_types": [
+      "standard",
+      "low-retention"
+    ]
+  },
+  "recommendation": "Order 3 boxes total (2,112 tips including 10% reserve). Prefer low-retention tips for slightly more consistent measurements; standard tips are compatible and meet baseline requirements.",
+  "quality_notes": [
+    "24 experiments × 80 tips = 1,920 tips; 10% reserve adds 192 tips for 2,112 total.",
+    "3 boxes of 1,000 tips are required (2,112 tips cannot fit in 2 boxes).",
+    "Low-retention tips are recommended by the lab technician for measurement consistency, while standard tips satisfy baseline compatibility."
+  ]
+}

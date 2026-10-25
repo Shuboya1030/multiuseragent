@@ -1,0 +1,26 @@
+[
+  {
+    "candidate_id": "C2",
+    "name": "Emery Brooks",
+    "job_title": "Project Team Member",
+    "profile": "Emery Brooks — Project Team Member. Emery Brooks works in the software release engineering domain. Their expertise is general team coordination; their familiarity is general familiarity with software release engineering, but no access to the task-specific record. Their decision authority is no approval authority for this action. They are available."
+  },
+  {
+    "candidate_id": "C3",
+    "name": "Skyler Kim",
+    "job_title": "Business Associate",
+    "profile": "Skyler Kim — Business Associate. Skyler Kim works in the software release engineering domain. Their expertise is general team coordination; their familiarity is no stated task-domain expertise beyond general team coordination. Their decision authority is authorize production deployments. They are available."
+  },
+  {
+    "candidate_id": "C1",
+    "name": "Samira Cole",
+    "job_title": "Program Associate",
+    "profile": "Samira Cole — Program Associate. Samira Cole works in the software release engineering domain. Their expertise is general team coordination; their familiarity is no stated task-domain expertise beyond general team coordination. Their decision authority is no approval authority for this action. They are available."
+  },
+  {
+    "candidate_id": "C4",
+    "name": "Morgan Patel",
+    "job_title": "Operations Associate",
+    "profile": "Morgan Patel — Operations Associate. Morgan Patel works in the software release engineering domain. Their expertise is release validation and rollback testing; their familiarity is specialist familiarity with release validation and rollback testing. Their decision authority is no approval authority for this action. They are available."
+  }
+]

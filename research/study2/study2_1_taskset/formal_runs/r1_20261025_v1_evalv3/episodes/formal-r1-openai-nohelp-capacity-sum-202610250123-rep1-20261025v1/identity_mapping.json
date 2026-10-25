@@ -1,0 +1,19 @@
+{
+  "run_id": "formal-r1-openai-nohelp-capacity-sum-202610250123-rep1-20261025v1",
+  "task_id": "nohelp-capacity-sum",
+  "seed": 202610250123,
+  "profile_condition": "R1",
+  "alignment": "not_applicable",
+  "alias_to_canonical": {
+    "C4": "P1",
+    "C1": "P2",
+    "C2": "P3",
+    "C3": "P4"
+  },
+  "canonical_to_alias": {
+    "P2": "C1",
+    "P3": "C2",
+    "P4": "C3",
+    "P1": "C4"
+  }
+}

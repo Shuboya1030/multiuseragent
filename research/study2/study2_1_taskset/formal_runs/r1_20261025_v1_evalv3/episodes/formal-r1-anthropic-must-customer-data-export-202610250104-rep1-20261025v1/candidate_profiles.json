@@ -1,0 +1,26 @@
+[
+  {
+    "candidate_id": "C2",
+    "name": "Casey Lin",
+    "job_title": "Operations Associate",
+    "profile": "Casey Lin — Operations Associate. Casey Lin works in the privacy operations domain. Their expertise is general team coordination; their familiarity is no stated task-domain expertise beyond general team coordination. Their decision authority is no approval authority for this action. They are available."
+  },
+  {
+    "candidate_id": "C1",
+    "name": "Skyler Kim",
+    "job_title": "Project Team Member",
+    "profile": "Skyler Kim — Project Team Member. Skyler Kim works in the privacy operations domain. Their expertise is general team coordination; their familiarity is no stated task-domain expertise beyond general team coordination. Their decision authority is approve external customer data exports. They are available."
+  },
+  {
+    "candidate_id": "C4",
+    "name": "Cameron Yu",
+    "job_title": "Program Associate",
+    "profile": "Cameron Yu — Program Associate. Cameron Yu works in the privacy operations domain. Their expertise is customer data export requests and privacy reviews; their familiarity is specialist familiarity with customer data export requests and privacy reviews. Their decision authority is no approval authority for this action. They are available."
+  },
+  {
+    "candidate_id": "C3",
+    "name": "Drew Morgan",
+    "job_title": "Business Associate",
+    "profile": "Drew Morgan — Business Associate. Drew Morgan works in the privacy operations domain. Their expertise is general team coordination; their familiarity is general familiarity with privacy operations, but no access to the task-specific record. Their decision authority is no approval authority for this action. They are available."
+  }
+]

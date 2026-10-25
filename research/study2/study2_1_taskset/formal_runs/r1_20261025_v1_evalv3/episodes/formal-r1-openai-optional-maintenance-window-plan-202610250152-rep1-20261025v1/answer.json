@@ -1,0 +1,20 @@
+{
+  "baseline_summary": {
+    "duration_hours": 2,
+    "allowed_days": [
+      "Saturday",
+      "Sunday"
+    ],
+    "staff": [
+      "on-call A",
+      "on-call B"
+    ],
+    "deadline": "August 31"
+  },
+  "recommendation": "Schedule the 2-hour maintenance window on Saturday, ideally as early as feasible on that day to minimize customer disruption while preserving Sunday as the backup date. Use both on-call A and on-call B for full coverage during the window. Mitigation plan: announce the window in advance, place a brief maintenance notice before start, monitor service health throughout, and keep a rollback/resume plan ready in case of issues. If Saturday cannot be executed cleanly, defer to Sunday rather than moving outside the allowed days. Complete the change by August 31.",
+  "quality_notes": [
+    "Uses only the visible constraints from the work packet.",
+    "Chooses Saturday to keep Sunday available as fallback and reduce risk of missing the deadline.",
+    "No additional staffing or day assumptions were introduced beyond the provided on-call coverage and allowed days."
+  ]
+}

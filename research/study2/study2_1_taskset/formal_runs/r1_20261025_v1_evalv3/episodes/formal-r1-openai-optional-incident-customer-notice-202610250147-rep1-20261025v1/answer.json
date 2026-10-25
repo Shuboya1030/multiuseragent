@@ -1,0 +1,15 @@
+{
+  "baseline_summary": {
+    "service": "Search API",
+    "start": "10:10 UTC",
+    "resolved": "10:42 UTC",
+    "cause": "expired certificate",
+    "status": "resolved"
+  },
+  "recommendation": "Incident notice: The Search API experienced an outage from 10:10 UTC to 10:42 UTC due to an expired certificate. Impact was service disruption during that window. The issue has been resolved. Next steps: verify certificate renewal/rotation is complete, confirm service health and monitoring alerts are clear, and review the certificate management process to prevent recurrence.",
+  "quality_notes": [
+    "Concise notice drafted from the incident timeline.",
+    "Baseline summary preserved exactly as provided.",
+    "Includes impact and next steps, with no unsupported details added."
+  ]
+}

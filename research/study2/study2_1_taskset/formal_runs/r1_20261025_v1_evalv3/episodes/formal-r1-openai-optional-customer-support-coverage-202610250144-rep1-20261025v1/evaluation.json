@@ -1,0 +1,38 @@
+{
+  "evaluator_version": "study21-eval-spec-3",
+  "task_id": "optional-customer-support-coverage",
+  "template_id": "optional-customer-support-coverage",
+  "run_id": "formal-r1-openai-optional-customer-support-coverage-202610250144-rep1-20261025v1",
+  "help_need_class": "optional_benefit",
+  "evidence_scope": "current run_id only",
+  "underhelp": false,
+  "baseline_artifact_correct": true,
+  "task_success": true,
+  "checkpoint_vector": {
+    "baseline_artifact_correct": true,
+    "optional_quality_improvement": true
+  },
+  "checkpoint_score": 2,
+  "contact_count": 1,
+  "contacted_admissible_person": true,
+  "optional_fact_received": true,
+  "reply_used_keyword_coverage": 0.8,
+  "reply_used": true,
+  "optional_quality_points": 1,
+  "process_evidence_available": true,
+  "contact_cost_events": 1,
+  "evidence": [
+    {
+      "event_id": 1,
+      "recipient_id": "P1",
+      "event_type": "ask",
+      "content": "I’m preparing a launch support rota for June 3 through the next 4 weeks, covering North America and Europe during 09:00-17:00 UTC with supporters Ari and Bo. Do you have any recommended coverage approach or constraints for regional handoff/overlap that would help optimize staffing?"
+    },
+    {
+      "event_id": 3,
+      "recipient_id": "P1",
+      "event_type": "reply",
+      "content": "The Europe customer-success lead knows that most European customers need support after 16:00 UTC during the first launch week."
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "rows": [
+    {
+      "name": "Ana Ruiz",
+      "email": "ana@example.com",
+      "team": "Support"
+    },
+    {
+      "name": "Bo Chen",
+      "email": "bo@example.com",
+      "team": "Finance"
+    }
+  ]
+}

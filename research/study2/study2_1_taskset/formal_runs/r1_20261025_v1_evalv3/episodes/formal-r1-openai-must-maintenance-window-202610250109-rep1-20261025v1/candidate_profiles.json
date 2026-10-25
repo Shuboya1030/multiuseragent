@@ -1,0 +1,26 @@
+[
+  {
+    "candidate_id": "C3",
+    "name": "Skyler Kim",
+    "job_title": "Project Team Member",
+    "profile": "Skyler Kim — Project Team Member. Skyler Kim works in the site reliability operations domain. Their expertise is general team coordination; their familiarity is no stated task-domain expertise beyond general team coordination. Their decision authority is no approval authority for this action. They are available."
+  },
+  {
+    "candidate_id": "C1",
+    "name": "Avery Chen",
+    "job_title": "Business Associate",
+    "profile": "Avery Chen — Business Associate. Avery Chen works in the site reliability operations domain. Their expertise is general team coordination; their familiarity is no stated task-domain expertise beyond general team coordination. Their decision authority is approve customer-impacting maintenance windows. They are available."
+  },
+  {
+    "candidate_id": "C4",
+    "name": "Alex Rivera",
+    "job_title": "Program Associate",
+    "profile": "Alex Rivera — Program Associate. Alex Rivera works in the site reliability operations domain. Their expertise is service maintenance plans and incident runbooks; their familiarity is specialist familiarity with service maintenance plans and incident runbooks. Their decision authority is no approval authority for this action. They are available."
+  },
+  {
+    "candidate_id": "C2",
+    "name": "Emery Brooks",
+    "job_title": "Operations Associate",
+    "profile": "Emery Brooks — Operations Associate. Emery Brooks works in the site reliability operations domain. Their expertise is general team coordination; their familiarity is general familiarity with site reliability operations, but no access to the task-specific record. Their decision authority is no approval authority for this action. They are available."
+  }
+]

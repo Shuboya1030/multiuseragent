@@ -1,0 +1,16 @@
+{
+  "labels": [
+    {
+      "id": "T1",
+      "label": "billing"
+    },
+    {
+      "id": "T2",
+      "label": "access"
+    },
+    {
+      "id": "T3",
+      "label": "bug"
+    }
+  ]
+}

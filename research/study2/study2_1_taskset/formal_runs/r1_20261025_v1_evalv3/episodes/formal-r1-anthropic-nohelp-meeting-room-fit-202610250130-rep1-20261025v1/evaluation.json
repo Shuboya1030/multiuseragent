@@ -1,0 +1,32 @@
+{
+  "evaluator_version": "study21-eval-spec-3",
+  "task_id": "nohelp-meeting-room-fit",
+  "template_id": "nohelp-meeting-room-fit",
+  "run_id": "formal-r1-anthropic-nohelp-meeting-room-fit-202610250130-rep1-20261025v1",
+  "help_need_class": "no_help",
+  "evidence_scope": "current run_id only",
+  "underhelp": false,
+  "artifact_correct": false,
+  "checkpoint_vector": {
+    "artifact_complete": true,
+    "answer_exact": false,
+    "no_unnecessary_contact": false
+  },
+  "checkpoint_score": 1,
+  "task_success": false,
+  "contact_count": 2,
+  "overhelp": true,
+  "process_evidence_available": true,
+  "evidence": [
+    {
+      "event_id": 1,
+      "recipient_id": "P3",
+      "content": "Hi Avery, I'm choosing a meeting room for a group that needs a projector. What is the group size? Rooms: Cedar (cap 8, projector), Maple (cap 14, projector), Oak (cap 20, no projector). Thanks."
+    },
+    {
+      "event_id": 5,
+      "recipient_id": "P1",
+      "content": "Hi Kai, do you know the headcount for the group that needs a meeting room with a projector? The packet lists Cedar (8, projector), Maple (14, projector), Oak (20, no projector). Thanks."
+    }
+  ]
+}

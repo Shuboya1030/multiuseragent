@@ -1,0 +1,16 @@
+{
+  "balances": [
+    {
+      "name": "Ava",
+      "balance": 8
+    },
+    {
+      "name": "Ben",
+      "balance": 8
+    },
+    {
+      "name": "Chen",
+      "balance": 0
+    }
+  ]
+}

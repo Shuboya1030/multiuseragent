@@ -1,0 +1,19 @@
+{
+  "baseline_summary": {
+    "date": "July 8",
+    "modules": [
+      "account setup",
+      "data handling",
+      "incident reporting"
+    ],
+    "format": "PDF",
+    "cohort_size": 32
+  },
+  "recommendation": "Training Packet Outline (July 8, PDF, cohort of 32):\n1. Account Setup – step-by-step guidance for creating and configuring accounts.\n2. Data Handling – policies and procedures for managing data securely and responsibly.\n3. Incident Reporting – protocols for identifying, documenting, and escalating incidents.\nTo ensure the packet is usable by the entire invited cohort, incorporate accessibility best practices: use tagged headings for clear navigation, write descriptive links, and provide alt text for any diagrams or visuals. Distribute the PDF in advance and confirm screen-reader compatibility.",
+  "quality_notes": [
+    "Cohort size is 32; ensure sufficient digital and/or print copies.",
+    "Deliver as PDF; verify accessibility tagging before distribution.",
+    "Accessibility coordinator confirms several participants use screen readers.",
+    "Include tagged headings, descriptive links, and alt text for diagrams."
+  ]
+}

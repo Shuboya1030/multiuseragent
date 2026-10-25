@@ -1,0 +1,19 @@
+{
+  "run_id": "formal-r1-anthropic-must-new-hire-equipment-202610250112-rep1-20261025v1",
+  "task_id": "must-new-hire-equipment",
+  "seed": 202610250112,
+  "profile_condition": "R1",
+  "alignment": "separated",
+  "alias_to_canonical": {
+    "C1": "P1",
+    "C2": "P2",
+    "C3": "P3",
+    "C4": "P4"
+  },
+  "canonical_to_alias": {
+    "P1": "C1",
+    "P2": "C2",
+    "P3": "C3",
+    "P4": "C4"
+  }
+}

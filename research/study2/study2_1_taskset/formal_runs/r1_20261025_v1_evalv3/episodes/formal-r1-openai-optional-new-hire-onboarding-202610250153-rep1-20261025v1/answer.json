@@ -1,0 +1,18 @@
+{
+  "baseline_summary": {
+    "role": "data analyst",
+    "start_date": "September 9",
+    "manager": "Nora",
+    "accounts": [
+      "email",
+      "analytics workspace",
+      "issue tracker"
+    ]
+  },
+  "recommendation": "Practical onboarding checklist for a data analyst starting September 9:\n1) Before day 1, confirm access to email, the analytics workspace, and the issue tracker.\n2) Ask Nora for the team’s current priorities, key stakeholders, and the first 30-day goals.\n3) Set up email signatures, calendar access, and notification preferences.\n4) Review any existing dashboards, datasets, reporting definitions, and documentation in the analytics workspace.\n5) Learn the issue tracker workflow: how to log requests, update status, and tag owners.\n6) Identify the primary data sources, recurring reports, and any scheduled meetings or standups.\n7) Confirm where questions should be escalated and what the expected response path is.\n8) In the first week, complete a small task such as validating one report or documenting one metric to build familiarity.\n9) By the end of the first two weeks, align with Nora on priorities, deliverables, and success criteria.",
+  "quality_notes": [
+    "No colleague contact was needed to complete this checklist.",
+    "The recommendation preserves the supplied baseline summary unchanged and adds practical onboarding steps tailored to a data analyst role.",
+    "The checklist is organized for immediate pre-start and first-two-weeks execution."
+  ]
+}

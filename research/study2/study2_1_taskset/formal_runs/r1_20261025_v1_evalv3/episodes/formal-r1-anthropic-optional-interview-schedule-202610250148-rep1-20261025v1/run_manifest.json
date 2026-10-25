@@ -1,0 +1,13 @@
+{
+  "run_id": "formal-r1-anthropic-optional-interview-schedule-202610250148-rep1-20261025v1",
+  "task_id": "optional-interview-schedule",
+  "seed": 202610250148,
+  "profile_condition": "R1",
+  "alignment": "not_applicable",
+  "candidate_order": [
+    "C2",
+    "C1",
+    "C3",
+    "C4"
+  ]
+}

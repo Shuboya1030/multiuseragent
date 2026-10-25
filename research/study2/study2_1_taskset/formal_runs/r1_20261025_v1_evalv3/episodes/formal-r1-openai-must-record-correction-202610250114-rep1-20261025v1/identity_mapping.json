@@ -1,0 +1,19 @@
+{
+  "run_id": "formal-r1-openai-must-record-correction-202610250114-rep1-20261025v1",
+  "task_id": "must-record-correction",
+  "seed": 202610250114,
+  "profile_condition": "R1",
+  "alignment": "separated",
+  "alias_to_canonical": {
+    "C2": "P1",
+    "C3": "P2",
+    "C4": "P3",
+    "C1": "P4"
+  },
+  "canonical_to_alias": {
+    "P4": "C1",
+    "P1": "C2",
+    "P2": "C3",
+    "P3": "C4"
+  }
+}

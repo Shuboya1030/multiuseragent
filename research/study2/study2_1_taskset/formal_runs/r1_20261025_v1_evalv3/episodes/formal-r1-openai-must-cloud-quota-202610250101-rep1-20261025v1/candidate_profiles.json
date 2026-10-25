@@ -1,0 +1,26 @@
+[
+  {
+    "candidate_id": "C2",
+    "name": "Drew Morgan",
+    "job_title": "Operations Associate",
+    "profile": "Drew Morgan — Operations Associate. Drew Morgan works in the cloud platform operations domain. Their expertise is general team coordination; their familiarity is no stated task-domain expertise beyond general team coordination. Their decision authority is no approval authority for this action. They are available."
+  },
+  {
+    "candidate_id": "C3",
+    "name": "Jamie Rivera",
+    "job_title": "Project Team Member",
+    "profile": "Jamie Rivera — Project Team Member. Jamie Rivera works in the cloud platform operations domain. Their expertise is general team coordination; their familiarity is no stated task-domain expertise beyond general team coordination. Their decision authority is approve cloud quota increases. They are available."
+  },
+  {
+    "candidate_id": "C4",
+    "name": "Kai Sullivan",
+    "job_title": "Business Associate",
+    "profile": "Kai Sullivan — Business Associate. Kai Sullivan works in the cloud platform operations domain. Their expertise is cloud workload forecasts and capacity planning; their familiarity is specialist familiarity with cloud workload forecasts and capacity planning. Their decision authority is no approval authority for this action. They are available."
+  },
+  {
+    "candidate_id": "C1",
+    "name": "Sasha Nguyen",
+    "job_title": "Program Associate",
+    "profile": "Sasha Nguyen — Program Associate. Sasha Nguyen works in the cloud platform operations domain. Their expertise is general team coordination; their familiarity is general familiarity with cloud platform operations, but no access to the task-specific record. Their decision authority is no approval authority for this action. They are available."
+  }
+]

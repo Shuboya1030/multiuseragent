@@ -1,0 +1,19 @@
+{
+  "run_id": "formal-r1-moonshot-optional-account-recovery-202610250142-rep1-20261025v1",
+  "task_id": "optional-account-recovery",
+  "seed": 202610250142,
+  "profile_condition": "R1",
+  "alignment": "not_applicable",
+  "alias_to_canonical": {
+    "C1": "P1",
+    "C3": "P2",
+    "C2": "P3",
+    "C4": "P4"
+  },
+  "canonical_to_alias": {
+    "P1": "C1",
+    "P3": "C2",
+    "P2": "C3",
+    "P4": "C4"
+  }
+}

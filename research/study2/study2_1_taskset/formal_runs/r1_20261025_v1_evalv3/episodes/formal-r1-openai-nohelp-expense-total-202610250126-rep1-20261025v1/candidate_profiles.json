@@ -1,0 +1,26 @@
+[
+  {
+    "candidate_id": "C1",
+    "name": "Robin Shah",
+    "job_title": "Project Team Member",
+    "profile": "Robin Shah — Project Team Member. Robin Shah is a neighboring-team colleague."
+  },
+  {
+    "candidate_id": "C4",
+    "name": "Reese Wang",
+    "job_title": "Program Associate",
+    "profile": "Reese Wang — Program Associate. Reese Wang is a specialist in finance operations."
+  },
+  {
+    "candidate_id": "C3",
+    "name": "Kai Sullivan",
+    "job_title": "Operations Associate",
+    "profile": "Kai Sullivan — Operations Associate. Kai Sullivan is a general project manager."
+  },
+  {
+    "candidate_id": "C2",
+    "name": "Avery Chen",
+    "job_title": "Business Associate",
+    "profile": "Avery Chen — Business Associate. Avery Chen coordinates finance operations workflows."
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "baseline_summary": {
+    "source_balance": 42000,
+    "destination_shortfall": 9000,
+    "quarterly_cap": 50000
+  },
+  "recommendation": "Propose a transfer of 9,000 from the source balance to the destination. This fully covers the destination shortfall and keeps the total transferred amount within the quarterly cap, since 9,000 ≤ 50,000 and 9,000 ≤ 42,000 available from the source.",
+  "quality_notes": [
+    "Transfer amount is limited to the destination shortfall, so the recommended amount does not exceed need.",
+    "The source balance is sufficient to cover the proposed transfer.",
+    "The quarterly cap is not breached by the proposed transfer.",
+    "No colleague consultation was needed because the available figures were sufficient to determine a compliant transfer."
+  ]
+}

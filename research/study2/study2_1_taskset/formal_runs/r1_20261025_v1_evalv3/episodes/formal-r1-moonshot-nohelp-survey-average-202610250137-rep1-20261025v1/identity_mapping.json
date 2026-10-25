@@ -1,0 +1,19 @@
+{
+  "run_id": "formal-r1-moonshot-nohelp-survey-average-202610250137-rep1-20261025v1",
+  "task_id": "nohelp-survey-average",
+  "seed": 202610250137,
+  "profile_condition": "R1",
+  "alignment": "not_applicable",
+  "alias_to_canonical": {
+    "C1": "P1",
+    "C3": "P2",
+    "C4": "P3",
+    "C2": "P4"
+  },
+  "canonical_to_alias": {
+    "P1": "C1",
+    "P4": "C2",
+    "P2": "C3",
+    "P3": "C4"
+  }
+}

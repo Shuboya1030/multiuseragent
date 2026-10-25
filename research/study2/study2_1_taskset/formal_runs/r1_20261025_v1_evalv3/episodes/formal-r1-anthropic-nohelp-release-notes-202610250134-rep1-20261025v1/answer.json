@@ -1,0 +1,12 @@
+{
+  "version": "3.2.1",
+  "added": [
+    "CSV export"
+  ],
+  "fixed": [
+    "Timezone display"
+  ],
+  "security": [
+    "Rotated signing key"
+  ]
+}

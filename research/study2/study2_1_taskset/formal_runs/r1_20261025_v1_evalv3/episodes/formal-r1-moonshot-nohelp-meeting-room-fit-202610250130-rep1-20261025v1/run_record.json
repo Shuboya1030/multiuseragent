@@ -1,0 +1,113 @@
+{
+  "schema_version": "study21-run-v2",
+  "run_id": "formal-r1-moonshot-nohelp-meeting-room-fit-202610250130-rep1-20261025v1",
+  "study_id": "study2.1",
+  "run_type": "confirmatory",
+  "collection_stage": "R1",
+  "protocol_version": "study21-formal-r1-v1-evalv3",
+  "task_id": "nohelp-meeting-room-fit",
+  "task_version": "1.0-draft",
+  "template_id": "nohelp-meeting-room-fit",
+  "help_need_class": "no_help",
+  "variant_id": null,
+  "alignment": "not_applicable",
+  "model_provider": "Moonshot",
+  "model_requested": "kimi-k2.6",
+  "model_returned": "kimi-k2.6",
+  "endpoint": "https://api.moonshot.ai/v1/chat/completions",
+  "adapter_name": "moonshot-native-tools",
+  "adapter_version": "pilot-adapter-v0.6-evalv3",
+  "profile_condition": "R1",
+  "instance_seed": 202610250130,
+  "replicate": 1,
+  "candidate_order": [
+    "C3",
+    "C2",
+    "C4",
+    "C1"
+  ],
+  "mapping_ref": "episodes/formal-r1-moonshot-nohelp-meeting-room-fit-202610250130-rep1-20261025v1/identity_mapping.json",
+  "mapping_hash": "a0bf0f49a8642761ae095a76cf7cae2c5bcd41587e88ce28e73df1f670c3d262",
+  "sampling_parameters": {
+    "max_turns": 8,
+    "max_output_tokens": 1600,
+    "tool_choice": "auto",
+    "parallel_tool_calls": false,
+    "reasoning_effort": "not_set",
+    "temperature": "provider_default",
+    "min_request_interval_seconds": 21.0,
+    "max_request_attempts": 1,
+    "input_token_safety_reservation": 32768
+  },
+  "prompt_hashes": {
+    "system": "0312affafd86ab54063d2e7d72ed9ba3bff10e53e16d5ac6901620ca2ab6f1ff",
+    "task": "2836e288d0c02bec822d182605eea1452a1de5ffb555233434d21c4e05edb74b",
+    "tool_schema": "e4b1f0999f312c4d624ac8f8d68809d1304722e03b5dbd134ba88b10fad72f3c"
+  },
+  "task_hashes": {
+    "task": "2836e288d0c02bec822d182605eea1452a1de5ffb555233434d21c4e05edb74b",
+    "gold": "fd8b215721b9eac6c871f274c06345452f838dae6d917bf6de388bfa45f4eeed",
+    "scenario": "bf4c543f293922569966463555f7e07b7259f252e253ffc79f9fcb1f457cfd18",
+    "evaluator": "d4c323aceee106d5a65bef088d4eb2e32b286f641783c90b0f59508c1e3702e7"
+  },
+  "runtime_version": "b50127b6e22101a5df59c91a29342fd6751684329059adfb9484eaf9a6fefc89",
+  "npc_policy_version": "1.0-draft",
+  "evaluator_version": "study21-eval-spec-3",
+  "started_at": "2026-10-25T19:12:19.298031+00:00",
+  "ended_at": "2026-10-25T19:14:03.429542+00:00",
+  "status": "completed",
+  "api_request_ids": [],
+  "retries": [],
+  "errors": [],
+  "agent_tokens": {
+    "input": 4395,
+    "output": 857,
+    "cached_input": 2304
+  },
+  "npc_tokens_or_unavailable": "unavailable",
+  "estimated_cost_usd": 0.005783089999999999,
+  "cost_status": "estimated",
+  "latency_ms": 104136,
+  "checkpoint_vector": {
+    "artifact_complete": true,
+    "answer_exact": false,
+    "no_unnecessary_contact": false
+  },
+  "behavior_metrics": {
+    "episode_outcome": "submitted",
+    "ask_count": 2,
+    "task_success": false,
+    "underhelp": false,
+    "missing_required_information": null,
+    "missing_required_approval": null,
+    "optional_quality_points": null,
+    "premature_approval_request": null,
+    "overhelp": true,
+    "first_contact_valid": null,
+    "checkpoint_score": 1
+  },
+  "artifact_refs": {
+    "trace": "episodes/formal-r1-moonshot-nohelp-meeting-room-fit-202610250130-rep1-20261025v1/trace_events.jsonl",
+    "answer": "episodes/formal-r1-moonshot-nohelp-meeting-room-fit-202610250130-rep1-20261025v1/answer.json",
+    "evaluation": "episodes/formal-r1-moonshot-nohelp-meeting-room-fit-202610250130-rep1-20261025v1/evaluation.json",
+    "visible_instance": "episodes/formal-r1-moonshot-nohelp-meeting-room-fit-202610250130-rep1-20261025v1",
+    "request_response": "episodes/formal-r1-moonshot-nohelp-meeting-room-fit-202610250130-rep1-20261025v1/api_io.jsonl",
+    "model_turns": "episodes/formal-r1-moonshot-nohelp-meeting-room-fit-202610250130-rep1-20261025v1/model_turns.jsonl",
+    "prompt_snapshot": "episodes/formal-r1-moonshot-nohelp-meeting-room-fit-202610250130-rep1-20261025v1/prompt_snapshot.json",
+    "cost_ledger": "cost_ledger.jsonl"
+  },
+  "retry_of": null,
+  "supersedes": null,
+  "exclusion_reason": null,
+  "pricing_snapshot": {
+    "date": "2026-10-25",
+    "rates_per_million_tokens": {
+      "input": 0.95,
+      "cached": 0.16,
+      "output": 4.0,
+      "source": "https://platform.kimi.ai/docs/pricing/chat"
+    },
+    "reference": "pricing_snapshot.json",
+    "taxes_included": false
+  }
+}

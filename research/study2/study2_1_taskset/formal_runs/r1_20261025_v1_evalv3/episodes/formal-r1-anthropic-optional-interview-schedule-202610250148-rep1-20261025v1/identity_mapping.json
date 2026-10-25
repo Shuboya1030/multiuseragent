@@ -1,0 +1,19 @@
+{
+  "run_id": "formal-r1-anthropic-optional-interview-schedule-202610250148-rep1-20261025v1",
+  "task_id": "optional-interview-schedule",
+  "seed": 202610250148,
+  "profile_condition": "R1",
+  "alignment": "not_applicable",
+  "alias_to_canonical": {
+    "C2": "P1",
+    "C3": "P2",
+    "C1": "P3",
+    "C4": "P4"
+  },
+  "canonical_to_alias": {
+    "P3": "C1",
+    "P1": "C2",
+    "P2": "C3",
+    "P4": "C4"
+  }
+}

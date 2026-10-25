@@ -1,0 +1,21 @@
+{
+  "baseline_summary": {
+    "launch_start": "June 3",
+    "launch_weeks": 4,
+    "supporters": [
+      "Ari",
+      "Bo"
+    ],
+    "daily_hours": "09:00-17:00 UTC",
+    "regions": [
+      "North America",
+      "Europe"
+    ]
+  },
+  "recommendation": "Rota: June 3 – June 30 (4 weeks), daily 09:00–17:00 UTC. General assignment: Ari owns North America coverage and Bo owns Europe coverage each day. To optimize regional coverage, both Ari and Bo should be online together during the 09:00–12:00 UTC window when both regions overlap, then Ari remains primary for North America through 17:00 UTC while Bo remains primary for Europe through 17:00 UTC. Critical adjustment for Week 1 (June 3–7): Because European customers peak after 16:00 UTC, Bo should extend or hold Europe-primary duties until 17:00 UTC with clear escalation priority; Ari should remain on standby during 16:00–17:00 UTC to cover urgent North America handoffs only. Weeks 2–4 can revert to balanced 09:00–17:00 shifts with Ari/Bo each covering their primary region, but maintain a 1-hour overlap buffer at 16:00–17:00 UTC to catch any lingering Europe demand. Saturday/Sunday: no scheduled shifts unless on-call; if needed, Bo covers Europe weekend windows and Ari covers North America.",
+  "quality_notes": [
+    "Received advice from colleague Skyler Kim (C2) that European customers need the most support after 16:00 UTC during the first launch week. This has been incorporated into the Week 1 rota.",
+    "Only two supporters are available for two regions; recommend clear primary-region ownership to avoid confusion and maintain consistent customer relationships.",
+    "Daily hours are fixed at 09:00–17:00 UTC, which already covers European business hours well but may miss late North America West Coast hours; monitor ticket volume for potential 17:00–19:00 UTC coverage needs in future iterations."
+  ]
+}

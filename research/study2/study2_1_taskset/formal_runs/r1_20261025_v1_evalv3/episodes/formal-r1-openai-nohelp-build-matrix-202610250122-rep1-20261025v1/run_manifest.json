@@ -1,0 +1,13 @@
+{
+  "run_id": "formal-r1-openai-nohelp-build-matrix-202610250122-rep1-20261025v1",
+  "task_id": "nohelp-build-matrix",
+  "seed": 202610250122,
+  "profile_condition": "R1",
+  "alignment": "not_applicable",
+  "candidate_order": [
+    "C1",
+    "C4",
+    "C3",
+    "C2"
+  ]
+}

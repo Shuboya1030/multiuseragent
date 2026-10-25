@@ -1,5 +1,7 @@
 # Study 2.1 R1 Agent Handoff
 
+**Latest collection status — 2026-10-25:** User authorized retaining the current task/evaluator contracts and starting formal R1 with a USD 10 budget, superseding the earlier no-go recommendation below. R1 is now complete: 180 attempts, 60 per model; 170 normal submissions and 10 retained failures (4 no-submission, 3 truncated output, 3 invalid model turns). All 180 episode quality checks passed and the locked snapshot hashes were verified. Estimated API cost USD 0.5393, not an invoice. Submission completion is not task success. Results and full provenance: [formal R1 collection](study2_1_taskset/formal_runs/r1_20261025_v1_evalv3/README.md). No R0 or additional replicates were run. Known task/keyword-scoring limitations remain; do not claim independent review was completed.
+
 **Updated:** 2026-10-24  
 **Purpose:** Give the delegated agent one operational entry point for the R1 pilot, the later confirmatory R1 block, required artifacts, and the remaining Study 2.1 work.
 

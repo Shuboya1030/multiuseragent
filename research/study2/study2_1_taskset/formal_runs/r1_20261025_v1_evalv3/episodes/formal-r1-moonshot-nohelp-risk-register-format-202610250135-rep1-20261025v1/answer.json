@@ -1,0 +1,22 @@
+{
+  "order": [
+    {
+      "id": "K2",
+      "probability": 0.5,
+      "impact": 4,
+      "text": "data migration"
+    },
+    {
+      "id": "K1",
+      "probability": 0.2,
+      "impact": 5,
+      "text": "vendor delay"
+    },
+    {
+      "id": "K3",
+      "probability": 0.4,
+      "impact": 2,
+      "text": "training gap"
+    }
+  ]
+}

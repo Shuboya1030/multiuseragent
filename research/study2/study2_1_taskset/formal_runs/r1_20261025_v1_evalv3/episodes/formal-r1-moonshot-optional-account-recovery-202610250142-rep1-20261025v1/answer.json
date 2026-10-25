@@ -1,0 +1,17 @@
+{
+  "baseline_summary": {
+    "verification": [
+      "employee ID",
+      "manager confirmation"
+    ],
+    "target": "contractor account",
+    "sla_hours": 8
+  },
+  "recommendation": "Safe recovery workflow for contractor accounts: 1) Initiate recovery request and capture the contractor’s employee ID. 2) Obtain and document manager confirmation through an authenticated channel. 3) Verify both factors (employee ID + manager confirmation) before executing account recovery. 4) Complete recovery within the 8-hour SLA. 5) As a defense-in-depth improvement, optionally record an independent sponsor confirmation, though the current policy does not require it. 6) Audit and log all steps for compliance review.",
+  "quality_notes": [
+    "Both required verification factors—employee ID and manager confirmation—must be collected and verified before recovery is executed.",
+    "All recovery actions should be logged with timestamps to ensure SLA compliance against the 8-hour target.",
+    "Independent sponsor confirmation is recommended as an additional safeguard but is not required under the current policy.",
+    "Manager confirmation should be obtained via an authenticated channel to prevent social engineering."
+  ]
+}

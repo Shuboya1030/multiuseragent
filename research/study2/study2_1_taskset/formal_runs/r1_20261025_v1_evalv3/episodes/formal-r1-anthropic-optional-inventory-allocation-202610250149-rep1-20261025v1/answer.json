@@ -1,0 +1,19 @@
+{
+  "baseline_summary": {
+    "stock": 25,
+    "requests": {
+      "Support": 12,
+      "Engineering": 10,
+      "Sales": 8
+    },
+    "next_delivery_days": 14
+  },
+  "recommendation": "Allocate the 25 visible units in proportion to each request (total requested 30, so about 83% of each request can be met). Proportional shares are Support 10.0, Engineering 8.33, Sales 6.67. Rounded to whole units with the largest-remainder method, the allocation is Support 10, Engineering 8, Sales 7 (total 25). Unmet quantities are Support 2, Engineering 2, Sales 1 (total shortfall 5). Contingency plan: record the 5 units as backorders and fulfil them from the delivery expected in 14 days, notifying each requester of their backorder quantity and the expected date. If any requester reports an urgent need before then, review the split with the requesters and their managers rather than reallocating silently. Also consider expediting or placing an additional order now so the shortfall can be covered sooner.",
+  "quality_notes": [
+    "Allocation uses proportional fair-share across the three requests, rounded with the largest-remainder method so the total equals exactly the 25 units available.",
+    "Total demand (30) exceeds stock (25) by 5 units; no allocation can meet all requests.",
+    "Assumes all requests are equal priority and that the requests are accurate; no colleague input was requested or received.",
+    "The 14-day delivery timing is taken from the work packet; no supplier confirmation was obtained, so the backorder date is an estimate.",
+    "Backorder split (Support 2, Engineering 2, Sales 1) is derived from the allocation and sums to the 5-unit shortfall."
+  ]
+}

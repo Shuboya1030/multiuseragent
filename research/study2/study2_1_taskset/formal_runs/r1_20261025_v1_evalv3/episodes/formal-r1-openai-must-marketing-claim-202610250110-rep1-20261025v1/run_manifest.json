@@ -1,0 +1,13 @@
+{
+  "run_id": "formal-r1-openai-must-marketing-claim-202610250110-rep1-20261025v1",
+  "task_id": "must-marketing-claim",
+  "seed": 202610250110,
+  "profile_condition": "R1",
+  "alignment": "separated",
+  "candidate_order": [
+    "C4",
+    "C1",
+    "C3",
+    "C2"
+  ]
+}

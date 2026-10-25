@@ -1,0 +1,26 @@
+[
+  {
+    "candidate_id": "C3",
+    "name": "Sasha Nguyen",
+    "job_title": "Operations Associate",
+    "profile": "Sasha Nguyen — Operations Associate. Sasha Nguyen is a colleague in employee onboarding coordination."
+  },
+  {
+    "candidate_id": "C2",
+    "name": "Robin Shah",
+    "job_title": "Project Team Member",
+    "profile": "Robin Shah — Project Team Member. Robin Shah is a general project coordinator."
+  },
+  {
+    "candidate_id": "C1",
+    "name": "Skyler Kim",
+    "job_title": "Program Associate",
+    "profile": "Skyler Kim — Program Associate. Skyler Kim is an adjacent-domain colleague."
+  },
+  {
+    "candidate_id": "C4",
+    "name": "Cameron Yu",
+    "job_title": "Business Associate",
+    "profile": "Cameron Yu — Business Associate. Cameron Yu is a employee onboarding professional with experience in role specific onboarding."
+  }
+]

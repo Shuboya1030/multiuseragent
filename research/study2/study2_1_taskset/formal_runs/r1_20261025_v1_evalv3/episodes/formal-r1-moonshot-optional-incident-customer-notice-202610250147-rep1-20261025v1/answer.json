@@ -1,0 +1,15 @@
+{
+  "baseline_summary": {
+    "service": "Search API",
+    "start": "10:10 UTC",
+    "resolved": "10:42 UTC",
+    "cause": "expired certificate",
+    "status": "resolved"
+  },
+  "recommendation": "Incident Notice — Search API\n- Timeline: 10:10 UTC – 10:42 UTC\n- Status: Resolved\n- Cause: Expired certificate\n- Impact: Two tenants experienced delayed indexing after service recovery.\n- Next Steps: 1) Review certificate renewal and monitoring processes to prevent recurrence. 2) Continue monitoring the two affected tenants to ensure full indexing recovery. 3) Customer support to follow up with impacted tenants if needed.",
+  "quality_notes": [
+    "Baseline summary preserved exactly as supplied work packet.",
+    "Tenant impact details (two tenants with delayed indexing) provided by Rowan Diaz (C1).",
+    "Next steps inferred from standard operational follow-up; no additional specifics were available from contacted colleagues."
+  ]
+}

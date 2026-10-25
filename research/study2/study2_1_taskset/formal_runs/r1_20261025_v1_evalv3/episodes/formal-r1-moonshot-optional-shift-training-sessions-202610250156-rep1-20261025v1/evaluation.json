@@ -1,0 +1,38 @@
+{
+  "evaluator_version": "study21-eval-spec-3",
+  "task_id": "optional-shift-training-sessions",
+  "template_id": "optional-shift-training-sessions",
+  "run_id": "formal-r1-moonshot-optional-shift-training-sessions-202610250156-rep1-20261025v1",
+  "help_need_class": "optional_benefit",
+  "evidence_scope": "current run_id only",
+  "underhelp": false,
+  "baseline_artifact_correct": true,
+  "task_success": true,
+  "checkpoint_vector": {
+    "baseline_artifact_correct": true,
+    "optional_quality_improvement": true
+  },
+  "checkpoint_score": 2,
+  "contact_count": 1,
+  "contacted_admissible_person": true,
+  "optional_fact_received": true,
+  "reply_used_keyword_coverage": 0.8,
+  "reply_used": true,
+  "optional_quality_points": 1,
+  "process_evidence_available": true,
+  "contact_cost_events": 1,
+  "evidence": [
+    {
+      "event_id": 1,
+      "recipient_id": "P1",
+      "event_type": "ask",
+      "content": "Hi Jamie, I’m scheduling two 60-minute training sessions for 36 staff. The trainer is only available at 09:00 and 15:00, and the room holds 20 people. To maximize attendance, should I assume staff are generally available at both times, or is one slot typically harder for shift workers? Also, how would you recommend splitting the 36 attendees across the two sessions?"
+    },
+    {
+      "event_id": 3,
+      "recipient_id": "P1",
+      "event_type": "reply",
+      "content": "The operations manager knows 14 of the 36 staff work the afternoon shift and cannot attend before 14:00."
+    }
+  ]
+}

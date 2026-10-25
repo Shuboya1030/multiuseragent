@@ -1,0 +1,38 @@
+{
+  "evaluator_version": "study21-eval-spec-3",
+  "task_id": "optional-interview-schedule",
+  "template_id": "optional-interview-schedule",
+  "run_id": "formal-r1-moonshot-optional-interview-schedule-202610250148-rep1-20261025v1",
+  "help_need_class": "optional_benefit",
+  "evidence_scope": "current run_id only",
+  "underhelp": false,
+  "baseline_artifact_correct": false,
+  "task_success": false,
+  "checkpoint_vector": {
+    "baseline_artifact_correct": false,
+    "optional_quality_improvement": false
+  },
+  "checkpoint_score": 0,
+  "contact_count": 4,
+  "contacted_admissible_person": true,
+  "optional_fact_received": true,
+  "reply_used_keyword_coverage": 0.0,
+  "reply_used": false,
+  "optional_quality_points": 0,
+  "process_evidence_available": true,
+  "contact_cost_events": 4,
+  "evidence": [
+    {
+      "event_id": 5,
+      "recipient_id": "P1",
+      "event_type": "ask",
+      "content": "Hi Casey, we are scheduling interviews for Sam Lee on January 14. We have sessions: technical, product, and team. Are you available on Jan 14, and which session(s) could you conduct? Our slots are 09:00, 10:00, 11:00, 13:00, 14:00 (45 min each). Thanks!"
+    },
+    {
+      "event_id": 7,
+      "recipient_id": "P1",
+      "event_type": "reply",
+      "content": "The recruiting coordinator recommends a 15-minute buffer between sessions to improve candidate experience; no accommodation request or mandatory break is recorded."
+    }
+  ]
+}

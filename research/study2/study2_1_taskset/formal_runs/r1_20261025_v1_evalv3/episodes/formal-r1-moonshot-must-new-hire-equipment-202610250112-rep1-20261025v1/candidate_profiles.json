@@ -1,0 +1,26 @@
+[
+  {
+    "candidate_id": "C1",
+    "name": "Samira Cole",
+    "job_title": "Project Team Member",
+    "profile": "Samira Cole — Project Team Member. Samira Cole works in the employee onboarding domain. Their expertise is general team coordination; their familiarity is general familiarity with employee onboarding, but no access to the task-specific record. Their decision authority is no approval authority for this action. They are available."
+  },
+  {
+    "candidate_id": "C4",
+    "name": "Robin Shah",
+    "job_title": "Program Associate",
+    "profile": "Robin Shah — Program Associate. Robin Shah works in the employee onboarding domain. Their expertise is general team coordination; their familiarity is no stated task-domain expertise beyond general team coordination. Their decision authority is approve standard onboarding equipment. They are available."
+  },
+  {
+    "candidate_id": "C3",
+    "name": "Riley Park",
+    "job_title": "Operations Associate",
+    "profile": "Riley Park — Operations Associate. Riley Park works in the employee onboarding domain. Their expertise is new-hire role requirements and equipment standards; their familiarity is specialist familiarity with new-hire role requirements and equipment standards. Their decision authority is no approval authority for this action. They are available."
+  },
+  {
+    "candidate_id": "C2",
+    "name": "Drew Morgan",
+    "job_title": "Business Associate",
+    "profile": "Drew Morgan — Business Associate. Drew Morgan works in the employee onboarding domain. Their expertise is general team coordination; their familiarity is no stated task-domain expertise beyond general team coordination. Their decision authority is no approval authority for this action. They are available."
+  }
+]

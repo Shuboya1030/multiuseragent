@@ -1,0 +1,15 @@
+{
+  "updated_at": "2026-10-25T20:06:04.095927+00:00",
+  "recorded": 180,
+  "planned": 180,
+  "collection_status": "running",
+  "completed_submissions": 170,
+  "failed_runs": 10,
+  "estimated_safety_charge_usd": 0.5393235399999999,
+  "operating_ceiling_usd": 9.0,
+  "per_provider": {
+    "Moonshot": 60,
+    "Anthropic": 60,
+    "OpenAI": 60
+  }
+}

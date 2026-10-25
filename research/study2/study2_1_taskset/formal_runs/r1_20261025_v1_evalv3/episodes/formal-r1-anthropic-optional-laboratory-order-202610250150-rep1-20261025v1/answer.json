@@ -1,0 +1,20 @@
+{
+  "baseline_summary": {
+    "experiments": 24,
+    "tips_per_experiment": 80,
+    "boxes_contain": 1000,
+    "reserve_fraction": 0.1,
+    "compatible_types": [
+      "standard",
+      "low-retention"
+    ]
+  },
+  "recommendation": "Order 3 boxes of compatible tips (standard or low-retention). Base need is 24 experiments x 80 tips = 1,920 tips. Adding the 10% reserve gives 2,112 tips. Since boxes contain 1,000 tips, 3 boxes (3,000 tips) are required, leaving 888 tips above the reserved requirement.",
+  "quality_notes": [
+    "Calculation uses only the supplied work packet values: 24 x 80 = 1,920 base tips.",
+    "Reserve applied as 1,920 x 1.10 = 2,112 tips, which is rounded up to whole boxes: ceil(2,112 / 1,000) = 3 boxes.",
+    "Only the compatible types listed in the packet (standard, low-retention) are recommended.",
+    "I did not have access to the visible experiment plan file or contact any colleague, so the figures were not cross-checked against the plan itself; if the plan differs from the packet, the quantities should be re-run.",
+    "The baseline_summary is reproduced exactly as supplied in the work packet."
+  ]
+}

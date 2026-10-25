@@ -1,0 +1,25 @@
+{
+  "baseline_summary": {
+    "vendors": [
+      {
+        "name": "Northstar",
+        "price": 48000,
+        "lead_days": 30
+      },
+      {
+        "name": "Cedar",
+        "price": 52000,
+        "lead_days": 18
+      }
+    ],
+    "budget": 55000,
+    "need_by": "October 1"
+  },
+  "recommendation": "Recommend Cedar if meeting the October 1 need date is the primary requirement, because its 18-day lead time is materially safer than Northstar’s 30 days. Cedar is still within the $55,000 budget, but it costs $4,000 more than Northstar. Northstar is the lower-cost option and also fits the budget, but it carries a schedule risk if the need-by date is close enough that 30 days would be tight or late. Material risks: choosing Northstar risks missing the deadline; choosing Cedar reduces schedule risk but uses more budget headroom.",
+  "quality_notes": [
+    "Both vendors are within budget.",
+    "Cedar has the shorter lead time and is the safer schedule choice.",
+    "Northstar is cheaper by $4,000 but slower.",
+    "Need-by date is October 1; if procurement timing is already tight, lead time is the main risk factor."
+  ]
+}

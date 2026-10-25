@@ -1,0 +1,26 @@
+[
+  {
+    "candidate_id": "C3",
+    "name": "Samira Cole",
+    "job_title": "Project Team Member",
+    "profile": "Samira Cole — Project Team Member. Samira Cole coordinates learning operations workflows."
+  },
+  {
+    "candidate_id": "C4",
+    "name": "Avery Chen",
+    "job_title": "Program Associate",
+    "profile": "Avery Chen — Program Associate. Avery Chen is a specialist in learning operations."
+  },
+  {
+    "candidate_id": "C2",
+    "name": "Kai Sullivan",
+    "job_title": "Business Associate",
+    "profile": "Kai Sullivan — Business Associate. Kai Sullivan is a general project manager."
+  },
+  {
+    "candidate_id": "C1",
+    "name": "Robin Shah",
+    "job_title": "Operations Associate",
+    "profile": "Robin Shah — Operations Associate. Robin Shah is a neighboring-team colleague."
+  }
+]

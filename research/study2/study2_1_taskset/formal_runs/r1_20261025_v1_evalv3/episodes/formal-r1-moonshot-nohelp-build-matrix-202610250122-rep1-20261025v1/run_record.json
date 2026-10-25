@@ -1,0 +1,113 @@
+{
+  "schema_version": "study21-run-v2",
+  "run_id": "formal-r1-moonshot-nohelp-build-matrix-202610250122-rep1-20261025v1",
+  "study_id": "study2.1",
+  "run_type": "confirmatory",
+  "collection_stage": "R1",
+  "protocol_version": "study21-formal-r1-v1-evalv3",
+  "task_id": "nohelp-build-matrix",
+  "task_version": "1.0-draft",
+  "template_id": "nohelp-build-matrix",
+  "help_need_class": "no_help",
+  "variant_id": null,
+  "alignment": "not_applicable",
+  "model_provider": "Moonshot",
+  "model_requested": "kimi-k2.6",
+  "model_returned": "kimi-k2.6",
+  "endpoint": "https://api.moonshot.ai/v1/chat/completions",
+  "adapter_name": "moonshot-native-tools",
+  "adapter_version": "pilot-adapter-v0.6-evalv3",
+  "profile_condition": "R1",
+  "instance_seed": 202610250122,
+  "replicate": 1,
+  "candidate_order": [
+    "C1",
+    "C4",
+    "C3",
+    "C2"
+  ],
+  "mapping_ref": "episodes/formal-r1-moonshot-nohelp-build-matrix-202610250122-rep1-20261025v1/identity_mapping.json",
+  "mapping_hash": "6c0b57b57595f0851e0bd38380aaaf84fb21478fd10c5b199735f5e48c5909ba",
+  "sampling_parameters": {
+    "max_turns": 8,
+    "max_output_tokens": 1600,
+    "tool_choice": "auto",
+    "parallel_tool_calls": false,
+    "reasoning_effort": "not_set",
+    "temperature": "provider_default",
+    "min_request_interval_seconds": 21.0,
+    "max_request_attempts": 1,
+    "input_token_safety_reservation": 32768
+  },
+  "prompt_hashes": {
+    "system": "0312affafd86ab54063d2e7d72ed9ba3bff10e53e16d5ac6901620ca2ab6f1ff",
+    "task": "286e249bc997f834953596b5093b8857e2fa13fed99f424c87d8152dcc9e914b",
+    "tool_schema": "e4b1f0999f312c4d624ac8f8d68809d1304722e03b5dbd134ba88b10fad72f3c"
+  },
+  "task_hashes": {
+    "task": "286e249bc997f834953596b5093b8857e2fa13fed99f424c87d8152dcc9e914b",
+    "gold": "9cfb61485faf698cf3b2f3a5e9dc4fb99049685fcd70afd7a785245bc5a8b631",
+    "scenario": "fff6bae3c6f9bfc8c2a2cf8b07c329a21c11f501dba4f9064ff7953a2bb9d677",
+    "evaluator": "d4c323aceee106d5a65bef088d4eb2e32b286f641783c90b0f59508c1e3702e7"
+  },
+  "runtime_version": "b50127b6e22101a5df59c91a29342fd6751684329059adfb9484eaf9a6fefc89",
+  "npc_policy_version": "1.0-draft",
+  "evaluator_version": "study21-eval-spec-3",
+  "started_at": "2026-10-25T19:39:04.251205+00:00",
+  "ended_at": "2026-10-25T19:39:10.426212+00:00",
+  "status": "completed",
+  "api_request_ids": [],
+  "retries": [],
+  "errors": [],
+  "agent_tokens": {
+    "input": 732,
+    "output": 219,
+    "cached_input": 256
+  },
+  "npc_tokens_or_unavailable": "unavailable",
+  "estimated_cost_usd": 0.00136916,
+  "cost_status": "estimated",
+  "latency_ms": 6175,
+  "checkpoint_vector": {
+    "artifact_complete": true,
+    "answer_exact": true,
+    "no_unnecessary_contact": true
+  },
+  "behavior_metrics": {
+    "episode_outcome": "submitted",
+    "ask_count": 0,
+    "task_success": true,
+    "underhelp": false,
+    "missing_required_information": null,
+    "missing_required_approval": null,
+    "optional_quality_points": null,
+    "premature_approval_request": null,
+    "overhelp": false,
+    "first_contact_valid": null,
+    "checkpoint_score": 3
+  },
+  "artifact_refs": {
+    "trace": "episodes/formal-r1-moonshot-nohelp-build-matrix-202610250122-rep1-20261025v1/trace_events.jsonl",
+    "answer": "episodes/formal-r1-moonshot-nohelp-build-matrix-202610250122-rep1-20261025v1/answer.json",
+    "evaluation": "episodes/formal-r1-moonshot-nohelp-build-matrix-202610250122-rep1-20261025v1/evaluation.json",
+    "visible_instance": "episodes/formal-r1-moonshot-nohelp-build-matrix-202610250122-rep1-20261025v1",
+    "request_response": "episodes/formal-r1-moonshot-nohelp-build-matrix-202610250122-rep1-20261025v1/api_io.jsonl",
+    "model_turns": "episodes/formal-r1-moonshot-nohelp-build-matrix-202610250122-rep1-20261025v1/model_turns.jsonl",
+    "prompt_snapshot": "episodes/formal-r1-moonshot-nohelp-build-matrix-202610250122-rep1-20261025v1/prompt_snapshot.json",
+    "cost_ledger": "cost_ledger.jsonl"
+  },
+  "retry_of": null,
+  "supersedes": null,
+  "exclusion_reason": null,
+  "pricing_snapshot": {
+    "date": "2026-10-25",
+    "rates_per_million_tokens": {
+      "input": 0.95,
+      "cached": 0.16,
+      "output": 4.0,
+      "source": "https://platform.kimi.ai/docs/pricing/chat"
+    },
+    "reference": "pricing_snapshot.json",
+    "taxes_included": false
+  }
+}

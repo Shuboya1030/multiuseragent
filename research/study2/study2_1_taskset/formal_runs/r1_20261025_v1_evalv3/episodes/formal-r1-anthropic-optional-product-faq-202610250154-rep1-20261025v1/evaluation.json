@@ -1,0 +1,38 @@
+{
+  "evaluator_version": "study21-eval-spec-3",
+  "task_id": "optional-product-faq",
+  "template_id": "optional-product-faq",
+  "run_id": "formal-r1-anthropic-optional-product-faq-202610250154-rep1-20261025v1",
+  "help_need_class": "optional_benefit",
+  "evidence_scope": "current run_id only",
+  "underhelp": false,
+  "baseline_artifact_correct": true,
+  "task_success": true,
+  "checkpoint_vector": {
+    "baseline_artifact_correct": true,
+    "optional_quality_improvement": true
+  },
+  "checkpoint_score": 2,
+  "contact_count": 3,
+  "contacted_admissible_person": true,
+  "optional_fact_received": true,
+  "reply_used_keyword_coverage": 0.8333333333333334,
+  "reply_used": true,
+  "optional_quality_points": 1,
+  "process_evidence_available": true,
+  "contact_cost_events": 3,
+  "evidence": [
+    {
+      "event_id": 1,
+      "recipient_id": "P1",
+      "event_type": "ask",
+      "content": "Hi Rowan, I'm drafting a customer FAQ for the scheduled exports feature. The work packet lists: formats CSV and JSON, max_rows 10000, launch November 4. Can you confirm (1) what happens when an export exceeds 10,000 rows (truncated, error, or split), (2) any other limits customers should know about (schedule frequency, file retention, time zones), and (3) any common customer misconceptions we should address? If you don't know any of these, please just say so."
+    },
+    {
+      "event_id": 3,
+      "recipient_id": "P1",
+      "event_type": "reply",
+      "content": "The sales engineer knows customers often confuse scheduled exports with real-time synchronization; they are not real-time."
+    }
+  ]
+}

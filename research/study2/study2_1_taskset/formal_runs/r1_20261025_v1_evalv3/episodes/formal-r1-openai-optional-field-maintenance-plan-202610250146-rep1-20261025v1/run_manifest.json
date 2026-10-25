@@ -1,0 +1,13 @@
+{
+  "run_id": "formal-r1-openai-optional-field-maintenance-plan-202610250146-rep1-20261025v1",
+  "task_id": "optional-field-maintenance-plan",
+  "seed": 202610250146,
+  "profile_condition": "R1",
+  "alignment": "not_applicable",
+  "candidate_order": [
+    "C1",
+    "C3",
+    "C2",
+    "C4"
+  ]
+}

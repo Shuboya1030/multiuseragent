@@ -1,0 +1,38 @@
+{
+  "evaluator_version": "study21-eval-spec-3",
+  "task_id": "optional-customer-support-coverage",
+  "template_id": "optional-customer-support-coverage",
+  "run_id": "formal-r1-moonshot-optional-customer-support-coverage-202610250144-rep1-20261025v1",
+  "help_need_class": "optional_benefit",
+  "evidence_scope": "current run_id only",
+  "underhelp": false,
+  "baseline_artifact_correct": true,
+  "task_success": true,
+  "checkpoint_vector": {
+    "baseline_artifact_correct": true,
+    "optional_quality_improvement": false
+  },
+  "checkpoint_score": 1,
+  "contact_count": 1,
+  "contacted_admissible_person": true,
+  "optional_fact_received": true,
+  "reply_used_keyword_coverage": 0.4,
+  "reply_used": false,
+  "optional_quality_points": 0,
+  "process_evidence_available": true,
+  "contact_cost_events": 1,
+  "evidence": [
+    {
+      "event_id": 1,
+      "recipient_id": "P1",
+      "event_type": "ask",
+      "content": "Hi Skyler, we’re preparing a 4-week launch rota starting June 3 with supporters Ari and Bo covering North America and Europe, daily 09:00-17:00 UTC. Given your experience in regional demand, do you have any recommendations for optimizing coverage or shift splits between the two regions? Are there any known peak hours or days we should account for?"
+    },
+    {
+      "event_id": 3,
+      "recipient_id": "P1",
+      "event_type": "reply",
+      "content": "The Europe customer-success lead knows that most European customers need support after 16:00 UTC during the first launch week."
+    }
+  ]
+}

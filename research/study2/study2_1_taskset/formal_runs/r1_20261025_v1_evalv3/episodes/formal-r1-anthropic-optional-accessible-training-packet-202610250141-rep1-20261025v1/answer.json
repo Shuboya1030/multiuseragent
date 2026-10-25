@@ -1,0 +1,20 @@
+{
+  "baseline_summary": {
+    "date": "July 8",
+    "modules": [
+      "account setup",
+      "data handling",
+      "incident reporting"
+    ],
+    "format": "PDF",
+    "cohort_size": 32
+  },
+  "recommendation": "Build the packet as a PDF with the three modules in this order: account setup, data handling, incident reporting. Make it usable by the full cohort of 32, including participants who use screen readers. Per the accessibility coordinator's guidance relayed by colleague C2: use tagged headings, descriptive link text, and alt text for all diagrams. Also provide an accessible alternative on request, and confirm the final PDF with the accessibility coordinator before distribution on July 8. I did not receive confirmation of any formal approval for the format.",
+  "quality_notes": [
+    "Baseline summary copied unchanged from the work packet.",
+    "Accessibility requirements (tagged headings, descriptive links, alt text) come from C2's relay of the accessibility coordinator's guidance, not from a direct document review.",
+    "C3 had no additional task-specific information; no format approval was received from any colleague.",
+    "The PDF format was kept as supplied; the recommendation adds accessibility requirements and an alternate-format option without changing the baseline.",
+    "Final tagged-PDF compliance has not been verified; it should be checked before the July 8 release."
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "baseline_summary": {
+    "stock_units": 80,
+    "weekly_demand": 30,
+    "reorder_point": 60,
+    "supplier": "Orion",
+    "lead_time_days": 21
+  },
+  "recommendation": "Current stock is 80 units. With weekly demand of 30 units and a 21-day lead time (3 weeks), expected demand during lead time is about 90 units. Since stock is already below that coverage, the basic plan indicates an order should be placed immediately rather than waiting for the reorder point. Recommendation: place an order now with Orion, using the current reorder point of 60 as the trigger only for future cycles if no policy changes are made. Safety stock should be increased above zero; a practical starting point is at least 30 units to cover one week of demand variability, with more if demand is volatile.",
+  "quality_notes": [
+    "Lead-time demand calculated from visible data only: 30 units/week × 3 weeks = 90 units.",
+    "No additional supplier constraints or service-level targets were provided, so the safety stock recommendation is a pragmatic starting point rather than an optimized value.",
+    "The listed lead time was treated as current and sufficient for the basic plan, per instructions."
+  ]
+}

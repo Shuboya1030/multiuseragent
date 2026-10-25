@@ -1,0 +1,21 @@
+{
+  "episodes": 180,
+  "per_provider": {
+    "Moonshot": 60,
+    "Anthropic": 60,
+    "OpenAI": 60
+  },
+  "normal_submissions": 170,
+  "failed_runs": 10,
+  "failure_outcomes": {
+    "no_submission": 4,
+    "model_output_truncated": 3,
+    "model_turn_invalid": 3
+  },
+  "episode_quality_checks_passed": 180,
+  "snapshot_hashes_verified": 2375,
+  "credential_scan_passed": true,
+  "estimated_cost_usd": 0.5393235399999999,
+  "cost_is_provider_invoice": false,
+  "note": "Submission completion is not task success. Terminal collection_status.json supersedes the last running progress.json, which is preserved as part of the locked snapshot."
+}

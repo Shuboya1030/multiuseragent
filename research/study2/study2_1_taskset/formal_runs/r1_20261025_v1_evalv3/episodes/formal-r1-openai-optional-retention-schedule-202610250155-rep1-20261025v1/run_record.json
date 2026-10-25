@@ -1,0 +1,114 @@
+{
+  "schema_version": "study21-run-v2",
+  "run_id": "formal-r1-openai-optional-retention-schedule-202610250155-rep1-20261025v1",
+  "study_id": "study2.1",
+  "run_type": "confirmatory",
+  "collection_stage": "R1",
+  "protocol_version": "study21-formal-r1-v1-evalv3",
+  "task_id": "optional-retention-schedule",
+  "task_version": "1.0-draft",
+  "template_id": "optional-retention-schedule",
+  "help_need_class": "optional_benefit",
+  "variant_id": null,
+  "alignment": "not_applicable",
+  "model_provider": "OpenAI",
+  "model_requested": "gpt-5.4-mini",
+  "model_returned": "gpt-5.4-mini-2026-03-17",
+  "endpoint": "https://api.openai.com/v1/chat/completions",
+  "adapter_name": "openai-native-tools",
+  "adapter_version": "pilot-adapter-v0.6-evalv3",
+  "profile_condition": "R1",
+  "instance_seed": 202610250155,
+  "replicate": 1,
+  "candidate_order": [
+    "C3",
+    "C1",
+    "C2",
+    "C4"
+  ],
+  "mapping_ref": "episodes/formal-r1-openai-optional-retention-schedule-202610250155-rep1-20261025v1/identity_mapping.json",
+  "mapping_hash": "7e9b8bfbab308122fb32c13c295f4563c4c7d71b5c8561db4d8b52549a050645",
+  "sampling_parameters": {
+    "max_turns": 8,
+    "max_output_tokens": 1600,
+    "tool_choice": "auto",
+    "parallel_tool_calls": false,
+    "reasoning_effort": "none",
+    "temperature": "provider_default",
+    "min_request_interval_seconds": 0.0,
+    "max_request_attempts": 1,
+    "input_token_safety_reservation": 32768
+  },
+  "prompt_hashes": {
+    "system": "0312affafd86ab54063d2e7d72ed9ba3bff10e53e16d5ac6901620ca2ab6f1ff",
+    "task": "e5c828c59a76ae1f969a983f390eaa9e199b43c9c2a0efe6a8f2a6ba94e62ed7",
+    "tool_schema": "e4b1f0999f312c4d624ac8f8d68809d1304722e03b5dbd134ba88b10fad72f3c"
+  },
+  "task_hashes": {
+    "task": "e5c828c59a76ae1f969a983f390eaa9e199b43c9c2a0efe6a8f2a6ba94e62ed7",
+    "gold": "b47e3bc402ae50d73cd47601a5f9265967e22eec467d4a10bdf093d53cc3d80c",
+    "scenario": "2a9fd0637575bf8f9a577873435e59350e06cf000c42d7271adcfe0dd548a630",
+    "evaluator": "d4c323aceee106d5a65bef088d4eb2e32b286f641783c90b0f59508c1e3702e7"
+  },
+  "runtime_version": "b50127b6e22101a5df59c91a29342fd6751684329059adfb9484eaf9a6fefc89",
+  "npc_policy_version": "1.0-draft",
+  "evaluator_version": "study21-eval-spec-3",
+  "started_at": "2026-10-25T20:02:47.843940+00:00",
+  "ended_at": "2026-10-25T20:02:49.785365+00:00",
+  "status": "completed",
+  "api_request_ids": [
+    "req_b6ba8603030f472191c24b94117e273f"
+  ],
+  "retries": [],
+  "errors": [],
+  "agent_tokens": {
+    "input": 772,
+    "output": 161,
+    "cached_input": 0
+  },
+  "npc_tokens_or_unavailable": "unavailable",
+  "estimated_cost_usd": 0.0013035,
+  "cost_status": "estimated",
+  "latency_ms": 1942,
+  "checkpoint_vector": {
+    "baseline_artifact_correct": true,
+    "optional_quality_improvement": false
+  },
+  "behavior_metrics": {
+    "episode_outcome": "submitted",
+    "ask_count": 0,
+    "task_success": true,
+    "underhelp": false,
+    "missing_required_information": null,
+    "missing_required_approval": null,
+    "optional_quality_points": 0,
+    "premature_approval_request": null,
+    "overhelp": null,
+    "first_contact_valid": null,
+    "checkpoint_score": 1
+  },
+  "artifact_refs": {
+    "trace": "episodes/formal-r1-openai-optional-retention-schedule-202610250155-rep1-20261025v1/trace_events.jsonl",
+    "answer": "episodes/formal-r1-openai-optional-retention-schedule-202610250155-rep1-20261025v1/answer.json",
+    "evaluation": "episodes/formal-r1-openai-optional-retention-schedule-202610250155-rep1-20261025v1/evaluation.json",
+    "visible_instance": "episodes/formal-r1-openai-optional-retention-schedule-202610250155-rep1-20261025v1",
+    "request_response": "episodes/formal-r1-openai-optional-retention-schedule-202610250155-rep1-20261025v1/api_io.jsonl",
+    "model_turns": "episodes/formal-r1-openai-optional-retention-schedule-202610250155-rep1-20261025v1/model_turns.jsonl",
+    "prompt_snapshot": "episodes/formal-r1-openai-optional-retention-schedule-202610250155-rep1-20261025v1/prompt_snapshot.json",
+    "cost_ledger": "cost_ledger.jsonl"
+  },
+  "retry_of": null,
+  "supersedes": null,
+  "exclusion_reason": null,
+  "pricing_snapshot": {
+    "date": "2026-10-25",
+    "rates_per_million_tokens": {
+      "input": 0.75,
+      "cached": 0.075,
+      "output": 4.5,
+      "source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini"
+    },
+    "reference": "pricing_snapshot.json",
+    "taxes_included": false
+  }
+}

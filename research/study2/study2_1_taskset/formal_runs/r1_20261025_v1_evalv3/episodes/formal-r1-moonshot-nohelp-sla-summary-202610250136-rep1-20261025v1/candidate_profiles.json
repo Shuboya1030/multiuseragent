@@ -1,0 +1,26 @@
+[
+  {
+    "candidate_id": "C3",
+    "name": "Casey Lin",
+    "job_title": "Operations Associate",
+    "profile": "Casey Lin — Operations Associate. Casey Lin is a neighboring-team colleague."
+  },
+  {
+    "candidate_id": "C2",
+    "name": "Rowan Diaz",
+    "job_title": "Business Associate",
+    "profile": "Rowan Diaz — Business Associate. Rowan Diaz is a general project manager."
+  },
+  {
+    "candidate_id": "C4",
+    "name": "Samira Cole",
+    "job_title": "Project Team Member",
+    "profile": "Samira Cole — Project Team Member. Samira Cole is a specialist in service operations."
+  },
+  {
+    "candidate_id": "C1",
+    "name": "Quinn Zhao",
+    "job_title": "Program Associate",
+    "profile": "Quinn Zhao — Program Associate. Quinn Zhao coordinates service operations workflows."
+  }
+]

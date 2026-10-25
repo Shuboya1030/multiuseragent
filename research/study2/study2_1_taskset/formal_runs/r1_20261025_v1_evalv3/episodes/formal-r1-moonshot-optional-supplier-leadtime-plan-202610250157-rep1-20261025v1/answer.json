@@ -1,0 +1,16 @@
+{
+  "baseline_summary": {
+    "stock_units": 80,
+    "weekly_demand": 30,
+    "reorder_point": 60,
+    "supplier": "Orion",
+    "lead_time_days": 21
+  },
+  "recommendation": "Place an order with Orion immediately. Current stock (80 units) is below the 21-day lead-time demand of 90 units (3 weeks × 30 units/week). If the order is placed now, receipt is expected in 21 days, by which point roughly 90 units will have been consumed, leaving a projected deficit of 10 units. To protect against demand volatility, adopt a 15-unit safety stock buffer (per Operations guidance), which raises the effective reorder point to 105 units (90 + 15). Because current stock is already below this level, an order should be placed without delay. Do not rely on the listed reorder point of 60, as waiting until that level would cause a stockout before replenishment arrives.",
+  "quality_notes": [
+    "Lead-time demand (90 units) exceeds current on-hand stock (80 units), indicating an immediate replenishment need even before adding safety stock.",
+    "The listed reorder point of 60 units appears inconsistent with the 21-day lead time and 30-unit weekly demand; replenishment triggered at 60 would arrive after stock is depleted.",
+    "A 15-unit safety stock buffer is recommended by Operations to account for demand volatility.",
+    "Effective reorder point should be recalculated as lead-time demand plus safety stock (90 + 15 = 105 units) and updated in the planning system."
+  ]
+}

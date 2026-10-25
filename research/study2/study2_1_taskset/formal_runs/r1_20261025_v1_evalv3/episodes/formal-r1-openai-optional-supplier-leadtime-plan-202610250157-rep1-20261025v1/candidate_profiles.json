@@ -1,0 +1,26 @@
+[
+  {
+    "candidate_id": "C3",
+    "name": "Robin Shah",
+    "job_title": "Project Team Member",
+    "profile": "Robin Shah — Project Team Member. Robin Shah is a general project coordinator."
+  },
+  {
+    "candidate_id": "C4",
+    "name": "Reese Wang",
+    "job_title": "Program Associate",
+    "profile": "Reese Wang — Program Associate. Reese Wang is a colleague in supply chain coordination."
+  },
+  {
+    "candidate_id": "C2",
+    "name": "Alex Rivera",
+    "job_title": "Business Associate",
+    "profile": "Alex Rivera — Business Associate. Alex Rivera is an adjacent-domain colleague."
+  },
+  {
+    "candidate_id": "C1",
+    "name": "Kai Sullivan",
+    "job_title": "Operations Associate",
+    "profile": "Kai Sullivan — Operations Associate. Kai Sullivan is a supply chain professional with experience in demand volatility."
+  }
+]

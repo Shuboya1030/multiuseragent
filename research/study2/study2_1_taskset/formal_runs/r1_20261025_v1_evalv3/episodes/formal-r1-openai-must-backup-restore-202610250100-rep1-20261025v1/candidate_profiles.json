@@ -1,0 +1,26 @@
+[
+  {
+    "candidate_id": "C3",
+    "name": "Riley Park",
+    "job_title": "Project Team Member",
+    "profile": "Riley Park — Project Team Member. Riley Park works in the data reliability engineering domain. Their expertise is general team coordination; their familiarity is general familiarity with data reliability engineering, but no access to the task-specific record. Their decision authority is no approval authority for this action. They are available."
+  },
+  {
+    "candidate_id": "C1",
+    "name": "Taylor Wu",
+    "job_title": "Business Associate",
+    "profile": "Taylor Wu — Business Associate. Taylor Wu works in the data reliability engineering domain. Their expertise is general team coordination; their familiarity is no stated task-domain expertise beyond general team coordination. Their decision authority is no approval authority for this action. They are available."
+  },
+  {
+    "candidate_id": "C2",
+    "name": "Morgan Patel",
+    "job_title": "Operations Associate",
+    "profile": "Morgan Patel — Operations Associate. Morgan Patel works in the data reliability engineering domain. Their expertise is backup catalogs and restoration runbooks; their familiarity is specialist familiarity with backup catalogs and restoration runbooks. Their decision authority is no approval authority for this action. They are available."
+  },
+  {
+    "candidate_id": "C4",
+    "name": "Rowan Diaz",
+    "job_title": "Program Associate",
+    "profile": "Rowan Diaz — Program Associate. Rowan Diaz works in the data reliability engineering domain. Their expertise is general team coordination; their familiarity is no stated task-domain expertise beyond general team coordination. Their decision authority is authorize restoration of production data. They are available."
+  }
+]

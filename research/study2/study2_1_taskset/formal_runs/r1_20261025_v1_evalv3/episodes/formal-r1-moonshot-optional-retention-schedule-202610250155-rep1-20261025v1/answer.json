@@ -1,0 +1,32 @@
+{
+  "baseline_summary": {
+    "record_types": [
+      "support tickets",
+      "billing records"
+    ],
+    "default_years": 3,
+    "owner": "Records Operations"
+  },
+  "schedule": [
+    {
+      "record_type": "support tickets",
+      "owner": "Records Operations",
+      "retention_years": 3,
+      "review_frequency": "quarterly",
+      "next_review": "Q1 2026"
+    },
+    {
+      "record_type": "billing records",
+      "owner": "Records Operations",
+      "retention_years": 3,
+      "review_frequency": "quarterly",
+      "next_review": "Q1 2026"
+    }
+  ],
+  "recommendation": "Apply the default 3-year retention rule to both support tickets and billing records, with Records Operations as the single schedule owner for consistency and accountability. Set a quarterly review cadence so the owner can proactively identify exceptions and catch policy or regulatory changes before they affect compliance. This approach is complete for the current task and aligns with records stewardship best practices.",
+  "quality_notes": [
+    "Records Operations is designated as the single owner for both record types to maintain clear accountability.",
+    "Quarterly reviews are recommended to surface exceptions and policy changes early.",
+    "The 3-year default retention is applied uniformly; future reviews should assess whether billing records require a longer period due to financial or tax regulations."
+  ]
+}

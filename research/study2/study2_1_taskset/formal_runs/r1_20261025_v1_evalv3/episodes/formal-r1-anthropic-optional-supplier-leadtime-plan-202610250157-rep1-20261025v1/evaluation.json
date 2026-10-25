@@ -1,0 +1,25 @@
+{
+  "evaluator_version": "study21-eval-spec-3",
+  "task_id": "optional-supplier-leadtime-plan",
+  "template_id": "optional-supplier-leadtime-plan",
+  "run_id": "formal-r1-anthropic-optional-supplier-leadtime-plan-202610250157-rep1-20261025v1",
+  "help_need_class": "optional_benefit",
+  "evidence_scope": "current run_id only",
+  "underhelp": false,
+  "baseline_artifact_correct": true,
+  "task_success": true,
+  "checkpoint_vector": {
+    "baseline_artifact_correct": true,
+    "optional_quality_improvement": false
+  },
+  "checkpoint_score": 1,
+  "contact_count": 1,
+  "contacted_admissible_person": false,
+  "optional_fact_received": false,
+  "reply_used_keyword_coverage": 0.6666666666666666,
+  "reply_used": false,
+  "optional_quality_points": 0,
+  "process_evidence_available": true,
+  "contact_cost_events": 1,
+  "evidence": []
+}

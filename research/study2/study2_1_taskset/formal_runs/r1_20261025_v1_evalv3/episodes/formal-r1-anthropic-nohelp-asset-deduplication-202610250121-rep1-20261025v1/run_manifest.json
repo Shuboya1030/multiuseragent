@@ -1,0 +1,13 @@
+{
+  "run_id": "formal-r1-anthropic-nohelp-asset-deduplication-202610250121-rep1-20261025v1",
+  "task_id": "nohelp-asset-deduplication",
+  "seed": 202610250121,
+  "profile_condition": "R1",
+  "alignment": "not_applicable",
+  "candidate_order": [
+    "C4",
+    "C1",
+    "C3",
+    "C2"
+  ]
+}
