@@ -87,3 +87,13 @@ These describe two fixed model configurations, not a comparison of model familie
 - The 14 workflow-template clusters remain the basis for uncertainty.
 - The 12 new extension templates are audited but excluded from this 168-cell confirmatory replication.
 - Simulation realism and lack of human-response variability limit external validity; automated checks are not a substitute for human double-review of task realism.
+
+## Publication-style figures
+
+The first-pass root SVGs have been replaced with publication-oriented vector versions; the full package includes double-column PDFs, SVG previews, source code, captions, and interpretation notes in [`figures/`](figures/).
+
+- Figure 1: [profile-condition outcomes (PDF)](figures/figure_01_profile_effects.pdf) · [SVG](figures/figure_01_profile_effects.svg)
+- Figure 2: [help-seeking error mechanisms (PDF)](figures/figure_02_help_seeking_errors.pdf) · [SVG](figures/figure_02_help_seeking_errors.svg)
+- Figure 3: [model-stratified token contrasts (PDF)](figures/figure_03_token_contrasts.pdf) · [SVG](figures/figure_03_token_contrasts.svg)
+- Full captions and limitations: [`figure-catalog.md`](figures/figure-catalog.md)
+- Statistical details: [`stats-appendix.md`](figures/stats-appendix.md)
