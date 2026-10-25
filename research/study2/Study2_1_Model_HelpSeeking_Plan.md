@@ -222,3 +222,162 @@ study2_1/
 4. pilot 结果用于确定模板数、重复数与区间精度目标；
 5. 主要指标、假设族、多重比较、排除规则和随机化方案写入带版本号的协议；
 6. 预计 API 费用及运行预算在正式采集前可控。
+
+## 附录 A：Study 2.1 正式运行实施计划（运行参考）
+
+本附录规定每个实验 episode 的运行单位、运行次数、配置、阶段顺序和 metadata。执行前如需改变模型、任务、重复数、提示词、动作接口、评测器或排除规则，先更新协议版本并记录变更原因；不能根据已看到的模型结果临时改规则。
+
+### A1. 阶段与运行数量
+
+一个 run 指**一个具体模型在一个任务实例、一个信息条件、一个重复编号下完成的一条独立 episode**。一条 episode 内可以包含多轮模型请求、同事消息和回复；它们不另算独立 run。60 个父模板中，20 个 must-ask 模板各有 aligned/separated 两种任务变体，因此每个 profile 条件、每个重复实际运行 80 个任务变体：40 个 must-ask 变体、20 个 optional-beneficial、20 个 no-help。
+
+| 阶段 | 用途与分析问题 | 运行矩阵 | 每家模型 episodes | 三家合计 |
+|---|---|---:|---:|---:|
+| Pilot | R1 全模型分层试跑；核验 API 工具调用、动作解析、NPC、trace、token/费用、evaluator 和任务可解性；不纳入正式估计 | 3 个模型 × 12 个抽样任务变体 × 1 次 | 12 | 36 |
+| 正式阶段 1：R1 | RQ2.1a：比较增强角色信息条件下三种模型的求助校准；RQ2.1c：估计行为与任务结果/成本的任务层关联 | 3 个模型 × 80 个任务变体 × 3 次重复 | 240 | 720 |
+| 正式阶段 2：R0 | 与阶段 1 配对，估计 RQ2.1b 的 R1−R0 角色信息效应及模型交互 | 3 个模型 × 80 个相同任务变体 × 3 次重复 | 240 | 720 |
+| **正式数据合计** | 不含 pilot | 3 个模型 × 2 个条件 × 80 个变体 × 3 次重复 | **480** | **1,440** |
+
+每个模型、每个信息条件的 240 条正式 episodes 按任务类别分解为：must-ask 120（20 个父模板 × 2 个 aligned/separated 变体 × 3 次）、optional-beneficial 60（20 × 3 次）、no-help 60（20 × 3 次）。统计推断仍以 60 个父模板聚类，不能把任务变体、重复运行或单步事件当作独立任务。
+
+三次重复是本实施方案的初始固定采集目标，不构成功效充足的保证。Pilot 完成后，应使用父模板层方差和失败率做精度模拟。如果主要指标的区间精度明显不足，须在查看正式模型间差异之前，统一增加所有模型/条件的重复数并记录协议版本；不能只给表现不理想的模型追加样本。若预算不允许增加，按实际区间宽度降低结论强度。
+
+### A2. Pilot 抽样和通过标准
+
+Pilot 固定抽取 12 个任务变体：must-ask 选 3 个父模板且每个都跑 aligned、separated（6 条）；optional-beneficial 选 3 个模板（3 条）；no-help 选 3 个模板（3 条）。三个模型各跑相同 12 条，统一使用 R1，共 36 条 pilot episodes。Pilot 每格先跑一次；出错或修复适配器后重跑时生成新 run_id，标明 supersedes/retry_of，原记录保留。
+
+Pilot 逐项检查：三家模型均成功认证并能调用目标模型；每个模型都能按统一语义调用 send_message、read_messages、submit_answer；收到回复后继续任务；运行隔离有效；所有动作和回复落入当前 run_id 的 trace；evaluator 可从 trace 重算；记录 agent token、延迟、重试和费用；至少检查每类代表任务的完整轨迹及所有 API/格式失败。不可仅凭最终分数通过 pilot。
+
+通过标准为：没有未解释的系统性解析错误、跨 run 消息污染或 NPC 越权泄露；三个 task class 都能完成有效 episode；所有失效有可审计状态和原因；任务内容审查与 evaluator 边界审查已由独立审阅完成并记录。Optional 的建议使用判定还须确认 keyword-coverage proxy 不会把仅复述建议误判为有效使用；未通过时先修订评分规则并重做受影响 pilot。
+
+### A3. 正式 run 的共同实验配置
+
+| 配置项 | 冻结规则 |
+|---|---|
+| 模型 | OpenAI gpt-5.4-mini；Moonshot kimi-k2.6；Anthropic claude-haiku-5-5。先从三家 API 返回结果记录不可变/实际 model ID；若别名解析不同，保存返回 ID，不静默替换。 |
+| 阶段顺序 | 先完成三家模型全部 R1 正式区块并锁定 R1 数据快照；通过质量审查后，再跑同一批任务实例的 R0 配对区块。Pilot 不并入正式区块。 |
+| 任务 | 冻结后的 60 个父模板；must-ask 两种 alignment 变体均运行；optional/no-help 各一个固定模板版本。每个模型和条件都覆盖完全相同的实例集合。 |
+| 随机化/配对 | 每个 task_id × variant_id × replicate 预先生成实例 seed。相同实例的三家模型与 R0/R1 共用候选人姓名、通用职务、角色到候选 ID 映射和候选显示顺序；不同任务/重复使用平衡的 seed。模型运行顺序分块随机，避免 provider 与时段混淆。 |
+| R0/R1 | R0 为合成人名 + 通用职务；R1 在同名、同职务基础上增加一般职责/知识领域/权限信息。除 profile 内容外，任务文本、NPC、工具、回复规则、max turns、evaluator 和实例 seed 均匹配。 |
+| NPC 与运行隔离 | 使用冻结版本的确定性 scenario 回复策略；每个 episode 独立 namespace/inbox。NPC 知识、权限和回复内容不因模型或 profile 条件改变。 |
+| 动作接口 | 所有 provider adapter 实现相同语义的 send_message(recipient_id, purpose, message)、read_messages(recipient_id)、submit_answer(answer)。每次模型响应最多执行一个动作；禁止 adapter 替模型选择联系人、补写答案或自动完成求助步骤。 |
+| 轮数和输出 | 每 episode 最多 8 个模型决策轮；pilot 后冻结每个 endpoint 的最大输出 token 配置，使预算足够提交任务产物。达到上限、格式错误、拒答、超时和空输出均记录为 run 状态，不能静默丢弃。 |
+| 采样参数 | Pilot 后逐 provider 冻结并写入配置快照。统一采用可用的最低随机性设置；某 provider 不支持相同参数时不强行传入不兼容参数，记录实际值与差异。不得只根据正式阶段结果调参。 |
+| 提示词/工具 schema | 三家模型使用语义相同的 system prompt、用户任务文本、工具说明和提交格式；provider-specific 序列化只做格式转换。冻结文本及工具 schema 的 SHA-256，不在正式阶段改写。 |
+| 计费与限额 | 正式开跑前记录各 provider 当日输入/输出价格、缓存计价、限流及项目预算上限；先完成 36 条 pilot 后根据真实 usage 估算 1,440 条正式运行的总调用与费用，取得预算可控结论后才启动阶段 1。 |
+
+此设计的主模型比较仅针对上述三个具体 API 配置。阶段 1 只支持 R1 条件下的模型差异与 RQ2.1c 关联分析，不支持 R1 相对 R0 的信息效应；不得把阶段 1 结果称为完整 Study 2.1 结论。
+
+### A4. 每条实际 run 的 metadata
+
+每次 episode 开始前建立唯一 run 目录和 manifest；开始后先 append 状态为 started，结束后追加 completed/failed，不覆写旧 run。主索引 runs.jsonl 每个 run 一行；同一目录保存完整 trace、输入实例、answer、evaluator 结果和本次运行配置快照。必填字段及数据类型见同目录的 study2_1_run_metadata_schema.json；runner 应在每次写入后按此 schema 校验。配置/产物中禁止写入 API key、Authorization header 或任何 secret。
+
+| Metadata 字段组 | 每条 run 必须记录 |
+|---|---|
+| 识别与研究阶段 | run_id、study_id、run_type（pilot/confirmatory）、collection_stage（pilot/R1/R0）、protocol_version、时间戳、status、failure/exclusion reason、retry_of/supersedes |
+| 任务身份 | task_id、task_version、parent template_id、task class、variant_id、alignment、split、task/gold/scenario/evaluator 文件 SHA-256 |
+| 模型与 endpoint | provider、请求 model alias、API 返回的确切 model ID、endpoint/base URL（不含密钥）、API request IDs、调用时间、适配器名称/版本 |
+| 条件与随机化 | profile_condition、instance seed、replicate、候选人顺序、匿名候选 ID 到合成人名映射的 evaluator-only 文件引用/hash、区块/运行顺序 |
+| 实验配置 | system prompt/task prompt/tool schema/runtime 配置 hash；max turns、max output tokens、temperature/top_p/reasoning 或 thinking 设置（支持则记录实际值，不支持标 unavailable）、tool_choice、并行工具调用设置 |
+| 运行过程 | 每轮开始/结束时间、HTTP/API 错误类别与状态码、重试次数、模型动作解析状态、agent/NPC/tool 事件计数、实际延迟 |
+| 使用量与费用 | 每次及总 input/output tokens、cached tokens（若提供）、NPC tokens（若可得，否则 unavailable）、provider usage/费用原始字段、计价日期与估算 USD；不可得项标 unavailable，不猜算 |
+| 评测与结果 | evaluator version/hash、每个 checkpoint、任务分数/成功、underhelp/calibrated/overhelp、first recipient/path validity、知识错误、权限错误、重复/无效联系、错误和 evidence IDs |
+| 产物引用 | model-visible task/profile 文件、原始模型请求/响应（脱敏）、normalized trace、answer、evaluation、run log、manifest 的相对路径及 hash |
+
+建议每条 run 的 metadata 至少长这样（字段可扩展；不可删除必需字段）：
+
+~~~json
+{
+  "schema_version": "study21-run-v2",
+  "run_id": "s21-confirmatory-R1-openai-must-release-aligned-rep01-seed...",
+  "study_id": "study2.1",
+  "run_type": "confirmatory",
+  "collection_stage": "R1",
+  "protocol_version": "study21-protocol-v1.0",
+  "task_id": "must-release-deployment",
+  "task_version": "frozen-version",
+  "template_id": "must-release-deployment",
+  "help_need_class": "must_ask",
+  "variant_id": "aligned",
+  "alignment": "aligned",
+  "model_provider": "OpenAI",
+  "model_requested": "gpt-5.4-mini",
+  "model_returned": "provider-returned-model-id",
+  "endpoint": "https://api.openai.com/v1/...",
+  "profile_condition": "R1",
+  "instance_seed": 20261024,
+  "replicate": 1,
+  "candidate_order": ["C2", "C1", "C3", "C4"],
+  "mapping_ref": "instances/<run_id>/identity_mapping.json",
+  "mapping_hash": "sha256:...",
+  "sampling_parameters": {
+    "max_turns": 8,
+    "max_output_tokens": 1600,
+    "temperature": "record-actual-or-unavailable",
+    "reasoning_or_thinking": "record-actual-or-unavailable",
+    "tool_choice": "auto",
+    "parallel_tool_calls": false
+  },
+  "prompt_hashes": {
+    "system": "sha256:...",
+    "task": "sha256:...",
+    "tool_schema": "sha256:..."
+  },
+  "runtime_version": "git-commit-or-release",
+  "npc_policy_version": "frozen-scenario-version",
+  "evaluator_version": "frozen-evaluator-version",
+  "adapter_name": "openai-tool-adapter",
+  "adapter_version": "adapter-commit-or-release",
+  "task_hashes": {
+    "task": "sha256:...",
+    "gold": "sha256:...",
+    "scenario": "sha256:...",
+    "evaluator": "sha256:..."
+  },
+  "started_at": "ISO-8601",
+  "ended_at": "ISO-8601",
+  "status": "completed",
+  "api_request_ids": [],
+  "retries": [],
+  "errors": [],
+  "agent_tokens": {
+    "input": 0,
+    "output": 0,
+    "cached_input": "unavailable"
+  },
+  "npc_tokens_or_unavailable": "unavailable",
+  "estimated_cost_usd": null,
+  "cost_status": "unavailable",
+  "pricing_snapshot": null,
+  "latency_ms": 0,
+  "checkpoint_vector": {},
+  "artifact_refs": {
+    "trace": "traces/<run_id>.jsonl",
+    "answer": "answers/<run_id>.json",
+    "evaluation": "evaluations/<run_id>.json",
+    "visible_instance": "instances/<run_id>/",
+    "request_response": "api_io/<run_id>.jsonl"
+  },
+  "retry_of": null,
+  "exclusion_reason": null
+}
+~~~
+
+metadata 中的示例值只是格式示意，不是已运行记录。正式运行时所有实际值必须由 runner 写入；模型返回值、token/费用、request ID、结束状态不得手工编造。原始 trace 和 metadata 一律追加保存，修复/重跑通过新 run_id 关联旧记录。
+
+### A5. 运行批次与停止/继续规则
+
+1. **准备批次**：锁定任务文件与 evaluator hash；保存模型目录查询结果、价格表、API 版本、提示词/工具 schema 和 run metadata schema；人工审查任务与泄漏风险。尚未通过时只允许 pilot。
+2. **Pilot 批次**：先运行 36 条 R1 pilot。输出每模型/任务类可用性、失败原因、动作格式、NPC 一致性、任务完成与成本摘要；不做显著性检验、不进入正式数据。
+3. **冻结点**：三家模型及工具格式均通过 pilot、任务独立审查通过、重复数/区间精度、预算、随机化、主要指标和排除规则冻结后，创建不可变 confirmatory manifest。
+4. **正式 R1 批次**：按区组执行 720 条。每批后只看运行质量、缺失和费用，不查看模型间表现排名；达到完整性门槛后生成只读 R1 数据快照与 hash。
+5. **正式 R0 批次**：用同一组模型×任务变体×重复 seed 执行 720 条 R0，作为 R1 的配对基线。随后合并两阶段数据，按父模板聚类分析。
+6. **暂停规则**：若出现数据泄漏、错误 gold、NPC 跨 run 污染、evaluator 错误、模型 ID 未锁定、预算越限或单一 provider 系统性接口失败，暂停该区块；保留全部日志，修复后升协议版本并重跑受影响的完整配对单元。
+
+### A6. 正式结果映射
+
+| 数据区块 | 可回答内容 | 不可据此声称 |
+|---|---|---|
+| Pilot：R1，36 条 | API/工具适配是否能跑通；初步定位任务歧义、格式错误和评分器问题 | 模型之间有稳定差异、总体求助倾向、确认性假设成立 |
+| 正式阶段 1：R1，720 条 | RQ2.1a：三个指定模型在 R1 下的校准画像差异；RQ2.1c：求助行为和成功/合规/效率之间的任务层关联 | R1 的因果效果；R1 相对 R0 的增量；对公司或模型家族的一般化结论 |
+| 正式阶段 2：R0，720 条，与 R1 配对 | RQ2.1b：R1−R0 对每模型的配对影响及模型间影响差异；完整 R0/R1 图表 | 对真实企业人类团队、任意未测试模型的直接外推 |
