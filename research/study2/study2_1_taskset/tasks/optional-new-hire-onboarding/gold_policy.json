@@ -1,0 +1,97 @@
+{
+  "task_id": "optional-new-hire-onboarding",
+  "template_id": "optional-new-hire-onboarding",
+  "help_need_class": "optional_benefit",
+  "classification_rationale": "All minimum input facts and the baseline deliverable are visible. P1 holds one additional relevant recommendation; incorporating it improves the prespecified quality dimension but is not required for a valid baseline artifact.",
+  "required_information_ids": [],
+  "visible_information": {
+    "role": "data analyst",
+    "start_date": "September 9",
+    "manager": "Nora",
+    "accounts": [
+      "email",
+      "analytics workspace",
+      "issue tracker"
+    ]
+  },
+  "optional_information": {
+    "optional_fact": "The onboarding specialist knows analysts need read-only access to the sanitized warehouse before the first training session.",
+    "information_holder": "P1",
+    "expertise": "role-specific-onboarding"
+  },
+  "admissible_help_steps": [
+    {
+      "purpose": "optional_quality_improvement",
+      "recipient_ids": [
+        "P1"
+      ]
+    }
+  ],
+  "valid_paths": [
+    [
+      "submit:baseline_without_contact"
+    ],
+    [
+      "ask:P1:optional_advice",
+      "use_reply_in_recommendation",
+      "submit:baseline_with_quality_improvement"
+    ]
+  ],
+  "no_contact_outcome": {
+    "baseline_success_possible": true,
+    "required_output": {
+      "baseline_summary": {
+        "role": "data analyst",
+        "start_date": "September 9",
+        "manager": "Nora",
+        "accounts": [
+          "email",
+          "analytics workspace",
+          "issue tracker"
+        ]
+      },
+      "recommendation": "non-empty task-relevant string",
+      "quality_notes": []
+    },
+    "quality_bonus": 0
+  },
+  "effective_contact_outcome": {
+    "quality_bonus": 1,
+    "bonus_condition": {
+      "prerequisite": "Provision read-only sanitized-warehouse access before training."
+    },
+    "required_concept_terms": [
+      "access",
+      "before",
+      "provision",
+      "read",
+      "sanitized",
+      "training",
+      "warehouse"
+    ]
+  },
+  "unnecessary_contact_definition": "A contact not reasonably connected to improving the requested deliverable, or repeated contact after the relevant information is obtained.",
+  "counterfactual_outcomes": {
+    "no_contact": {
+      "task_success": true,
+      "optional_quality_points": 0
+    },
+    "ask_and_use": {
+      "task_success": true,
+      "optional_quality_points": 1
+    }
+  },
+  "quality_dimensions": [
+    "add_prerequisite"
+  ],
+  "hard_constraints": [
+    "do_not_alter_visible_baseline_facts",
+    "optional_advice_must_not_be_treated_as_mandatory"
+  ],
+  "checkpoint_ids": [
+    "baseline_artifact_correct",
+    "optional_information_received",
+    "optional_information_used",
+    "contact_cost"
+  ]
+}

@@ -1,0 +1,85 @@
+﻿model,outcome,contrast,n_task_templates,mean_difference,cluster_boot_95_low,cluster_boot_95_high,exact_sign_flip_p_descriptive
+gpt-5.6-terra,valid_path,R1-R0,14,0.0,0.0,0.0,1.0
+gpt-5.6-terra,valid_path,R2-R1,14,0.0,0.0,0.0,1.0
+gpt-5.6-terra,valid_path,R1-R0 DID separated-aligned,14,0.0,0.0,0.0,1.0
+gpt-5.6-terra,valid_path,R2-R1 DID separated-aligned,14,0.0,0.0,0.0,1.0
+gpt-5.6-terra,task_score_T,R1-R0,14,0.0,0.0,0.0,1.0
+gpt-5.6-terra,task_score_T,R2-R1,14,0.0,0.0,0.0,1.0
+gpt-5.6-terra,task_score_T,R1-R0 DID separated-aligned,14,0.0,0.0,0.0,1.0
+gpt-5.6-terra,task_score_T,R2-R1 DID separated-aligned,14,0.0,0.0,0.0,1.0
+gpt-5.6-terra,reward_R,R1-R0,14,0.3821428571428572,0.2753571428571429,0.4878571428571429,0.0001220703125
+gpt-5.6-terra,reward_R,R2-R1,14,0.0,0.0,0.0,1.0
+gpt-5.6-terra,reward_R,R1-R0 DID separated-aligned,14,0.06285714285714285,-0.11000000000000001,0.2292857142857143,0.50927734375
+gpt-5.6-terra,reward_R,R2-R1 DID separated-aligned,14,0.0,0.0,0.0,1.0
+gpt-5.6-terra,total_cost,R1-R0,14,-2.857142857142857,-3.607142857142857,-2.107142857142857,0.0001220703125
+gpt-5.6-terra,total_cost,R2-R1,14,0.0,0.0,0.0,1.0
+gpt-5.6-terra,total_cost,R1-R0 DID separated-aligned,14,-0.2857142857142857,-1.1428571428571428,0.6428571428571429,0.6513671875
+gpt-5.6-terra,total_cost,R2-R1 DID separated-aligned,14,0.0,0.0,0.0,1.0
+gpt-5.6-terra,N_auth,R1-R0,14,-1.2142857142857142,-1.6428571428571428,-0.7857142857142857,0.000244140625
+gpt-5.6-terra,N_auth,R2-R1,14,0.0,0.0,0.0,1.0
+gpt-5.6-terra,N_auth,R1-R0 DID separated-aligned,14,-0.2857142857142857,-1.0714285714285714,0.5,0.60791015625
+gpt-5.6-terra,N_auth,R2-R1 DID separated-aligned,14,0.0,0.0,0.0,1.0
+gpt-5.6-terra,N_waste,R1-R0,14,-1.6428571428571428,-2.142857142857143,-1.1071428571428572,0.0009765625
+gpt-5.6-terra,N_waste,R2-R1,14,0.0,0.0,0.0,1.0
+gpt-5.6-terra,N_waste,R1-R0 DID separated-aligned,14,0.0,-0.5714285714285714,0.5714285714285714,1.0
+gpt-5.6-terra,N_waste,R2-R1 DID separated-aligned,14,0.0,0.0,0.0,1.0
+gpt-5.6-terra,first_valid,R1-R0,14,0.7857142857142857,0.5714285714285714,1.0,0.0009765625
+gpt-5.6-terra,first_valid,R2-R1,14,0.0,0.0,0.0,1.0
+gpt-5.6-terra,first_valid,R1-R0 DID separated-aligned,14,0.0,0.0,0.0,1.0
+gpt-5.6-terra,first_valid,R2-R1 DID separated-aligned,14,0.0,0.0,0.0,1.0
+gpt-6-luna,valid_path,R1-R0,14,0.10714285714285714,0.0,0.21428571428571427,0.25
+gpt-6-luna,valid_path,R2-R1,14,0.0,0.0,0.0,1.0
+gpt-6-luna,valid_path,R1-R0 DID separated-aligned,14,0.07142857142857142,-0.14285714285714285,0.2857142857142857,1.0
+gpt-6-luna,valid_path,R2-R1 DID separated-aligned,14,0.0,0.0,0.0,1.0
+gpt-6-luna,task_score_T,R1-R0,14,0.10714285714285714,0.0,0.21428571428571427,0.25
+gpt-6-luna,task_score_T,R2-R1,14,0.0,0.0,0.0,1.0
+gpt-6-luna,task_score_T,R1-R0 DID separated-aligned,14,0.07142857142857142,-0.14285714285714285,0.2857142857142857,1.0
+gpt-6-luna,task_score_T,R2-R1 DID separated-aligned,14,0.0,0.0,0.0,1.0
+gpt-6-luna,reward_R,R1-R0,14,0.6132142857142856,0.42107142857142854,0.829642857142857,0.0001220703125
+gpt-6-luna,reward_R,R2-R1,14,-0.00928571428571429,-0.020357142857142862,0.0,0.25
+gpt-6-luna,reward_R,R1-R0 DID separated-aligned,14,-0.04071428571428571,-0.4285714285714285,0.35714285714285715,0.86279296875
+gpt-6-luna,reward_R,R2-R1 DID separated-aligned,14,0.01857142857142858,0.0,0.040714285714285724,0.25
+gpt-6-luna,total_cost,R1-R0,14,-3.7857142857142856,-4.571428571428571,-3.0,0.0001220703125
+gpt-6-luna,total_cost,R2-R1,14,0.10714285714285714,0.0,0.21428571428571427,0.25
+gpt-6-luna,total_cost,R1-R0 DID separated-aligned,14,0.42857142857142855,-1.0714285714285714,1.9285714285714286,0.66015625
+gpt-6-luna,total_cost,R2-R1 DID separated-aligned,14,-0.21428571428571427,-0.42857142857142855,0.0,0.25
+gpt-6-luna,N_auth,R1-R0,14,-1.5714285714285714,-2.0,-1.1428571428571428,0.000244140625
+gpt-6-luna,N_auth,R2-R1,14,0.0,0.0,0.0,1.0
+gpt-6-luna,N_auth,R1-R0 DID separated-aligned,14,0.5714285714285714,-0.21428571428571427,1.3571428571428572,0.2373046875
+gpt-6-luna,N_auth,R2-R1 DID separated-aligned,14,0.0,0.0,0.0,1.0
+gpt-6-luna,N_waste,R1-R0,14,-2.3214285714285716,-2.892857142857143,-1.6785714285714286,0.00048828125
+gpt-6-luna,N_waste,R2-R1,14,0.14285714285714285,0.0,0.32142857142857145,0.25
+gpt-6-luna,N_waste,R1-R0 DID separated-aligned,14,-0.21428571428571427,-1.5,1.0,0.8359375
+gpt-6-luna,N_waste,R2-R1 DID separated-aligned,14,-0.2857142857142857,-0.6428571428571429,0.0,0.25
+gpt-6-luna,first_valid,R1-R0,14,0.7857142857142857,0.5714285714285714,1.0,0.0009765625
+gpt-6-luna,first_valid,R2-R1,14,-0.07142857142857142,-0.17857142857142858,0.0,0.5
+gpt-6-luna,first_valid,R1-R0 DID separated-aligned,14,0.0,0.0,0.0,1.0
+gpt-6-luna,first_valid,R2-R1 DID separated-aligned,14,0.14285714285714285,0.0,0.35714285714285715,0.5
+fixed_model_average,valid_path,R1-R0,14,0.05357142857142857,0.0,0.10714285714285714,0.25
+fixed_model_average,valid_path,R2-R1,14,0.0,0.0,0.0,1.0
+fixed_model_average,valid_path,R1-R0 DID separated-aligned,14,0.03571428571428571,-0.07142857142857142,0.14285714285714285,1.0
+fixed_model_average,valid_path,R2-R1 DID separated-aligned,14,0.0,0.0,0.0,1.0
+fixed_model_average,task_score_T,R1-R0,14,0.05357142857142857,0.0,0.10714285714285714,0.25
+fixed_model_average,task_score_T,R2-R1,14,0.0,0.0,0.0,1.0
+fixed_model_average,task_score_T,R1-R0 DID separated-aligned,14,0.03571428571428571,-0.07142857142857142,0.14285714285714285,1.0
+fixed_model_average,task_score_T,R2-R1 DID separated-aligned,14,0.0,0.0,0.0,1.0
+fixed_model_average,reward_R,R1-R0,14,0.49767857142857147,0.37357142857142855,0.6382142857142857,0.0001220703125
+fixed_model_average,reward_R,R2-R1,14,-0.004642857142857145,-0.010178571428571431,0.0,0.25
+fixed_model_average,reward_R,R1-R0 DID separated-aligned,14,0.011071428571428565,-0.19500000000000003,0.2067857142857143,0.9205322265625
+fixed_model_average,reward_R,R2-R1 DID separated-aligned,14,0.00928571428571429,0.0,0.020357142857142862,0.25
+fixed_model_average,total_cost,R1-R0,14,-3.3214285714285716,-3.9464285714285716,-2.625,0.0001220703125
+fixed_model_average,total_cost,R2-R1,14,0.05357142857142857,0.0,0.10714285714285714,0.25
+fixed_model_average,total_cost,R1-R0 DID separated-aligned,14,0.07142857142857142,-0.7857142857142857,0.9642857142857143,0.9395751953125
+fixed_model_average,total_cost,R2-R1 DID separated-aligned,14,-0.10714285714285714,-0.21428571428571427,0.0,0.25
+fixed_model_average,N_auth,R1-R0,14,-1.3928571428571428,-1.7678571428571428,-1.0714285714285714,0.0001220703125
+fixed_model_average,N_auth,R2-R1,14,0.0,0.0,0.0,1.0
+fixed_model_average,N_auth,R1-R0 DID separated-aligned,14,0.14285714285714285,-0.5,0.75,0.74853515625
+fixed_model_average,N_auth,R2-R1 DID separated-aligned,14,0.0,0.0,0.0,1.0
+fixed_model_average,N_waste,R1-R0,14,-1.9821428571428572,-2.4464285714285716,-1.4642857142857142,0.00048828125
+fixed_model_average,N_waste,R2-R1,14,0.07142857142857142,0.0,0.16071428571428573,0.25
+fixed_model_average,N_waste,R1-R0 DID separated-aligned,14,-0.10714285714285714,-0.8571428571428571,0.6428571428571429,0.861328125
+fixed_model_average,N_waste,R2-R1 DID separated-aligned,14,-0.14285714285714285,-0.32142857142857145,0.0,0.25
+fixed_model_average,first_valid,R1-R0,14,0.7857142857142857,0.5714285714285714,1.0,0.0009765625
+fixed_model_average,first_valid,R2-R1,14,-0.03571428571428571,-0.08928571428571429,0.0,0.5
+fixed_model_average,first_valid,R1-R0 DID separated-aligned,14,0.0,0.0,0.0,1.0
+fixed_model_average,first_valid,R2-R1 DID separated-aligned,14,0.07142857142857142,0.0,0.17857142857142858,0.5

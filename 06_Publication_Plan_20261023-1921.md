@@ -54,7 +54,19 @@ gantt
 6. **Minimum viable combination:** Papers 0 + 1 + 2 already form the main line of a PhD thesis.
 7. **Do not put specific deadlines in the proposal.** The plan "Paper 1–4 + corresponding RQs" is enough there. This file is for project management only.
 
-## 4. Google Scholar indexing and citation for workshop papers
+## 4. Future proposal pipeline (separate from the current paper)
+
+### FP-1: Reproducible benchmark for multi-user organizational agent work
+
+- **Status:** idea parked for a separate research proposal; not part of the current Role-Aware Help-Seeking paper's scope or immediate deliverables.
+- **Working question:** How can we build a resettable, process-auditable benchmark for multi-user organizational tasks that supports controlled study of role-aware help-seeking, task execution, and team structure?
+- **Motivation:** Existing resources cover complementary pieces: PeopleJoin (multi-user information gathering in synthetic organizations), Muses-Bench (multi-user instruction following, access control, and meeting coordination), TheAgentCompany (long-horizon workplace tasks and traces), and Co-Gym / Manager Agent Gym (human-agent or team workflow environments). The future proposal would investigate whether a carefully validated environment can connect these pieces in a reusable benchmark.
+- **Possible artifact:** scenario schema + executable/resettable environment + grounded simulated colleagues + rule-based evaluators + reference traces and reproducibility protocol.
+- **Novelty constraint:** Do not claim that synthetic multi-user organizations, multi-user traces, or choosing whom to contact are absent. Differentiate from PeopleJoin and Muses-Bench directly; novelty would need to lie in the validated combination of workflow execution, knowledge/authority distinctions, cost-sensitive help-seeking, and/or configurable team structure.
+- **Next step when resumed:** conduct a benchmark feature audit and a focused novelty review, then decide whether to extend an existing environment or build a modular one.
+- **Planning note:** This item is a future proposal queue entry, not a committed paper number or venue.
+
+## 5. Google Scholar indexing and citation for workshop papers
 
 Whether Google Scholar indexes a paper depends mainly on **whether the paper is posted on a public academic site**, not on whether it is a workshop paper.
 

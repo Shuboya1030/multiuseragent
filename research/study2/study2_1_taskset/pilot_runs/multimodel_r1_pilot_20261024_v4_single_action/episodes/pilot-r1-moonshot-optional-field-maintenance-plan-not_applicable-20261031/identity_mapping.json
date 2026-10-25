@@ -1,0 +1,19 @@
+{
+  "run_id": "pilot-r1-moonshot-optional-field-maintenance-plan-not_applicable-20261031",
+  "task_id": "optional-field-maintenance-plan",
+  "seed": 20261031,
+  "profile_condition": "R1",
+  "alignment": "not_applicable",
+  "alias_to_canonical": {
+    "C3": "P1",
+    "C2": "P2",
+    "C4": "P3",
+    "C1": "P4"
+  },
+  "canonical_to_alias": {
+    "P4": "C1",
+    "P2": "C2",
+    "P1": "C3",
+    "P3": "C4"
+  }
+}

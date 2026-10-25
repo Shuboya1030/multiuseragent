@@ -1,0 +1,1 @@
+{"run_id": "pilot-r1-anthropic-nohelp-webinar-agenda-not_applicable-20261032", "event_id": 0, "timestamp": "2026-10-25T06:29:43.507102+00:00", "actor": "agent", "event_type": "submit", "recipient_id": null, "purpose": null, "content": "{\"end\": \"14:30\", \"duration\": 90}", "authorized": null}

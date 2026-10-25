@@ -1,0 +1,13 @@
+{
+  "run_id": "pilot-r1-moonshot-nohelp-access-review-matrix-not_applicable-20261034",
+  "task_id": "nohelp-access-review-matrix",
+  "seed": 20261034,
+  "profile_condition": "R1",
+  "alignment": "not_applicable",
+  "candidate_order": [
+    "C2",
+    "C4",
+    "C1",
+    "C3"
+  ]
+}

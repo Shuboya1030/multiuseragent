@@ -1,0 +1,41 @@
+{
+  "generated_at_utc": "2026-10-25T01:06:49.689675+00:00",
+  "code_commit_at_analysis": "cd727d03664e3a4c0b2cf9f098ef45c29c0bbd49",
+  "working_tree_changes_at_analysis": true,
+  "task_version": "0.4",
+  "profile_version": "profile-0.4",
+  "prompt_version": "S2-prompt-0.3",
+  "n_episodes": 168,
+  "n_templates": 14,
+  "models": [
+    "gpt-5.6-terra",
+    "gpt-6-luna"
+  ],
+  "model_cli_versions": [
+    "0.163.0-alpha.11.2"
+  ],
+  "conditions": [
+    "R0",
+    "R1",
+    "R2"
+  ],
+  "reps": 1,
+  "seed": 20261024,
+  "analysis_script": "analyze_study2_v04.py",
+  "primary_outcomes": [
+    "strict_first_information_step_valid",
+    "valid_path_recomputed",
+    "task_score_recomputed"
+  ],
+  "secondary_resource_outcome": "sum(input_tokens, output_tokens) across calls in each episode; usage proxy, not billed-dollar cost",
+  "cluster_bootstrap_draws": 20000,
+  "signflip_monte_carlo_draws": 50000,
+  "multiple_testing": "Holm across 6 fixed-model-average primary contrasts",
+  "no_reward_weight_sensitivity_scan": true,
+  "sha256_task_blueprints_v0_4": "939348093bf680ee3742bff6af3ec9166f4868f159423902144fc53dbd4f7457",
+  "sha256_analysis_script": "212c1823cbc47eb8db778cd72b9de6444d8d30ad48df520caac8f8bb2a6825d3",
+  "sha256_protocol": "2437b8fb621f4083f613d7c510be700b998bebf7a46f49a549abeb34d3efbcb7",
+  "sha256_raw_runs": "ce6b6e44f086096628743f8f13ffe5009be34321d2f282570f93047cfabae3ba",
+  "sha256_raw_events": "bc0e439d7175fdad87870c67bf8e197ec22e62f9fe97ed916310066bba2f9dc6",
+  "sha256_trace_recomputed_metrics": "708b84cb5b2a17ee870cf93a09c6dd21d0a4ff2cb44b07b0bd17692fdf2627b2"
+}

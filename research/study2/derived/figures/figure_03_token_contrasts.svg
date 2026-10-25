@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="720" height="350" preserveAspectRatio="xMinYMin meet" viewBox="0 0 720 350" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="720" height="350"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-350)" style="clip-path: url(#clip)">
+		<g transform="">
+			<text x="145.518" y="292" style="font-family: Times-Bold; font-size: 12px;fill: rgb(12%,14%,16%); stroke:none;" transform="translate(0,584) scale(1,-1)">Role facts vs. names (R1 - R0)</text>
+			<path d="M 142,86 L 142,267 Z" style="stroke: rgb(88%,89%,90%); stroke-linecap: butt; stroke-width: 0.55;"/>
+			<text x="136.0015" y="69" style="font-family: Times-Roman; font-size: 9px;fill: rgb(30%,33%,36%); stroke:none;" transform="translate(0,138) scale(1,-1)">-60</text>
+			<path d="M 206,86 L 206,267 Z" style="stroke: rgb(88%,89%,90%); stroke-linecap: butt; stroke-width: 0.55;"/>
+			<text x="200.0015" y="69" style="font-family: Times-Roman; font-size: 9px;fill: rgb(30%,33%,36%); stroke:none;" transform="translate(0,138) scale(1,-1)">-40</text>
+			<path d="M 270,86 L 270,267 Z" style="stroke: rgb(88%,89%,90%); stroke-linecap: butt; stroke-width: 0.55;"/>
+			<text x="264.0015" y="69" style="font-family: Times-Roman; font-size: 9px;fill: rgb(30%,33%,36%); stroke:none;" transform="translate(0,138) scale(1,-1)">-20</text>
+			<path d="M 334,86 L 334,267 Z" style="stroke: rgb(88%,89%,90%); stroke-linecap: butt; stroke-width: 0.55;"/>
+			<text x="331.75" y="69" style="font-family: Times-Roman; font-size: 9px;fill: rgb(30%,33%,36%); stroke:none;" transform="translate(0,138) scale(1,-1)">0</text>
+			<path d="M 334,86 L 334,267 Z" style="stroke: rgb(33%,37%,41%); stroke-linecap: butt; stroke-width: 0.85; stroke-dasharray: 4, 3;"/>
+			<path d="M 94,86 L 350,86 Z" style="stroke: rgb(33%,37%,41%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 146.102514,225 L 237.336457,225 Z" style="stroke: rgb(0%,44%,69%); stroke-linecap: butt; stroke-width: 1.4;"/>
+			<path d="M 146.102514,221 L 146.102514,229 Z" style="stroke: rgb(0%,44%,69%); stroke-linecap: butt; stroke-width: 1.4;"/>
+			<path d="M 237.336457,221 L 237.336457,229 Z" style="stroke: rgb(0%,44%,69%); stroke-linecap: butt; stroke-width: 1.4;"/>
+			<circle cx="193.76434285714285" cy="225" r="4.3" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(0%,44%,69%); fill-rule: evenodd;"/>
+			<text x="63.35" y="222" style="font-family: Times-Roman; font-size: 10px;fill: rgb(20%,22%,25%); stroke:none;" transform="translate(0,444) scale(1,-1)">Terra</text>
+			<path d="M 117.295314,173 L 201.2168,173 Z" style="stroke: rgb(83%,36%,0%); stroke-linecap: butt; stroke-width: 1.4;"/>
+			<path d="M 117.295314,169 L 117.295314,177 Z" style="stroke: rgb(83%,36%,0%); stroke-linecap: butt; stroke-width: 1.4;"/>
+			<path d="M 201.2168,169 L 201.2168,177 Z" style="stroke: rgb(83%,36%,0%); stroke-linecap: butt; stroke-width: 1.4;"/>
+			<rect x="155.57062857142859" y="169" width="8.0" height="8" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(83%,36%,0%); fill-rule: evenodd;"/>
+			<text x="64.45" y="170" style="font-family: Times-Roman; font-size: 10px;fill: rgb(20%,22%,25%); stroke:none;" transform="translate(0,340) scale(1,-1)">Luna</text>
+			<path d="M 136.223771,121 L 215.873143,121 Z" style="stroke: rgb(13%,13%,13%); stroke-linecap: butt; stroke-width: 1.4;"/>
+			<path d="M 136.223771,117 L 136.223771,125 Z" style="stroke: rgb(13%,13%,13%); stroke-linecap: butt; stroke-width: 1.4;"/>
+			<path d="M 215.873143,117 L 215.873143,125 Z" style="stroke: rgb(13%,13%,13%); stroke-linecap: butt; stroke-width: 1.4;"/>
+			<polygon points="176.6675 126, 171.6675 121, 176.6675 116, 181.6675 121" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(13%,13%,13%); fill-rule: evenodd;"/>
+			<text x="51.13" y="118" style="font-family: Times-Roman; font-size: 10px;fill: rgb(20%,22%,25%); stroke:none;" transform="translate(0,236) scale(1,-1)">Average</text>
+			<text x="138.37" y="43" style="font-family: Times-Roman; font-size: 10px;fill: rgb(33%,36%,40%); stroke:none;" transform="translate(0,86) scale(1,-1)">Difference in tokens per episode (×1,000)</text>
+			<text x="501.014" y="292" style="font-family: Times-Bold; font-size: 12px;fill: rgb(12%,14%,16%); stroke:none;" transform="translate(0,584) scale(1,-1)">Structured vs. prose (R2 - R1)</text>
+			<path d="M 450,86 L 450,267 Z" style="stroke: rgb(88%,89%,90%); stroke-linecap: butt; stroke-width: 0.55;"/>
+			<text x="446.2515" y="69" style="font-family: Times-Roman; font-size: 9px;fill: rgb(30%,33%,36%); stroke:none;" transform="translate(0,138) scale(1,-1)">-6</text>
+			<path d="M 514,86 L 514,267 Z" style="stroke: rgb(88%,89%,90%); stroke-linecap: butt; stroke-width: 0.55;"/>
+			<text x="510.2515" y="69" style="font-family: Times-Roman; font-size: 9px;fill: rgb(30%,33%,36%); stroke:none;" transform="translate(0,138) scale(1,-1)">-3</text>
+			<path d="M 578,86 L 578,267 Z" style="stroke: rgb(88%,89%,90%); stroke-linecap: butt; stroke-width: 0.55;"/>
+			<text x="575.75" y="69" style="font-family: Times-Roman; font-size: 9px;fill: rgb(30%,33%,36%); stroke:none;" transform="translate(0,138) scale(1,-1)">0</text>
+			<path d="M 642,86 L 642,267 Z" style="stroke: rgb(88%,89%,90%); stroke-linecap: butt; stroke-width: 0.55;"/>
+			<text x="639.75" y="69" style="font-family: Times-Roman; font-size: 9px;fill: rgb(30%,33%,36%); stroke:none;" transform="translate(0,138) scale(1,-1)">3</text>
+			<path d="M 706,86 L 706,267 Z" style="stroke: rgb(88%,89%,90%); stroke-linecap: butt; stroke-width: 0.55;"/>
+			<text x="703.75" y="69" style="font-family: Times-Roman; font-size: 9px;fill: rgb(30%,33%,36%); stroke:none;" transform="translate(0,138) scale(1,-1)">6</text>
+			<path d="M 578,86 L 578,267 Z" style="stroke: rgb(33%,37%,41%); stroke-linecap: butt; stroke-width: 0.85; stroke-dasharray: 4, 3;"/>
+			<path d="M 450,86 L 706,86 Z" style="stroke: rgb(33%,37%,41%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 508.848762,225 L 585.215238,225 Z" style="stroke: rgb(0%,44%,69%); stroke-linecap: butt; stroke-width: 1.4;"/>
+			<path d="M 508.848762,221 L 508.848762,229 Z" style="stroke: rgb(0%,44%,69%); stroke-linecap: butt; stroke-width: 1.4;"/>
+			<path d="M 585.215238,221 L 585.215238,229 Z" style="stroke: rgb(0%,44%,69%); stroke-linecap: butt; stroke-width: 1.4;"/>
+			<circle cx="557.6121904761904" cy="225" r="4.3" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(0%,44%,69%); fill-rule: evenodd;"/>
+			<text x="419.35" y="222" style="font-family: Times-Roman; font-size: 10px;fill: rgb(20%,22%,25%); stroke:none;" transform="translate(0,444) scale(1,-1)">Terra</text>
+			<path d="M 536.434286,173 L 632.238476,173 Z" style="stroke: rgb(83%,36%,0%); stroke-linecap: butt; stroke-width: 1.4;"/>
+			<path d="M 536.434286,169 L 536.434286,177 Z" style="stroke: rgb(83%,36%,0%); stroke-linecap: butt; stroke-width: 1.4;"/>
+			<path d="M 632.238476,169 L 632.238476,177 Z" style="stroke: rgb(83%,36%,0%); stroke-linecap: butt; stroke-width: 1.4;"/>
+			<rect x="580.6186666666666" y="169" width="8.0" height="8" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(83%,36%,0%); fill-rule: evenodd;"/>
+			<text x="420.45" y="170" style="font-family: Times-Roman; font-size: 10px;fill: rgb(20%,22%,25%); stroke:none;" transform="translate(0,340) scale(1,-1)">Luna</text>
+			<path d="M 526.474667,121 L 605.138667,121 Z" style="stroke: rgb(13%,13%,13%); stroke-linecap: butt; stroke-width: 1.4;"/>
+			<path d="M 526.474667,117 L 526.474667,125 Z" style="stroke: rgb(13%,13%,13%); stroke-linecap: butt; stroke-width: 1.4;"/>
+			<path d="M 605.138667,117 L 605.138667,125 Z" style="stroke: rgb(13%,13%,13%); stroke-linecap: butt; stroke-width: 1.4;"/>
+			<polygon points="571.1154 126, 566.1154 121, 571.1154 116, 576.1154 121" style="stroke: rgb(100%,100%,100%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(13%,13%,13%); fill-rule: evenodd;"/>
+			<text x="407.13" y="118" style="font-family: Times-Roman; font-size: 10px;fill: rgb(20%,22%,25%); stroke:none;" transform="translate(0,236) scale(1,-1)">Average</text>
+			<text x="494.37" y="43" style="font-family: Times-Roman; font-size: 10px;fill: rgb(33%,36%,40%); stroke:none;" transform="translate(0,86) scale(1,-1)">Difference in tokens per episode (×1,000)</text>
+			<text x="166.2795" y="18" style="font-family: Times-Roman; font-size: 9px;fill: rgb(33%,36%,40%); stroke:none;" transform="translate(0,36) scale(1,-1)">Negative values indicate fewer tokens in the higher-information condition; 95% CIs resample 14 templates.</text>
+		</g>
+	</g>
+</svg>

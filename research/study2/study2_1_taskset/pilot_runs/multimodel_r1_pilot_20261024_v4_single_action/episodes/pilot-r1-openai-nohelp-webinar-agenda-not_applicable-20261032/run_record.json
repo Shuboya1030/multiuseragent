@@ -1,0 +1,94 @@
+{
+  "schema_version": "study21-run-v2",
+  "run_id": "pilot-r1-openai-nohelp-webinar-agenda-not_applicable-20261032",
+  "study_id": "study2.1",
+  "run_type": "pilot",
+  "collection_stage": "pilot",
+  "protocol_version": "study21-r1-pilot-v0.1",
+  "task_id": "nohelp-webinar-agenda",
+  "task_version": "1.0-draft",
+  "template_id": "nohelp-webinar-agenda",
+  "help_need_class": "no_help",
+  "variant_id": null,
+  "alignment": "not_applicable",
+  "model_provider": "OpenAI",
+  "model_requested": "gpt-5.4-mini",
+  "model_returned": "gpt-5.4-mini-2026-03-17",
+  "endpoint": "https://api.openai.com/v1/chat/completions",
+  "adapter_name": "openai-native-tools",
+  "adapter_version": "pilot-adapter-v0.1",
+  "profile_condition": "R1",
+  "instance_seed": 20261032,
+  "replicate": 1,
+  "candidate_order": [
+    "C3",
+    "C1",
+    "C4",
+    "C2"
+  ],
+  "mapping_ref": "research\\study2\\study2_1_taskset\\pilot_runs\\multimodel_r1_pilot_20261024_v4_single_action\\episodes\\pilot-r1-openai-nohelp-webinar-agenda-not_applicable-20261032\\identity_mapping.json",
+  "mapping_hash": "d74dd9768d93739fd88cf54bcc10182c40149889c4bd7f3a3afbd28554bf0370",
+  "sampling_parameters": {
+    "max_turns": 8,
+    "max_output_tokens": 1600,
+    "tool_choice": "auto",
+    "parallel_tool_calls": false,
+    "reasoning_effort": "none",
+    "temperature": "provider_default"
+  },
+  "prompt_hashes": {
+    "system": "0312affafd86ab54063d2e7d72ed9ba3bff10e53e16d5ac6901620ca2ab6f1ff",
+    "task": "ffc34f9da40761eaca7230a2eb3321213c0a32e3445196c2ae4b097ed7469c11",
+    "tool_schema": "e4b1f0999f312c4d624ac8f8d68809d1304722e03b5dbd134ba88b10fad72f3c"
+  },
+  "task_hashes": {
+    "task": "ffc34f9da40761eaca7230a2eb3321213c0a32e3445196c2ae4b097ed7469c11",
+    "gold": "45e8fd7a45c0ac920b8c7cf9da5ea54e207360bf2dd267664b4819f09aa87f21",
+    "scenario": "7c09b526cad6365bfbdc97ad4e4da0a2cfacc78785c8513d34464cb0053a4de7",
+    "evaluator": "68c6bbf94cd52ebe4e059488596b222294429f9394e2f6c4f343b9ae3e6c75d4"
+  },
+  "runtime_version": "cfd955fe08b364cd21e0bbddf8cdedec9f5561653b8d4943884dad16ae1e7608",
+  "npc_policy_version": "1.0-draft",
+  "evaluator_version": "study21-eval-spec-1",
+  "started_at": "2026-10-25T06:28:16.759128+00:00",
+  "ended_at": "2026-10-25T06:28:17.881639+00:00",
+  "status": "completed",
+  "api_request_ids": [
+    "req_0db9ca93c1ce4295aeba629121255eac"
+  ],
+  "retries": [],
+  "errors": [],
+  "agent_tokens": {
+    "input": 799,
+    "output": 26,
+    "cached_input": 0
+  },
+  "npc_tokens_or_unavailable": "unavailable",
+  "estimated_cost_usd": null,
+  "cost_status": "unavailable",
+  "latency_ms": 1109,
+  "checkpoint_vector": {
+    "artifact_complete": true,
+    "answer_exact": false,
+    "no_unnecessary_contact": true
+  },
+  "behavior_metrics": {
+    "episode_outcome": "submitted",
+    "ask_count": 0,
+    "task_success": false,
+    "underhelp": null,
+    "overhelp": false,
+    "first_contact_valid": null,
+    "checkpoint_score": 2
+  },
+  "artifact_refs": {
+    "trace": "research\\study2\\study2_1_taskset\\pilot_runs\\multimodel_r1_pilot_20261024_v4_single_action\\episodes\\pilot-r1-openai-nohelp-webinar-agenda-not_applicable-20261032\\trace_events.jsonl",
+    "answer": "research\\study2\\study2_1_taskset\\pilot_runs\\multimodel_r1_pilot_20261024_v4_single_action\\episodes\\pilot-r1-openai-nohelp-webinar-agenda-not_applicable-20261032\\answer.json",
+    "evaluation": "research\\study2\\study2_1_taskset\\pilot_runs\\multimodel_r1_pilot_20261024_v4_single_action\\episodes\\pilot-r1-openai-nohelp-webinar-agenda-not_applicable-20261032\\evaluation.json",
+    "visible_instance": "research\\study2\\study2_1_taskset\\pilot_runs\\multimodel_r1_pilot_20261024_v4_single_action\\episodes\\pilot-r1-openai-nohelp-webinar-agenda-not_applicable-20261032",
+    "request_response": "research\\study2\\study2_1_taskset\\pilot_runs\\multimodel_r1_pilot_20261024_v4_single_action\\episodes\\pilot-r1-openai-nohelp-webinar-agenda-not_applicable-20261032\\model_turns.jsonl"
+  },
+  "retry_of": null,
+  "supersedes": null,
+  "exclusion_reason": null
+}

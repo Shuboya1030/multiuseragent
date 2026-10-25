@@ -1,0 +1,19 @@
+{
+  "run_id": "pilot-r1-openai-nohelp-webinar-agenda-not_applicable-20261032",
+  "task_id": "nohelp-webinar-agenda",
+  "seed": 20261032,
+  "profile_condition": "R1",
+  "alignment": "not_applicable",
+  "alias_to_canonical": {
+    "C3": "P1",
+    "C4": "P2",
+    "C2": "P3",
+    "C1": "P4"
+  },
+  "canonical_to_alias": {
+    "P4": "C1",
+    "P3": "C2",
+    "P1": "C3",
+    "P2": "C4"
+  }
+}

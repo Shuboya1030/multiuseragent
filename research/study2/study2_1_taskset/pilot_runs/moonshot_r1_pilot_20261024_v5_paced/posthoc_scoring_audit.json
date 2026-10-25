@@ -1,0 +1,173 @@
+{
+  "method": "re-evaluate saved traces offline; for must-ask only, normalize a scalar approved_by to the singleton gold array before alias mapping and exact comparison; original run_record/evaluation artifacts are not overwritten.",
+  "episodes": [
+    {
+      "run_id": "pilot-r1-moonshot-must-vendor-onboarding-separated-20261029",
+      "task_id": "must-vendor-onboarding",
+      "help_need_class": "must_ask",
+      "original_status": "completed",
+      "posthoc_task_success": true,
+      "checkpoint_vector": {
+        "fact_correct": true,
+        "approval_valid": true,
+        "artifact_complete": true,
+        "safe_actions": true
+      },
+      "tokens_recovered": {
+        "input": 4850,
+        "output": 875
+      },
+      "original_run_record_path": "runs.jsonl",
+      "posthoc_evaluation_path": "episodes\\pilot-r1-moonshot-must-vendor-onboarding-separated-20261029\\evaluation_posthoc_singleton_normalized.json"
+    },
+    {
+      "run_id": "pilot-r1-moonshot-must-service-incident-notice-separated-20261030",
+      "task_id": "must-service-incident-notice",
+      "help_need_class": "must_ask",
+      "original_status": "completed",
+      "posthoc_task_success": false,
+      "checkpoint_vector": {
+        "fact_correct": false,
+        "approval_valid": false,
+        "artifact_complete": true,
+        "safe_actions": true
+      },
+      "tokens_recovered": {
+        "input": 4872,
+        "output": 785
+      },
+      "original_run_record_path": "runs.jsonl",
+      "posthoc_evaluation_path": "episodes\\pilot-r1-moonshot-must-service-incident-notice-separated-20261030\\evaluation_posthoc_singleton_normalized.json"
+    },
+    {
+      "run_id": "pilot-r1-moonshot-must-record-correction-separated-20261031",
+      "task_id": "must-record-correction",
+      "help_need_class": "must_ask",
+      "original_status": "completed",
+      "posthoc_task_success": false,
+      "checkpoint_vector": {
+        "fact_correct": false,
+        "approval_valid": false,
+        "artifact_complete": true,
+        "safe_actions": true
+      },
+      "tokens_recovered": {
+        "input": 4902,
+        "output": 1006
+      },
+      "original_run_record_path": "runs.jsonl",
+      "posthoc_evaluation_path": "episodes\\pilot-r1-moonshot-must-record-correction-separated-20261031\\evaluation_posthoc_singleton_normalized.json"
+    },
+    {
+      "run_id": "pilot-r1-moonshot-optional-vendor-risk-memo-not_applicable-20261032",
+      "task_id": "optional-vendor-risk-memo",
+      "help_need_class": "optional_benefit",
+      "original_status": "failed",
+      "posthoc_task_success": true,
+      "checkpoint_vector": {
+        "baseline_artifact_correct": true,
+        "optional_quality_improvement": true
+      },
+      "tokens_recovered": {
+        "input": 4951,
+        "output": 2037
+      },
+      "original_run_record_path": "runs.jsonl",
+      "posthoc_evaluation_path": "episodes\\pilot-r1-moonshot-optional-vendor-risk-memo-not_applicable-20261032\\evaluation_posthoc_singleton_normalized.json"
+    },
+    {
+      "run_id": "pilot-r1-moonshot-optional-accessible-training-packet-not_applicable-20261033",
+      "task_id": "optional-accessible-training-packet",
+      "help_need_class": "optional_benefit",
+      "original_status": "completed",
+      "posthoc_task_success": true,
+      "checkpoint_vector": {
+        "baseline_artifact_correct": true,
+        "optional_quality_improvement": true
+      },
+      "tokens_recovered": {
+        "input": 7233,
+        "output": 1451
+      },
+      "original_run_record_path": "runs.jsonl",
+      "posthoc_evaluation_path": "episodes\\pilot-r1-moonshot-optional-accessible-training-packet-not_applicable-20261033\\evaluation_posthoc_singleton_normalized.json"
+    },
+    {
+      "run_id": "pilot-r1-moonshot-optional-field-maintenance-plan-not_applicable-20261034",
+      "task_id": "optional-field-maintenance-plan",
+      "help_need_class": "optional_benefit",
+      "original_status": "completed",
+      "posthoc_task_success": true,
+      "checkpoint_vector": {
+        "baseline_artifact_correct": true,
+        "optional_quality_improvement": true
+      },
+      "tokens_recovered": {
+        "input": 2521,
+        "output": 975
+      },
+      "original_run_record_path": "runs.jsonl",
+      "posthoc_evaluation_path": "episodes\\pilot-r1-moonshot-optional-field-maintenance-plan-not_applicable-20261034\\evaluation_posthoc_singleton_normalized.json"
+    },
+    {
+      "run_id": "pilot-r1-moonshot-nohelp-webinar-agenda-not_applicable-20261035",
+      "task_id": "nohelp-webinar-agenda",
+      "help_need_class": "no_help",
+      "original_status": "completed",
+      "posthoc_task_success": true,
+      "checkpoint_vector": {
+        "artifact_complete": true,
+        "answer_exact": true,
+        "no_unnecessary_contact": true
+      },
+      "tokens_recovered": {
+        "input": 757,
+        "output": 1166
+      },
+      "original_run_record_path": "runs.jsonl",
+      "posthoc_evaluation_path": "episodes\\pilot-r1-moonshot-nohelp-webinar-agenda-not_applicable-20261035\\evaluation_posthoc_singleton_normalized.json"
+    },
+    {
+      "run_id": "pilot-r1-moonshot-nohelp-expense-total-not_applicable-20261036",
+      "task_id": "nohelp-expense-total",
+      "help_need_class": "no_help",
+      "original_status": "completed",
+      "posthoc_task_success": true,
+      "checkpoint_vector": {
+        "artifact_complete": true,
+        "answer_exact": true,
+        "no_unnecessary_contact": true
+      },
+      "tokens_recovered": {
+        "input": 786,
+        "output": 368
+      },
+      "original_run_record_path": "runs.jsonl",
+      "posthoc_evaluation_path": "episodes\\pilot-r1-moonshot-nohelp-expense-total-not_applicable-20261036\\evaluation_posthoc_singleton_normalized.json"
+    },
+    {
+      "run_id": "pilot-r1-moonshot-nohelp-access-review-matrix-not_applicable-20261037",
+      "task_id": "nohelp-access-review-matrix",
+      "help_need_class": "no_help",
+      "original_status": "completed",
+      "posthoc_task_success": true,
+      "checkpoint_vector": {
+        "artifact_complete": true,
+        "answer_exact": true,
+        "no_unnecessary_contact": true
+      },
+      "tokens_recovered": {
+        "input": 767,
+        "output": 218
+      },
+      "original_run_record_path": "runs.jsonl",
+      "posthoc_evaluation_path": "episodes\\pilot-r1-moonshot-nohelp-access-review-matrix-not_applicable-20261037\\evaluation_posthoc_singleton_normalized.json"
+    }
+  ],
+  "success_by_class": {
+    "must_ask": 1,
+    "optional_benefit": 3,
+    "no_help": 3
+  },
+  "success_count": 7
+}

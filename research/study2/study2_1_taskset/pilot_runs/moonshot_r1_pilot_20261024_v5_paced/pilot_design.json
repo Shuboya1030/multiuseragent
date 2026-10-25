@@ -1,0 +1,28 @@
+{
+  "purpose": "three-provider R1 tool/runtime/evaluator feasibility pilot; not confirmatory",
+  "protocol_version": "study21-r1-pilot-v0.3",
+  "models": {
+    "moonshot": {
+      "provider": "Moonshot",
+      "model": "kimi-k2.6",
+      "endpoint": "https://api.moonshot.ai/v1/chat/completions"
+    }
+  },
+  "profile_condition": "R1",
+  "seed": 20261028,
+  "selection": "3 separated must-ask templates, 3 optional, 3 no-help; one episode each per provider",
+  "request_pacing_seconds": {
+    "moonshot": 21.0
+  },
+  "taskset_root": "C:\\Users\\shuyazong\\repos\\parttimephd\\research\\study2\\study2_1_taskset\\tasks",
+  "episodes_planned": 9,
+  "providers": [
+    "moonshot"
+  ],
+  "total_episodes_planned": 9,
+  "limitations": [
+    "pilot only; not confirmatory and not a R0/R1 comparison",
+    "candidate runtime is a local rule-NPC pilot, not full AgentCompany",
+    "pilot templates were AI-authored/adapted and remain development drafts"
+  ]
+}

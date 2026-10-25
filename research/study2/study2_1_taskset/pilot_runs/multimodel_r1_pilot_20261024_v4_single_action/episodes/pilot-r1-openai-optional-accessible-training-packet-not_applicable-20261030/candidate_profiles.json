@@ -1,0 +1,26 @@
+[
+  {
+    "candidate_id": "C3",
+    "name": "Skyler Kim",
+    "job_title": "Project Team Member",
+    "profile": "Skyler Kim — Project Team Member. Skyler Kim is a general project coordinator."
+  },
+  {
+    "candidate_id": "C2",
+    "name": "Robin Shah",
+    "job_title": "Operations Associate",
+    "profile": "Robin Shah — Operations Associate. Robin Shah is an adjacent-domain colleague."
+  },
+  {
+    "candidate_id": "C1",
+    "name": "Morgan Patel",
+    "job_title": "Business Associate",
+    "profile": "Morgan Patel — Business Associate. Morgan Patel is a accessibility services professional with experience in accessibility needs."
+  },
+  {
+    "candidate_id": "C4",
+    "name": "Drew Morgan",
+    "job_title": "Program Associate",
+    "profile": "Drew Morgan — Program Associate. Drew Morgan is a colleague in accessibility services coordination."
+  }
+]

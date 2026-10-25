@@ -1,0 +1,93 @@
+{
+  "schema_version": "study21-run-v2",
+  "run_id": "pilot-r1-moonshot-nohelp-expense-total-not_applicable-20261036",
+  "study_id": "study2.1",
+  "run_type": "pilot",
+  "collection_stage": "pilot",
+  "protocol_version": "study21-r1-pilot-v0.3",
+  "task_id": "nohelp-expense-total",
+  "task_version": "1.0-draft",
+  "template_id": "nohelp-expense-total",
+  "help_need_class": "no_help",
+  "variant_id": null,
+  "alignment": "not_applicable",
+  "model_provider": "Moonshot",
+  "model_requested": "kimi-k2.6",
+  "model_returned": "kimi-k2.6",
+  "endpoint": "https://api.moonshot.ai/v1/chat/completions",
+  "adapter_name": "moonshot-native-tools",
+  "adapter_version": "pilot-adapter-v0.3",
+  "profile_condition": "R1",
+  "instance_seed": 20261036,
+  "replicate": 1,
+  "candidate_order": [
+    "C3",
+    "C4",
+    "C2",
+    "C1"
+  ],
+  "mapping_ref": "research\\study2\\study2_1_taskset\\pilot_runs\\moonshot_r1_pilot_20261024_v5_paced\\episodes\\pilot-r1-moonshot-nohelp-expense-total-not_applicable-20261036\\identity_mapping.json",
+  "mapping_hash": "bd9e436e73323dd661d4861d6ac79bd06f1c01d0730e4a0d8bb09f31fe0201d1",
+  "sampling_parameters": {
+    "max_turns": 8,
+    "max_output_tokens": 1600,
+    "tool_choice": "auto",
+    "parallel_tool_calls": false,
+    "reasoning_effort": "not_set",
+    "temperature": "provider_default",
+    "min_request_interval_seconds": 21.0
+  },
+  "prompt_hashes": {
+    "system": "0312affafd86ab54063d2e7d72ed9ba3bff10e53e16d5ac6901620ca2ab6f1ff",
+    "task": "07b8b8255c2981cf2a7bb7920648c102b395f4ff21beaa14bfdd6eff6e710189",
+    "tool_schema": "e4b1f0999f312c4d624ac8f8d68809d1304722e03b5dbd134ba88b10fad72f3c"
+  },
+  "task_hashes": {
+    "task": "07b8b8255c2981cf2a7bb7920648c102b395f4ff21beaa14bfdd6eff6e710189",
+    "gold": "d5a02e44e496fcb467243b32914ed62b1e1f529ceabcd97c51fa53f50bf5f10d",
+    "scenario": "a0532633c37b694869dc555034d0a8f4a14c527554dc660c5334245241d20e02",
+    "evaluator": "68c6bbf94cd52ebe4e059488596b222294429f9394e2f6c4f343b9ae3e6c75d4"
+  },
+  "runtime_version": "4940d98bfc1ae8a11effd1e93fc712aa75648377f6fd76fa5b23e11ec6054fde",
+  "npc_policy_version": "1.0-draft",
+  "evaluator_version": "study21-eval-spec-1",
+  "started_at": "2026-10-25T06:46:30.060821+00:00",
+  "ended_at": "2026-10-25T06:46:42.910950+00:00",
+  "status": "completed",
+  "api_request_ids": [],
+  "retries": [],
+  "errors": [],
+  "agent_tokens": {
+    "input": 786,
+    "output": 368,
+    "cached_input": 256
+  },
+  "npc_tokens_or_unavailable": "unavailable",
+  "estimated_cost_usd": null,
+  "cost_status": "unavailable",
+  "latency_ms": 12843,
+  "checkpoint_vector": {
+    "artifact_complete": true,
+    "answer_exact": true,
+    "no_unnecessary_contact": true
+  },
+  "behavior_metrics": {
+    "episode_outcome": "submitted",
+    "ask_count": 0,
+    "task_success": true,
+    "underhelp": null,
+    "overhelp": false,
+    "first_contact_valid": null,
+    "checkpoint_score": 3
+  },
+  "artifact_refs": {
+    "trace": "research\\study2\\study2_1_taskset\\pilot_runs\\moonshot_r1_pilot_20261024_v5_paced\\episodes\\pilot-r1-moonshot-nohelp-expense-total-not_applicable-20261036\\trace_events.jsonl",
+    "answer": "research\\study2\\study2_1_taskset\\pilot_runs\\moonshot_r1_pilot_20261024_v5_paced\\episodes\\pilot-r1-moonshot-nohelp-expense-total-not_applicable-20261036\\answer.json",
+    "evaluation": "research\\study2\\study2_1_taskset\\pilot_runs\\moonshot_r1_pilot_20261024_v5_paced\\episodes\\pilot-r1-moonshot-nohelp-expense-total-not_applicable-20261036\\evaluation.json",
+    "visible_instance": "research\\study2\\study2_1_taskset\\pilot_runs\\moonshot_r1_pilot_20261024_v5_paced\\episodes\\pilot-r1-moonshot-nohelp-expense-total-not_applicable-20261036",
+    "request_response": "research\\study2\\study2_1_taskset\\pilot_runs\\moonshot_r1_pilot_20261024_v5_paced\\episodes\\pilot-r1-moonshot-nohelp-expense-total-not_applicable-20261036\\model_turns.jsonl"
+  },
+  "retry_of": null,
+  "supersedes": null,
+  "exclusion_reason": null
+}

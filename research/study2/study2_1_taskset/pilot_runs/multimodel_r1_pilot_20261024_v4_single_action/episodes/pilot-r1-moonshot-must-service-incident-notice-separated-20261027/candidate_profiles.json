@@ -1,0 +1,26 @@
+[
+  {
+    "candidate_id": "C4",
+    "name": "Sasha Nguyen",
+    "job_title": "Business Associate",
+    "profile": "Sasha Nguyen — Business Associate. Sasha Nguyen works in the customer reliability domain. Their expertise is service ownership and incident impact records; their familiarity is specialist familiarity with service ownership and incident impact records. Their decision authority is no approval authority for this action. They are available."
+  },
+  {
+    "candidate_id": "C1",
+    "name": "Avery Chen",
+    "job_title": "Program Associate",
+    "profile": "Avery Chen — Program Associate. Avery Chen works in the customer reliability domain. Their expertise is general team coordination; their familiarity is general familiarity with customer reliability, but no access to the task-specific record. Their decision authority is no approval authority for this action. They are available."
+  },
+  {
+    "candidate_id": "C3",
+    "name": "Morgan Patel",
+    "job_title": "Operations Associate",
+    "profile": "Morgan Patel — Operations Associate. Morgan Patel works in the customer reliability domain. Their expertise is general team coordination; their familiarity is no stated task-domain expertise beyond general team coordination. Their decision authority is no approval authority for this action. They are available."
+  },
+  {
+    "candidate_id": "C2",
+    "name": "Jamie Rivera",
+    "job_title": "Project Team Member",
+    "profile": "Jamie Rivera — Project Team Member. Jamie Rivera works in the customer reliability domain. Their expertise is general team coordination; their familiarity is no stated task-domain expertise beyond general team coordination. Their decision authority is approve customer-facing incident notices. They are available."
+  }
+]

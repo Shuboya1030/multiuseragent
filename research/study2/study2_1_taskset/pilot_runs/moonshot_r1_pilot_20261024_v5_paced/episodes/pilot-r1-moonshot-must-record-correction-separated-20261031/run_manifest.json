@@ -1,0 +1,13 @@
+{
+  "run_id": "pilot-r1-moonshot-must-record-correction-separated-20261031",
+  "task_id": "must-record-correction",
+  "seed": 20261031,
+  "profile_condition": "R1",
+  "alignment": "separated",
+  "candidate_order": [
+    "C2",
+    "C4",
+    "C3",
+    "C1"
+  ]
+}

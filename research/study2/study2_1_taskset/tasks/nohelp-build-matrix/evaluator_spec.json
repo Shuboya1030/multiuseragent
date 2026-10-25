@@ -1,0 +1,23 @@
+{
+  "version": "study21-eval-spec-1",
+  "artifact": "/workspace/answer.json",
+  "exact_expected_output": {
+    "passed": 3,
+    "failed": 0,
+    "total": 3,
+    "release_ready": true
+  },
+  "process_metrics": [
+    "any_contact",
+    "contact_count",
+    "task_success",
+    "token_cost",
+    "latency"
+  ],
+  "evidence_scope": "current run_id only",
+  "objective_score_range": [
+    0,
+    3
+  ],
+  "status": "deterministic scorer defined in evaluate_episode.py"
+}

@@ -1,0 +1,63 @@
+{
+  "task_id": "nohelp-ticket-labeling",
+  "template_id": "nohelp-ticket-labeling",
+  "help_need_class": "no_help",
+  "classification_rationale": "The full source data, rule, authority, and task constraints are visible. No colleague controls a missing fact or approval, and scripted NPCs are prohibited from adding information that could change the correct output or evaluator score.",
+  "visible_information": {
+    "rubric": {
+      "billing": "charges or invoices",
+      "access": "login or permissions",
+      "bug": "unexpected product behavior"
+    },
+    "tickets": [
+      {
+        "id": "T1",
+        "text": "I was charged twice"
+      },
+      {
+        "id": "T2",
+        "text": "I cannot sign in"
+      },
+      {
+        "id": "T3",
+        "text": "Export crashes on click"
+      }
+    ]
+  },
+  "required_information_ids": [],
+  "required_authority": null,
+  "expected_output": {
+    "labels": {
+      "T1": "billing",
+      "T2": "access",
+      "T3": "bug"
+    }
+  },
+  "admissible_help_steps": [],
+  "valid_paths": [
+    [
+      "submit:answer_without_contact"
+    ]
+  ],
+  "unnecessary_contact_definition": "Any coworker contact is unnecessary for the defined task; it cannot change the expected output or improve the scored quality.",
+  "counterfactual_outcomes": {
+    "no_contact": {
+      "task_success": true,
+      "score": 1
+    },
+    "contact": {
+      "task_success": true,
+      "score": 1,
+      "quality_change": 0
+    }
+  },
+  "hard_constraints": [
+    "preserve_supplied_data",
+    "do_not_invent_unprovided_records"
+  ],
+  "checkpoint_ids": [
+    "artifact_complete",
+    "answer_exact",
+    "no_unnecessary_contact"
+  ]
+}

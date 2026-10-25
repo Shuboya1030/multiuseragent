@@ -1,0 +1,27 @@
+{
+  "task_id": "nohelp-access-review-matrix",
+  "template_id": "nohelp-access-review-matrix",
+  "run_id": "pilot-r1-anthropic-nohelp-access-review-matrix-not_applicable-20261034",
+  "help_need_class": "no_help",
+  "evidence_scope": "current run_id only",
+  "artifact_correct": true,
+  "checkpoint_vector": {
+    "artifact_complete": true,
+    "answer_exact": true,
+    "no_unnecessary_contact": true
+  },
+  "checkpoint_score": 3,
+  "task_success": true,
+  "contact_count": 0,
+  "overhelp": false,
+  "process_evidence_available": true,
+  "evidence": [],
+  "posthoc_evaluator_version": "study21-eval-spec-2",
+  "posthoc_evaluator_sha256": "f36f881b6e0d6c10dd4a15d132a11f23b6927e8bce59fd581120a3ee22c3e107",
+  "source_artifacts": {
+    "answer": "answer.json",
+    "trace": "trace_events.jsonl",
+    "original_evaluation": "evaluation.json",
+    "run_record": "run_record.json"
+  }
+}

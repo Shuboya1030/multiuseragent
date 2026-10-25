@@ -1,0 +1,18 @@
+{
+  "baseline_summary": {
+    "date": "July 8",
+    "modules": [
+      "account setup",
+      "data handling",
+      "incident reporting"
+    ],
+    "format": "PDF",
+    "cohort_size": 32
+  },
+  "recommendation": "Ensure the PDF uses tagged headings, descriptive links, and alt text for diagrams so it is fully accessible to screen-reader users in the cohort. To support 32 participants, include a table of contents with page anchors, consistent section numbering per module, a printable quick-reference checklist, and clear contact information for follow-up questions. Distribute the packet at least 24 hours before the July 8 session so participants can review materials and request accommodations if needed.",
+  "quality_notes": [
+    "Accessibility coordinator confirmed multiple participants use screen readers; tagged headings, descriptive links, and alt text for diagrams are required.",
+    "Cohort size of 32 necessitates clear navigation and consistent formatting for group facilitation.",
+    "PDF should be tested with screen readers before distribution."
+  ]
+}

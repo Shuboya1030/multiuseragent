@@ -1,0 +1,13 @@
+﻿model,alignment,condition,n_runs,valid_path,task_score_T,reward_R,total_cost,N_auth,N_waste,first_valid
+gpt-5.6-terra,aligned,R0,4,1.0,1.0,0.5774999999999999,4.25,1.5,0.75,0.25
+gpt-5.6-terra,aligned,R1,4,1.0,1.0,0.96,2.0,0.0,0.0,1.0
+gpt-5.6-terra,aligned,R2,4,1.0,1.0,0.96,2.0,0.0,0.0,1.0
+gpt-5.6-terra,separated,R0,4,1.0,1.0,0.6725,4.5,0.75,1.75,0.25
+gpt-5.6-terra,separated,R1,4,1.0,1.0,0.96,2.0,0.0,0.0,1.0
+gpt-5.6-terra,separated,R2,4,1.0,1.0,0.96,2.0,0.0,0.0,1.0
+gpt-6-luna,aligned,R0,4,1.0,1.0,0.5599999999999999,4.5,1.5,1.0,0.25
+gpt-6-luna,aligned,R1,4,1.0,1.0,0.96,2.0,0.0,0.0,1.0
+gpt-6-luna,aligned,R2,4,1.0,1.0,0.96,2.0,0.0,0.0,1.0
+gpt-6-luna,separated,R0,4,1.0,1.0,0.5825,5.25,1.0,2.25,0.0
+gpt-6-luna,separated,R1,4,1.0,1.0,0.96,2.0,0.0,0.0,1.0
+gpt-6-luna,separated,R2,4,1.0,1.0,0.96,2.0,0.0,0.0,1.0

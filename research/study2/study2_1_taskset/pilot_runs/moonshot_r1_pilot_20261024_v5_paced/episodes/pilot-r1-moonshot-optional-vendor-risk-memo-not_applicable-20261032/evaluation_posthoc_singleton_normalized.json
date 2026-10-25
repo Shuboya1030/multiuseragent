@@ -1,0 +1,36 @@
+{
+  "task_id": "optional-vendor-risk-memo",
+  "template_id": "optional-vendor-risk-memo",
+  "run_id": "pilot-r1-moonshot-optional-vendor-risk-memo-not_applicable-20261032",
+  "help_need_class": "optional_benefit",
+  "evidence_scope": "current run_id only",
+  "baseline_artifact_correct": true,
+  "task_success": true,
+  "checkpoint_vector": {
+    "baseline_artifact_correct": true,
+    "optional_quality_improvement": true
+  },
+  "checkpoint_score": 2,
+  "contact_count": 2,
+  "contacted_admissible_person": true,
+  "optional_fact_received": true,
+  "reply_used_keyword_coverage": 0.8333333333333334,
+  "reply_used": true,
+  "optional_quality_points": 1,
+  "process_evidence_available": true,
+  "contact_cost_events": 2,
+  "evidence": [
+    {
+      "event_id": 2,
+      "recipient_id": "P1",
+      "event_type": "ask",
+      "content": "Hi Jamie, we’re comparing two bids: Northstar ($48k, 30‑day lead) and Cedar ($52k, 18‑day lead). Budget is $55k and need‑by is October 1. From a procurement/security risk perspective, do you know of any material risks for either vendor that should affect the recommendation?"
+    },
+    {
+      "event_id": 3,
+      "recipient_id": "P1",
+      "event_type": "reply",
+      "content": "The procurement risk analyst knows Northstar has a documented 60-day security review backlog; Cedar has completed the review."
+    }
+  ]
+}

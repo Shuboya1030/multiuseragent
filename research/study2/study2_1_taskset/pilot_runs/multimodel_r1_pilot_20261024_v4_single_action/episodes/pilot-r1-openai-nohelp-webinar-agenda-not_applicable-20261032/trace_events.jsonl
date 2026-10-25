@@ -1,0 +1,1 @@
+{"run_id": "pilot-r1-openai-nohelp-webinar-agenda-not_applicable-20261032", "event_id": 0, "timestamp": "2026-10-25T06:28:17.676281+00:00", "actor": "agent", "event_type": "submit", "recipient_id": null, "purpose": null, "content": "{\"end\": \"14:30\", \"duration\": \"90 minutes\"}", "authorized": null}

@@ -1,0 +1,67 @@
+﻿model,task,legacy_parser_recipients,transcript_confirmed_recipients,legacy_only_recipients,extractor_only_recipients,enter_action_count,next_page_routes,message_candidates_and_transcript_confirmation,diagnostic_hypothesis,manual_resolution
+gemini-2.0-flash,admin-check-employees-budget-and-reply-and-record,Li Ming,,Li Ming,,5,/direct/7My8YbErQi3E7vd35CZYWHd5bCmhj5YcFe/rocket-search || /channel/general/rocket-search || /channel/general/rocket-search || /channel/general/rocket-search || /channel/general/rocket-search,,Contains directory/message-search navigation among Enter actions; legacy parser may count a search submission as a contact,pending
+gemini-2.0-flash,hr-collect-multiple-valid-passwords,Li Ming; Mark Johnson; Mike Chen; Sarah Johnson; Zhang Wei,,Li Ming; Mark Johnson; Mike Chen; Sarah Johnson; Zhang Wei,,11,/direct/CZYWHd5bCmhj5YcFeRGZyENbrjkxjosMCH || /direct/CZYWHd5bCmhj5YcFeRGZyENbrjkxjosMCH || /direct/CZYWHd5bCmhj5YcFeXerH6mXGTwiFEmgCh || /direct/CZYWHd5bCmhj5YcFeXerH6mXGTwiFEmgCh || /direct/7My8YbErQi3E7vd35CZYWHd5bCmhj5YcFe || /direct/CZYWHd5bCmhj5YcFeuPsPimbJGg5gK3Eut || /direct/CZYWHd5bCmhj5YcFeuPsPimbJGg5gK3Eut || /direct/CZYWHd5bCmhj5YcFeuPsPimbJGg5gK3Eut || /direct/CZYWHd5bCmhj5YcFesrntB7X62AR3t9CsA || /direct/CZYWHd5bCmhj5YcFesrntB7X62AR3t9CsA || /direct/CZYWHd5bCmhj5YcFesrntB7X62AR3t9CsA,"confirmed=False: Hi Mark, please provide a password that meets the following requirements:
+1. Length must be between 12-16 characters
+2. Must contain at least one uppercase letter
+3. Must contain a || confirmed=False: The password requirements are:
+1. Length must be between 12-16 characters
+2. Must contain at least one uppercase letter
+3. Must contain at least one lowercase letter
+4. Must contai || confirmed=False: Hi Sarah, please provide a password that meets the following requirements:
+1. Length must be between 12-16 characters
+2. Must contain at least one uppercase letter
+3. Must contain  || confirmed=False: The password requirements are:
+1. Length must be between 12-16 characters
+2. Must contain at least one uppercase letter
+3. Must contain at least one lowercase letter
+4. Must contai || confirmed=False: Hi Li, please provide a password that meets the following requirements:
+1. Length must be between 12-16 characters
+2. Must contain at least one uppercase letter
+3. Must contain at  || confirmed=False: Hi Zhang, please provide a password that meets the following requirements:
+1. Length must be between 12-16 characters
+2. Must contain at least one uppercase letter
+3. Must contain  || confirmed=False: The password requirements are:
+1. Length must be between 12-16 characters
+2. Must contain at least one uppercase letter
+3. Must contain at least one lowercase letter
+4. Must contai || confirmed=False: Hi Mike, please provide a password that meets the following requirements:
+1. Length must be between 12-16 characters
+2. Must contain at least one uppercase letter
+3. Must contain a || confirmed=False: The password requirements are:
+1. Length must be between 12-16 characters
+2. Must contain at least one uppercase letter
+3. Must contain at least one lowercase letter
+4. Must contai","Enter action occurred, but message was not transcript-confirmed after sender/timestamp check",pending
+gemini-2.0-flash,hr-get-valid-password,Mark Johnson,,Mark Johnson,,4,/direct/CZYWHd5bCmhj5YcFeRGZyENbrjkxjosMCH || /direct/CZYWHd5bCmhj5YcFeRGZyENbrjkxjosMCH || /direct/CZYWHd5bCmhj5YcFeRGZyENbrjkxjosMCH || /direct/CZYWHd5bCmhj5YcFeRGZyENbrjkxjosMCH,"confirmed=False: Hi Mark, I need a new password that follows these rules:
+1. Length must be between 12-16 characters
+2. Must contain at least one uppercase letter
+3. Must contain at least one lower || confirmed=False: Password rules:
+1. Length must be between 12-16 characters
+2. Must contain at least one uppercase letter
+3. Must contain at least one lowercase letter
+4. Must contain at least one  || confirmed=False: That password is not valid. It contains your name and does not have a special character. Please provide a password that follows these rules:
+1. Length must be between 12-16 charact || confirmed=False: That password is not valid. It does not meet the length requirement, does not contain an uppercase letter, and does not have a special character. Please provide a password that fol","Enter action occurred, but message was not transcript-confirmed after sender/timestamp check",pending
+gemini-2.0-flash,pm-prepare-meeting-with-customers,Chen Xinyi,,Chen Xinyi,,3,/direct/CZYWHd5bCmhj5YcFec2uqaen3naCexvzDE || /direct/CZYWHd5bCmhj5YcFec2uqaen3naCexvzDE || /direct/CZYWHd5bCmhj5YcFec2uqaen3naCexvzDE,confirmed=False: /workspace/openhands_intro.pptx || confirmed=False: /workspace/openhands_intro.pptx,"Enter action occurred, but message was not transcript-confirmed after sender/timestamp check",pending
+llama-3.1-70b,admin-ask-for-meeting-feedback,Mike Chen,,Mike Chen,,1,/direct/CZYWHd5bCmhj5YcFesrntB7X62AR3t9CsA,,"Enter action occurred, but message was not transcript-confirmed after sender/timestamp check",pending
+llama-3.1-70b,hr-pick-interviewer-1,Chen Xinyi,,Chen Xinyi,,1,/direct/CZYWHd5bCmhj5YcFec2uqaen3naCexvzDE,,"Enter action occurred, but message was not transcript-confirmed after sender/timestamp check",pending
+llama-3.1-70b,hr-pick-interviewer-2,Chen Xinyi,,Chen Xinyi,,1,/direct/CZYWHd5bCmhj5YcFec2uqaen3naCexvzDE,,"Enter action occurred, but message was not transcript-confirmed after sender/timestamp check",pending
+llama-3.1-70b,hr-resume-screening,Chen Xinyi,,Chen Xinyi,,1,/direct/CZYWHd5bCmhj5YcFec2uqaen3naCexvzDE,,"Enter action occurred, but message was not transcript-confirmed after sender/timestamp check",pending
+llama-3.1-70b,pm-ask-issue-assignee-for-issue-status-and-update-in-plane,Mike Chen,,Mike Chen,,1,/direct/CZYWHd5bCmhj5YcFesrntB7X62AR3t9CsA,"confirmed=False: Hi Z zhang.wei, can you please update me on the status of the ""Evaluate data throughput"" issue?","Enter action occurred, but message was not transcript-confirmed after sender/timestamp check",pending
+llama-3.3-70b,pm-schedule-meeting-1,Chen Xinyi; Mike Chen,,Chen Xinyi; Mike Chen,,8,/direct/CZYWHd5bCmhj5YcFesrntB7X62AR3t9CsA || /direct/CZYWHd5bCmhj5YcFesrntB7X62AR3t9CsA || /direct/CZYWHd5bCmhj5YcFesrntB7X62AR3t9CsA || /direct/CZYWHd5bCmhj5YcFec2uqaen3naCexvzDE || /direct/CZYWHd5bCmhj5YcFec2uqaen3naCexvzDE || /direct/CZYWHd5bCmhj5YcFec2uqaen3naCexvzDE || /direct/CZYWHd5bCmhj5YcFec2uqaen3naCexvzDE || /direct/CZYWHd5bCmhj5YcFec2uqaen3naCexvzDE,"confirmed=False: Emily Zhou, what is your availability like this week? || confirmed=False: Emily Zhou, what is your availability like this week? || confirmed=False: Emily Zhou, what is your availability like this week? || confirmed=False: What is your availability like this week? || confirmed=False: What is your availability like this week?","Enter action occurred, but message was not transcript-confirmed after sender/timestamp check",pending
+llama-3.3-70b,pm-schedule-meeting-2,Chen Xinyi; Mike Chen,,Chen Xinyi; Mike Chen,,12,/direct/CZYWHd5bCmhj5YcFesrntB7X62AR3t9CsA || /direct/CZYWHd5bCmhj5YcFesrntB7X62AR3t9CsA || /direct/CZYWHd5bCmhj5YcFesrntB7X62AR3t9CsA || /direct/CZYWHd5bCmhj5YcFesrntB7X62AR3t9CsA || /direct/CZYWHd5bCmhj5YcFesrntB7X62AR3t9CsA || /direct/CZYWHd5bCmhj5YcFesrntB7X62AR3t9CsA || /direct/CZYWHd5bCmhj5YcFesrntB7X62AR3t9CsA || /direct/CZYWHd5bCmhj5YcFesrntB7X62AR3t9CsA || /direct/CZYWHd5bCmhj5YcFec2uqaen3naCexvzDE || /direct/CZYWHd5bCmhj5YcFec2uqaen3naCexvzDE || /direct/CZYWHd5bCmhj5YcFec2uqaen3naCexvzDE || /direct/CZYWHd5bCmhj5YcFec2uqaen3naCexvzDE,"confirmed=False: Emily Zhou, what is your availability like this week? || confirmed=False: Emily Zhou, what is your availability like this week? || confirmed=False: Emily Zhou, what is your availability like this week? || confirmed=False: Emily Zhou, what is your availability like this week? || confirmed=False: Emily Zhou, what is your availability like this week? || confirmed=False: Emily Zhou, what is your availability like this week? || confirmed=False: Emily Zhou, what is your availability like this week? || confirmed=False: Emily Zhou, what is your availability like this week? || confirmed=False: Liu Qiang, what is your availability like this week? || confirmed=False: Liu Qiang, what is your availability like this week? || confirmed=False: Liu Qiang, what is your availability like this week? || confirmed=False: Liu Qiang, what is your availability like this week?","Enter action occurred, but message was not transcript-confirmed after sender/timestamp check",pending
+qwen2-72b,admin-collect-requests-and-compute-total-price,Chen Xinyi,,Chen Xinyi,,5,URL_UNAVAILABLE || URL_UNAVAILABLE || URL_UNAVAILABLE || URL_UNAVAILABLE || URL_UNAVAILABLE,,"Enter action occurred, but message was not transcript-confirmed after sender/timestamp check",pending
+qwen2-72b,finance-find-signatories,David Wong,,David Wong,,10,URL_UNAVAILABLE || URL_UNAVAILABLE || URL_UNAVAILABLE || URL_UNAVAILABLE || URL_UNAVAILABLE || URL_UNAVAILABLE || URL_UNAVAILABLE || URL_UNAVAILABLE || /home || /home,,"Enter action occurred, but message was not transcript-confirmed after sender/timestamp check",pending
+qwen2.5-72b,admin-check-employees-budget-and-reply-and-record,Chen Xinyi,,Chen Xinyi,,4,/direct/CZYWHd5bCmhj5YcFec2uqaen3naCexvzDE || /channel/general || /channel/general || /direct/CZYWHd5bCmhj5YcFesrntB7X62AR3t9CsA,confirmed=False: equipment request || confirmed=False: equipment request || confirmed=False: equipment request || confirmed=False: equipment request,"Enter action occurred, but message was not transcript-confirmed after sender/timestamp check",pending
+qwen2.5-72b,admin-collect-requests-and-compute-total-price,Mike Chen,,Mike Chen,,1,/direct/CZYWHd5bCmhj5YcFesrntB7X62AR3t9CsA/rocket-search,,Contains directory/message-search navigation among Enter actions; legacy parser may count a search submission as a contact,pending
+qwen2.5-72b,hr-new-grad-job-description-3,Chen Xinyi,,Chen Xinyi,,5,/directory/channels || /directory/channels || /direct/CZYWHd5bCmhj5YcFec2uqaen3naCexvzDE || /directory/channels || /direct/CZYWHd5bCmhj5YcFec2uqaen3naCexvzDE,"confirmed=False: Hi Zhang Wei, can you please provide me with the key job responsibilities for the new grad software engineer position? || confirmed=False: Hi Li Ming, can you please provide me with the location of the job description template file, the minimum and preferred qualifications, and the salary range for the new grad softwa",Contains directory/message-search navigation among Enter actions; legacy parser may count a search submission as a contact,pending
+qwen2.5-72b,sde-create-new-gitlab-project-logo,Chen Xinyi,,Chen Xinyi,,3,/direct/CZYWHd5bCmhj5YcFec2uqaen3naCexvzDE || /direct/CZYWHd5bCmhj5YcFec2uqaen3naCexvzDE || /direct/CZYWHd5bCmhj5YcFec2uqaen3naCexvzDE,,"Enter action occurred, but message was not transcript-confirmed after sender/timestamp check",pending
+qwen2.5-72b,sde-debug-crashed-server,Emily Zhou,,Emily Zhou,,1,/direct/CZYWHd5bCmhj5YcFeppuM42XhPD79wwxMv,"confirmed=False: Hi Emily, I need the password to unzip the app.zip file for the event viewer web app. Can you provide it?","Enter action occurred, but message was not transcript-confirmed after sender/timestamp check",pending
+sonnet-20241022,hr-collect-multiple-valid-passwords,Li Ming; Mike Chen; Sarah Johnson; Zhang Wei,,Li Ming; Mike Chen; Sarah Johnson; Zhang Wei,,4,/direct/CZYWHd5bCmhj5YcFesrntB7X62AR3t9CsA || /direct/CZYWHd5bCmhj5YcFeXerH6mXGTwiFEmgCh || /direct/7My8YbErQi3E7vd35CZYWHd5bCmhj5YcFe || /direct/CZYWHd5bCmhj5YcFeuPsPimbJGg5gK3Eut,"confirmed=False: Hi Mike, I need to collect your password for security purposes. Please provide a password that follows these rules:
+1. Length must be between 12-16 characters
+2. Must contain at le || confirmed=False: Hi Sarah, I need to collect your password for security purposes. Please provide a password that follows these rules:
+1. Length must be between 12-16 characters
+2. Must contain at l || confirmed=False: Hi Li Ming, I need to collect your password for security purposes. Please provide a password that follows these rules:
+1. Length must be between 12-16 characters
+2. Must contain at || confirmed=False: Hi Zhang Wei, I need to collect your password for security purposes. Please provide a password that follows these rules:
+1. Length must be between 12-16 characters
+2. Must contain ","Enter action occurred, but message was not transcript-confirmed after sender/timestamp check",pending

@@ -32,10 +32,11 @@
 | Proposal short (email attachment) | proposal_who_to_ask_short.md/.docx | ~3 pages; RQ1-3 only; full version proposal_who_to_ask_EN |
 | Feasibility pilot | feasibility_pilot_2026-10-23.md; research/pilot/ | 400 TAC traj parsed; 36-run simulator; R computed |
 | Related Work writing patterns | related_work_writing_patterns.md | from ReHAC, Multi-User, MAST, Who&When, TAC; templates + checklist |
-| **FINAL PhD proposal (send this)** | 01_PhD_Research_Proposal_RoleAwareHelpSeeking_<YYYYMMDD-HHMM>.docx | naming: NN_Title_lastmodified; superseded versions in archive/ |
+| **FINAL PhD proposal (send this)** | 01_PhD_Research_Proposal_RoleAwareHelpSeeking_<YYYYMMDD-HHMM>.docx (current: 20261024-1628, merged with remote Study 2 R0/R1/R2 edits) | naming: NN_Title_lastmodified; superseded versions in archive/ |
 | Supporting docs | 02_Hypotheses…, 03_Feasibility_Pilot…, 04_Literature_Survey…, 05_Related_Work_Writing_Patterns… | old paths (who_to_ask_*, proposal_who_to_ask_*, feasibility_pilot_*, related_work_writing_patterns.md) moved/renamed |
 | Broad Research folder | Broad Research/ | agent_failure_survey, hai_enterprise_survey (.md+.html), plus HTML views of who_to_ask_survey / hypotheses / related_work_patterns; user needs these HTMLs — never delete |
 | Archive folder | archive/ | superseded proposal versions; user said do NOT delete |
 | Publication plan | 06_Publication_Plan_20261023-1921.md | 4 papers + workshop; deadlines marked confirmed/estimated |
 | GitHub repo (private) | https://github.com/Shuboya1030/partimephd | personal account Shuboya1030; memory.md renamed to AGENTS.md (2026-10-23) |
 | Study 1 design | 07_Study1_Design_20261023-2053.md | inputs/outputs, formal defs, mixed-effects + checkpoint-level analysis |
+| Paper 0 workshop brainstorm | 07_Paper_0_Brainstorm_20261023.md | Discussion draft; not a finalized protocol |

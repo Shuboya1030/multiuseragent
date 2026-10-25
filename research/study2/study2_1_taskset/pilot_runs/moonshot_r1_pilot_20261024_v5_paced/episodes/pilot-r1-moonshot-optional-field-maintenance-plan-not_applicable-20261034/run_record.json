@@ -1,0 +1,92 @@
+{
+  "schema_version": "study21-run-v2",
+  "run_id": "pilot-r1-moonshot-optional-field-maintenance-plan-not_applicable-20261034",
+  "study_id": "study2.1",
+  "run_type": "pilot",
+  "collection_stage": "pilot",
+  "protocol_version": "study21-r1-pilot-v0.3",
+  "task_id": "optional-field-maintenance-plan",
+  "task_version": "1.0-draft",
+  "template_id": "optional-field-maintenance-plan",
+  "help_need_class": "optional_benefit",
+  "variant_id": null,
+  "alignment": "not_applicable",
+  "model_provider": "Moonshot",
+  "model_requested": "kimi-k2.6",
+  "model_returned": "kimi-k2.6",
+  "endpoint": "https://api.moonshot.ai/v1/chat/completions",
+  "adapter_name": "moonshot-native-tools",
+  "adapter_version": "pilot-adapter-v0.3",
+  "profile_condition": "R1",
+  "instance_seed": 20261034,
+  "replicate": 1,
+  "candidate_order": [
+    "C2",
+    "C4",
+    "C1",
+    "C3"
+  ],
+  "mapping_ref": "research\\study2\\study2_1_taskset\\pilot_runs\\moonshot_r1_pilot_20261024_v5_paced\\episodes\\pilot-r1-moonshot-optional-field-maintenance-plan-not_applicable-20261034\\identity_mapping.json",
+  "mapping_hash": "76a0371f155883f7c6973b0cb602bc2dfaf552829d44798491488148f92999b5",
+  "sampling_parameters": {
+    "max_turns": 8,
+    "max_output_tokens": 1600,
+    "tool_choice": "auto",
+    "parallel_tool_calls": false,
+    "reasoning_effort": "not_set",
+    "temperature": "provider_default",
+    "min_request_interval_seconds": 21.0
+  },
+  "prompt_hashes": {
+    "system": "0312affafd86ab54063d2e7d72ed9ba3bff10e53e16d5ac6901620ca2ab6f1ff",
+    "task": "037a6b6c60520c3e06208f81fceed399a4197b340046e72a5303d49699b967a2",
+    "tool_schema": "e4b1f0999f312c4d624ac8f8d68809d1304722e03b5dbd134ba88b10fad72f3c"
+  },
+  "task_hashes": {
+    "task": "037a6b6c60520c3e06208f81fceed399a4197b340046e72a5303d49699b967a2",
+    "gold": "db62af84aa6e8803810847a791096aaf10040607611f8bab01b14f4265f7e31c",
+    "scenario": "600629bd54ceecf266f440460cf77c664b70c30c5a0ed8d77bac9feb6e12a8d9",
+    "evaluator": "68c6bbf94cd52ebe4e059488596b222294429f9394e2f6c4f343b9ae3e6c75d4"
+  },
+  "runtime_version": "4940d98bfc1ae8a11effd1e93fc712aa75648377f6fd76fa5b23e11ec6054fde",
+  "npc_policy_version": "1.0-draft",
+  "evaluator_version": "study21-eval-spec-1",
+  "started_at": "2026-10-25T06:44:58.214871+00:00",
+  "ended_at": "2026-10-25T06:46:03.716026+00:00",
+  "status": "completed",
+  "api_request_ids": [],
+  "retries": [],
+  "errors": [],
+  "agent_tokens": {
+    "input": 2521,
+    "output": 975,
+    "cached_input": 1280
+  },
+  "npc_tokens_or_unavailable": "unavailable",
+  "estimated_cost_usd": null,
+  "cost_status": "unavailable",
+  "latency_ms": 65500,
+  "checkpoint_vector": {
+    "baseline_artifact_correct": true,
+    "optional_quality_improvement": true
+  },
+  "behavior_metrics": {
+    "episode_outcome": "submitted",
+    "ask_count": 1,
+    "task_success": true,
+    "underhelp": null,
+    "overhelp": null,
+    "first_contact_valid": null,
+    "checkpoint_score": 2
+  },
+  "artifact_refs": {
+    "trace": "research\\study2\\study2_1_taskset\\pilot_runs\\moonshot_r1_pilot_20261024_v5_paced\\episodes\\pilot-r1-moonshot-optional-field-maintenance-plan-not_applicable-20261034\\trace_events.jsonl",
+    "answer": "research\\study2\\study2_1_taskset\\pilot_runs\\moonshot_r1_pilot_20261024_v5_paced\\episodes\\pilot-r1-moonshot-optional-field-maintenance-plan-not_applicable-20261034\\answer.json",
+    "evaluation": "research\\study2\\study2_1_taskset\\pilot_runs\\moonshot_r1_pilot_20261024_v5_paced\\episodes\\pilot-r1-moonshot-optional-field-maintenance-plan-not_applicable-20261034\\evaluation.json",
+    "visible_instance": "research\\study2\\study2_1_taskset\\pilot_runs\\moonshot_r1_pilot_20261024_v5_paced\\episodes\\pilot-r1-moonshot-optional-field-maintenance-plan-not_applicable-20261034",
+    "request_response": "research\\study2\\study2_1_taskset\\pilot_runs\\moonshot_r1_pilot_20261024_v5_paced\\episodes\\pilot-r1-moonshot-optional-field-maintenance-plan-not_applicable-20261034\\model_turns.jsonl"
+  },
+  "retry_of": null,
+  "supersedes": null,
+  "exclusion_reason": null
+}

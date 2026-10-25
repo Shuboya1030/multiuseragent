@@ -1,0 +1,15 @@
+{
+  "baseline_summary": {
+    "site": "Riverside plant",
+    "equipment": "pump P-14",
+    "visit_date": "December 2",
+    "crew": 3,
+    "entrance": "north gate open"
+  },
+  "recommendation": "For the December 2 visit to Riverside plant with a crew of 3 to service pump P-14: plan entry through the north gate, which is confirmed open. Based on site logistics feedback, consider routing via the south gate as a time-saving alternative because it is closer to pump P-14 and may reduce walking time, though the north gate remains valid. Ensure all crew members have proper PPE, confirm the pump isolation and lockout/tagout procedures in advance, and coordinate with the site coordinator on arrival.",
+  "quality_notes": [
+    "Crew size is 3; verify vehicle parking and access badge requirements.",
+    "Pump P-14 location may be more accessible from the south gate.",
+    "North gate is open but not necessarily the closest route to the equipment."
+  ]
+}

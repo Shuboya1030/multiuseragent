@@ -1,0 +1,32 @@
+{
+  "version": "study21-eval-spec-1",
+  "artifact": "/workspace/answer.json",
+  "baseline_success": {
+    "baseline_summary": "exact match to visible work packet",
+    "recommendation": "non-empty string"
+  },
+  "optional_bonus": {
+    "condition": "P1 provides advice in a current-run reply and at least 75% of required_concept_terms appear in recommendation or quality_notes",
+    "required_concept_terms": [
+      "exports",
+      "real",
+      "scheduled",
+      "state",
+      "synchronization",
+      "time"
+    ]
+  },
+  "process_metrics": [
+    "contact_count",
+    "recipient_relevance",
+    "reply_used",
+    "agent_and_npc_tokens",
+    "latency"
+  ],
+  "evidence_scope": "current run_id only",
+  "objective_score_range": [
+    0,
+    2
+  ],
+  "status": "deterministic scorer defined in evaluate_episode.py; semantic keyword proxy must be validated in pilot"
+}
