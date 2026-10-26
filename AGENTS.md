@@ -42,3 +42,4 @@
 | Paper 0 workshop brainstorm | 07_Paper_0_Brainstorm_20261023.md | Discussion draft; not a finalized protocol |
 | **Study 2 task redesign (LIVING doc)** | 12_Study2_Task_Redesign_<YYYYMMDD-HHMM>.md | update on every discussion; rename timestamp on edit; decision + change log at bottom |
 | Tenured-only advisor lists (filter added 2026-10-26: Assoc/Full Prof only) | research/uoft_tenured.md, research/ubc_tenured.md | ranks partly from search snippets; re-verify profile before emailing |
+| **Paper 0 AAAI skeleton (LIVING doc)** | 13_Paper0_AAAI_Skeleton_<YYYYMMDD-HHMM>.md | structure + analysis plan; experiment agent fills [RESULT] slots; this session owns writing/architecture |
