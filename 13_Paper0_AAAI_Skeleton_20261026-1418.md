@@ -15,7 +15,7 @@ When an AI agent is shared by a team, getting help is not one decision but two c
 2. *When and Whom to Ask: Help-Seeking Decisions of LLM Agents in Shared Organizational Settings*
 3. *Beyond Single-Principal Agents: A Benchmark for Role-Aware Help-Seeking*
 
-## 2. Contributions (as they will be claimed)
+## 2. Contributions (findings-led; as they will be claimed)
 1. **Problem formulation.** Help-seeking in multi-user agent systems as a joint *when/whom/order* decision over principals with distinct knowledge and authority; a taxonomy of help-seeking errors (wrong person, wrong order, missing context, no repair, silent failure, over-asking).
 2. **Task suite.** A controllable set of workplace tasks (must-ask / optional / no-help) with structural difficulty knobs (candidate pool size, dependency depth, knowledge–authority separation, hard distractors, inference type), built on TheAgentCompany's organization and exportable to its runtime.
 3. **Empirical study.** How current LLM agents' help-seeking changes with organizational scale, dependency depth, and available role information; where in the process failures concentrate.
@@ -55,7 +55,7 @@ When an AI agent is shared by a team, getting help is not one decision but two c
 - Gold step DAG G = (S, ≺); admissible recipients A_s per step.
 - Metrics: help rate, first valid contact, DAG-consistent completion, order violations, repair rate, silent failure, over-ask, interruption cost, artifact correctness.
 - Error taxonomy table (wrong-person / wrong-order / missing-context / no-repair / referral-ignored / redundant / silent-failure / over-ask).
-- Objective R as a descriptive summary only (no weight tuning claims).
+- Objective R = T − λΣc − μN_auth − νN_waste, with fixed, pre-registered weights; reported together with every component; no claims that depend on a specific weight choice.
 
 ### §4 Task Suite
 - **4.1 Why a new suite.** Audit of TAC's 40 NPC tasks: in 24/40 the task text names whom to contact; contacts are instructed rather than self-initiated → existing traces measure instruction following. (Short table: TAC NPC tasks by type of contact.) This replaces the old "Study 1 trajectory diagnosis" as motivation.
@@ -89,7 +89,7 @@ Each analysis is tagged with the figure/table it produces and its priority for t
 | A5 | **Which structural features matter most?** | Mixed-effects logistic: success ~ N + d + separation + #hard distractors + inference type + profile + model + (1 \| template) | **Table 3** coefficients (odds ratios) | Should |
 | A6 | **Which distractors mislead?** | Confusion: for wrong contacts, which distractor type was chosen (near-miss authority, stale role, delegated, stale fact, referrer, plausible title) | **Fig 6** bar or confusion matrix | Should |
 | A7 | **Value of role information** | R1 − R0 on first valid contact, completion, authority violations, cost; by difficulty level | Table or panel in Fig 4 | Should |
-| A8 | **Cost of help-seeking** | Queries, interruption cost, tokens per successful task by model × condition | Small table | Could |
+| A8 | **Cost of help-seeking and objective R** | R and its components (T, Σc, N_auth, N_waste) by model × condition; tokens per successful task | Table (R with components) | Should (R is in the paper) |
 | A9 | **Cheap vs strong model** | Sonnet 5.5 vs Haiku 5.5 on the subset: do the same failure patterns persist? | One row/panel | Could |
 | A10 | **Simulator vs TAC agreement** | Same tasks in both runtimes: agreement on outcome and error type | One sentence + appendix table | Could (strengthens validity) |
 | A11 | **Qualitative cases** | 2–3 annotated traces: premature approval → rejection → no repair; asked a stale-role colleague; silent failure with stale value | Boxed examples | Must (1 case in main text) |
@@ -117,17 +117,18 @@ Each analysis is tagged with the figure/table it produces and its priority for t
 | Related-work comparison table | Draft, needs verification | `05_Related_Work_Writing_Patterns_*.md` |
 | Formulation and metrics | Exists | proposal §4; `12_…` §5 |
 | TAC audit (24/40 named) | Exists | `03_Feasibility_Pilot_*.md`; `11_Study1_Coding_…` |
-| Earlier evidence: "right person ≠ completed process", optional-ask differences | Exists (Study 2.1, old task design) | `research/study2/study2_1_taskset/analysis/` — use only as pilot evidence or drop once new results arrive |
+| Earlier evidence from Study 2.1 (old task design) | **Not used in the paper** (decision 2026-10-26) | — |
 | New task suite + runs | Assumed done (experiment agent) | `12_Study2_Task_Redesign_*.md` |
 | AAAI-27 LaTeX template | Not set up | — |
 
 ## 8. Open questions for the authors
-1. Lead framing: benchmark paper (contribution = suite) or findings paper (contribution = empirical results)? Default: findings-led, suite as enabler.
-2. Keep the objective R in the paper or report only component metrics?
-3. Include Study 2.1 old-design results at all, or rely only on the new suite?
-4. Single author or with collaborators (affects writing split and endorsement for arXiv).
+1. ~~Lead framing~~ → **Decided 2026-10-26: findings-led**; the task suite is presented as the enabling instrument.
+2. ~~Objective R~~ → **Decided: include R** in §3 (formulation) and §6 (results), always reported alongside its components (T, interruption cost, authority violations, wasted queries).
+3. ~~Study 2.1 old results~~ → **Decided: exclude.** Only the new task suite's results are reported.
+4. Authorship → **Pending** (user will decide later).
 
 ## 9. Change log
 | Version | Change |
 |---|---|
+| 20261026-1418 | Decisions: findings-led framing; include objective R (with components); exclude Study 2.1 old results; authorship pending. A8 raised to Should |
 | 20261026-1353 | Skeleton: story, contributions, outline with page budget, section notes, analysis plan A1–A11, figure plan, status table, open questions |

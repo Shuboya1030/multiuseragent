@@ -48,8 +48,8 @@ Skeleton: AAAI-27 HAIC Workshop (living document)</a>
 One-sentence story</a></li>
 <li><a href="#working-title-options" id="toc-working-title-options">1.
 Working title options</a></li>
-<li><a href="#contributions-as-they-will-be-claimed" id="toc-contributions-as-they-will-be-claimed">2. Contributions (as they
-will be claimed)</a></li>
+<li><a href="#contributions-findings-led-as-they-will-be-claimed" id="toc-contributions-findings-led-as-they-will-be-claimed">2.
+Contributions (findings-led; as they will be claimed)</a></li>
 <li><a href="#section-outline-and-page-budget-8-pages" id="toc-section-outline-and-page-budget-8-pages">3. Section outline and
 page budget (8 pages)</a></li>
 <li><a href="#section-by-section-notes" id="toc-section-by-section-notes">4. Section-by-section notes</a>
@@ -107,8 +107,8 @@ Shared Organizational Settings</em></li>
 <li><em>Beyond Single-Principal Agents: A Benchmark for Role-Aware
 Help-Seeking</em></li>
 </ol>
-<h2 id="contributions-as-they-will-be-claimed">2. Contributions (as they
-will be claimed)</h2>
+<h2 id="contributions-findings-led-as-they-will-be-claimed">2.
+Contributions (findings-led; as they will be claimed)</h2>
 <ol type="1">
 <li><strong>Problem formulation.</strong> Help-seeking in multi-user
 agent systems as a joint <em>when/whom/order</em> decision over
@@ -273,8 +273,9 @@ cost, artifact correctness.</li>
 <li>Error taxonomy table (wrong-person / wrong-order / missing-context /
 no-repair / referral-ignored / redundant / silent-failure /
 over-ask).</li>
-<li>Objective R as a descriptive summary only (no weight tuning
-claims).</li>
+<li>Objective R = T − λΣc − μN_auth − νN_waste, with fixed,
+pre-registered weights; reported together with every component; no
+claims that depend on a specific weight choice.</li>
 </ul>
 <h3 id="task-suite">§4 Task Suite</h3>
 <ul>
@@ -403,11 +404,11 @@ cost; by difficulty level</td>
 </tr>
 <tr>
 <td>A8</td>
-<td><strong>Cost of help-seeking</strong></td>
-<td>Queries, interruption cost, tokens per successful task by model ×
-condition</td>
-<td>Small table</td>
-<td>Could</td>
+<td><strong>Cost of help-seeking and objective R</strong></td>
+<td>R and its components (T, Σc, N_auth, N_waste) by model × condition;
+tokens per successful task</td>
+<td>Table (R with components)</td>
+<td>Should (R is in the paper)</td>
 </tr>
 <tr>
 <td>A9</td>
@@ -537,11 +538,9 @@ vs. what is needed</h2>
 <code>11_Study1_Coding_…</code></td>
 </tr>
 <tr>
-<td>Earlier evidence: “right person ≠ completed process”, optional-ask
-differences</td>
-<td>Exists (Study 2.1, old task design)</td>
-<td><code>research/study2/study2_1_taskset/analysis/</code> — use only
-as pilot evidence or drop once new results arrive</td>
+<td>Earlier evidence from Study 2.1 (old task design)</td>
+<td><strong>Not used in the paper</strong> (decision 2026-10-26)</td>
+<td>—</td>
 </tr>
 <tr>
 <td>New task suite + runs</td>
@@ -558,15 +557,15 @@ as pilot evidence or drop once new results arrive</td>
 <h2 id="open-questions-for-the-authors">8. Open questions for the
 authors</h2>
 <ol type="1">
-<li>Lead framing: benchmark paper (contribution = suite) or findings
-paper (contribution = empirical results)? Default: findings-led, suite
-as enabler.</li>
-<li>Keep the objective R in the paper or report only component
-metrics?</li>
-<li>Include Study 2.1 old-design results at all, or rely only on the new
-suite?</li>
-<li>Single author or with collaborators (affects writing split and
-endorsement for arXiv).</li>
+<li><del>Lead framing</del> → <strong>Decided 2026-10-26:
+findings-led</strong>; the task suite is presented as the enabling
+instrument.</li>
+<li><del>Objective R</del> → <strong>Decided: include R</strong> in §3
+(formulation) and §6 (results), always reported alongside its components
+(T, interruption cost, authority violations, wasted queries).</li>
+<li><del>Study 2.1 old results</del> → <strong>Decided:
+exclude.</strong> Only the new task suite’s results are reported.</li>
+<li>Authorship → <strong>Pending</strong> (user will decide later).</li>
 </ol>
 <h2 id="change-log">9. Change log</h2>
 <table>
@@ -581,6 +580,12 @@ endorsement for arXiv).</li>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>20261026-1418</td>
+<td>Decisions: findings-led framing; include objective R (with
+components); exclude Study 2.1 old results; authorship pending. A8
+raised to Should</td>
+</tr>
 <tr>
 <td>20261026-1353</td>
 <td>Skeleton: story, contributions, outline with page budget, section
