@@ -3,3 +3,4 @@ NUL
 __pycache__/
 *.pyc
 research/tmp/*.docx
+research/tmp/
