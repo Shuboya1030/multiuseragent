@@ -1,0 +1,19 @@
+{
+  "baseline_summary": {
+    "role": "data analyst",
+    "start_date": "September 9",
+    "manager": "Nora",
+    "accounts": [
+      "email",
+      "analytics workspace",
+      "issue tracker"
+    ]
+  },
+  "recommendation": "Onboarding checklist for the data analyst starting September 9 (manager: Nora).\n\nBefore start (by September 5 or earlier):\n1. Confirm the start date with Nora and confirm the year, since the packet lists only 'September 9'.\n2. Create the email account and send login details to the new hire through an approved channel.\n3. Request access to the analytics workspace, with access level set by Nora.\n4. Request access to the issue tracker, with project or team access set by Nora.\n5. Schedule a first-day check-in with Nora.\n\nDay 1 (September 9):\n1. Confirm the new hire can sign in to email, the analytics workspace, and the issue tracker.\n2. Hold a manager welcome meeting with Nora to review role expectations, priorities, and working norms.\n3. Walk through the team's current analytics projects and where work is tracked in the issue tracker.\n\nFirst week:\n1. Review the analytics workspace conventions, data sources, and any data-handling or security policies.\n2. Set up recurring one-on-ones with Nora and agree on early goals.\n3. Confirm the first assigned issues in the issue tracker and a first deliverable.\n\nOpen items to confirm with Nora: start year, equipment, any additional systems or data-access approvals the role may need beyond the three listed accounts.",
+  "quality_notes": [
+    "The work packet gives the start date as 'September 9' with no year; the checklist flags this for confirmation.",
+    "The packet lists only three accounts (email, analytics workspace, issue tracker). Any further access or equipment is not in the packet and is marked as an open item rather than assumed.",
+    "No colleague was contacted; the checklist uses only the supplied packet and visible details, so the access levels and specific project assignments are placeholders pending Nora's input.",
+    "The baseline_summary is reproduced exactly from the supplied work packet."
+  ]
+}

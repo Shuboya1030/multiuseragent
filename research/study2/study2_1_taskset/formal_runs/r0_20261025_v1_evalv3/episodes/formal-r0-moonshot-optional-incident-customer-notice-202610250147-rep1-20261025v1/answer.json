@@ -1,0 +1,16 @@
+{
+  "baseline_summary": {
+    "service": "Search API",
+    "start": "10:10 UTC",
+    "resolved": "10:42 UTC",
+    "cause": "expired certificate",
+    "status": "resolved"
+  },
+  "recommendation": "Incident Notice — Search API Outage\n\nOn [Date] at 10:10 UTC, the Search API became unavailable due to an expired TLS certificate. The issue was resolved at 10:42 UTC after the certificate was renewed.\n\nImpact: Search API was down for approximately 32 minutes, resulting in failed or degraded search requests for all users.\n\nStatus: Resolved\n\nNext Steps:\n• Review and automate certificate renewal workflows to prevent future expiry.\n• Add proactive certificate expiration monitoring and alerting.\n• Schedule a brief post-incident review to confirm remediation completeness.",
+  "quality_notes": [
+    "Notice drafted from visible incident timeline: service, start/end times, root cause, and status.",
+    "Colleague C4 (Operations Associate) confirmed no additional task-specific information was available.",
+    "Impact inferred from 32-minute outage window affecting the Search API.",
+    "Standard follow-up actions for certificate expiry included as next steps."
+  ]
+}

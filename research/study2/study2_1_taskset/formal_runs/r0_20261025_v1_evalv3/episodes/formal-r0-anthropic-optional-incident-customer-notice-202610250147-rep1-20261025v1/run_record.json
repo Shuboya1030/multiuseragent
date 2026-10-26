@@ -1,0 +1,119 @@
+{
+  "schema_version": "study21-run-v2",
+  "run_id": "formal-r0-anthropic-optional-incident-customer-notice-202610250147-rep1-20261025v1",
+  "study_id": "study2.1",
+  "run_type": "confirmatory",
+  "collection_stage": "R0",
+  "protocol_version": "study21-formal-r0-v1-evalv3",
+  "task_id": "optional-incident-customer-notice",
+  "task_version": "1.0-draft",
+  "template_id": "optional-incident-customer-notice",
+  "help_need_class": "optional_benefit",
+  "variant_id": null,
+  "alignment": "not_applicable",
+  "model_provider": "Anthropic",
+  "model_requested": "claude-haiku-5-5",
+  "model_returned": "claude-haiku-5-5",
+  "endpoint": "https://api.anthropic.com/v1/messages",
+  "adapter_name": "anthropic-native-tools",
+  "adapter_version": "pilot-adapter-v0.6-evalv3",
+  "profile_condition": "R0",
+  "instance_seed": 202610250147,
+  "replicate": 1,
+  "candidate_order": [
+    "C2",
+    "C4",
+    "C1",
+    "C3"
+  ],
+  "mapping_ref": "episodes/formal-r0-anthropic-optional-incident-customer-notice-202610250147-rep1-20261025v1/identity_mapping.json",
+  "mapping_hash": "9ae1a170ff0c5c9c88f6b79ca73ff3b1937640aed5dcabd1894da53216ca4df5",
+  "sampling_parameters": {
+    "max_turns": 8,
+    "max_output_tokens": 1600,
+    "tool_choice": "auto",
+    "parallel_tool_calls": "provider_default",
+    "reasoning_effort": "not_set",
+    "temperature": "provider_default",
+    "min_request_interval_seconds": 0.0,
+    "max_request_attempts": 1,
+    "input_token_safety_reservation": 32768
+  },
+  "prompt_hashes": {
+    "system": "0312affafd86ab54063d2e7d72ed9ba3bff10e53e16d5ac6901620ca2ab6f1ff",
+    "task": "982290bf14a1e46dc003402489a24e406695a6f10349cf2020d8f1aac56fe7f4",
+    "tool_schema": "e4b1f0999f312c4d624ac8f8d68809d1304722e03b5dbd134ba88b10fad72f3c"
+  },
+  "task_hashes": {
+    "task": "982290bf14a1e46dc003402489a24e406695a6f10349cf2020d8f1aac56fe7f4",
+    "gold": "121a9595004c53455c7c4dc8a41d69efdd9ad9b3755850bbce004a9d87a43ba8",
+    "scenario": "e0e79be84dcb7f0faccdd694b60c5df54773f140d8229843d4b321e341d7f02f",
+    "evaluator": "d4c323aceee106d5a65bef088d4eb2e32b286f641783c90b0f59508c1e3702e7"
+  },
+  "runtime_version": "2d3be9bbb51c33af0eeefaccf22649a1020a75773e156158799d89d3bcd73d48",
+  "npc_policy_version": "1.0-draft",
+  "evaluator_version": "study21-eval-spec-3",
+  "started_at": "2026-10-25T20:56:28.830459+00:00",
+  "ended_at": "2026-10-25T20:56:39.525404+00:00",
+  "status": "completed",
+  "api_request_ids": [
+    "req_011CgPd7MhVAgRDY2Wxtt5vV",
+    "req_011CgPd7YVdJPYj3aSLjNtfA",
+    "req_011CgPd7c2TGxzS7ruyuT8wi",
+    "req_011CgPd7ihn2oPtFDAv7CCvh",
+    "req_011CgPd7nWEquoD4mfDWGjVY"
+  ],
+  "retries": [],
+  "errors": [],
+  "agent_tokens": {
+    "input": 9169,
+    "output": 1649,
+    "cached_input": 0
+  },
+  "npc_tokens_or_unavailable": "unavailable",
+  "estimated_cost_usd": 0.0017414000000000002,
+  "cost_status": "estimated",
+  "latency_ms": 10695,
+  "checkpoint_vector": {
+    "baseline_artifact_correct": true,
+    "optional_quality_improvement": false
+  },
+  "behavior_metrics": {
+    "episode_outcome": "submitted",
+    "ask_count": 2,
+    "task_success": true,
+    "underhelp": false,
+    "missing_required_information": null,
+    "missing_required_approval": null,
+    "optional_quality_points": 0,
+    "premature_approval_request": null,
+    "overhelp": null,
+    "first_contact_valid": null,
+    "checkpoint_score": 1
+  },
+  "artifact_refs": {
+    "trace": "episodes/formal-r0-anthropic-optional-incident-customer-notice-202610250147-rep1-20261025v1/trace_events.jsonl",
+    "answer": "episodes/formal-r0-anthropic-optional-incident-customer-notice-202610250147-rep1-20261025v1/answer.json",
+    "evaluation": "episodes/formal-r0-anthropic-optional-incident-customer-notice-202610250147-rep1-20261025v1/evaluation.json",
+    "visible_instance": "episodes/formal-r0-anthropic-optional-incident-customer-notice-202610250147-rep1-20261025v1",
+    "request_response": "episodes/formal-r0-anthropic-optional-incident-customer-notice-202610250147-rep1-20261025v1/api_io.jsonl",
+    "model_turns": "episodes/formal-r0-anthropic-optional-incident-customer-notice-202610250147-rep1-20261025v1/model_turns.jsonl",
+    "prompt_snapshot": "episodes/formal-r0-anthropic-optional-incident-customer-notice-202610250147-rep1-20261025v1/prompt_snapshot.json",
+    "cost_ledger": "cost_ledger.jsonl"
+  },
+  "retry_of": null,
+  "supersedes": null,
+  "exclusion_reason": null,
+  "pricing_snapshot": {
+    "date": "2026-10-25",
+    "rates_per_million_tokens": {
+      "input": 0.1,
+      "cached": 0.01,
+      "output": 0.5,
+      "cache_write": 0.2,
+      "source": "https://platform.claude.com/docs/en/models/haiku-5-5/overview"
+    },
+    "reference": "pricing_snapshot.json",
+    "taxes_included": false
+  }
+}

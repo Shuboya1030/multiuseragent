@@ -1,0 +1,21 @@
+{
+  "baseline_summary": {
+    "duration_hours": 2,
+    "allowed_days": [
+      "Saturday",
+      "Sunday"
+    ],
+    "staff": [
+      "on-call A",
+      "on-call B"
+    ],
+    "deadline": "August 31"
+  },
+  "recommendation": "Schedule the maintenance on a Sunday, 02:00–04:00 local time, during the last allowed weekend before August 31. Sunday early morning is typically the lowest-traffic period, minimizing customer impact. Both on-call A and on-call B should be alerted 30 minutes prior to the window. The mitigation plan should include: (1) pre-maintenance customer notification at least 48 hours in advance; (2) a staged rollout with automated health checks; (3) a rollback procedure on standby; (4) real-time status page updates; and (5) post-maintenance validation before declaring the window closed.",
+  "quality_notes": [
+    "Sunday 02:00–04:00 selected because weekend early-morning hours generally see the lowest user activity.",
+    "Staffing is limited to on-call A and on-call B; no additional personnel are required for a 2-hour window.",
+    "The August 31 deadline constrains the window to the final weekend before that date.",
+    "Mitigation focuses on advance notice, rollback readiness, and validation to minimize disruption."
+  ]
+}

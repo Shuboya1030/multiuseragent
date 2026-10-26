@@ -1,0 +1,16 @@
+{
+  "baseline_summary": {
+    "record_types": [
+      "support tickets",
+      "billing records"
+    ],
+    "default_years": 3,
+    "owner": "Records Operations"
+  },
+  "recommendation": "- Support tickets: Owner — Records Operations; Retention period — 3 years; Review date — Annual (e.g., Q1 each year). Next review: upcoming Q1.\n- Billing records: Owner — Records Operations; Retention period — 3 years; Review date — Annual (e.g., Q1 each year). Next review: upcoming Q1.\nAdditional guidance: Per the records archivist (via Drew Morgan / C1), introduce a quarterly review checkpoint for exceptions so that schedule owners can identify and act on policy changes promptly.",
+  "quality_notes": [
+    "Baseline policy retained exactly as supplied.",
+    "Drew Morgan (C1) confirmed the three-year retention rule is complete and recommended quarterly exception reviews.",
+    "Annual review dates assigned to each record type under the Records Operations owner."
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "run_id": "formal-r0-moonshot-must-site-safety-202610250117-rep1-20261025v1",
+  "task_id": "must-site-safety",
+  "seed": 202610250117,
+  "profile_condition": "R0",
+  "alignment": "separated",
+  "alias_to_canonical": {
+    "C2": "P1",
+    "C3": "P2",
+    "C1": "P3",
+    "C4": "P4"
+  },
+  "canonical_to_alias": {
+    "P3": "C1",
+    "P1": "C2",
+    "P2": "C3",
+    "P4": "C4"
+  }
+}

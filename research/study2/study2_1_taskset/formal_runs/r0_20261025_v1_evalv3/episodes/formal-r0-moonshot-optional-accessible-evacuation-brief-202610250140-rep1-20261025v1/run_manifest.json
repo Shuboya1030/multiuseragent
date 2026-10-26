@@ -1,0 +1,13 @@
+{
+  "run_id": "formal-r0-moonshot-optional-accessible-evacuation-brief-202610250140-rep1-20261025v1",
+  "task_id": "optional-accessible-evacuation-brief",
+  "seed": 202610250140,
+  "profile_condition": "R0",
+  "alignment": "not_applicable",
+  "candidate_order": [
+    "C3",
+    "C4",
+    "C2",
+    "C1"
+  ]
+}

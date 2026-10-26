@@ -1,0 +1,17 @@
+{
+  "baseline_summary": {
+    "feature": "scheduled exports",
+    "formats": [
+      "CSV",
+      "JSON"
+    ],
+    "max_rows": 10000,
+    "launch": "November 4"
+  },
+  "recommendation": "FAQ: What is scheduled export? Scheduled exports let you automatically export data on a recurring basis. What file formats are supported? CSV and JSON. Is there a size limit? Yes—exports are limited to 10,000 rows per export. When does it launch? November 4. What should customers know about limits? Larger datasets may need to be split into multiple exports.",
+  "quality_notes": [
+    "Concise and customer-facing.",
+    "Includes supported formats, row limit, and launch timing from the work packet.",
+    "Does not add unsupported implementation details or promises."
+  ]
+}

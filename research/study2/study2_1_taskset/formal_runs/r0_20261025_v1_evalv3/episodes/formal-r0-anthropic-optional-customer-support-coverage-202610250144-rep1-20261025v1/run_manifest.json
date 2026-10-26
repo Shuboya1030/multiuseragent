@@ -1,0 +1,13 @@
+{
+  "run_id": "formal-r0-anthropic-optional-customer-support-coverage-202610250144-rep1-20261025v1",
+  "task_id": "optional-customer-support-coverage",
+  "seed": 202610250144,
+  "profile_condition": "R0",
+  "alignment": "not_applicable",
+  "candidate_order": [
+    "C1",
+    "C3",
+    "C2",
+    "C4"
+  ]
+}

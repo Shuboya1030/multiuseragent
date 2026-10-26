@@ -1,0 +1,13 @@
+{
+  "run_id": "formal-r0-openai-nohelp-webinar-agenda-202610250139-rep1-20261025v1",
+  "task_id": "nohelp-webinar-agenda",
+  "seed": 202610250139,
+  "profile_condition": "R0",
+  "alignment": "not_applicable",
+  "candidate_order": [
+    "C3",
+    "C4",
+    "C2",
+    "C1"
+  ]
+}

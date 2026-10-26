@@ -1,0 +1,21 @@
+{
+  "baseline_summary": {
+    "building": "West Annex",
+    "floors": 4,
+    "assembly_point": "south plaza",
+    "drill": "May 6 at 10:00",
+    "stairwells": [
+      "east",
+      "west"
+    ]
+  },
+  "recommendation": "STAFF BRIEF - West Annex evacuation drill, May 6 at 10:00. (1) On hearing the alarm, stop work, save essential data only if it takes under a minute, and leave. Do not use elevators. (2) Walk calmly to the nearest of the two stairwells (east or west). Use whichever is closer; if one is blocked, use the other. (3) Go down the stairs, keeping to the right, and hold the handrail. Do not run or push. (4) Exit the building and proceed to the south plaza assembly point. Do not re-enter until told to do so by the floor warden or safety lead. (5) Floor wardens: sweep your area, check restrooms and meeting rooms, and report to the assembly point roster lead. (6) Accessibility planning (general): anyone who needs help evacuating should tell their supervisor or floor warden before the drill; wardens should plan a buddy for each such person, and staff should not carry or use the stairs with anyone unless trained to do so. Ensure stairwell doors and landings stay clear, and that the assembly point is reachable by a step-free route. No individual accommodations are included in this brief. (7) Open items before the drill: the floor plan was not available to the preparer, so exact stairwell locations per floor, exit routes from each floor's most distant rooms, and the south plaza route must be verified against the official floor plan by the safety lead before distribution.",
+  "quality_notes": [
+    "baseline_summary reproduces the supplied work packet exactly.",
+    "No floor plan was available: the visible floor plan was not provided in the packet, and colleagues C2 and C4 reported holding no task-specific information. Per-floor stair locations and routes are therefore not confirmed.",
+    "Stair choice guidance is general (nearest of east or west, use the other if one is blocked) and should be checked against the actual plan.",
+    "Drill timing (May 6 at 10:00) and assembly point (south plaza) come from the work packet only and were not independently verified.",
+    "Accessibility content is general planning only; no individual employee accommodations were requested or included.",
+    "C3 and C1 were not contacted; they may hold the floor plan."
+  ]
+}

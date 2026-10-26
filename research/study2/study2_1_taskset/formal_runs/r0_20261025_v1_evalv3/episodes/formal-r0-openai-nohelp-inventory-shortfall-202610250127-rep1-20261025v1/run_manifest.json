@@ -1,0 +1,13 @@
+{
+  "run_id": "formal-r0-openai-nohelp-inventory-shortfall-202610250127-rep1-20261025v1",
+  "task_id": "nohelp-inventory-shortfall",
+  "seed": 202610250127,
+  "profile_condition": "R0",
+  "alignment": "not_applicable",
+  "candidate_order": [
+    "C4",
+    "C2",
+    "C1",
+    "C3"
+  ]
+}

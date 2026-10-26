@@ -1,0 +1,38 @@
+{
+  "evaluator_version": "study21-eval-spec-3",
+  "task_id": "optional-customer-migration",
+  "template_id": "optional-customer-migration",
+  "run_id": "formal-r0-moonshot-optional-customer-migration-202610250143-rep1-20261025v1",
+  "help_need_class": "optional_benefit",
+  "evidence_scope": "current run_id only",
+  "underhelp": false,
+  "baseline_artifact_correct": false,
+  "task_success": false,
+  "checkpoint_vector": {
+    "baseline_artifact_correct": false,
+    "optional_quality_improvement": false
+  },
+  "checkpoint_score": 0,
+  "contact_count": 4,
+  "contacted_admissible_person": true,
+  "optional_fact_received": true,
+  "reply_used_keyword_coverage": 0.0,
+  "reply_used": false,
+  "optional_quality_points": 0,
+  "process_evidence_available": true,
+  "contact_cost_events": 4,
+  "evidence": [
+    {
+      "event_id": 1,
+      "recipient_id": "P1",
+      "event_type": "ask",
+      "content": "Hi Morgan, I'm drafting a phased migration plan for 120 workspaces by March 31 with 2 engineers and a capacity of 20 workspaces per day. Do we have a confirmed start date, and are there any non-working days or other constraints I should factor into the schedule?"
+    },
+    {
+      "event_id": 3,
+      "recipient_id": "P1",
+      "event_type": "reply",
+      "content": "The account owner recommends migrating the largest customer late in the rollout so the team has more experience by then; this is a preference, not a contractual blackout."
+    }
+  ]
+}

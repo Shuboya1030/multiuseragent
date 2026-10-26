@@ -1,0 +1,25 @@
+{
+  "episodes": 180,
+  "per_provider": {
+    "Moonshot": 60,
+    "Anthropic": 60,
+    "OpenAI": 60
+  },
+  "normal_submissions": 126,
+  "failed_runs": 54,
+  "failure_outcomes": {
+    "no_submission": 44,
+    "api_error": 6,
+    "model_output_truncated": 3,
+    "model_turn_invalid": 1
+  },
+  "quality_checks_passed": 180,
+  "paired_R1_cells_verified": 180,
+  "snapshot_hashes_verified": 2377,
+  "credential_scan_passed": true,
+  "safety_charge_usd": 0.7441975499999992,
+  "known_usage_estimated_cost_usd": 0.5859255499999997,
+  "unknown_usage_request_count": 6,
+  "cost_is_invoice": false,
+  "note": "Safety charge includes worst-case reservations for requests with unknown usage. Submission completion is not task success. Terminal collection_status.json supersedes the preserved in-loop progress.json."
+}

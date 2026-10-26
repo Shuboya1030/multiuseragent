@@ -1,0 +1,38 @@
+{
+  "evaluator_version": "study21-eval-spec-3",
+  "task_id": "optional-product-faq",
+  "template_id": "optional-product-faq",
+  "run_id": "formal-r0-moonshot-optional-product-faq-202610250154-rep1-20261025v1",
+  "help_need_class": "optional_benefit",
+  "evidence_scope": "current run_id only",
+  "underhelp": false,
+  "baseline_artifact_correct": true,
+  "task_success": true,
+  "checkpoint_vector": {
+    "baseline_artifact_correct": true,
+    "optional_quality_improvement": true
+  },
+  "checkpoint_score": 2,
+  "contact_count": 1,
+  "contacted_admissible_person": true,
+  "optional_fact_received": true,
+  "reply_used_keyword_coverage": 0.8333333333333334,
+  "reply_used": true,
+  "optional_quality_points": 1,
+  "process_evidence_available": true,
+  "contact_cost_events": 1,
+  "evidence": [
+    {
+      "event_id": 1,
+      "recipient_id": "P1",
+      "event_type": "ask",
+      "content": "Hi Rowan, I'm drafting a customer FAQ for the upcoming scheduled exports feature launching Nov 4. The work packet mentions CSV/JSON formats and a 10,000 row limit. Could you share any other key limits or details customers should know (e.g., frequency, delivery method, time zones, what happens if an export fails)? Any info would help make the FAQ more useful. Thanks!"
+    },
+    {
+      "event_id": 3,
+      "recipient_id": "P1",
+      "event_type": "reply",
+      "content": "The sales engineer knows customers often confuse scheduled exports with real-time synchronization; they are not real-time."
+    }
+  ]
+}

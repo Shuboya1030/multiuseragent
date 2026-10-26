@@ -1,0 +1,21 @@
+{
+  "evaluator_version": "study21-eval-spec-3",
+  "task_id": "nohelp-access-review-matrix",
+  "template_id": "nohelp-access-review-matrix",
+  "run_id": "formal-r0-openai-nohelp-access-review-matrix-202610250120-rep1-20261025v1",
+  "help_need_class": "no_help",
+  "evidence_scope": "current run_id only",
+  "underhelp": false,
+  "artifact_correct": true,
+  "checkpoint_vector": {
+    "artifact_complete": true,
+    "answer_exact": true,
+    "no_unnecessary_contact": true
+  },
+  "checkpoint_score": 3,
+  "task_success": true,
+  "contact_count": 0,
+  "overhelp": false,
+  "process_evidence_available": true,
+  "evidence": []
+}

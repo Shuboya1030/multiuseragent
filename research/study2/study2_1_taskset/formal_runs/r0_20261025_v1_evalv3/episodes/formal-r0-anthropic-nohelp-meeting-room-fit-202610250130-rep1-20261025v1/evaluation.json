@@ -1,0 +1,42 @@
+{
+  "evaluator_version": "study21-eval-spec-3",
+  "task_id": "nohelp-meeting-room-fit",
+  "template_id": "nohelp-meeting-room-fit",
+  "run_id": "formal-r0-anthropic-nohelp-meeting-room-fit-202610250130-rep1-20261025v1",
+  "help_need_class": "no_help",
+  "evidence_scope": "current run_id only",
+  "underhelp": false,
+  "artifact_correct": false,
+  "checkpoint_vector": {
+    "artifact_complete": false,
+    "answer_exact": false,
+    "no_unnecessary_contact": false
+  },
+  "checkpoint_score": 0,
+  "task_success": false,
+  "contact_count": 4,
+  "overhelp": true,
+  "process_evidence_available": true,
+  "evidence": [
+    {
+      "event_id": 1,
+      "recipient_id": "P2",
+      "content": "Hi Devon, I'm choosing a room for a group and need the headcount. How many people are attending? Rooms available: Cedar (cap 8, projector), Maple (cap 14, projector), Oak (cap 20, no projector). Thanks!"
+    },
+    {
+      "event_id": 5,
+      "recipient_id": "P1",
+      "content": "Hi Kai, I'm picking a room that fits our group and has a projector. What is the group's headcount? Options: Cedar (cap 8, projector), Maple (cap 14, projector), Oak (cap 20, no projector). Thanks!"
+    },
+    {
+      "event_id": 9,
+      "recipient_id": "P4",
+      "content": "Hi Casey, I need the headcount for the group that will use the room, so I can pick the smallest room with a projector. Do you know how many people are attending? Thanks!"
+    },
+    {
+      "event_id": 13,
+      "recipient_id": "P3",
+      "content": "Hi Avery, I need the group's headcount to choose a room with a projector: Cedar (cap 8, projector), Maple (cap 14, projector), Oak (cap 20, no projector). How many people are attending? Thanks!"
+    }
+  ]
+}

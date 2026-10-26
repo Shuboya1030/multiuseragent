@@ -1,0 +1,13 @@
+{
+  "run_id": "formal-r0-anthropic-nohelp-invoice-tax-check-202610250128-rep1-20261025v1",
+  "task_id": "nohelp-invoice-tax-check",
+  "seed": 202610250128,
+  "profile_condition": "R0",
+  "alignment": "not_applicable",
+  "candidate_order": [
+    "C3",
+    "C2",
+    "C4",
+    "C1"
+  ]
+}

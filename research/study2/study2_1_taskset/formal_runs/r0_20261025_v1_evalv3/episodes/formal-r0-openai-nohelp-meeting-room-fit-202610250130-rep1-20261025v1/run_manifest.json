@@ -1,0 +1,13 @@
+{
+  "run_id": "formal-r0-openai-nohelp-meeting-room-fit-202610250130-rep1-20261025v1",
+  "task_id": "nohelp-meeting-room-fit",
+  "seed": 202610250130,
+  "profile_condition": "R0",
+  "alignment": "not_applicable",
+  "candidate_order": [
+    "C3",
+    "C2",
+    "C4",
+    "C1"
+  ]
+}

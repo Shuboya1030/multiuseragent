@@ -1,0 +1,13 @@
+{
+  "run_id": "formal-r0-openai-must-mileage-reimbursement-202610250111-rep1-20261025v1",
+  "task_id": "must-mileage-reimbursement",
+  "seed": 202610250111,
+  "profile_condition": "R0",
+  "alignment": "separated",
+  "candidate_order": [
+    "C3",
+    "C4",
+    "C1",
+    "C2"
+  ]
+}

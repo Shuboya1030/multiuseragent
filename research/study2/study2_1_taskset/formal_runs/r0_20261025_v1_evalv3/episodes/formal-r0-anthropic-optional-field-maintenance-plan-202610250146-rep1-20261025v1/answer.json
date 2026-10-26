@@ -1,0 +1,17 @@
+{
+  "baseline_summary": {
+    "site": "Riverside plant",
+    "equipment": "pump P-14",
+    "visit_date": "December 2",
+    "crew": 3,
+    "entrance": "north gate open"
+  },
+  "recommendation": "Plan the visit for December 2 with a crew of 3, arriving through the north gate, which is recorded as open. Before arrival, confirm the gate is still open that day and get a site contact for check-in. Confirm the equipment's isolation and lockout requirements, PPE, and any site safety induction with the plant before work begins, since none of these are in the work packet. Keep the visit scope to inspecting and documenting pump P-14 unless the plant approves more work. A colleague (Sasha Nguyen, C4) confirmed she has no additional task-specific site or equipment information, so these details still need to come from the plant or the equipment owner.",
+  "quality_notes": [
+    "Baseline summary copied exactly from the supplied work packet.",
+    "Only the north gate entrance is a visible access detail; no site map, hours, or contact information was provided.",
+    "No PPE, lockout/tagout, or pump-specific procedure details were available; these are flagged as items to confirm, not assumed.",
+    "Colleague C4 replied that she holds no additional task-specific information, so no further facts were added.",
+    "Other colleagues (C1, C2, C3) were not contacted because the directory roles did not clearly indicate site or equipment knowledge."
+  ]
+}

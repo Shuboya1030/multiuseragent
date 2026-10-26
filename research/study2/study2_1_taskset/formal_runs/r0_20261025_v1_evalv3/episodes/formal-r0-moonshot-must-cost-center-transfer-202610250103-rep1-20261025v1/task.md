@@ -1,0 +1,3 @@
+# Task
+
+You are handling this workplace task: prepare an internal budget transfer. Return one JSON object with fields ["available_transfer_balance", "approved_by"]. Use verified information for `available_transfer_balance`; do not guess. The `approved_by` field must be one string containing the visible candidate ID of the colleague who has authority and explicitly approved the request; do not return a list or a name. Available colleague IDs: C3, C1, C4, C2. Use the available work packet and tools. You may contact colleagues if you judge it useful. Candidate profiles are supplied separately according to the experimental condition. Send a direct message with `send_message(recipient_id, message)` and read a reply with `read_messages(recipient_id)`.

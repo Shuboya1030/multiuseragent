@@ -1,0 +1,20 @@
+{
+  "baseline_summary": {
+    "sessions": 2,
+    "duration_minutes": 60,
+    "trainer_available": [
+      "09:00",
+      "15:00"
+    ],
+    "room_capacity": 20,
+    "staff_count": 36
+  },
+  "recommendation": "Schedule two 60-minute sessions in the single 20-seat room: Session 1 at 09:00 with 20 staff, and Session 2 at 15:00 with the remaining 16 staff. Both trainer slots are used, the room is never over capacity, and all 36 staff can attend, so attendance is maximized at 36 (the 2 x 20 = 40 seat total covers the 36 staff). Assignment of individuals to sessions is not specified in the packet and can be done by any fair rule (e.g., first-come or by team).",
+  "quality_notes": [
+    "Capacity check: 2 sessions x 20 seats = 40 >= 36 staff, so full attendance is feasible with the given constraints.",
+    "Both trainer-available slots (09:00 and 15:00) are used; no additional trainer time is assumed.",
+    "The packet does not state whether the two sessions fall on the same day or different days; the recommendation assumes the trainer slots are usable as given.",
+    "Session 2 is only 16 of 20 seats full, so it has spare capacity.",
+    "No colleague was contacted; the recommendation relies solely on the work packet's stated constraints."
+  ]
+}

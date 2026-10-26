@@ -1,0 +1,14 @@
+{
+  "baseline_summary": {
+    "source_balance": 42000,
+    "destination_shortfall": 9000,
+    "quarterly_cap": 50000
+  },
+  "recommendation": "Transfer 9,000 from the source balance to cover the destination shortfall exactly. This stays within the 50,000 quarterly cap and leaves 33,000 in the source balance. No larger transfer is needed, and moving the full 42,000 balance would exceed the shortfall and is not recommended.",
+  "quality_notes": [
+    "The transfer amount (9,000) is derived directly from the destination shortfall and is within the quarterly cap of 50,000 and the available source balance of 42,000.",
+    "The work packet does not state whether the quarterly cap already includes prior transfers this quarter; this recommendation assumes none have been made. If prior transfers exist, confirm remaining cap headroom before executing.",
+    "No colleague was contacted; the recommendation relies solely on the work packet figures.",
+    "Figures are taken as supplied and were not independently verified against live account balances."
+  ]
+}

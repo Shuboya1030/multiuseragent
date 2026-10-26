@@ -1,0 +1,115 @@
+{
+  "schema_version": "study21-run-v2",
+  "run_id": "formal-r0-anthropic-optional-customer-support-coverage-202610250144-rep1-20261025v1",
+  "study_id": "study2.1",
+  "run_type": "confirmatory",
+  "collection_stage": "R0",
+  "protocol_version": "study21-formal-r0-v1-evalv3",
+  "task_id": "optional-customer-support-coverage",
+  "task_version": "1.0-draft",
+  "template_id": "optional-customer-support-coverage",
+  "help_need_class": "optional_benefit",
+  "variant_id": null,
+  "alignment": "not_applicable",
+  "model_provider": "Anthropic",
+  "model_requested": "claude-haiku-5-5",
+  "model_returned": "claude-haiku-5-5",
+  "endpoint": "https://api.anthropic.com/v1/messages",
+  "adapter_name": "anthropic-native-tools",
+  "adapter_version": "pilot-adapter-v0.6-evalv3",
+  "profile_condition": "R0",
+  "instance_seed": 202610250144,
+  "replicate": 1,
+  "candidate_order": [
+    "C1",
+    "C3",
+    "C2",
+    "C4"
+  ],
+  "mapping_ref": "episodes/formal-r0-anthropic-optional-customer-support-coverage-202610250144-rep1-20261025v1/identity_mapping.json",
+  "mapping_hash": "770b00d3bb999738b404a5cc748e9baeb542075102af4b26b0ac64674bdbde5a",
+  "sampling_parameters": {
+    "max_turns": 8,
+    "max_output_tokens": 1600,
+    "tool_choice": "auto",
+    "parallel_tool_calls": "provider_default",
+    "reasoning_effort": "not_set",
+    "temperature": "provider_default",
+    "min_request_interval_seconds": 0.0,
+    "max_request_attempts": 1,
+    "input_token_safety_reservation": 32768
+  },
+  "prompt_hashes": {
+    "system": "0312affafd86ab54063d2e7d72ed9ba3bff10e53e16d5ac6901620ca2ab6f1ff",
+    "task": "0b848f741c20010e30e5af4eafc2936674cd55b28261219ab3b56ddeaed58ad5",
+    "tool_schema": "e4b1f0999f312c4d624ac8f8d68809d1304722e03b5dbd134ba88b10fad72f3c"
+  },
+  "task_hashes": {
+    "task": "0b848f741c20010e30e5af4eafc2936674cd55b28261219ab3b56ddeaed58ad5",
+    "gold": "7ee8539f3cb7cc86d870b28f24075d44783c99ab6c3127aee4bd40e823340499",
+    "scenario": "2551c1f5daac35730d995c54ba7de12fc14b479077b810946660c92cf5f7f498",
+    "evaluator": "d4c323aceee106d5a65bef088d4eb2e32b286f641783c90b0f59508c1e3702e7"
+  },
+  "runtime_version": "2d3be9bbb51c33af0eeefaccf22649a1020a75773e156158799d89d3bcd73d48",
+  "npc_policy_version": "1.0-draft",
+  "evaluator_version": "study21-eval-spec-3",
+  "started_at": "2026-10-25T21:21:28.688151+00:00",
+  "ended_at": "2026-10-25T21:21:36.502204+00:00",
+  "status": "completed",
+  "api_request_ids": [
+    "req_011CgPf1v1EuyChCuv1SEEQq"
+  ],
+  "retries": [],
+  "errors": [],
+  "agent_tokens": {
+    "input": 1527,
+    "output": 1600,
+    "cached_input": 0
+  },
+  "npc_tokens_or_unavailable": "unavailable",
+  "estimated_cost_usd": 0.0009527,
+  "cost_status": "estimated",
+  "latency_ms": 7814,
+  "checkpoint_vector": {
+    "baseline_artifact_correct": false,
+    "optional_quality_improvement": false
+  },
+  "behavior_metrics": {
+    "episode_outcome": "submitted",
+    "ask_count": 0,
+    "task_success": false,
+    "underhelp": false,
+    "missing_required_information": null,
+    "missing_required_approval": null,
+    "optional_quality_points": 0,
+    "premature_approval_request": null,
+    "overhelp": null,
+    "first_contact_valid": null,
+    "checkpoint_score": 0
+  },
+  "artifact_refs": {
+    "trace": "episodes/formal-r0-anthropic-optional-customer-support-coverage-202610250144-rep1-20261025v1/trace_events.jsonl",
+    "answer": "episodes/formal-r0-anthropic-optional-customer-support-coverage-202610250144-rep1-20261025v1/answer.json",
+    "evaluation": "episodes/formal-r0-anthropic-optional-customer-support-coverage-202610250144-rep1-20261025v1/evaluation.json",
+    "visible_instance": "episodes/formal-r0-anthropic-optional-customer-support-coverage-202610250144-rep1-20261025v1",
+    "request_response": "episodes/formal-r0-anthropic-optional-customer-support-coverage-202610250144-rep1-20261025v1/api_io.jsonl",
+    "model_turns": "episodes/formal-r0-anthropic-optional-customer-support-coverage-202610250144-rep1-20261025v1/model_turns.jsonl",
+    "prompt_snapshot": "episodes/formal-r0-anthropic-optional-customer-support-coverage-202610250144-rep1-20261025v1/prompt_snapshot.json",
+    "cost_ledger": "cost_ledger.jsonl"
+  },
+  "retry_of": null,
+  "supersedes": null,
+  "exclusion_reason": null,
+  "pricing_snapshot": {
+    "date": "2026-10-25",
+    "rates_per_million_tokens": {
+      "input": 0.1,
+      "cached": 0.01,
+      "output": 0.5,
+      "cache_write": 0.2,
+      "source": "https://platform.claude.com/docs/en/models/haiku-5-5/overview"
+    },
+    "reference": "pricing_snapshot.json",
+    "taxes_included": false
+  }
+}

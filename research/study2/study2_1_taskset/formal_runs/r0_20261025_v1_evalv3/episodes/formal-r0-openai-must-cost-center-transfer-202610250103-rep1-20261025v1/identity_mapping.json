@@ -1,0 +1,19 @@
+{
+  "run_id": "formal-r0-openai-must-cost-center-transfer-202610250103-rep1-20261025v1",
+  "task_id": "must-cost-center-transfer",
+  "seed": 202610250103,
+  "profile_condition": "R0",
+  "alignment": "separated",
+  "alias_to_canonical": {
+    "C3": "P1",
+    "C2": "P2",
+    "C4": "P3",
+    "C1": "P4"
+  },
+  "canonical_to_alias": {
+    "P4": "C1",
+    "P2": "C2",
+    "P1": "C3",
+    "P3": "C4"
+  }
+}

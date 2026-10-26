@@ -1,0 +1,3 @@
+# Task
+
+You are handling this workplace task: prepare a reimbursement request. Return one JSON object with fields ["eligible_expense_category", "approved_by"]. Use verified information for `eligible_expense_category`; do not guess. The `approved_by` field must be one string containing the visible candidate ID of the colleague who has authority and explicitly approved the request; do not return a list or a name. Available colleague IDs: C1, C4, C2, C3. Use the available work packet and tools. You may contact colleagues if you judge it useful. Candidate profiles are supplied separately according to the experimental condition. Send a direct message with `send_message(recipient_id, message)` and read a reply with `read_messages(recipient_id)`.

@@ -1,0 +1,16 @@
+{
+  "baseline_summary": {
+    "feature": "scheduled exports",
+    "formats": [
+      "CSV",
+      "JSON"
+    ],
+    "max_rows": 10000,
+    "launch": "November 4"
+  },
+  "recommendation": "**Scheduled Exports — Customer FAQ**\n\n**What is scheduled exports?**\nScheduled exports let you automatically export your data on a recurring schedule.\n\n**When will it be available?**\nThe feature launches on November 4.\n\n**Which file formats are supported?**\nYou can choose CSV or JSON.\n\n**Is there a limit on how much data I can export at once?**\nYes. Each scheduled export is limited to 10,000 rows.\n\n**Is this real-time data synchronization?**\nNo. Scheduled exports are periodic snapshots, not real-time synchronization.",
+  "quality_notes": [
+    "Incorporated clarification from C1 (Rowan Diaz, Business Associate) that scheduled exports are not real-time synchronization.",
+    "FAQ kept concise and focused on the core feature, supported formats, row limit, and launch date to avoid overwhelming customers."
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "run_id": "formal-r0-openai-must-data-deletion-202610250105-rep1-20261025v1",
+  "task_id": "must-data-deletion",
+  "seed": 202610250105,
+  "profile_condition": "R0",
+  "alignment": "separated",
+  "alias_to_canonical": {
+    "C2": "P1",
+    "C1": "P2",
+    "C3": "P3",
+    "C4": "P4"
+  },
+  "canonical_to_alias": {
+    "P2": "C1",
+    "P1": "C2",
+    "P3": "C3",
+    "P4": "C4"
+  }
+}

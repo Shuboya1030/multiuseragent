@@ -1,0 +1,18 @@
+{
+  "baseline_summary": {
+    "feature": "scheduled exports",
+    "formats": [
+      "CSV",
+      "JSON"
+    ],
+    "max_rows": 10000,
+    "launch": "November 4"
+  },
+  "recommendation": "FAQ: Scheduled Exports\n\nQ: What is scheduled exports?\nA: Scheduled exports let you set up exports to run automatically, in CSV or JSON format. Launch date: November 4.\n\nQ: Which file formats are supported?\nA: CSV and JSON.\n\nQ: How many rows can one export include?\nA: Up to 10,000 rows per export. If your data exceeds this limit, the export will not include the rows beyond 10,000 (confirm with the product team how over-limit exports are handled before publishing).\n\nQ: When does this become available?\nA: Scheduled exports launch on November 4.\n\nQ: What should I know about the limits?\nA: Exports are capped at 10,000 rows and are available in CSV and JSON only. If you need more rows or another format, plan for a separate export method.\n\nOpen items before publishing: confirm schedule options (frequency, timing, time zones), delivery method, retention of exported files, and behavior when the row limit is reached.",
+  "quality_notes": [
+    "Built only from the supplied work packet; no external facts added.",
+    "Behavior when the 10,000-row limit is exceeded is not in the packet and is flagged for confirmation rather than stated as fact.",
+    "Schedule options, delivery, and file retention are not specified in the packet and are listed as open items.",
+    "Colleagues were not contacted; the packet was judged sufficient for a concise draft, but a product owner review is recommended before publishing."
+  ]
+}

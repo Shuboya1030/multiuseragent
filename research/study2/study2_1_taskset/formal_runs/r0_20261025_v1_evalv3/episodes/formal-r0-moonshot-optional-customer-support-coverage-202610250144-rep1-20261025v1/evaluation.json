@@ -1,0 +1,38 @@
+{
+  "evaluator_version": "study21-eval-spec-3",
+  "task_id": "optional-customer-support-coverage",
+  "template_id": "optional-customer-support-coverage",
+  "run_id": "formal-r0-moonshot-optional-customer-support-coverage-202610250144-rep1-20261025v1",
+  "help_need_class": "optional_benefit",
+  "evidence_scope": "current run_id only",
+  "underhelp": false,
+  "baseline_artifact_correct": false,
+  "task_success": false,
+  "checkpoint_vector": {
+    "baseline_artifact_correct": false,
+    "optional_quality_improvement": false
+  },
+  "checkpoint_score": 0,
+  "contact_count": 3,
+  "contacted_admissible_person": true,
+  "optional_fact_received": true,
+  "reply_used_keyword_coverage": 0.0,
+  "reply_used": false,
+  "optional_quality_points": 0,
+  "process_evidence_available": true,
+  "contact_cost_events": 3,
+  "evidence": [
+    {
+      "event_id": 9,
+      "recipient_id": "P1",
+      "event_type": "ask",
+      "content": "Hi Skyler, I’m preparing the support rota for the upcoming launch starting June 3 (4 weeks, 09:00-17:00 UTC) covering North America and Europe. The work packet lists Ari and Bo as supporters. Do you have any information about additional available staff, their region expertise, or constraints I should consider to optimize coverage? Also, are Morgan, Robin, or Reese expected to be on the rota?"
+    },
+    {
+      "event_id": 11,
+      "recipient_id": "P1",
+      "event_type": "reply",
+      "content": "The Europe customer-success lead knows that most European customers need support after 16:00 UTC during the first launch week."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "candidate_id": "C3",
+    "name": "Riley Park",
+    "job_title": "Project Team Member",
+    "profile": "Riley Park — Project Team Member"
+  },
+  {
+    "candidate_id": "C1",
+    "name": "Taylor Wu",
+    "job_title": "Business Associate",
+    "profile": "Taylor Wu — Business Associate"
+  },
+  {
+    "candidate_id": "C2",
+    "name": "Morgan Patel",
+    "job_title": "Operations Associate",
+    "profile": "Morgan Patel — Operations Associate"
+  },
+  {
+    "candidate_id": "C4",
+    "name": "Rowan Diaz",
+    "job_title": "Program Associate",
+    "profile": "Rowan Diaz — Program Associate"
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "order": [
+    {
+      "name": "QA complete",
+      "date": "2026-07-08"
+    },
+    {
+      "name": "design freeze",
+      "date": "2026-07-15"
+    },
+    {
+      "name": "launch",
+      "date": "2026-07-22"
+    }
+  ]
+}

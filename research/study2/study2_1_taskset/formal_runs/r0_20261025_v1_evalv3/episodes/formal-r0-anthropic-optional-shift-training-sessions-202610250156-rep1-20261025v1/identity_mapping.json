@@ -1,0 +1,19 @@
+{
+  "run_id": "formal-r0-anthropic-optional-shift-training-sessions-202610250156-rep1-20261025v1",
+  "task_id": "optional-shift-training-sessions",
+  "seed": 202610250156,
+  "profile_condition": "R0",
+  "alignment": "not_applicable",
+  "alias_to_canonical": {
+    "C4": "P1",
+    "C2": "P2",
+    "C1": "P3",
+    "C3": "P4"
+  },
+  "canonical_to_alias": {
+    "P3": "C1",
+    "P2": "C2",
+    "P4": "C3",
+    "P1": "C4"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "run_id": "formal-r0-moonshot-nohelp-reimbursement-policy-match-202610250133-rep1-20261025v1",
+  "task_id": "nohelp-reimbursement-policy-match",
+  "seed": 202610250133,
+  "profile_condition": "R0",
+  "alignment": "not_applicable",
+  "alias_to_canonical": {
+    "C4": "P1",
+    "C2": "P2",
+    "C1": "P3",
+    "C3": "P4"
+  },
+  "canonical_to_alias": {
+    "P3": "C1",
+    "P2": "C2",
+    "P4": "C3",
+    "P1": "C4"
+  }
+}

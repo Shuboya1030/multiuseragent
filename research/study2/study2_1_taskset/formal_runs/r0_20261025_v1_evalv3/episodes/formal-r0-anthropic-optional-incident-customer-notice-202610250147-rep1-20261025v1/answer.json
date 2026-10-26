@@ -1,0 +1,18 @@
+{
+  "baseline_summary": {
+    "service": "Search API",
+    "start": "10:10 UTC",
+    "resolved": "10:42 UTC",
+    "cause": "expired certificate",
+    "status": "resolved"
+  },
+  "recommendation": "Incident notice (draft):\n\nSubject: Search API outage, resolved\n\nWhat happened: The Search API was unavailable from 10:10 UTC to 10:42 UTC. The cause was an expired certificate. The service is now resolved.\n\nImpact: Search API requests were unavailable for about 32 minutes. A colleague reports that two tenants experienced delayed indexing after service recovery. Customer support holds the affected-tenant list; I have not verified the list or the indexing details.\n\nNext steps: (1) Confirm the affected-tenant list and indexing backlog status with customer support and the owning team. (2) Follow up with affected tenants as needed. (3) Confirm and document a fix to prevent recurrence, such as certificate expiry monitoring and renewal alerts. No follow-up owners or dates have been confirmed yet.\n\nNext update: Not yet scheduled; to be confirmed by the incident owner.",
+  "quality_notes": [
+    "The baseline summary is copied unchanged from the work packet.",
+    "Impact beyond the outage window is based on a secondhand colleague report (C1) that customer support has the affected-tenant list; it is not independently verified.",
+    "The work packet has no impact metrics (affected request counts, error rates, number of users), so none are stated.",
+    "Follow-up actions and owners are not confirmed in any source; the listed next steps are proposed, not agreed.",
+    "No next-update time or incident owner was provided; these are marked as pending.",
+    "C4 reported no additional task-specific information."
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "run_id": "formal-r0-moonshot-optional-incident-customer-notice-202610250147-rep1-20261025v1",
+  "task_id": "optional-incident-customer-notice",
+  "seed": 202610250147,
+  "profile_condition": "R0",
+  "alignment": "not_applicable",
+  "candidate_order": [
+    "C2",
+    "C4",
+    "C1",
+    "C3"
+  ]
+}

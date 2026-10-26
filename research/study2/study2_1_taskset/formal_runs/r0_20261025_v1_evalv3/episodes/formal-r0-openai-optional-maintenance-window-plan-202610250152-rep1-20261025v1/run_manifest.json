@@ -1,0 +1,13 @@
+{
+  "run_id": "formal-r0-openai-optional-maintenance-window-plan-202610250152-rep1-20261025v1",
+  "task_id": "optional-maintenance-window-plan",
+  "seed": 202610250152,
+  "profile_condition": "R0",
+  "alignment": "not_applicable",
+  "candidate_order": [
+    "C2",
+    "C1",
+    "C4",
+    "C3"
+  ]
+}

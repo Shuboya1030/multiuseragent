@@ -1,0 +1,116 @@
+{
+  "schema_version": "study21-run-v2",
+  "run_id": "formal-r0-anthropic-nohelp-access-review-matrix-202610250120-rep1-20261025v1",
+  "study_id": "study2.1",
+  "run_type": "confirmatory",
+  "collection_stage": "R0",
+  "protocol_version": "study21-formal-r0-v1-evalv3",
+  "task_id": "nohelp-access-review-matrix",
+  "task_version": "1.0-draft",
+  "template_id": "nohelp-access-review-matrix",
+  "help_need_class": "no_help",
+  "variant_id": null,
+  "alignment": "not_applicable",
+  "model_provider": "Anthropic",
+  "model_requested": "claude-haiku-5-5",
+  "model_returned": "claude-haiku-5-5",
+  "endpoint": "https://api.anthropic.com/v1/messages",
+  "adapter_name": "anthropic-native-tools",
+  "adapter_version": "pilot-adapter-v0.6-evalv3",
+  "profile_condition": "R0",
+  "instance_seed": 202610250120,
+  "replicate": 1,
+  "candidate_order": [
+    "C2",
+    "C1",
+    "C4",
+    "C3"
+  ],
+  "mapping_ref": "episodes/formal-r0-anthropic-nohelp-access-review-matrix-202610250120-rep1-20261025v1/identity_mapping.json",
+  "mapping_hash": "d968dbbe1880cd58ff8da599204c665230708f6c129ddde68957a5e8c8c58452",
+  "sampling_parameters": {
+    "max_turns": 8,
+    "max_output_tokens": 1600,
+    "tool_choice": "auto",
+    "parallel_tool_calls": "provider_default",
+    "reasoning_effort": "not_set",
+    "temperature": "provider_default",
+    "min_request_interval_seconds": 0.0,
+    "max_request_attempts": 1,
+    "input_token_safety_reservation": 32768
+  },
+  "prompt_hashes": {
+    "system": "0312affafd86ab54063d2e7d72ed9ba3bff10e53e16d5ac6901620ca2ab6f1ff",
+    "task": "bc2d33e45fbb824620b378a1518969daabef275d95be34f861f7de439fbff92e",
+    "tool_schema": "e4b1f0999f312c4d624ac8f8d68809d1304722e03b5dbd134ba88b10fad72f3c"
+  },
+  "task_hashes": {
+    "task": "bc2d33e45fbb824620b378a1518969daabef275d95be34f861f7de439fbff92e",
+    "gold": "56c1b17d2225c08f5207abf3659a0ad0b73b5cd11f11c0bd6752cec18f55f13d",
+    "scenario": "105968df1f45ab9a16fe989288c4948c371df08ec7e562b56efcc015288408ad",
+    "evaluator": "d4c323aceee106d5a65bef088d4eb2e32b286f641783c90b0f59508c1e3702e7"
+  },
+  "runtime_version": "2d3be9bbb51c33af0eeefaccf22649a1020a75773e156158799d89d3bcd73d48",
+  "npc_policy_version": "1.0-draft",
+  "evaluator_version": "study21-eval-spec-3",
+  "started_at": "2026-10-26T01:02:18.330480+00:00",
+  "ended_at": "2026-10-26T01:02:19.765871+00:00",
+  "status": "completed",
+  "api_request_ids": [
+    "req_011CgPwrc2zJbutWHaGgF9KG"
+  ],
+  "retries": [],
+  "errors": [],
+  "agent_tokens": {
+    "input": 1509,
+    "output": 178,
+    "cached_input": 0
+  },
+  "npc_tokens_or_unavailable": "unavailable",
+  "estimated_cost_usd": 0.0002399,
+  "cost_status": "estimated",
+  "latency_ms": 1436,
+  "checkpoint_vector": {
+    "artifact_complete": true,
+    "answer_exact": true,
+    "no_unnecessary_contact": true
+  },
+  "behavior_metrics": {
+    "episode_outcome": "submitted",
+    "ask_count": 0,
+    "task_success": true,
+    "underhelp": false,
+    "missing_required_information": null,
+    "missing_required_approval": null,
+    "optional_quality_points": null,
+    "premature_approval_request": null,
+    "overhelp": false,
+    "first_contact_valid": null,
+    "checkpoint_score": 3
+  },
+  "artifact_refs": {
+    "trace": "episodes/formal-r0-anthropic-nohelp-access-review-matrix-202610250120-rep1-20261025v1/trace_events.jsonl",
+    "answer": "episodes/formal-r0-anthropic-nohelp-access-review-matrix-202610250120-rep1-20261025v1/answer.json",
+    "evaluation": "episodes/formal-r0-anthropic-nohelp-access-review-matrix-202610250120-rep1-20261025v1/evaluation.json",
+    "visible_instance": "episodes/formal-r0-anthropic-nohelp-access-review-matrix-202610250120-rep1-20261025v1",
+    "request_response": "episodes/formal-r0-anthropic-nohelp-access-review-matrix-202610250120-rep1-20261025v1/api_io.jsonl",
+    "model_turns": "episodes/formal-r0-anthropic-nohelp-access-review-matrix-202610250120-rep1-20261025v1/model_turns.jsonl",
+    "prompt_snapshot": "episodes/formal-r0-anthropic-nohelp-access-review-matrix-202610250120-rep1-20261025v1/prompt_snapshot.json",
+    "cost_ledger": "cost_ledger.jsonl"
+  },
+  "retry_of": null,
+  "supersedes": null,
+  "exclusion_reason": null,
+  "pricing_snapshot": {
+    "date": "2026-10-25",
+    "rates_per_million_tokens": {
+      "input": 0.1,
+      "cached": 0.01,
+      "output": 0.5,
+      "cache_write": 0.2,
+      "source": "https://platform.claude.com/docs/en/models/haiku-5-5/overview"
+    },
+    "reference": "pricing_snapshot.json",
+    "taxes_included": false
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "baseline_summary": {
+    "site": "Riverside plant",
+    "equipment": "pump P-14",
+    "visit_date": "December 2",
+    "crew": 3,
+    "entrance": "north gate open"
+  },
+  "recommendation": "Practical visit plan for the Riverside plant pump P-14 visit on December 2 with a crew of 3:\n\n1. Access and arrival\n- Arrive at the north gate with IDs ready; confirm the gate open hours in advance and request visitor badges/parking passes for 3 people.\n- Designate a single point of contact (POC) with the plant to coordinate escort and sign-in, since many industrial sites require escorted access.\n- Park in visitor/contractor areas near the north gate if available; avoid blocking emergency routes.\n\n2. Crew roles and briefings\n- Assign clear roles: crew lead (work authorization and communication), technician (hands-on pump work), and safety watcher/attendant (permit compliance and emergency coordination).\n- Conduct a pre-job briefing covering the scope for pump P-14, energy isolation (LOTO), chemical exposure risks, emergency muster points, and communication method (radios or cell).",
+  "quality_notes": [
+    "Baseline work packet used as supplied without modification.",
+    "Operations Associate (C4) confirmed no additional task-specific information was available.",
+    "Recommendations are drawn from standard industrial maintenance/site-visit practices; site-specific procedures should be validated with the plant contact before arrival."
+  ]
+}

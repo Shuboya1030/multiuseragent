@@ -1,0 +1,114 @@
+{
+  "schema_version": "study21-run-v2",
+  "run_id": "formal-r0-openai-optional-maintenance-window-plan-202610250152-rep1-20261025v1",
+  "study_id": "study2.1",
+  "run_type": "confirmatory",
+  "collection_stage": "R0",
+  "protocol_version": "study21-formal-r0-v1-evalv3",
+  "task_id": "optional-maintenance-window-plan",
+  "task_version": "1.0-draft",
+  "template_id": "optional-maintenance-window-plan",
+  "help_need_class": "optional_benefit",
+  "variant_id": null,
+  "alignment": "not_applicable",
+  "model_provider": "OpenAI",
+  "model_requested": "gpt-5.4-mini",
+  "model_returned": "gpt-5.4-mini-2026-03-17",
+  "endpoint": "https://api.openai.com/v1/chat/completions",
+  "adapter_name": "openai-native-tools",
+  "adapter_version": "pilot-adapter-v0.6-evalv3",
+  "profile_condition": "R0",
+  "instance_seed": 202610250152,
+  "replicate": 1,
+  "candidate_order": [
+    "C2",
+    "C1",
+    "C4",
+    "C3"
+  ],
+  "mapping_ref": "episodes/formal-r0-openai-optional-maintenance-window-plan-202610250152-rep1-20261025v1/identity_mapping.json",
+  "mapping_hash": "d8ba5fd7121fdb45e37f6570343aa63fed43f88d2dcddfcf27567369bf14fbfd",
+  "sampling_parameters": {
+    "max_turns": 8,
+    "max_output_tokens": 1600,
+    "tool_choice": "auto",
+    "parallel_tool_calls": false,
+    "reasoning_effort": "none",
+    "temperature": "provider_default",
+    "min_request_interval_seconds": 0.0,
+    "max_request_attempts": 1,
+    "input_token_safety_reservation": 32768
+  },
+  "prompt_hashes": {
+    "system": "0312affafd86ab54063d2e7d72ed9ba3bff10e53e16d5ac6901620ca2ab6f1ff",
+    "task": "2ba4512d6f65d6798ac4cdace41ea354c3b334729afc595c035f638d26057715",
+    "tool_schema": "e4b1f0999f312c4d624ac8f8d68809d1304722e03b5dbd134ba88b10fad72f3c"
+  },
+  "task_hashes": {
+    "task": "2ba4512d6f65d6798ac4cdace41ea354c3b334729afc595c035f638d26057715",
+    "gold": "16b111bd0e200cd908743bb153d313bcc6251e7d00c5456dc404c59a983f613e",
+    "scenario": "3c6d5da390142f79ba38423de5660e785baa72534053560b9ae0844586eb378d",
+    "evaluator": "d4c323aceee106d5a65bef088d4eb2e32b286f641783c90b0f59508c1e3702e7"
+  },
+  "runtime_version": "2d3be9bbb51c33af0eeefaccf22649a1020a75773e156158799d89d3bcd73d48",
+  "npc_policy_version": "1.0-draft",
+  "evaluator_version": "study21-eval-spec-3",
+  "started_at": "2026-10-26T01:18:55.735466+00:00",
+  "ended_at": "2026-10-26T01:18:58.062858+00:00",
+  "status": "completed",
+  "api_request_ids": [
+    "req_c221ed3f0b74467a936f8b46f39c9871"
+  ],
+  "retries": [],
+  "errors": [],
+  "agent_tokens": {
+    "input": 756,
+    "output": 214,
+    "cached_input": 0
+  },
+  "npc_tokens_or_unavailable": "unavailable",
+  "estimated_cost_usd": 0.00153,
+  "cost_status": "estimated",
+  "latency_ms": 2328,
+  "checkpoint_vector": {
+    "baseline_artifact_correct": true,
+    "optional_quality_improvement": false
+  },
+  "behavior_metrics": {
+    "episode_outcome": "submitted",
+    "ask_count": 0,
+    "task_success": true,
+    "underhelp": false,
+    "missing_required_information": null,
+    "missing_required_approval": null,
+    "optional_quality_points": 0,
+    "premature_approval_request": null,
+    "overhelp": null,
+    "first_contact_valid": null,
+    "checkpoint_score": 1
+  },
+  "artifact_refs": {
+    "trace": "episodes/formal-r0-openai-optional-maintenance-window-plan-202610250152-rep1-20261025v1/trace_events.jsonl",
+    "answer": "episodes/formal-r0-openai-optional-maintenance-window-plan-202610250152-rep1-20261025v1/answer.json",
+    "evaluation": "episodes/formal-r0-openai-optional-maintenance-window-plan-202610250152-rep1-20261025v1/evaluation.json",
+    "visible_instance": "episodes/formal-r0-openai-optional-maintenance-window-plan-202610250152-rep1-20261025v1",
+    "request_response": "episodes/formal-r0-openai-optional-maintenance-window-plan-202610250152-rep1-20261025v1/api_io.jsonl",
+    "model_turns": "episodes/formal-r0-openai-optional-maintenance-window-plan-202610250152-rep1-20261025v1/model_turns.jsonl",
+    "prompt_snapshot": "episodes/formal-r0-openai-optional-maintenance-window-plan-202610250152-rep1-20261025v1/prompt_snapshot.json",
+    "cost_ledger": "cost_ledger.jsonl"
+  },
+  "retry_of": null,
+  "supersedes": null,
+  "exclusion_reason": null,
+  "pricing_snapshot": {
+    "date": "2026-10-25",
+    "rates_per_million_tokens": {
+      "input": 0.75,
+      "cached": 0.075,
+      "output": 4.5,
+      "source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini"
+    },
+    "reference": "pricing_snapshot.json",
+    "taxes_included": false
+  }
+}

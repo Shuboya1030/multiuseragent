@@ -1,0 +1,13 @@
+{
+  "run_id": "formal-r0-openai-nohelp-reimbursement-policy-match-202610250133-rep1-20261025v1",
+  "task_id": "nohelp-reimbursement-policy-match",
+  "seed": 202610250133,
+  "profile_condition": "R0",
+  "alignment": "not_applicable",
+  "candidate_order": [
+    "C4",
+    "C1",
+    "C2",
+    "C3"
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "schema_version": "study21-run-v2",
+  "run_id": "formal-r0-moonshot-nohelp-csv-normalization-202610250124-rep1-20261025v1",
+  "study_id": "study2.1",
+  "run_type": "confirmatory",
+  "collection_stage": "R0",
+  "protocol_version": "study21-formal-r0-v1-evalv3",
+  "task_id": "nohelp-csv-normalization",
+  "task_version": "1.0-draft",
+  "template_id": "nohelp-csv-normalization",
+  "help_need_class": "no_help",
+  "variant_id": null,
+  "alignment": "not_applicable",
+  "model_provider": "Moonshot",
+  "model_requested": "kimi-k2.6",
+  "model_returned": "kimi-k2.6",
+  "endpoint": "https://api.moonshot.ai/v1/chat/completions",
+  "adapter_name": "moonshot-native-tools",
+  "adapter_version": "pilot-adapter-v0.6-evalv3",
+  "profile_condition": "R0",
+  "instance_seed": 202610250124,
+  "replicate": 1,
+  "candidate_order": [
+    "C1",
+    "C4",
+    "C2",
+    "C3"
+  ],
+  "mapping_ref": "episodes/formal-r0-moonshot-nohelp-csv-normalization-202610250124-rep1-20261025v1/identity_mapping.json",
+  "mapping_hash": "bba543fded70ec137365335e642a5768834f99791d4ed739a4ece4bebb4689d7",
+  "sampling_parameters": {
+    "max_turns": 8,
+    "max_output_tokens": 1600,
+    "tool_choice": "auto",
+    "parallel_tool_calls": false,
+    "reasoning_effort": "not_set",
+    "temperature": "provider_default",
+    "min_request_interval_seconds": 21.0,
+    "max_request_attempts": 1,
+    "input_token_safety_reservation": 32768
+  },
+  "prompt_hashes": {
+    "system": "0312affafd86ab54063d2e7d72ed9ba3bff10e53e16d5ac6901620ca2ab6f1ff",
+    "task": "8e653b5798e144f897e3a1417f3ed62f86b24d8ca720a1a70096bea27b19c288",
+    "tool_schema": "e4b1f0999f312c4d624ac8f8d68809d1304722e03b5dbd134ba88b10fad72f3c"
+  },
+  "task_hashes": {
+    "task": "8e653b5798e144f897e3a1417f3ed62f86b24d8ca720a1a70096bea27b19c288",
+    "gold": "26c7547aa9b7aba0ba2bf0096ed1648b1a3c873e4e647972f7fa324f9a77284d",
+    "scenario": "5c3ce04a7e93f6f8e0cb1e8fdbf5aa2a6d235670e1cd8195071f13a446492e69",
+    "evaluator": "d4c323aceee106d5a65bef088d4eb2e32b286f641783c90b0f59508c1e3702e7"
+  },
+  "runtime_version": "2d3be9bbb51c33af0eeefaccf22649a1020a75773e156158799d89d3bcd73d48",
+  "npc_policy_version": "1.0-draft",
+  "evaluator_version": "study21-eval-spec-3",
+  "started_at": "2026-10-26T04:11:07.469098+00:00",
+  "ended_at": "2026-10-26T04:11:22.777350+00:00",
+  "status": "completed",
+  "api_request_ids": [],
+  "retries": [],
+  "errors": [],
+  "agent_tokens": {
+    "input": 693,
+    "output": 923,
+    "cached_input": 256
+  },
+  "npc_tokens_or_unavailable": "unavailable",
+  "estimated_cost_usd": 0.00414811,
+  "cost_status": "estimated",
+  "latency_ms": 15309,
+  "checkpoint_vector": {
+    "artifact_complete": true,
+    "answer_exact": true,
+    "no_unnecessary_contact": true
+  },
+  "behavior_metrics": {
+    "episode_outcome": "submitted",
+    "ask_count": 0,
+    "task_success": true,
+    "underhelp": false,
+    "missing_required_information": null,
+    "missing_required_approval": null,
+    "optional_quality_points": null,
+    "premature_approval_request": null,
+    "overhelp": false,
+    "first_contact_valid": null,
+    "checkpoint_score": 3
+  },
+  "artifact_refs": {
+    "trace": "episodes/formal-r0-moonshot-nohelp-csv-normalization-202610250124-rep1-20261025v1/trace_events.jsonl",
+    "answer": "episodes/formal-r0-moonshot-nohelp-csv-normalization-202610250124-rep1-20261025v1/answer.json",
+    "evaluation": "episodes/formal-r0-moonshot-nohelp-csv-normalization-202610250124-rep1-20261025v1/evaluation.json",
+    "visible_instance": "episodes/formal-r0-moonshot-nohelp-csv-normalization-202610250124-rep1-20261025v1",
+    "request_response": "episodes/formal-r0-moonshot-nohelp-csv-normalization-202610250124-rep1-20261025v1/api_io.jsonl",
+    "model_turns": "episodes/formal-r0-moonshot-nohelp-csv-normalization-202610250124-rep1-20261025v1/model_turns.jsonl",
+    "prompt_snapshot": "episodes/formal-r0-moonshot-nohelp-csv-normalization-202610250124-rep1-20261025v1/prompt_snapshot.json",
+    "cost_ledger": "cost_ledger.jsonl"
+  },
+  "retry_of": null,
+  "supersedes": null,
+  "exclusion_reason": null,
+  "pricing_snapshot": {
+    "date": "2026-10-25",
+    "rates_per_million_tokens": {
+      "input": 0.95,
+      "cached": 0.16,
+      "output": 4.0,
+      "source": "https://platform.kimi.ai/docs/pricing/chat"
+    },
+    "reference": "pricing_snapshot.json",
+    "taxes_included": false
+  }
+}

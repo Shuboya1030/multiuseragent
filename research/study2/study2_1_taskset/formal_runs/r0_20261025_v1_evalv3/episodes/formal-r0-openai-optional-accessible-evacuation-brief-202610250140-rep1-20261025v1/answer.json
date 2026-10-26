@@ -1,0 +1,18 @@
+{
+  "baseline_summary": {
+    "building": "West Annex",
+    "floors": 4,
+    "assembly_point": "south plaza",
+    "drill": "May 6 at 10:00",
+    "stairwells": [
+      "east",
+      "west"
+    ]
+  },
+  "recommendation": "Staff brief: West Annex will conduct a fire drill on May 6 at 10:00. Use both stairwells (east and west) for evacuation and direct staff to the south plaza assembly point. Because the building has four floors, remind everyone to begin evacuation promptly, keep stairs and landings clear, and follow floor wardens’ directions to avoid congestion. For general accessibility planning, ensure routes remain unobstructed, allow extra time for anyone who may need it, keep elevators out of use unless emergency procedures specifically direct otherwise, and have staff support available to assist with wayfinding and crowd flow at stairwell exits and the assembly area.",
+  "quality_notes": [
+    "Used only the supplied work packet details; no individual accommodation assumptions included.",
+    "Included general accessibility planning and evacuation flow guidance appropriate for a 4-floor building.",
+    "Did not add unverified site-specific details beyond the visible floor plan facts provided."
+  ]
+}

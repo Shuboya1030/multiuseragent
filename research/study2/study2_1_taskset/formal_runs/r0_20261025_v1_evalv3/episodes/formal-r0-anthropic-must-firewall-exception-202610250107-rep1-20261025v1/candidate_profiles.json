@@ -1,0 +1,26 @@
+[
+  {
+    "candidate_id": "C1",
+    "name": "Quinn Zhao",
+    "job_title": "Operations Associate",
+    "profile": "Quinn Zhao — Operations Associate"
+  },
+  {
+    "candidate_id": "C3",
+    "name": "Morgan Patel",
+    "job_title": "Project Team Member",
+    "profile": "Morgan Patel — Project Team Member"
+  },
+  {
+    "candidate_id": "C2",
+    "name": "Kai Sullivan",
+    "job_title": "Program Associate",
+    "profile": "Kai Sullivan — Program Associate"
+  },
+  {
+    "candidate_id": "C4",
+    "name": "Avery Chen",
+    "job_title": "Business Associate",
+    "profile": "Avery Chen — Business Associate"
+  }
+]

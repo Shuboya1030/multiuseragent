@@ -1,0 +1,18 @@
+{
+  "baseline_summary": {
+    "arrival_city": "Berlin",
+    "meeting_city": "Potsdam",
+    "arrival": "09:00",
+    "meeting": "11:00",
+    "date": "April 8",
+    "rail_minutes": 25,
+    "taxi_minutes": 40
+  },
+  "recommendation": "Take the rail option from Berlin to Potsdam if departing soon after the 09:00 arrival; with a 25-minute ride and a modest transfer buffer, it should comfortably fit before the 11:00 meeting. A taxi is the slower fallback at about 40 minutes, so it is also feasible, but rail is the safer and more efficient choice for preserving buffer time. Suggested plan: arrive Berlin 09:00, allow transfer buffer, depart by rail around 09:30–09:45, arrive Potsdam around 09:55–10:10, and proceed to the meeting with time to spare.",
+  "quality_notes": [
+    "Both listed routes are operating.",
+    "A transfer buffer was included as a contingency.",
+    "Rail is preferred because it is faster than taxi by roughly 15 minutes.",
+    "Taxi remains feasible if rail timing changes, but it reduces the buffer before the 11:00 meeting."
+  ]
+}

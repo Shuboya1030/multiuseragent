@@ -1,0 +1,19 @@
+{
+  "run_id": "formal-r0-moonshot-must-expense-reimbursement-202610250106-rep1-20261025v1",
+  "task_id": "must-expense-reimbursement",
+  "seed": 202610250106,
+  "profile_condition": "R0",
+  "alignment": "separated",
+  "alias_to_canonical": {
+    "C4": "P1",
+    "C3": "P2",
+    "C2": "P3",
+    "C1": "P4"
+  },
+  "canonical_to_alias": {
+    "P4": "C1",
+    "P3": "C2",
+    "P2": "C3",
+    "P1": "C4"
+  }
+}

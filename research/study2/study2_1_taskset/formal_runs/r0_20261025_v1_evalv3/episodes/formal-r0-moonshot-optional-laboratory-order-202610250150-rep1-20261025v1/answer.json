@@ -1,0 +1,18 @@
+{
+  "baseline_summary": {
+    "experiments": 24,
+    "tips_per_experiment": 80,
+    "boxes_contain": 1000,
+    "reserve_fraction": 0.1,
+    "compatible_types": [
+      "standard",
+      "low-retention"
+    ]
+  },
+  "recommendation": "Order 3 boxes (3,000 tips) to cover 24 experiments at 80 tips each with a 10% reserve. Both standard and low-retention types are compatible; confirm the specific type preference with the lab team before finalizing the purchase order.",
+  "quality_notes": [
+    "Total tip demand including reserve is 2,112 (24 experiments × 80 tips × 1.10 reserve).",
+    "Order quantity rounds up to 3 full boxes of 1,000 tips each.",
+    "Compatible tip types are standard and low-retention; the purchase order should specify one compatible type."
+  ]
+}

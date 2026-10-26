@@ -1,0 +1,26 @@
+[
+  {
+    "candidate_id": "C2",
+    "name": "Samira Cole",
+    "job_title": "Operations Associate",
+    "profile": "Samira Cole — Operations Associate"
+  },
+  {
+    "candidate_id": "C3",
+    "name": "Morgan Patel",
+    "job_title": "Business Associate",
+    "profile": "Morgan Patel — Business Associate"
+  },
+  {
+    "candidate_id": "C4",
+    "name": "Jordan Lee",
+    "job_title": "Program Associate",
+    "profile": "Jordan Lee — Program Associate"
+  },
+  {
+    "candidate_id": "C1",
+    "name": "Rowan Diaz",
+    "job_title": "Project Team Member",
+    "profile": "Rowan Diaz — Project Team Member"
+  }
+]

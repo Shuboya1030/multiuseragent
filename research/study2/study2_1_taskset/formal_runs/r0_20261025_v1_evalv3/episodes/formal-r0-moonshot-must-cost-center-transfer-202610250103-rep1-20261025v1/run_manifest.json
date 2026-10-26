@@ -1,0 +1,13 @@
+{
+  "run_id": "formal-r0-moonshot-must-cost-center-transfer-202610250103-rep1-20261025v1",
+  "task_id": "must-cost-center-transfer",
+  "seed": 202610250103,
+  "profile_condition": "R0",
+  "alignment": "separated",
+  "candidate_order": [
+    "C3",
+    "C1",
+    "C4",
+    "C2"
+  ]
+}

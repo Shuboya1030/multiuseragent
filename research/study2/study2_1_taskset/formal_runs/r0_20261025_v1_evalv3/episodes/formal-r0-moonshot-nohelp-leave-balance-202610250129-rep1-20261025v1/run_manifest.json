@@ -1,0 +1,13 @@
+{
+  "run_id": "formal-r0-moonshot-nohelp-leave-balance-202610250129-rep1-20261025v1",
+  "task_id": "nohelp-leave-balance",
+  "seed": 202610250129,
+  "profile_condition": "R0",
+  "alignment": "not_applicable",
+  "candidate_order": [
+    "C4",
+    "C3",
+    "C2",
+    "C1"
+  ]
+}

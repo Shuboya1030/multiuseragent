@@ -1,0 +1,18 @@
+{
+  "baseline_summary": {
+    "sessions": 2,
+    "duration_minutes": 60,
+    "trainer_available": [
+      "09:00",
+      "15:00"
+    ],
+    "room_capacity": 20,
+    "staff_count": 36
+  },
+  "recommendation": "Run both trainer slots and assign staff as follows to maximize attendance while respecting room capacity and shift constraints:\n- 09:00 session: 16 attendees\n- 15:00 session: 20 attendees (the 14 afternoon-shift staff who cannot attend before 14:00, plus 6 additional staff)\nThis schedule uses both available sessions, keeps each within the 20-person room limit, and achieves 100% coverage (36/36 staff).",
+  "quality_notes": [
+    "C4 (Jamie Rivera) identified that 14 of the 36 staff work the afternoon shift and cannot attend before 14:00, which dictates their placement in the 15:00 session.",
+    "C1, C3, and C2 did not provide additional task-specific constraints.",
+    "No formal approvals were requested or received for this scheduling recommendation."
+  ]
+}

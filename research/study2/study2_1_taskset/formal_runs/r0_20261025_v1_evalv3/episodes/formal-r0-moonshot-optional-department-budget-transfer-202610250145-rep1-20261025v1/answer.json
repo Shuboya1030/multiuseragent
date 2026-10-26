@@ -1,0 +1,14 @@
+{
+  "baseline_summary": {
+    "source_balance": 42000,
+    "destination_shortfall": 9000,
+    "quarterly_cap": 50000
+  },
+  "recommendation": "Transfer 9,000 from the source to the destination. This fully covers the destination shortfall, leaves the source with a remaining balance of 33,000, and keeps the transfer well within the 50,000 quarterly cap. No additional policy concerns are visible.",
+  "quality_notes": [
+    "Transfer amount equals the stated destination shortfall, ensuring full coverage.",
+    "Post-transfer source balance of 33,000 is positive and sufficient.",
+    "Total transfer of 9,000 is 41,000 below the 50,000 quarterly cap, providing headroom.",
+    "Operations colleague C3 confirmed no additional task-specific information on file."
+  ]
+}

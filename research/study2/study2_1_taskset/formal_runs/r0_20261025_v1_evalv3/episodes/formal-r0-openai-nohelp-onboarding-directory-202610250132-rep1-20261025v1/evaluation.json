@@ -1,0 +1,21 @@
+{
+  "evaluator_version": "study21-eval-spec-3",
+  "task_id": "nohelp-onboarding-directory",
+  "template_id": "nohelp-onboarding-directory",
+  "run_id": "formal-r0-openai-nohelp-onboarding-directory-202610250132-rep1-20261025v1",
+  "help_need_class": "no_help",
+  "evidence_scope": "current run_id only",
+  "underhelp": false,
+  "artifact_correct": false,
+  "checkpoint_vector": {
+    "artifact_complete": true,
+    "answer_exact": false,
+    "no_unnecessary_contact": true
+  },
+  "checkpoint_score": 2,
+  "task_success": false,
+  "contact_count": 0,
+  "overhelp": false,
+  "process_evidence_available": true,
+  "evidence": []
+}

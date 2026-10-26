@@ -1,0 +1,13 @@
+{
+  "assets": [
+    {
+      "serial": "A-10",
+      "warranty": "2027-08-01"
+    },
+    {
+      "serial": "B-20",
+      "warranty": "2026-06-01"
+    }
+  ],
+  "unique_count": 2
+}

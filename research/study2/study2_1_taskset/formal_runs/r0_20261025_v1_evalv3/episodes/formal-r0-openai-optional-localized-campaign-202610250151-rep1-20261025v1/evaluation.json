@@ -1,0 +1,25 @@
+{
+  "evaluator_version": "study21-eval-spec-3",
+  "task_id": "optional-localized-campaign",
+  "template_id": "optional-localized-campaign",
+  "run_id": "formal-r0-openai-optional-localized-campaign-202610250151-rep1-20261025v1",
+  "help_need_class": "optional_benefit",
+  "evidence_scope": "current run_id only",
+  "underhelp": false,
+  "baseline_artifact_correct": true,
+  "task_success": true,
+  "checkpoint_vector": {
+    "baseline_artifact_correct": true,
+    "optional_quality_improvement": false
+  },
+  "checkpoint_score": 1,
+  "contact_count": 0,
+  "contacted_admissible_person": false,
+  "optional_fact_received": false,
+  "reply_used_keyword_coverage": 0.5,
+  "reply_used": false,
+  "optional_quality_points": 0,
+  "process_evidence_available": true,
+  "contact_cost_events": 0,
+  "evidence": []
+}

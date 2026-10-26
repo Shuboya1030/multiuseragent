@@ -1,0 +1,26 @@
+[
+  {
+    "candidate_id": "C4",
+    "name": "Avery Chen",
+    "job_title": "Program Associate",
+    "profile": "Avery Chen — Program Associate"
+  },
+  {
+    "candidate_id": "C1",
+    "name": "Taylor Wu",
+    "job_title": "Operations Associate",
+    "profile": "Taylor Wu — Operations Associate"
+  },
+  {
+    "candidate_id": "C3",
+    "name": "Emery Brooks",
+    "job_title": "Business Associate",
+    "profile": "Emery Brooks — Business Associate"
+  },
+  {
+    "candidate_id": "C2",
+    "name": "Drew Morgan",
+    "job_title": "Project Team Member",
+    "profile": "Drew Morgan — Project Team Member"
+  }
+]

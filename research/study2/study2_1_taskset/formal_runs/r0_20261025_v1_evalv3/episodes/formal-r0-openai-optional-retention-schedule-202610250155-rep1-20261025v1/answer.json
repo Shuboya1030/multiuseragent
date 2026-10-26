@@ -1,0 +1,16 @@
+{
+  "baseline_summary": {
+    "record_types": [
+      "support tickets",
+      "billing records"
+    ],
+    "default_years": 3,
+    "owner": "Records Operations"
+  },
+  "recommendation": "Schedule: support tickets — owner: Records Operations; review date: every 3 years from the policy effective date. billing records — owner: Records Operations; review date: every 3 years from the policy effective date. If you need a dated schedule, set the first review for 3 years after the effective date and repeat on a 3-year cycle.",
+  "quality_notes": [
+    "Used the supplied work packet as the baseline summary without modification.",
+    "No colleague input was requested because the task could be completed from the provided packet alone.",
+    "The policy text was not provided, so the schedule is based on the visible work packet fields only."
+  ]
+}

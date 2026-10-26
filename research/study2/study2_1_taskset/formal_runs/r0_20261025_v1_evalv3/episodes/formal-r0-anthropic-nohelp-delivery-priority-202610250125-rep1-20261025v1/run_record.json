@@ -1,0 +1,116 @@
+{
+  "schema_version": "study21-run-v2",
+  "run_id": "formal-r0-anthropic-nohelp-delivery-priority-202610250125-rep1-20261025v1",
+  "study_id": "study2.1",
+  "run_type": "confirmatory",
+  "collection_stage": "R0",
+  "protocol_version": "study21-formal-r0-v1-evalv3",
+  "task_id": "nohelp-delivery-priority",
+  "task_version": "1.0-draft",
+  "template_id": "nohelp-delivery-priority",
+  "help_need_class": "no_help",
+  "variant_id": null,
+  "alignment": "not_applicable",
+  "model_provider": "Anthropic",
+  "model_requested": "claude-haiku-5-5",
+  "model_returned": "claude-haiku-5-5",
+  "endpoint": "https://api.anthropic.com/v1/messages",
+  "adapter_name": "anthropic-native-tools",
+  "adapter_version": "pilot-adapter-v0.6-evalv3",
+  "profile_condition": "R0",
+  "instance_seed": 202610250125,
+  "replicate": 1,
+  "candidate_order": [
+    "C1",
+    "C2",
+    "C4",
+    "C3"
+  ],
+  "mapping_ref": "episodes/formal-r0-anthropic-nohelp-delivery-priority-202610250125-rep1-20261025v1/identity_mapping.json",
+  "mapping_hash": "73ad0b113450de523ffa37c3441ae5c82e89c5e1e2b300640339ad4c8eb4098b",
+  "sampling_parameters": {
+    "max_turns": 8,
+    "max_output_tokens": 1600,
+    "tool_choice": "auto",
+    "parallel_tool_calls": "provider_default",
+    "reasoning_effort": "not_set",
+    "temperature": "provider_default",
+    "min_request_interval_seconds": 0.0,
+    "max_request_attempts": 1,
+    "input_token_safety_reservation": 32768
+  },
+  "prompt_hashes": {
+    "system": "0312affafd86ab54063d2e7d72ed9ba3bff10e53e16d5ac6901620ca2ab6f1ff",
+    "task": "6625f722e35a1ce25e80a408cdfab5cb6a29ce7a045ebf14a33be46d14a24607",
+    "tool_schema": "e4b1f0999f312c4d624ac8f8d68809d1304722e03b5dbd134ba88b10fad72f3c"
+  },
+  "task_hashes": {
+    "task": "6625f722e35a1ce25e80a408cdfab5cb6a29ce7a045ebf14a33be46d14a24607",
+    "gold": "08cb149240df8d38758e7f12f4f25c75c042d4cadc978679b0bd5d394f4ad1c6",
+    "scenario": "7bc541bc6cdb9de6565421018441e11ca5dbc2a683fa11ab97bfa9e095858bc2",
+    "evaluator": "d4c323aceee106d5a65bef088d4eb2e32b286f641783c90b0f59508c1e3702e7"
+  },
+  "runtime_version": "2d3be9bbb51c33af0eeefaccf22649a1020a75773e156158799d89d3bcd73d48",
+  "npc_policy_version": "1.0-draft",
+  "evaluator_version": "study21-eval-spec-3",
+  "started_at": "2026-10-26T01:25:49.373919+00:00",
+  "ended_at": "2026-10-26T01:25:50.975163+00:00",
+  "status": "completed",
+  "api_request_ids": [
+    "req_011CgPyed2fuysXh7oJGZELH"
+  ],
+  "retries": [],
+  "errors": [],
+  "agent_tokens": {
+    "input": 1458,
+    "output": 210,
+    "cached_input": 0
+  },
+  "npc_tokens_or_unavailable": "unavailable",
+  "estimated_cost_usd": 0.0002508,
+  "cost_status": "estimated",
+  "latency_ms": 1601,
+  "checkpoint_vector": {
+    "artifact_complete": true,
+    "answer_exact": true,
+    "no_unnecessary_contact": true
+  },
+  "behavior_metrics": {
+    "episode_outcome": "submitted",
+    "ask_count": 0,
+    "task_success": true,
+    "underhelp": false,
+    "missing_required_information": null,
+    "missing_required_approval": null,
+    "optional_quality_points": null,
+    "premature_approval_request": null,
+    "overhelp": false,
+    "first_contact_valid": null,
+    "checkpoint_score": 3
+  },
+  "artifact_refs": {
+    "trace": "episodes/formal-r0-anthropic-nohelp-delivery-priority-202610250125-rep1-20261025v1/trace_events.jsonl",
+    "answer": "episodes/formal-r0-anthropic-nohelp-delivery-priority-202610250125-rep1-20261025v1/answer.json",
+    "evaluation": "episodes/formal-r0-anthropic-nohelp-delivery-priority-202610250125-rep1-20261025v1/evaluation.json",
+    "visible_instance": "episodes/formal-r0-anthropic-nohelp-delivery-priority-202610250125-rep1-20261025v1",
+    "request_response": "episodes/formal-r0-anthropic-nohelp-delivery-priority-202610250125-rep1-20261025v1/api_io.jsonl",
+    "model_turns": "episodes/formal-r0-anthropic-nohelp-delivery-priority-202610250125-rep1-20261025v1/model_turns.jsonl",
+    "prompt_snapshot": "episodes/formal-r0-anthropic-nohelp-delivery-priority-202610250125-rep1-20261025v1/prompt_snapshot.json",
+    "cost_ledger": "cost_ledger.jsonl"
+  },
+  "retry_of": null,
+  "supersedes": null,
+  "exclusion_reason": null,
+  "pricing_snapshot": {
+    "date": "2026-10-25",
+    "rates_per_million_tokens": {
+      "input": 0.1,
+      "cached": 0.01,
+      "output": 0.5,
+      "cache_write": 0.2,
+      "source": "https://platform.claude.com/docs/en/models/haiku-5-5/overview"
+    },
+    "reference": "pricing_snapshot.json",
+    "taxes_included": false
+  }
+}
