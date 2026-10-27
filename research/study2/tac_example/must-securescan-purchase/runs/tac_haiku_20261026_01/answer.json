@@ -1,0 +1,15 @@
+{
+  "vendor": "SecureScan Pro",
+  "seats": 24,
+  "total_cost_usd": 11520,
+  "budget_code": "AI-OPS-26",
+  "requirements_revision": "AI-Q4-07",
+  "security_review": "conditional-pass",
+  "review_id": "SR-2648",
+  "controls": [
+    "EU-only processing",
+    "zero-retention"
+  ],
+  "approved_by": "David Wong",
+  "authorization_id": "PO-26-1048"
+}

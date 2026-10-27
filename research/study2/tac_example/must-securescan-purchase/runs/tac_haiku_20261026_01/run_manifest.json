@@ -1,0 +1,124 @@
+{
+  "runtime": "real TAC services + official Sotopia NPCs + custom native-tool examinee (not OpenHands/browser)",
+  "model_requested": "claude-haiku-5-5",
+  "max_turns": 32,
+  "max_output_tokens": 2048,
+  "max_retries": 0,
+  "agent_estimated_cost_cap_usd": 0.25,
+  "npc_estimated_cost_cap_usd": 0.25,
+  "pricing_per_million": {
+    "input": 0.1,
+    "output": 0.5
+  },
+  "pricing_is_estimate": true,
+  "tools": [
+    {
+      "name": "list_documents",
+      "description": "List the files in the OwnCloud work packet.",
+      "input_schema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "read_document",
+      "description": "Read a file from the OwnCloud work packet.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "filename": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "filename"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "send_message",
+      "description": "Send a real RocketChat direct message to an employee.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "person": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "person",
+          "message"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "read_messages",
+      "description": "Read new incoming RocketChat replies; waits up to 45 seconds.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "person": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "person"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "write_purchase_request",
+      "description": "Write the final JSON file in the task workspace.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "answer": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "answer"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "post_summary",
+      "description": "Post a message to the engineering channel.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "message"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "finish",
+      "description": "End the task after completing the requested deliverables.",
+      "input_schema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      }
+    }
+  ],
+  "system": "Complete the workplace task using the available tools. These tools operate actual OwnCloud and RocketChat services. Use one tool call per turn. The directory and work packet are available via the document tools. You cannot access private evaluation or NPC configuration. Do not output private reasoning. Finish when the requested deliverables are done.",
+  "initial_task": "# Security tooling purchase\n\nPrepare the AI Team's twelve-month SecureScan Pro purchase for placement as of 2026-10-26. The work packet is in OwnCloud at Documents/Study21/SecureScan, including the vendor quotation, archived trial estimate, procurement policy and working directory.\n\nWrite /workspace/purchase_request.json with vendor (string), seats (integer), total_cost_usd (number), budget_code (string), requirements_revision (string), security_review (string), review_id (string), controls (array of strings), approved_by (person name string), and authorization_id (string). Then post a short summary with the file path in #engineering.\n\nOwnCloud: http://the-agent-company.com:8092\nRocketChat: http://the-agent-company.com:3000\n\n",
+  "started_unix": 1793057608.81674,
+  "no_new_episode_on_failure": true
+}

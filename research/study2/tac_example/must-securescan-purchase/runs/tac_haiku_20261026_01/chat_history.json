@@ -1,0 +1,68 @@
+{
+  "Wang Fang": [
+    {
+      "_id": "KgzsRdZGiSSSRqvdm",
+      "ts": "2026-10-26T23:33:38.598Z",
+      "msg": "Hi, thanks for following up. Here are the current AI Team allocation fields:\n\n- Seats: 24\n- Budget code: AI-OPS-26\n- Data class: source-code-confidential\n- Revision: AI-Q4-07\n\nSo the 24-seat figure should replace the archived 18-seat trial number. I can't approve the purchase or any risk sign-off on my end, so you'll need to get that from whoever owns the purchase approval. Let me know if you need anything else for the request.",
+      "u": {
+        "_id": "3nNZeRZPRrrtFuJ8v",
+        "username": "wang_fang",
+        "name": "Wang Fang"
+      }
+    },
+    {
+      "_id": "XT5uEXsmosRbqCwxa",
+      "ts": "2026-10-26T23:33:35.231Z",
+      "msg": "Hi Wang Fang, I'm preparing the AI Team's 12-month SecureScan Pro purchase as of 2026-10-26. Could you confirm the current AI Team seat requirement (the archived trial had 18 seats, which may be outdated), the requirements revision identifier, and the budget code to charge? Thanks.",
+      "u": {
+        "_id": "CZYWHd5bCmhj5YcFe",
+        "username": "theagentcompany",
+        "name": "theagentcompany"
+      }
+    }
+  ],
+  "Liu Qiang": [
+    {
+      "_id": "RN7SZKNgbdikgPW9y",
+      "ts": "2026-10-26T23:33:46.493Z",
+      "msg": "Hi, I've checked your request and it includes all five required items: AI-Q4-07, 24 seats, source-code-confidential, EU-only processing, and zero-retention. The cross-team review for this allocation is SR-2648, with a security review disposition of conditional-pass. The conditions are EU-only processing and zero-retention, so the deployment has to meet both. This covers the security/quality review only. It doesn't approve the USD 11,520 spend under AI-OPS-26, so that still needs to go through the budget owner.",
+      "u": {
+        "_id": "GYMYHQKtWPAr47ZsE",
+        "username": "liu_qiang",
+        "name": "Liu Qiang"
+      }
+    },
+    {
+      "_id": "8by4KiMyzbXdiLMnp",
+      "ts": "2026-10-26T23:33:42.501Z",
+      "msg": "Hi Liu Qiang, the AI Team is preparing a 12-month SecureScan Pro purchase (source-code-confidential data). Current parameters: 24 seats, USD 11,520 annual, budget AI-OPS-26, requirements revision AI-Q4-07. Proposed deployment controls: EU-only processing and zero-retention. Could you complete the cross-team quality/risk review bound to this revision and these controls, and send me the review ID and result?",
+      "u": {
+        "_id": "CZYWHd5bCmhj5YcFe",
+        "username": "theagentcompany",
+        "name": "theagentcompany"
+      }
+    }
+  ],
+  "David Wong": [
+    {
+      "_id": "9emkzJB86dceCZuxP",
+      "ts": "2026-10-26T23:33:53.038Z",
+      "msg": "Hi, I've reviewed the request for the 12-month SecureScan Pro purchase: 24 seats, USD 11,520 total, budget AI-OPS-26, and security review SR-2648 with EU-only processing and zero-retention controls. Your request covers the purchase details I need, so I'm approving it. Authorization ID: PO-26-1048, approved by David Wong. Please keep the quote validity date of 2026-11-15 in mind when you proceed.",
+      "u": {
+        "_id": "GTcEyGXzbKiLmQxFc",
+        "username": "david_wong",
+        "name": "David Wong"
+      }
+    },
+    {
+      "_id": "FqMhNGQd4McFi33D3",
+      "ts": "2026-10-26T23:33:49.062Z",
+      "msg": "Hi David, the AI Team needs approval for a 12-month SecureScan Pro purchase: vendor SecureScan Pro, 24 seats at USD 480/seat, total USD 11,520 annual, budget AI-OPS-26, requirements revision AI-Q4-07, security review SR-2648 (conditional-pass) with controls EU-only processing and zero-retention. Quote valid through 2026-11-15. Could you approve and send me the authorization ID?",
+      "u": {
+        "_id": "CZYWHd5bCmhj5YcFe",
+        "username": "theagentcompany",
+        "name": "theagentcompany"
+      }
+    }
+  ]
+}

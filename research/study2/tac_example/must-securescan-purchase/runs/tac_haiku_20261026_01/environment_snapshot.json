@@ -1,0 +1,46 @@
+{
+  "containers": [
+    {
+      "name": "tac-study21-task",
+      "image_id": "sha256:da0d39c7a97d40e5b3be4913acd00472c0304d83830355c2ccb415bb65261b83",
+      "image_name": "tac-study21-securescan:dev1",
+      "platform": "linux",
+      "state": "running"
+    },
+    {
+      "name": "owncloud",
+      "image_id": "sha256:326406d88345899db22fc1081aa8fa15415c542a71b80486c0a2cebf59f56f63",
+      "image_name": "ghcr.io/theagentcompany/servers-owncloud:1.0.0",
+      "platform": "linux",
+      "state": "running"
+    },
+    {
+      "name": "rocketchat",
+      "image_id": "sha256:55e17e7ee850c0757c66b53bd0adf49bcea349fb985f4bec2cdcf8c7a7276ec4",
+      "image_name": "registry.rocket.chat/rocketchat/rocket.chat:5.3.0",
+      "platform": "linux",
+      "state": "running"
+    },
+    {
+      "name": "rocketchat-mongodb",
+      "image_id": "sha256:e56a75744316419cd150400ccd8d985c6b0762f03c7a3b015f233524d043731f",
+      "image_name": "docker.io/bitnamilegacy/mongodb:5.0",
+      "platform": "linux",
+      "state": "running"
+    },
+    {
+      "name": "redis-stack",
+      "image_id": "sha256:887cf87cc744e4588ccade336d0dbb943e4e46330f738653ccb3a7a55df2f186",
+      "image_name": "redis/redis-stack-server:7.4.0-v0",
+      "platform": "linux",
+      "state": "running"
+    }
+  ],
+  "docker_version": "29.9.2",
+  "examinee_api_only": true,
+  "services_excluded": [
+    "gitlab",
+    "plane",
+    "collabora"
+  ]
+}

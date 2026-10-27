@@ -1,0 +1,18 @@
+{
+  "frozen_artifact_checkpoint": 0,
+  "difference": {
+    "field": "controls",
+    "actual": [
+      "EU-only processing",
+      "zero-retention"
+    ],
+    "expected": [
+      "EU-only",
+      "zero-retention"
+    ]
+  },
+  "posthoc_equivalence_rule": "EU-only processing -> EU-only (only this explicit synonym)",
+  "posthoc_canonical_match": true,
+  "original_scores_modified": false,
+  "interpretation": "Business content matches after this explicit synonym normalization; not a pre-run scoring rule."
+}

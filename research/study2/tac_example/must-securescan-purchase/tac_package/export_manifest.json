@@ -1,0 +1,15 @@
+{
+  "blueprint_sha256": "66db640c617e798aab9463e7d43bac8a4d999dfd5e6b3c4811dfd02279470d58",
+  "files": {
+    "dependencies.yml": "4d878b9be77d85e6e25ce82b24682e86b21aeb388616ab5a611eee24d269e8ff",
+    "populate_data.py": "7cba8666745ecc9b944e7caaa4a0c716f259e0c1eb2bbc194ed63e478c871d66",
+    "task.md": "e81bccd75483e836dd28860ca60c2ea69715643cfaae6771e285ca8274a19c76",
+    "checkpoints.md": "2ba9f31ae1c3b9816e928f546b5273cf248d5f349c4792992ff0d15940db732d",
+    "scenarios.json": "302a4346559c5624ed864e533c1edee7b37c163272a418d643c97a6b752ff80e",
+    "documents/trial_estimate.md": "796abca736b7f7f5050fca7336afcc5ff8c7793e3918979d969d708b16bfb6b4",
+    "documents/procurement_policy.md": "fe23a087d4176d404a831a532dd11bb1c4ebc0d72eb7c3ccafe608b0c6c35c4b",
+    "documents/securescan_quote.md": "8dcd81a4ccc838bf520d3048c30df7b97f81e9e6382fd729c1105197c7b3cbde",
+    "documents/directory_R1.md": "175206411c5b92d2fbccbf8f08b2b2faefebb1de60038cc1c07d4488ad78ff4d"
+  },
+  "tac_build_verified": false
+}
