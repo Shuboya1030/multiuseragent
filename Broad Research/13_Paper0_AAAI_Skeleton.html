@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.12.1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Paper 0 Skeleton</title>
+  <style>
+
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+</style>
+  <style type="text/css">:root{--bg:#fafaf8;--fg:#1d1d1f;--mut:#666;--line:#e3e3e0;--acc:#2f5fb3;--th:#f0f0ec}
+@media (prefers-color-scheme:dark){:root{--bg:#18181a;--fg:#e8e8e6;--mut:#a0a0a0;--line:#333;--acc:#7aa7ff;--th:#24242a}}
+body{background:var(--bg);color:var(--fg);font:15px/1.65 -apple-system,"Segoe UI","Microsoft YaHei",sans-serif;max-width:1200px;margin:0 auto;padding:24px 16px}
+h1{font-size:1.6em}h2{margin-top:2em;border-bottom:2px solid var(--line);padding-bottom:4px}
+a{color:var(--acc)}table{border-collapse:collapse;width:100%;font-size:13.5px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:6px 8px;vertical-align:top}th{background:var(--th);position:sticky;top:0}
+tr:nth-child(even) td{background:color-mix(in srgb,var(--th) 40%,transparent)}
+blockquote{border-left:4px solid var(--acc);margin:0;padding:4px 12px;color:var(--mut)}
+nav#TOC{background:var(--th);padding:8px 16px;border-radius:8px;font-size:14px}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Paper 0 Skeleton</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#paper-0-skeleton-aaai-27-haic-workshop-living-document" id="toc-paper-0-skeleton-aaai-27-haic-workshop-living-document">Paper 0
+Skeleton: AAAI-27 HAIC Workshop (living document)</a>
+<ul>
+<li><a href="#one-sentence-story" id="toc-one-sentence-story">0.
+One-sentence story</a></li>
+<li><a href="#working-title-options" id="toc-working-title-options">1.
+Working title options</a></li>
+<li><a href="#contributions-findings-led-as-they-will-be-claimed" id="toc-contributions-findings-led-as-they-will-be-claimed">2.
+Contributions (findings-led; as they will be claimed)</a></li>
+<li><a href="#section-outline-and-page-budget-8-pages" id="toc-section-outline-and-page-budget-8-pages">3. Section outline and
+page budget (8 pages)</a></li>
+<li><a href="#section-by-section-notes" id="toc-section-by-section-notes">4. Section-by-section notes</a>
+<ul>
+<li><a href="#introduction-paragraph-plan" id="toc-introduction-paragraph-plan">§1 Introduction (paragraph
+plan)</a></li>
+<li><a href="#related-work" id="toc-related-work">§2 Related
+Work</a></li>
+<li><a href="#problem-formulation" id="toc-problem-formulation">§3
+Problem Formulation</a></li>
+<li><a href="#task-suite" id="toc-task-suite">§4 Task Suite</a></li>
+<li><a href="#setup" id="toc-setup">§5 Setup</a></li>
+<li><a href="#results-see-5-of-this-document-for-the-analysis-plan." id="toc-results-see-5-of-this-document-for-the-analysis-plan.">§6
+Results — see §5 of this document for the analysis plan.</a></li>
+<li><a href="#discussion" id="toc-discussion">§7 Discussion</a></li>
+</ul></li>
+<li><a href="#analysis-plan-what-to-compute-and-show" id="toc-analysis-plan-what-to-compute-and-show">5. Analysis plan (what
+to compute and show)</a></li>
+<li><a href="#figures-and-tables-plan-main-text" id="toc-figures-and-tables-plan-main-text">6. Figures and tables plan
+(main text)</a></li>
+<li><a href="#what-already-exists-vs.-what-is-needed" id="toc-what-already-exists-vs.-what-is-needed">7. What already exists
+vs. what is needed</a></li>
+<li><a href="#open-questions-for-the-authors" id="toc-open-questions-for-the-authors">8. Open questions for the
+authors</a></li>
+<li><a href="#change-log" id="toc-change-log">9. Change log</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="paper-0-skeleton-aaai-27-haic-workshop-living-document">Paper 0
+Skeleton: AAAI-27 HAIC Workshop (living document)</h1>
+<blockquote>
+<p>Target: AAAI-27 Workshop on Human-AI Collaboration (full paper, ≤ 8
+pages + references, AAAI two-column). Deadline 2026-11-20 AoE. Roles:
+<strong>this document = paper structure and analysis plan</strong>. Task
+generation and experiment runs are done by the experiment agent (see
+<code>12_Study2_Task_Redesign_*.md</code>). Result slots are marked
+<code>[RESULT: …]</code> and filled as runs complete. Analyses are
+phrased as <strong>questions</strong>, not expected outcomes. Any
+result, including 100% success, is reported as found.</p>
+</blockquote>
+<hr />
+<h2 id="one-sentence-story">0. One-sentence story</h2>
+<p>When an AI agent is shared by a team, getting help is not one
+decision but two coupled ones — <strong>when</strong> to involve a
+person and <strong>whom</strong> — and the second becomes a multi-step,
+rule-governed problem as organizations grow; we build a controllable,
+TAC-compatible task suite to measure where agents succeed and fail along
+this process.</p>
+<h2 id="working-title-options">1. Working title options</h2>
+<ol type="1">
+<li><em>Whom Should the Agent Ask? Measuring Role-Aware Help-Seeking in
+Multi-User Workplaces</em></li>
+<li><em>When and Whom to Ask: Help-Seeking Decisions of LLM Agents in
+Shared Organizational Settings</em></li>
+<li><em>Beyond Single-Principal Agents: A Benchmark for Role-Aware
+Help-Seeking</em></li>
+</ol>
+<h2 id="contributions-findings-led-as-they-will-be-claimed">2.
+Contributions (findings-led; as they will be claimed)</h2>
+<ol type="1">
+<li><strong>Problem formulation.</strong> Help-seeking in multi-user
+agent systems as a joint <em>when/whom/order</em> decision over
+principals with distinct knowledge and authority; a taxonomy of
+help-seeking errors (wrong person, wrong order, missing context, no
+repair, silent failure, over-asking).</li>
+<li><strong>Task suite.</strong> A controllable set of workplace tasks
+(must-ask / optional / no-help) with structural difficulty knobs
+(candidate pool size, dependency depth, knowledge–authority separation,
+hard distractors, inference type), built on TheAgentCompany’s
+organization and exportable to its runtime.</li>
+<li><strong>Empirical study.</strong> How current LLM agents’
+help-seeking changes with organizational scale, dependency depth, and
+available role information; where in the process failures
+concentrate.</li>
+</ol>
+<h2 id="section-outline-and-page-budget-8-pages">3. Section outline and
+page budget (8 pages)</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>§</th>
+<th>Section</th>
+<th>Pages</th>
+<th>Content</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>—</td>
+<td>Abstract</td>
+<td>—</td>
+<td>Problem → gap → suite → 2–3 headline findings</td>
+<td>Write last</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Introduction</td>
+<td>1.0</td>
+<td>Shared agents are common; single-principal assumption; help-seeking
+is part of task execution; when + whom are coupled and affect quality;
+contributions</td>
+<td>Draftable now (from proposal §1)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Related Work</td>
+<td>0.75</td>
+<td>When-to-ask HAC (ReHAC, Learning to Ask, KnowNo);
+multi-user/multi-principal agents; multi-expert L2D; proactive agents;
+enterprise benchmarks; human–agent teaming. <strong>Comparison
+table</strong></td>
+<td>Draftable now (proposal §2 + patterns doc)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Problem Formulation</td>
+<td>0.75</td>
+<td>Principals and role profiles; help-need classes; gold step DAG;
+metrics; error taxonomy</td>
+<td>Draftable now</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Task Suite</td>
+<td>1.25</td>
+<td>Why existing benchmarks don’t measure it (TAC audit); design
+principles; difficulty features and distribution; validity checks; TAC
+compatibility</td>
+<td>Partly now; stats after generation</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Experimental Setup</td>
+<td>0.5</td>
+<td>Models, conditions, runs, evaluation, cost</td>
+<td>After protocol frozen</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Results</td>
+<td>2.5</td>
+<td>RQ1 when · RQ2 whom × scale · RQ3 order × depth · RQ4 role
+information · error funnel</td>
+<td>After runs</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Discussion &amp; Limitations</td>
+<td>0.75</td>
+<td>Deployment implications; finance/legal angle; simulation
+vs. reality; limitations</td>
+<td>After results</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Conclusion</td>
+<td>0.25</td>
+<td>Summary + future work (learned policy, team structure, human
+study)</td>
+<td>Last</td>
+</tr>
+<tr>
+<td>—</td>
+<td>Appendix (if allowed)</td>
+<td>—</td>
+<td>Task examples, prompts, full tables</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h2 id="section-by-section-notes">4. Section-by-section notes</h2>
+<h3 id="introduction-paragraph-plan">§1 Introduction (paragraph
+plan)</h3>
+<ol type="1">
+<li>Agents are becoming shared team infrastructure (enterprise copilots,
+team chat assistants) → cite Brachman 2025, Counts 2026, O’Hara
+2026.</li>
+<li>But agents are built for a single principal (Yang, Zhu et al. 2026);
+other people are information sources, not collaborators with roles.</li>
+<li>Workplace tasks require human input — missing facts, ambiguous
+rules, approvals; help-seeking is part of execution (TheAgentCompany
+~30%; ReHAC’s conditional automation).</li>
+<li>In multi-user settings help-seeking is two coupled decisions;
+failures: asking the wrong person, asking in the wrong order, not asking
+and guessing, asking unnecessarily. Prior work covers <em>when</em> with
+a single interchangeable human.</li>
+<li><strong>Motivating example</strong> (Figure 1): purchase above a
+threshold → need quote details from requester, budget from finance,
+approval from director (owner on leave → delegate).</li>
+<li>Contributions (3 bullets) + headline findings
+<code>[RESULT]</code>.</li>
+</ol>
+<h3 id="related-work">§2 Related Work</h3>
+<ul>
+<li>Use the comparison table from
+<code>05_Related_Work_Writing_Patterns_*.md</code> §5 (columns: multiple
+humans / decides when / decides whom / roles &amp; authority /
+multi-step). Verify ✓/✗ against originals.</li>
+<li>Each paragraph ends with the gap sentence (pattern doc rules).</li>
+</ul>
+<h3 id="problem-formulation">§3 Problem Formulation</h3>
+<ul>
+<li>Principal set 𝒰; role profile ⟨knowledge, authority, cost,
+availability⟩.</li>
+<li>Help-need classes: <strong>must</strong> (task cannot be completed
+correctly without a person), <strong>optional</strong> (asking can
+improve quality), <strong>no-help</strong> (all needed information is
+available).</li>
+<li>Gold step DAG G = (S, ≺); admissible recipients A_s per step.</li>
+<li>Metrics: help rate, first valid contact, DAG-consistent completion,
+order violations, repair rate, silent failure, over-ask, interruption
+cost, artifact correctness.</li>
+<li>Error taxonomy table (wrong-person / wrong-order / missing-context /
+no-repair / referral-ignored / redundant / silent-failure /
+over-ask).</li>
+<li>Objective R = T − λΣc − μN_auth − νN_waste, with fixed,
+pre-registered weights; reported together with every component; no
+claims that depend on a specific weight choice.</li>
+</ul>
+<h3 id="task-suite">§4 Task Suite</h3>
+<ul>
+<li><strong>4.1 Why a new suite.</strong> Audit of TAC’s 40 NPC tasks:
+in 24/40 the task text names whom to contact; contacts are instructed
+rather than self-initiated → existing traces measure instruction
+following. (Short table: TAC NPC tasks by type of contact.) This
+replaces the old “Study 1 trajectory diagnosis” as motivation.</li>
+<li><strong>4.2 Design principles.</strong> Reasoning not matching;
+realistic directory baseline; embedded (not announced) need for help;
+orthogonal difficulty knobs.</li>
+<li><strong>4.3 Difficulty features and distribution.</strong> Table:
+features → points; distribution by class × level
+<code>[RESULT: final counts]</code>.</li>
+<li><strong>4.4 Validity checks.</strong> Wording-overlap check;
+no-contact baseline; oracle solvability; unique answer; realism review
+<code>[RESULT]</code>.</li>
+<li><strong>4.5 TAC compatibility.</strong> Same blueprint exports to
+simulator and TAC task package; subset run in TAC
+<code>[RESULT: agreement]</code>.</li>
+</ul>
+<h3 id="setup">§5 Setup</h3>
+<ul>
+<li>Models: low-cost main set (Claude Haiku 5.5, GPT-5.4-mini,
+Kimi-k2.6) + Claude Sonnet 5.5 on a subset <code>[confirm]</code>.</li>
+<li>Conditions: N ∈ {4, 8, 16}; d ∈ {1, 2, 3}; profile R0 (directory) vs
+R1 (directory + role/authority documents); help-need class.</li>
+<li>Reps, temperature, turn limits, total episodes and cost
+<code>[RESULT]</code>.</li>
+</ul>
+<h3 id="results-see-5-of-this-document-for-the-analysis-plan.">§6
+Results — see §5 of this document for the analysis plan.</h3>
+<h3 id="discussion">§7 Discussion</h3>
+<ul>
+<li>Implications: organizational metadata as agent infrastructure;
+escalation policies; where to put human checkpoints.</li>
+<li>Workshop focal domains: finance (spending thresholds, approvals) and
+legal (sign-off authority) — tie examples to these.</li>
+<li>Limitations: simulated colleagues (LLM/rule NPCs), stipulated costs,
+one synthetic organization, model set, no human participants.</li>
+</ul>
+<h2 id="analysis-plan-what-to-compute-and-show">5. Analysis plan (what
+to compute and show)</h2>
+<p>Each analysis is tagged with the figure/table it produces and its
+priority for the 8-page version.</p>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>#</th>
+<th>Question</th>
+<th>Analysis</th>
+<th>Output</th>
+<th>Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A1</td>
+<td><strong>When:</strong> do agents ask when they need to, and refrain
+when they don’t?</td>
+<td>Help rate by help-need class × model; silent-failure rate in must;
+over-ask rate in no-help; benefit of asking in optional</td>
+<td><strong>Fig 2</strong> heatmap (class × model) + small table</td>
+<td>Must</td>
+</tr>
+<tr>
+<td>A2</td>
+<td><strong>Where does the process break?</strong></td>
+<td><strong>Error funnel</strong> per episode: needed help → asked →
+reached a valid recipient → correct order → request carried needed
+context → repaired after rejection → correct artifact. Report conversion
+at each stage</td>
+<td><strong>Fig 3</strong> funnel/Sankey by model</td>
+<td>Must (core figure; generalizes the “finding the right person ≠
+completing the process” finding)</td>
+</tr>
+<tr>
+<td>A3</td>
+<td><strong>Whom × scale:</strong> how does recipient selection change
+as the candidate pool grows?</td>
+<td>First valid contact and contacts-before-first-valid vs N ∈ {4,8,16},
+by profile; length-matched control; gold position effect</td>
+<td><strong>Fig 4</strong> line plot with CIs</td>
+<td>Must</td>
+</tr>
+<tr>
+<td>A4</td>
+<td><strong>Order × depth:</strong> how does multi-step dependency
+affect completion?</td>
+<td>DAG-consistent completion vs d; order-violation types (premature
+approval, skipped prerequisite); repair-after-rejection rate</td>
+<td><strong>Fig 5</strong> stacked bars by d</td>
+<td>Must</td>
+</tr>
+<tr>
+<td>A5</td>
+<td><strong>Which structural features matter most?</strong></td>
+<td>Mixed-effects logistic: success ~ N + d + separation + #hard
+distractors + inference type + profile + model + (1 | template)</td>
+<td><strong>Table 3</strong> coefficients (odds ratios)</td>
+<td>Should</td>
+</tr>
+<tr>
+<td>A6</td>
+<td><strong>Which distractors mislead?</strong></td>
+<td>Confusion: for wrong contacts, which distractor type was chosen
+(near-miss authority, stale role, delegated, stale fact, referrer,
+plausible title)</td>
+<td><strong>Fig 6</strong> bar or confusion matrix</td>
+<td>Should</td>
+</tr>
+<tr>
+<td>A7</td>
+<td><strong>Value of role information</strong></td>
+<td>R1 − R0 on first valid contact, completion, authority violations,
+cost; by difficulty level</td>
+<td>Table or panel in Fig 4</td>
+<td>Should</td>
+</tr>
+<tr>
+<td>A8</td>
+<td><strong>Cost of help-seeking and objective R</strong></td>
+<td>R and its components (T, Σc, N_auth, N_waste) by model × condition;
+tokens per successful task</td>
+<td>Table (R with components)</td>
+<td>Should (R is in the paper)</td>
+</tr>
+<tr>
+<td>A9</td>
+<td><strong>Cheap vs strong model</strong></td>
+<td>Sonnet 5.5 vs Haiku 5.5 on the subset: do the same failure patterns
+persist?</td>
+<td>One row/panel</td>
+<td>Could</td>
+</tr>
+<tr>
+<td>A10</td>
+<td><strong>Simulator vs TAC agreement</strong></td>
+<td>Same tasks in both runtimes: agreement on outcome and error
+type</td>
+<td>One sentence + appendix table</td>
+<td>Could (strengthens validity)</td>
+</tr>
+<tr>
+<td>A11</td>
+<td><strong>Qualitative cases</strong></td>
+<td>2–3 annotated traces: premature approval → rejection → no repair;
+asked a stale-role colleague; silent failure with stale value</td>
+<td>Boxed examples</td>
+<td>Must (1 case in main text)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Statistics conventions.</strong> Template is the unit of
+inference; template-clustered bootstrap CIs; mixed-effects models with
+template random effects; report effect sizes and CIs, not only p-values;
+per-model results described as configuration-specific, not model-family
+rankings.</p>
+<h2 id="figures-and-tables-plan-main-text">6. Figures and tables plan
+(main text)</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>ID</th>
+<th>Content</th>
+<th>Section</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fig 1</td>
+<td>Motivating scenario: shared agent, colleagues with roles,
+when/whom/order decisions</td>
+<td>§1</td>
+</tr>
+<tr>
+<td>Tab 1</td>
+<td>Comparison with prior work</td>
+<td>§2</td>
+</tr>
+<tr>
+<td>Tab 2</td>
+<td>Task suite: difficulty features + distribution</td>
+<td>§4</td>
+</tr>
+<tr>
+<td>Fig 2</td>
+<td>When: help rate by class × model</td>
+<td>§6</td>
+</tr>
+<tr>
+<td>Fig 3</td>
+<td>Error funnel</td>
+<td>§6</td>
+</tr>
+<tr>
+<td>Fig 4</td>
+<td>Scale: first valid contact vs N (± role info)</td>
+<td>§6</td>
+</tr>
+<tr>
+<td>Fig 5</td>
+<td>Depth: order errors and completion vs d</td>
+<td>§6</td>
+</tr>
+<tr>
+<td>Tab 3</td>
+<td>Feature-level regression (if space)</td>
+<td>§6</td>
+</tr>
+</tbody>
+</table>
+<h2 id="what-already-exists-vs.-what-is-needed">7. What already exists
+vs. what is needed</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Item</th>
+<th>Status</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Intro / related work text</td>
+<td>Draft exists</td>
+<td><code>01_PhD_Research_Proposal_*.docx</code> §1–2</td>
+</tr>
+<tr>
+<td>Related-work comparison table</td>
+<td>Draft, needs verification</td>
+<td><code>05_Related_Work_Writing_Patterns_*.md</code></td>
+</tr>
+<tr>
+<td>Formulation and metrics</td>
+<td>Exists</td>
+<td>proposal §4; <code>12_…</code> §5</td>
+</tr>
+<tr>
+<td>TAC audit (24/40 named)</td>
+<td>Exists</td>
+<td><code>03_Feasibility_Pilot_*.md</code>;
+<code>11_Study1_Coding_…</code></td>
+</tr>
+<tr>
+<td>Earlier evidence from Study 2.1 (old task design)</td>
+<td><strong>Not used in the paper</strong> (decision 2026-10-26)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>New task suite + runs</td>
+<td>Assumed done (experiment agent)</td>
+<td><code>12_Study2_Task_Redesign_*.md</code></td>
+</tr>
+<tr>
+<td>AAAI-27 LaTeX template</td>
+<td>Not set up</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-questions-for-the-authors">8. Open questions for the
+authors</h2>
+<ol type="1">
+<li><del>Lead framing</del> → <strong>Decided 2026-10-26:
+findings-led</strong>; the task suite is presented as the enabling
+instrument.</li>
+<li><del>Objective R</del> → <strong>Decided: include R</strong> in §3
+(formulation) and §6 (results), always reported alongside its components
+(T, interruption cost, authority violations, wasted queries).</li>
+<li><del>Study 2.1 old results</del> → <strong>Decided:
+exclude.</strong> Only the new task suite’s results are reported.</li>
+<li>Authorship → <strong>Pending</strong> (user will decide later).</li>
+</ol>
+<h2 id="change-log">9. Change log</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Version</th>
+<th>Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>20261026-1418</td>
+<td>Decisions: findings-led framing; include objective R (with
+components); exclude Study 2.1 old results; authorship pending. A8
+raised to Should</td>
+</tr>
+<tr>
+<td>20261026-1353</td>
+<td>Skeleton: story, contributions, outline with page budget, section
+notes, analysis plan A1–A11, figure plan, status table, open
+questions</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>
