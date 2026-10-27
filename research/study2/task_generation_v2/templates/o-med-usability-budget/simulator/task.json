@@ -1,0 +1,59 @@
+{
+  "task_id": "o-med-usability-budget",
+  "initial_task": "As of 2026-11-05: Prepare the budget for 15 usability interviews. Save /workspace/deliverable.json with participants, external_recruits, incentive_total_usd. Post a short summary and the file path in #engineering.\n\nWork packet: OwnCloud Documents/Study21V2/o-med-usability-budget.\nOwnCloud: http://the-agent-company.com:8092\nRocketChat: http://the-agent-company.com:3000\n",
+  "public_documents": {
+    "research.md": "Default: recruit all 15 externally at USD 100 each (USD 1500). The design team maintains research panels."
+  },
+  "directory_by_condition": {
+    "R0": "# Relevant working directory\n\n## Huang Jie\nProduct Manager (Search Engine Team)\n\n## Mike Chen\nSenior Software Engineer (AI Team)\n\n## Jessica Chen\nFrontend Software Engineer\n\n## Wang Fang\nAI Researcher (AI Team)\n\n## Priya Sharma\nDocumentation Engineer\n\n## Sophia Rodriguez\nUX Designer\n\n## Sarah Johnson\nCTO\n\n## Alex Turner\nSoftware Engineer (Low-Code Platform Team)\n",
+    "R1": "# Relevant working directory\n\n## Huang Jie\nProduct Manager (Search Engine Team)\n\nResponsibilities: Defining product requirements, planning product roadmap, communicating with clients; Project: OpenSearch (Search Engine); Skills: N/A\nSets roadmap and release timing for search and storefront products.\n\n## Mike Chen\nSenior Software Engineer (AI Team)\n\nResponsibilities: Developing and optimizing LLM inference engines; Project: llama.cpp (LLM inference project); Skills: C++, CUDA, performance optimization\nOperates the inference GPU cluster and its schedules.\n\n## Jessica Chen\nFrontend Software Engineer\n\nResponsibilities: Developing user interfaces, implementing responsive designs, optimizing web performance; Project: E-commerce Website Redesign; Skills: N/A\nBuilds the storefront frontend and its rollout settings.\n\n## Wang Fang\nAI Researcher (AI Team)\n\nResponsibilities: Designing and implementing machine learning models, optimizing model performance; Project: OpenHands (LLM project); Skills: Python, machine learning, LLM\nTracks AI research project capacity and seat plans.\n\n## Priya Sharma\nDocumentation Engineer\n\nResponsibilities: Writing technical documentation, maintaining wiki, improving documentation processes; Project: Documentation (Wiki); Skills: N/A\nKeeps the internal wiki, document templates and translation assets.\n\n## Sophia Rodriguez\nUX Designer\n\nResponsibilities: Designing user interfaces, improving user experience, conducting user research; Project: All projects (focusing on user experience); Skills: N/A\nLeads brand and visual design work, including campaign creative files.\n\n## Sarah Johnson\nCTO\n\nResponsibilities: Technical strategy planning, R&D team leadership, new technology assessment; Project: Oversees all technical projects; Skills: N/A\nSets technical direction and signs off high-risk production changes. Delegates sign-off authority when away.\n\n## Alex Turner\nSoftware Engineer (Low-Code Platform Team)\n\nResponsibilities: Developing low-code platform features; Project: Node-RED (Low-Code Platform); Skills: N/A\nRuns the low-code platform and its plugin inventory.\n"
+  },
+  "private_records": [
+    {
+      "id": "H1",
+      "holder": "Sophia Rodriguez",
+      "facts": {
+        "panel_credits": 10
+      },
+      "required_context": [
+        "usability"
+      ],
+      "release_rule": "Provide panel credits. External recruiting remains valid."
+    }
+  ],
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Sophia Rodriguez"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      }
+    ],
+    "edges": []
+  },
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "participants": "int",
+      "external_recruits": "int",
+      "incentive_total_usd": "int"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": false
+  },
+  "adapter_status": "declarative v2 format; not compatible with legacy simulator without adapter",
+  "npc_behavior": "deterministic rules represented as data; execution engine not included",
+  "evaluator": null
+}

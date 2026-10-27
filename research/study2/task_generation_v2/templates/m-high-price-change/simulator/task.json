@@ -1,0 +1,127 @@
+{
+  "task_id": "m-high-price-change",
+  "initial_task": "As of 2026-11-05: Prepare the price change record for the Search Pro plan. Save /workspace/deliverable.json with list_price_usd, discount_percent, margin_check_id, signed_by, authorization_ref. Post a short summary and the file path in #engineering.\n\nWork packet: OwnCloud Documents/Study21V2/m-high-price-change.\nOwnCloud: http://the-agent-company.com:8092\nRocketChat: http://the-agent-company.com:3000\n",
+  "public_documents": {
+    "draft.md": "Search Pro proposed list price USD 49, discount 15% (draft 2026-09).",
+    "pricing-policy.md": "Final price and discount are set by the search product manager. Finance checks margin citing price and discount. Discounts above 20% need CTO approval; otherwise the Sales Director approves, citing the margin check."
+  },
+  "directory_by_condition": {
+    "R0": "# Relevant working directory\n\n## Li Ming\nDatabase Team Project Manager\n\n## Chen Xinyi\nHuman Resources Manager\n\n## Huang Jie\nProduct Manager (Search Engine Team)\n\n## Emily Zhou\nSoftware Engineer (Web Crawler Team)\n\n## Wang Fang\nAI Researcher (AI Team)\n\n## Sarah Johnson\nCTO\n\n## David Wong\nFinance Director\n\n## Mark Johnson\nSales Director\n",
+    "R1": "# Relevant working directory\n\n## Li Ming\nDatabase Team Project Manager\n\nResponsibilities: Managing database projects, resource coordination, ensuring timely delivery; Project: JanusGraph (Graph Database); Skills: Java, distributed systems\nPlans Database team capacity and release resourcing.\n\n## Chen Xinyi\nHuman Resources Manager\n\nResponsibilities: Recruitment, employee training, compensation management; Project: N/A (HR); Skills: N/A\nMaintains staff development entitlements and enrollment arrangements.\n\n## Huang Jie\nProduct Manager (Search Engine Team)\n\nResponsibilities: Defining product requirements, planning product roadmap, communicating with clients; Project: OpenSearch (Search Engine); Skills: N/A\nSets roadmap and release timing for search and storefront products.\n\n## Emily Zhou\nSoftware Engineer (Web Crawler Team)\n\nResponsibilities: Designing and implementing web crawler functionalities; Project: Colly (Web Crawler Framework); Skills: Go, distributed systems\nOwns the crawler framework and the datasets it produces.\n\n## Wang Fang\nAI Researcher (AI Team)\n\nResponsibilities: Designing and implementing machine learning models, optimizing model performance; Project: OpenHands (LLM project); Skills: Python, machine learning, LLM\nTracks AI research project capacity and seat plans.\n\n## Sarah Johnson\nCTO\n\nResponsibilities: Technical strategy planning, R&D team leadership, new technology assessment; Project: Oversees all technical projects; Skills: N/A\nSets technical direction and signs off high-risk production changes. Delegates sign-off authority when away.\n\n## David Wong\nFinance Director\n\nResponsibilities: Financial planning, budget management, financial reporting; Project: N/A (Finance); Skills: N/A\nOwns the general ledger calendar and spending limits above department level.\n\n## Mark Johnson\nSales Director\n\nResponsibilities: Developing sales strategies, managing sales team, expanding client relationships; Project: N/A (Sales); Skills: N/A\nMaintains commercial event entitlements and customer-facing meeting arrangements.\n"
+  },
+  "private_records": [
+    {
+      "id": "H1",
+      "holder": "Huang Jie",
+      "facts": {
+        "list_price_usd": 59,
+        "discount_percent": 25
+      },
+      "required_context": [
+        "Search Pro"
+      ],
+      "release_rule": "Provide the final price and discount."
+    },
+    {
+      "id": "H2",
+      "holder": "David Wong",
+      "facts": {
+        "margin_check_id": "MC-59-25"
+      },
+      "required_context": [
+        "59",
+        "25"
+      ],
+      "release_rule": "Run margin check only with final price and discount cited."
+    },
+    {
+      "id": "H3",
+      "holder": "Sarah Johnson",
+      "facts": {
+        "authorization_ref": "PRC-APR-12"
+      },
+      "required_context": [
+        "MC-59-25",
+        "25"
+      ],
+      "release_rule": "Approve only with margin check and discount cited."
+    },
+    {
+      "id": "D1",
+      "holder": "Mark Johnson",
+      "facts": {},
+      "required_context": [],
+      "release_rule": "You approve discounts up to 20% only. Above that, say the CTO approves; issue nothing."
+    }
+  ],
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Huang Jie"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      },
+      {
+        "id": "h2",
+        "admissible_recipients": [
+          "David Wong"
+        ],
+        "information_ids": [
+          "H2"
+        ],
+        "requires": [
+          "h1"
+        ]
+      },
+      {
+        "id": "h3",
+        "admissible_recipients": [
+          "Sarah Johnson"
+        ],
+        "information_ids": [
+          "H3"
+        ],
+        "requires": [
+          "h2"
+        ]
+      }
+    ],
+    "edges": [
+      [
+        "h1",
+        "h2"
+      ],
+      [
+        "h2",
+        "h3"
+      ]
+    ]
+  },
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "list_price_usd": "int",
+      "discount_percent": "int",
+      "margin_check_id": "str",
+      "signed_by": "str",
+      "authorization_ref": "str"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": false
+  },
+  "adapter_status": "declarative v2 format; not compatible with legacy simulator without adapter",
+  "npc_behavior": "deterministic rules represented as data; execution engine not included",
+  "evaluator": null
+}

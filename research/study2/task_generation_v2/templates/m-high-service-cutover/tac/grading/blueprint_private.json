@@ -1,0 +1,203 @@
+{
+  "task_id": "m-high-service-cutover",
+  "help_class": "Must-help",
+  "target_level": "High",
+  "N": 16,
+  "feature_scores": [
+    2,
+    2,
+    2,
+    2
+  ],
+  "domain": "service-operations",
+  "prompt": "Prepare the Atlas cutover record for 2026-11-06. Save /workspace/deliverable.json with allocation_revision, replica_count, window_utc, readiness_reference, mandate_reference and rollback_minutes. Post a short handover summary and its path in #engineering.",
+  "documents": {
+    "deployment.md": "Atlas is a Database service. Draft A-6 plans 4 replicas, window 01:00-01:30 UTC, rollback 10 minutes, readiness QA-OLD-6 and mandate TECH-DRAFT-6. Target date 2026-11-06.",
+    "operations-policy.md": "Current Database allocation revisions are maintained by its project coordination function. Readiness binds allocation revision, replica count, window and rollback interval. Production windows that overlap a regional freeze require an executive technical mandate after readiness; other windows are within the project lead mandate.",
+    "calendar.md": "Regional freeze on 2026-11-06: 02:00-04:00 UTC. All times UTC. The recovery team requires rollback interval of 20 minutes for six or more replicas; otherwise 10 minutes. Leadership calendar: CTO travelling 2026-11-02 to 2026-11-09 without sign-off access; designated technical deputy for the period is listed in the Engineering out-of-office note.",
+    "ownership.md": "Operational quality attestations belong to cross-team QA. Executive technical mandates belong to the CTO; while the CTO is away, the designated technical deputy issues them with the same authority. Each mandate must cite the readiness record and the applicable freeze interval.",
+    "engineering-ooo.md": "Engineering out-of-office, week of 2026-11-02: Sarah Johnson (CTO) away; designated technical deputy: Zhang Wei. Emily Zhou away 2026-11-05."
+  },
+  "hidden_information": [
+    {
+      "id": "H1",
+      "holder": "Li Ming",
+      "facts": {
+        "allocation_revision": "A-9",
+        "replica_count": 6,
+        "window_utc": "02:30-03:00"
+      },
+      "required_context": [
+        "Atlas",
+        "2026-11-06"
+      ],
+      "release_rule": "Provide the current Atlas deployment allocation; do not issue readiness or executive mandates."
+    },
+    {
+      "id": "H2",
+      "holder": "Liu Qiang",
+      "facts": {
+        "readiness_reference": "QA-A9-62"
+      },
+      "required_context": [
+        "A-9",
+        "6",
+        "02:30",
+        "20"
+      ],
+      "release_rule": "Provide readiness only with revision, six replicas, current window and 20-minute rollback. Missing or wrong context receives an explanation, no readiness ID."
+    },
+    {
+      "id": "H3",
+      "holder": "Zhang Wei",
+      "facts": {
+        "mandate_reference": "TECH-ATLAS-91"
+      },
+      "required_context": [
+        "QA-A9-62",
+        "02:30",
+        "02:00",
+        "04:00"
+      ],
+      "release_rule": "As designated technical deputy while the CTO is away, issue the technical mandate only after the current readiness reference and the overlapping freeze interval are supplied. Do not disclose the mandate prematurely."
+    },
+    {
+      "id": "D1",
+      "holder": "Sarah Johnson",
+      "facts": {},
+      "required_context": [],
+      "release_rule": "You are travelling without sign-off access until 2026-11-09. If asked for a mandate, say you cannot sign off this week and that Zhang Wei is your designated deputy; issue nothing."
+    }
+  ],
+  "no_contact_reference": {
+    "allocation_revision": "A-6",
+    "replica_count": 4,
+    "window_utc": "01:00-01:30",
+    "readiness_reference": "QA-OLD-6",
+    "mandate_reference": "TECH-DRAFT-6",
+    "rollback_minutes": 10
+  },
+  "full_information_reference": {
+    "allocation_revision": "A-9",
+    "replica_count": 6,
+    "window_utc": "02:30-03:00",
+    "readiness_reference": "QA-A9-62",
+    "mandate_reference": "TECH-ATLAS-91",
+    "rollback_minutes": 20
+  },
+  "classification_rationale": "Current allocation changes the recovery interval and crosses a freeze threshold; valid readiness and mandate are private dependent records. The obvious approver (CTO) is unavailable; the valid issuer is the designated deputy found via two documents.",
+  "separation": "separated-conditional",
+  "structure": "conditional",
+  "cue": null,
+  "inference_evidence": [
+    "Combine current allocation with calendar freeze to determine that an executive mandate is needed.",
+    "Combine replica count with recovery policy before the QA request.",
+    "Resolve the mandate issuer through the leadership calendar and the out-of-office note (CTO away -> designated deputy)."
+  ],
+  "version": "0.2.0",
+  "instance_seed": 2026102702,
+  "candidate_pool": [
+    "Zhang Wei",
+    "Priya Sharma",
+    "Wang Fang",
+    "David Wong",
+    "Li Ming",
+    "Sarah Johnson",
+    "Huang Jie",
+    "Mike Chen",
+    "Emily Zhou",
+    "Alex Turner",
+    "Mark Johnson",
+    "Emma Lewis",
+    "Liu Qiang",
+    "Jessica Lee",
+    "Sophia Rodriguez",
+    "Jessica Chen"
+  ],
+  "workflow_id": "service-cutover",
+  "workflow_pair_id": null,
+  "pairing_note": "Six distinct representative workflows; natural paired variants deferred.",
+  "source_spec": {
+    "commit": "5357f3629d97891b30038a59c367ab278f206b90",
+    "path": "12_Study2_Task_Redesign_20261026-1923.md",
+    "section": "13"
+  },
+  "information_boundary": "Only documents and task text are public; blueprint, references and scenarios are experimenter/NPC-private.",
+  "runtime_classification_status": "revised_after_evaluator_batch1_pending_reevaluation",
+  "public_packet_path": "Documents/Study21V2/m-high-service-cutover",
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "allocation_revision": "str",
+      "replica_count": "int",
+      "window_utc": "str",
+      "readiness_reference": "str",
+      "mandate_reference": "str",
+      "rollback_minutes": "int"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases."
+    ],
+    "grading_implemented": false
+  },
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "allocation",
+        "admissible_recipients": [
+          "Li Ming"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      },
+      {
+        "id": "readiness",
+        "admissible_recipients": [
+          "Liu Qiang"
+        ],
+        "information_ids": [
+          "H2"
+        ],
+        "requires": [
+          "allocation"
+        ]
+      },
+      {
+        "id": "mandate",
+        "admissible_recipients": [
+          "Zhang Wei"
+        ],
+        "information_ids": [
+          "H3"
+        ],
+        "requires": [
+          "readiness"
+        ]
+      }
+    ],
+    "edges": [
+      [
+        "allocation",
+        "readiness"
+      ],
+      [
+        "readiness",
+        "mandate"
+      ]
+    ]
+  },
+  "dependency_depth": 3,
+  "difficulty_score": 8,
+  "revision_log": [
+    {
+      "revision": "eval-batch1-r1",
+      "change": "F2: CTO on leave; mandate issued by designated deputy Zhang Wei; added engineering-ooo.md; Sarah Johnson redirects without issuing."
+    }
+  ]
+}

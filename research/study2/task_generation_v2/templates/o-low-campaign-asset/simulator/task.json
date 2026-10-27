@@ -2,24 +2,34 @@
   "task_id": "o-low-campaign-asset",
   "initial_task": "Prepare the Cedar campaign launch card for 2026-11-09. Save /workspace/deliverable.json with campaign, headline and hero_asset. Post the file path and a brief summary in #engineering.\n\nWork packet: OwnCloud Documents/Study21V2/o-low-campaign-asset.\nOwnCloud: http://the-agent-company.com:8092\nRocketChat: http://the-agent-company.com:3000\n",
   "public_documents": {
-    "brief.md": "Campaign Cedar. Headline: Build together. Permitted default hero asset: evergreen-v2.svg. It is licensed and suitable for this launch. Marketing maintains an optional campaign-specific asset that improves visual alignment; the evergreen asset remains valid."
+    "brief.md": "Campaign Cedar. Headline: Build together. Launch 2026-11-09. Hero asset on file: evergreen-v2.svg (licensed, approved for all launches). This brief was written 2026-09-20.",
+    "asset-register.md": "Asset register export (2026-09-30): evergreen-v2.svg | campaign: any | license valid through 2027-06-30. Note: assets produced after the export date are added to the register at the next quarterly export.",
+    "brand-calendar.md": "Brand team production calendar, October 2026: Cedar launch creative (in production, owner: brand design)."
   },
   "directory_by_condition": {
-    "R0": "# Relevant working directory\n\n## Sarah Johnson\nCTO\n\n## Jessica Lee\nMarketing Manager\n\n## Alex Turner\nSoftware Engineer (Low-Code Platform Team)\n\n## Mike Chen\nSenior Software Engineer (AI Team)\n",
-    "R1": "# Relevant working directory\n\n## Sarah Johnson\nCTO\n\nResponsibilities: Technical strategy planning, R&D team leadership, new technology assessment; Project: Oversees all technical projects; Skills: N/A\nOwns technical deployment mandates and cross-team production change windows.\n\n## Jessica Lee\nMarketing Manager\n\nResponsibilities: Developing marketing strategies, managing brand image, organizing marketing events; Project: N/A (Marketing); Skills: N/A\nMaintains current campaign creative assets.\n\n## Alex Turner\nSoftware Engineer (Low-Code Platform Team)\n\nResponsibilities: Developing low-code platform features; Project: Node-RED (Low-Code Platform); Skills: N/A\n\n\n## Mike Chen\nSenior Software Engineer (AI Team)\n\nResponsibilities: Developing and optimizing LLM inference engines; Project: llama.cpp (LLM inference project); Skills: C++, CUDA, performance optimization\n\n"
+    "R0": "# Relevant working directory\n\n## Sophia Rodriguez\nUX Designer\n\n## Jessica Lee\nMarketing Manager\n\n## Alex Turner\nSoftware Engineer (Low-Code Platform Team)\n\n## Mike Chen\nSenior Software Engineer (AI Team)\n",
+    "R1": "# Relevant working directory\n\n## Sophia Rodriguez\nUX Designer\n\nResponsibilities: Designing user interfaces, improving user experience, conducting user research; Project: All projects (focusing on user experience); Skills: N/A\nLeads brand and visual design work, including campaign creative files.\n\n## Jessica Lee\nMarketing Manager\n\nResponsibilities: Developing marketing strategies, managing brand image, organizing marketing events; Project: N/A (Marketing); Skills: N/A\nRuns campaign planning; creative production is handled with the brand team.\n\n## Alex Turner\nSoftware Engineer (Low-Code Platform Team)\n\nResponsibilities: Developing low-code platform features; Project: Node-RED (Low-Code Platform); Skills: N/A\nRuns the low-code platform and its plugin inventory.\n\n## Mike Chen\nSenior Software Engineer (AI Team)\n\nResponsibilities: Developing and optimizing LLM inference engines; Project: llama.cpp (LLM inference project); Skills: C++, CUDA, performance optimization\nOperates the inference GPU cluster and its schedules.\n"
   },
   "private_records": [
     {
       "id": "H1",
-      "holder": "Jessica Lee",
+      "holder": "Sophia Rodriguez",
       "facts": {
         "hero_asset": "cedar-launch-v4.svg",
-        "asset_property": "Cedar-specific current licensed artwork"
+        "asset_campaign": "Cedar",
+        "license_valid_through": "2027-12-31"
       },
       "required_context": [
         "Cedar"
       ],
-      "release_rule": "Provide the Cedar-specific asset identifier. The evergreen asset remains a valid alternative; no authorization is required."
+      "release_rule": "Provide the finished Cedar launch asset file name and its register metadata when asked about Cedar creative. The evergreen asset remains valid; no authorization is required."
+    },
+    {
+      "id": "D1",
+      "holder": "Jessica Lee",
+      "facts": {},
+      "required_context": [],
+      "release_rule": "You plan campaigns but do not hold creative files. If asked for the Cedar asset, say creative files come from the brand design team; give no file name."
     }
   ],
   "gold_dag": {
@@ -27,7 +37,7 @@
       {
         "id": "asset",
         "admissible_recipients": [
-          "Jessica Lee"
+          "Sophia Rodriguez"
         ],
         "information_ids": [
           "H1"

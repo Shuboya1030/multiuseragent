@@ -1,0 +1,7 @@
+{
+  "checkpoint": "Aurora-7B",
+  "eval_report_id": "EV-19",
+  "safety_attestation": "QA-SAF-191",
+  "release_tier": "public",
+  "mandate_reference": "TECH-AUR-7"
+}

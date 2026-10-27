@@ -1,0 +1,1 @@
+Frontend flags for the e-commerce redesign moved to the frontend team in October; the low-code platform no longer hosts them. Rollouts above 25% need sign-off from the product manager who owns the experience.

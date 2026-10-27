@@ -1,0 +1,71 @@
+{
+  "task_id": "m-low-regression-run",
+  "initial_task": "As of 2026-11-05: Prepare the regression run record for the Colly 3.2 build. Save /workspace/deliverable.json with build, test_plan_id, suite_size, environment. Post a short summary and the file path in #engineering.\n\nWork packet: OwnCloud Documents/Study21V2/m-low-regression-run.\nOwnCloud: http://the-agent-company.com:8092\nRocketChat: http://the-agent-company.com:3000\n",
+  "public_documents": {
+    "build.md": "Colly 3.2 build. Previous run used plan TP-31 (180 cases) on environment staging-1.",
+    "testing-policy.md": "Regression plans are owned by cross-team quality; component engineers do not maintain plans."
+  },
+  "directory_by_condition": {
+    "R0": "# Relevant working directory\n\n## Liu Qiang\nQuality Assurance Engineer\n\n## Jessica Lee\nMarketing Manager\n\n## Priya Sharma\nDocumentation Engineer\n\n## Emily Zhou\nSoftware Engineer (Web Crawler Team)\n",
+    "R1": "# Relevant working directory\n\n## Liu Qiang\nQuality Assurance Engineer\n\nResponsibilities: Developing test strategies, executing tests, ensuring product quality; Project: All projects (focusing on testing and quality); Skills: N/A\nRuns cross-team test sign-offs before production releases.\n\n## Jessica Lee\nMarketing Manager\n\nResponsibilities: Developing marketing strategies, managing brand image, organizing marketing events; Project: N/A (Marketing); Skills: N/A\nRuns campaign planning; creative production is handled with the brand team.\n\n## Priya Sharma\nDocumentation Engineer\n\nResponsibilities: Writing technical documentation, maintaining wiki, improving documentation processes; Project: Documentation (Wiki); Skills: N/A\nKeeps the internal wiki, document templates and translation assets.\n\n## Emily Zhou\nSoftware Engineer (Web Crawler Team)\n\nResponsibilities: Designing and implementing web crawler functionalities; Project: Colly (Web Crawler Framework); Skills: Go, distributed systems\nOwns the crawler framework and the datasets it produces.\n"
+  },
+  "private_records": [
+    {
+      "id": "H1",
+      "holder": "Liu Qiang",
+      "facts": {
+        "test_plan_id": "TP-32",
+        "suite_size": 214,
+        "environment": "staging-3"
+      },
+      "required_context": [
+        "Colly",
+        "3.2"
+      ],
+      "release_rule": "Provide the current plan, size and environment for Colly 3.2."
+    },
+    {
+      "id": "D1",
+      "holder": "Emily Zhou",
+      "facts": {},
+      "required_context": [],
+      "release_rule": "You build Colly but do not own test plans. If asked, say cross-team quality owns regression plans."
+    }
+  ],
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Liu Qiang"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      }
+    ],
+    "edges": []
+  },
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "build": "str",
+      "test_plan_id": "str",
+      "suite_size": "int",
+      "environment": "str"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": false
+  },
+  "adapter_status": "declarative v2 format; not compatible with legacy simulator without adapter",
+  "npc_behavior": "deterministic rules represented as data; execution engine not included",
+  "evaluator": null
+}

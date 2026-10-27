@@ -1,0 +1,98 @@
+{
+  "task_id": "m-med-support-renewal",
+  "initial_task": "As of 2026-11-05: Prepare the Node-RED enterprise support renewal. Save /workspace/deliverable.json with seats, total_usd, signed_by, authorization_ref. Post a short summary and the file path in #engineering.\n\nWork packet: OwnCloud Documents/Study21V2/m-med-support-renewal.\nOwnCloud: http://the-agent-company.com:8092\nRocketChat: http://the-agent-company.com:3000\n",
+  "public_documents": {
+    "renewal.md": "Support seats cost USD 300 each per year. Last year renewed 20 seats.",
+    "renewal-policy.md": "Seat counts are confirmed by the low-code platform team. Technical support renewals are approved by the CTO.",
+    "leadership-calendar.md": "CTO travelling 2026-11-02 to 2026-11-13 without sign-off access. Designated technical deputy: Zhang Wei."
+  },
+  "directory_by_condition": {
+    "R0": "# Relevant working directory\n\n## Alex Turner\nSoftware Engineer (Low-Code Platform Team)\n\n## David Wong\nFinance Director\n\n## Wang Fang\nAI Researcher (AI Team)\n\n## Li Ming\nDatabase Team Project Manager\n\n## Sophia Rodriguez\nUX Designer\n\n## Emma Lewis\nSoftware Engineer (API Team)\n\n## Zhang Wei\nSenior Software Engineer (Streaming Database Team)\n\n## Sarah Johnson\nCTO\n",
+    "R1": "# Relevant working directory\n\n## Alex Turner\nSoftware Engineer (Low-Code Platform Team)\n\nResponsibilities: Developing low-code platform features; Project: Node-RED (Low-Code Platform); Skills: N/A\nRuns the low-code platform and its plugin inventory.\n\n## David Wong\nFinance Director\n\nResponsibilities: Financial planning, budget management, financial reporting; Project: N/A (Finance); Skills: N/A\nOwns the general ledger calendar and spending limits above department level.\n\n## Wang Fang\nAI Researcher (AI Team)\n\nResponsibilities: Designing and implementing machine learning models, optimizing model performance; Project: OpenHands (LLM project); Skills: Python, machine learning, LLM\nTracks AI research project capacity and seat plans.\n\n## Li Ming\nDatabase Team Project Manager\n\nResponsibilities: Managing database projects, resource coordination, ensuring timely delivery; Project: JanusGraph (Graph Database); Skills: Java, distributed systems\nPlans Database team capacity and release resourcing.\n\n## Sophia Rodriguez\nUX Designer\n\nResponsibilities: Designing user interfaces, improving user experience, conducting user research; Project: All projects (focusing on user experience); Skills: N/A\nLeads brand and visual design work, including campaign creative files.\n\n## Emma Lewis\nSoftware Engineer (API Team)\n\nResponsibilities: Developing API functionalities using Python; Project: API-server; Skills: N/A\nHandles API server operations, integrations and security testing.\n\n## Zhang Wei\nSenior Software Engineer (Streaming Database Team)\n\nResponsibilities: Developing and optimizing core streaming database functionalities; Project: RisingWave (Streaming Database); Skills: Rust, database systems\nSenior engineer on the Streaming DB team; acts as technical deputy for the CTO when designated.\n\n## Sarah Johnson\nCTO\n\nResponsibilities: Technical strategy planning, R&D team leadership, new technology assessment; Project: Oversees all technical projects; Skills: N/A\nSets technical direction and signs off high-risk production changes. Delegates sign-off authority when away.\n"
+  },
+  "private_records": [
+    {
+      "id": "H1",
+      "holder": "Alex Turner",
+      "facts": {
+        "seats": 26
+      },
+      "required_context": [
+        "Node-RED"
+      ],
+      "release_rule": "Provide the current seat count."
+    },
+    {
+      "id": "H2",
+      "holder": "Zhang Wei",
+      "facts": {
+        "authorization_ref": "REN-APR-26"
+      },
+      "required_context": [
+        "26",
+        "7800"
+      ],
+      "release_rule": "As designated deputy, approve only with seats and total cited."
+    },
+    {
+      "id": "D1",
+      "holder": "Sarah Johnson",
+      "facts": {},
+      "required_context": [],
+      "release_rule": "You are travelling without sign-off access until 2026-11-13. Say Zhang Wei is the designated deputy; issue nothing."
+    }
+  ],
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Alex Turner"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      },
+      {
+        "id": "h2",
+        "admissible_recipients": [
+          "Zhang Wei"
+        ],
+        "information_ids": [
+          "H2"
+        ],
+        "requires": [
+          "h1"
+        ]
+      }
+    ],
+    "edges": [
+      [
+        "h1",
+        "h2"
+      ]
+    ]
+  },
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "seats": "int",
+      "total_usd": "int",
+      "signed_by": "str",
+      "authorization_ref": "str"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": false
+  },
+  "adapter_status": "declarative v2 format; not compatible with legacy simulator without adapter",
+  "npc_behavior": "deterministic rules represented as data; execution engine not included",
+  "evaluator": null
+}

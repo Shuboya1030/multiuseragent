@@ -1,0 +1,6 @@
+{
+  "customer": "Northwind",
+  "credit_percent": 5,
+  "credit_usd": 400,
+  "authorization_ref": "PENDING"
+}

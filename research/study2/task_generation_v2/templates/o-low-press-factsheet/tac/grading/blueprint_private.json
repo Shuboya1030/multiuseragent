@@ -1,0 +1,117 @@
+{
+  "task_id": "o-low-press-factsheet",
+  "help_class": "Optional-help",
+  "target_level": "Low",
+  "N": 4,
+  "feature_scores": [
+    0,
+    1,
+    0,
+    1
+  ],
+  "domain": "marketing",
+  "prompt": "As of 2026-11-05: Prepare the press fact sheet for the OpenSearch 2.12 launch. Save /workspace/deliverable.json with headline, exec_quote_id, boilerplate_version. Post a short summary and the file path in #engineering.",
+  "documents": {
+    "factsheet.md": "Boilerplate B-2026 approved. Headline draft: \"OpenSearch gets faster\". Last release reused exec quote Q-0611 from 2025.",
+    "marketing-roles.md": "The Marketing Manager keeps the approved quote library."
+  },
+  "inference_evidence": [
+    "Marketing Manager named."
+  ],
+  "classification_rationale": "Old quote valid; release-specific quote improves accuracy.",
+  "separation": null,
+  "structure": null,
+  "structure_tags": [],
+  "cue": {
+    "documents": [
+      "factsheet.md"
+    ],
+    "description": "Implicit: quote is from 2025 and not release-specific."
+  },
+  "quality": {
+    "dimension": "release_specific_quote",
+    "baseline": 0,
+    "full_information": 1,
+    "minimum_improvement": 1,
+    "constraints": []
+  },
+  "hidden_information": [
+    {
+      "id": "H1",
+      "holder": "Jessica Lee",
+      "facts": {
+        "exec_quote_id": "Q-1102",
+        "quote_release": "2.12",
+        "headline": "OpenSearch 2.12 cuts query latency in half"
+      },
+      "required_context": [
+        "2.12"
+      ],
+      "release_rule": "Provide the 2.12-specific approved quote and matching headline. Q-0611 remains approved."
+    }
+  ],
+  "no_contact_reference": {
+    "headline": "OpenSearch gets faster",
+    "exec_quote_id": "Q-0611",
+    "boilerplate_version": "B-2026"
+  },
+  "full_information_reference": {
+    "headline": "OpenSearch 2.12 cuts query latency in half",
+    "exec_quote_id": "Q-1102",
+    "boilerplate_version": "B-2026"
+  },
+  "version": "0.2.0",
+  "instance_seed": 2026102833,
+  "candidate_pool": [
+    "Li Ming",
+    "Chen Xinyi",
+    "Wang Fang",
+    "Jessica Lee"
+  ],
+  "workflow_id": "press-factsheet",
+  "workflow_pair_id": null,
+  "pairing_note": "Independent workflow; paired variants deferred.",
+  "source_spec": {
+    "commit": "local",
+    "path": "12_Study2_Task_Redesign_20261026-1923.md",
+    "section": "13"
+  },
+  "information_boundary": "Only documents and task text are public; blueprint, references and scenarios are experimenter/NPC-private.",
+  "runtime_classification_status": "design_proposed_pending_task_evaluator",
+  "generated_by": "tools/create_blueprints_batch2.py (Task Evaluator session, per user request 2026-10-26)",
+  "public_packet_path": "Documents/Study21V2/o-low-press-factsheet",
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "headline": "str",
+      "exec_quote_id": "str",
+      "boilerplate_version": "str"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": false
+  },
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Jessica Lee"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      }
+    ],
+    "edges": []
+  },
+  "dependency_depth": 1,
+  "difficulty_score": 2
+}

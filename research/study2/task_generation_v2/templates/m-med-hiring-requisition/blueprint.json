@@ -1,0 +1,155 @@
+{
+  "task_id": "m-med-hiring-requisition",
+  "help_class": "Must-help",
+  "target_level": "Medium",
+  "N": 4,
+  "feature_scores": [
+    0,
+    1,
+    2,
+    1
+  ],
+  "domain": "hr",
+  "prompt": "As of 2026-11-05: Prepare the requisition record for the Search team backend role R-77. Save /workspace/deliverable.json with role, level, salary_band, signed_by, authorization_ref. Post a short summary and the file path in #engineering.",
+  "documents": {
+    "req-draft.md": "Draft requisition R-77, backend engineer, Search team, level L3, band B3 (drafted 2026-09).",
+    "hiring-policy.md": "Level and band are set by the hiring product manager. Requisitions at L5 and above are approved by the CTO; below L5, Human Resources approves. Approvals cite level and band."
+  },
+  "inference_evidence": [
+    "Apply the L5 threshold to the confirmed level to choose CTO vs HR."
+  ],
+  "classification_rationale": "Draft level points to HR; the confirmed level changes the approver to the CTO.",
+  "separation": "separated-conditional",
+  "structure": "conditional",
+  "structure_tags": [
+    "conditional",
+    "info-approval"
+  ],
+  "cue": null,
+  "quality": null,
+  "hidden_information": [
+    {
+      "id": "H1",
+      "holder": "Huang Jie",
+      "facts": {
+        "level": "L5",
+        "salary_band": "B5"
+      },
+      "required_context": [
+        "R-77"
+      ],
+      "release_rule": "Provide the confirmed level and band for R-77."
+    },
+    {
+      "id": "H2",
+      "holder": "Sarah Johnson",
+      "facts": {
+        "authorization_ref": "REQ-APR-310"
+      },
+      "required_context": [
+        "L5",
+        "B5"
+      ],
+      "release_rule": "Approve only with level L5 and band B5 cited."
+    },
+    {
+      "id": "D1",
+      "holder": "Chen Xinyi",
+      "facts": {},
+      "required_context": [],
+      "release_rule": "You approve requisitions below L5 only. For L5 or above, say the CTO approves; issue nothing."
+    }
+  ],
+  "no_contact_reference": {
+    "role": "backend engineer",
+    "level": "L3",
+    "salary_band": "B3",
+    "signed_by": "Chen Xinyi",
+    "authorization_ref": "PENDING"
+  },
+  "full_information_reference": {
+    "role": "backend engineer",
+    "level": "L5",
+    "salary_band": "B5",
+    "signed_by": "Sarah Johnson",
+    "authorization_ref": "REQ-APR-310"
+  },
+  "version": "0.2.0",
+  "instance_seed": 2026102808,
+  "candidate_pool": [
+    "Emma Lewis",
+    "Huang Jie",
+    "Sarah Johnson",
+    "Chen Xinyi"
+  ],
+  "workflow_id": "hiring-requisition",
+  "workflow_pair_id": null,
+  "pairing_note": "Independent workflow; paired variants deferred.",
+  "source_spec": {
+    "commit": "local",
+    "path": "12_Study2_Task_Redesign_20261026-1923.md",
+    "section": "13"
+  },
+  "information_boundary": "Only documents and task text are public; blueprint, references and scenarios are experimenter/NPC-private.",
+  "runtime_classification_status": "design_proposed_pending_task_evaluator",
+  "generated_by": "tools/create_blueprints_batch2.py (Task Evaluator session, per user request 2026-10-26)",
+  "public_packet_path": "Documents/Study21V2/m-med-hiring-requisition",
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "role": "str",
+      "level": "str",
+      "salary_band": "str",
+      "signed_by": "str",
+      "authorization_ref": "str"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": true,
+    "grader": {
+      "version": "study2-v2-grader-1.0",
+      "module": "grading/scorer.py",
+      "tac_entry": "tac/evaluator.py"
+    }
+  },
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Huang Jie"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      },
+      {
+        "id": "h2",
+        "admissible_recipients": [
+          "Sarah Johnson"
+        ],
+        "information_ids": [
+          "H2"
+        ],
+        "requires": [
+          "h1"
+        ]
+      }
+    ],
+    "edges": [
+      [
+        "h1",
+        "h2"
+      ]
+    ]
+  },
+  "dependency_depth": 2,
+  "difficulty_score": 4
+}

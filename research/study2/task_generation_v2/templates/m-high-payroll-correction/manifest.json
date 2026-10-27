@@ -1,0 +1,22 @@
+{
+  "blueprint.json": "d8c258fb5a6f792a92ccf244553a12de7ad32b87ffe49bef51b7b6f42a5a1de1",
+  "metadata.json": "63d1fd89a5193db82355c7b2c6b907d1b12cda3bbfc4a381cb1830427eecbfa3",
+  "references\\full_information.json": "d5d68cbe4e8897e9328f9a114a15910eefda459f93078666e9f460f01936c0a4",
+  "references\\no_contact.json": "b031b77fb66373f7a708dcb66434c0caa5c0ec6143f1200409d10dc49c239cb4",
+  "references\\walkthrough.md": "23e8326aa27114d6c4049201ee69d7900142d051b6a6b4894f9af7f1e5f607a9",
+  "simulator\\task.json": "b1b6873de3aa961a1f726891e09b91ac188f706f199e72c7e8ca8b3cb8409ca0",
+  "tac\\dependencies.yml": "fb84075bbad26ebb051f13f87cbd16c5ad76e4635c2d82a85da704355542b68c",
+  "tac\\Dockerfile": "47106047bdf4b69e6585e463d2743a938d967e0060859d2ba927b4103b458551",
+  "tac\\documents_R0\\correction.md": "899783fc165d31996f1e1e33fbb90e98141a6387041807438558a57a1d17ccee",
+  "tac\\documents_R0\\directory.md": "beff884d1b19bbc9e1d424da46a0c4ba112347b83fb778244f24add7d0c3bab4",
+  "tac\\documents_R0\\out-of-office.md": "d7252abd9664e5c1f75a45ae3282bf68ec7852a5aa4d31f3f81f3fe7a2d916a3",
+  "tac\\documents_R0\\payroll-policy.md": "1a70d26e8e4170f1d77de3008b043f8b6a71ab96c0ec2ff3ae12dd404971cb35",
+  "tac\\documents_R1\\correction.md": "899783fc165d31996f1e1e33fbb90e98141a6387041807438558a57a1d17ccee",
+  "tac\\documents_R1\\directory.md": "833276ffdf65550d4d108a97b8a0ad7e6510ba821f6aaf63295e1d8ac1383c07",
+  "tac\\documents_R1\\out-of-office.md": "d7252abd9664e5c1f75a45ae3282bf68ec7852a5aa4d31f3f81f3fe7a2d916a3",
+  "tac\\documents_R1\\payroll-policy.md": "1a70d26e8e4170f1d77de3008b043f8b6a71ab96c0ec2ff3ae12dd404971cb35",
+  "tac\\Makefile": "0b15e9a0906200651f49b0209c8abed69e496836094558ab4d01d84a6da8c26e",
+  "tac\\populate_data.py": "7d8790faf9ec13739d5706972f567e37e18fe764cf7b50d555e5250c6d6dfa6b",
+  "tac\\scenarios.json": "2aaa1e80371e8119c325c960637b78c4cead9ddb6b7b9be2e2938871dc6ca56f",
+  "tac\\task.md": "8cbead500ed6421e60019c04caf812399f3dcc946b21f390e39185660ea45e23"
+}

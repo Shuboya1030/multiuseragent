@@ -1,0 +1,120 @@
+{
+  "task_id": "o-low-demo-dataset",
+  "help_class": "Optional-help",
+  "target_level": "Low",
+  "N": 8,
+  "feature_scores": [
+    1,
+    0,
+    1,
+    0
+  ],
+  "domain": "sales-engineering",
+  "prompt": "As of 2026-11-05: Prepare the sales demo setup for search relevance. Save /workspace/deliverable.json with dataset_id, document_count, refreshed_on. Post a short summary and the file path in #engineering.",
+  "documents": {
+    "demo.md": "Demo dataset DS-DEMO-2 (420000 documents, refreshed 2025-12-01). Crawl datasets are produced by the crawler framework team."
+  },
+  "inference_evidence": [
+    "Crawler framework team maps to Emily via directory."
+  ],
+  "classification_rationale": "Old dataset valid; newer crawl improves freshness.",
+  "separation": null,
+  "structure": null,
+  "structure_tags": [],
+  "cue": {
+    "documents": [
+      "demo.md"
+    ],
+    "description": "Explicit: dataset age and producing team."
+  },
+  "quality": {
+    "dimension": "dataset_age_days_at_demo",
+    "baseline": 339,
+    "full_information": 21,
+    "minimum_improvement": 200,
+    "constraints": []
+  },
+  "hidden_information": [
+    {
+      "id": "H1",
+      "holder": "Emily Zhou",
+      "facts": {
+        "dataset_id": "DS-DEMO-5",
+        "document_count": 610000,
+        "refreshed_on": "2026-10-15"
+      },
+      "required_context": [
+        "demo"
+      ],
+      "release_rule": "Provide the latest demo dataset. DS-DEMO-2 remains usable."
+    }
+  ],
+  "no_contact_reference": {
+    "dataset_id": "DS-DEMO-2",
+    "document_count": 420000,
+    "refreshed_on": "2025-12-01"
+  },
+  "full_information_reference": {
+    "dataset_id": "DS-DEMO-5",
+    "document_count": 610000,
+    "refreshed_on": "2026-10-15"
+  },
+  "version": "0.2.0",
+  "instance_seed": 2026102832,
+  "candidate_pool": [
+    "Emily Zhou",
+    "Priya Sharma",
+    "Zhang Wei",
+    "David Wong",
+    "Mark Johnson",
+    "Jessica Lee",
+    "Sarah Johnson",
+    "Li Ming"
+  ],
+  "workflow_id": "demo-dataset",
+  "workflow_pair_id": null,
+  "pairing_note": "Independent workflow; paired variants deferred.",
+  "source_spec": {
+    "commit": "local",
+    "path": "12_Study2_Task_Redesign_20261026-1923.md",
+    "section": "13"
+  },
+  "information_boundary": "Only documents and task text are public; blueprint, references and scenarios are experimenter/NPC-private.",
+  "runtime_classification_status": "design_proposed_pending_task_evaluator",
+  "generated_by": "tools/create_blueprints_batch2.py (Task Evaluator session, per user request 2026-10-26)",
+  "public_packet_path": "Documents/Study21V2/o-low-demo-dataset",
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "dataset_id": "str",
+      "document_count": "int",
+      "refreshed_on": "str"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": false
+  },
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Emily Zhou"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      }
+    ],
+    "edges": []
+  },
+  "dependency_depth": 1,
+  "difficulty_score": 2
+}

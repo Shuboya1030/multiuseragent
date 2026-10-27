@@ -1,0 +1,1 @@
+Finance Director away 2026-11-02 to 2026-11-16; acting finance approver: Chen Xinyi.

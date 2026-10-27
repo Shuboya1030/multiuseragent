@@ -1,0 +1,116 @@
+{
+  "task_id": "m-med-security-exception",
+  "initial_task": "As of 2026-11-05: Prepare the security exception record for giving partner Orbit access to the /v2/test-search endpoint. Save /workspace/deliverable.json with endpoint, risk_rating, business_justification_id, authorization_ref. Post a short summary and the file path in #engineering.\n\nWork packet: OwnCloud Documents/Study21V2/m-med-security-exception.\nOwnCloud: http://the-agent-company.com:8092\nRocketChat: http://the-agent-company.com:3000\n",
+  "public_documents": {
+    "request.md": "Partner Orbit requests access to /v2/test-search. Exception template from 2025 lists risk rating medium.",
+    "exception-policy.md": "Risk ratings for API endpoints are assessed by the team that operates the API server. Business justification for partner access is recorded by the product manager of the affected product. The CTO approves exceptions citing both."
+  },
+  "directory_by_condition": {
+    "R0": "# Relevant working directory\n\n## Sarah Johnson\nCTO\n\n## Huang Jie\nProduct Manager (Search Engine Team)\n\n## Sophia Rodriguez\nUX Designer\n\n## David Wong\nFinance Director\n\n## Liu Qiang\nQuality Assurance Engineer\n\n## Wang Fang\nAI Researcher (AI Team)\n\n## Emma Lewis\nSoftware Engineer (API Team)\n\n## Li Ming\nDatabase Team Project Manager\n",
+    "R1": "# Relevant working directory\n\n## Sarah Johnson\nCTO\n\nResponsibilities: Technical strategy planning, R&D team leadership, new technology assessment; Project: Oversees all technical projects; Skills: N/A\nSets technical direction and signs off high-risk production changes. Delegates sign-off authority when away.\n\n## Huang Jie\nProduct Manager (Search Engine Team)\n\nResponsibilities: Defining product requirements, planning product roadmap, communicating with clients; Project: OpenSearch (Search Engine); Skills: N/A\nSets roadmap and release timing for search and storefront products.\n\n## Sophia Rodriguez\nUX Designer\n\nResponsibilities: Designing user interfaces, improving user experience, conducting user research; Project: All projects (focusing on user experience); Skills: N/A\nLeads brand and visual design work, including campaign creative files.\n\n## David Wong\nFinance Director\n\nResponsibilities: Financial planning, budget management, financial reporting; Project: N/A (Finance); Skills: N/A\nOwns the general ledger calendar and spending limits above department level.\n\n## Liu Qiang\nQuality Assurance Engineer\n\nResponsibilities: Developing test strategies, executing tests, ensuring product quality; Project: All projects (focusing on testing and quality); Skills: N/A\nRuns cross-team test sign-offs before production releases.\n\n## Wang Fang\nAI Researcher (AI Team)\n\nResponsibilities: Designing and implementing machine learning models, optimizing model performance; Project: OpenHands (LLM project); Skills: Python, machine learning, LLM\nTracks AI research project capacity and seat plans.\n\n## Emma Lewis\nSoftware Engineer (API Team)\n\nResponsibilities: Developing API functionalities using Python; Project: API-server; Skills: N/A\nHandles API server operations, integrations and security testing.\n\n## Li Ming\nDatabase Team Project Manager\n\nResponsibilities: Managing database projects, resource coordination, ensuring timely delivery; Project: JanusGraph (Graph Database); Skills: Java, distributed systems\nPlans Database team capacity and release resourcing.\n"
+  },
+  "private_records": [
+    {
+      "id": "H1",
+      "holder": "Emma Lewis",
+      "facts": {
+        "risk_rating": "high"
+      },
+      "required_context": [
+        "/v2/test-search"
+      ],
+      "release_rule": "Provide the current risk rating."
+    },
+    {
+      "id": "H2",
+      "holder": "Huang Jie",
+      "facts": {
+        "business_justification_id": "BJ-1188"
+      },
+      "required_context": [
+        "Orbit"
+      ],
+      "release_rule": "Provide the business justification record."
+    },
+    {
+      "id": "H3",
+      "holder": "Sarah Johnson",
+      "facts": {
+        "authorization_ref": "SEC-EX-44"
+      },
+      "required_context": [
+        "high",
+        "BJ-1188"
+      ],
+      "release_rule": "Approve only with the current risk rating and justification cited."
+    }
+  ],
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Emma Lewis"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      },
+      {
+        "id": "h2",
+        "admissible_recipients": [
+          "Huang Jie"
+        ],
+        "information_ids": [
+          "H2"
+        ],
+        "requires": []
+      },
+      {
+        "id": "h3",
+        "admissible_recipients": [
+          "Sarah Johnson"
+        ],
+        "information_ids": [
+          "H3"
+        ],
+        "requires": [
+          "h1",
+          "h2"
+        ]
+      }
+    ],
+    "edges": [
+      [
+        "h1",
+        "h3"
+      ],
+      [
+        "h2",
+        "h3"
+      ]
+    ]
+  },
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "endpoint": "str",
+      "risk_rating": "str",
+      "business_justification_id": "str",
+      "authorization_ref": "str"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": false
+  },
+  "adapter_status": "declarative v2 format; not compatible with legacy simulator without adapter",
+  "npc_behavior": "deterministic rules represented as data; execution engine not included",
+  "evaluator": null
+}

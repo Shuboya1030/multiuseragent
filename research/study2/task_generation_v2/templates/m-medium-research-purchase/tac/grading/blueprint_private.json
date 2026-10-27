@@ -1,0 +1,149 @@
+{
+  "task_id": "m-medium-research-purchase",
+  "help_class": "Must-help",
+  "target_level": "Medium",
+  "N": 8,
+  "feature_scores": [
+    1,
+    1,
+    1,
+    2
+  ],
+  "domain": "procurement",
+  "prompt": "Prepare the twelve-month VectorBench order for project Pine as of 2026-11-02. Save /workspace/deliverable.json with seats, total_usd, allocation_revision, budget_code and release_reference. Post its path and a brief order summary in #engineering.",
+  "documents": {
+    "quote.md": "VectorBench costs USD 600 per seat annually, no tax or discount. The order covers one year.",
+    "project.md": "Pine belongs to the AI research portfolio. Planning worksheet P-01 lists 16 seats, AI-26-A, release reference VB-PLAN-16. Worksheet issued 2026-09-01.",
+    "policy.md": "Capacity is maintained by the research allocation owner. Order references bind the current allocation revision, annual amount and budget. Department leads issue commitments up to USD 10000; larger commitments are issued by Finance. Planning references are provisional and are not order releases."
+  },
+  "hidden_information": [
+    {
+      "id": "H1",
+      "holder": "Wang Fang",
+      "facts": {
+        "seats": 20,
+        "allocation_revision": "P-03",
+        "budget_code": "AI-26-B"
+      },
+      "required_context": [
+        "Pine"
+      ],
+      "release_rule": "Supply the current allocation when the project is identified; you cannot issue an order release."
+    },
+    {
+      "id": "H2",
+      "holder": "David Wong",
+      "facts": {
+        "release_reference": "VB-REL-203"
+      },
+      "required_context": [
+        "P-03",
+        "12000",
+        "AI-26-B"
+      ],
+      "release_rule": "Release only when current revision, amount and budget are supplied. Otherwise state missing fields without revealing the release reference."
+    }
+  ],
+  "no_contact_reference": {
+    "seats": 16,
+    "total_usd": 9600,
+    "allocation_revision": "P-01",
+    "budget_code": "AI-26-A",
+    "release_reference": "VB-PLAN-16"
+  },
+  "full_information_reference": {
+    "seats": 20,
+    "total_usd": 12000,
+    "allocation_revision": "P-03",
+    "budget_code": "AI-26-B",
+    "release_reference": "VB-REL-203"
+  },
+  "classification_rationale": "Current quantity and binding order release exist only with separate colleagues.",
+  "separation": "separated",
+  "structure": "info-approval",
+  "cue": null,
+  "inference_evidence": [
+    "Compute the current annual amount from the current seat count (needs H1) and apply the USD 10000 threshold to select the release owner."
+  ],
+  "version": "0.2.0",
+  "instance_seed": 2026102701,
+  "candidate_pool": [
+    "Jessica Lee",
+    "Priya Sharma",
+    "Zhang Wei",
+    "Huang Jie",
+    "David Wong",
+    "Emily Zhou",
+    "Mike Chen",
+    "Wang Fang"
+  ],
+  "workflow_id": "research-purchase",
+  "workflow_pair_id": null,
+  "pairing_note": "Six distinct representative workflows; natural paired variants deferred.",
+  "source_spec": {
+    "commit": "5357f3629d97891b30038a59c367ab278f206b90",
+    "path": "12_Study2_Task_Redesign_20261026-1923.md",
+    "section": "13"
+  },
+  "information_boundary": "Only documents and task text are public; blueprint, references and scenarios are experimenter/NPC-private.",
+  "runtime_classification_status": "revised_after_evaluator_batch1_pending_reevaluation",
+  "public_packet_path": "Documents/Study21V2/m-medium-research-purchase",
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "seats": "int",
+      "total_usd": "int",
+      "allocation_revision": "str",
+      "budget_code": "str",
+      "release_reference": "str"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases."
+    ],
+    "grading_implemented": false
+  },
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "allocation",
+        "admissible_recipients": [
+          "Wang Fang"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      },
+      {
+        "id": "release",
+        "admissible_recipients": [
+          "David Wong"
+        ],
+        "information_ids": [
+          "H2"
+        ],
+        "requires": [
+          "allocation"
+        ]
+      }
+    ],
+    "edges": [
+      [
+        "allocation",
+        "release"
+      ]
+    ]
+  },
+  "dependency_depth": 2,
+  "difficulty_score": 5,
+  "revision_log": [
+    {
+      "revision": "eval-batch1-r1",
+      "change": "F3: conditional approval counted under inference only (separation 2->1, inference 1->2); D unchanged at 5."
+    }
+  ]
+}

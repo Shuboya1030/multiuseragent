@@ -1,0 +1,60 @@
+{
+  "task_id": "o-med-support-macro",
+  "initial_task": "As of 2026-11-05: Update support macro MAC-14 for search indexing delays. Save /workspace/deliverable.json with macro_id, eta_text, workaround. Post a short summary and the file path in #engineering.\n\nWork packet: OwnCloud Documents/Study21V2/o-med-support-macro.\nOwnCloud: http://the-agent-company.com:8092\nRocketChat: http://the-agent-company.com:3000\n",
+  "public_documents": {
+    "macro.md": "MAC-14 currently says \"fix expected in a future release\" and lists no workaround. Product timelines are set by product managers."
+  },
+  "directory_by_condition": {
+    "R0": "# Relevant working directory\n\n## Huang Jie\nProduct Manager (Search Engine Team)\n\n## Chen Xinyi\nHuman Resources Manager\n\n## Alex Turner\nSoftware Engineer (Low-Code Platform Team)\n\n## Mark Johnson\nSales Director\n\n## Li Ming\nDatabase Team Project Manager\n\n## Sophia Rodriguez\nUX Designer\n\n## Jessica Lee\nMarketing Manager\n\n## Wang Fang\nAI Researcher (AI Team)\n",
+    "R1": "# Relevant working directory\n\n## Huang Jie\nProduct Manager (Search Engine Team)\n\nResponsibilities: Defining product requirements, planning product roadmap, communicating with clients; Project: OpenSearch (Search Engine); Skills: N/A\nSets roadmap and release timing for search and storefront products.\n\n## Chen Xinyi\nHuman Resources Manager\n\nResponsibilities: Recruitment, employee training, compensation management; Project: N/A (HR); Skills: N/A\nMaintains staff development entitlements and enrollment arrangements.\n\n## Alex Turner\nSoftware Engineer (Low-Code Platform Team)\n\nResponsibilities: Developing low-code platform features; Project: Node-RED (Low-Code Platform); Skills: N/A\nRuns the low-code platform and its plugin inventory.\n\n## Mark Johnson\nSales Director\n\nResponsibilities: Developing sales strategies, managing sales team, expanding client relationships; Project: N/A (Sales); Skills: N/A\nMaintains commercial event entitlements and customer-facing meeting arrangements.\n\n## Li Ming\nDatabase Team Project Manager\n\nResponsibilities: Managing database projects, resource coordination, ensuring timely delivery; Project: JanusGraph (Graph Database); Skills: Java, distributed systems\nPlans Database team capacity and release resourcing.\n\n## Sophia Rodriguez\nUX Designer\n\nResponsibilities: Designing user interfaces, improving user experience, conducting user research; Project: All projects (focusing on user experience); Skills: N/A\nLeads brand and visual design work, including campaign creative files.\n\n## Jessica Lee\nMarketing Manager\n\nResponsibilities: Developing marketing strategies, managing brand image, organizing marketing events; Project: N/A (Marketing); Skills: N/A\nRuns campaign planning; creative production is handled with the brand team.\n\n## Wang Fang\nAI Researcher (AI Team)\n\nResponsibilities: Designing and implementing machine learning models, optimizing model performance; Project: OpenHands (LLM project); Skills: Python, machine learning, LLM\nTracks AI research project capacity and seat plans.\n"
+  },
+  "private_records": [
+    {
+      "id": "H1",
+      "holder": "Huang Jie",
+      "facts": {
+        "eta_text": "Fixed in 2.12 on 2026-11-19",
+        "workaround": "Reindex from the console"
+      },
+      "required_context": [
+        "indexing delay"
+      ],
+      "release_rule": "Provide the ETA and workaround. The current macro text remains acceptable."
+    }
+  ],
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Huang Jie"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      }
+    ],
+    "edges": []
+  },
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "macro_id": "str",
+      "eta_text": "str",
+      "workaround": "str"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": false
+  },
+  "adapter_status": "declarative v2 format; not compatible with legacy simulator without adapter",
+  "npc_behavior": "deterministic rules represented as data; execution engine not included",
+  "evaluator": null
+}

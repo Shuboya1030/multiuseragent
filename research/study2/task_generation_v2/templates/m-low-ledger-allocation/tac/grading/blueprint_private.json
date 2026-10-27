@@ -1,0 +1,105 @@
+{
+  "task_id": "m-low-ledger-allocation",
+  "help_class": "Must-help",
+  "target_level": "Low",
+  "N": 4,
+  "feature_scores": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "domain": "finance",
+  "prompt": "Prepare the November allocation entry for invoice INV-841. Save /workspace/deliverable.json with invoice_id, amount_usd, cost_center and ledger_period. Post a short entry summary and the file path in #engineering.",
+  "documents": {
+    "invoice.md": "INV-841: internal tooling, USD 2400, service period November 2026. Posting date 2026-11-02.",
+    "posting-sheet.md": "Working allocation sheet: internal tooling -> CC-410, ledger period 2026-11. This sheet was issued 2026-10-01. Ledger periods use the mapping effective on the posting date. The financial ledger custodian maintains period mappings."
+  },
+  "hidden_information": [
+    {
+      "id": "H1",
+      "holder": "David Wong",
+      "facts": {
+        "cost_center": "CC-628",
+        "effective_date": "2026-11-01"
+      },
+      "required_context": [
+        "INV-841",
+        "2026-11"
+      ],
+      "release_rule": "Provide the November internal-tooling mapping for this invoice. You own both the mapping and its release; no separate authorization is needed."
+    }
+  ],
+  "no_contact_reference": {
+    "invoice_id": "INV-841",
+    "amount_usd": 2400,
+    "cost_center": "CC-410",
+    "ledger_period": "2026-11"
+  },
+  "full_information_reference": {
+    "invoice_id": "INV-841",
+    "amount_usd": 2400,
+    "cost_center": "CC-628",
+    "ledger_period": "2026-11"
+  },
+  "classification_rationale": "The current mapping is held only by the ledger custodian; the visible earlier mapping yields a plausible wrong entry.",
+  "separation": "aligned",
+  "structure": "single-information",
+  "cue": null,
+  "inference_evidence": [
+    "Finance title directly identifies the ledger custodian."
+  ],
+  "version": "0.1.0",
+  "instance_seed": 2026102700,
+  "candidate_pool": [
+    "David Wong",
+    "Li Ming",
+    "Chen Xinyi",
+    "Jessica Chen"
+  ],
+  "workflow_id": "ledger-allocation",
+  "workflow_pair_id": null,
+  "pairing_note": "Six distinct representative workflows; natural paired variants deferred.",
+  "source_spec": {
+    "commit": "5357f3629d97891b30038a59c367ab278f206b90",
+    "path": "12_Study2_Task_Redesign_20261026-1923.md",
+    "section": "13"
+  },
+  "information_boundary": "Only documents and task text are public; blueprint, references and scenarios are experimenter/NPC-private.",
+  "runtime_classification_status": "design_proposed_not_evaluator_validated",
+  "public_packet_path": "Documents/Study21V2/m-low-ledger-allocation",
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "invoice_id": "str",
+      "amount_usd": "int",
+      "cost_center": "str",
+      "ledger_period": "str"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases."
+    ],
+    "grading_implemented": false
+  },
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "mapping",
+        "admissible_recipients": [
+          "David Wong"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      }
+    ],
+    "edges": []
+  },
+  "dependency_depth": 1,
+  "difficulty_score": 0
+}

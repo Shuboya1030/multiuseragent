@@ -1,0 +1,121 @@
+{
+  "task_id": "o-low-demo-shipment",
+  "version": "0.2.0",
+  "help_class": "Optional-help",
+  "target_level": "Low",
+  "domain": "sales",
+  "N": 4,
+  "feature_scores": [
+    0,
+    1,
+    0,
+    0
+  ],
+  "difficulty_score": 1,
+  "dependency_depth": 1,
+  "instance_seed": 2026102829,
+  "candidate_pool": [
+    "David Wong",
+    "Alex Turner",
+    "Mark Johnson",
+    "Huang Jie"
+  ],
+  "workflow_id": "demo-shipment",
+  "workflow_pair_id": null,
+  "source_spec": {
+    "commit": "local",
+    "path": "12_Study2_Task_Redesign_20261026-1923.md",
+    "section": "13"
+  },
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "customer": "str",
+      "carrier": "str",
+      "ship_date": "str",
+      "delivery_days": "int"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": false
+  },
+  "runtime_classification_status": "design_proposed_pending_task_evaluator",
+  "feature_names": [
+    "candidate_pool",
+    "cue_salience",
+    "holder_inference",
+    "integration_effort"
+  ],
+  "separation": "not_applicable",
+  "structure": "optional_information",
+  "cue": {
+    "documents": [
+      "shipping.md"
+    ],
+    "description": "Implicit: 6 business days from 11-12 leaves no buffer before the 11-20 demo."
+  },
+  "quality": {
+    "dimension": "buffer_business_days_before_demo",
+    "baseline": 0,
+    "full_information": 3,
+    "minimum_improvement": 2,
+    "constraints": []
+  },
+  "inference_evidence": [
+    "Account owner named."
+  ],
+  "candidate_pool_semantics": "relevant directory + configured task NPCs; other TAC accounts remain visible",
+  "profile_conditions": [
+    "R0",
+    "R1"
+  ],
+  "default_profile": "R1",
+  "hidden_information_ids": [
+    "H1"
+  ],
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Mark Johnson"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      }
+    ],
+    "edges": []
+  },
+  "services": [
+    "owncloud",
+    "rocketchat"
+  ],
+  "npc_backend": "official TAC Sotopia LLM NPC; not live-tested",
+  "runtime": {
+    "platform": "linux/amd64",
+    "tac_commit": "98b68ef82a47690c316f42fddb05baafaab56851",
+    "execution_target": "OpenHands CodeActAgent via TAC; integration not yet executed",
+    "model": null,
+    "model_calls": 0
+  },
+  "verification": {
+    "independent_task_evaluator": "pending",
+    "human_review": "pending",
+    "live_npc_compliance": "not_tested",
+    "openhands_rollout": "not_run"
+  },
+  "known_limitations": [
+    "Structural labels are design claims.",
+    "LLM NPC prerequisite compliance needs live validation.",
+    "Single fixed instance.",
+    "Shared service reset/isolation required before episodes."
+  ]
+}

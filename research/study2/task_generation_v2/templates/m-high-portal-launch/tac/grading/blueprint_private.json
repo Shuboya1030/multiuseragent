@@ -1,0 +1,196 @@
+{
+  "task_id": "m-high-portal-launch",
+  "help_class": "Must-help",
+  "target_level": "High",
+  "N": 16,
+  "feature_scores": [
+    2,
+    2,
+    2,
+    2
+  ],
+  "domain": "product",
+  "prompt": "As of 2026-11-05: Prepare the go/no-go record for launching the API v3 documentation portal. Save /workspace/deliverable.json with docs_build_id, qa_signoff, launch_date, authorization_ref. Post a short summary and the file path in #engineering.",
+  "documents": {
+    "plan.md": "Portal launch planned for 2026-11-12 with docs build DB-301.",
+    "launch-policy.md": "Docs builds are produced by the documentation engineer. QA signs off against the current build. Launch approval comes from the product manager of the API portal.",
+    "product-map.md": "API portal product decisions belong to the search product manager while the API product role is vacant.",
+    "out-of-office.md": "Huang Jie away 2026-11-04 to 2026-11-20; product approvals delegated to Jessica Chen."
+  },
+  "inference_evidence": [
+    "Product map → search PM; out-of-office → delegate."
+  ],
+  "classification_rationale": "Three-step chain; the mapped approver is away.",
+  "separation": "separated-delegation",
+  "structure": "chain3",
+  "structure_tags": [
+    "chain3",
+    "referral",
+    "delegation"
+  ],
+  "cue": null,
+  "quality": null,
+  "hidden_information": [
+    {
+      "id": "H1",
+      "holder": "Priya Sharma",
+      "facts": {
+        "docs_build_id": "DB-318",
+        "launch_date": "2026-11-17"
+      },
+      "required_context": [
+        "API v3 portal"
+      ],
+      "release_rule": "Provide the current build and launch date."
+    },
+    {
+      "id": "H2",
+      "holder": "Liu Qiang",
+      "facts": {
+        "qa_signoff": "QA-DB318"
+      },
+      "required_context": [
+        "DB-318"
+      ],
+      "release_rule": "Sign off only against DB-318."
+    },
+    {
+      "id": "H3",
+      "holder": "Jessica Chen",
+      "facts": {
+        "authorization_ref": "LCH-APR-3"
+      },
+      "required_context": [
+        "QA-DB318",
+        "2026-11-17"
+      ],
+      "release_rule": "As delegated product approver, approve only with QA sign-off and date cited."
+    },
+    {
+      "id": "D1",
+      "holder": "Huang Jie",
+      "facts": {},
+      "required_context": [],
+      "release_rule": "You are away until 2026-11-20. Say product approvals are delegated to Jessica Chen; issue nothing."
+    },
+    {
+      "id": "D2",
+      "holder": "Emma Lewis",
+      "facts": {},
+      "required_context": [],
+      "release_rule": "You run the API server, not the docs portal. If asked about launch approval, say product decides."
+    }
+  ],
+  "no_contact_reference": {
+    "docs_build_id": "DB-301",
+    "qa_signoff": "PENDING",
+    "launch_date": "2026-11-12",
+    "authorization_ref": "PENDING"
+  },
+  "full_information_reference": {
+    "docs_build_id": "DB-318",
+    "qa_signoff": "QA-DB318",
+    "launch_date": "2026-11-17",
+    "authorization_ref": "LCH-APR-3"
+  },
+  "version": "0.2.0",
+  "instance_seed": 2026102826,
+  "candidate_pool": [
+    "Zhang Wei",
+    "Emily Zhou",
+    "Emma Lewis",
+    "Huang Jie",
+    "Li Ming",
+    "Priya Sharma",
+    "Sarah Johnson",
+    "Mike Chen",
+    "Jessica Chen",
+    "Alex Turner",
+    "David Wong",
+    "Wang Fang",
+    "Chen Xinyi",
+    "Sophia Rodriguez",
+    "Liu Qiang",
+    "Jessica Lee"
+  ],
+  "workflow_id": "portal-launch",
+  "workflow_pair_id": null,
+  "pairing_note": "Independent workflow; paired variants deferred.",
+  "source_spec": {
+    "commit": "local",
+    "path": "12_Study2_Task_Redesign_20261026-1923.md",
+    "section": "13"
+  },
+  "information_boundary": "Only documents and task text are public; blueprint, references and scenarios are experimenter/NPC-private.",
+  "runtime_classification_status": "design_proposed_pending_task_evaluator",
+  "generated_by": "tools/create_blueprints_batch2.py (Task Evaluator session, per user request 2026-10-26)",
+  "public_packet_path": "Documents/Study21V2/m-high-portal-launch",
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "docs_build_id": "str",
+      "qa_signoff": "str",
+      "launch_date": "str",
+      "authorization_ref": "str"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": false
+  },
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Priya Sharma"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      },
+      {
+        "id": "h2",
+        "admissible_recipients": [
+          "Liu Qiang"
+        ],
+        "information_ids": [
+          "H2"
+        ],
+        "requires": [
+          "h1"
+        ]
+      },
+      {
+        "id": "h3",
+        "admissible_recipients": [
+          "Jessica Chen"
+        ],
+        "information_ids": [
+          "H3"
+        ],
+        "requires": [
+          "h2"
+        ]
+      }
+    ],
+    "edges": [
+      [
+        "h1",
+        "h2"
+      ],
+      [
+        "h2",
+        "h3"
+      ]
+    ]
+  },
+  "dependency_depth": 3,
+  "difficulty_score": 8
+}

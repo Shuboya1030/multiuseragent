@@ -1,0 +1,62 @@
+{
+  "task_id": "o-med-brochure-translation",
+  "initial_task": "As of 2026-11-05: Prepare the localization quote for the product brochure (French and German). Save /workspace/deliverable.json with vendor, words, total_usd. Post a short summary and the file path in #engineering.\n\nWork packet: OwnCloud Documents/Study21V2/o-med-brochure-translation.\nOwnCloud: http://the-agent-company.com:8092\nRocketChat: http://the-agent-company.com:3000\n",
+  "public_documents": {
+    "brochure.md": "Brochure: 6000 words, two languages.",
+    "vendors.md": "LinguaPro list rate USD 0.12 per word.",
+    "marketing-log.md": "September: Marketing Manager renewed the LinguaPro framework agreement."
+  },
+  "directory_by_condition": {
+    "R0": "# Relevant working directory\n\n## Sophia Rodriguez\nUX Designer\n\n## Jessica Chen\nFrontend Software Engineer\n\n## Jessica Lee\nMarketing Manager\n\n## Huang Jie\nProduct Manager (Search Engine Team)\n",
+    "R1": "# Relevant working directory\n\n## Sophia Rodriguez\nUX Designer\n\nResponsibilities: Designing user interfaces, improving user experience, conducting user research; Project: All projects (focusing on user experience); Skills: N/A\nLeads brand and visual design work, including campaign creative files.\n\n## Jessica Chen\nFrontend Software Engineer\n\nResponsibilities: Developing user interfaces, implementing responsive designs, optimizing web performance; Project: E-commerce Website Redesign; Skills: N/A\nBuilds the storefront frontend and its rollout settings.\n\n## Jessica Lee\nMarketing Manager\n\nResponsibilities: Developing marketing strategies, managing brand image, organizing marketing events; Project: N/A (Marketing); Skills: N/A\nRuns campaign planning; creative production is handled with the brand team.\n\n## Huang Jie\nProduct Manager (Search Engine Team)\n\nResponsibilities: Defining product requirements, planning product roadmap, communicating with clients; Project: OpenSearch (Search Engine); Skills: N/A\nSets roadmap and release timing for search and storefront products.\n"
+  },
+  "private_records": [
+    {
+      "id": "H1",
+      "holder": "Jessica Lee",
+      "facts": {
+        "framework_rate": 0.08,
+        "total_usd": 960
+      },
+      "required_context": [
+        "LinguaPro"
+      ],
+      "release_rule": "Provide the framework rate. List rate remains valid."
+    }
+  ],
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Jessica Lee"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      }
+    ],
+    "edges": []
+  },
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "vendor": "str",
+      "words": "int",
+      "total_usd": "int"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": false
+  },
+  "adapter_status": "declarative v2 format; not compatible with legacy simulator without adapter",
+  "npc_behavior": "deterministic rules represented as data; execution engine not included",
+  "evaluator": null
+}

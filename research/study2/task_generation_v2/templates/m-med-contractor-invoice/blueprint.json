@@ -1,0 +1,148 @@
+{
+  "task_id": "m-med-contractor-invoice",
+  "help_class": "Must-help",
+  "target_level": "Medium",
+  "N": 8,
+  "feature_scores": [
+    1,
+    1,
+    0,
+    1
+  ],
+  "domain": "finance",
+  "prompt": "As of 2026-11-05: Prepare the October invoice record for contractor DBX Consulting. Save /workspace/deliverable.json with vendor, hours, amount_usd, authorization_ref. Post a short summary and the file path in #engineering.",
+  "documents": {
+    "invoice.md": "DBX Consulting October invoice, rate USD 150/hour. Timesheet export from 2026-10-20 (partial month) shows 64 hours.",
+    "contractor-policy.md": "Contractor hours are confirmed by the project lead who engaged the contractor; that lead approves invoices up to USD 15000. DBX supports the JanusGraph project."
+  },
+  "inference_evidence": [
+    "JanusGraph project lead found via directory project field."
+  ],
+  "classification_rationale": "Partial timesheet is visible; final hours and approval held by the project lead.",
+  "separation": "aligned",
+  "structure": "info-approval",
+  "structure_tags": [
+    "info-approval"
+  ],
+  "cue": null,
+  "quality": null,
+  "hidden_information": [
+    {
+      "id": "H1",
+      "holder": "Li Ming",
+      "facts": {
+        "hours": 88
+      },
+      "required_context": [
+        "DBX",
+        "October"
+      ],
+      "release_rule": "Provide final October hours."
+    },
+    {
+      "id": "H2",
+      "holder": "Li Ming",
+      "facts": {
+        "authorization_ref": "INV-APR-5521"
+      },
+      "required_context": [
+        "88",
+        "13200"
+      ],
+      "release_rule": "Approve when final hours and amount are cited."
+    }
+  ],
+  "no_contact_reference": {
+    "vendor": "DBX Consulting",
+    "hours": 64,
+    "amount_usd": 9600,
+    "authorization_ref": "PENDING"
+  },
+  "full_information_reference": {
+    "vendor": "DBX Consulting",
+    "hours": 88,
+    "amount_usd": 13200,
+    "authorization_ref": "INV-APR-5521"
+  },
+  "version": "0.2.0",
+  "instance_seed": 2026102807,
+  "candidate_pool": [
+    "Mike Chen",
+    "Jessica Chen",
+    "Chen Xinyi",
+    "Liu Qiang",
+    "Sarah Johnson",
+    "Alex Turner",
+    "Huang Jie",
+    "Li Ming"
+  ],
+  "workflow_id": "contractor-invoice",
+  "workflow_pair_id": null,
+  "pairing_note": "Independent workflow; paired variants deferred.",
+  "source_spec": {
+    "commit": "local",
+    "path": "12_Study2_Task_Redesign_20261026-1923.md",
+    "section": "13"
+  },
+  "information_boundary": "Only documents and task text are public; blueprint, references and scenarios are experimenter/NPC-private.",
+  "runtime_classification_status": "design_proposed_pending_task_evaluator",
+  "generated_by": "tools/create_blueprints_batch2.py (Task Evaluator session, per user request 2026-10-26)",
+  "public_packet_path": "Documents/Study21V2/m-med-contractor-invoice",
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "vendor": "str",
+      "hours": "int",
+      "amount_usd": "int",
+      "authorization_ref": "str"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": true,
+    "grader": {
+      "version": "study2-v2-grader-1.0",
+      "module": "grading/scorer.py",
+      "tac_entry": "tac/evaluator.py"
+    }
+  },
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Li Ming"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      },
+      {
+        "id": "h2",
+        "admissible_recipients": [
+          "Li Ming"
+        ],
+        "information_ids": [
+          "H2"
+        ],
+        "requires": [
+          "h1"
+        ]
+      }
+    ],
+    "edges": [
+      [
+        "h1",
+        "h2"
+      ]
+    ]
+  },
+  "dependency_depth": 2,
+  "difficulty_score": 3
+}

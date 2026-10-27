@@ -1,0 +1,121 @@
+{
+  "task_id": "m-med-new-hire-equipment",
+  "initial_task": "As of 2026-11-05: Prepare the equipment order for the Design team new hire (offer O-402). Save /workspace/deliverable.json with offer_id, start_date, laptop_model, total_usd, authorization_ref. Post a short summary and the file path in #engineering.\n\nWork packet: OwnCloud Documents/Study21V2/m-med-new-hire-equipment.\nOwnCloud: http://the-agent-company.com:8092\nRocketChat: http://the-agent-company.com:3000\n",
+  "public_documents": {
+    "order.md": "Offer O-402, UX role. Standard kit list (2025): model S14 at USD 1600. Start date per offer letter 2026-11-09.",
+    "equipment-policy.md": "Human Resources confirms start dates. The design lead specifies hardware for design roles. Finance approves orders citing start date and model."
+  },
+  "directory_by_condition": {
+    "R0": "# Relevant working directory\n\n## Chen Xinyi\nHuman Resources Manager\n\n## Jessica Lee\nMarketing Manager\n\n## David Wong\nFinance Director\n\n## Sophia Rodriguez\nUX Designer\n",
+    "R1": "# Relevant working directory\n\n## Chen Xinyi\nHuman Resources Manager\n\nResponsibilities: Recruitment, employee training, compensation management; Project: N/A (HR); Skills: N/A\nMaintains staff development entitlements and enrollment arrangements.\n\n## Jessica Lee\nMarketing Manager\n\nResponsibilities: Developing marketing strategies, managing brand image, organizing marketing events; Project: N/A (Marketing); Skills: N/A\nRuns campaign planning; creative production is handled with the brand team.\n\n## David Wong\nFinance Director\n\nResponsibilities: Financial planning, budget management, financial reporting; Project: N/A (Finance); Skills: N/A\nOwns the general ledger calendar and spending limits above department level.\n\n## Sophia Rodriguez\nUX Designer\n\nResponsibilities: Designing user interfaces, improving user experience, conducting user research; Project: All projects (focusing on user experience); Skills: N/A\nLeads brand and visual design work, including campaign creative files.\n"
+  },
+  "private_records": [
+    {
+      "id": "H1",
+      "holder": "Chen Xinyi",
+      "facts": {
+        "start_date": "2026-11-23"
+      },
+      "required_context": [
+        "O-402"
+      ],
+      "release_rule": "Provide the confirmed start date."
+    },
+    {
+      "id": "H2",
+      "holder": "Sophia Rodriguez",
+      "facts": {
+        "laptop_model": "P16",
+        "total_usd": 2900
+      },
+      "required_context": [
+        "O-402",
+        "UX"
+      ],
+      "release_rule": "Provide the hardware specification for the design role."
+    },
+    {
+      "id": "H3",
+      "holder": "David Wong",
+      "facts": {
+        "authorization_ref": "EQ-APR-209"
+      },
+      "required_context": [
+        "O-402",
+        "P16",
+        "2900",
+        "2026-11-23"
+      ],
+      "release_rule": "Approve only with the confirmed start date, model and total cited."
+    }
+  ],
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Chen Xinyi"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      },
+      {
+        "id": "h2",
+        "admissible_recipients": [
+          "Sophia Rodriguez"
+        ],
+        "information_ids": [
+          "H2"
+        ],
+        "requires": []
+      },
+      {
+        "id": "h3",
+        "admissible_recipients": [
+          "David Wong"
+        ],
+        "information_ids": [
+          "H3"
+        ],
+        "requires": [
+          "h1",
+          "h2"
+        ]
+      }
+    ],
+    "edges": [
+      [
+        "h1",
+        "h3"
+      ],
+      [
+        "h2",
+        "h3"
+      ]
+    ]
+  },
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "offer_id": "str",
+      "start_date": "str",
+      "laptop_model": "str",
+      "total_usd": "int",
+      "authorization_ref": "str"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": false
+  },
+  "adapter_status": "declarative v2 format; not compatible with legacy simulator without adapter",
+  "npc_behavior": "deterministic rules represented as data; execution engine not included",
+  "evaluator": null
+}

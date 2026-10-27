@@ -1,0 +1,1 @@
+Seat counts are confirmed by the low-code platform team. Plugins that handle customer data need a security review by the team that operates the API server. Purchases over USD 10000 are approved by Finance; otherwise by the CTO.

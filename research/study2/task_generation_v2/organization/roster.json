@@ -5,7 +5,7 @@
     "title": "CTO",
     "responsibilities": "Responsibilities: Technical strategy planning, R&D team leadership, new technology assessment; Project: Oversees all technical projects; Skills: N/A",
     "reporting_line_status": "not supplied by upstream; no invented reporting lines",
-    "r1_addendum": "Owns technical deployment mandates and cross-team production change windows."
+    "r1_addendum": "Sets technical direction and signs off high-risk production changes. Delegates sign-off authority when away."
   },
   {
     "name": "Li Ming",
@@ -13,7 +13,7 @@
     "title": "Database Team Project Manager",
     "responsibilities": "Responsibilities: Managing database projects, resource coordination, ensuring timely delivery; Project: JanusGraph (Graph Database); Skills: Java, distributed systems",
     "reporting_line_status": "not supplied by upstream; no invented reporting lines",
-    "r1_addendum": "Coordinates Database team operational capacity and deployment resources."
+    "r1_addendum": "Plans Database team capacity and release resourcing."
   },
   {
     "name": "Zhang Wei",
@@ -21,7 +21,7 @@
     "title": "Senior Software Engineer (Streaming Database Team)",
     "responsibilities": "Responsibilities: Developing and optimizing core streaming database functionalities; Project: RisingWave (Streaming Database); Skills: Rust, database systems",
     "reporting_line_status": "not supplied by upstream; no invented reporting lines",
-    "r1_addendum": ""
+    "r1_addendum": "Senior engineer on the Streaming DB team; acts as technical deputy for the CTO when designated."
   },
   {
     "name": "Wang Fang",
@@ -29,7 +29,7 @@
     "title": "AI Researcher (AI Team)",
     "responsibilities": "Responsibilities: Designing and implementing machine learning models, optimizing model performance; Project: OpenHands (LLM project); Skills: Python, machine learning, LLM",
     "reporting_line_status": "not supplied by upstream; no invented reporting lines",
-    "r1_addendum": "Maintains research allocation revisions and AI evaluation workload records."
+    "r1_addendum": "Tracks AI research project capacity and seat plans."
   },
   {
     "name": "Mike Chen",
@@ -37,7 +37,7 @@
     "title": "Senior Software Engineer (AI Team)",
     "responsibilities": "Responsibilities: Developing and optimizing LLM inference engines; Project: llama.cpp (LLM inference project); Skills: C++, CUDA, performance optimization",
     "reporting_line_status": "not supplied by upstream; no invented reporting lines",
-    "r1_addendum": ""
+    "r1_addendum": "Operates the inference GPU cluster and its schedules."
   },
   {
     "name": "Emily Zhou",
@@ -45,7 +45,7 @@
     "title": "Software Engineer (Web Crawler Team)",
     "responsibilities": "Responsibilities: Designing and implementing web crawler functionalities; Project: Colly (Web Crawler Framework); Skills: Go, distributed systems",
     "reporting_line_status": "not supplied by upstream; no invented reporting lines",
-    "r1_addendum": ""
+    "r1_addendum": "Owns the crawler framework and the datasets it produces."
   },
   {
     "name": "Liu Qiang",
@@ -53,7 +53,7 @@
     "title": "Quality Assurance Engineer",
     "responsibilities": "Responsibilities: Developing test strategies, executing tests, ensuring product quality; Project: All projects (focusing on testing and quality); Skills: N/A",
     "reporting_line_status": "not supplied by upstream; no invented reporting lines",
-    "r1_addendum": "Maintains release evidence and operational quality attestations."
+    "r1_addendum": "Runs cross-team test sign-offs before production releases."
   },
   {
     "name": "Priya Sharma",
@@ -61,7 +61,7 @@
     "title": "Documentation Engineer",
     "responsibilities": "Responsibilities: Writing technical documentation, maintaining wiki, improving documentation processes; Project: Documentation (Wiki); Skills: N/A",
     "reporting_line_status": "not supplied by upstream; no invented reporting lines",
-    "r1_addendum": ""
+    "r1_addendum": "Keeps the internal wiki, document templates and translation assets."
   },
   {
     "name": "Mark Johnson",
@@ -77,7 +77,7 @@
     "title": "Marketing Manager",
     "responsibilities": "Responsibilities: Developing marketing strategies, managing brand image, organizing marketing events; Project: N/A (Marketing); Skills: N/A",
     "reporting_line_status": "not supplied by upstream; no invented reporting lines",
-    "r1_addendum": "Maintains current campaign creative assets."
+    "r1_addendum": "Runs campaign planning; creative production is handled with the brand team."
   },
   {
     "name": "Chen Xinyi",
@@ -93,7 +93,7 @@
     "title": "Finance Director",
     "responsibilities": "Responsibilities: Financial planning, budget management, financial reporting; Project: N/A (Finance); Skills: N/A",
     "reporting_line_status": "not supplied by upstream; no invented reporting lines",
-    "r1_addendum": "Maintains ledger periods and expenditure mandates. Department leads handle commitments up to USD 10000; Finance handles higher amounts."
+    "r1_addendum": "Owns the general ledger calendar and spending limits above department level."
   },
   {
     "name": "Huang Jie",
@@ -101,7 +101,7 @@
     "title": "Product Manager (Search Engine Team)",
     "responsibilities": "Responsibilities: Defining product requirements, planning product roadmap, communicating with clients; Project: OpenSearch (Search Engine); Skills: N/A",
     "reporting_line_status": "not supplied by upstream; no invented reporting lines",
-    "r1_addendum": ""
+    "r1_addendum": "Sets roadmap and release timing for search and storefront products."
   },
   {
     "name": "Sophia Rodriguez",
@@ -109,7 +109,7 @@
     "title": "UX Designer",
     "responsibilities": "Responsibilities: Designing user interfaces, improving user experience, conducting user research; Project: All projects (focusing on user experience); Skills: N/A",
     "reporting_line_status": "not supplied by upstream; no invented reporting lines",
-    "r1_addendum": ""
+    "r1_addendum": "Leads brand and visual design work, including campaign creative files."
   },
   {
     "name": "Alex Turner",
@@ -117,7 +117,7 @@
     "title": "Software Engineer (Low-Code Platform Team)",
     "responsibilities": "Responsibilities: Developing low-code platform features; Project: Node-RED (Low-Code Platform); Skills: N/A",
     "reporting_line_status": "not supplied by upstream; no invented reporting lines",
-    "r1_addendum": ""
+    "r1_addendum": "Runs the low-code platform and its plugin inventory."
   },
   {
     "name": "Emma Lewis",
@@ -125,7 +125,7 @@
     "title": "Software Engineer (API Team)",
     "responsibilities": "Responsibilities: Developing API functionalities using Python; Project: API-server; Skills: N/A",
     "reporting_line_status": "not supplied by upstream; no invented reporting lines",
-    "r1_addendum": ""
+    "r1_addendum": "Handles API server operations, integrations and security testing."
   },
   {
     "name": "Jessica Chen",
@@ -133,6 +133,6 @@
     "title": "Frontend Software Engineer",
     "responsibilities": "Responsibilities: Developing user interfaces, implementing responsive designs, optimizing web performance; Project: E-commerce Website Redesign; Skills: N/A",
     "reporting_line_status": "not supplied by upstream; no invented reporting lines",
-    "r1_addendum": ""
+    "r1_addendum": "Builds the storefront frontend and its rollout settings."
   }
 ]

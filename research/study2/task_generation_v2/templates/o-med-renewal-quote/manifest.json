@@ -1,0 +1,22 @@
+{
+  "blueprint.json": "566d61eb9a696c400910e9babd10fcfa53b5c098738a97d2bbc0ec0b0ce031da",
+  "metadata.json": "619e4262b7be4d0afa82ffdab05db8547e26f6156d1e16cfdbb06db02d7d4b85",
+  "references\\full_information.json": "ef8b3f12ddf70922aa613575295431800bf9a64b020e2e68bc8a7c94d6582f8e",
+  "references\\no_contact.json": "63d0c0ec2cc870144630f29d75c9d6fd8d4f0546e8b09ab9dc7593a9dece3ddf",
+  "references\\walkthrough.md": "9a855576f4f360cd379f66be55397a00600bc5e4628bf95dd12e667923d62f01",
+  "simulator\\task.json": "75bebf239a664531701a6b08dbfdb6e63a4b14a39d8ae4d66c487d71fca86faa",
+  "tac\\dependencies.yml": "fb84075bbad26ebb051f13f87cbd16c5ad76e4635c2d82a85da704355542b68c",
+  "tac\\Dockerfile": "47106047bdf4b69e6585e463d2743a938d967e0060859d2ba927b4103b458551",
+  "tac\\documents_R0\\account-notes.md": "f0a424a968a3caaa290f5923b6760daeac589d122234b4b9d5564cc5f6f648c2",
+  "tac\\documents_R0\\commercial-policy.md": "c9669d02cbbeda48efa8487da4c06b44c93de215fb52c8a25004c7dfaa653c2b",
+  "tac\\documents_R0\\directory.md": "844aa6e4b0088aecdc646ac447c813bb96256626c14345ad13ede80cbe60c5c5",
+  "tac\\documents_R0\\pricing.md": "c275f4a9d570088c649823e291e76a90639d4cc9cfc8c437881f469a3602fad9",
+  "tac\\documents_R1\\account-notes.md": "f0a424a968a3caaa290f5923b6760daeac589d122234b4b9d5564cc5f6f648c2",
+  "tac\\documents_R1\\commercial-policy.md": "c9669d02cbbeda48efa8487da4c06b44c93de215fb52c8a25004c7dfaa653c2b",
+  "tac\\documents_R1\\directory.md": "05a9691f7ef05fc27e77737be32c20b5cabbd30fe3661f9c17fbe0b8f2f3f52c",
+  "tac\\documents_R1\\pricing.md": "c275f4a9d570088c649823e291e76a90639d4cc9cfc8c437881f469a3602fad9",
+  "tac\\Makefile": "9da8939636c6b50889f91cc564476be5b875e82f0eff2ce8c56a246622fa8283",
+  "tac\\populate_data.py": "f1fec60e1453999dd46fd6c3c410fc8780bad3b84ce5cfdf926598abc4035fdb",
+  "tac\\scenarios.json": "bd60e3268b71fd013079b8bd924495d1f429faeac472f91a44406621c1c8d81d",
+  "tac\\task.md": "2f8e8ca0336d97f59250954fb49a50d6ce897fbc131e390684625e695bf4b676"
+}

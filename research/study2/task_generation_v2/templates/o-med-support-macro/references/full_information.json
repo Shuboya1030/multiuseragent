@@ -1,0 +1,5 @@
+{
+  "macro_id": "MAC-14",
+  "eta_text": "Fixed in 2.12 on 2026-11-19",
+  "workaround": "Reindex from the console"
+}

@@ -1,0 +1,6 @@
+{
+  "endpoint": "/v2/test-search",
+  "risk_rating": "high",
+  "business_justification_id": "BJ-1188",
+  "authorization_ref": "SEC-EX-44"
+}

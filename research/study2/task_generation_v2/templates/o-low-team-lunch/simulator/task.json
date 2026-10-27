@@ -1,0 +1,61 @@
+{
+  "task_id": "o-low-team-lunch",
+  "initial_task": "As of 2026-11-05: Prepare the catering order for the Search team offsite lunch on 2026-11-18 (22 people). Save /workspace/deliverable.json with headcount, menu, vegetarian_meals, total_usd. Post a short summary and the file path in #engineering.\n\nWork packet: OwnCloud Documents/Study21V2/o-low-team-lunch.\nOwnCloud: http://the-agent-company.com:8092\nRocketChat: http://the-agent-company.com:3000\n",
+  "public_documents": {
+    "order.md": "22 attendees. Standard menu M1 at USD 25 per person; all meals regular by default. Human Resources keeps the team dietary-needs list."
+  },
+  "directory_by_condition": {
+    "R0": "# Relevant working directory\n\n## Chen Xinyi\nHuman Resources Manager\n\n## Jessica Chen\nFrontend Software Engineer\n\n## Sophia Rodriguez\nUX Designer\n\n## Alex Turner\nSoftware Engineer (Low-Code Platform Team)\n",
+    "R1": "# Relevant working directory\n\n## Chen Xinyi\nHuman Resources Manager\n\nResponsibilities: Recruitment, employee training, compensation management; Project: N/A (HR); Skills: N/A\nMaintains staff development entitlements and enrollment arrangements.\n\n## Jessica Chen\nFrontend Software Engineer\n\nResponsibilities: Developing user interfaces, implementing responsive designs, optimizing web performance; Project: E-commerce Website Redesign; Skills: N/A\nBuilds the storefront frontend and its rollout settings.\n\n## Sophia Rodriguez\nUX Designer\n\nResponsibilities: Designing user interfaces, improving user experience, conducting user research; Project: All projects (focusing on user experience); Skills: N/A\nLeads brand and visual design work, including campaign creative files.\n\n## Alex Turner\nSoftware Engineer (Low-Code Platform Team)\n\nResponsibilities: Developing low-code platform features; Project: Node-RED (Low-Code Platform); Skills: N/A\nRuns the low-code platform and its plugin inventory.\n"
+  },
+  "private_records": [
+    {
+      "id": "H1",
+      "holder": "Chen Xinyi",
+      "facts": {
+        "vegetarian_meals": 6
+      },
+      "required_context": [
+        "Search team",
+        "lunch"
+      ],
+      "release_rule": "Provide the dietary count. The standard order remains valid."
+    }
+  ],
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Chen Xinyi"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      }
+    ],
+    "edges": []
+  },
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "headcount": "int",
+      "menu": "str",
+      "vegetarian_meals": "int",
+      "total_usd": "int"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": false
+  },
+  "adapter_status": "declarative v2 format; not compatible with legacy simulator without adapter",
+  "npc_behavior": "deterministic rules represented as data; execution engine not included",
+  "evaluator": null
+}

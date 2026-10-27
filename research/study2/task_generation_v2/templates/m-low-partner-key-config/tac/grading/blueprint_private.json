@@ -1,0 +1,114 @@
+{
+  "task_id": "m-low-partner-key-config",
+  "help_class": "Must-help",
+  "target_level": "Low",
+  "N": 8,
+  "feature_scores": [
+    1,
+    0,
+    0,
+    1
+  ],
+  "domain": "security",
+  "prompt": "As of 2026-11-05: Prepare the integration config for partner Orbit. Save /workspace/deliverable.json with partner, key_alias, scope, expires_on. Post a short summary and the file path in #engineering.",
+  "documents": {
+    "integration.md": "Partner Orbit uses the API server. Config sheet exported 2026-08-03 lists key alias ORB-K1, scope read:search, expiry 2026-11-30. Keys rotate quarterly.",
+    "service-ownership.md": "Integration settings for each service are maintained by the team that builds that service."
+  },
+  "inference_evidence": [
+    "Map \"team that builds that service\" (API server) to the API team via the directory."
+  ],
+  "classification_rationale": "Quarterly rotation makes the August export stale; current alias held by the API team.",
+  "separation": "aligned",
+  "structure": "single-information",
+  "structure_tags": [
+    "single-information"
+  ],
+  "cue": null,
+  "quality": null,
+  "hidden_information": [
+    {
+      "id": "H1",
+      "holder": "Emma Lewis",
+      "facts": {
+        "key_alias": "ORB-K3",
+        "expires_on": "2027-02-28"
+      },
+      "required_context": [
+        "Orbit"
+      ],
+      "release_rule": "Provide the current Orbit key alias and expiry. Scope is unchanged."
+    }
+  ],
+  "no_contact_reference": {
+    "partner": "Orbit",
+    "key_alias": "ORB-K1",
+    "scope": "read:search",
+    "expires_on": "2026-11-30"
+  },
+  "full_information_reference": {
+    "partner": "Orbit",
+    "key_alias": "ORB-K3",
+    "scope": "read:search",
+    "expires_on": "2027-02-28"
+  },
+  "version": "0.2.0",
+  "instance_seed": 2026102801,
+  "candidate_pool": [
+    "Emma Lewis",
+    "Sophia Rodriguez",
+    "Huang Jie",
+    "Chen Xinyi",
+    "Liu Qiang",
+    "Mark Johnson",
+    "Wang Fang",
+    "Sarah Johnson"
+  ],
+  "workflow_id": "partner-key-config",
+  "workflow_pair_id": null,
+  "pairing_note": "Independent workflow; paired variants deferred.",
+  "source_spec": {
+    "commit": "local",
+    "path": "12_Study2_Task_Redesign_20261026-1923.md",
+    "section": "13"
+  },
+  "information_boundary": "Only documents and task text are public; blueprint, references and scenarios are experimenter/NPC-private.",
+  "runtime_classification_status": "design_proposed_pending_task_evaluator",
+  "generated_by": "tools/create_blueprints_batch2.py (Task Evaluator session, per user request 2026-10-26)",
+  "public_packet_path": "Documents/Study21V2/m-low-partner-key-config",
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "partner": "str",
+      "key_alias": "str",
+      "scope": "str",
+      "expires_on": "str"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": false
+  },
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Emma Lewis"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      }
+    ],
+    "edges": []
+  },
+  "dependency_depth": 1,
+  "difficulty_score": 2
+}

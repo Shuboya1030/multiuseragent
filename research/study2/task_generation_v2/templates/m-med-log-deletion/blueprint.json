@@ -1,0 +1,154 @@
+{
+  "task_id": "m-med-log-deletion",
+  "help_class": "Must-help",
+  "target_level": "Medium",
+  "N": 4,
+  "feature_scores": [
+    0,
+    1,
+    0,
+    2
+  ],
+  "domain": "data",
+  "prompt": "As of 2026-11-05: Prepare the deletion request for the Colly 2025 crawl logs. Save /workspace/deliverable.json with dataset, retention_class, delete_after, authorization_ref. Post a short summary and the file path in #engineering.",
+  "documents": {
+    "request.md": "Colly 2025 crawl logs. Data map from 2026-03 lists retention class R2 (12 months).",
+    "data-ownership.md": "Retention classes for crawl data are set and approved by the data owner of the crawler. Crawler data ownership moved from the AI inference team to the web crawler team in July 2026."
+  },
+  "inference_evidence": [
+    "Ownership moved to the web crawler team.",
+    "Crawler data owner = crawler framework engineer."
+  ],
+  "classification_rationale": "Data map is stale; ownership transfer must be followed.",
+  "separation": "aligned",
+  "structure": "referral",
+  "structure_tags": [
+    "referral",
+    "info-approval"
+  ],
+  "cue": null,
+  "quality": null,
+  "hidden_information": [
+    {
+      "id": "H1",
+      "holder": "Emily Zhou",
+      "facts": {
+        "retention_class": "R3",
+        "delete_after": "2026-12-31"
+      },
+      "required_context": [
+        "Colly",
+        "2025 logs"
+      ],
+      "release_rule": "Provide the current retention class and deletion date."
+    },
+    {
+      "id": "H2",
+      "holder": "Emily Zhou",
+      "facts": {
+        "authorization_ref": "DEL-APR-12"
+      },
+      "required_context": [
+        "R3",
+        "2026-12-31"
+      ],
+      "release_rule": "Approve deletion when class and date are cited."
+    },
+    {
+      "id": "D1",
+      "holder": "Mike Chen",
+      "facts": {},
+      "required_context": [],
+      "release_rule": "Your team owned crawl data before July. If asked, say ownership moved to the web crawler team."
+    }
+  ],
+  "no_contact_reference": {
+    "dataset": "Colly 2025 crawl logs",
+    "retention_class": "R2",
+    "delete_after": "2026-03-31",
+    "authorization_ref": "PENDING"
+  },
+  "full_information_reference": {
+    "dataset": "Colly 2025 crawl logs",
+    "retention_class": "R3",
+    "delete_after": "2026-12-31",
+    "authorization_ref": "DEL-APR-12"
+  },
+  "version": "0.2.0",
+  "instance_seed": 2026102817,
+  "candidate_pool": [
+    "Emma Lewis",
+    "Mike Chen",
+    "Emily Zhou",
+    "Alex Turner"
+  ],
+  "workflow_id": "log-deletion",
+  "workflow_pair_id": null,
+  "pairing_note": "Independent workflow; paired variants deferred.",
+  "source_spec": {
+    "commit": "local",
+    "path": "12_Study2_Task_Redesign_20261026-1923.md",
+    "section": "13"
+  },
+  "information_boundary": "Only documents and task text are public; blueprint, references and scenarios are experimenter/NPC-private.",
+  "runtime_classification_status": "design_proposed_pending_task_evaluator",
+  "generated_by": "tools/create_blueprints_batch2.py (Task Evaluator session, per user request 2026-10-26)",
+  "public_packet_path": "Documents/Study21V2/m-med-log-deletion",
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "dataset": "str",
+      "retention_class": "str",
+      "delete_after": "str",
+      "authorization_ref": "str"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": true,
+    "grader": {
+      "version": "study2-v2-grader-1.0",
+      "module": "grading/scorer.py",
+      "tac_entry": "tac/evaluator.py"
+    }
+  },
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Emily Zhou"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      },
+      {
+        "id": "h2",
+        "admissible_recipients": [
+          "Emily Zhou"
+        ],
+        "information_ids": [
+          "H2"
+        ],
+        "requires": [
+          "h1"
+        ]
+      }
+    ],
+    "edges": [
+      [
+        "h1",
+        "h2"
+      ]
+    ]
+  },
+  "dependency_depth": 2,
+  "difficulty_score": 3
+}

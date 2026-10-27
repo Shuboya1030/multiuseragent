@@ -1,0 +1,96 @@
+{
+  "task_id": "m-med-campaign-spend",
+  "initial_task": "As of 2026-11-05: Prepare the purchase request for the Q4 webinar campaign media spend. Save /workspace/deliverable.json with campaign, spend_usd, signed_by, authorization_ref. Post a short summary and the file path in #engineering.\n\nWork packet: OwnCloud Documents/Study21V2/m-med-campaign-spend.\nOwnCloud: http://the-agent-company.com:8092\nRocketChat: http://the-agent-company.com:3000\n",
+  "public_documents": {
+    "plan.md": "Q4 webinar campaign. Early plan from 2026-09 lists USD 4200 media spend.",
+    "spend-policy.md": "Campaign spend is set by marketing. Spend up to USD 5000 is approved by the Sales Director; above that, by the Finance Director."
+  },
+  "directory_by_condition": {
+    "R0": "# Relevant working directory\n\n## Huang Jie\nProduct Manager (Search Engine Team)\n\n## Mark Johnson\nSales Director\n\n## David Wong\nFinance Director\n\n## Jessica Lee\nMarketing Manager\n",
+    "R1": "# Relevant working directory\n\n## Huang Jie\nProduct Manager (Search Engine Team)\n\nResponsibilities: Defining product requirements, planning product roadmap, communicating with clients; Project: OpenSearch (Search Engine); Skills: N/A\nSets roadmap and release timing for search and storefront products.\n\n## Mark Johnson\nSales Director\n\nResponsibilities: Developing sales strategies, managing sales team, expanding client relationships; Project: N/A (Sales); Skills: N/A\nMaintains commercial event entitlements and customer-facing meeting arrangements.\n\n## David Wong\nFinance Director\n\nResponsibilities: Financial planning, budget management, financial reporting; Project: N/A (Finance); Skills: N/A\nOwns the general ledger calendar and spending limits above department level.\n\n## Jessica Lee\nMarketing Manager\n\nResponsibilities: Developing marketing strategies, managing brand image, organizing marketing events; Project: N/A (Marketing); Skills: N/A\nRuns campaign planning; creative production is handled with the brand team.\n"
+  },
+  "private_records": [
+    {
+      "id": "H1",
+      "holder": "Jessica Lee",
+      "facts": {
+        "spend_usd": 7300
+      },
+      "required_context": [
+        "Q4 webinar"
+      ],
+      "release_rule": "Provide the current campaign spend."
+    },
+    {
+      "id": "H2",
+      "holder": "David Wong",
+      "facts": {
+        "authorization_ref": "MKT-APR-81"
+      },
+      "required_context": [
+        "7300"
+      ],
+      "release_rule": "Approve only with the current spend cited."
+    },
+    {
+      "id": "D1",
+      "holder": "Mark Johnson",
+      "facts": {},
+      "required_context": [],
+      "release_rule": "You approve campaign spend up to USD 5000 only. For more, say Finance approves; issue nothing."
+    }
+  ],
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Jessica Lee"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      },
+      {
+        "id": "h2",
+        "admissible_recipients": [
+          "David Wong"
+        ],
+        "information_ids": [
+          "H2"
+        ],
+        "requires": [
+          "h1"
+        ]
+      }
+    ],
+    "edges": [
+      [
+        "h1",
+        "h2"
+      ]
+    ]
+  },
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "campaign": "str",
+      "spend_usd": "int",
+      "signed_by": "str",
+      "authorization_ref": "str"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": false
+  },
+  "adapter_status": "declarative v2 format; not compatible with legacy simulator without adapter",
+  "npc_behavior": "deterministic rules represented as data; execution engine not included",
+  "evaluator": null
+}

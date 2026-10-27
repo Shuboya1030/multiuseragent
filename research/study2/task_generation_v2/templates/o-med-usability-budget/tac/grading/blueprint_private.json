@@ -1,0 +1,118 @@
+{
+  "task_id": "o-med-usability-budget",
+  "help_class": "Optional-help",
+  "target_level": "Medium",
+  "N": 8,
+  "feature_scores": [
+    1,
+    1,
+    1,
+    1
+  ],
+  "domain": "design",
+  "prompt": "As of 2026-11-05: Prepare the budget for 15 usability interviews. Save /workspace/deliverable.json with participants, external_recruits, incentive_total_usd. Post a short summary and the file path in #engineering.",
+  "documents": {
+    "research.md": "Default: recruit all 15 externally at USD 100 each (USD 1500). The design team maintains research panels."
+  },
+  "inference_evidence": [
+    "Design team maps to UX Designer."
+  ],
+  "classification_rationale": "External recruiting valid; panel credits cut cost.",
+  "separation": null,
+  "structure": null,
+  "structure_tags": [],
+  "cue": {
+    "documents": [
+      "research.md"
+    ],
+    "description": "Implicit: panels exist."
+  },
+  "quality": {
+    "dimension": "incentive_total_usd",
+    "baseline": 1500,
+    "full_information": 500,
+    "minimum_improvement": 300,
+    "constraints": []
+  },
+  "hidden_information": [
+    {
+      "id": "H1",
+      "holder": "Sophia Rodriguez",
+      "facts": {
+        "panel_credits": 10
+      },
+      "required_context": [
+        "usability"
+      ],
+      "release_rule": "Provide panel credits. External recruiting remains valid."
+    }
+  ],
+  "no_contact_reference": {
+    "participants": 15,
+    "external_recruits": 15,
+    "incentive_total_usd": 1500
+  },
+  "full_information_reference": {
+    "participants": 15,
+    "external_recruits": 5,
+    "incentive_total_usd": 500
+  },
+  "version": "0.2.0",
+  "instance_seed": 2026102841,
+  "candidate_pool": [
+    "Huang Jie",
+    "Mike Chen",
+    "Jessica Chen",
+    "Wang Fang",
+    "Priya Sharma",
+    "Sophia Rodriguez",
+    "Sarah Johnson",
+    "Alex Turner"
+  ],
+  "workflow_id": "usability-budget",
+  "workflow_pair_id": null,
+  "pairing_note": "Independent workflow; paired variants deferred.",
+  "source_spec": {
+    "commit": "local",
+    "path": "12_Study2_Task_Redesign_20261026-1923.md",
+    "section": "13"
+  },
+  "information_boundary": "Only documents and task text are public; blueprint, references and scenarios are experimenter/NPC-private.",
+  "runtime_classification_status": "design_proposed_pending_task_evaluator",
+  "generated_by": "tools/create_blueprints_batch2.py (Task Evaluator session, per user request 2026-10-26)",
+  "public_packet_path": "Documents/Study21V2/o-med-usability-budget",
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "participants": "int",
+      "external_recruits": "int",
+      "incentive_total_usd": "int"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": false
+  },
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Sophia Rodriguez"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      }
+    ],
+    "edges": []
+  },
+  "dependency_depth": 1,
+  "difficulty_score": 4
+}

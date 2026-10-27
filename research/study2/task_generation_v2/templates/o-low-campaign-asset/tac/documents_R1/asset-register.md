@@ -1,0 +1,1 @@
+Asset register export (2026-09-30): evergreen-v2.svg | campaign: any | license valid through 2027-06-30. Note: assets produced after the export date are added to the register at the next quarterly export.

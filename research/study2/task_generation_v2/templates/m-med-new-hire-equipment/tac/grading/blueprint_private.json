@@ -1,0 +1,171 @@
+{
+  "task_id": "m-med-new-hire-equipment",
+  "help_class": "Must-help",
+  "target_level": "Medium",
+  "N": 4,
+  "feature_scores": [
+    0,
+    1,
+    1,
+    1
+  ],
+  "domain": "it-procurement",
+  "prompt": "As of 2026-11-05: Prepare the equipment order for the Design team new hire (offer O-402). Save /workspace/deliverable.json with offer_id, start_date, laptop_model, total_usd, authorization_ref. Post a short summary and the file path in #engineering.",
+  "documents": {
+    "order.md": "Offer O-402, UX role. Standard kit list (2025): model S14 at USD 1600. Start date per offer letter 2026-11-09.",
+    "equipment-policy.md": "Human Resources confirms start dates. The design lead specifies hardware for design roles. Finance approves orders citing start date and model."
+  },
+  "inference_evidence": [
+    "Design lead maps to the UX Designer."
+  ],
+  "classification_rationale": "Two facts from two colleagues must be joined before Finance approves.",
+  "separation": "separated",
+  "structure": "parallel-join",
+  "structure_tags": [
+    "parallel-join"
+  ],
+  "cue": null,
+  "quality": null,
+  "hidden_information": [
+    {
+      "id": "H1",
+      "holder": "Chen Xinyi",
+      "facts": {
+        "start_date": "2026-11-23"
+      },
+      "required_context": [
+        "O-402"
+      ],
+      "release_rule": "Provide the confirmed start date."
+    },
+    {
+      "id": "H2",
+      "holder": "Sophia Rodriguez",
+      "facts": {
+        "laptop_model": "P16",
+        "total_usd": 2900
+      },
+      "required_context": [
+        "O-402",
+        "UX"
+      ],
+      "release_rule": "Provide the hardware specification for the design role."
+    },
+    {
+      "id": "H3",
+      "holder": "David Wong",
+      "facts": {
+        "authorization_ref": "EQ-APR-209"
+      },
+      "required_context": [
+        "O-402",
+        "P16",
+        "2900",
+        "2026-11-23"
+      ],
+      "release_rule": "Approve only with the confirmed start date, model and total cited."
+    }
+  ],
+  "no_contact_reference": {
+    "offer_id": "O-402",
+    "start_date": "2026-11-09",
+    "laptop_model": "S14",
+    "total_usd": 1600,
+    "authorization_ref": "PENDING"
+  },
+  "full_information_reference": {
+    "offer_id": "O-402",
+    "start_date": "2026-11-23",
+    "laptop_model": "P16",
+    "total_usd": 2900,
+    "authorization_ref": "EQ-APR-209"
+  },
+  "version": "0.2.0",
+  "instance_seed": 2026102812,
+  "candidate_pool": [
+    "Chen Xinyi",
+    "Jessica Lee",
+    "David Wong",
+    "Sophia Rodriguez"
+  ],
+  "workflow_id": "new-hire-equipment",
+  "workflow_pair_id": null,
+  "pairing_note": "Independent workflow; paired variants deferred.",
+  "source_spec": {
+    "commit": "local",
+    "path": "12_Study2_Task_Redesign_20261026-1923.md",
+    "section": "13"
+  },
+  "information_boundary": "Only documents and task text are public; blueprint, references and scenarios are experimenter/NPC-private.",
+  "runtime_classification_status": "design_proposed_pending_task_evaluator",
+  "generated_by": "tools/create_blueprints_batch2.py (Task Evaluator session, per user request 2026-10-26)",
+  "public_packet_path": "Documents/Study21V2/m-med-new-hire-equipment",
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "offer_id": "str",
+      "start_date": "str",
+      "laptop_model": "str",
+      "total_usd": "int",
+      "authorization_ref": "str"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": false
+  },
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Chen Xinyi"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      },
+      {
+        "id": "h2",
+        "admissible_recipients": [
+          "Sophia Rodriguez"
+        ],
+        "information_ids": [
+          "H2"
+        ],
+        "requires": []
+      },
+      {
+        "id": "h3",
+        "admissible_recipients": [
+          "David Wong"
+        ],
+        "information_ids": [
+          "H3"
+        ],
+        "requires": [
+          "h1",
+          "h2"
+        ]
+      }
+    ],
+    "edges": [
+      [
+        "h1",
+        "h3"
+      ],
+      [
+        "h2",
+        "h3"
+      ]
+    ]
+  },
+  "dependency_depth": 2,
+  "difficulty_score": 3
+}

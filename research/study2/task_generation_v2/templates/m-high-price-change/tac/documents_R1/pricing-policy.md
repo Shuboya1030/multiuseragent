@@ -1,0 +1,1 @@
+Final price and discount are set by the search product manager. Finance checks margin citing price and discount. Discounts above 20% need CTO approval; otherwise the Sales Director approves, citing the margin check.

@@ -1,0 +1,183 @@
+{
+  "task_id": "m-high-db-migration",
+  "help_class": "Must-help",
+  "target_level": "High",
+  "N": 16,
+  "feature_scores": [
+    2,
+    2,
+    1,
+    1
+  ],
+  "domain": "service-operations",
+  "prompt": "As of 2026-11-05: Prepare the RisingWave schema migration record. Save /workspace/deliverable.json with migration_id, downtime_minutes, test_signoff, authorization_ref. Post a short summary and the file path in #engineering.",
+  "documents": {
+    "plan.md": "RisingWave migration plan M-14 (2026-09) estimates 30 minutes downtime.",
+    "migration-policy.md": "Migration scripts and downtime estimates are produced by the engineer who develops the streaming database core. Cross-team QA signs off against the current migration ID and downtime. The database project manager approves migrations with under 60 minutes of downtime."
+  },
+  "inference_evidence": [
+    "Streaming core engineer found via directory project RisingWave."
+  ],
+  "classification_rationale": "Three-step chain; each step cites the previous record.",
+  "separation": "separated",
+  "structure": "chain3",
+  "structure_tags": [
+    "chain3"
+  ],
+  "cue": null,
+  "quality": null,
+  "hidden_information": [
+    {
+      "id": "H1",
+      "holder": "Zhang Wei",
+      "facts": {
+        "migration_id": "M-17",
+        "downtime_minutes": 45
+      },
+      "required_context": [
+        "RisingWave"
+      ],
+      "release_rule": "Provide the current migration ID and downtime."
+    },
+    {
+      "id": "H2",
+      "holder": "Liu Qiang",
+      "facts": {
+        "test_signoff": "QA-M17-45"
+      },
+      "required_context": [
+        "M-17",
+        "45"
+      ],
+      "release_rule": "Sign off only against M-17 and 45 minutes."
+    },
+    {
+      "id": "H3",
+      "holder": "Li Ming",
+      "facts": {
+        "authorization_ref": "DB-APR-317"
+      },
+      "required_context": [
+        "QA-M17-45"
+      ],
+      "release_rule": "Approve only with the QA sign-off cited."
+    }
+  ],
+  "no_contact_reference": {
+    "migration_id": "M-14",
+    "downtime_minutes": 30,
+    "test_signoff": "PENDING",
+    "authorization_ref": "PENDING"
+  },
+  "full_information_reference": {
+    "migration_id": "M-17",
+    "downtime_minutes": 45,
+    "test_signoff": "QA-M17-45",
+    "authorization_ref": "DB-APR-317"
+  },
+  "version": "0.2.0",
+  "instance_seed": 2026102819,
+  "candidate_pool": [
+    "Sarah Johnson",
+    "Mike Chen",
+    "Chen Xinyi",
+    "Jessica Chen",
+    "Huang Jie",
+    "Zhang Wei",
+    "Alex Turner",
+    "Li Ming",
+    "David Wong",
+    "Liu Qiang",
+    "Priya Sharma",
+    "Mark Johnson",
+    "Sophia Rodriguez",
+    "Jessica Lee",
+    "Wang Fang",
+    "Emma Lewis"
+  ],
+  "workflow_id": "db-migration",
+  "workflow_pair_id": null,
+  "pairing_note": "Independent workflow; paired variants deferred.",
+  "source_spec": {
+    "commit": "local",
+    "path": "12_Study2_Task_Redesign_20261026-1923.md",
+    "section": "13"
+  },
+  "information_boundary": "Only documents and task text are public; blueprint, references and scenarios are experimenter/NPC-private.",
+  "runtime_classification_status": "design_proposed_pending_task_evaluator",
+  "generated_by": "tools/create_blueprints_batch2.py (Task Evaluator session, per user request 2026-10-26)",
+  "public_packet_path": "Documents/Study21V2/m-high-db-migration",
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "migration_id": "str",
+      "downtime_minutes": "int",
+      "test_signoff": "str",
+      "authorization_ref": "str"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": true,
+    "grader": {
+      "version": "study2-v2-grader-1.0",
+      "module": "grading/scorer.py",
+      "tac_entry": "tac/evaluator.py"
+    }
+  },
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Zhang Wei"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      },
+      {
+        "id": "h2",
+        "admissible_recipients": [
+          "Liu Qiang"
+        ],
+        "information_ids": [
+          "H2"
+        ],
+        "requires": [
+          "h1"
+        ]
+      },
+      {
+        "id": "h3",
+        "admissible_recipients": [
+          "Li Ming"
+        ],
+        "information_ids": [
+          "H3"
+        ],
+        "requires": [
+          "h2"
+        ]
+      }
+    ],
+    "edges": [
+      [
+        "h1",
+        "h2"
+      ],
+      [
+        "h2",
+        "h3"
+      ]
+    ]
+  },
+  "dependency_depth": 3,
+  "difficulty_score": 6
+}

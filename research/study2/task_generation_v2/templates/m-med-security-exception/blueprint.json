@@ -1,0 +1,173 @@
+{
+  "task_id": "m-med-security-exception",
+  "help_class": "Must-help",
+  "target_level": "Medium",
+  "N": 8,
+  "feature_scores": [
+    1,
+    1,
+    1,
+    1
+  ],
+  "domain": "security",
+  "prompt": "As of 2026-11-05: Prepare the security exception record for giving partner Orbit access to the /v2/test-search endpoint. Save /workspace/deliverable.json with endpoint, risk_rating, business_justification_id, authorization_ref. Post a short summary and the file path in #engineering.",
+  "documents": {
+    "request.md": "Partner Orbit requests access to /v2/test-search. Exception template from 2025 lists risk rating medium.",
+    "exception-policy.md": "Risk ratings for API endpoints are assessed by the team that operates the API server. Business justification for partner access is recorded by the product manager of the affected product. The CTO approves exceptions citing both."
+  },
+  "inference_evidence": [
+    "API server operator and search PM found via directory."
+  ],
+  "classification_rationale": "Two independent records must be joined for the approval.",
+  "separation": "separated",
+  "structure": "parallel-join",
+  "structure_tags": [
+    "parallel-join"
+  ],
+  "cue": null,
+  "quality": null,
+  "hidden_information": [
+    {
+      "id": "H1",
+      "holder": "Emma Lewis",
+      "facts": {
+        "risk_rating": "high"
+      },
+      "required_context": [
+        "/v2/test-search"
+      ],
+      "release_rule": "Provide the current risk rating."
+    },
+    {
+      "id": "H2",
+      "holder": "Huang Jie",
+      "facts": {
+        "business_justification_id": "BJ-1188"
+      },
+      "required_context": [
+        "Orbit"
+      ],
+      "release_rule": "Provide the business justification record."
+    },
+    {
+      "id": "H3",
+      "holder": "Sarah Johnson",
+      "facts": {
+        "authorization_ref": "SEC-EX-44"
+      },
+      "required_context": [
+        "high",
+        "BJ-1188"
+      ],
+      "release_rule": "Approve only with the current risk rating and justification cited."
+    }
+  ],
+  "no_contact_reference": {
+    "endpoint": "/v2/test-search",
+    "risk_rating": "medium",
+    "business_justification_id": "PENDING",
+    "authorization_ref": "PENDING"
+  },
+  "full_information_reference": {
+    "endpoint": "/v2/test-search",
+    "risk_rating": "high",
+    "business_justification_id": "BJ-1188",
+    "authorization_ref": "SEC-EX-44"
+  },
+  "version": "0.2.0",
+  "instance_seed": 2026102815,
+  "candidate_pool": [
+    "Sarah Johnson",
+    "Huang Jie",
+    "Sophia Rodriguez",
+    "David Wong",
+    "Liu Qiang",
+    "Wang Fang",
+    "Emma Lewis",
+    "Li Ming"
+  ],
+  "workflow_id": "security-exception",
+  "workflow_pair_id": null,
+  "pairing_note": "Independent workflow; paired variants deferred.",
+  "source_spec": {
+    "commit": "local",
+    "path": "12_Study2_Task_Redesign_20261026-1923.md",
+    "section": "13"
+  },
+  "information_boundary": "Only documents and task text are public; blueprint, references and scenarios are experimenter/NPC-private.",
+  "runtime_classification_status": "design_proposed_pending_task_evaluator",
+  "generated_by": "tools/create_blueprints_batch2.py (Task Evaluator session, per user request 2026-10-26)",
+  "public_packet_path": "Documents/Study21V2/m-med-security-exception",
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "endpoint": "str",
+      "risk_rating": "str",
+      "business_justification_id": "str",
+      "authorization_ref": "str"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": true,
+    "grader": {
+      "version": "study2-v2-grader-1.0",
+      "module": "grading/scorer.py",
+      "tac_entry": "tac/evaluator.py"
+    }
+  },
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Emma Lewis"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      },
+      {
+        "id": "h2",
+        "admissible_recipients": [
+          "Huang Jie"
+        ],
+        "information_ids": [
+          "H2"
+        ],
+        "requires": []
+      },
+      {
+        "id": "h3",
+        "admissible_recipients": [
+          "Sarah Johnson"
+        ],
+        "information_ids": [
+          "H3"
+        ],
+        "requires": [
+          "h1",
+          "h2"
+        ]
+      }
+    ],
+    "edges": [
+      [
+        "h1",
+        "h3"
+      ],
+      [
+        "h2",
+        "h3"
+      ]
+    ]
+  },
+  "dependency_depth": 2,
+  "difficulty_score": 4
+}

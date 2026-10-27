@@ -1,0 +1,20 @@
+{
+  "blueprint.json": "dd3b815c56da5204a938e186e722f6ab9c6bbe5377b253981167293061827623",
+  "metadata.json": "75846f2c56c0be31c543ad5d9e88d2f3a6174d9acb9111029a3ec09fb4433b6b",
+  "references\\full_information.json": "dcec30974586191d46904d78c53896c03299879cd044c3e1b9972b39add19daf",
+  "references\\no_contact.json": "102246e43cf015d157b8ed81fd90597229b29cea5fed8cb1e25ecc2d6f6f5c44",
+  "references\\walkthrough.md": "2040714bf74e84356b267ba482bc2aea22b8cd3f3ec5ed5094462b20245b9363",
+  "simulator\\task.json": "234b03f1c28dff8e164fa9a1d9260e9f43b3e9d53e925fef278faa5917984984",
+  "tac\\dependencies.yml": "fb84075bbad26ebb051f13f87cbd16c5ad76e4635c2d82a85da704355542b68c",
+  "tac\\Dockerfile": "47106047bdf4b69e6585e463d2743a938d967e0060859d2ba927b4103b458551",
+  "tac\\documents_R0\\directory.md": "72c678921151db50ad34c9a6a1038e234e806b01f8654cdeaff74b2512d674fd",
+  "tac\\documents_R0\\factsheet.md": "3b74afc5da388ef2228d928443d4907f2cc47b24a90d0f9d8f5eadf0cdb00661",
+  "tac\\documents_R0\\marketing-roles.md": "cdfcf2ca9de4f372c4bd5bcbf1ec3d6697e53c49cffbefc47b9d0229b6ec0f4c",
+  "tac\\documents_R1\\directory.md": "d925cec0508880aa39ce9083909f6fc45ec13ad8440614c3cf228e742bd3701f",
+  "tac\\documents_R1\\factsheet.md": "3b74afc5da388ef2228d928443d4907f2cc47b24a90d0f9d8f5eadf0cdb00661",
+  "tac\\documents_R1\\marketing-roles.md": "cdfcf2ca9de4f372c4bd5bcbf1ec3d6697e53c49cffbefc47b9d0229b6ec0f4c",
+  "tac\\Makefile": "2e2eb75b760d8deab22f3638c58e236939deb68f5c287b87b42996ac44cc9de2",
+  "tac\\populate_data.py": "21b6ea5a214b8ba7fa3dc144e62a44798fd13f76f6e36386e4dac5619fcafbdd",
+  "tac\\scenarios.json": "d83b92d7949272db562040dce7a82c808ba0afbaa5fbf8e465133619a109c980",
+  "tac\\task.md": "f0fa7c0040a1231211b64eba7f81e352c62e5e1b43cc74f3a5da94437f55c3a4"
+}

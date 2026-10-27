@@ -66,3 +66,10 @@
 **Open questions**: Can MIE/iSchool flex students have CS co-supervisor? Fall 2027 recruiting? On-campus expectations for Vancouver-based student? IRCC/work-permit vs full-time registration.
 
 **Contacted (informational)**: Michael Glueck (Autodesk Research; did UofT CS PhD while employed) — message drafted 2026-10-23.
+
+## Roles across sessions (user decision 2026-10-26)
+- **Task-creation/experiment agent (other session):** generates Study 2 tasks (Must-help / Optional-help, 30 each) and runs experiments. Owns `research/study2/**` task packages and runs.
+- **This session = Task Evaluator + paper writing/architecture.** Evaluates each generated task against `12_Study2_Task_Redesign_*.md` §13–§14 (well-formedness, classification via reference solutions/ablation, complexity recomputation, realism, set-level distribution). Default: writes evaluation reports only. 2026-10-26 user explicitly asked this session to (a) apply batch-1 fixes, (b) generate the remaining 54 tasks, (c) write the generic grader — done in `research/study2/task_generation_v2/` (tools/apply_eval_batch1.py, tools/create_blueprints_batch2.py, grading/).
+- Task packages: the canonical one is the experiment agent's `tac_package/` (+ `design/blueprint.json`). The root-level files in `tac_example/must-securescan-purchase/` (task.md, scenarios.json, evaluator.py, owncloud_docs/, etc.) are this session's earlier draft — superseded, not canonical.
+- Model for experiments: user said **do not use Haiku; use OpenAI models** (2026-10-26). Experiment agent's first smoke run used Haiku — flag for the user.
+| Study 2 v2 task set (60) + grader | research/study2/task_generation_v2/ (templates/, task_matrix.csv, grading/README.md, evaluation/) | grader selftest 289/289; Docker builds for 54 new tasks + live NPC tests pending; Optional T = 0.5+0.5*quality (open for user decision) |

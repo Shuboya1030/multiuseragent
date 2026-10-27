@@ -1,0 +1,61 @@
+{
+  "task_id": "o-low-demo-shipment",
+  "initial_task": "As of 2026-11-05: Prepare the shipping order for demo hardware to customer Fabrikam. Save /workspace/deliverable.json with customer, carrier, ship_date, delivery_days. Post a short summary and the file path in #engineering.\n\nWork packet: OwnCloud Documents/Study21V2/o-low-demo-shipment.\nOwnCloud: http://the-agent-company.com:8092\nRocketChat: http://the-agent-company.com:3000\n",
+  "public_documents": {
+    "shipping.md": "Default carrier GroundCo, 6 business days. Ship date 2026-11-12. Fabrikam demo on 2026-11-20. Account owner for Fabrikam: Sales Director."
+  },
+  "directory_by_condition": {
+    "R0": "# Relevant working directory\n\n## David Wong\nFinance Director\n\n## Alex Turner\nSoftware Engineer (Low-Code Platform Team)\n\n## Mark Johnson\nSales Director\n\n## Huang Jie\nProduct Manager (Search Engine Team)\n",
+    "R1": "# Relevant working directory\n\n## David Wong\nFinance Director\n\nResponsibilities: Financial planning, budget management, financial reporting; Project: N/A (Finance); Skills: N/A\nOwns the general ledger calendar and spending limits above department level.\n\n## Alex Turner\nSoftware Engineer (Low-Code Platform Team)\n\nResponsibilities: Developing low-code platform features; Project: Node-RED (Low-Code Platform); Skills: N/A\nRuns the low-code platform and its plugin inventory.\n\n## Mark Johnson\nSales Director\n\nResponsibilities: Developing sales strategies, managing sales team, expanding client relationships; Project: N/A (Sales); Skills: N/A\nMaintains commercial event entitlements and customer-facing meeting arrangements.\n\n## Huang Jie\nProduct Manager (Search Engine Team)\n\nResponsibilities: Defining product requirements, planning product roadmap, communicating with clients; Project: OpenSearch (Search Engine); Skills: N/A\nSets roadmap and release timing for search and storefront products.\n"
+  },
+  "private_records": [
+    {
+      "id": "H1",
+      "holder": "Mark Johnson",
+      "facts": {
+        "carrier": "FastFreight",
+        "delivery_days": 3
+      },
+      "required_context": [
+        "Fabrikam"
+      ],
+      "release_rule": "Provide the carrier Fabrikam receiving accepts at the same price. GroundCo remains valid."
+    }
+  ],
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Mark Johnson"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      }
+    ],
+    "edges": []
+  },
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "customer": "str",
+      "carrier": "str",
+      "ship_date": "str",
+      "delivery_days": "int"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": false
+  },
+  "adapter_status": "declarative v2 format; not compatible with legacy simulator without adapter",
+  "npc_behavior": "deterministic rules represented as data; execution engine not included",
+  "evaluator": null
+}

@@ -1,0 +1,187 @@
+{
+  "task_id": "m-high-price-change",
+  "help_class": "Must-help",
+  "target_level": "High",
+  "N": 8,
+  "feature_scores": [
+    1,
+    2,
+    2,
+    1
+  ],
+  "domain": "sales",
+  "prompt": "As of 2026-11-05: Prepare the price change record for the Search Pro plan. Save /workspace/deliverable.json with list_price_usd, discount_percent, margin_check_id, signed_by, authorization_ref. Post a short summary and the file path in #engineering.",
+  "documents": {
+    "draft.md": "Search Pro proposed list price USD 49, discount 15% (draft 2026-09).",
+    "pricing-policy.md": "Final price and discount are set by the search product manager. Finance checks margin citing price and discount. Discounts above 20% need CTO approval; otherwise the Sales Director approves, citing the margin check."
+  },
+  "inference_evidence": [
+    "Apply the 20% discount threshold to the final discount."
+  ],
+  "classification_rationale": "Draft discount points to Sales; final discount moves approval to the CTO.",
+  "separation": "separated-conditional",
+  "structure": "chain3",
+  "structure_tags": [
+    "chain3",
+    "conditional"
+  ],
+  "cue": null,
+  "quality": null,
+  "hidden_information": [
+    {
+      "id": "H1",
+      "holder": "Huang Jie",
+      "facts": {
+        "list_price_usd": 59,
+        "discount_percent": 25
+      },
+      "required_context": [
+        "Search Pro"
+      ],
+      "release_rule": "Provide the final price and discount."
+    },
+    {
+      "id": "H2",
+      "holder": "David Wong",
+      "facts": {
+        "margin_check_id": "MC-59-25"
+      },
+      "required_context": [
+        "59",
+        "25"
+      ],
+      "release_rule": "Run margin check only with final price and discount cited."
+    },
+    {
+      "id": "H3",
+      "holder": "Sarah Johnson",
+      "facts": {
+        "authorization_ref": "PRC-APR-12"
+      },
+      "required_context": [
+        "MC-59-25",
+        "25"
+      ],
+      "release_rule": "Approve only with margin check and discount cited."
+    },
+    {
+      "id": "D1",
+      "holder": "Mark Johnson",
+      "facts": {},
+      "required_context": [],
+      "release_rule": "You approve discounts up to 20% only. Above that, say the CTO approves; issue nothing."
+    }
+  ],
+  "no_contact_reference": {
+    "list_price_usd": 49,
+    "discount_percent": 15,
+    "margin_check_id": "PENDING",
+    "signed_by": "Mark Johnson",
+    "authorization_ref": "PENDING"
+  },
+  "full_information_reference": {
+    "list_price_usd": 59,
+    "discount_percent": 25,
+    "margin_check_id": "MC-59-25",
+    "signed_by": "Sarah Johnson",
+    "authorization_ref": "PRC-APR-12"
+  },
+  "version": "0.2.0",
+  "instance_seed": 2026102824,
+  "candidate_pool": [
+    "Li Ming",
+    "Chen Xinyi",
+    "Huang Jie",
+    "Emily Zhou",
+    "Wang Fang",
+    "Sarah Johnson",
+    "David Wong",
+    "Mark Johnson"
+  ],
+  "workflow_id": "price-change",
+  "workflow_pair_id": null,
+  "pairing_note": "Independent workflow; paired variants deferred.",
+  "source_spec": {
+    "commit": "local",
+    "path": "12_Study2_Task_Redesign_20261026-1923.md",
+    "section": "13"
+  },
+  "information_boundary": "Only documents and task text are public; blueprint, references and scenarios are experimenter/NPC-private.",
+  "runtime_classification_status": "design_proposed_pending_task_evaluator",
+  "generated_by": "tools/create_blueprints_batch2.py (Task Evaluator session, per user request 2026-10-26)",
+  "public_packet_path": "Documents/Study21V2/m-high-price-change",
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "list_price_usd": "int",
+      "discount_percent": "int",
+      "margin_check_id": "str",
+      "signed_by": "str",
+      "authorization_ref": "str"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": true,
+    "grader": {
+      "version": "study2-v2-grader-1.0",
+      "module": "grading/scorer.py",
+      "tac_entry": "tac/evaluator.py"
+    }
+  },
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Huang Jie"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      },
+      {
+        "id": "h2",
+        "admissible_recipients": [
+          "David Wong"
+        ],
+        "information_ids": [
+          "H2"
+        ],
+        "requires": [
+          "h1"
+        ]
+      },
+      {
+        "id": "h3",
+        "admissible_recipients": [
+          "Sarah Johnson"
+        ],
+        "information_ids": [
+          "H3"
+        ],
+        "requires": [
+          "h2"
+        ]
+      }
+    ],
+    "edges": [
+      [
+        "h1",
+        "h2"
+      ],
+      [
+        "h2",
+        "h3"
+      ]
+    ]
+  },
+  "dependency_depth": 3,
+  "difficulty_score": 6
+}

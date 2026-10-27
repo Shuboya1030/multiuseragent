@@ -1,1 +1,1 @@
-Campaign Cedar. Headline: Build together. Permitted default hero asset: evergreen-v2.svg. It is licensed and suitable for this launch. Marketing maintains an optional campaign-specific asset that improves visual alignment; the evergreen asset remains valid.
+Campaign Cedar. Headline: Build together. Launch 2026-11-09. Hero asset on file: evergreen-v2.svg (licensed, approved for all launches). This brief was written 2026-09-20.

@@ -1,0 +1,131 @@
+{
+  "task_id": "o-med-backup-window",
+  "version": "0.2.0",
+  "help_class": "Optional-help",
+  "target_level": "Medium",
+  "domain": "service-operations",
+  "N": 4,
+  "feature_scores": [
+    0,
+    1,
+    1,
+    2
+  ],
+  "difficulty_score": 4,
+  "dependency_depth": 1,
+  "instance_seed": 2026102840,
+  "candidate_pool": [
+    "Jessica Lee",
+    "Priya Sharma",
+    "Li Ming",
+    "Sophia Rodriguez"
+  ],
+  "workflow_id": "backup-window",
+  "workflow_pair_id": null,
+  "source_spec": {
+    "commit": "local",
+    "path": "12_Study2_Task_Redesign_20261026-1923.md",
+    "section": "13"
+  },
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "window_utc": "str",
+      "retention_days": "int",
+      "storage_tb": "int"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": false
+  },
+  "runtime_classification_status": "design_proposed_pending_task_evaluator",
+  "feature_names": [
+    "candidate_pool",
+    "cue_salience",
+    "holder_inference",
+    "integration_effort"
+  ],
+  "separation": "not_applicable",
+  "structure": "optional_information",
+  "cue": {
+    "documents": [
+      "backup.md"
+    ],
+    "description": "Implicit: defaults not checked against project calendar."
+  },
+  "quality": {
+    "dimensions": [
+      "maintenance_overlaps",
+      "storage_tb"
+    ],
+    "baseline": [
+      1,
+      12
+    ],
+    "full_information": [
+      0,
+      6
+    ],
+    "minimum_improvement": [
+      1,
+      3
+    ]
+  },
+  "inference_evidence": [
+    "Graph database project lead via directory."
+  ],
+  "candidate_pool_semantics": "relevant directory + configured task NPCs; other TAC accounts remain visible",
+  "profile_conditions": [
+    "R0",
+    "R1"
+  ],
+  "default_profile": "R1",
+  "hidden_information_ids": [
+    "H1"
+  ],
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Li Ming"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      }
+    ],
+    "edges": []
+  },
+  "services": [
+    "owncloud",
+    "rocketchat"
+  ],
+  "npc_backend": "official TAC Sotopia LLM NPC; not live-tested",
+  "runtime": {
+    "platform": "linux/amd64",
+    "tac_commit": "98b68ef82a47690c316f42fddb05baafaab56851",
+    "execution_target": "OpenHands CodeActAgent via TAC; integration not yet executed",
+    "model": null,
+    "model_calls": 0
+  },
+  "verification": {
+    "independent_task_evaluator": "pending",
+    "human_review": "pending",
+    "live_npc_compliance": "not_tested",
+    "openhands_rollout": "not_run"
+  },
+  "known_limitations": [
+    "Structural labels are design claims.",
+    "LLM NPC prerequisite compliance needs live validation.",
+    "Single fixed instance.",
+    "Shared service reset/isolation required before episodes."
+  ]
+}

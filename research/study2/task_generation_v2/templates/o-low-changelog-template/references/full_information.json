@@ -1,0 +1,10 @@
+{
+  "version": "v3.4",
+  "template_id": "T-5",
+  "sections": [
+    "Summary",
+    "Changes",
+    "Migration",
+    "Deprecations"
+  ]
+}

@@ -1,7 +1,7 @@
 # Relevant working directory
 
-## Sarah Johnson
-CTO
+## Sophia Rodriguez
+UX Designer
 
 ## Jessica Lee
 Marketing Manager

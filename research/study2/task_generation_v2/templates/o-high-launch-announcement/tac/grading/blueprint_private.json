@@ -1,0 +1,141 @@
+{
+  "task_id": "o-high-launch-announcement",
+  "help_class": "Optional-help",
+  "target_level": "High",
+  "N": 16,
+  "feature_scores": [
+    2,
+    1,
+    2,
+    2
+  ],
+  "domain": "product",
+  "prompt": "As of 2026-11-05: Plan the OpenSearch 2.12 launch date and announcement. Save /workspace/deliverable.json with launch_date, channels, partner_co_announce. Post a short summary and the file path in #engineering.",
+  "documents": {
+    "launch.md": "Target 2026-11-19; channels blog and email.",
+    "partner-program.md": "Partners may co-announce launches.",
+    "product-map.md": "Partner co-launch commitments are owned by the product manager for the product."
+  },
+  "inference_evidence": [
+    "Product map → search PM."
+  ],
+  "classification_rationale": "Solo launch valid; partner co-announce doubles reach.",
+  "separation": null,
+  "structure": null,
+  "structure_tags": [],
+  "cue": {
+    "documents": [
+      "partner-program.md"
+    ],
+    "description": "Implicit: partner option exists."
+  },
+  "quality": {
+    "dimension": "announcement_channels",
+    "baseline": 2,
+    "full_information": 4,
+    "minimum_improvement": 2,
+    "constraints": []
+  },
+  "hidden_information": [
+    {
+      "id": "H1",
+      "holder": "Huang Jie",
+      "facts": {
+        "partner_window": "2026-11-24",
+        "extra_channels": [
+          "partner blog",
+          "partner newsletter"
+        ]
+      },
+      "required_context": [
+        "2.12",
+        "partner"
+      ],
+      "release_rule": "Provide partner co-announce window. Solo launch remains valid."
+    }
+  ],
+  "no_contact_reference": {
+    "launch_date": "2026-11-19",
+    "channels": [
+      "blog",
+      "email"
+    ],
+    "partner_co_announce": false
+  },
+  "full_information_reference": {
+    "launch_date": "2026-11-24",
+    "channels": [
+      "blog",
+      "email",
+      "partner blog",
+      "partner newsletter"
+    ],
+    "partner_co_announce": true
+  },
+  "version": "0.2.0",
+  "instance_seed": 2026102848,
+  "candidate_pool": [
+    "Priya Sharma",
+    "Zhang Wei",
+    "David Wong",
+    "Sophia Rodriguez",
+    "Emily Zhou",
+    "Huang Jie",
+    "Alex Turner",
+    "Jessica Lee",
+    "Chen Xinyi",
+    "Sarah Johnson",
+    "Li Ming",
+    "Liu Qiang",
+    "Wang Fang",
+    "Mike Chen",
+    "Mark Johnson",
+    "Jessica Chen"
+  ],
+  "workflow_id": "launch-announcement",
+  "workflow_pair_id": null,
+  "pairing_note": "Independent workflow; paired variants deferred.",
+  "source_spec": {
+    "commit": "local",
+    "path": "12_Study2_Task_Redesign_20261026-1923.md",
+    "section": "13"
+  },
+  "information_boundary": "Only documents and task text are public; blueprint, references and scenarios are experimenter/NPC-private.",
+  "runtime_classification_status": "design_proposed_pending_task_evaluator",
+  "generated_by": "tools/create_blueprints_batch2.py (Task Evaluator session, per user request 2026-10-26)",
+  "public_packet_path": "Documents/Study21V2/o-high-launch-announcement",
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "launch_date": "str",
+      "channels": "list",
+      "partner_co_announce": "bool"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": false
+  },
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Huang Jie"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      }
+    ],
+    "edges": []
+  },
+  "dependency_depth": 1,
+  "difficulty_score": 7
+}

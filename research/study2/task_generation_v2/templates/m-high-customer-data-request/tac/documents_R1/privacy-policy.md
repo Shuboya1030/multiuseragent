@@ -1,0 +1,1 @@
+Account identifiers and contract scope are held by the account owner in Sales. Inventories of crawler-derived data are held by the crawler engineer. If the categories include personal data, the CTO approves the release; otherwise the account owner approves.

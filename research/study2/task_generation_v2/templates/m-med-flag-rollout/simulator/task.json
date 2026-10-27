@@ -1,0 +1,99 @@
+{
+  "task_id": "m-med-flag-rollout",
+  "initial_task": "As of 2026-11-05: Prepare the rollout record that moves the checkout redesign flag to 50%. Save /workspace/deliverable.json with flag_key, current_percentage, target_percentage, authorization_ref. Post a short summary and the file path in #engineering.\n\nWork packet: OwnCloud Documents/Study21V2/m-med-flag-rollout.\nOwnCloud: http://the-agent-company.com:8092\nRocketChat: http://the-agent-company.com:3000\n",
+  "public_documents": {
+    "rollout.md": "E-commerce checkout redesign. Ticket notes from 2026-09 list flag ui.checkout.v1 at 10%. Target 50%.",
+    "flag-ownership.md": "Frontend flags for the e-commerce redesign moved to the frontend team in October; the low-code platform no longer hosts them. Rollouts above 25% need sign-off from the product manager who owns the experience.",
+    "product-map.md": "Storefront experience decisions are made by the product manager for search and storefront."
+  },
+  "directory_by_condition": {
+    "R0": "# Relevant working directory\n\n## Priya Sharma\nDocumentation Engineer\n\n## Jessica Chen\nFrontend Software Engineer\n\n## Alex Turner\nSoftware Engineer (Low-Code Platform Team)\n\n## Huang Jie\nProduct Manager (Search Engine Team)\n",
+    "R1": "# Relevant working directory\n\n## Priya Sharma\nDocumentation Engineer\n\nResponsibilities: Writing technical documentation, maintaining wiki, improving documentation processes; Project: Documentation (Wiki); Skills: N/A\nKeeps the internal wiki, document templates and translation assets.\n\n## Jessica Chen\nFrontend Software Engineer\n\nResponsibilities: Developing user interfaces, implementing responsive designs, optimizing web performance; Project: E-commerce Website Redesign; Skills: N/A\nBuilds the storefront frontend and its rollout settings.\n\n## Alex Turner\nSoftware Engineer (Low-Code Platform Team)\n\nResponsibilities: Developing low-code platform features; Project: Node-RED (Low-Code Platform); Skills: N/A\nRuns the low-code platform and its plugin inventory.\n\n## Huang Jie\nProduct Manager (Search Engine Team)\n\nResponsibilities: Defining product requirements, planning product roadmap, communicating with clients; Project: OpenSearch (Search Engine); Skills: N/A\nSets roadmap and release timing for search and storefront products.\n"
+  },
+  "private_records": [
+    {
+      "id": "H1",
+      "holder": "Jessica Chen",
+      "facts": {
+        "flag_key": "ui.checkout.v2",
+        "current_percentage": 20
+      },
+      "required_context": [
+        "checkout"
+      ],
+      "release_rule": "Provide the current flag key and percentage."
+    },
+    {
+      "id": "H2",
+      "holder": "Huang Jie",
+      "facts": {
+        "authorization_ref": "FLG-APR-63"
+      },
+      "required_context": [
+        "ui.checkout.v2",
+        "50"
+      ],
+      "release_rule": "Sign off only with the current flag key and target cited."
+    },
+    {
+      "id": "D1",
+      "holder": "Alex Turner",
+      "facts": {},
+      "required_context": [],
+      "release_rule": "The low-code platform hosted flags before October. If asked, say they moved to the frontend team."
+    }
+  ],
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Jessica Chen"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      },
+      {
+        "id": "h2",
+        "admissible_recipients": [
+          "Huang Jie"
+        ],
+        "information_ids": [
+          "H2"
+        ],
+        "requires": [
+          "h1"
+        ]
+      }
+    ],
+    "edges": [
+      [
+        "h1",
+        "h2"
+      ]
+    ]
+  },
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "flag_key": "str",
+      "current_percentage": "int",
+      "target_percentage": "int",
+      "authorization_ref": "str"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": false
+  },
+  "adapter_status": "declarative v2 format; not compatible with legacy simulator without adapter",
+  "npc_behavior": "deterministic rules represented as data; execution engine not included",
+  "evaluator": null
+}

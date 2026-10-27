@@ -1,0 +1,1 @@
+Migration scripts and downtime estimates are produced by the engineer who develops the streaming database core. Cross-team QA signs off against the current migration ID and downtime. The database project manager approves migrations with under 60 minutes of downtime.

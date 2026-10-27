@@ -1,0 +1,155 @@
+{
+  "task_id": "m-med-service-credit",
+  "help_class": "Must-help",
+  "target_level": "Medium",
+  "N": 16,
+  "feature_scores": [
+    2,
+    1,
+    0,
+    0
+  ],
+  "domain": "sales",
+  "prompt": "As of 2026-11-05: Prepare the service credit memo for customer Northwind after the October outage (monthly fee USD 8000). Save /workspace/deliverable.json with customer, credit_percent, credit_usd, authorization_ref. Post a short summary and the file path in #engineering.",
+  "documents": {
+    "memo-draft.md": "Northwind monthly fee USD 8000. Standard SLA table (2024) lists a 5% credit for outages over 60 minutes.",
+    "credit-policy.md": "Northwind current contract terms, including credit tiers, are held by the Sales Director, who approves customer credits."
+  },
+  "inference_evidence": [
+    "Policy names the Sales Director."
+  ],
+  "classification_rationale": "Generic SLA table is visible; contract-specific tier and approval held by Sales.",
+  "separation": "aligned",
+  "structure": "info-approval",
+  "structure_tags": [
+    "info-approval"
+  ],
+  "cue": null,
+  "quality": null,
+  "hidden_information": [
+    {
+      "id": "H1",
+      "holder": "Mark Johnson",
+      "facts": {
+        "credit_percent": 10
+      },
+      "required_context": [
+        "Northwind"
+      ],
+      "release_rule": "Provide the contract credit tier for this outage."
+    },
+    {
+      "id": "H2",
+      "holder": "Mark Johnson",
+      "facts": {
+        "authorization_ref": "CR-APR-902"
+      },
+      "required_context": [
+        "10",
+        "800"
+      ],
+      "release_rule": "Approve the credit when percent and amount are cited."
+    }
+  ],
+  "no_contact_reference": {
+    "customer": "Northwind",
+    "credit_percent": 5,
+    "credit_usd": 400,
+    "authorization_ref": "PENDING"
+  },
+  "full_information_reference": {
+    "customer": "Northwind",
+    "credit_percent": 10,
+    "credit_usd": 800,
+    "authorization_ref": "CR-APR-902"
+  },
+  "version": "0.2.0",
+  "instance_seed": 2026102813,
+  "candidate_pool": [
+    "Mike Chen",
+    "Alex Turner",
+    "Emma Lewis",
+    "David Wong",
+    "Sarah Johnson",
+    "Priya Sharma",
+    "Jessica Chen",
+    "Emily Zhou",
+    "Sophia Rodriguez",
+    "Zhang Wei",
+    "Liu Qiang",
+    "Mark Johnson",
+    "Wang Fang",
+    "Chen Xinyi",
+    "Li Ming",
+    "Huang Jie"
+  ],
+  "workflow_id": "service-credit",
+  "workflow_pair_id": null,
+  "pairing_note": "Independent workflow; paired variants deferred.",
+  "source_spec": {
+    "commit": "local",
+    "path": "12_Study2_Task_Redesign_20261026-1923.md",
+    "section": "13"
+  },
+  "information_boundary": "Only documents and task text are public; blueprint, references and scenarios are experimenter/NPC-private.",
+  "runtime_classification_status": "design_proposed_pending_task_evaluator",
+  "generated_by": "tools/create_blueprints_batch2.py (Task Evaluator session, per user request 2026-10-26)",
+  "public_packet_path": "Documents/Study21V2/m-med-service-credit",
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "customer": "str",
+      "credit_percent": "int",
+      "credit_usd": "int",
+      "authorization_ref": "str"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": true,
+    "grader": {
+      "version": "study2-v2-grader-1.0",
+      "module": "grading/scorer.py",
+      "tac_entry": "tac/evaluator.py"
+    }
+  },
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Mark Johnson"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      },
+      {
+        "id": "h2",
+        "admissible_recipients": [
+          "Mark Johnson"
+        ],
+        "information_ids": [
+          "H2"
+        ],
+        "requires": [
+          "h1"
+        ]
+      }
+    ],
+    "edges": [
+      [
+        "h1",
+        "h2"
+      ]
+    ]
+  },
+  "dependency_depth": 2,
+  "difficulty_score": 3
+}

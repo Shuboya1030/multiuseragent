@@ -1,0 +1,5 @@
+{
+  "benchmarks_to_run": 12,
+  "gpu_hours": 300,
+  "cost_usd": 900
+}

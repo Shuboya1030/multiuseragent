@@ -1,0 +1,153 @@
+{
+  "task_id": "m-med-research-data-export",
+  "help_class": "Must-help",
+  "target_level": "Medium",
+  "N": 16,
+  "feature_scores": [
+    2,
+    1,
+    0,
+    1
+  ],
+  "domain": "data",
+  "prompt": "As of 2026-11-05: Prepare the export record for the Colly crawl snapshot requested by a university partner. Save /workspace/deliverable.json with snapshot_id, record_count, contains_personal_data, authorization_ref. Post a short summary and the file path in #engineering.",
+  "documents": {
+    "request.md": "University partner requests the Colly crawl snapshot. Catalog entry from 2026-08 lists snapshot CS-0817, 1200000 records, personal data: no.",
+    "data-release-policy.md": "Crawl snapshots are curated and released by the engineer responsible for the crawler framework; releases cite the current snapshot and record count."
+  },
+  "inference_evidence": [
+    "Crawler framework engineer found via directory project Colly."
+  ],
+  "classification_rationale": "Catalog entry is stale; current snapshot and release held by the crawler owner.",
+  "separation": "aligned",
+  "structure": "info-approval",
+  "structure_tags": [
+    "info-approval"
+  ],
+  "cue": null,
+  "quality": null,
+  "hidden_information": [
+    {
+      "id": "H1",
+      "holder": "Emily Zhou",
+      "facts": {
+        "snapshot_id": "CS-1019",
+        "record_count": 1480000,
+        "contains_personal_data": false
+      },
+      "required_context": [
+        "Colly",
+        "snapshot"
+      ],
+      "release_rule": "Provide the current snapshot facts."
+    },
+    {
+      "id": "H2",
+      "holder": "Emily Zhou",
+      "facts": {
+        "authorization_ref": "EXP-REL-77"
+      },
+      "required_context": [
+        "CS-1019",
+        "1480000"
+      ],
+      "release_rule": "Release only with the current snapshot and count cited."
+    }
+  ],
+  "no_contact_reference": {
+    "snapshot_id": "CS-0817",
+    "record_count": 1200000,
+    "contains_personal_data": false,
+    "authorization_ref": "PENDING"
+  },
+  "full_information_reference": {
+    "snapshot_id": "CS-1019",
+    "record_count": 1480000,
+    "contains_personal_data": false,
+    "authorization_ref": "EXP-REL-77"
+  },
+  "version": "0.2.0",
+  "instance_seed": 2026102810,
+  "candidate_pool": [
+    "Wang Fang",
+    "Zhang Wei",
+    "Emma Lewis",
+    "Liu Qiang",
+    "Chen Xinyi",
+    "David Wong",
+    "Priya Sharma",
+    "Jessica Lee",
+    "Alex Turner",
+    "Jessica Chen",
+    "Sophia Rodriguez",
+    "Li Ming",
+    "Mark Johnson",
+    "Sarah Johnson",
+    "Emily Zhou",
+    "Huang Jie"
+  ],
+  "workflow_id": "research-data-export",
+  "workflow_pair_id": null,
+  "pairing_note": "Independent workflow; paired variants deferred.",
+  "source_spec": {
+    "commit": "local",
+    "path": "12_Study2_Task_Redesign_20261026-1923.md",
+    "section": "13"
+  },
+  "information_boundary": "Only documents and task text are public; blueprint, references and scenarios are experimenter/NPC-private.",
+  "runtime_classification_status": "design_proposed_pending_task_evaluator",
+  "generated_by": "tools/create_blueprints_batch2.py (Task Evaluator session, per user request 2026-10-26)",
+  "public_packet_path": "Documents/Study21V2/m-med-research-data-export",
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "snapshot_id": "str",
+      "record_count": "int",
+      "contains_personal_data": "bool",
+      "authorization_ref": "str"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": false
+  },
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Emily Zhou"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      },
+      {
+        "id": "h2",
+        "admissible_recipients": [
+          "Emily Zhou"
+        ],
+        "information_ids": [
+          "H2"
+        ],
+        "requires": [
+          "h1"
+        ]
+      }
+    ],
+    "edges": [
+      [
+        "h1",
+        "h2"
+      ]
+    ]
+  },
+  "dependency_depth": 2,
+  "difficulty_score": 4
+}

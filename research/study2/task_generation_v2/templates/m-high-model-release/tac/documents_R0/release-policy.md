@@ -1,0 +1,1 @@
+Evaluation reports are produced by the research owner of the model. QA attests safety only against a cited current evaluation report. Public-tier releases need an executive technical mandate citing the attestation; internal-tier releases are within the research lead mandate.

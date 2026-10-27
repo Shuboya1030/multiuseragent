@@ -1,0 +1,18 @@
+{
+  "blueprint.json": "e23a214cf6df096e0eea81ee88014c0a229490a5325c59a3467c409e42455b95",
+  "metadata.json": "b8395a007942605434b6d5afdb69194dc3cef172ede1cd7c4f1aa33e272de955",
+  "references\\full_information.json": "b4f2f48becf56e366d6348fc6e6c4a3622ee85583cc065c62eb2b0389d3ed2f0",
+  "references\\no_contact.json": "807b1ac24c9bb3afd09b0a17225cc28cf1d0a2f901f54b5a07ce250016e766d8",
+  "references\\walkthrough.md": "57aa7a67bd36dd751c96f2a78707e1da23cdd4c28e69c559857eae50fdef9e7e",
+  "simulator\\task.json": "6acf89d0772e3e7e27b475665c159a63c03a570eb389d97fc0056c722a3c433b",
+  "tac\\dependencies.yml": "fb84075bbad26ebb051f13f87cbd16c5ad76e4635c2d82a85da704355542b68c",
+  "tac\\Dockerfile": "47106047bdf4b69e6585e463d2743a938d967e0060859d2ba927b4103b458551",
+  "tac\\documents_R0\\directory.md": "a8d8351fb57a33329909414ad10012b85506de584ad57316169a411513c9e28b",
+  "tac\\documents_R0\\survey.md": "10b3a383b0f17f9f9cf82405d9281ba567810b8c3c47d66a67abe508d9c54229",
+  "tac\\documents_R1\\directory.md": "807e83f8ec5d7d6c3ef5cdf238115de3ef3bd1f8d406eec4274e715b31bad4dc",
+  "tac\\documents_R1\\survey.md": "10b3a383b0f17f9f9cf82405d9281ba567810b8c3c47d66a67abe508d9c54229",
+  "tac\\Makefile": "f3bebe174f68f6e6a5359167abe2f8ef8cafc36b2d6788d1eba39e058158407e",
+  "tac\\populate_data.py": "53a3c55fa13b8c22e17b7b229a1b91785310ddfcd625e73f1c9f2a5964508328",
+  "tac\\scenarios.json": "77b32b49b64f12d59f4707f821efa769a572e65658dbd2b0b1804efd979d009f",
+  "tac\\task.md": "d7c267fceceadcc3a8c3c673b34d00f4e2b16f45253647dcdf7afb1a0e73fc2c"
+}

@@ -94,7 +94,7 @@
     "Look up NIM-TR contract ownership group.",
     "Resolve PEOPLE custodian through organization policy."
   ],
-  "version": "0.1.0",
+  "version": "0.2.0",
   "instance_seed": 2026102705,
   "candidate_pool": [
     "Huang Jie",
@@ -123,7 +123,7 @@
     "section": "13"
   },
   "information_boundary": "Only documents and task text are public; blueprint, references and scenarios are experimenter/NPC-private.",
-  "runtime_classification_status": "design_proposed_not_evaluator_validated",
+  "runtime_classification_status": "revised_after_evaluator_batch1_pending_reevaluation",
   "public_packet_path": "Documents/Study21V2/o-high-training-schedule",
   "output_contract": {
     "path": "/workspace/deliverable.json",
@@ -140,9 +140,15 @@
       "Numeric values may be represented with equivalent decimal precision.",
       "JSON object key order is immaterial.",
       "UTC times use HH:MM.",
-      "IDs are stable identifiers, not arbitrary paraphrases."
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets (e.g., cohort_sizes [12,12])."
     ],
-    "grading_implemented": false
+    "grading_implemented": true,
+    "grader": {
+      "version": "study2-v2-grader-1.0",
+      "module": "grading/scorer.py",
+      "tac_entry": "tac/evaluator.py"
+    }
   },
   "gold_dag": {
     "nodes": [
@@ -160,5 +166,11 @@
     "edges": []
   },
   "dependency_depth": 1,
-  "difficulty_score": 8
+  "difficulty_score": 8,
+  "revision_log": [
+    {
+      "revision": "eval-batch1-r1",
+      "change": "F4: cohort_sizes declared order-insensitive."
+    }
+  ]
 }

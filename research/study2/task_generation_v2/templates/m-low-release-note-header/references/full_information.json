@@ -1,0 +1,6 @@
+{
+  "product": "OpenSearch",
+  "version": "2.12.0",
+  "release_date": "2026-11-19",
+  "known_issue_id": "KI-104"
+}

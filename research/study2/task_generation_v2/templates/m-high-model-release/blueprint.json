@@ -1,0 +1,190 @@
+{
+  "task_id": "m-high-model-release",
+  "help_class": "Must-help",
+  "target_level": "High",
+  "N": 16,
+  "feature_scores": [
+    2,
+    2,
+    2,
+    2
+  ],
+  "domain": "ai-research",
+  "prompt": "As of 2026-11-05: Prepare the release record for model checkpoint Aurora-7B. Save /workspace/deliverable.json with checkpoint, eval_report_id, safety_attestation, release_tier, mandate_reference. Post a short summary and the file path in #engineering.",
+  "documents": {
+    "release.md": "Aurora-7B. Draft from 2026-10-01 cites eval report EV-12, release tier internal, research-lead mandate RES-DRAFT-7.",
+    "release-policy.md": "Evaluation reports are produced by the research owner of the model. QA attests safety only against a cited current evaluation report. Public-tier releases need an executive technical mandate citing the attestation; internal-tier releases are within the research lead mandate.",
+    "release-tiers.md": "A checkpoint is public tier when its current evaluation report includes external benchmark claims."
+  },
+  "inference_evidence": [
+    "Tier rule applied to the current report changes the mandate holder.",
+    "Research owner and QA found via directory."
+  ],
+  "classification_rationale": "Three dependent private records; tier condition changes the approver.",
+  "separation": "separated-conditional",
+  "structure": "chain3",
+  "structure_tags": [
+    "chain3",
+    "conditional"
+  ],
+  "cue": null,
+  "quality": null,
+  "hidden_information": [
+    {
+      "id": "H1",
+      "holder": "Wang Fang",
+      "facts": {
+        "eval_report_id": "EV-19",
+        "release_tier": "public",
+        "external_benchmark_claims": true
+      },
+      "required_context": [
+        "Aurora-7B"
+      ],
+      "release_rule": "Provide the current evaluation report ID and note that it includes external benchmark claims."
+    },
+    {
+      "id": "H2",
+      "holder": "Liu Qiang",
+      "facts": {
+        "safety_attestation": "QA-SAF-191"
+      },
+      "required_context": [
+        "EV-19"
+      ],
+      "release_rule": "Attest only against EV-19."
+    },
+    {
+      "id": "H3",
+      "holder": "Sarah Johnson",
+      "facts": {
+        "mandate_reference": "TECH-AUR-7"
+      },
+      "required_context": [
+        "QA-SAF-191",
+        "public"
+      ],
+      "release_rule": "Issue the mandate only with the attestation and public tier cited."
+    }
+  ],
+  "no_contact_reference": {
+    "checkpoint": "Aurora-7B",
+    "eval_report_id": "EV-12",
+    "safety_attestation": "PENDING",
+    "release_tier": "internal",
+    "mandate_reference": "RES-DRAFT-7"
+  },
+  "full_information_reference": {
+    "checkpoint": "Aurora-7B",
+    "eval_report_id": "EV-19",
+    "safety_attestation": "QA-SAF-191",
+    "release_tier": "public",
+    "mandate_reference": "TECH-AUR-7"
+  },
+  "version": "0.2.0",
+  "instance_seed": 2026102818,
+  "candidate_pool": [
+    "Emily Zhou",
+    "Wang Fang",
+    "Emma Lewis",
+    "Alex Turner",
+    "Mark Johnson",
+    "Liu Qiang",
+    "Sarah Johnson",
+    "Sophia Rodriguez",
+    "Chen Xinyi",
+    "Priya Sharma",
+    "Jessica Chen",
+    "David Wong",
+    "Huang Jie",
+    "Zhang Wei",
+    "Mike Chen",
+    "Li Ming"
+  ],
+  "workflow_id": "model-release",
+  "workflow_pair_id": null,
+  "pairing_note": "Independent workflow; paired variants deferred.",
+  "source_spec": {
+    "commit": "local",
+    "path": "12_Study2_Task_Redesign_20261026-1923.md",
+    "section": "13"
+  },
+  "information_boundary": "Only documents and task text are public; blueprint, references and scenarios are experimenter/NPC-private.",
+  "runtime_classification_status": "design_proposed_pending_task_evaluator",
+  "generated_by": "tools/create_blueprints_batch2.py (Task Evaluator session, per user request 2026-10-26)",
+  "public_packet_path": "Documents/Study21V2/m-high-model-release",
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "checkpoint": "str",
+      "eval_report_id": "str",
+      "safety_attestation": "str",
+      "release_tier": "str",
+      "mandate_reference": "str"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": true,
+    "grader": {
+      "version": "study2-v2-grader-1.0",
+      "module": "grading/scorer.py",
+      "tac_entry": "tac/evaluator.py"
+    }
+  },
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Wang Fang"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      },
+      {
+        "id": "h2",
+        "admissible_recipients": [
+          "Liu Qiang"
+        ],
+        "information_ids": [
+          "H2"
+        ],
+        "requires": [
+          "h1"
+        ]
+      },
+      {
+        "id": "h3",
+        "admissible_recipients": [
+          "Sarah Johnson"
+        ],
+        "information_ids": [
+          "H3"
+        ],
+        "requires": [
+          "h2"
+        ]
+      }
+    ],
+    "edges": [
+      [
+        "h1",
+        "h2"
+      ],
+      [
+        "h2",
+        "h3"
+      ]
+    ]
+  },
+  "dependency_depth": 3,
+  "difficulty_score": 8
+}

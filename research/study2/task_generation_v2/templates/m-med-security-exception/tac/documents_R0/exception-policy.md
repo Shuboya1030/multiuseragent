@@ -1,0 +1,1 @@
+Risk ratings for API endpoints are assessed by the team that operates the API server. Business justification for partner access is recorded by the product manager of the affected product. The CTO approves exceptions citing both.

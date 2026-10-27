@@ -1,0 +1,62 @@
+{
+  "task_id": "m-low-new-hire-record",
+  "initial_task": "As of 2026-11-05: Prepare the onboarding record for new hire R. Patel (offer O-317). Save /workspace/deliverable.json with offer_id, employee_id, start_date, department. Post a short summary and the file path in #engineering.\n\nWork packet: OwnCloud Documents/Study21V2/m-low-new-hire-record.\nOwnCloud: http://the-agent-company.com:8092\nRocketChat: http://the-agent-company.com:3000\n",
+  "public_documents": {
+    "offer.md": "Offer O-317 for R. Patel, Software Engineer, Search team. Offer letter dated 2026-09-15 lists start date 2026-11-02 and temporary ID TMP-317.",
+    "onboarding-policy.md": "Final start dates and permanent employee IDs are confirmed by Human Resources after background checks; offer-letter values are provisional."
+  },
+  "directory_by_condition": {
+    "R0": "# Relevant working directory\n\n## Chen Xinyi\nHuman Resources Manager\n\n## Liu Qiang\nQuality Assurance Engineer\n\n## Priya Sharma\nDocumentation Engineer\n\n## Emily Zhou\nSoftware Engineer (Web Crawler Team)\n",
+    "R1": "# Relevant working directory\n\n## Chen Xinyi\nHuman Resources Manager\n\nResponsibilities: Recruitment, employee training, compensation management; Project: N/A (HR); Skills: N/A\nMaintains staff development entitlements and enrollment arrangements.\n\n## Liu Qiang\nQuality Assurance Engineer\n\nResponsibilities: Developing test strategies, executing tests, ensuring product quality; Project: All projects (focusing on testing and quality); Skills: N/A\nRuns cross-team test sign-offs before production releases.\n\n## Priya Sharma\nDocumentation Engineer\n\nResponsibilities: Writing technical documentation, maintaining wiki, improving documentation processes; Project: Documentation (Wiki); Skills: N/A\nKeeps the internal wiki, document templates and translation assets.\n\n## Emily Zhou\nSoftware Engineer (Web Crawler Team)\n\nResponsibilities: Designing and implementing web crawler functionalities; Project: Colly (Web Crawler Framework); Skills: Go, distributed systems\nOwns the crawler framework and the datasets it produces.\n"
+  },
+  "private_records": [
+    {
+      "id": "H1",
+      "holder": "Chen Xinyi",
+      "facts": {
+        "employee_id": "E-20931",
+        "start_date": "2026-11-16"
+      },
+      "required_context": [
+        "O-317"
+      ],
+      "release_rule": "Provide the confirmed employee ID and start date when the offer is identified."
+    }
+  ],
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Chen Xinyi"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      }
+    ],
+    "edges": []
+  },
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "offer_id": "str",
+      "employee_id": "str",
+      "start_date": "str",
+      "department": "str"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": false
+  },
+  "adapter_status": "declarative v2 format; not compatible with legacy simulator without adapter",
+  "npc_behavior": "deterministic rules represented as data; execution engine not included",
+  "evaluator": null
+}

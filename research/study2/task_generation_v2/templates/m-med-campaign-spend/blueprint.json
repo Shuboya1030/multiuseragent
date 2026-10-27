@@ -1,0 +1,150 @@
+{
+  "task_id": "m-med-campaign-spend",
+  "help_class": "Must-help",
+  "target_level": "Medium",
+  "N": 4,
+  "feature_scores": [
+    0,
+    1,
+    2,
+    1
+  ],
+  "domain": "marketing",
+  "prompt": "As of 2026-11-05: Prepare the purchase request for the Q4 webinar campaign media spend. Save /workspace/deliverable.json with campaign, spend_usd, signed_by, authorization_ref. Post a short summary and the file path in #engineering.",
+  "documents": {
+    "plan.md": "Q4 webinar campaign. Early plan from 2026-09 lists USD 4200 media spend.",
+    "spend-policy.md": "Campaign spend is set by marketing. Spend up to USD 5000 is approved by the Sales Director; above that, by the Finance Director."
+  },
+  "inference_evidence": [
+    "Apply the USD 5000 threshold to the current spend."
+  ],
+  "classification_rationale": "Early plan falls under the Sales threshold; current spend moves approval to Finance.",
+  "separation": "separated-conditional",
+  "structure": "conditional",
+  "structure_tags": [
+    "conditional",
+    "info-approval"
+  ],
+  "cue": null,
+  "quality": null,
+  "hidden_information": [
+    {
+      "id": "H1",
+      "holder": "Jessica Lee",
+      "facts": {
+        "spend_usd": 7300
+      },
+      "required_context": [
+        "Q4 webinar"
+      ],
+      "release_rule": "Provide the current campaign spend."
+    },
+    {
+      "id": "H2",
+      "holder": "David Wong",
+      "facts": {
+        "authorization_ref": "MKT-APR-81"
+      },
+      "required_context": [
+        "7300"
+      ],
+      "release_rule": "Approve only with the current spend cited."
+    },
+    {
+      "id": "D1",
+      "holder": "Mark Johnson",
+      "facts": {},
+      "required_context": [],
+      "release_rule": "You approve campaign spend up to USD 5000 only. For more, say Finance approves; issue nothing."
+    }
+  ],
+  "no_contact_reference": {
+    "campaign": "Q4 webinar",
+    "spend_usd": 4200,
+    "signed_by": "Mark Johnson",
+    "authorization_ref": "PENDING"
+  },
+  "full_information_reference": {
+    "campaign": "Q4 webinar",
+    "spend_usd": 7300,
+    "signed_by": "David Wong",
+    "authorization_ref": "MKT-APR-81"
+  },
+  "version": "0.2.0",
+  "instance_seed": 2026102814,
+  "candidate_pool": [
+    "Huang Jie",
+    "Mark Johnson",
+    "David Wong",
+    "Jessica Lee"
+  ],
+  "workflow_id": "campaign-spend",
+  "workflow_pair_id": null,
+  "pairing_note": "Independent workflow; paired variants deferred.",
+  "source_spec": {
+    "commit": "local",
+    "path": "12_Study2_Task_Redesign_20261026-1923.md",
+    "section": "13"
+  },
+  "information_boundary": "Only documents and task text are public; blueprint, references and scenarios are experimenter/NPC-private.",
+  "runtime_classification_status": "design_proposed_pending_task_evaluator",
+  "generated_by": "tools/create_blueprints_batch2.py (Task Evaluator session, per user request 2026-10-26)",
+  "public_packet_path": "Documents/Study21V2/m-med-campaign-spend",
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "campaign": "str",
+      "spend_usd": "int",
+      "signed_by": "str",
+      "authorization_ref": "str"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": true,
+    "grader": {
+      "version": "study2-v2-grader-1.0",
+      "module": "grading/scorer.py",
+      "tac_entry": "tac/evaluator.py"
+    }
+  },
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Jessica Lee"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      },
+      {
+        "id": "h2",
+        "admissible_recipients": [
+          "David Wong"
+        ],
+        "information_ids": [
+          "H2"
+        ],
+        "requires": [
+          "h1"
+        ]
+      }
+    ],
+    "edges": [
+      [
+        "h1",
+        "h2"
+      ]
+    ]
+  },
+  "dependency_depth": 2,
+  "difficulty_score": 4
+}

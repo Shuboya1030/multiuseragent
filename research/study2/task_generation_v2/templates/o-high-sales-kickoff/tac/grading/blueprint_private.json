@@ -1,0 +1,135 @@
+{
+  "task_id": "o-high-sales-kickoff",
+  "help_class": "Optional-help",
+  "target_level": "High",
+  "N": 16,
+  "feature_scores": [
+    2,
+    2,
+    2,
+    2
+  ],
+  "domain": "sales",
+  "prompt": "As of 2026-11-05: Plan the 2027 sales kickoff for 60 people. Save /workspace/deliverable.json with venue, start_date, nightly_rate_usd, total_usd. Post a short summary and the file path in #engineering.",
+  "documents": {
+    "event.md": "60 attendees, two nights, preferred start 2027-01-20 at Hotel Bayview, standard rate USD 210 per night (total USD 25200).",
+    "venue-notes.md": "Bayview is listed as a corporate partner venue.",
+    "contracts.md": "Corporate venue agreements belong to contract group COMM.",
+    "contract-groups.md": "COMM agreements are kept by whoever leads customer-facing sales."
+  },
+  "inference_evidence": [
+    "Venue agreement → COMM group → sales lead."
+  ],
+  "classification_rationale": "Standard booking valid; partner rate with date change cuts cost.",
+  "separation": null,
+  "structure": null,
+  "structure_tags": [],
+  "cue": {
+    "documents": [
+      "event.md",
+      "venue-notes.md"
+    ],
+    "description": "Combine partner-venue note with standard rate."
+  },
+  "quality": {
+    "dimension": "total_usd",
+    "baseline": 25200,
+    "full_information": 19800,
+    "minimum_improvement": 2000,
+    "constraints": []
+  },
+  "hidden_information": [
+    {
+      "id": "H1",
+      "holder": "Mark Johnson",
+      "facts": {
+        "partner_rate": 165,
+        "valid_dates": "2027-01-26 to 2027-01-28"
+      },
+      "required_context": [
+        "Bayview",
+        "kickoff"
+      ],
+      "release_rule": "Provide partner rate and valid dates. Standard booking remains valid."
+    }
+  ],
+  "no_contact_reference": {
+    "venue": "Bayview",
+    "start_date": "2027-01-20",
+    "nightly_rate_usd": 210,
+    "total_usd": 25200
+  },
+  "full_information_reference": {
+    "venue": "Bayview",
+    "start_date": "2027-01-26",
+    "nightly_rate_usd": 165,
+    "total_usd": 19800
+  },
+  "version": "0.2.0",
+  "instance_seed": 2026102845,
+  "candidate_pool": [
+    "David Wong",
+    "Liu Qiang",
+    "Priya Sharma",
+    "Emily Zhou",
+    "Sophia Rodriguez",
+    "Emma Lewis",
+    "Sarah Johnson",
+    "Chen Xinyi",
+    "Zhang Wei",
+    "Li Ming",
+    "Huang Jie",
+    "Wang Fang",
+    "Mike Chen",
+    "Mark Johnson",
+    "Jessica Chen",
+    "Jessica Lee"
+  ],
+  "workflow_id": "sales-kickoff",
+  "workflow_pair_id": null,
+  "pairing_note": "Independent workflow; paired variants deferred.",
+  "source_spec": {
+    "commit": "local",
+    "path": "12_Study2_Task_Redesign_20261026-1923.md",
+    "section": "13"
+  },
+  "information_boundary": "Only documents and task text are public; blueprint, references and scenarios are experimenter/NPC-private.",
+  "runtime_classification_status": "design_proposed_pending_task_evaluator",
+  "generated_by": "tools/create_blueprints_batch2.py (Task Evaluator session, per user request 2026-10-26)",
+  "public_packet_path": "Documents/Study21V2/o-high-sales-kickoff",
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "venue": "str",
+      "start_date": "str",
+      "nightly_rate_usd": "int",
+      "total_usd": "int"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": false
+  },
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Mark Johnson"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      }
+    ],
+    "edges": []
+  },
+  "dependency_depth": 1,
+  "difficulty_score": 8
+}

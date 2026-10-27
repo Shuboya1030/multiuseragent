@@ -1,0 +1,1 @@
+The final timeline comes from the engineer whose crawler fed the failing index. If the index pipeline is involved, root cause codes are signed off by the engineer who develops the streaming database core. Customer-facing publication is approved by the product manager of the affected product.

@@ -1,0 +1,63 @@
+{
+  "task_id": "o-med-renewal-quote",
+  "initial_task": "As of 2026-11-05: Prepare the renewal quote for customer Litware. Save /workspace/deliverable.json with term_years, annual_usd, total_usd. Post a short summary and the file path in #engineering.\n\nWork packet: OwnCloud Documents/Study21V2/o-med-renewal-quote.\nOwnCloud: http://the-agent-company.com:8092\nRocketChat: http://the-agent-company.com:3000\n",
+  "public_documents": {
+    "pricing.md": "Standard one-year renewal for Litware: USD 24000.",
+    "account-notes.md": "Last quarter Litware procurement asked about three-year budgeting cycles.",
+    "commercial-policy.md": "Multi-year commercial terms are set by the account owner."
+  },
+  "directory_by_condition": {
+    "R0": "# Relevant working directory\n\n## Jessica Chen\nFrontend Software Engineer\n\n## Mark Johnson\nSales Director\n\n## Wang Fang\nAI Researcher (AI Team)\n\n## Huang Jie\nProduct Manager (Search Engine Team)\n",
+    "R1": "# Relevant working directory\n\n## Jessica Chen\nFrontend Software Engineer\n\nResponsibilities: Developing user interfaces, implementing responsive designs, optimizing web performance; Project: E-commerce Website Redesign; Skills: N/A\nBuilds the storefront frontend and its rollout settings.\n\n## Mark Johnson\nSales Director\n\nResponsibilities: Developing sales strategies, managing sales team, expanding client relationships; Project: N/A (Sales); Skills: N/A\nMaintains commercial event entitlements and customer-facing meeting arrangements.\n\n## Wang Fang\nAI Researcher (AI Team)\n\nResponsibilities: Designing and implementing machine learning models, optimizing model performance; Project: OpenHands (LLM project); Skills: Python, machine learning, LLM\nTracks AI research project capacity and seat plans.\n\n## Huang Jie\nProduct Manager (Search Engine Team)\n\nResponsibilities: Defining product requirements, planning product roadmap, communicating with clients; Project: OpenSearch (Search Engine); Skills: N/A\nSets roadmap and release timing for search and storefront products.\n"
+  },
+  "private_records": [
+    {
+      "id": "H1",
+      "holder": "Mark Johnson",
+      "facts": {
+        "term_years": 3,
+        "annual_usd": 21600,
+        "total_usd": 64800
+      },
+      "required_context": [
+        "Litware"
+      ],
+      "release_rule": "Provide multi-year terms. One-year renewal remains valid."
+    }
+  ],
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Mark Johnson"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      }
+    ],
+    "edges": []
+  },
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "term_years": "int",
+      "annual_usd": "int",
+      "total_usd": "int"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": false
+  },
+  "adapter_status": "declarative v2 format; not compatible with legacy simulator without adapter",
+  "npc_behavior": "deterministic rules represented as data; execution engine not included",
+  "evaluator": null
+}

@@ -1,0 +1,195 @@
+{
+  "task_id": "m-high-customer-data-request",
+  "help_class": "Must-help",
+  "target_level": "High",
+  "N": 16,
+  "feature_scores": [
+    2,
+    1,
+    2,
+    2
+  ],
+  "domain": "legal-privacy",
+  "prompt": "As of 2026-11-05: Prepare the response record for Contoso's request for all data about their account. Save /workspace/deliverable.json with account_id, data_categories, record_count, signed_by, authorization_ref. Post a short summary and the file path in #engineering.",
+  "documents": {
+    "request.md": "Contoso requests all records about their account. Old inventory (2026-05): account C-881, categories [usage logs], 12000 records.",
+    "privacy-policy.md": "Account identifiers and contract scope are held by the account owner in Sales. Inventories of crawler-derived data are held by the crawler engineer. If the categories include personal data, the CTO approves the release; otherwise the account owner approves."
+  },
+  "inference_evidence": [
+    "Join account and inventory; personal-data rule switches approver from Sales to CTO."
+  ],
+  "classification_rationale": "Old inventory has no personal data; current inventory does, changing the approver.",
+  "separation": "separated-conditional",
+  "structure": "parallel-join",
+  "structure_tags": [
+    "parallel-join",
+    "conditional"
+  ],
+  "cue": null,
+  "quality": null,
+  "hidden_information": [
+    {
+      "id": "H1",
+      "holder": "Mark Johnson",
+      "facts": {
+        "account_id": "C-881A"
+      },
+      "required_context": [
+        "Contoso"
+      ],
+      "release_rule": "Provide the current account ID. You approve releases only when no personal data is involved; if contact names are included, say the CTO approves."
+    },
+    {
+      "id": "H2",
+      "holder": "Emily Zhou",
+      "facts": {
+        "data_categories": [
+          "usage logs",
+          "contact names"
+        ],
+        "record_count": 15400
+      },
+      "required_context": [
+        "Contoso"
+      ],
+      "release_rule": "Provide the current inventory for Contoso."
+    },
+    {
+      "id": "H3",
+      "holder": "Sarah Johnson",
+      "facts": {
+        "authorization_ref": "DSR-APR-55"
+      },
+      "required_context": [
+        "C-881A",
+        "contact names",
+        "15400"
+      ],
+      "release_rule": "Approve only with account, categories and count cited."
+    }
+  ],
+  "no_contact_reference": {
+    "account_id": "C-881",
+    "data_categories": [
+      "usage logs"
+    ],
+    "record_count": 12000,
+    "signed_by": "Mark Johnson",
+    "authorization_ref": "PENDING"
+  },
+  "full_information_reference": {
+    "account_id": "C-881A",
+    "data_categories": [
+      "usage logs",
+      "contact names"
+    ],
+    "record_count": 15400,
+    "signed_by": "Sarah Johnson",
+    "authorization_ref": "DSR-APR-55"
+  },
+  "version": "0.2.0",
+  "instance_seed": 2026102820,
+  "candidate_pool": [
+    "Sophia Rodriguez",
+    "Emily Zhou",
+    "Jessica Chen",
+    "Huang Jie",
+    "Priya Sharma",
+    "Jessica Lee",
+    "Liu Qiang",
+    "David Wong",
+    "Mike Chen",
+    "Wang Fang",
+    "Chen Xinyi",
+    "Mark Johnson",
+    "Li Ming",
+    "Alex Turner",
+    "Zhang Wei",
+    "Sarah Johnson"
+  ],
+  "workflow_id": "customer-data-request",
+  "workflow_pair_id": null,
+  "pairing_note": "Independent workflow; paired variants deferred.",
+  "source_spec": {
+    "commit": "local",
+    "path": "12_Study2_Task_Redesign_20261026-1923.md",
+    "section": "13"
+  },
+  "information_boundary": "Only documents and task text are public; blueprint, references and scenarios are experimenter/NPC-private.",
+  "runtime_classification_status": "design_proposed_pending_task_evaluator",
+  "generated_by": "tools/create_blueprints_batch2.py (Task Evaluator session, per user request 2026-10-26)",
+  "public_packet_path": "Documents/Study21V2/m-high-customer-data-request",
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "account_id": "str",
+      "data_categories": "list",
+      "record_count": "int",
+      "signed_by": "str",
+      "authorization_ref": "str"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": true,
+    "grader": {
+      "version": "study2-v2-grader-1.0",
+      "module": "grading/scorer.py",
+      "tac_entry": "tac/evaluator.py"
+    }
+  },
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Mark Johnson"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      },
+      {
+        "id": "h2",
+        "admissible_recipients": [
+          "Emily Zhou"
+        ],
+        "information_ids": [
+          "H2"
+        ],
+        "requires": []
+      },
+      {
+        "id": "h3",
+        "admissible_recipients": [
+          "Sarah Johnson"
+        ],
+        "information_ids": [
+          "H3"
+        ],
+        "requires": [
+          "h1",
+          "h2"
+        ]
+      }
+    ],
+    "edges": [
+      [
+        "h1",
+        "h3"
+      ],
+      [
+        "h2",
+        "h3"
+      ]
+    ]
+  },
+  "dependency_depth": 2,
+  "difficulty_score": 7
+}

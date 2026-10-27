@@ -1,0 +1,6 @@
+{
+  "endpoint": "/v2/test-search",
+  "risk_rating": "medium",
+  "business_justification_id": "PENDING",
+  "authorization_ref": "PENDING"
+}

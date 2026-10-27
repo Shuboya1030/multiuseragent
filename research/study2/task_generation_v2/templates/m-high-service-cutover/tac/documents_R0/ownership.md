@@ -1,1 +1,1 @@
-Operational quality attestations belong to cross-team QA. Executive technical mandates belong to the CTO. Each mandate must cite the readiness record and the applicable freeze interval.
+Operational quality attestations belong to cross-team QA. Executive technical mandates belong to the CTO; while the CTO is away, the designated technical deputy issues them with the same authority. Each mandate must cite the readiness record and the applicable freeze interval.

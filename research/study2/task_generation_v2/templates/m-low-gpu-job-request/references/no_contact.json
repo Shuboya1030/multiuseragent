@@ -1,0 +1,6 @@
+{
+  "experiment": "E-55",
+  "gpu_hours": 120,
+  "queue": "research-a",
+  "quota_ref": "Q-OLD-12"
+}

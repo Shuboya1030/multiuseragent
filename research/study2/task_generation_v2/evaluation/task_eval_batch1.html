@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.12.1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Task Eval Batch 1</title>
+  <style>
+
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+</style>
+  <style type="text/css">:root{--bg:#fafaf8;--fg:#1d1d1f;--mut:#666;--line:#e3e3e0;--acc:#2f5fb3;--th:#f0f0ec}
+@media (prefers-color-scheme:dark){:root{--bg:#18181a;--fg:#e8e8e6;--mut:#a0a0a0;--line:#333;--acc:#7aa7ff;--th:#24242a}}
+body{background:var(--bg);color:var(--fg);font:15px/1.65 -apple-system,"Segoe UI","Microsoft YaHei",sans-serif;max-width:1200px;margin:0 auto;padding:24px 16px}
+h1{font-size:1.6em}h2{margin-top:2em;border-bottom:2px solid var(--line);padding-bottom:4px}
+a{color:var(--acc)}table{border-collapse:collapse;width:100%;font-size:13.5px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:6px 8px;vertical-align:top}th{background:var(--th);position:sticky;top:0}
+tr:nth-child(even) td{background:color-mix(in srgb,var(--th) 40%,transparent)}
+blockquote{border-left:4px solid var(--acc);margin:0;padding:4px 12px;color:var(--mut)}
+nav#TOC{background:var(--th);padding:8px 16px;border-radius:8px;font-size:14px}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Task Eval Batch 1</h1>
+</header>
+<h1 id="task-evaluator-report-study-2-task_generation_v2-6-representative-tasks">Task
+Evaluator Report — Study 2 task_generation_v2 (6 representative
+tasks)</h1>
+<ul>
+<li>Evaluated:
+<code>research/study2/task_generation_v2/templates/*</code> (git
+<code>3274b0a</code>), against
+<code>12_Study2_Task_Redesign_20261026-1923.md</code> §13–§14.</li>
+<li>Evaluator: this session (role: Task Evaluator). Package files were
+not modified.</li>
+<li>Method: static review of blueprint, public documents (R0/R1),
+task.md, scenarios.json, references; automated checks (hint scan,
+directory size, word-overlap resolver). <strong>Not run:</strong> live
+NPC behavior (B4/LLM-NPC), LLM realism judge (D1), human review (D2),
+executable reference solutions through a scorer (no scorer exists yet —
+B1/B2 judged from the blueprint’s declared reference outputs).</li>
+</ul>
+<h2 id="summary">1. Summary</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Task</th>
+<th>Class / target</th>
+<th>Verdict</th>
+<th>Main reasons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>m-high-service-cutover</td>
+<td>Must / High (D=8)</td>
+<td><strong>ACCEPT (conditional)</strong></td>
+<td>Strong design: depth 3, two lookups, gated releases, silent-failure
+trap. Needs live NPC check for release rules</td>
+</tr>
+<tr>
+<td>m-medium-research-purchase</td>
+<td>Must / Medium (D=5)</td>
+<td><strong>REVISE (minor)</strong></td>
+<td>Valid class; feature scoring inconsistent (separation=2 but
+inference=1, although inference also needs computed amount + threshold);
+R0 resolver ranks the finance gold #1</td>
+</tr>
+<tr>
+<td>m-low-ledger-allocation</td>
+<td>Must / Low (D=0)</td>
+<td><strong>ACCEPT</strong></td>
+<td>Clean low anchor; posting-sheet cue is subtle (issue date vs
+effective date) — good silent-failure trap</td>
+</tr>
+<tr>
+<td>o-high-training-schedule</td>
+<td>Optional / High (D=8)</td>
+<td><strong>ACCEPT (conditional)</strong></td>
+<td>Good: rule-scored quality (overlap minutes, cost), two lookups to
+find holder; Sales Director is a realistic decoy. Needs check that
+baseline is really valid (see B2-O)</td>
+</tr>
+<tr>
+<td>o-medium-event-package</td>
+<td>Optional / Medium (D=4)</td>
+<td><strong>ACCEPT</strong></td>
+<td>Cue implicit in venue.md; holder needs one rule; cost gain
+rule-scored</td>
+</tr>
+<tr>
+<td>o-low-campaign-asset</td>
+<td>Optional / Low (D=0)</td>
+<td><strong>REVISE</strong></td>
+<td>Cue states the answer’s holder and that it improves the result
+(“Marketing maintains an optional campaign-specific asset that improves
+visual alignment”) — this is effectively a hint; quality is a boolean
+label rather than a measurable outcome</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Set level:</strong> 6/60 tasks, one per class × level — fine
+as a pilot batch; distribution and coverage checks (E1–E3) not
+applicable yet.</p>
+<h2 id="check-results-per-task">2. Check results per task</h2>
+<p>Legend: ✅ pass · ⚠️ concern · ❌ fail · — not run</p>
+<table style="width:99%;">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr>
+<th>Check</th>
+<th>m-high</th>
+<th>m-med</th>
+<th>m-low</th>
+<th>o-high</th>
+<th>o-med</th>
+<th>o-low</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A1</strong> fields complete</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><strong>A2</strong> builds (per generator’s build logs)</td>
+<td>✅*</td>
+<td>✅*</td>
+<td>✅*</td>
+<td>✅*</td>
+<td>✅*</td>
+<td>✅*</td>
+</tr>
+<tr>
+<td><strong>A3</strong> TAC constraints (existing NPCs,
+rocketchat+owncloud)</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><strong>A4</strong> unique gold / equivalences</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>⚠️ cohort_sizes order</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><strong>B1</strong> no-contact ref: M fails base / O passes
+base</td>
+<td>✅ all 6 wrong</td>
+<td>✅ 5 wrong</td>
+<td>✅ cost_center wrong</td>
+<td>⚠️ see note</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><strong>B2</strong> full ref passes; O quality ↑</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅ (−60 min, −$800)</td>
+<td>✅ (−$315)</td>
+<td>⚠️ boolean</td>
+</tr>
+<tr>
+<td><strong>B3</strong> necessity ablation (each H required)</td>
+<td>✅ H1/H2/H3 each needed</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><strong>B4</strong> M: plausible silent failure / O: cue
+present</td>
+<td>✅ draft A-6 values</td>
+<td>✅ planning worksheet</td>
+<td>✅ Oct-01 sheet</td>
+<td>✅ implicit (two docs)</td>
+<td>✅ implicit</td>
+<td>❌ explicit, names holder function</td>
+</tr>
+<tr>
+<td><strong>C1</strong> features recomputed</td>
+<td>✅ N16 d3 sep2 inf2</td>
+<td>⚠️ see note</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><strong>C2</strong> title-only resolver fails when inference ≥1</td>
+<td>⚠️ CTO ranks #1 (R0, R1)</td>
+<td>⚠️ Finance ranks #1</td>
+<td>n/a (inf=0)</td>
+<td>✅ Sales ranks above HR</td>
+<td>✅ R0: gold #7</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td><strong>C3</strong> wording overlap gold vs best other</td>
+<td>R1: 0.38 vs 0.19 ⚠️</td>
+<td>0.40 vs 0.13 ⚠️</td>
+<td>0.22 vs 0.06</td>
+<td>0.35 vs 0.40 ✅</td>
+<td>0.20 vs 0.09</td>
+<td>0.18 vs 0.00</td>
+</tr>
+<tr>
+<td><strong>C4</strong> no hints in task.md</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅ (but hint is in brief.md)</td>
+</tr>
+<tr>
+<td><strong>C5</strong> level matches slot</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><strong>D1/D2</strong> realism</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>* Build logs present (<code>validation/build-*.log</code>); I did not
+rebuild.</p>
+<h2 id="detailed-findings">3. Detailed findings</h2>
+<h3 id="f1-o-low-campaign-asset-cue-is-a-hint-quality-not-measurable-revise">F1
+(o-low-campaign-asset) — cue is a hint; quality not measurable —
+REVISE</h3>
+<ul>
+<li><code>brief.md</code>: “Marketing maintains an optional
+campaign-specific asset that <strong>improves visual alignment</strong>;
+the evergreen asset remains valid.” This tells the agent there is a
+better option, who has it, and that it is optional. §13.4 allows an
+<em>explicit</em> cue at Low level, but naming the improvement and the
+holder’s function removes the decision we want to measure.</li>
+<li>Quality is <code>campaign_specific_asset: true/false</code>, a label
+rather than an outcome.</li>
+<li><strong>Fix:</strong> make the cue a fact without evaluation, e.g.,
+“Cedar launch creative was produced by the brand team in October; this
+brief predates it.” Score quality by an observable outcome (e.g., asset
+metadata <code>campaign=Cedar</code> and
+<code>license_valid_through ≥ launch date</code>).</li>
+</ul>
+<h3 id="f2-m-high-m-medium-the-authority-holder-is-the-top-match-by-title">F2
+(m-high, m-medium) — the authority-holder is the top match by title</h3>
+<ul>
+<li>In both Must tasks the approver (CTO, Finance Director) is the
+highest word-overlap candidate even in R0. This is partly realistic
+(approvals often go to obvious roles), but it means the “whom”
+difficulty in these tasks comes almost entirely from the
+<strong>information</strong> steps (Li Ming, Liu Qiang, Wang Fang) and
+from <strong>order/context</strong>, not from finding the approver.</li>
+<li>In m-high R1, the CTO addendum “Owns technical deployment mandates
+and cross-team production change windows” echoes
+<code>ownership.md</code> (“Executive technical mandates belong to the
+CTO”) and the task prompt’s “mandate_reference”. Overlap 0.38 vs
+0.19.</li>
+<li><strong>Fix (pick one per task):</strong> (a) add a realistic
+conditional twist so the obvious approver is not always right (e.g., CTO
+on leave → delegate; or freeze overlap decides between project lead vs
+CTO, already present in m-high — make the no-overlap variant exist too);
+(b) soften the R1 addendum wording so it does not repeat the document
+phrase.</li>
+</ul>
+<h3 id="f3-m-medium-difficulty-features-slightly-inconsistent">F3
+(m-medium) — difficulty features slightly inconsistent</h3>
+<ul>
+<li>Separation scored 2 (“conditional”: amount threshold) and inference
+scored 1. But identifying David Wong requires computing the current
+amount (20 × 600 = 12,000, which needs H1) and applying the threshold —
+the same conditional is counted in both features. Either score
+separation 1 + inference 2, or keep as is but document the rule
+(“conditional approval counts under separation only”). D stays 5 either
+way; this is a scoring-rule clarification for the generator.</li>
+</ul>
+<h3 id="f4-o-high-check-the-baseline-is-truly-valid">F4 (o-high) — check
+the baseline is truly valid</h3>
+<ul>
+<li>The standard course (120 min, 16:00–18:00) overlaps the focused-work
+block by 60 min. <code>roster.md</code> says overlap is allowed but
+costs disruption, so the baseline is valid. ✅</li>
+<li><code>cohort_sizes</code> as a list: equivalences should state
+order-insensitivity ([12,12] trivially fine, but say it).</li>
+<li>Holder inference needs two lookups (contract → PEOPLE group → HR
+custodian) and the Sales Director is a realistic decoy (Customer group).
+Good design.</li>
+</ul>
+<h3 id="f5-all-tasks-not-yet-verifiable-statically">F5 (all tasks) — not
+yet verifiable statically</h3>
+<ul>
+<li><strong>Release rules depend on LLM NPCs.</strong> m-high requires
+Liu Qiang to withhold readiness unless the request has revision, 6
+replicas, window and 20-minute rollback; Sarah Johnson must withhold the
+mandate without the readiness ID and freeze interval. These are exactly
+the order/context mechanics the paper relies on; they must be tested
+with the real NPC model before use (§14 B4/D1, and Redesign §11
+D3).</li>
+<li><strong>No scorer yet</strong>
+(<code>grading_implemented: false</code>). B1/B2 were judged from
+declared reference outputs; once the scorer exists, rerun the two
+references through it.</li>
+<li><strong>N vs visible accounts.</strong> README notes all TAC
+accounts remain visible in RocketChat; N is the directory size. Fine,
+but the paper must define N as “directory size”, and contacts outside
+the directory should be logged.</li>
+</ul>
+<h3 id="f6-positive-design-quality-is-high-overall">F6 (positive) —
+design quality is high overall</h3>
+<ul>
+<li>No hint words in any task.md; Must tasks all carry realistic
+stale/draft values (silent-failure traps); Optional tasks score real
+outcomes (cost, overlap minutes) except o-low; DAG and release rules
+make order and request context testable; R0/R1 share identical business
+documents.</li>
+</ul>
+<h2 id="requests-to-the-task-generator">4. Requests to the task
+generator</h2>
+<ol type="1">
+<li><strong>o-low-campaign-asset:</strong> rewrite cue as neutral fact;
+replace boolean quality with an outcome check (F1).</li>
+<li><strong>m-high / m-medium:</strong> reduce title/addendum overlap
+for the approver, or add a conditional so the obvious approver is not
+always correct (F2).</li>
+<li>Clarify the scoring rule for conditional approval (separation vs
+inference) in the generation plan (F3).</li>
+<li>Add order-insensitive equivalence for list fields (F4).</li>
+<li>Before scaling to 60: implement the scorer and run both references
+through it; run a minimal NPC rule test for every gated release (missing
+context → refusal; full context → release) with the planned environment
+model.</li>
+</ol>
+<h2 id="evaluator-limitations">5. Evaluator limitations</h2>
+<ul>
+<li>Word-overlap is a coarse lexical proxy; it does not capture semantic
+matching by an LLM agent.</li>
+<li>Realism (D1/D2) not assessed; recommend one human pass on the 6
+tasks before generating the remaining 54.</li>
+</ul>
+</body>
+</html>

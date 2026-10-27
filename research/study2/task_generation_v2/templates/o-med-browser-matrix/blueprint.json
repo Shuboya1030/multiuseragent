@@ -1,0 +1,129 @@
+{
+  "task_id": "o-med-browser-matrix",
+  "help_class": "Optional-help",
+  "target_level": "Medium",
+  "N": 8,
+  "feature_scores": [
+    1,
+    1,
+    2,
+    1
+  ],
+  "domain": "quality",
+  "prompt": "As of 2026-11-05: Prepare the browser test matrix for the e-commerce redesign. Save /workspace/deliverable.json with browsers, devices, cell_count. Post a short summary and the file path in #engineering.",
+  "documents": {
+    "matrix.md": "Matrix from 2024: 6 browsers x 4 devices = 24 cells.",
+    "test-standards.md": "Supported-browser lists are published per product by whoever owns cross-team testing.",
+    "org-notes.md": "Cross-team testing is owned by quality assurance."
+  },
+  "inference_evidence": [
+    "Two docs map testing ownership to QA."
+  ],
+  "classification_rationale": "Old matrix valid; current list reduces cells.",
+  "separation": null,
+  "structure": null,
+  "structure_tags": [],
+  "cue": {
+    "documents": [
+      "matrix.md"
+    ],
+    "description": "Implicit: matrix is from 2024."
+  },
+  "quality": {
+    "dimension": "cell_count",
+    "baseline": 24,
+    "full_information": 16,
+    "minimum_improvement": 4,
+    "constraints": []
+  },
+  "hidden_information": [
+    {
+      "id": "H1",
+      "holder": "Liu Qiang",
+      "facts": {
+        "browsers": 4,
+        "deprecated": [
+          "IE-mode",
+          "Legacy Edge"
+        ]
+      },
+      "required_context": [
+        "e-commerce redesign"
+      ],
+      "release_rule": "Provide the current supported list. The 2024 matrix remains acceptable."
+    }
+  ],
+  "no_contact_reference": {
+    "browsers": 6,
+    "devices": 4,
+    "cell_count": 24
+  },
+  "full_information_reference": {
+    "browsers": 4,
+    "devices": 4,
+    "cell_count": 16
+  },
+  "version": "0.2.0",
+  "instance_seed": 2026102844,
+  "candidate_pool": [
+    "Zhang Wei",
+    "David Wong",
+    "Chen Xinyi",
+    "Jessica Chen",
+    "Emma Lewis",
+    "Liu Qiang",
+    "Mike Chen",
+    "Priya Sharma"
+  ],
+  "workflow_id": "browser-matrix",
+  "workflow_pair_id": null,
+  "pairing_note": "Independent workflow; paired variants deferred.",
+  "source_spec": {
+    "commit": "local",
+    "path": "12_Study2_Task_Redesign_20261026-1923.md",
+    "section": "13"
+  },
+  "information_boundary": "Only documents and task text are public; blueprint, references and scenarios are experimenter/NPC-private.",
+  "runtime_classification_status": "design_proposed_pending_task_evaluator",
+  "generated_by": "tools/create_blueprints_batch2.py (Task Evaluator session, per user request 2026-10-26)",
+  "public_packet_path": "Documents/Study21V2/o-med-browser-matrix",
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "browsers": "int",
+      "devices": "int",
+      "cell_count": "int"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": true,
+    "grader": {
+      "version": "study2-v2-grader-1.0",
+      "module": "grading/scorer.py",
+      "tac_entry": "tac/evaluator.py"
+    }
+  },
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Liu Qiang"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      }
+    ],
+    "edges": []
+  },
+  "dependency_depth": 1,
+  "difficulty_score": 5
+}

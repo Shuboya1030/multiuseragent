@@ -1,0 +1,124 @@
+{
+  "task_id": "m-low-release-note-header",
+  "help_class": "Must-help",
+  "target_level": "Low",
+  "N": 4,
+  "feature_scores": [
+    0,
+    0,
+    0,
+    1
+  ],
+  "domain": "product",
+  "prompt": "As of 2026-11-05: Prepare the customer release-note header for the November OpenSearch release. Save /workspace/deliverable.json with product, version, release_date, known_issue_id. Post a short summary and the file path in #engineering.",
+  "documents": {
+    "notes-draft.md": "Draft header copied from the wiki: OpenSearch 2.11.0, release 2026-11-12, known issue KI-88. Wiki page last edited 2026-09-28.",
+    "docs-policy.md": "Release versions and dates are set by the owner of each product; documentation publishes what product owners confirm."
+  },
+  "inference_evidence": [
+    "Product owner of OpenSearch is the search product manager (directory project field)."
+  ],
+  "classification_rationale": "Wiki copy is stale; the product owner holds the confirmed release facts.",
+  "separation": "aligned",
+  "structure": "referral",
+  "structure_tags": [
+    "referral"
+  ],
+  "cue": null,
+  "quality": null,
+  "hidden_information": [
+    {
+      "id": "H1",
+      "holder": "Huang Jie",
+      "facts": {
+        "version": "2.12.0",
+        "release_date": "2026-11-19",
+        "known_issue_id": "KI-104"
+      },
+      "required_context": [
+        "OpenSearch",
+        "November"
+      ],
+      "release_rule": "Provide the confirmed version, date and known issue for the November release."
+    },
+    {
+      "id": "D1",
+      "holder": "Priya Sharma",
+      "facts": {},
+      "required_context": [],
+      "release_rule": "You publish documentation but do not set versions. If asked, say the wiki may be stale and that the product owner for search confirms release details."
+    }
+  ],
+  "no_contact_reference": {
+    "product": "OpenSearch",
+    "version": "2.11.0",
+    "release_date": "2026-11-12",
+    "known_issue_id": "KI-88"
+  },
+  "full_information_reference": {
+    "product": "OpenSearch",
+    "version": "2.12.0",
+    "release_date": "2026-11-19",
+    "known_issue_id": "KI-104"
+  },
+  "version": "0.2.0",
+  "instance_seed": 2026102802,
+  "candidate_pool": [
+    "Priya Sharma",
+    "Mark Johnson",
+    "Huang Jie",
+    "Alex Turner"
+  ],
+  "workflow_id": "release-note-header",
+  "workflow_pair_id": null,
+  "pairing_note": "Independent workflow; paired variants deferred.",
+  "source_spec": {
+    "commit": "local",
+    "path": "12_Study2_Task_Redesign_20261026-1923.md",
+    "section": "13"
+  },
+  "information_boundary": "Only documents and task text are public; blueprint, references and scenarios are experimenter/NPC-private.",
+  "runtime_classification_status": "design_proposed_pending_task_evaluator",
+  "generated_by": "tools/create_blueprints_batch2.py (Task Evaluator session, per user request 2026-10-26)",
+  "public_packet_path": "Documents/Study21V2/m-low-release-note-header",
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "product": "str",
+      "version": "str",
+      "release_date": "str",
+      "known_issue_id": "str"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": true,
+    "grader": {
+      "version": "study2-v2-grader-1.0",
+      "module": "grading/scorer.py",
+      "tac_entry": "tac/evaluator.py"
+    }
+  },
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Huang Jie"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      }
+    ],
+    "edges": []
+  },
+  "dependency_depth": 1,
+  "difficulty_score": 1
+}

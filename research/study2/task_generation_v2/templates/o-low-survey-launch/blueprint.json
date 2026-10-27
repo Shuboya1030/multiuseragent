@@ -1,0 +1,121 @@
+{
+  "task_id": "o-low-survey-launch",
+  "help_class": "Optional-help",
+  "target_level": "Low",
+  "N": 4,
+  "feature_scores": [
+    0,
+    0,
+    1,
+    1
+  ],
+  "domain": "hr",
+  "prompt": "As of 2026-11-05: Schedule the employee engagement survey. Save /workspace/deliverable.json with launch_date, close_date, reminder_count. Post a short summary and the file path in #engineering.",
+  "documents": {
+    "survey.md": "Planned launch 2026-11-23, close 2026-12-04, two reminders. Survey windows should avoid weeks with company-wide deadlines; the people team keeps the internal deadline calendar."
+  },
+  "inference_evidence": [
+    "People team maps to HR."
+  ],
+  "classification_rationale": "Planned dates valid; HR calendar avoids a deadline week.",
+  "separation": null,
+  "structure": null,
+  "structure_tags": [],
+  "cue": {
+    "documents": [
+      "survey.md"
+    ],
+    "description": "Explicit pointer to the deadline calendar."
+  },
+  "quality": {
+    "dimension": "deadline_week_overlaps",
+    "baseline": 1,
+    "full_information": 0,
+    "minimum_improvement": 1,
+    "constraints": []
+  },
+  "hidden_information": [
+    {
+      "id": "H1",
+      "holder": "Chen Xinyi",
+      "facts": {
+        "conflict": "payroll close and benefits enrollment week of 2026-11-23",
+        "launch_date": "2026-11-30",
+        "close_date": "2026-12-11"
+      },
+      "required_context": [
+        "survey"
+      ],
+      "release_rule": "Provide the deadline conflict and a clear window. The planned dates remain allowed."
+    }
+  ],
+  "no_contact_reference": {
+    "launch_date": "2026-11-23",
+    "close_date": "2026-12-04",
+    "reminder_count": 2
+  },
+  "full_information_reference": {
+    "launch_date": "2026-11-30",
+    "close_date": "2026-12-11",
+    "reminder_count": 2
+  },
+  "version": "0.2.0",
+  "instance_seed": 2026102831,
+  "candidate_pool": [
+    "Chen Xinyi",
+    "Emma Lewis",
+    "Sarah Johnson",
+    "Li Ming"
+  ],
+  "workflow_id": "survey-launch",
+  "workflow_pair_id": null,
+  "pairing_note": "Independent workflow; paired variants deferred.",
+  "source_spec": {
+    "commit": "local",
+    "path": "12_Study2_Task_Redesign_20261026-1923.md",
+    "section": "13"
+  },
+  "information_boundary": "Only documents and task text are public; blueprint, references and scenarios are experimenter/NPC-private.",
+  "runtime_classification_status": "design_proposed_pending_task_evaluator",
+  "generated_by": "tools/create_blueprints_batch2.py (Task Evaluator session, per user request 2026-10-26)",
+  "public_packet_path": "Documents/Study21V2/o-low-survey-launch",
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "launch_date": "str",
+      "close_date": "str",
+      "reminder_count": "int"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": true,
+    "grader": {
+      "version": "study2-v2-grader-1.0",
+      "module": "grading/scorer.py",
+      "tac_entry": "tac/evaluator.py"
+    }
+  },
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Chen Xinyi"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      }
+    ],
+    "edges": []
+  },
+  "dependency_depth": 1,
+  "difficulty_score": 2
+}

@@ -1,0 +1,10 @@
+{
+  "launch_date": "2026-11-24",
+  "channels": [
+    "blog",
+    "email",
+    "partner blog",
+    "partner newsletter"
+  ],
+  "partner_co_announce": true
+}

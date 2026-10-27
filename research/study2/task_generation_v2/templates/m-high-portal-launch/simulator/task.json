@@ -1,0 +1,134 @@
+{
+  "task_id": "m-high-portal-launch",
+  "initial_task": "As of 2026-11-05: Prepare the go/no-go record for launching the API v3 documentation portal. Save /workspace/deliverable.json with docs_build_id, qa_signoff, launch_date, authorization_ref. Post a short summary and the file path in #engineering.\n\nWork packet: OwnCloud Documents/Study21V2/m-high-portal-launch.\nOwnCloud: http://the-agent-company.com:8092\nRocketChat: http://the-agent-company.com:3000\n",
+  "public_documents": {
+    "plan.md": "Portal launch planned for 2026-11-12 with docs build DB-301.",
+    "launch-policy.md": "Docs builds are produced by the documentation engineer. QA signs off against the current build. Launch approval comes from the product manager of the API portal.",
+    "product-map.md": "API portal product decisions belong to the search product manager while the API product role is vacant.",
+    "out-of-office.md": "Huang Jie away 2026-11-04 to 2026-11-20; product approvals delegated to Jessica Chen."
+  },
+  "directory_by_condition": {
+    "R0": "# Relevant working directory\n\n## Zhang Wei\nSenior Software Engineer (Streaming Database Team)\n\n## Emily Zhou\nSoftware Engineer (Web Crawler Team)\n\n## Emma Lewis\nSoftware Engineer (API Team)\n\n## Huang Jie\nProduct Manager (Search Engine Team)\n\n## Li Ming\nDatabase Team Project Manager\n\n## Priya Sharma\nDocumentation Engineer\n\n## Sarah Johnson\nCTO\n\n## Mike Chen\nSenior Software Engineer (AI Team)\n\n## Jessica Chen\nFrontend Software Engineer\n\n## Alex Turner\nSoftware Engineer (Low-Code Platform Team)\n\n## David Wong\nFinance Director\n\n## Wang Fang\nAI Researcher (AI Team)\n\n## Chen Xinyi\nHuman Resources Manager\n\n## Sophia Rodriguez\nUX Designer\n\n## Liu Qiang\nQuality Assurance Engineer\n\n## Jessica Lee\nMarketing Manager\n",
+    "R1": "# Relevant working directory\n\n## Zhang Wei\nSenior Software Engineer (Streaming Database Team)\n\nResponsibilities: Developing and optimizing core streaming database functionalities; Project: RisingWave (Streaming Database); Skills: Rust, database systems\nSenior engineer on the Streaming DB team; acts as technical deputy for the CTO when designated.\n\n## Emily Zhou\nSoftware Engineer (Web Crawler Team)\n\nResponsibilities: Designing and implementing web crawler functionalities; Project: Colly (Web Crawler Framework); Skills: Go, distributed systems\nOwns the crawler framework and the datasets it produces.\n\n## Emma Lewis\nSoftware Engineer (API Team)\n\nResponsibilities: Developing API functionalities using Python; Project: API-server; Skills: N/A\nHandles API server operations, integrations and security testing.\n\n## Huang Jie\nProduct Manager (Search Engine Team)\n\nResponsibilities: Defining product requirements, planning product roadmap, communicating with clients; Project: OpenSearch (Search Engine); Skills: N/A\nSets roadmap and release timing for search and storefront products.\n\n## Li Ming\nDatabase Team Project Manager\n\nResponsibilities: Managing database projects, resource coordination, ensuring timely delivery; Project: JanusGraph (Graph Database); Skills: Java, distributed systems\nPlans Database team capacity and release resourcing.\n\n## Priya Sharma\nDocumentation Engineer\n\nResponsibilities: Writing technical documentation, maintaining wiki, improving documentation processes; Project: Documentation (Wiki); Skills: N/A\nKeeps the internal wiki, document templates and translation assets.\n\n## Sarah Johnson\nCTO\n\nResponsibilities: Technical strategy planning, R&D team leadership, new technology assessment; Project: Oversees all technical projects; Skills: N/A\nSets technical direction and signs off high-risk production changes. Delegates sign-off authority when away.\n\n## Mike Chen\nSenior Software Engineer (AI Team)\n\nResponsibilities: Developing and optimizing LLM inference engines; Project: llama.cpp (LLM inference project); Skills: C++, CUDA, performance optimization\nOperates the inference GPU cluster and its schedules.\n\n## Jessica Chen\nFrontend Software Engineer\n\nResponsibilities: Developing user interfaces, implementing responsive designs, optimizing web performance; Project: E-commerce Website Redesign; Skills: N/A\nBuilds the storefront frontend and its rollout settings.\n\n## Alex Turner\nSoftware Engineer (Low-Code Platform Team)\n\nResponsibilities: Developing low-code platform features; Project: Node-RED (Low-Code Platform); Skills: N/A\nRuns the low-code platform and its plugin inventory.\n\n## David Wong\nFinance Director\n\nResponsibilities: Financial planning, budget management, financial reporting; Project: N/A (Finance); Skills: N/A\nOwns the general ledger calendar and spending limits above department level.\n\n## Wang Fang\nAI Researcher (AI Team)\n\nResponsibilities: Designing and implementing machine learning models, optimizing model performance; Project: OpenHands (LLM project); Skills: Python, machine learning, LLM\nTracks AI research project capacity and seat plans.\n\n## Chen Xinyi\nHuman Resources Manager\n\nResponsibilities: Recruitment, employee training, compensation management; Project: N/A (HR); Skills: N/A\nMaintains staff development entitlements and enrollment arrangements.\n\n## Sophia Rodriguez\nUX Designer\n\nResponsibilities: Designing user interfaces, improving user experience, conducting user research; Project: All projects (focusing on user experience); Skills: N/A\nLeads brand and visual design work, including campaign creative files.\n\n## Liu Qiang\nQuality Assurance Engineer\n\nResponsibilities: Developing test strategies, executing tests, ensuring product quality; Project: All projects (focusing on testing and quality); Skills: N/A\nRuns cross-team test sign-offs before production releases.\n\n## Jessica Lee\nMarketing Manager\n\nResponsibilities: Developing marketing strategies, managing brand image, organizing marketing events; Project: N/A (Marketing); Skills: N/A\nRuns campaign planning; creative production is handled with the brand team.\n"
+  },
+  "private_records": [
+    {
+      "id": "H1",
+      "holder": "Priya Sharma",
+      "facts": {
+        "docs_build_id": "DB-318",
+        "launch_date": "2026-11-17"
+      },
+      "required_context": [
+        "API v3 portal"
+      ],
+      "release_rule": "Provide the current build and launch date."
+    },
+    {
+      "id": "H2",
+      "holder": "Liu Qiang",
+      "facts": {
+        "qa_signoff": "QA-DB318"
+      },
+      "required_context": [
+        "DB-318"
+      ],
+      "release_rule": "Sign off only against DB-318."
+    },
+    {
+      "id": "H3",
+      "holder": "Jessica Chen",
+      "facts": {
+        "authorization_ref": "LCH-APR-3"
+      },
+      "required_context": [
+        "QA-DB318",
+        "2026-11-17"
+      ],
+      "release_rule": "As delegated product approver, approve only with QA sign-off and date cited."
+    },
+    {
+      "id": "D1",
+      "holder": "Huang Jie",
+      "facts": {},
+      "required_context": [],
+      "release_rule": "You are away until 2026-11-20. Say product approvals are delegated to Jessica Chen; issue nothing."
+    },
+    {
+      "id": "D2",
+      "holder": "Emma Lewis",
+      "facts": {},
+      "required_context": [],
+      "release_rule": "You run the API server, not the docs portal. If asked about launch approval, say product decides."
+    }
+  ],
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Priya Sharma"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      },
+      {
+        "id": "h2",
+        "admissible_recipients": [
+          "Liu Qiang"
+        ],
+        "information_ids": [
+          "H2"
+        ],
+        "requires": [
+          "h1"
+        ]
+      },
+      {
+        "id": "h3",
+        "admissible_recipients": [
+          "Jessica Chen"
+        ],
+        "information_ids": [
+          "H3"
+        ],
+        "requires": [
+          "h2"
+        ]
+      }
+    ],
+    "edges": [
+      [
+        "h1",
+        "h2"
+      ],
+      [
+        "h2",
+        "h3"
+      ]
+    ]
+  },
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "docs_build_id": "str",
+      "qa_signoff": "str",
+      "launch_date": "str",
+      "authorization_ref": "str"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": false
+  },
+  "adapter_status": "declarative v2 format; not compatible with legacy simulator without adapter",
+  "npc_behavior": "deterministic rules represented as data; execution engine not included",
+  "evaluator": null
+}

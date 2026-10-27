@@ -1,0 +1,123 @@
+{
+  "task_id": "o-low-demo-shipment",
+  "help_class": "Optional-help",
+  "target_level": "Low",
+  "N": 4,
+  "feature_scores": [
+    0,
+    1,
+    0,
+    0
+  ],
+  "domain": "sales",
+  "prompt": "As of 2026-11-05: Prepare the shipping order for demo hardware to customer Fabrikam. Save /workspace/deliverable.json with customer, carrier, ship_date, delivery_days. Post a short summary and the file path in #engineering.",
+  "documents": {
+    "shipping.md": "Default carrier GroundCo, 6 business days. Ship date 2026-11-12. Fabrikam demo on 2026-11-20. Account owner for Fabrikam: Sales Director."
+  },
+  "inference_evidence": [
+    "Account owner named."
+  ],
+  "classification_rationale": "Default carrier arrives just in time; account owner knows a faster equal-price option.",
+  "separation": null,
+  "structure": null,
+  "structure_tags": [],
+  "cue": {
+    "documents": [
+      "shipping.md"
+    ],
+    "description": "Implicit: 6 business days from 11-12 leaves no buffer before the 11-20 demo."
+  },
+  "quality": {
+    "dimension": "buffer_business_days_before_demo",
+    "baseline": 0,
+    "full_information": 3,
+    "minimum_improvement": 2,
+    "constraints": []
+  },
+  "hidden_information": [
+    {
+      "id": "H1",
+      "holder": "Mark Johnson",
+      "facts": {
+        "carrier": "FastFreight",
+        "delivery_days": 3
+      },
+      "required_context": [
+        "Fabrikam"
+      ],
+      "release_rule": "Provide the carrier Fabrikam receiving accepts at the same price. GroundCo remains valid."
+    }
+  ],
+  "no_contact_reference": {
+    "customer": "Fabrikam",
+    "carrier": "GroundCo",
+    "ship_date": "2026-11-12",
+    "delivery_days": 6
+  },
+  "full_information_reference": {
+    "customer": "Fabrikam",
+    "carrier": "FastFreight",
+    "ship_date": "2026-11-12",
+    "delivery_days": 3
+  },
+  "version": "0.2.0",
+  "instance_seed": 2026102829,
+  "candidate_pool": [
+    "David Wong",
+    "Alex Turner",
+    "Mark Johnson",
+    "Huang Jie"
+  ],
+  "workflow_id": "demo-shipment",
+  "workflow_pair_id": null,
+  "pairing_note": "Independent workflow; paired variants deferred.",
+  "source_spec": {
+    "commit": "local",
+    "path": "12_Study2_Task_Redesign_20261026-1923.md",
+    "section": "13"
+  },
+  "information_boundary": "Only documents and task text are public; blueprint, references and scenarios are experimenter/NPC-private.",
+  "runtime_classification_status": "design_proposed_pending_task_evaluator",
+  "generated_by": "tools/create_blueprints_batch2.py (Task Evaluator session, per user request 2026-10-26)",
+  "public_packet_path": "Documents/Study21V2/o-low-demo-shipment",
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "customer": "str",
+      "carrier": "str",
+      "ship_date": "str",
+      "delivery_days": "int"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": true,
+    "grader": {
+      "version": "study2-v2-grader-1.0",
+      "module": "grading/scorer.py",
+      "tac_entry": "tac/evaluator.py"
+    }
+  },
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Mark Johnson"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      }
+    ],
+    "edges": []
+  },
+  "dependency_depth": 1,
+  "difficulty_score": 1
+}

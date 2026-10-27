@@ -1,0 +1,62 @@
+{
+  "task_id": "o-low-press-factsheet",
+  "initial_task": "As of 2026-11-05: Prepare the press fact sheet for the OpenSearch 2.12 launch. Save /workspace/deliverable.json with headline, exec_quote_id, boilerplate_version. Post a short summary and the file path in #engineering.\n\nWork packet: OwnCloud Documents/Study21V2/o-low-press-factsheet.\nOwnCloud: http://the-agent-company.com:8092\nRocketChat: http://the-agent-company.com:3000\n",
+  "public_documents": {
+    "factsheet.md": "Boilerplate B-2026 approved. Headline draft: \"OpenSearch gets faster\". Last release reused exec quote Q-0611 from 2025.",
+    "marketing-roles.md": "The Marketing Manager keeps the approved quote library."
+  },
+  "directory_by_condition": {
+    "R0": "# Relevant working directory\n\n## Li Ming\nDatabase Team Project Manager\n\n## Chen Xinyi\nHuman Resources Manager\n\n## Wang Fang\nAI Researcher (AI Team)\n\n## Jessica Lee\nMarketing Manager\n",
+    "R1": "# Relevant working directory\n\n## Li Ming\nDatabase Team Project Manager\n\nResponsibilities: Managing database projects, resource coordination, ensuring timely delivery; Project: JanusGraph (Graph Database); Skills: Java, distributed systems\nPlans Database team capacity and release resourcing.\n\n## Chen Xinyi\nHuman Resources Manager\n\nResponsibilities: Recruitment, employee training, compensation management; Project: N/A (HR); Skills: N/A\nMaintains staff development entitlements and enrollment arrangements.\n\n## Wang Fang\nAI Researcher (AI Team)\n\nResponsibilities: Designing and implementing machine learning models, optimizing model performance; Project: OpenHands (LLM project); Skills: Python, machine learning, LLM\nTracks AI research project capacity and seat plans.\n\n## Jessica Lee\nMarketing Manager\n\nResponsibilities: Developing marketing strategies, managing brand image, organizing marketing events; Project: N/A (Marketing); Skills: N/A\nRuns campaign planning; creative production is handled with the brand team.\n"
+  },
+  "private_records": [
+    {
+      "id": "H1",
+      "holder": "Jessica Lee",
+      "facts": {
+        "exec_quote_id": "Q-1102",
+        "quote_release": "2.12",
+        "headline": "OpenSearch 2.12 cuts query latency in half"
+      },
+      "required_context": [
+        "2.12"
+      ],
+      "release_rule": "Provide the 2.12-specific approved quote and matching headline. Q-0611 remains approved."
+    }
+  ],
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Jessica Lee"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      }
+    ],
+    "edges": []
+  },
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "headline": "str",
+      "exec_quote_id": "str",
+      "boilerplate_version": "str"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": false
+  },
+  "adapter_status": "declarative v2 format; not compatible with legacy simulator without adapter",
+  "npc_behavior": "deterministic rules represented as data; execution engine not included",
+  "evaluator": null
+}

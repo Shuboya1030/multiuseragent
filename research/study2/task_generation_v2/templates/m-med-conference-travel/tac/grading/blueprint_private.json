@@ -1,0 +1,157 @@
+{
+  "task_id": "m-med-conference-travel",
+  "help_class": "Must-help",
+  "target_level": "Medium",
+  "N": 8,
+  "feature_scores": [
+    1,
+    1,
+    2,
+    1
+  ],
+  "domain": "finance",
+  "prompt": "As of 2026-11-05: Prepare the travel request for the AI team attending NeurIPS. Save /workspace/deliverable.json with travelers, total_usd, budget_code, signed_by, authorization_ref. Post a short summary and the file path in #engineering.",
+  "documents": {
+    "trip.md": "Planning estimate (2026-09-05): 2 travelers, USD 6400 total, budget AI-TR-25.",
+    "travel-policy.md": "Traveler lists and budgets are confirmed by the AI research budget holder. Conference travel is approved by the Finance Director.",
+    "out-of-office.md": "Out of office 2026-10-26 to 2026-11-13: David Wong (Finance Director). Acting finance approver: Chen Xinyi."
+  },
+  "inference_evidence": [
+    "Out-of-office note redirects Finance Director approvals to the acting approver."
+  ],
+  "classification_rationale": "Planning estimate is stale; the named approver is away.",
+  "separation": "separated-delegation",
+  "structure": "delegation",
+  "structure_tags": [
+    "delegation",
+    "info-approval"
+  ],
+  "cue": null,
+  "quality": null,
+  "hidden_information": [
+    {
+      "id": "H1",
+      "holder": "Wang Fang",
+      "facts": {
+        "travelers": 3,
+        "total_usd": 9100,
+        "budget_code": "AI-TR-26"
+      },
+      "required_context": [
+        "NeurIPS"
+      ],
+      "release_rule": "Provide the confirmed travelers, total and budget code."
+    },
+    {
+      "id": "H2",
+      "holder": "Chen Xinyi",
+      "facts": {
+        "authorization_ref": "TRV-APR-418"
+      },
+      "required_context": [
+        "3",
+        "9100",
+        "AI-TR-26"
+      ],
+      "release_rule": "As acting finance approver, approve only with confirmed travelers, total and budget cited."
+    },
+    {
+      "id": "D1",
+      "holder": "David Wong",
+      "facts": {},
+      "required_context": [],
+      "release_rule": "You are out of office until 2026-11-13. If contacted, say Chen Xinyi is the acting finance approver; issue nothing."
+    }
+  ],
+  "no_contact_reference": {
+    "travelers": 2,
+    "total_usd": 6400,
+    "budget_code": "AI-TR-25",
+    "signed_by": "David Wong",
+    "authorization_ref": "PENDING"
+  },
+  "full_information_reference": {
+    "travelers": 3,
+    "total_usd": 9100,
+    "budget_code": "AI-TR-26",
+    "signed_by": "Chen Xinyi",
+    "authorization_ref": "TRV-APR-418"
+  },
+  "version": "0.2.0",
+  "instance_seed": 2026102809,
+  "candidate_pool": [
+    "Priya Sharma",
+    "David Wong",
+    "Wang Fang",
+    "Chen Xinyi",
+    "Jessica Lee",
+    "Li Ming",
+    "Sarah Johnson",
+    "Mark Johnson"
+  ],
+  "workflow_id": "conference-travel",
+  "workflow_pair_id": null,
+  "pairing_note": "Independent workflow; paired variants deferred.",
+  "source_spec": {
+    "commit": "local",
+    "path": "12_Study2_Task_Redesign_20261026-1923.md",
+    "section": "13"
+  },
+  "information_boundary": "Only documents and task text are public; blueprint, references and scenarios are experimenter/NPC-private.",
+  "runtime_classification_status": "design_proposed_pending_task_evaluator",
+  "generated_by": "tools/create_blueprints_batch2.py (Task Evaluator session, per user request 2026-10-26)",
+  "public_packet_path": "Documents/Study21V2/m-med-conference-travel",
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "travelers": "int",
+      "total_usd": "int",
+      "budget_code": "str",
+      "signed_by": "str",
+      "authorization_ref": "str"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": false
+  },
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Wang Fang"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      },
+      {
+        "id": "h2",
+        "admissible_recipients": [
+          "Chen Xinyi"
+        ],
+        "information_ids": [
+          "H2"
+        ],
+        "requires": [
+          "h1"
+        ]
+      }
+    ],
+    "edges": [
+      [
+        "h1",
+        "h2"
+      ]
+    ]
+  },
+  "dependency_depth": 2,
+  "difficulty_score": 5
+}

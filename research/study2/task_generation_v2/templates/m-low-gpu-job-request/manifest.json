@@ -1,0 +1,20 @@
+{
+  "blueprint.json": "2289185b84d520ea4a0710d495129679744245a0ea314efbaf922f40fae0e6cc",
+  "metadata.json": "dc90b81528ad1f908feafcf72d43aa3855043e349e9b1b357942cdeac2dcc139",
+  "references\\full_information.json": "2561d15285d3e7a63f03c506e73f8c852e52109086fd68313b161312c0b06222",
+  "references\\no_contact.json": "c47b4143e529ea7c98d65672769c2d134a7decabec8920e0ab0a523fedcfc80a",
+  "references\\walkthrough.md": "2be4c41916ac3dd0991ff2b0c94033339d048abf36f6d62694b9cca51531d244",
+  "simulator\\task.json": "b00fda8411541312bcd937b04a4bb41fe06b9bcd9257da2748ddf0b94090d745",
+  "tac\\dependencies.yml": "fb84075bbad26ebb051f13f87cbd16c5ad76e4635c2d82a85da704355542b68c",
+  "tac\\Dockerfile": "47106047bdf4b69e6585e463d2743a938d967e0060859d2ba927b4103b458551",
+  "tac\\documents_R0\\compute-policy.md": "8079d0adb9f831a949db71025f177a5f665b1ef700cbf2d6b0fd81baed5d2e50",
+  "tac\\documents_R0\\directory.md": "baf3b9e4eb72de48977e353f36ecc14f3a0e4ce69db24074bbe0f4b772e6b717",
+  "tac\\documents_R0\\job.md": "bc03d89f084ef26d90fedc8d053e45229eedb7e70b0ff9de17ede30d4c960e9b",
+  "tac\\documents_R1\\compute-policy.md": "8079d0adb9f831a949db71025f177a5f665b1ef700cbf2d6b0fd81baed5d2e50",
+  "tac\\documents_R1\\directory.md": "e239b3575e122a10cc959b8a365c7565cb39a5d75cdf4bdaaa62dbb4f2efafb0",
+  "tac\\documents_R1\\job.md": "bc03d89f084ef26d90fedc8d053e45229eedb7e70b0ff9de17ede30d4c960e9b",
+  "tac\\Makefile": "c240ff65361995ec378e15a32a679f831012574b4f83ddb2ca0c531ff595a79c",
+  "tac\\populate_data.py": "6cab06678e748c4744971c7fe40ece64a907ecf1052f5c618234bef75599ecd8",
+  "tac\\scenarios.json": "5fee9a15fd4f5a7e4e6fce8510419a5c44f10a4b45d2fcde0c7575e87a696dab",
+  "tac\\task.md": "969858542108bf49a6a42d03f2d36d35c659ecdb6b4a26f81350155b13450037"
+}

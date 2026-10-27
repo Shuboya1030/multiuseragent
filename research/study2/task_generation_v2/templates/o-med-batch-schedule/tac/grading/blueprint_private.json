@@ -1,0 +1,128 @@
+{
+  "task_id": "o-med-batch-schedule",
+  "help_class": "Optional-help",
+  "target_level": "Medium",
+  "N": 16,
+  "feature_scores": [
+    2,
+    1,
+    1,
+    1
+  ],
+  "domain": "ai-infrastructure",
+  "prompt": "As of 2026-11-05: Schedule the nightly embedding batch job. Save /workspace/deliverable.json with start_utc, gpu_type, monthly_usd. Post a short summary and the file path in #engineering.",
+  "documents": {
+    "batch.md": "Current plan: start 18:00 UTC on A100, USD 3600/month. The inference engineering team operates the GPU cluster."
+  },
+  "inference_evidence": [
+    "Inference engineering maps to Mike Chen."
+  ],
+  "classification_rationale": "Peak schedule valid; off-peak cheaper.",
+  "separation": null,
+  "structure": null,
+  "structure_tags": [],
+  "cue": {
+    "documents": [
+      "batch.md"
+    ],
+    "description": "Implicit: peak-hour start."
+  },
+  "quality": {
+    "dimension": "monthly_usd",
+    "baseline": 3600,
+    "full_information": 2160,
+    "minimum_improvement": 500,
+    "constraints": []
+  },
+  "hidden_information": [
+    {
+      "id": "H1",
+      "holder": "Mike Chen",
+      "facts": {
+        "start_utc": "02:00",
+        "discount": 0.4,
+        "monthly_usd": 2160
+      },
+      "required_context": [
+        "embedding batch"
+      ],
+      "release_rule": "Provide the off-peak window and price. 18:00 remains allowed."
+    }
+  ],
+  "no_contact_reference": {
+    "start_utc": "18:00",
+    "gpu_type": "A100",
+    "monthly_usd": 3600
+  },
+  "full_information_reference": {
+    "start_utc": "02:00",
+    "gpu_type": "A100",
+    "monthly_usd": 2160
+  },
+  "version": "0.2.0",
+  "instance_seed": 2026102838,
+  "candidate_pool": [
+    "David Wong",
+    "Jessica Lee",
+    "Mike Chen",
+    "Priya Sharma",
+    "Sarah Johnson",
+    "Zhang Wei",
+    "Huang Jie",
+    "Chen Xinyi",
+    "Sophia Rodriguez",
+    "Emily Zhou",
+    "Liu Qiang",
+    "Jessica Chen",
+    "Alex Turner",
+    "Emma Lewis",
+    "Mark Johnson",
+    "Li Ming"
+  ],
+  "workflow_id": "batch-schedule",
+  "workflow_pair_id": null,
+  "pairing_note": "Independent workflow; paired variants deferred.",
+  "source_spec": {
+    "commit": "local",
+    "path": "12_Study2_Task_Redesign_20261026-1923.md",
+    "section": "13"
+  },
+  "information_boundary": "Only documents and task text are public; blueprint, references and scenarios are experimenter/NPC-private.",
+  "runtime_classification_status": "design_proposed_pending_task_evaluator",
+  "generated_by": "tools/create_blueprints_batch2.py (Task Evaluator session, per user request 2026-10-26)",
+  "public_packet_path": "Documents/Study21V2/o-med-batch-schedule",
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "start_utc": "str",
+      "gpu_type": "str",
+      "monthly_usd": "int"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": false
+  },
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Mike Chen"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      }
+    ],
+    "edges": []
+  },
+  "dependency_depth": 1,
+  "difficulty_score": 5
+}

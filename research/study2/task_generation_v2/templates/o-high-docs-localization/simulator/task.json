@@ -1,0 +1,62 @@
+{
+  "task_id": "o-high-docs-localization",
+  "initial_task": "As of 2026-11-05: Plan the Japanese localization of the developer docs. Save /workspace/deliverable.json with words_to_translate, tm_reuse_percent, vendor_cost_usd. Post a short summary and the file path in #engineering.\n\nWork packet: OwnCloud Documents/Study21V2/o-high-docs-localization.\nOwnCloud: http://the-agent-company.com:8092\nRocketChat: http://the-agent-company.com:3000\n",
+  "public_documents": {
+    "scope.md": "Developer docs: 80000 words at USD 0.10 per word (USD 8000).",
+    "history.md": "Docs were partially localized for a 2025 partner pilot.",
+    "assets.md": "Translation memories are kept by whoever maintains the documentation wiki."
+  },
+  "directory_by_condition": {
+    "R0": "# Relevant working directory\n\n## Wang Fang\nAI Researcher (AI Team)\n\n## Jessica Lee\nMarketing Manager\n\n## Mike Chen\nSenior Software Engineer (AI Team)\n\n## Li Ming\nDatabase Team Project Manager\n\n## Liu Qiang\nQuality Assurance Engineer\n\n## Mark Johnson\nSales Director\n\n## Alex Turner\nSoftware Engineer (Low-Code Platform Team)\n\n## David Wong\nFinance Director\n\n## Emily Zhou\nSoftware Engineer (Web Crawler Team)\n\n## Emma Lewis\nSoftware Engineer (API Team)\n\n## Priya Sharma\nDocumentation Engineer\n\n## Zhang Wei\nSenior Software Engineer (Streaming Database Team)\n\n## Chen Xinyi\nHuman Resources Manager\n\n## Jessica Chen\nFrontend Software Engineer\n\n## Sophia Rodriguez\nUX Designer\n\n## Huang Jie\nProduct Manager (Search Engine Team)\n",
+    "R1": "# Relevant working directory\n\n## Wang Fang\nAI Researcher (AI Team)\n\nResponsibilities: Designing and implementing machine learning models, optimizing model performance; Project: OpenHands (LLM project); Skills: Python, machine learning, LLM\nTracks AI research project capacity and seat plans.\n\n## Jessica Lee\nMarketing Manager\n\nResponsibilities: Developing marketing strategies, managing brand image, organizing marketing events; Project: N/A (Marketing); Skills: N/A\nRuns campaign planning; creative production is handled with the brand team.\n\n## Mike Chen\nSenior Software Engineer (AI Team)\n\nResponsibilities: Developing and optimizing LLM inference engines; Project: llama.cpp (LLM inference project); Skills: C++, CUDA, performance optimization\nOperates the inference GPU cluster and its schedules.\n\n## Li Ming\nDatabase Team Project Manager\n\nResponsibilities: Managing database projects, resource coordination, ensuring timely delivery; Project: JanusGraph (Graph Database); Skills: Java, distributed systems\nPlans Database team capacity and release resourcing.\n\n## Liu Qiang\nQuality Assurance Engineer\n\nResponsibilities: Developing test strategies, executing tests, ensuring product quality; Project: All projects (focusing on testing and quality); Skills: N/A\nRuns cross-team test sign-offs before production releases.\n\n## Mark Johnson\nSales Director\n\nResponsibilities: Developing sales strategies, managing sales team, expanding client relationships; Project: N/A (Sales); Skills: N/A\nMaintains commercial event entitlements and customer-facing meeting arrangements.\n\n## Alex Turner\nSoftware Engineer (Low-Code Platform Team)\n\nResponsibilities: Developing low-code platform features; Project: Node-RED (Low-Code Platform); Skills: N/A\nRuns the low-code platform and its plugin inventory.\n\n## David Wong\nFinance Director\n\nResponsibilities: Financial planning, budget management, financial reporting; Project: N/A (Finance); Skills: N/A\nOwns the general ledger calendar and spending limits above department level.\n\n## Emily Zhou\nSoftware Engineer (Web Crawler Team)\n\nResponsibilities: Designing and implementing web crawler functionalities; Project: Colly (Web Crawler Framework); Skills: Go, distributed systems\nOwns the crawler framework and the datasets it produces.\n\n## Emma Lewis\nSoftware Engineer (API Team)\n\nResponsibilities: Developing API functionalities using Python; Project: API-server; Skills: N/A\nHandles API server operations, integrations and security testing.\n\n## Priya Sharma\nDocumentation Engineer\n\nResponsibilities: Writing technical documentation, maintaining wiki, improving documentation processes; Project: Documentation (Wiki); Skills: N/A\nKeeps the internal wiki, document templates and translation assets.\n\n## Zhang Wei\nSenior Software Engineer (Streaming Database Team)\n\nResponsibilities: Developing and optimizing core streaming database functionalities; Project: RisingWave (Streaming Database); Skills: Rust, database systems\nSenior engineer on the Streaming DB team; acts as technical deputy for the CTO when designated.\n\n## Chen Xinyi\nHuman Resources Manager\n\nResponsibilities: Recruitment, employee training, compensation management; Project: N/A (HR); Skills: N/A\nMaintains staff development entitlements and enrollment arrangements.\n\n## Jessica Chen\nFrontend Software Engineer\n\nResponsibilities: Developing user interfaces, implementing responsive designs, optimizing web performance; Project: E-commerce Website Redesign; Skills: N/A\nBuilds the storefront frontend and its rollout settings.\n\n## Sophia Rodriguez\nUX Designer\n\nResponsibilities: Designing user interfaces, improving user experience, conducting user research; Project: All projects (focusing on user experience); Skills: N/A\nLeads brand and visual design work, including campaign creative files.\n\n## Huang Jie\nProduct Manager (Search Engine Team)\n\nResponsibilities: Defining product requirements, planning product roadmap, communicating with clients; Project: OpenSearch (Search Engine); Skills: N/A\nSets roadmap and release timing for search and storefront products.\n"
+  },
+  "private_records": [
+    {
+      "id": "H1",
+      "holder": "Priya Sharma",
+      "facts": {
+        "tm_reuse_percent": 45
+      },
+      "required_context": [
+        "Japanese",
+        "translation memory"
+      ],
+      "release_rule": "Provide translation-memory coverage. Full translation remains valid."
+    }
+  ],
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Priya Sharma"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      }
+    ],
+    "edges": []
+  },
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "words_to_translate": "int",
+      "tm_reuse_percent": "int",
+      "vendor_cost_usd": "int"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": false
+  },
+  "adapter_status": "declarative v2 format; not compatible with legacy simulator without adapter",
+  "npc_behavior": "deterministic rules represented as data; execution engine not included",
+  "evaluator": null
+}

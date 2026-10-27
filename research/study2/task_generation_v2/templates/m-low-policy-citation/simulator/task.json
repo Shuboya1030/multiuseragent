@@ -1,0 +1,63 @@
+{
+  "task_id": "m-low-policy-citation",
+  "initial_task": "As of 2026-11-05: Prepare the compliance checklist entry citing the remote-work policy. Save /workspace/deliverable.json with policy, version, effective_date, url_slug. Post a short summary and the file path in #engineering.\n\nWork packet: OwnCloud Documents/Study21V2/m-low-policy-citation.\nOwnCloud: http://the-agent-company.com:8092\nRocketChat: http://the-agent-company.com:3000\n",
+  "public_documents": {
+    "checklist.md": "Remote-work policy cited as v3.1, effective 2026-01-01, slug remote-work-v3. Checklist copied from last year.",
+    "wiki-policy.md": "The Documentation Engineer maintains published policy versions on the wiki."
+  },
+  "directory_by_condition": {
+    "R0": "# Relevant working directory\n\n## Alex Turner\nSoftware Engineer (Low-Code Platform Team)\n\n## Sophia Rodriguez\nUX Designer\n\n## Emily Zhou\nSoftware Engineer (Web Crawler Team)\n\n## Jessica Chen\nFrontend Software Engineer\n\n## Emma Lewis\nSoftware Engineer (API Team)\n\n## Priya Sharma\nDocumentation Engineer\n\n## Jessica Lee\nMarketing Manager\n\n## Huang Jie\nProduct Manager (Search Engine Team)\n",
+    "R1": "# Relevant working directory\n\n## Alex Turner\nSoftware Engineer (Low-Code Platform Team)\n\nResponsibilities: Developing low-code platform features; Project: Node-RED (Low-Code Platform); Skills: N/A\nRuns the low-code platform and its plugin inventory.\n\n## Sophia Rodriguez\nUX Designer\n\nResponsibilities: Designing user interfaces, improving user experience, conducting user research; Project: All projects (focusing on user experience); Skills: N/A\nLeads brand and visual design work, including campaign creative files.\n\n## Emily Zhou\nSoftware Engineer (Web Crawler Team)\n\nResponsibilities: Designing and implementing web crawler functionalities; Project: Colly (Web Crawler Framework); Skills: Go, distributed systems\nOwns the crawler framework and the datasets it produces.\n\n## Jessica Chen\nFrontend Software Engineer\n\nResponsibilities: Developing user interfaces, implementing responsive designs, optimizing web performance; Project: E-commerce Website Redesign; Skills: N/A\nBuilds the storefront frontend and its rollout settings.\n\n## Emma Lewis\nSoftware Engineer (API Team)\n\nResponsibilities: Developing API functionalities using Python; Project: API-server; Skills: N/A\nHandles API server operations, integrations and security testing.\n\n## Priya Sharma\nDocumentation Engineer\n\nResponsibilities: Writing technical documentation, maintaining wiki, improving documentation processes; Project: Documentation (Wiki); Skills: N/A\nKeeps the internal wiki, document templates and translation assets.\n\n## Jessica Lee\nMarketing Manager\n\nResponsibilities: Developing marketing strategies, managing brand image, organizing marketing events; Project: N/A (Marketing); Skills: N/A\nRuns campaign planning; creative production is handled with the brand team.\n\n## Huang Jie\nProduct Manager (Search Engine Team)\n\nResponsibilities: Defining product requirements, planning product roadmap, communicating with clients; Project: OpenSearch (Search Engine); Skills: N/A\nSets roadmap and release timing for search and storefront products.\n"
+  },
+  "private_records": [
+    {
+      "id": "H1",
+      "holder": "Priya Sharma",
+      "facts": {
+        "version": "v4.0",
+        "effective_date": "2026-10-01",
+        "url_slug": "remote-work-v4"
+      },
+      "required_context": [
+        "remote-work"
+      ],
+      "release_rule": "Provide the current published version, effective date and slug."
+    }
+  ],
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Priya Sharma"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      }
+    ],
+    "edges": []
+  },
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "policy": "str",
+      "version": "str",
+      "effective_date": "str",
+      "url_slug": "str"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": false
+  },
+  "adapter_status": "declarative v2 format; not compatible with legacy simulator without adapter",
+  "npc_behavior": "deterministic rules represented as data; execution engine not included",
+  "evaluator": null
+}

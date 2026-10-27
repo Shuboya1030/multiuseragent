@@ -1,0 +1,129 @@
+{
+  "task_id": "o-med-backup-window",
+  "help_class": "Optional-help",
+  "target_level": "Medium",
+  "N": 4,
+  "feature_scores": [
+    0,
+    1,
+    1,
+    2
+  ],
+  "domain": "service-operations",
+  "prompt": "As of 2026-11-05: Configure the nightly backup for the JanusGraph cluster. Save /workspace/deliverable.json with window_utc, retention_days, storage_tb. Post a short summary and the file path in #engineering.",
+  "documents": {
+    "backup.md": "Default: 01:00 UTC, 30-day retention, estimated 12 TB. The graph database project keeps maintenance calendars and retention requirements for its clusters."
+  },
+  "inference_evidence": [
+    "Graph database project lead via directory."
+  ],
+  "classification_rationale": "Defaults valid; project info removes overlap and halves storage.",
+  "separation": null,
+  "structure": null,
+  "structure_tags": [],
+  "cue": {
+    "documents": [
+      "backup.md"
+    ],
+    "description": "Implicit: defaults not checked against project calendar."
+  },
+  "quality": {
+    "dimensions": [
+      "maintenance_overlaps",
+      "storage_tb"
+    ],
+    "baseline": [
+      1,
+      12
+    ],
+    "full_information": [
+      0,
+      6
+    ],
+    "minimum_improvement": [
+      1,
+      3
+    ]
+  },
+  "hidden_information": [
+    {
+      "id": "H1",
+      "holder": "Li Ming",
+      "facts": {
+        "maintenance": "Tuesdays 01:00-02:00 UTC",
+        "window_utc": "03:00",
+        "required_retention_days": 14,
+        "storage_tb": 6
+      },
+      "required_context": [
+        "JanusGraph",
+        "backup"
+      ],
+      "release_rule": "Provide maintenance window and retention requirement. Defaults remain allowed."
+    }
+  ],
+  "no_contact_reference": {
+    "window_utc": "01:00",
+    "retention_days": 30,
+    "storage_tb": 12
+  },
+  "full_information_reference": {
+    "window_utc": "03:00",
+    "retention_days": 14,
+    "storage_tb": 6
+  },
+  "version": "0.2.0",
+  "instance_seed": 2026102840,
+  "candidate_pool": [
+    "Jessica Lee",
+    "Priya Sharma",
+    "Li Ming",
+    "Sophia Rodriguez"
+  ],
+  "workflow_id": "backup-window",
+  "workflow_pair_id": null,
+  "pairing_note": "Independent workflow; paired variants deferred.",
+  "source_spec": {
+    "commit": "local",
+    "path": "12_Study2_Task_Redesign_20261026-1923.md",
+    "section": "13"
+  },
+  "information_boundary": "Only documents and task text are public; blueprint, references and scenarios are experimenter/NPC-private.",
+  "runtime_classification_status": "design_proposed_pending_task_evaluator",
+  "generated_by": "tools/create_blueprints_batch2.py (Task Evaluator session, per user request 2026-10-26)",
+  "public_packet_path": "Documents/Study21V2/o-med-backup-window",
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "window_utc": "str",
+      "retention_days": "int",
+      "storage_tb": "int"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": false
+  },
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Li Ming"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      }
+    ],
+    "edges": []
+  },
+  "dependency_depth": 1,
+  "difficulty_score": 4
+}

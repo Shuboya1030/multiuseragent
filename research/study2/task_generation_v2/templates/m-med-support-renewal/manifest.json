@@ -1,0 +1,22 @@
+{
+  "blueprint.json": "5eec448b80613d6ef0958ed1126e1cdc4ac3e7042c2556d0df1e701ef98e0a1e",
+  "metadata.json": "d822abccf671d935ba4a02a1229e3989f66a3b315ab87fda165ea5c432262199",
+  "references\\full_information.json": "c2cdddba65ba59e6bd98d99e36ed3bfcb91b4a44193a21ce35c0d08186c336c0",
+  "references\\no_contact.json": "e48509bbba11184c624c852dcfb5905be257eec1ab4306a34e3b642078903d6a",
+  "references\\walkthrough.md": "64c393ea75978074b7c8f2338da729b4a8f7d533660061bdd2fcd5438fbcd999",
+  "simulator\\task.json": "1b4356c37e85cee1e3a8de2e91c8b56e6c566c84cf6c4dd7549e1291f3db69b3",
+  "tac\\dependencies.yml": "fb84075bbad26ebb051f13f87cbd16c5ad76e4635c2d82a85da704355542b68c",
+  "tac\\Dockerfile": "47106047bdf4b69e6585e463d2743a938d967e0060859d2ba927b4103b458551",
+  "tac\\documents_R0\\directory.md": "786be4fd64e23385686f447b97a4996b15155dc2cb8bbc679113fbd9582cbd1c",
+  "tac\\documents_R0\\leadership-calendar.md": "961e0fa16f6808901fdbc3da13aaebf6f7eefcab6bada38f05e5c14c6b3fe5a1",
+  "tac\\documents_R0\\renewal-policy.md": "d2a53b9c0f278ee8f0c3f63ee97ba0c190cb76a5dc005675418cc916ae24a563",
+  "tac\\documents_R0\\renewal.md": "d6d960c7981c55b37006651338f63a763dd6efca50a7113c0459073488da555e",
+  "tac\\documents_R1\\directory.md": "7181e7e884c86bb632ab215737dae8776b41ecaeb2de87020f492edf1eb74ec5",
+  "tac\\documents_R1\\leadership-calendar.md": "961e0fa16f6808901fdbc3da13aaebf6f7eefcab6bada38f05e5c14c6b3fe5a1",
+  "tac\\documents_R1\\renewal-policy.md": "d2a53b9c0f278ee8f0c3f63ee97ba0c190cb76a5dc005675418cc916ae24a563",
+  "tac\\documents_R1\\renewal.md": "d6d960c7981c55b37006651338f63a763dd6efca50a7113c0459073488da555e",
+  "tac\\Makefile": "a9b81b45af559d807464b664f6a1c28f0fcb8e83aafe498accf28290a22613ff",
+  "tac\\populate_data.py": "663fe82d7fdf051baebe0c67ce053fd48b18345351bab78d20952b6838be055a",
+  "tac\\scenarios.json": "88177f09e7dbbcab5ac1b7229fe7e93b020a3ad6dfbc60f02e6fd29cb0cb85df",
+  "tac\\task.md": "72d27d77b3e5b076203747649640ce6264827f03134693d73e7863066f578c0e"
+}

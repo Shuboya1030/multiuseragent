@@ -1,0 +1,7 @@
+{
+  "modules": [
+    "phishing"
+  ],
+  "staff_trained": 30,
+  "seat_cost_usd": 1200
+}

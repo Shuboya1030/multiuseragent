@@ -1,0 +1,140 @@
+{
+  "task_id": "m-low-customer-mailing",
+  "help_class": "Must-help",
+  "target_level": "Low",
+  "N": 4,
+  "feature_scores": [
+    0,
+    1,
+    0,
+    0
+  ],
+  "domain": "sales",
+  "prompt": "As of 2026-11-05: Prepare the customer mailing request for the Q4 upgrade notice to enterprise accounts. Save /workspace/deliverable.json with segment_id, recipient_count, send_date, authorization_ref. Post a short summary and the file path in #engineering.",
+  "documents": {
+    "mailer.md": "Upgrade notice to enterprise customers, send date 2026-11-12. Last quarter used segment SEG-Q3-ENT (420 recipients) with approval APR-Q3.",
+    "mailing-policy.md": "Customer mailings use the current account segment from the Sales Director, who also approves sends to enterprise accounts. Approvals cite the segment and recipient count."
+  },
+  "inference_evidence": [
+    "Policy names the Sales Director."
+  ],
+  "classification_rationale": "Last quarter segment/approval are visible but stale; current values and approval held by Sales.",
+  "separation": "aligned",
+  "structure": "info-approval",
+  "structure_tags": [
+    "info-approval"
+  ],
+  "cue": null,
+  "quality": null,
+  "hidden_information": [
+    {
+      "id": "H1",
+      "holder": "Mark Johnson",
+      "facts": {
+        "segment_id": "SEG-Q4-ENT",
+        "recipient_count": 455
+      },
+      "required_context": [
+        "upgrade",
+        "enterprise"
+      ],
+      "release_rule": "Provide the current enterprise segment and count."
+    },
+    {
+      "id": "H2",
+      "holder": "Mark Johnson",
+      "facts": {
+        "authorization_ref": "APR-Q4-77"
+      },
+      "required_context": [
+        "SEG-Q4-ENT",
+        "455"
+      ],
+      "release_rule": "Approve only when the current segment and count are cited."
+    }
+  ],
+  "no_contact_reference": {
+    "segment_id": "SEG-Q3-ENT",
+    "recipient_count": 420,
+    "send_date": "2026-11-12",
+    "authorization_ref": "APR-Q3"
+  },
+  "full_information_reference": {
+    "segment_id": "SEG-Q4-ENT",
+    "recipient_count": 455,
+    "send_date": "2026-11-12",
+    "authorization_ref": "APR-Q4-77"
+  },
+  "version": "0.2.0",
+  "instance_seed": 2026102804,
+  "candidate_pool": [
+    "Mark Johnson",
+    "Li Ming",
+    "Jessica Chen",
+    "Jessica Lee"
+  ],
+  "workflow_id": "customer-mailing",
+  "workflow_pair_id": null,
+  "pairing_note": "Independent workflow; paired variants deferred.",
+  "source_spec": {
+    "commit": "local",
+    "path": "12_Study2_Task_Redesign_20261026-1923.md",
+    "section": "13"
+  },
+  "information_boundary": "Only documents and task text are public; blueprint, references and scenarios are experimenter/NPC-private.",
+  "runtime_classification_status": "design_proposed_pending_task_evaluator",
+  "generated_by": "tools/create_blueprints_batch2.py (Task Evaluator session, per user request 2026-10-26)",
+  "public_packet_path": "Documents/Study21V2/m-low-customer-mailing",
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "segment_id": "str",
+      "recipient_count": "int",
+      "send_date": "str",
+      "authorization_ref": "str"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": false
+  },
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Mark Johnson"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      },
+      {
+        "id": "h2",
+        "admissible_recipients": [
+          "Mark Johnson"
+        ],
+        "information_ids": [
+          "H2"
+        ],
+        "requires": [
+          "h1"
+        ]
+      }
+    ],
+    "edges": [
+      [
+        "h1",
+        "h2"
+      ]
+    ]
+  },
+  "dependency_depth": 2,
+  "difficulty_score": 1
+}

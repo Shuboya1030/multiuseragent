@@ -1,0 +1,6 @@
+{
+  "dataset": "Colly 2025 crawl logs",
+  "retention_class": "R2",
+  "delete_after": "2026-03-31",
+  "authorization_ref": "PENDING"
+}

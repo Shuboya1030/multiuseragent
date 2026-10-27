@@ -1,0 +1,203 @@
+{
+  "task_id": "m-high-plugin-purchase",
+  "help_class": "Must-help",
+  "target_level": "High",
+  "N": 16,
+  "feature_scores": [
+    2,
+    1,
+    2,
+    2
+  ],
+  "domain": "it-procurement",
+  "prompt": "As of 2026-11-05: Prepare the purchase record for LowCodeX plugin licenses. Save /workspace/deliverable.json with seats, total_usd, security_review_id, signed_by, authorization_ref. Post a short summary and the file path in #engineering.",
+  "documents": {
+    "quote.md": "LowCodeX plugin: USD 450 per seat per year.",
+    "draft.md": "Early request (2026-09) for 18 seats.",
+    "purchase-policy.md": "Seat counts are confirmed by the low-code platform team. Plugins that handle customer data need a security review by the team that operates the API server. Purchases over USD 10000 are approved by Finance; otherwise by the CTO.",
+    "out-of-office.md": "Finance Director away 2026-11-02 to 2026-11-16; acting finance approver: Chen Xinyi."
+  },
+  "inference_evidence": [
+    "Threshold on current amount selects Finance; out-of-office selects acting approver."
+  ],
+  "classification_rationale": "Draft amount falls under the CTO threshold; current amount and absence change the approver.",
+  "separation": "separated-delegation",
+  "structure": "parallel-join",
+  "structure_tags": [
+    "parallel-join",
+    "delegation",
+    "conditional"
+  ],
+  "cue": null,
+  "quality": null,
+  "hidden_information": [
+    {
+      "id": "H1",
+      "holder": "Alex Turner",
+      "facts": {
+        "seats": 28
+      },
+      "required_context": [
+        "LowCodeX"
+      ],
+      "release_rule": "Provide the confirmed seat count."
+    },
+    {
+      "id": "H2",
+      "holder": "Emma Lewis",
+      "facts": {
+        "security_review_id": "SR-LCX-4"
+      },
+      "required_context": [
+        "LowCodeX"
+      ],
+      "release_rule": "Provide the completed security review ID."
+    },
+    {
+      "id": "H3",
+      "holder": "Chen Xinyi",
+      "facts": {
+        "authorization_ref": "PO-APR-912"
+      },
+      "required_context": [
+        "28",
+        "12600",
+        "SR-LCX-4"
+      ],
+      "release_rule": "As acting finance approver, approve only with seats, total and review cited."
+    },
+    {
+      "id": "D1",
+      "holder": "Sarah Johnson",
+      "facts": {},
+      "required_context": [],
+      "release_rule": "You approve purchases up to USD 10000 only. For more, say Finance approves; issue nothing."
+    },
+    {
+      "id": "D2",
+      "holder": "David Wong",
+      "facts": {},
+      "required_context": [],
+      "release_rule": "You are away until 2026-11-16. Say Chen Xinyi is the acting finance approver; issue nothing."
+    }
+  ],
+  "no_contact_reference": {
+    "seats": 18,
+    "total_usd": 8100,
+    "security_review_id": "PENDING",
+    "signed_by": "Sarah Johnson",
+    "authorization_ref": "PENDING"
+  },
+  "full_information_reference": {
+    "seats": 28,
+    "total_usd": 12600,
+    "security_review_id": "SR-LCX-4",
+    "signed_by": "Chen Xinyi",
+    "authorization_ref": "PO-APR-912"
+  },
+  "version": "0.2.0",
+  "instance_seed": 2026102823,
+  "candidate_pool": [
+    "Priya Sharma",
+    "Mark Johnson",
+    "Sarah Johnson",
+    "Mike Chen",
+    "Sophia Rodriguez",
+    "Chen Xinyi",
+    "Huang Jie",
+    "Emma Lewis",
+    "Jessica Chen",
+    "Liu Qiang",
+    "Emily Zhou",
+    "Alex Turner",
+    "David Wong",
+    "Jessica Lee",
+    "Li Ming",
+    "Zhang Wei"
+  ],
+  "workflow_id": "plugin-purchase",
+  "workflow_pair_id": null,
+  "pairing_note": "Independent workflow; paired variants deferred.",
+  "source_spec": {
+    "commit": "local",
+    "path": "12_Study2_Task_Redesign_20261026-1923.md",
+    "section": "13"
+  },
+  "information_boundary": "Only documents and task text are public; blueprint, references and scenarios are experimenter/NPC-private.",
+  "runtime_classification_status": "design_proposed_pending_task_evaluator",
+  "generated_by": "tools/create_blueprints_batch2.py (Task Evaluator session, per user request 2026-10-26)",
+  "public_packet_path": "Documents/Study21V2/m-high-plugin-purchase",
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "seats": "int",
+      "total_usd": "int",
+      "security_review_id": "str",
+      "signed_by": "str",
+      "authorization_ref": "str"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": true,
+    "grader": {
+      "version": "study2-v2-grader-1.0",
+      "module": "grading/scorer.py",
+      "tac_entry": "tac/evaluator.py"
+    }
+  },
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Alex Turner"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      },
+      {
+        "id": "h2",
+        "admissible_recipients": [
+          "Emma Lewis"
+        ],
+        "information_ids": [
+          "H2"
+        ],
+        "requires": []
+      },
+      {
+        "id": "h3",
+        "admissible_recipients": [
+          "Chen Xinyi"
+        ],
+        "information_ids": [
+          "H3"
+        ],
+        "requires": [
+          "h1",
+          "h2"
+        ]
+      }
+    ],
+    "edges": [
+      [
+        "h1",
+        "h3"
+      ],
+      [
+        "h2",
+        "h3"
+      ]
+    ]
+  },
+  "dependency_depth": 2,
+  "difficulty_score": 7
+}

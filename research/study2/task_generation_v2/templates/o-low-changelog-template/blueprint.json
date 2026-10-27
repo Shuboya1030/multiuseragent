@@ -1,0 +1,133 @@
+{
+  "task_id": "o-low-changelog-template",
+  "help_class": "Optional-help",
+  "target_level": "Low",
+  "N": 4,
+  "feature_scores": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "domain": "documentation",
+  "prompt": "As of 2026-11-05: Prepare the API changelog page for v3.4. Save /workspace/deliverable.json with version, template_id, sections. Post a short summary and the file path in #engineering.",
+  "documents": {
+    "changelog.md": "API v3.4 changelog. Template T-2 (2024) has sections Summary and Changes. The Documentation Engineer maintains page templates."
+  },
+  "inference_evidence": [
+    "Documentation Engineer named."
+  ],
+  "classification_rationale": "Old template valid; current one covers more sections.",
+  "separation": null,
+  "structure": null,
+  "structure_tags": [],
+  "cue": {
+    "documents": [
+      "changelog.md"
+    ],
+    "description": "Explicit: template is from 2024 and maintained by documentation."
+  },
+  "quality": {
+    "dimension": "required_sections_covered",
+    "baseline": 2,
+    "full_information": 4,
+    "minimum_improvement": 2,
+    "constraints": []
+  },
+  "hidden_information": [
+    {
+      "id": "H1",
+      "holder": "Priya Sharma",
+      "facts": {
+        "template_id": "T-5",
+        "sections": [
+          "Summary",
+          "Changes",
+          "Migration",
+          "Deprecations"
+        ]
+      },
+      "required_context": [
+        "changelog"
+      ],
+      "release_rule": "Provide the current template. T-2 remains acceptable."
+    }
+  ],
+  "no_contact_reference": {
+    "version": "v3.4",
+    "template_id": "T-2",
+    "sections": [
+      "Summary",
+      "Changes"
+    ]
+  },
+  "full_information_reference": {
+    "version": "v3.4",
+    "template_id": "T-5",
+    "sections": [
+      "Summary",
+      "Changes",
+      "Migration",
+      "Deprecations"
+    ]
+  },
+  "version": "0.2.0",
+  "instance_seed": 2026102828,
+  "candidate_pool": [
+    "Wang Fang",
+    "Priya Sharma",
+    "Emily Zhou",
+    "Emma Lewis"
+  ],
+  "workflow_id": "changelog-template",
+  "workflow_pair_id": null,
+  "pairing_note": "Independent workflow; paired variants deferred.",
+  "source_spec": {
+    "commit": "local",
+    "path": "12_Study2_Task_Redesign_20261026-1923.md",
+    "section": "13"
+  },
+  "information_boundary": "Only documents and task text are public; blueprint, references and scenarios are experimenter/NPC-private.",
+  "runtime_classification_status": "design_proposed_pending_task_evaluator",
+  "generated_by": "tools/create_blueprints_batch2.py (Task Evaluator session, per user request 2026-10-26)",
+  "public_packet_path": "Documents/Study21V2/o-low-changelog-template",
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "version": "str",
+      "template_id": "str",
+      "sections": "list"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": true,
+    "grader": {
+      "version": "study2-v2-grader-1.0",
+      "module": "grading/scorer.py",
+      "tac_entry": "tac/evaluator.py"
+    }
+  },
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Priya Sharma"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      }
+    ],
+    "edges": []
+  },
+  "dependency_depth": 1,
+  "difficulty_score": 0
+}

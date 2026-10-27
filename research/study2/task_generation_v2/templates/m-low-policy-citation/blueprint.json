@@ -1,0 +1,120 @@
+{
+  "task_id": "m-low-policy-citation",
+  "help_class": "Must-help",
+  "target_level": "Low",
+  "N": 8,
+  "feature_scores": [
+    1,
+    0,
+    0,
+    0
+  ],
+  "domain": "compliance",
+  "prompt": "As of 2026-11-05: Prepare the compliance checklist entry citing the remote-work policy. Save /workspace/deliverable.json with policy, version, effective_date, url_slug. Post a short summary and the file path in #engineering.",
+  "documents": {
+    "checklist.md": "Remote-work policy cited as v3.1, effective 2026-01-01, slug remote-work-v3. Checklist copied from last year.",
+    "wiki-policy.md": "The Documentation Engineer maintains published policy versions on the wiki."
+  },
+  "inference_evidence": [
+    "Policy names the Documentation Engineer."
+  ],
+  "classification_rationale": "Checklist copied from last year; current version held by documentation.",
+  "separation": "aligned",
+  "structure": "single-information",
+  "structure_tags": [
+    "single-information"
+  ],
+  "cue": null,
+  "quality": null,
+  "hidden_information": [
+    {
+      "id": "H1",
+      "holder": "Priya Sharma",
+      "facts": {
+        "version": "v4.0",
+        "effective_date": "2026-10-01",
+        "url_slug": "remote-work-v4"
+      },
+      "required_context": [
+        "remote-work"
+      ],
+      "release_rule": "Provide the current published version, effective date and slug."
+    }
+  ],
+  "no_contact_reference": {
+    "policy": "remote-work",
+    "version": "v3.1",
+    "effective_date": "2026-01-01",
+    "url_slug": "remote-work-v3"
+  },
+  "full_information_reference": {
+    "policy": "remote-work",
+    "version": "v4.0",
+    "effective_date": "2026-10-01",
+    "url_slug": "remote-work-v4"
+  },
+  "version": "0.2.0",
+  "instance_seed": 2026102805,
+  "candidate_pool": [
+    "Alex Turner",
+    "Sophia Rodriguez",
+    "Emily Zhou",
+    "Jessica Chen",
+    "Emma Lewis",
+    "Priya Sharma",
+    "Jessica Lee",
+    "Huang Jie"
+  ],
+  "workflow_id": "policy-citation",
+  "workflow_pair_id": null,
+  "pairing_note": "Independent workflow; paired variants deferred.",
+  "source_spec": {
+    "commit": "local",
+    "path": "12_Study2_Task_Redesign_20261026-1923.md",
+    "section": "13"
+  },
+  "information_boundary": "Only documents and task text are public; blueprint, references and scenarios are experimenter/NPC-private.",
+  "runtime_classification_status": "design_proposed_pending_task_evaluator",
+  "generated_by": "tools/create_blueprints_batch2.py (Task Evaluator session, per user request 2026-10-26)",
+  "public_packet_path": "Documents/Study21V2/m-low-policy-citation",
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "policy": "str",
+      "version": "str",
+      "effective_date": "str",
+      "url_slug": "str"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": true,
+    "grader": {
+      "version": "study2-v2-grader-1.0",
+      "module": "grading/scorer.py",
+      "tac_entry": "tac/evaluator.py"
+    }
+  },
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Priya Sharma"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      }
+    ],
+    "edges": []
+  },
+  "dependency_depth": 1,
+  "difficulty_score": 1
+}

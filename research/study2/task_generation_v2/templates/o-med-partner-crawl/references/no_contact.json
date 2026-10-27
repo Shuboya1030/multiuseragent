@@ -1,0 +1,5 @@
+{
+  "rate_limit_rps": 2,
+  "user_agent": "tac-crawler",
+  "est_hours": 40
+}

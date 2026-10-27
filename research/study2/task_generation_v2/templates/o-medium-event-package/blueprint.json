@@ -102,7 +102,12 @@
       "UTC times use HH:MM.",
       "IDs are stable identifiers, not arbitrary paraphrases."
     ],
-    "grading_implemented": false
+    "grading_implemented": true,
+    "grader": {
+      "version": "study2-v2-grader-1.0",
+      "module": "grading/scorer.py",
+      "tac_entry": "tac/evaluator.py"
+    }
   },
   "gold_dag": {
     "nodes": [

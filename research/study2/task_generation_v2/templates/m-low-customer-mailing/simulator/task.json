@@ -1,0 +1,92 @@
+{
+  "task_id": "m-low-customer-mailing",
+  "initial_task": "As of 2026-11-05: Prepare the customer mailing request for the Q4 upgrade notice to enterprise accounts. Save /workspace/deliverable.json with segment_id, recipient_count, send_date, authorization_ref. Post a short summary and the file path in #engineering.\n\nWork packet: OwnCloud Documents/Study21V2/m-low-customer-mailing.\nOwnCloud: http://the-agent-company.com:8092\nRocketChat: http://the-agent-company.com:3000\n",
+  "public_documents": {
+    "mailer.md": "Upgrade notice to enterprise customers, send date 2026-11-12. Last quarter used segment SEG-Q3-ENT (420 recipients) with approval APR-Q3.",
+    "mailing-policy.md": "Customer mailings use the current account segment from the Sales Director, who also approves sends to enterprise accounts. Approvals cite the segment and recipient count."
+  },
+  "directory_by_condition": {
+    "R0": "# Relevant working directory\n\n## Mark Johnson\nSales Director\n\n## Li Ming\nDatabase Team Project Manager\n\n## Jessica Chen\nFrontend Software Engineer\n\n## Jessica Lee\nMarketing Manager\n",
+    "R1": "# Relevant working directory\n\n## Mark Johnson\nSales Director\n\nResponsibilities: Developing sales strategies, managing sales team, expanding client relationships; Project: N/A (Sales); Skills: N/A\nMaintains commercial event entitlements and customer-facing meeting arrangements.\n\n## Li Ming\nDatabase Team Project Manager\n\nResponsibilities: Managing database projects, resource coordination, ensuring timely delivery; Project: JanusGraph (Graph Database); Skills: Java, distributed systems\nPlans Database team capacity and release resourcing.\n\n## Jessica Chen\nFrontend Software Engineer\n\nResponsibilities: Developing user interfaces, implementing responsive designs, optimizing web performance; Project: E-commerce Website Redesign; Skills: N/A\nBuilds the storefront frontend and its rollout settings.\n\n## Jessica Lee\nMarketing Manager\n\nResponsibilities: Developing marketing strategies, managing brand image, organizing marketing events; Project: N/A (Marketing); Skills: N/A\nRuns campaign planning; creative production is handled with the brand team.\n"
+  },
+  "private_records": [
+    {
+      "id": "H1",
+      "holder": "Mark Johnson",
+      "facts": {
+        "segment_id": "SEG-Q4-ENT",
+        "recipient_count": 455
+      },
+      "required_context": [
+        "upgrade",
+        "enterprise"
+      ],
+      "release_rule": "Provide the current enterprise segment and count."
+    },
+    {
+      "id": "H2",
+      "holder": "Mark Johnson",
+      "facts": {
+        "authorization_ref": "APR-Q4-77"
+      },
+      "required_context": [
+        "SEG-Q4-ENT",
+        "455"
+      ],
+      "release_rule": "Approve only when the current segment and count are cited."
+    }
+  ],
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Mark Johnson"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      },
+      {
+        "id": "h2",
+        "admissible_recipients": [
+          "Mark Johnson"
+        ],
+        "information_ids": [
+          "H2"
+        ],
+        "requires": [
+          "h1"
+        ]
+      }
+    ],
+    "edges": [
+      [
+        "h1",
+        "h2"
+      ]
+    ]
+  },
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "segment_id": "str",
+      "recipient_count": "int",
+      "send_date": "str",
+      "authorization_ref": "str"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": false
+  },
+  "adapter_status": "declarative v2 format; not compatible with legacy simulator without adapter",
+  "npc_behavior": "deterministic rules represented as data; execution engine not included",
+  "evaluator": null
+}

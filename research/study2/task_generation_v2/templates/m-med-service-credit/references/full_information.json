@@ -1,0 +1,6 @@
+{
+  "customer": "Northwind",
+  "credit_percent": 10,
+  "credit_usd": 800,
+  "authorization_ref": "CR-APR-902"
+}

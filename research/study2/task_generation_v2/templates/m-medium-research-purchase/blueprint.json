@@ -6,8 +6,8 @@
   "feature_scores": [
     1,
     1,
-    2,
-    1
+    1,
+    2
   ],
   "domain": "procurement",
   "prompt": "Prepare the twelve-month VectorBench order for project Pine as of 2026-11-02. Save /workspace/deliverable.json with seats, total_usd, allocation_revision, budget_code and release_reference. Post its path and a brief order summary in #engineering.",
@@ -59,13 +59,13 @@
     "release_reference": "VB-REL-203"
   },
   "classification_rationale": "Current quantity and binding order release exist only with separate colleagues.",
-  "separation": "separated-conditional",
+  "separation": "separated",
   "structure": "info-approval",
   "cue": null,
   "inference_evidence": [
-    "Resolve release owner by applying the USD10000 threshold to the current computed amount."
+    "Compute the current annual amount from the current seat count (needs H1) and apply the USD 10000 threshold to select the release owner."
   ],
-  "version": "0.1.0",
+  "version": "0.2.0",
   "instance_seed": 2026102701,
   "candidate_pool": [
     "Jessica Lee",
@@ -86,7 +86,7 @@
     "section": "13"
   },
   "information_boundary": "Only documents and task text are public; blueprint, references and scenarios are experimenter/NPC-private.",
-  "runtime_classification_status": "design_proposed_not_evaluator_validated",
+  "runtime_classification_status": "revised_after_evaluator_batch1_pending_reevaluation",
   "public_packet_path": "Documents/Study21V2/m-medium-research-purchase",
   "output_contract": {
     "path": "/workspace/deliverable.json",
@@ -104,7 +104,12 @@
       "UTC times use HH:MM.",
       "IDs are stable identifiers, not arbitrary paraphrases."
     ],
-    "grading_implemented": false
+    "grading_implemented": true,
+    "grader": {
+      "version": "study2-v2-grader-1.0",
+      "module": "grading/scorer.py",
+      "tac_entry": "tac/evaluator.py"
+    }
   },
   "gold_dag": {
     "nodes": [
@@ -139,5 +144,11 @@
     ]
   },
   "dependency_depth": 2,
-  "difficulty_score": 5
+  "difficulty_score": 5,
+  "revision_log": [
+    {
+      "revision": "eval-batch1-r1",
+      "change": "F3: conditional approval counted under inference only (separation 2->1, inference 1->2); D unchanged at 5."
+    }
+  ]
 }

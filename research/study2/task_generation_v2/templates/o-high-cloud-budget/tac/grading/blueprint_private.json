@@ -1,0 +1,133 @@
+{
+  "task_id": "o-high-cloud-budget",
+  "help_class": "Optional-help",
+  "target_level": "High",
+  "N": 16,
+  "feature_scores": [
+    2,
+    2,
+    1,
+    2
+  ],
+  "domain": "cloud",
+  "prompt": "As of 2026-11-05: Prepare the 2027 cloud budget for the API server. Save /workspace/deliverable.json with instance_count, commitment, annual_usd. Post a short summary and the file path in #engineering.",
+  "documents": {
+    "plan.md": "Plan: 12 on-demand instances at USD 300/month (USD 43200/year).",
+    "usage.md": "Average utilization last quarter: 35%.",
+    "pricing.md": "Committed-use discounts exist. Capacity planning is done by the team that operates the API server."
+  },
+  "inference_evidence": [
+    "API server operator via directory."
+  ],
+  "classification_rationale": "Plan valid; rightsizing plus commitment halves cost.",
+  "separation": null,
+  "structure": null,
+  "structure_tags": [],
+  "cue": {
+    "documents": [
+      "usage.md",
+      "pricing.md"
+    ],
+    "description": "Combine low utilization with discount availability."
+  },
+  "quality": {
+    "dimension": "annual_usd",
+    "baseline": 43200,
+    "full_information": 20160,
+    "minimum_improvement": 5000,
+    "constraints": []
+  },
+  "hidden_information": [
+    {
+      "id": "H1",
+      "holder": "Emma Lewis",
+      "facts": {
+        "instance_count": 8,
+        "commitment": "1-year committed",
+        "discount": 0.3,
+        "annual_usd": 20160
+      },
+      "required_context": [
+        "API server",
+        "2027"
+      ],
+      "release_rule": "Provide rightsized count and commitment. Current plan remains valid."
+    }
+  ],
+  "no_contact_reference": {
+    "instance_count": 12,
+    "commitment": "on-demand",
+    "annual_usd": 43200
+  },
+  "full_information_reference": {
+    "instance_count": 8,
+    "commitment": "1-year committed",
+    "annual_usd": 20160
+  },
+  "version": "0.2.0",
+  "instance_seed": 2026102846,
+  "candidate_pool": [
+    "Sophia Rodriguez",
+    "Jessica Chen",
+    "Li Ming",
+    "Sarah Johnson",
+    "Liu Qiang",
+    "Mark Johnson",
+    "Wang Fang",
+    "Chen Xinyi",
+    "Emily Zhou",
+    "Jessica Lee",
+    "Mike Chen",
+    "Alex Turner",
+    "Huang Jie",
+    "David Wong",
+    "Emma Lewis",
+    "Priya Sharma"
+  ],
+  "workflow_id": "cloud-budget",
+  "workflow_pair_id": null,
+  "pairing_note": "Independent workflow; paired variants deferred.",
+  "source_spec": {
+    "commit": "local",
+    "path": "12_Study2_Task_Redesign_20261026-1923.md",
+    "section": "13"
+  },
+  "information_boundary": "Only documents and task text are public; blueprint, references and scenarios are experimenter/NPC-private.",
+  "runtime_classification_status": "design_proposed_pending_task_evaluator",
+  "generated_by": "tools/create_blueprints_batch2.py (Task Evaluator session, per user request 2026-10-26)",
+  "public_packet_path": "Documents/Study21V2/o-high-cloud-budget",
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "instance_count": "int",
+      "commitment": "str",
+      "annual_usd": "int"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": false
+  },
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Emma Lewis"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      }
+    ],
+    "edges": []
+  },
+  "dependency_depth": 1,
+  "difficulty_score": 7
+}

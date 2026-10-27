@@ -1,0 +1,65 @@
+{
+  "task_id": "o-med-browser-matrix",
+  "initial_task": "As of 2026-11-05: Prepare the browser test matrix for the e-commerce redesign. Save /workspace/deliverable.json with browsers, devices, cell_count. Post a short summary and the file path in #engineering.\n\nWork packet: OwnCloud Documents/Study21V2/o-med-browser-matrix.\nOwnCloud: http://the-agent-company.com:8092\nRocketChat: http://the-agent-company.com:3000\n",
+  "public_documents": {
+    "matrix.md": "Matrix from 2024: 6 browsers x 4 devices = 24 cells.",
+    "test-standards.md": "Supported-browser lists are published per product by whoever owns cross-team testing.",
+    "org-notes.md": "Cross-team testing is owned by quality assurance."
+  },
+  "directory_by_condition": {
+    "R0": "# Relevant working directory\n\n## Zhang Wei\nSenior Software Engineer (Streaming Database Team)\n\n## David Wong\nFinance Director\n\n## Chen Xinyi\nHuman Resources Manager\n\n## Jessica Chen\nFrontend Software Engineer\n\n## Emma Lewis\nSoftware Engineer (API Team)\n\n## Liu Qiang\nQuality Assurance Engineer\n\n## Mike Chen\nSenior Software Engineer (AI Team)\n\n## Priya Sharma\nDocumentation Engineer\n",
+    "R1": "# Relevant working directory\n\n## Zhang Wei\nSenior Software Engineer (Streaming Database Team)\n\nResponsibilities: Developing and optimizing core streaming database functionalities; Project: RisingWave (Streaming Database); Skills: Rust, database systems\nSenior engineer on the Streaming DB team; acts as technical deputy for the CTO when designated.\n\n## David Wong\nFinance Director\n\nResponsibilities: Financial planning, budget management, financial reporting; Project: N/A (Finance); Skills: N/A\nOwns the general ledger calendar and spending limits above department level.\n\n## Chen Xinyi\nHuman Resources Manager\n\nResponsibilities: Recruitment, employee training, compensation management; Project: N/A (HR); Skills: N/A\nMaintains staff development entitlements and enrollment arrangements.\n\n## Jessica Chen\nFrontend Software Engineer\n\nResponsibilities: Developing user interfaces, implementing responsive designs, optimizing web performance; Project: E-commerce Website Redesign; Skills: N/A\nBuilds the storefront frontend and its rollout settings.\n\n## Emma Lewis\nSoftware Engineer (API Team)\n\nResponsibilities: Developing API functionalities using Python; Project: API-server; Skills: N/A\nHandles API server operations, integrations and security testing.\n\n## Liu Qiang\nQuality Assurance Engineer\n\nResponsibilities: Developing test strategies, executing tests, ensuring product quality; Project: All projects (focusing on testing and quality); Skills: N/A\nRuns cross-team test sign-offs before production releases.\n\n## Mike Chen\nSenior Software Engineer (AI Team)\n\nResponsibilities: Developing and optimizing LLM inference engines; Project: llama.cpp (LLM inference project); Skills: C++, CUDA, performance optimization\nOperates the inference GPU cluster and its schedules.\n\n## Priya Sharma\nDocumentation Engineer\n\nResponsibilities: Writing technical documentation, maintaining wiki, improving documentation processes; Project: Documentation (Wiki); Skills: N/A\nKeeps the internal wiki, document templates and translation assets.\n"
+  },
+  "private_records": [
+    {
+      "id": "H1",
+      "holder": "Liu Qiang",
+      "facts": {
+        "browsers": 4,
+        "deprecated": [
+          "IE-mode",
+          "Legacy Edge"
+        ]
+      },
+      "required_context": [
+        "e-commerce redesign"
+      ],
+      "release_rule": "Provide the current supported list. The 2024 matrix remains acceptable."
+    }
+  ],
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Liu Qiang"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      }
+    ],
+    "edges": []
+  },
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "browsers": "int",
+      "devices": "int",
+      "cell_count": "int"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": false
+  },
+  "adapter_status": "declarative v2 format; not compatible with legacy simulator without adapter",
+  "npc_behavior": "deterministic rules represented as data; execution engine not included",
+  "evaluator": null
+}

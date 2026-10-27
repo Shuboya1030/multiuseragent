@@ -1,0 +1,22 @@
+{
+  "blueprint.json": "20ffe7b5b15a1c0b19926723a7c7cb723da62085f0ee04a0946a8aeaefb3ab60",
+  "metadata.json": "d58ffd0d49b731a3a192b44722785ee564cf83e39a249db1050a484d3153e051",
+  "references\\full_information.json": "95b54cce033baca634dcdfb175e87cc07d3241e16b7bfaf20dfeb2b6e3531295",
+  "references\\no_contact.json": "6b9daa8f510aba6f976b0f4a6610cf97629cf47b109d871fa042e8675a0762cf",
+  "references\\walkthrough.md": "f9b1b031679da84aa6c2545be2cb8750071e106bd7f2b4b7a212e3f8e7b553d9",
+  "simulator\\task.json": "d243498689831481ac46154463c3395bba84ee2b3499ccacba4a9f472680af76",
+  "tac\\dependencies.yml": "fb84075bbad26ebb051f13f87cbd16c5ad76e4635c2d82a85da704355542b68c",
+  "tac\\Dockerfile": "47106047bdf4b69e6585e463d2743a938d967e0060859d2ba927b4103b458551",
+  "tac\\documents_R0\\directory.md": "80fafd850d98191afa1c9de796cc84de5b83d2cb20d421f62b30a9964b448546",
+  "tac\\documents_R0\\out-of-office.md": "b50652050d1bd26e6d3561237e2f039b10cecb509a07c761f7b86f2074650cbc",
+  "tac\\documents_R0\\travel-policy.md": "d4e64dc2ba929ff0c66de6e9d270cab0732275fc9d1e03361479b42800772277",
+  "tac\\documents_R0\\trip.md": "6d701f2876aaed1280fe33d32a1e79d26ceb687a807e5addf8755793561c3061",
+  "tac\\documents_R1\\directory.md": "23bacc66e9e57e8621f6a562c3b6984684a756ed1f9b905dfa2d28344411ba1e",
+  "tac\\documents_R1\\out-of-office.md": "b50652050d1bd26e6d3561237e2f039b10cecb509a07c761f7b86f2074650cbc",
+  "tac\\documents_R1\\travel-policy.md": "d4e64dc2ba929ff0c66de6e9d270cab0732275fc9d1e03361479b42800772277",
+  "tac\\documents_R1\\trip.md": "6d701f2876aaed1280fe33d32a1e79d26ceb687a807e5addf8755793561c3061",
+  "tac\\Makefile": "dcae3a4ad0170d6607bf3d84724c4d1ca78de3f26c0d937edc9d580292e7c6d0",
+  "tac\\populate_data.py": "e68a8387d2dc8db0aa5840037f31c609c0d9ee19768c30517fdc2dc107bcf945",
+  "tac\\scenarios.json": "85d5a31e9649e105ce99ada5a331b7655b5b1770b99a3d0257472da62c6a5ff0",
+  "tac\\task.md": "3e439cf57bb2619e7e3073cfa0b17b1ca5a41dc27e161de1ede04b5481127635"
+}

@@ -1,0 +1,99 @@
+{
+  "task_id": "m-med-log-deletion",
+  "initial_task": "As of 2026-11-05: Prepare the deletion request for the Colly 2025 crawl logs. Save /workspace/deliverable.json with dataset, retention_class, delete_after, authorization_ref. Post a short summary and the file path in #engineering.\n\nWork packet: OwnCloud Documents/Study21V2/m-med-log-deletion.\nOwnCloud: http://the-agent-company.com:8092\nRocketChat: http://the-agent-company.com:3000\n",
+  "public_documents": {
+    "request.md": "Colly 2025 crawl logs. Data map from 2026-03 lists retention class R2 (12 months).",
+    "data-ownership.md": "Retention classes for crawl data are set and approved by the data owner of the crawler. Crawler data ownership moved from the AI inference team to the web crawler team in July 2026."
+  },
+  "directory_by_condition": {
+    "R0": "# Relevant working directory\n\n## Emma Lewis\nSoftware Engineer (API Team)\n\n## Mike Chen\nSenior Software Engineer (AI Team)\n\n## Emily Zhou\nSoftware Engineer (Web Crawler Team)\n\n## Alex Turner\nSoftware Engineer (Low-Code Platform Team)\n",
+    "R1": "# Relevant working directory\n\n## Emma Lewis\nSoftware Engineer (API Team)\n\nResponsibilities: Developing API functionalities using Python; Project: API-server; Skills: N/A\nHandles API server operations, integrations and security testing.\n\n## Mike Chen\nSenior Software Engineer (AI Team)\n\nResponsibilities: Developing and optimizing LLM inference engines; Project: llama.cpp (LLM inference project); Skills: C++, CUDA, performance optimization\nOperates the inference GPU cluster and its schedules.\n\n## Emily Zhou\nSoftware Engineer (Web Crawler Team)\n\nResponsibilities: Designing and implementing web crawler functionalities; Project: Colly (Web Crawler Framework); Skills: Go, distributed systems\nOwns the crawler framework and the datasets it produces.\n\n## Alex Turner\nSoftware Engineer (Low-Code Platform Team)\n\nResponsibilities: Developing low-code platform features; Project: Node-RED (Low-Code Platform); Skills: N/A\nRuns the low-code platform and its plugin inventory.\n"
+  },
+  "private_records": [
+    {
+      "id": "H1",
+      "holder": "Emily Zhou",
+      "facts": {
+        "retention_class": "R3",
+        "delete_after": "2026-12-31"
+      },
+      "required_context": [
+        "Colly",
+        "2025 logs"
+      ],
+      "release_rule": "Provide the current retention class and deletion date."
+    },
+    {
+      "id": "H2",
+      "holder": "Emily Zhou",
+      "facts": {
+        "authorization_ref": "DEL-APR-12"
+      },
+      "required_context": [
+        "R3",
+        "2026-12-31"
+      ],
+      "release_rule": "Approve deletion when class and date are cited."
+    },
+    {
+      "id": "D1",
+      "holder": "Mike Chen",
+      "facts": {},
+      "required_context": [],
+      "release_rule": "Your team owned crawl data before July. If asked, say ownership moved to the web crawler team."
+    }
+  ],
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Emily Zhou"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      },
+      {
+        "id": "h2",
+        "admissible_recipients": [
+          "Emily Zhou"
+        ],
+        "information_ids": [
+          "H2"
+        ],
+        "requires": [
+          "h1"
+        ]
+      }
+    ],
+    "edges": [
+      [
+        "h1",
+        "h2"
+      ]
+    ]
+  },
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "dataset": "str",
+      "retention_class": "str",
+      "delete_after": "str",
+      "authorization_ref": "str"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": false
+  },
+  "adapter_status": "declarative v2 format; not compatible with legacy simulator without adapter",
+  "npc_behavior": "deterministic rules represented as data; execution engine not included",
+  "evaluator": null
+}

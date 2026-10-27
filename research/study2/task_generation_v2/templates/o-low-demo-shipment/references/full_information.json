@@ -1,0 +1,6 @@
+{
+  "customer": "Fabrikam",
+  "carrier": "FastFreight",
+  "ship_date": "2026-11-12",
+  "delivery_days": 3
+}

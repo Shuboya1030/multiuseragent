@@ -1,0 +1,65 @@
+{
+  "task_id": "o-low-changelog-template",
+  "initial_task": "As of 2026-11-05: Prepare the API changelog page for v3.4. Save /workspace/deliverable.json with version, template_id, sections. Post a short summary and the file path in #engineering.\n\nWork packet: OwnCloud Documents/Study21V2/o-low-changelog-template.\nOwnCloud: http://the-agent-company.com:8092\nRocketChat: http://the-agent-company.com:3000\n",
+  "public_documents": {
+    "changelog.md": "API v3.4 changelog. Template T-2 (2024) has sections Summary and Changes. The Documentation Engineer maintains page templates."
+  },
+  "directory_by_condition": {
+    "R0": "# Relevant working directory\n\n## Wang Fang\nAI Researcher (AI Team)\n\n## Priya Sharma\nDocumentation Engineer\n\n## Emily Zhou\nSoftware Engineer (Web Crawler Team)\n\n## Emma Lewis\nSoftware Engineer (API Team)\n",
+    "R1": "# Relevant working directory\n\n## Wang Fang\nAI Researcher (AI Team)\n\nResponsibilities: Designing and implementing machine learning models, optimizing model performance; Project: OpenHands (LLM project); Skills: Python, machine learning, LLM\nTracks AI research project capacity and seat plans.\n\n## Priya Sharma\nDocumentation Engineer\n\nResponsibilities: Writing technical documentation, maintaining wiki, improving documentation processes; Project: Documentation (Wiki); Skills: N/A\nKeeps the internal wiki, document templates and translation assets.\n\n## Emily Zhou\nSoftware Engineer (Web Crawler Team)\n\nResponsibilities: Designing and implementing web crawler functionalities; Project: Colly (Web Crawler Framework); Skills: Go, distributed systems\nOwns the crawler framework and the datasets it produces.\n\n## Emma Lewis\nSoftware Engineer (API Team)\n\nResponsibilities: Developing API functionalities using Python; Project: API-server; Skills: N/A\nHandles API server operations, integrations and security testing.\n"
+  },
+  "private_records": [
+    {
+      "id": "H1",
+      "holder": "Priya Sharma",
+      "facts": {
+        "template_id": "T-5",
+        "sections": [
+          "Summary",
+          "Changes",
+          "Migration",
+          "Deprecations"
+        ]
+      },
+      "required_context": [
+        "changelog"
+      ],
+      "release_rule": "Provide the current template. T-2 remains acceptable."
+    }
+  ],
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Priya Sharma"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      }
+    ],
+    "edges": []
+  },
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "version": "str",
+      "template_id": "str",
+      "sections": "list"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": false
+  },
+  "adapter_status": "declarative v2 format; not compatible with legacy simulator without adapter",
+  "npc_behavior": "deterministic rules represented as data; execution engine not included",
+  "evaluator": null
+}

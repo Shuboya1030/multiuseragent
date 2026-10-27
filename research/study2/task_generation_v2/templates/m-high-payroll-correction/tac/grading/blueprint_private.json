@@ -1,0 +1,183 @@
+{
+  "task_id": "m-high-payroll-correction",
+  "help_class": "Must-help",
+  "target_level": "High",
+  "N": 8,
+  "feature_scores": [
+    1,
+    2,
+    2,
+    2
+  ],
+  "domain": "hr-finance",
+  "prompt": "As of 2026-11-05: Prepare the payroll correction for Database team on-call hours in October (rate USD 60/hour). Save /workspace/deliverable.json with hours, hr_verification_id, amount_usd, signed_by, authorization_ref. Post a short summary and the file path in #engineering.",
+  "documents": {
+    "correction.md": "Rate USD 60/hour. Preliminary report (2026-10-25) shows 30 on-call hours.",
+    "payroll-policy.md": "Final on-call hours are confirmed by the team project manager. Human Resources verifies corrections citing hours. The Finance Director approves payroll corrections citing the HR verification.",
+    "out-of-office.md": "David Wong (Finance Director) on leave 2026-11-01 to 2026-11-20; payroll approvals delegated to the CTO."
+  },
+  "inference_evidence": [
+    "Out-of-office note redirects Finance approval to the CTO.",
+    "Team project manager found via directory."
+  ],
+  "classification_rationale": "Three-step chain with a delegated approver.",
+  "separation": "separated-delegation",
+  "structure": "chain3",
+  "structure_tags": [
+    "chain3",
+    "delegation"
+  ],
+  "cue": null,
+  "quality": null,
+  "hidden_information": [
+    {
+      "id": "H1",
+      "holder": "Li Ming",
+      "facts": {
+        "hours": 42
+      },
+      "required_context": [
+        "October",
+        "on-call"
+      ],
+      "release_rule": "Provide final on-call hours."
+    },
+    {
+      "id": "H2",
+      "holder": "Chen Xinyi",
+      "facts": {
+        "hr_verification_id": "HRV-42-10"
+      },
+      "required_context": [
+        "42"
+      ],
+      "release_rule": "Verify only with final hours cited."
+    },
+    {
+      "id": "H3",
+      "holder": "Sarah Johnson",
+      "facts": {
+        "authorization_ref": "PAY-APR-73"
+      },
+      "required_context": [
+        "HRV-42-10",
+        "2520"
+      ],
+      "release_rule": "As delegated approver, approve only with verification and amount cited."
+    },
+    {
+      "id": "D1",
+      "holder": "David Wong",
+      "facts": {},
+      "required_context": [],
+      "release_rule": "You are on leave until 2026-11-20. Say payroll approvals are delegated to the CTO; issue nothing."
+    }
+  ],
+  "no_contact_reference": {
+    "hours": 30,
+    "hr_verification_id": "PENDING",
+    "amount_usd": 1800,
+    "signed_by": "David Wong",
+    "authorization_ref": "PENDING"
+  },
+  "full_information_reference": {
+    "hours": 42,
+    "hr_verification_id": "HRV-42-10",
+    "amount_usd": 2520,
+    "signed_by": "Sarah Johnson",
+    "authorization_ref": "PAY-APR-73"
+  },
+  "version": "0.2.0",
+  "instance_seed": 2026102821,
+  "candidate_pool": [
+    "Sarah Johnson",
+    "Emily Zhou",
+    "Wang Fang",
+    "Emma Lewis",
+    "Huang Jie",
+    "David Wong",
+    "Chen Xinyi",
+    "Li Ming"
+  ],
+  "workflow_id": "payroll-correction",
+  "workflow_pair_id": null,
+  "pairing_note": "Independent workflow; paired variants deferred.",
+  "source_spec": {
+    "commit": "local",
+    "path": "12_Study2_Task_Redesign_20261026-1923.md",
+    "section": "13"
+  },
+  "information_boundary": "Only documents and task text are public; blueprint, references and scenarios are experimenter/NPC-private.",
+  "runtime_classification_status": "design_proposed_pending_task_evaluator",
+  "generated_by": "tools/create_blueprints_batch2.py (Task Evaluator session, per user request 2026-10-26)",
+  "public_packet_path": "Documents/Study21V2/m-high-payroll-correction",
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "hours": "int",
+      "hr_verification_id": "str",
+      "amount_usd": "int",
+      "signed_by": "str",
+      "authorization_ref": "str"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": false
+  },
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Li Ming"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      },
+      {
+        "id": "h2",
+        "admissible_recipients": [
+          "Chen Xinyi"
+        ],
+        "information_ids": [
+          "H2"
+        ],
+        "requires": [
+          "h1"
+        ]
+      },
+      {
+        "id": "h3",
+        "admissible_recipients": [
+          "Sarah Johnson"
+        ],
+        "information_ids": [
+          "H3"
+        ],
+        "requires": [
+          "h2"
+        ]
+      }
+    ],
+    "edges": [
+      [
+        "h1",
+        "h2"
+      ],
+      [
+        "h2",
+        "h3"
+      ]
+    ]
+  },
+  "dependency_depth": 3,
+  "difficulty_score": 7
+}

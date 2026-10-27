@@ -1,0 +1,130 @@
+{
+  "task_id": "m-low-gpu-job-request",
+  "help_class": "Must-help",
+  "target_level": "Low",
+  "N": 16,
+  "feature_scores": [
+    2,
+    0,
+    0,
+    0
+  ],
+  "domain": "ai-infrastructure",
+  "prompt": "As of 2026-11-05: Prepare the GPU job request for experiment E-55. Save /workspace/deliverable.json with experiment, gpu_hours, queue, quota_ref. Post a short summary and the file path in #engineering.",
+  "documents": {
+    "job.md": "Experiment E-55 (AI research). Planning note from 2026-08 lists 120 GPU hours on queue research-a, quota reference Q-OLD-12.",
+    "compute-policy.md": "Current AI research GPU quotas and queue assignments are kept by the AI research team."
+  },
+  "inference_evidence": [
+    "AI research team maps to the AI Researcher title."
+  ],
+  "classification_rationale": "Planning note is outdated; current quota record held by AI research.",
+  "separation": "aligned",
+  "structure": "single-information",
+  "structure_tags": [
+    "single-information"
+  ],
+  "cue": null,
+  "quality": null,
+  "hidden_information": [
+    {
+      "id": "H1",
+      "holder": "Wang Fang",
+      "facts": {
+        "gpu_hours": 96,
+        "queue": "research-b",
+        "quota_ref": "Q-26-41"
+      },
+      "required_context": [
+        "E-55"
+      ],
+      "release_rule": "Provide the current quota, queue and reference for E-55."
+    },
+    {
+      "id": "D1",
+      "holder": "Mike Chen",
+      "facts": {},
+      "required_context": [],
+      "release_rule": "You operate the inference cluster but do not allocate research quotas. If asked, say research quotas are kept by the research side of the AI team."
+    }
+  ],
+  "no_contact_reference": {
+    "experiment": "E-55",
+    "gpu_hours": 120,
+    "queue": "research-a",
+    "quota_ref": "Q-OLD-12"
+  },
+  "full_information_reference": {
+    "experiment": "E-55",
+    "gpu_hours": 96,
+    "queue": "research-b",
+    "quota_ref": "Q-26-41"
+  },
+  "version": "0.2.0",
+  "instance_seed": 2026102803,
+  "candidate_pool": [
+    "Wang Fang",
+    "Alex Turner",
+    "Priya Sharma",
+    "David Wong",
+    "Emma Lewis",
+    "Jessica Lee",
+    "Sarah Johnson",
+    "Sophia Rodriguez",
+    "Jessica Chen",
+    "Chen Xinyi",
+    "Li Ming",
+    "Emily Zhou",
+    "Liu Qiang",
+    "Mark Johnson",
+    "Zhang Wei",
+    "Mike Chen"
+  ],
+  "workflow_id": "gpu-job-request",
+  "workflow_pair_id": null,
+  "pairing_note": "Independent workflow; paired variants deferred.",
+  "source_spec": {
+    "commit": "local",
+    "path": "12_Study2_Task_Redesign_20261026-1923.md",
+    "section": "13"
+  },
+  "information_boundary": "Only documents and task text are public; blueprint, references and scenarios are experimenter/NPC-private.",
+  "runtime_classification_status": "design_proposed_pending_task_evaluator",
+  "generated_by": "tools/create_blueprints_batch2.py (Task Evaluator session, per user request 2026-10-26)",
+  "public_packet_path": "Documents/Study21V2/m-low-gpu-job-request",
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "experiment": "str",
+      "gpu_hours": "int",
+      "queue": "str",
+      "quota_ref": "str"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases.",
+      "List fields are order-insensitive multisets."
+    ],
+    "grading_implemented": false
+  },
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Wang Fang"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      }
+    ],
+    "edges": []
+  },
+  "dependency_depth": 1,
+  "difficulty_score": 2
+}
