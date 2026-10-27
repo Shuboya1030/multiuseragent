@@ -1,0 +1,7 @@
+task_id,class,level,N,depth,score,package_checks
+m-high-service-cutover,Must-help,High,16,3,8,passed
+m-low-ledger-allocation,Must-help,Low,4,1,0,passed
+m-medium-research-purchase,Must-help,Medium,8,2,5,passed
+o-high-training-schedule,Optional-help,High,16,1,8,passed
+o-low-campaign-asset,Optional-help,Low,4,1,0,passed
+o-medium-event-package,Optional-help,Medium,8,1,4,passed

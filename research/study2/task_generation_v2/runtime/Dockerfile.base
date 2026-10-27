@@ -1,0 +1,12 @@
+# External-image COPY does not execute source ONBUILD triggers.
+# Reuses official filesystem but removes grading entry points. No evaluator stub.
+FROM scratch
+COPY --from=ghcr.io/theagentcompany/task-base-image:1.0.0 / /
+ENV PATH=/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin
+ENV LANG=C.UTF-8 PYTHONPATH=/utils
+ENV CREDENTIAL_FILE_PATH=/npc/npc_credential.json SCENARIOS_FILE_PATH=/npc/scenarios.json
+ENV REDIS_OM_URL=redis://default:theagentcompany@the-agent-company.com/:6379
+ENV BOT_URL=http://the-agent-company.com:3000
+RUN rm -f /utils/eval.py /utils/scoring.py /utils/encrypt.py /utils/evaluator.py
+WORKDIR /workspace
+CMD ["sleep", "infinity"]

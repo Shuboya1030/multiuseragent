@@ -1,0 +1,8 @@
+{
+  "allocation_revision": "A-9",
+  "replica_count": 6,
+  "window_utc": "02:30-03:00",
+  "readiness_reference": "QA-A9-62",
+  "mandate_reference": "TECH-ATLAS-91",
+  "rollback_minutes": 20
+}

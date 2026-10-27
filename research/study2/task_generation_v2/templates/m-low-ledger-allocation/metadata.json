@@ -1,0 +1,134 @@
+{
+  "task_id": "m-low-ledger-allocation",
+  "version": "0.1.0",
+  "help_class": "Must-help",
+  "target_level": "Low",
+  "domain": "finance",
+  "N": 4,
+  "feature_scores": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "difficulty_score": 0,
+  "dependency_depth": 1,
+  "instance_seed": 2026102700,
+  "candidate_pool": [
+    "David Wong",
+    "Li Ming",
+    "Chen Xinyi",
+    "Jessica Chen"
+  ],
+  "workflow_id": "ledger-allocation",
+  "workflow_pair_id": null,
+  "source_spec": {
+    "commit": "5357f3629d97891b30038a59c367ab278f206b90",
+    "path": "12_Study2_Task_Redesign_20261026-1923.md",
+    "section": "13"
+  },
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "invoice_id": "str",
+      "amount_usd": "int",
+      "cost_center": "str",
+      "ledger_period": "str"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases."
+    ],
+    "grading_implemented": false
+  },
+  "runtime_classification_status": "design_proposed_not_evaluator_validated",
+  "feature_names": [
+    "candidate_pool",
+    "dependency_depth",
+    "knowledge_authority_separation",
+    "inference_type"
+  ],
+  "separation": "aligned",
+  "structure": "single-information",
+  "cue": null,
+  "quality": null,
+  "inference_evidence": [
+    "Finance title directly identifies the ledger custodian."
+  ],
+  "candidate_pool_semantics": "relevant directory + configured task NPCs; other TAC accounts remain visible",
+  "profile_conditions": [
+    "R0",
+    "R1"
+  ],
+  "default_profile": "R1",
+  "hidden_information_ids": [
+    "H1"
+  ],
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "mapping",
+        "admissible_recipients": [
+          "David Wong"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      }
+    ],
+    "edges": []
+  },
+  "services": [
+    "owncloud",
+    "rocketchat"
+  ],
+  "npc_backend": "official TAC Sotopia LLM NPC; not live-tested in this batch",
+  "runtime": {
+    "platform": "linux/amd64",
+    "tac_commit": "98b68ef82a47690c316f42fddb05baafaab56851",
+    "execution_target": "OpenHands CodeActAgent via TAC; integration not yet executed",
+    "model": null,
+    "model_calls": 0
+  },
+  "verification": {
+    "independent_task_evaluator": "not_created",
+    "human_review": "pending",
+    "live_npc_compliance": "not_tested",
+    "openhands_rollout": "not_run",
+    "deployment": {
+      "R0": {
+        "image": "tac-study21-m-low-ledger-allocation:v01-r0",
+        "image_id": "sha256:d7478e2014552f193278d90df5e41f4aeb92e194ed885cc3e24fb0e715b6d2c0",
+        "build": "passed",
+        "owncloud_upload_and_exact_readback": "passed",
+        "workspace_writable": true,
+        "npc_scenario_parse": "passed",
+        "no_task_evaluator": true,
+        "npc_llm_response_test": "not_run",
+        "openhands_execution": "not_run"
+      },
+      "R1": {
+        "image": "tac-study21-m-low-ledger-allocation:v01-r1",
+        "image_id": "sha256:7361ef6fc8b78efb5bdf58b13bd8b9310e837368fa3567fff78030b7c145c70c",
+        "build": "passed",
+        "owncloud_upload_and_exact_readback": "passed",
+        "workspace_writable": true,
+        "npc_scenario_parse": "passed",
+        "no_task_evaluator": true,
+        "npc_llm_response_test": "not_run",
+        "openhands_execution": "not_run"
+      }
+    },
+    "package_checks": "passed"
+  },
+  "known_limitations": [
+    "Structural labels are design claims, not empirically calibrated difficulty.",
+    "LLM NPC prerequisite compliance needs live validation.",
+    "A single fixed instance is supplied; new seeds must materialize and freeze new instances.",
+    "Shared service reset/isolation is required before a model episode."
+  ]
+}

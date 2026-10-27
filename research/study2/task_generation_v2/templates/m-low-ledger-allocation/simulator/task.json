@@ -1,0 +1,62 @@
+{
+  "task_id": "m-low-ledger-allocation",
+  "initial_task": "Prepare the November allocation entry for invoice INV-841. Save /workspace/deliverable.json with invoice_id, amount_usd, cost_center and ledger_period. Post a short entry summary and the file path in #engineering.\n\nWork packet: OwnCloud Documents/Study21V2/m-low-ledger-allocation.\nOwnCloud: http://the-agent-company.com:8092\nRocketChat: http://the-agent-company.com:3000\n",
+  "public_documents": {
+    "invoice.md": "INV-841: internal tooling, USD 2400, service period November 2026. Posting date 2026-11-02.",
+    "posting-sheet.md": "Working allocation sheet: internal tooling -> CC-410, ledger period 2026-11. This sheet was issued 2026-10-01. Ledger periods use the mapping effective on the posting date. The financial ledger custodian maintains period mappings."
+  },
+  "directory_by_condition": {
+    "R0": "# Relevant working directory\n\n## David Wong\nFinance Director\n\n## Li Ming\nDatabase Team Project Manager\n\n## Chen Xinyi\nHuman Resources Manager\n\n## Jessica Chen\nFrontend Software Engineer\n",
+    "R1": "# Relevant working directory\n\n## David Wong\nFinance Director\n\nResponsibilities: Financial planning, budget management, financial reporting; Project: N/A (Finance); Skills: N/A\nMaintains ledger periods and expenditure mandates. Department leads handle commitments up to USD 10000; Finance handles higher amounts.\n\n## Li Ming\nDatabase Team Project Manager\n\nResponsibilities: Managing database projects, resource coordination, ensuring timely delivery; Project: JanusGraph (Graph Database); Skills: Java, distributed systems\nCoordinates Database team operational capacity and deployment resources.\n\n## Chen Xinyi\nHuman Resources Manager\n\nResponsibilities: Recruitment, employee training, compensation management; Project: N/A (HR); Skills: N/A\nMaintains staff development entitlements and enrollment arrangements.\n\n## Jessica Chen\nFrontend Software Engineer\n\nResponsibilities: Developing user interfaces, implementing responsive designs, optimizing web performance; Project: E-commerce Website Redesign; Skills: N/A\n\n"
+  },
+  "private_records": [
+    {
+      "id": "H1",
+      "holder": "David Wong",
+      "facts": {
+        "cost_center": "CC-628",
+        "effective_date": "2026-11-01"
+      },
+      "required_context": [
+        "INV-841",
+        "2026-11"
+      ],
+      "release_rule": "Provide the November internal-tooling mapping for this invoice. You own both the mapping and its release; no separate authorization is needed."
+    }
+  ],
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "mapping",
+        "admissible_recipients": [
+          "David Wong"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      }
+    ],
+    "edges": []
+  },
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "invoice_id": "str",
+      "amount_usd": "int",
+      "cost_center": "str",
+      "ledger_period": "str"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases."
+    ],
+    "grading_implemented": false
+  },
+  "adapter_status": "declarative v2 format; not compatible with legacy simulator without adapter",
+  "npc_behavior": "deterministic rules represented as data; execution engine not included",
+  "evaluator": null
+}

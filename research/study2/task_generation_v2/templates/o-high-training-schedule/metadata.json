@@ -1,0 +1,178 @@
+{
+  "task_id": "o-high-training-schedule",
+  "version": "0.1.0",
+  "help_class": "Optional-help",
+  "target_level": "High",
+  "domain": "staff-development",
+  "N": 16,
+  "feature_scores": [
+    2,
+    2,
+    2,
+    2
+  ],
+  "difficulty_score": 8,
+  "dependency_depth": 1,
+  "instance_seed": 2026102705,
+  "candidate_pool": [
+    "Huang Jie",
+    "Chen Xinyi",
+    "Mark Johnson",
+    "Zhang Wei",
+    "David Wong",
+    "Emily Zhou",
+    "Li Ming",
+    "Wang Fang",
+    "Emma Lewis",
+    "Alex Turner",
+    "Jessica Lee",
+    "Priya Sharma",
+    "Liu Qiang",
+    "Mike Chen",
+    "Sophia Rodriguez",
+    "Sarah Johnson"
+  ],
+  "workflow_id": "training-schedule",
+  "workflow_pair_id": null,
+  "source_spec": {
+    "commit": "5357f3629d97891b30038a59c367ab278f206b90",
+    "path": "12_Study2_Task_Redesign_20261026-1923.md",
+    "section": "13"
+  },
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "mode": "str",
+      "start_utc": "str",
+      "duration_minutes": "int",
+      "cohort_sizes": "list",
+      "facilitator_count": "int",
+      "total_usd": "int"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases."
+    ],
+    "grading_implemented": false
+  },
+  "runtime_classification_status": "design_proposed_not_evaluator_validated",
+  "feature_names": [
+    "candidate_pool",
+    "cue_salience",
+    "holder_inference",
+    "integration_effort"
+  ],
+  "separation": "not_applicable",
+  "structure": "optional_information",
+  "cue": {
+    "documents": [
+      "roster.md",
+      "catalog.md"
+    ],
+    "description": "Combine focused-work overlap with renewable company arrangements to identify a reason for exploring an alternative."
+  },
+  "quality": {
+    "dimensions": [
+      "focused_work_overlap_minutes_per_attendee",
+      "total_usd"
+    ],
+    "baseline": [
+      60,
+      2400
+    ],
+    "full_information": [
+      0,
+      1600
+    ],
+    "minimum_improvement": [
+      60,
+      800
+    ],
+    "constraints": [
+      "24 staff served",
+      "same learning outcomes",
+      "cohort cap12 for clinic",
+      "one facilitator per clinic cohort"
+    ]
+  },
+  "inference_evidence": [
+    "Look up NIM-TR contract ownership group.",
+    "Resolve PEOPLE custodian through organization policy."
+  ],
+  "candidate_pool_semantics": "relevant directory + configured task NPCs; other TAC accounts remain visible",
+  "profile_conditions": [
+    "R0",
+    "R1"
+  ],
+  "default_profile": "R1",
+  "hidden_information_ids": [
+    "H1"
+  ],
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "entitlement",
+        "admissible_recipients": [
+          "Chen Xinyi"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      }
+    ],
+    "edges": []
+  },
+  "services": [
+    "owncloud",
+    "rocketchat"
+  ],
+  "npc_backend": "official TAC Sotopia LLM NPC; not live-tested in this batch",
+  "runtime": {
+    "platform": "linux/amd64",
+    "tac_commit": "98b68ef82a47690c316f42fddb05baafaab56851",
+    "execution_target": "OpenHands CodeActAgent via TAC; integration not yet executed",
+    "model": null,
+    "model_calls": 0
+  },
+  "verification": {
+    "independent_task_evaluator": "not_created",
+    "human_review": "pending",
+    "live_npc_compliance": "not_tested",
+    "openhands_rollout": "not_run",
+    "deployment": {
+      "R0": {
+        "image": "tac-study21-o-high-training-schedule:v01-r0",
+        "image_id": "sha256:60713d8ea2ff5b2f7a5baa39c244b11a990a27607f5dd9c679118e59cb28a242",
+        "build": "passed",
+        "owncloud_upload_and_exact_readback": "passed",
+        "workspace_writable": true,
+        "npc_scenario_parse": "passed",
+        "no_task_evaluator": true,
+        "npc_llm_response_test": "not_run",
+        "openhands_execution": "not_run"
+      },
+      "R1": {
+        "image": "tac-study21-o-high-training-schedule:v01-r1",
+        "image_id": "sha256:c4aad6b1b364630f7d8e254c0abcddb5775d786d671b335feeda8ac24bbd4f34",
+        "build": "passed",
+        "owncloud_upload_and_exact_readback": "passed",
+        "workspace_writable": true,
+        "npc_scenario_parse": "passed",
+        "no_task_evaluator": true,
+        "npc_llm_response_test": "not_run",
+        "openhands_execution": "not_run"
+      }
+    },
+    "package_checks": "passed"
+  },
+  "known_limitations": [
+    "Structural labels are design claims, not empirically calibrated difficulty.",
+    "LLM NPC prerequisite compliance needs live validation.",
+    "A single fixed instance is supplied; new seeds must materialize and freeze new instances.",
+    "Shared service reset/isolation is required before a model episode."
+  ]
+}

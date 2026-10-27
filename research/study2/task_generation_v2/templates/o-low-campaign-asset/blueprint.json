@@ -1,0 +1,109 @@
+{
+  "task_id": "o-low-campaign-asset",
+  "help_class": "Optional-help",
+  "target_level": "Low",
+  "N": 4,
+  "feature_scores": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "domain": "marketing",
+  "prompt": "Prepare the Cedar campaign launch card for 2026-11-09. Save /workspace/deliverable.json with campaign, headline and hero_asset. Post the file path and a brief summary in #engineering.",
+  "documents": {
+    "brief.md": "Campaign Cedar. Headline: Build together. Permitted default hero asset: evergreen-v2.svg. It is licensed and suitable for this launch. Marketing maintains an optional campaign-specific asset that improves visual alignment; the evergreen asset remains valid."
+  },
+  "hidden_information": [
+    {
+      "id": "H1",
+      "holder": "Jessica Lee",
+      "facts": {
+        "hero_asset": "cedar-launch-v4.svg",
+        "asset_property": "Cedar-specific current licensed artwork"
+      },
+      "required_context": [
+        "Cedar"
+      ],
+      "release_rule": "Provide the Cedar-specific asset identifier. The evergreen asset remains a valid alternative; no authorization is required."
+    }
+  ],
+  "no_contact_reference": {
+    "campaign": "Cedar",
+    "headline": "Build together",
+    "hero_asset": "evergreen-v2.svg"
+  },
+  "full_information_reference": {
+    "campaign": "Cedar",
+    "headline": "Build together",
+    "hero_asset": "cedar-launch-v4.svg"
+  },
+  "classification_rationale": "The evergreen asset satisfies the baseline; the private campaign-specific licensed asset improves campaign alignment.",
+  "cue": {
+    "documents": [
+      "brief.md"
+    ],
+    "description": "Explicit optional campaign-specific asset availability."
+  },
+  "quality": {
+    "dimension": "campaign_specific_asset",
+    "baseline": false,
+    "full_information": true,
+    "meaning": "Use a licensed asset whose asset metadata identifies Cedar, rather than keyword inclusion in prose."
+  },
+  "inference_evidence": [
+    "Marketing title directly identifies asset holder."
+  ],
+  "version": "0.1.0",
+  "instance_seed": 2026102703,
+  "candidate_pool": [
+    "Sarah Johnson",
+    "Jessica Lee",
+    "Alex Turner",
+    "Mike Chen"
+  ],
+  "workflow_id": "campaign-asset",
+  "workflow_pair_id": null,
+  "pairing_note": "Six distinct representative workflows; natural paired variants deferred.",
+  "source_spec": {
+    "commit": "5357f3629d97891b30038a59c367ab278f206b90",
+    "path": "12_Study2_Task_Redesign_20261026-1923.md",
+    "section": "13"
+  },
+  "information_boundary": "Only documents and task text are public; blueprint, references and scenarios are experimenter/NPC-private.",
+  "runtime_classification_status": "design_proposed_not_evaluator_validated",
+  "public_packet_path": "Documents/Study21V2/o-low-campaign-asset",
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "campaign": "str",
+      "headline": "str",
+      "hero_asset": "str"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases."
+    ],
+    "grading_implemented": false
+  },
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "asset",
+        "admissible_recipients": [
+          "Jessica Lee"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      }
+    ],
+    "edges": []
+  },
+  "dependency_depth": 1,
+  "difficulty_score": 0
+}

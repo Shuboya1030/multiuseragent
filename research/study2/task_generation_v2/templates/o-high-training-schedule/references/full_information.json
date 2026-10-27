@@ -1,0 +1,11 @@
+{
+  "mode": "parallel-clinic",
+  "start_utc": "16:00",
+  "duration_minutes": 60,
+  "cohort_sizes": [
+    12,
+    12
+  ],
+  "facilitator_count": 2,
+  "total_usd": 1600
+}

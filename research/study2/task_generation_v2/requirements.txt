@@ -1,0 +1,2 @@
+jsonschema>=4,<5
+# Already available locally. Use approved company mirror if installation is needed.

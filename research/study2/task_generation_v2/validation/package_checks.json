@@ -1,0 +1,59 @@
+{
+  "scope": "schema, references, DAG acyclicity, exports and hashes only; no classification, difficulty, realism or quality acceptance",
+  "tasks": [
+    {
+      "task_id": "m-high-service-cutover",
+      "class": "Must-help",
+      "level": "High",
+      "N": 16,
+      "depth": 3,
+      "score": 8,
+      "package_checks": "passed"
+    },
+    {
+      "task_id": "m-low-ledger-allocation",
+      "class": "Must-help",
+      "level": "Low",
+      "N": 4,
+      "depth": 1,
+      "score": 0,
+      "package_checks": "passed"
+    },
+    {
+      "task_id": "m-medium-research-purchase",
+      "class": "Must-help",
+      "level": "Medium",
+      "N": 8,
+      "depth": 2,
+      "score": 5,
+      "package_checks": "passed"
+    },
+    {
+      "task_id": "o-high-training-schedule",
+      "class": "Optional-help",
+      "level": "High",
+      "N": 16,
+      "depth": 1,
+      "score": 8,
+      "package_checks": "passed"
+    },
+    {
+      "task_id": "o-low-campaign-asset",
+      "class": "Optional-help",
+      "level": "Low",
+      "N": 4,
+      "depth": 1,
+      "score": 0,
+      "package_checks": "passed"
+    },
+    {
+      "task_id": "o-medium-event-package",
+      "class": "Optional-help",
+      "level": "Medium",
+      "N": 8,
+      "depth": 1,
+      "score": 4,
+      "package_checks": "passed"
+    }
+  ]
+}

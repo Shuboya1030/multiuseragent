@@ -1,0 +1,157 @@
+{
+  "task_id": "m-medium-research-purchase",
+  "version": "0.1.0",
+  "help_class": "Must-help",
+  "target_level": "Medium",
+  "domain": "procurement",
+  "N": 8,
+  "feature_scores": [
+    1,
+    1,
+    2,
+    1
+  ],
+  "difficulty_score": 5,
+  "dependency_depth": 2,
+  "instance_seed": 2026102701,
+  "candidate_pool": [
+    "Jessica Lee",
+    "Priya Sharma",
+    "Zhang Wei",
+    "Huang Jie",
+    "David Wong",
+    "Emily Zhou",
+    "Mike Chen",
+    "Wang Fang"
+  ],
+  "workflow_id": "research-purchase",
+  "workflow_pair_id": null,
+  "source_spec": {
+    "commit": "5357f3629d97891b30038a59c367ab278f206b90",
+    "path": "12_Study2_Task_Redesign_20261026-1923.md",
+    "section": "13"
+  },
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "seats": "int",
+      "total_usd": "int",
+      "allocation_revision": "str",
+      "budget_code": "str",
+      "release_reference": "str"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases."
+    ],
+    "grading_implemented": false
+  },
+  "runtime_classification_status": "design_proposed_not_evaluator_validated",
+  "feature_names": [
+    "candidate_pool",
+    "dependency_depth",
+    "knowledge_authority_separation",
+    "inference_type"
+  ],
+  "separation": "separated-conditional",
+  "structure": "info-approval",
+  "cue": null,
+  "quality": null,
+  "inference_evidence": [
+    "Resolve release owner by applying the USD10000 threshold to the current computed amount."
+  ],
+  "candidate_pool_semantics": "relevant directory + configured task NPCs; other TAC accounts remain visible",
+  "profile_conditions": [
+    "R0",
+    "R1"
+  ],
+  "default_profile": "R1",
+  "hidden_information_ids": [
+    "H1",
+    "H2"
+  ],
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "allocation",
+        "admissible_recipients": [
+          "Wang Fang"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      },
+      {
+        "id": "release",
+        "admissible_recipients": [
+          "David Wong"
+        ],
+        "information_ids": [
+          "H2"
+        ],
+        "requires": [
+          "allocation"
+        ]
+      }
+    ],
+    "edges": [
+      [
+        "allocation",
+        "release"
+      ]
+    ]
+  },
+  "services": [
+    "owncloud",
+    "rocketchat"
+  ],
+  "npc_backend": "official TAC Sotopia LLM NPC; not live-tested in this batch",
+  "runtime": {
+    "platform": "linux/amd64",
+    "tac_commit": "98b68ef82a47690c316f42fddb05baafaab56851",
+    "execution_target": "OpenHands CodeActAgent via TAC; integration not yet executed",
+    "model": null,
+    "model_calls": 0
+  },
+  "verification": {
+    "independent_task_evaluator": "not_created",
+    "human_review": "pending",
+    "live_npc_compliance": "not_tested",
+    "openhands_rollout": "not_run",
+    "deployment": {
+      "R0": {
+        "image": "tac-study21-m-medium-research-purchase:v01-r0",
+        "image_id": "sha256:e82e5e60722692ff081d68d05d61466457046b25e04a429f3a4175fa1569224a",
+        "build": "passed",
+        "owncloud_upload_and_exact_readback": "passed",
+        "workspace_writable": true,
+        "npc_scenario_parse": "passed",
+        "no_task_evaluator": true,
+        "npc_llm_response_test": "not_run",
+        "openhands_execution": "not_run"
+      },
+      "R1": {
+        "image": "tac-study21-m-medium-research-purchase:v01-r1",
+        "image_id": "sha256:4ee0576f5d0de3ec8bc8169ac88350617c49447e679e7dcdbf0642f6fa55a549",
+        "build": "passed",
+        "owncloud_upload_and_exact_readback": "passed",
+        "workspace_writable": true,
+        "npc_scenario_parse": "passed",
+        "no_task_evaluator": true,
+        "npc_llm_response_test": "not_run",
+        "openhands_execution": "not_run"
+      }
+    },
+    "package_checks": "passed"
+  },
+  "known_limitations": [
+    "Structural labels are design claims, not empirically calibrated difficulty.",
+    "LLM NPC prerequisite compliance needs live validation.",
+    "A single fixed instance is supplied; new seeds must materialize and freeze new instances.",
+    "Shared service reset/isolation is required before a model episode."
+  ]
+}

@@ -1,0 +1,1 @@
+Working allocation sheet: internal tooling -> CC-410, ledger period 2026-11. This sheet was issued 2026-10-01. Ledger periods use the mapping effective on the posting date. The financial ledger custodian maintains period mappings.

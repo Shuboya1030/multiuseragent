@@ -1,0 +1,65 @@
+{
+  "task_id": "o-medium-event-package",
+  "initial_task": "Prepare the cost sheet for the Harbor customer workshop. Save /workspace/deliverable.json with attendees, package_code and total_usd. Post the file path and total in #engineering.\n\nWork packet: OwnCloud Documents/Study21V2/o-medium-event-package.\nOwnCloud: http://the-agent-company.com:8092\nRocketChat: http://the-agent-company.com:3000\n",
+  "public_documents": {
+    "event.md": "Harbor is a customer workshop, 30 attendees, one day. Required service: room plus lunch. Standard package STD30 provides both for USD 2100, within the USD 2300 budget.",
+    "commercial-policy.md": "Customer-meeting benefits belong to the commercial account function; employee-learning benefits belong to People Operations. Benefit eligibility depends on the event purpose, not the venue.",
+    "venue.md": "Standard room-and-lunch offer: USD 2100 for up to 30 attendees. The company has a commercial meeting relationship with this venue; its current benefit schedule is not part of this quote."
+  },
+  "directory_by_condition": {
+    "R0": "# Relevant working directory\n\n## Huang Jie\nProduct Manager (Search Engine Team)\n\n## Zhang Wei\nSenior Software Engineer (Streaming Database Team)\n\n## Priya Sharma\nDocumentation Engineer\n\n## Wang Fang\nAI Researcher (AI Team)\n\n## Jessica Lee\nMarketing Manager\n\n## Mark Johnson\nSales Director\n\n## Sarah Johnson\nCTO\n\n## David Wong\nFinance Director\n",
+    "R1": "# Relevant working directory\n\n## Huang Jie\nProduct Manager (Search Engine Team)\n\nResponsibilities: Defining product requirements, planning product roadmap, communicating with clients; Project: OpenSearch (Search Engine); Skills: N/A\n\n\n## Zhang Wei\nSenior Software Engineer (Streaming Database Team)\n\nResponsibilities: Developing and optimizing core streaming database functionalities; Project: RisingWave (Streaming Database); Skills: Rust, database systems\n\n\n## Priya Sharma\nDocumentation Engineer\n\nResponsibilities: Writing technical documentation, maintaining wiki, improving documentation processes; Project: Documentation (Wiki); Skills: N/A\n\n\n## Wang Fang\nAI Researcher (AI Team)\n\nResponsibilities: Designing and implementing machine learning models, optimizing model performance; Project: OpenHands (LLM project); Skills: Python, machine learning, LLM\nMaintains research allocation revisions and AI evaluation workload records.\n\n## Jessica Lee\nMarketing Manager\n\nResponsibilities: Developing marketing strategies, managing brand image, organizing marketing events; Project: N/A (Marketing); Skills: N/A\nMaintains current campaign creative assets.\n\n## Mark Johnson\nSales Director\n\nResponsibilities: Developing sales strategies, managing sales team, expanding client relationships; Project: N/A (Sales); Skills: N/A\nMaintains commercial event entitlements and customer-facing meeting arrangements.\n\n## Sarah Johnson\nCTO\n\nResponsibilities: Technical strategy planning, R&D team leadership, new technology assessment; Project: Oversees all technical projects; Skills: N/A\nOwns technical deployment mandates and cross-team production change windows.\n\n## David Wong\nFinance Director\n\nResponsibilities: Financial planning, budget management, financial reporting; Project: N/A (Finance); Skills: N/A\nMaintains ledger periods and expenditure mandates. Department leads handle commitments up to USD 10000; Finance handles higher amounts.\n"
+  },
+  "private_records": [
+    {
+      "id": "H1",
+      "holder": "Mark Johnson",
+      "facts": {
+        "package_code": "COMM30",
+        "discount_rate": 0.15,
+        "eligible_purpose": "customer workshop",
+        "services": "room plus lunch"
+      },
+      "required_context": [
+        "Harbor",
+        "30",
+        "customer"
+      ],
+      "release_rule": "Supply the current commercial package and 15% reduction from the standard quote. Do not claim this is required for a valid booking."
+    }
+  ],
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "benefit",
+        "admissible_recipients": [
+          "Mark Johnson"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      }
+    ],
+    "edges": []
+  },
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "attendees": "int",
+      "package_code": "str",
+      "total_usd": "int"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases."
+    ],
+    "grading_implemented": false
+  },
+  "adapter_status": "declarative v2 format; not compatible with legacy simulator without adapter",
+  "npc_behavior": "deterministic rules represented as data; execution engine not included",
+  "evaluator": null
+}

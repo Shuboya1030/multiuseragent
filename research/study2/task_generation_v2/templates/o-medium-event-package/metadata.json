@@ -1,0 +1,152 @@
+{
+  "task_id": "o-medium-event-package",
+  "version": "0.1.0",
+  "help_class": "Optional-help",
+  "target_level": "Medium",
+  "domain": "customer-events",
+  "N": 8,
+  "feature_scores": [
+    1,
+    1,
+    1,
+    1
+  ],
+  "difficulty_score": 4,
+  "dependency_depth": 1,
+  "instance_seed": 2026102704,
+  "candidate_pool": [
+    "Huang Jie",
+    "Zhang Wei",
+    "Priya Sharma",
+    "Wang Fang",
+    "Jessica Lee",
+    "Mark Johnson",
+    "Sarah Johnson",
+    "David Wong"
+  ],
+  "workflow_id": "event-package",
+  "workflow_pair_id": null,
+  "source_spec": {
+    "commit": "5357f3629d97891b30038a59c367ab278f206b90",
+    "path": "12_Study2_Task_Redesign_20261026-1923.md",
+    "section": "13"
+  },
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "attendees": "int",
+      "package_code": "str",
+      "total_usd": "int"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases."
+    ],
+    "grading_implemented": false
+  },
+  "runtime_classification_status": "design_proposed_not_evaluator_validated",
+  "feature_names": [
+    "candidate_pool",
+    "cue_salience",
+    "holder_inference",
+    "integration_effort"
+  ],
+  "separation": "not_applicable",
+  "structure": "optional_information",
+  "cue": {
+    "documents": [
+      "event.md",
+      "venue.md"
+    ],
+    "description": "An existing commercial relationship suggests an unlisted benefit; one eligibility inference."
+  },
+  "quality": {
+    "dimension": "eligible_total_cost_usd",
+    "baseline": 2100,
+    "full_information": 1785,
+    "minimum_improvement": 315,
+    "constraints": [
+      "room plus lunch",
+      "30 attendees"
+    ]
+  },
+  "inference_evidence": [
+    "Apply event-purpose ownership rule to select Sales rather than People Operations."
+  ],
+  "candidate_pool_semantics": "relevant directory + configured task NPCs; other TAC accounts remain visible",
+  "profile_conditions": [
+    "R0",
+    "R1"
+  ],
+  "default_profile": "R1",
+  "hidden_information_ids": [
+    "H1"
+  ],
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "benefit",
+        "admissible_recipients": [
+          "Mark Johnson"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      }
+    ],
+    "edges": []
+  },
+  "services": [
+    "owncloud",
+    "rocketchat"
+  ],
+  "npc_backend": "official TAC Sotopia LLM NPC; not live-tested in this batch",
+  "runtime": {
+    "platform": "linux/amd64",
+    "tac_commit": "98b68ef82a47690c316f42fddb05baafaab56851",
+    "execution_target": "OpenHands CodeActAgent via TAC; integration not yet executed",
+    "model": null,
+    "model_calls": 0
+  },
+  "verification": {
+    "independent_task_evaluator": "not_created",
+    "human_review": "pending",
+    "live_npc_compliance": "not_tested",
+    "openhands_rollout": "not_run",
+    "deployment": {
+      "R0": {
+        "image": "tac-study21-o-medium-event-package:v01-r0",
+        "image_id": "sha256:908ddb2fc9129e18d744ceec396d52e61eafe5fb8357e8f0946661c7ee0d64af",
+        "build": "passed",
+        "owncloud_upload_and_exact_readback": "passed",
+        "workspace_writable": true,
+        "npc_scenario_parse": "passed",
+        "no_task_evaluator": true,
+        "npc_llm_response_test": "not_run",
+        "openhands_execution": "not_run"
+      },
+      "R1": {
+        "image": "tac-study21-o-medium-event-package:v01-r1",
+        "image_id": "sha256:2265dc8040e3767607a01d114b846341eee327393ce4547f3674a18864995945",
+        "build": "passed",
+        "owncloud_upload_and_exact_readback": "passed",
+        "workspace_writable": true,
+        "npc_scenario_parse": "passed",
+        "no_task_evaluator": true,
+        "npc_llm_response_test": "not_run",
+        "openhands_execution": "not_run"
+      }
+    },
+    "package_checks": "passed"
+  },
+  "known_limitations": [
+    "Structural labels are design claims, not empirically calibrated difficulty.",
+    "LLM NPC prerequisite compliance needs live validation.",
+    "A single fixed instance is supplied; new seeds must materialize and freeze new instances.",
+    "Shared service reset/isolation is required before a model episode."
+  ]
+}

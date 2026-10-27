@@ -1,0 +1,1 @@
+Capacity is maintained by the research allocation owner. Order references bind the current allocation revision, annual amount and budget. Department leads issue commitments up to USD 10000; larger commitments are issued by Finance. Planning references are provisional and are not order releases.

@@ -1,0 +1,8 @@
+{
+  "allocation_revision": "A-6",
+  "replica_count": 4,
+  "window_utc": "01:00-01:30",
+  "readiness_reference": "QA-OLD-6",
+  "mandate_reference": "TECH-DRAFT-6",
+  "rollback_minutes": 10
+}

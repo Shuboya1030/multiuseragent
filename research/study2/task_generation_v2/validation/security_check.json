@@ -1,0 +1,8 @@
+{
+  "credential_value_matches": 0,
+  "provider_key_pattern_matches": 0,
+  "files_scanned": 151,
+  "known_secret_values_checked": 3,
+  "model_api_calls": 0,
+  "scope": "Local exact secret values and provider key patterns; not a proof of absence of all sensitive data."
+}

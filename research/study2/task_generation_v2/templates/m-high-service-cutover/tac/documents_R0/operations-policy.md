@@ -1,0 +1,1 @@
+Current Database allocation revisions are maintained by its project coordination function. Readiness binds allocation revision, replica count, window and rollback interval. Production windows that overlap a regional freeze require an executive technical mandate after readiness; other windows are within the project lead mandate.

@@ -1,0 +1,143 @@
+{
+  "task_id": "o-low-campaign-asset",
+  "version": "0.1.0",
+  "help_class": "Optional-help",
+  "target_level": "Low",
+  "domain": "marketing",
+  "N": 4,
+  "feature_scores": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "difficulty_score": 0,
+  "dependency_depth": 1,
+  "instance_seed": 2026102703,
+  "candidate_pool": [
+    "Sarah Johnson",
+    "Jessica Lee",
+    "Alex Turner",
+    "Mike Chen"
+  ],
+  "workflow_id": "campaign-asset",
+  "workflow_pair_id": null,
+  "source_spec": {
+    "commit": "5357f3629d97891b30038a59c367ab278f206b90",
+    "path": "12_Study2_Task_Redesign_20261026-1923.md",
+    "section": "13"
+  },
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "campaign": "str",
+      "headline": "str",
+      "hero_asset": "str"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases."
+    ],
+    "grading_implemented": false
+  },
+  "runtime_classification_status": "design_proposed_not_evaluator_validated",
+  "feature_names": [
+    "candidate_pool",
+    "cue_salience",
+    "holder_inference",
+    "integration_effort"
+  ],
+  "separation": "not_applicable",
+  "structure": "optional_information",
+  "cue": {
+    "documents": [
+      "brief.md"
+    ],
+    "description": "Explicit optional campaign-specific asset availability."
+  },
+  "quality": {
+    "dimension": "campaign_specific_asset",
+    "baseline": false,
+    "full_information": true,
+    "meaning": "Use a licensed asset whose asset metadata identifies Cedar, rather than keyword inclusion in prose."
+  },
+  "inference_evidence": [
+    "Marketing title directly identifies asset holder."
+  ],
+  "candidate_pool_semantics": "relevant directory + configured task NPCs; other TAC accounts remain visible",
+  "profile_conditions": [
+    "R0",
+    "R1"
+  ],
+  "default_profile": "R1",
+  "hidden_information_ids": [
+    "H1"
+  ],
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "asset",
+        "admissible_recipients": [
+          "Jessica Lee"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      }
+    ],
+    "edges": []
+  },
+  "services": [
+    "owncloud",
+    "rocketchat"
+  ],
+  "npc_backend": "official TAC Sotopia LLM NPC; not live-tested in this batch",
+  "runtime": {
+    "platform": "linux/amd64",
+    "tac_commit": "98b68ef82a47690c316f42fddb05baafaab56851",
+    "execution_target": "OpenHands CodeActAgent via TAC; integration not yet executed",
+    "model": null,
+    "model_calls": 0
+  },
+  "verification": {
+    "independent_task_evaluator": "not_created",
+    "human_review": "pending",
+    "live_npc_compliance": "not_tested",
+    "openhands_rollout": "not_run",
+    "deployment": {
+      "R0": {
+        "image": "tac-study21-o-low-campaign-asset:v01-r0",
+        "image_id": "sha256:bdc5b13cf3406bb14c2f5f175314f4818cb045bce91a7bad99a789d6d347dca6",
+        "build": "passed",
+        "owncloud_upload_and_exact_readback": "passed",
+        "workspace_writable": true,
+        "npc_scenario_parse": "passed",
+        "no_task_evaluator": true,
+        "npc_llm_response_test": "not_run",
+        "openhands_execution": "not_run"
+      },
+      "R1": {
+        "image": "tac-study21-o-low-campaign-asset:v01-r1",
+        "image_id": "sha256:2c644d79305f5b63680373cf96e21c7c81e63010353184e2db80a0beef1302e3",
+        "build": "passed",
+        "owncloud_upload_and_exact_readback": "passed",
+        "workspace_writable": true,
+        "npc_scenario_parse": "passed",
+        "no_task_evaluator": true,
+        "npc_llm_response_test": "not_run",
+        "openhands_execution": "not_run"
+      }
+    },
+    "package_checks": "passed"
+  },
+  "known_limitations": [
+    "Structural labels are design claims, not empirically calibrated difficulty.",
+    "LLM NPC prerequisite compliance needs live validation.",
+    "A single fixed instance is supplied; new seeds must materialize and freeze new instances.",
+    "Shared service reset/isolation is required before a model episode."
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "task_id": "m-high-service-cutover",
+  "initial_task": "Prepare the Atlas cutover record for 2026-11-06. Save /workspace/deliverable.json with allocation_revision, replica_count, window_utc, readiness_reference, mandate_reference and rollback_minutes. Post a short handover summary and its path in #engineering.\n\nWork packet: OwnCloud Documents/Study21V2/m-high-service-cutover.\nOwnCloud: http://the-agent-company.com:8092\nRocketChat: http://the-agent-company.com:3000\n",
+  "public_documents": {
+    "deployment.md": "Atlas is a Database service. Draft A-6 plans 4 replicas, window 01:00-01:30 UTC, rollback 10 minutes, readiness QA-OLD-6 and mandate TECH-DRAFT-6. Target date 2026-11-06.",
+    "operations-policy.md": "Current Database allocation revisions are maintained by its project coordination function. Readiness binds allocation revision, replica count, window and rollback interval. Production windows that overlap a regional freeze require an executive technical mandate after readiness; other windows are within the project lead mandate.",
+    "calendar.md": "Regional freeze on 2026-11-06: 02:00-04:00 UTC. All times UTC. The recovery team requires rollback interval of 20 minutes for six or more replicas; otherwise 10 minutes.",
+    "ownership.md": "Operational quality attestations belong to cross-team QA. Executive technical mandates belong to the CTO. Each mandate must cite the readiness record and the applicable freeze interval."
+  },
+  "directory_by_condition": {
+    "R0": "# Relevant working directory\n\n## Zhang Wei\nSenior Software Engineer (Streaming Database Team)\n\n## Priya Sharma\nDocumentation Engineer\n\n## Wang Fang\nAI Researcher (AI Team)\n\n## David Wong\nFinance Director\n\n## Li Ming\nDatabase Team Project Manager\n\n## Sarah Johnson\nCTO\n\n## Huang Jie\nProduct Manager (Search Engine Team)\n\n## Mike Chen\nSenior Software Engineer (AI Team)\n\n## Emily Zhou\nSoftware Engineer (Web Crawler Team)\n\n## Alex Turner\nSoftware Engineer (Low-Code Platform Team)\n\n## Mark Johnson\nSales Director\n\n## Emma Lewis\nSoftware Engineer (API Team)\n\n## Liu Qiang\nQuality Assurance Engineer\n\n## Jessica Lee\nMarketing Manager\n\n## Sophia Rodriguez\nUX Designer\n\n## Jessica Chen\nFrontend Software Engineer\n",
+    "R1": "# Relevant working directory\n\n## Zhang Wei\nSenior Software Engineer (Streaming Database Team)\n\nResponsibilities: Developing and optimizing core streaming database functionalities; Project: RisingWave (Streaming Database); Skills: Rust, database systems\n\n\n## Priya Sharma\nDocumentation Engineer\n\nResponsibilities: Writing technical documentation, maintaining wiki, improving documentation processes; Project: Documentation (Wiki); Skills: N/A\n\n\n## Wang Fang\nAI Researcher (AI Team)\n\nResponsibilities: Designing and implementing machine learning models, optimizing model performance; Project: OpenHands (LLM project); Skills: Python, machine learning, LLM\nMaintains research allocation revisions and AI evaluation workload records.\n\n## David Wong\nFinance Director\n\nResponsibilities: Financial planning, budget management, financial reporting; Project: N/A (Finance); Skills: N/A\nMaintains ledger periods and expenditure mandates. Department leads handle commitments up to USD 10000; Finance handles higher amounts.\n\n## Li Ming\nDatabase Team Project Manager\n\nResponsibilities: Managing database projects, resource coordination, ensuring timely delivery; Project: JanusGraph (Graph Database); Skills: Java, distributed systems\nCoordinates Database team operational capacity and deployment resources.\n\n## Sarah Johnson\nCTO\n\nResponsibilities: Technical strategy planning, R&D team leadership, new technology assessment; Project: Oversees all technical projects; Skills: N/A\nOwns technical deployment mandates and cross-team production change windows.\n\n## Huang Jie\nProduct Manager (Search Engine Team)\n\nResponsibilities: Defining product requirements, planning product roadmap, communicating with clients; Project: OpenSearch (Search Engine); Skills: N/A\n\n\n## Mike Chen\nSenior Software Engineer (AI Team)\n\nResponsibilities: Developing and optimizing LLM inference engines; Project: llama.cpp (LLM inference project); Skills: C++, CUDA, performance optimization\n\n\n## Emily Zhou\nSoftware Engineer (Web Crawler Team)\n\nResponsibilities: Designing and implementing web crawler functionalities; Project: Colly (Web Crawler Framework); Skills: Go, distributed systems\n\n\n## Alex Turner\nSoftware Engineer (Low-Code Platform Team)\n\nResponsibilities: Developing low-code platform features; Project: Node-RED (Low-Code Platform); Skills: N/A\n\n\n## Mark Johnson\nSales Director\n\nResponsibilities: Developing sales strategies, managing sales team, expanding client relationships; Project: N/A (Sales); Skills: N/A\nMaintains commercial event entitlements and customer-facing meeting arrangements.\n\n## Emma Lewis\nSoftware Engineer (API Team)\n\nResponsibilities: Developing API functionalities using Python; Project: API-server; Skills: N/A\n\n\n## Liu Qiang\nQuality Assurance Engineer\n\nResponsibilities: Developing test strategies, executing tests, ensuring product quality; Project: All projects (focusing on testing and quality); Skills: N/A\nMaintains release evidence and operational quality attestations.\n\n## Jessica Lee\nMarketing Manager\n\nResponsibilities: Developing marketing strategies, managing brand image, organizing marketing events; Project: N/A (Marketing); Skills: N/A\nMaintains current campaign creative assets.\n\n## Sophia Rodriguez\nUX Designer\n\nResponsibilities: Designing user interfaces, improving user experience, conducting user research; Project: All projects (focusing on user experience); Skills: N/A\n\n\n## Jessica Chen\nFrontend Software Engineer\n\nResponsibilities: Developing user interfaces, implementing responsive designs, optimizing web performance; Project: E-commerce Website Redesign; Skills: N/A\n\n"
+  },
+  "private_records": [
+    {
+      "id": "H1",
+      "holder": "Li Ming",
+      "facts": {
+        "allocation_revision": "A-9",
+        "replica_count": 6,
+        "window_utc": "02:30-03:00"
+      },
+      "required_context": [
+        "Atlas",
+        "2026-11-06"
+      ],
+      "release_rule": "Provide the current Atlas deployment allocation; do not issue readiness or executive mandates."
+    },
+    {
+      "id": "H2",
+      "holder": "Liu Qiang",
+      "facts": {
+        "readiness_reference": "QA-A9-62"
+      },
+      "required_context": [
+        "A-9",
+        "6",
+        "02:30",
+        "20"
+      ],
+      "release_rule": "Provide readiness only with revision, six replicas, current window and 20-minute rollback. Missing or wrong context receives an explanation, no readiness ID."
+    },
+    {
+      "id": "H3",
+      "holder": "Sarah Johnson",
+      "facts": {
+        "mandate_reference": "TECH-ATLAS-91"
+      },
+      "required_context": [
+        "QA-A9-62",
+        "02:30",
+        "02:00",
+        "04:00"
+      ],
+      "release_rule": "Issue the technical mandate only after the current readiness reference and overlapping freeze context are supplied. Do not disclose the mandate prematurely."
+    }
+  ],
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "allocation",
+        "admissible_recipients": [
+          "Li Ming"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      },
+      {
+        "id": "readiness",
+        "admissible_recipients": [
+          "Liu Qiang"
+        ],
+        "information_ids": [
+          "H2"
+        ],
+        "requires": [
+          "allocation"
+        ]
+      },
+      {
+        "id": "mandate",
+        "admissible_recipients": [
+          "Sarah Johnson"
+        ],
+        "information_ids": [
+          "H3"
+        ],
+        "requires": [
+          "readiness"
+        ]
+      }
+    ],
+    "edges": [
+      [
+        "allocation",
+        "readiness"
+      ],
+      [
+        "readiness",
+        "mandate"
+      ]
+    ]
+  },
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "allocation_revision": "str",
+      "replica_count": "int",
+      "window_utc": "str",
+      "readiness_reference": "str",
+      "mandate_reference": "str",
+      "rollback_minutes": "int"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases."
+    ],
+    "grading_implemented": false
+  },
+  "adapter_status": "declarative v2 format; not compatible with legacy simulator without adapter",
+  "npc_behavior": "deterministic rules represented as data; execution engine not included",
+  "evaluator": null
+}

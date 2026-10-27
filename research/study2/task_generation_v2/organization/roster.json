@@ -1,0 +1,138 @@
+[
+  {
+    "name": "Sarah Johnson",
+    "npc_id": "sarah_johnson",
+    "title": "CTO",
+    "responsibilities": "Responsibilities: Technical strategy planning, R&D team leadership, new technology assessment; Project: Oversees all technical projects; Skills: N/A",
+    "reporting_line_status": "not supplied by upstream; no invented reporting lines",
+    "r1_addendum": "Owns technical deployment mandates and cross-team production change windows."
+  },
+  {
+    "name": "Li Ming",
+    "npc_id": "li_ming",
+    "title": "Database Team Project Manager",
+    "responsibilities": "Responsibilities: Managing database projects, resource coordination, ensuring timely delivery; Project: JanusGraph (Graph Database); Skills: Java, distributed systems",
+    "reporting_line_status": "not supplied by upstream; no invented reporting lines",
+    "r1_addendum": "Coordinates Database team operational capacity and deployment resources."
+  },
+  {
+    "name": "Zhang Wei",
+    "npc_id": "zhang_wei",
+    "title": "Senior Software Engineer (Streaming Database Team)",
+    "responsibilities": "Responsibilities: Developing and optimizing core streaming database functionalities; Project: RisingWave (Streaming Database); Skills: Rust, database systems",
+    "reporting_line_status": "not supplied by upstream; no invented reporting lines",
+    "r1_addendum": ""
+  },
+  {
+    "name": "Wang Fang",
+    "npc_id": "wang_fang",
+    "title": "AI Researcher (AI Team)",
+    "responsibilities": "Responsibilities: Designing and implementing machine learning models, optimizing model performance; Project: OpenHands (LLM project); Skills: Python, machine learning, LLM",
+    "reporting_line_status": "not supplied by upstream; no invented reporting lines",
+    "r1_addendum": "Maintains research allocation revisions and AI evaluation workload records."
+  },
+  {
+    "name": "Mike Chen",
+    "npc_id": "mike_chen",
+    "title": "Senior Software Engineer (AI Team)",
+    "responsibilities": "Responsibilities: Developing and optimizing LLM inference engines; Project: llama.cpp (LLM inference project); Skills: C++, CUDA, performance optimization",
+    "reporting_line_status": "not supplied by upstream; no invented reporting lines",
+    "r1_addendum": ""
+  },
+  {
+    "name": "Emily Zhou",
+    "npc_id": "emily_zhou",
+    "title": "Software Engineer (Web Crawler Team)",
+    "responsibilities": "Responsibilities: Designing and implementing web crawler functionalities; Project: Colly (Web Crawler Framework); Skills: Go, distributed systems",
+    "reporting_line_status": "not supplied by upstream; no invented reporting lines",
+    "r1_addendum": ""
+  },
+  {
+    "name": "Liu Qiang",
+    "npc_id": "liu_qiang",
+    "title": "Quality Assurance Engineer",
+    "responsibilities": "Responsibilities: Developing test strategies, executing tests, ensuring product quality; Project: All projects (focusing on testing and quality); Skills: N/A",
+    "reporting_line_status": "not supplied by upstream; no invented reporting lines",
+    "r1_addendum": "Maintains release evidence and operational quality attestations."
+  },
+  {
+    "name": "Priya Sharma",
+    "npc_id": "priya_sharma",
+    "title": "Documentation Engineer",
+    "responsibilities": "Responsibilities: Writing technical documentation, maintaining wiki, improving documentation processes; Project: Documentation (Wiki); Skills: N/A",
+    "reporting_line_status": "not supplied by upstream; no invented reporting lines",
+    "r1_addendum": ""
+  },
+  {
+    "name": "Mark Johnson",
+    "npc_id": "mark_johnson",
+    "title": "Sales Director",
+    "responsibilities": "Responsibilities: Developing sales strategies, managing sales team, expanding client relationships; Project: N/A (Sales); Skills: N/A",
+    "reporting_line_status": "not supplied by upstream; no invented reporting lines",
+    "r1_addendum": "Maintains commercial event entitlements and customer-facing meeting arrangements."
+  },
+  {
+    "name": "Jessica Lee",
+    "npc_id": "jessica_lee",
+    "title": "Marketing Manager",
+    "responsibilities": "Responsibilities: Developing marketing strategies, managing brand image, organizing marketing events; Project: N/A (Marketing); Skills: N/A",
+    "reporting_line_status": "not supplied by upstream; no invented reporting lines",
+    "r1_addendum": "Maintains current campaign creative assets."
+  },
+  {
+    "name": "Chen Xinyi",
+    "npc_id": "chen_xinyi",
+    "title": "Human Resources Manager",
+    "responsibilities": "Responsibilities: Recruitment, employee training, compensation management; Project: N/A (HR); Skills: N/A",
+    "reporting_line_status": "not supplied by upstream; no invented reporting lines",
+    "r1_addendum": "Maintains staff development entitlements and enrollment arrangements."
+  },
+  {
+    "name": "David Wong",
+    "npc_id": "david_wong",
+    "title": "Finance Director",
+    "responsibilities": "Responsibilities: Financial planning, budget management, financial reporting; Project: N/A (Finance); Skills: N/A",
+    "reporting_line_status": "not supplied by upstream; no invented reporting lines",
+    "r1_addendum": "Maintains ledger periods and expenditure mandates. Department leads handle commitments up to USD 10000; Finance handles higher amounts."
+  },
+  {
+    "name": "Huang Jie",
+    "npc_id": "huang_jie",
+    "title": "Product Manager (Search Engine Team)",
+    "responsibilities": "Responsibilities: Defining product requirements, planning product roadmap, communicating with clients; Project: OpenSearch (Search Engine); Skills: N/A",
+    "reporting_line_status": "not supplied by upstream; no invented reporting lines",
+    "r1_addendum": ""
+  },
+  {
+    "name": "Sophia Rodriguez",
+    "npc_id": "sophia_rodriguez",
+    "title": "UX Designer",
+    "responsibilities": "Responsibilities: Designing user interfaces, improving user experience, conducting user research; Project: All projects (focusing on user experience); Skills: N/A",
+    "reporting_line_status": "not supplied by upstream; no invented reporting lines",
+    "r1_addendum": ""
+  },
+  {
+    "name": "Alex Turner",
+    "npc_id": "alex_turner",
+    "title": "Software Engineer (Low-Code Platform Team)",
+    "responsibilities": "Responsibilities: Developing low-code platform features; Project: Node-RED (Low-Code Platform); Skills: N/A",
+    "reporting_line_status": "not supplied by upstream; no invented reporting lines",
+    "r1_addendum": ""
+  },
+  {
+    "name": "Emma Lewis",
+    "npc_id": "emma_lewis",
+    "title": "Software Engineer (API Team)",
+    "responsibilities": "Responsibilities: Developing API functionalities using Python; Project: API-server; Skills: N/A",
+    "reporting_line_status": "not supplied by upstream; no invented reporting lines",
+    "r1_addendum": ""
+  },
+  {
+    "name": "Jessica Chen",
+    "npc_id": "jessica_chen",
+    "title": "Frontend Software Engineer",
+    "responsibilities": "Responsibilities: Developing user interfaces, implementing responsive designs, optimizing web performance; Project: E-commerce Website Redesign; Skills: N/A",
+    "reporting_line_status": "not supplied by upstream; no invented reporting lines",
+    "r1_addendum": ""
+  }
+]

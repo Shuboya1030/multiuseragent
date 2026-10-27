@@ -1,0 +1,184 @@
+{
+  "task_id": "m-high-service-cutover",
+  "version": "0.1.0",
+  "help_class": "Must-help",
+  "target_level": "High",
+  "domain": "service-operations",
+  "N": 16,
+  "feature_scores": [
+    2,
+    2,
+    2,
+    2
+  ],
+  "difficulty_score": 8,
+  "dependency_depth": 3,
+  "instance_seed": 2026102702,
+  "candidate_pool": [
+    "Zhang Wei",
+    "Priya Sharma",
+    "Wang Fang",
+    "David Wong",
+    "Li Ming",
+    "Sarah Johnson",
+    "Huang Jie",
+    "Mike Chen",
+    "Emily Zhou",
+    "Alex Turner",
+    "Mark Johnson",
+    "Emma Lewis",
+    "Liu Qiang",
+    "Jessica Lee",
+    "Sophia Rodriguez",
+    "Jessica Chen"
+  ],
+  "workflow_id": "service-cutover",
+  "workflow_pair_id": null,
+  "source_spec": {
+    "commit": "5357f3629d97891b30038a59c367ab278f206b90",
+    "path": "12_Study2_Task_Redesign_20261026-1923.md",
+    "section": "13"
+  },
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "allocation_revision": "str",
+      "replica_count": "int",
+      "window_utc": "str",
+      "readiness_reference": "str",
+      "mandate_reference": "str",
+      "rollback_minutes": "int"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases."
+    ],
+    "grading_implemented": false
+  },
+  "runtime_classification_status": "design_proposed_not_evaluator_validated",
+  "feature_names": [
+    "candidate_pool",
+    "dependency_depth",
+    "knowledge_authority_separation",
+    "inference_type"
+  ],
+  "separation": "separated-conditional",
+  "structure": "conditional",
+  "cue": null,
+  "quality": null,
+  "inference_evidence": [
+    "Combine current allocation with calendar freeze to select technical mandate scope.",
+    "Combine replica count with recovery policy before the QA request."
+  ],
+  "candidate_pool_semantics": "relevant directory + configured task NPCs; other TAC accounts remain visible",
+  "profile_conditions": [
+    "R0",
+    "R1"
+  ],
+  "default_profile": "R1",
+  "hidden_information_ids": [
+    "H1",
+    "H2",
+    "H3"
+  ],
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "allocation",
+        "admissible_recipients": [
+          "Li Ming"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      },
+      {
+        "id": "readiness",
+        "admissible_recipients": [
+          "Liu Qiang"
+        ],
+        "information_ids": [
+          "H2"
+        ],
+        "requires": [
+          "allocation"
+        ]
+      },
+      {
+        "id": "mandate",
+        "admissible_recipients": [
+          "Sarah Johnson"
+        ],
+        "information_ids": [
+          "H3"
+        ],
+        "requires": [
+          "readiness"
+        ]
+      }
+    ],
+    "edges": [
+      [
+        "allocation",
+        "readiness"
+      ],
+      [
+        "readiness",
+        "mandate"
+      ]
+    ]
+  },
+  "services": [
+    "owncloud",
+    "rocketchat"
+  ],
+  "npc_backend": "official TAC Sotopia LLM NPC; not live-tested in this batch",
+  "runtime": {
+    "platform": "linux/amd64",
+    "tac_commit": "98b68ef82a47690c316f42fddb05baafaab56851",
+    "execution_target": "OpenHands CodeActAgent via TAC; integration not yet executed",
+    "model": null,
+    "model_calls": 0
+  },
+  "verification": {
+    "independent_task_evaluator": "not_created",
+    "human_review": "pending",
+    "live_npc_compliance": "not_tested",
+    "openhands_rollout": "not_run",
+    "deployment": {
+      "R0": {
+        "image": "tac-study21-m-high-service-cutover:v01-r0",
+        "image_id": "sha256:5b7bac0b207fe89c73c0e8e5b11a8839936ed88f1985eccac0a46fe9fa70ca35",
+        "build": "passed",
+        "owncloud_upload_and_exact_readback": "passed",
+        "workspace_writable": true,
+        "npc_scenario_parse": "passed",
+        "no_task_evaluator": true,
+        "npc_llm_response_test": "not_run",
+        "openhands_execution": "not_run"
+      },
+      "R1": {
+        "image": "tac-study21-m-high-service-cutover:v01-r1",
+        "image_id": "sha256:e122a61a77217352183facced2925c120e29c410e20ed40b0308705fa5b5c326",
+        "build": "passed",
+        "owncloud_upload_and_exact_readback": "passed",
+        "workspace_writable": true,
+        "npc_scenario_parse": "passed",
+        "no_task_evaluator": true,
+        "npc_llm_response_test": "not_run",
+        "openhands_execution": "not_run"
+      }
+    },
+    "package_checks": "passed"
+  },
+  "known_limitations": [
+    "Structural labels are design claims, not empirically calibrated difficulty.",
+    "LLM NPC prerequisite compliance needs live validation.",
+    "A single fixed instance is supplied; new seeds must materialize and freeze new instances.",
+    "Shared service reset/isolation is required before a model episode."
+  ]
+}

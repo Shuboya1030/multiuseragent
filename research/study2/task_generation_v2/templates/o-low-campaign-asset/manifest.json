@@ -1,0 +1,18 @@
+{
+  "blueprint.json": "42d321cea550e9a163aabc66dad911900a3d714293095fc72d30b4159685790d",
+  "metadata.json": "76ed4790c5970fefa8d6917366460e0e966a9f43222026216fe0db778ab0c91c",
+  "references/full_information.json": "f7fc8a9fc5f5e4a64f516c72bae5e946471a28883ddf423aa564927f68ef8a62",
+  "references/no_contact.json": "a23c200b3f4eb5ec1da589150287a81fb6f54aa0adfd32941b4f27817b0825c6",
+  "references/walkthrough.md": "469d3fb1baf5b6012c5dc5f28c051fbbbb195d11f4123d492ce5cfbaf61f5661",
+  "simulator/task.json": "fa81de891e2b6c3027703166d88a6c4f84c1e40247c9e546e2a203519fca476b",
+  "tac/Dockerfile": "d64aa63d43d8afe2b9b01adc0ff5be0ecbf444f42e1841491d489cd237b00975",
+  "tac/Makefile": "6027197f17fcb1ae4729cc81b24c5784e70ce80b34a05c09b83e89aa5cd8cae5",
+  "tac/dependencies.yml": "3b94c5ae09c47180ea7c256657fd7b1795d8bd7b6c6bf70fb4c10181d6175304",
+  "tac/documents_R0/brief.md": "2d5da2bdbe91ae833aa22d48bbd82477a672140c851fb9f9cd5392cfcab0eb3d",
+  "tac/documents_R0/directory.md": "4981beb2077feb1d8985bebaf88687516447e193acc9e0aeb92c939f8ba5edf8",
+  "tac/documents_R1/brief.md": "2d5da2bdbe91ae833aa22d48bbd82477a672140c851fb9f9cd5392cfcab0eb3d",
+  "tac/documents_R1/directory.md": "09647291237f8e57d99b98a1aa33ec1b0d21fd971b9b831b5ae7679b2bd83683",
+  "tac/populate_data.py": "b39ba84a12720b565bd8d4ed464868cc9ebd32bcf2c7ecfc83fbb7128943ff0c",
+  "tac/scenarios.json": "41b582189f4be4a2cc663132bded0d2029dbd5f18cb2ae9597d21f6829fc8046",
+  "tac/task.md": "b26a657fb8865a11735410c095c2516ea68464c060ee58845d50b738e8770e6b"
+}

@@ -1,0 +1,10 @@
+{
+  "mode": "standard-live",
+  "start_utc": "16:00",
+  "duration_minutes": 120,
+  "cohort_sizes": [
+    24
+  ],
+  "facilitator_count": 1,
+  "total_usd": 2400
+}

@@ -1,0 +1,47 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 323B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/tac-study21-ungraded-base:v1
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/7] FROM docker.io/library/tac-study21-ungraded-base:v1@sha256:e78bbdba708637f3c4433c56445925541e12bf2b44436cccdcec9aaf2161315a
+#4 resolve docker.io/library/tac-study21-ungraded-base:v1@sha256:e78bbdba708637f3c4433c56445925541e12bf2b44436cccdcec9aaf2161315a done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 2.76kB done
+#5 DONE 0.0s
+
+#6 [3/7] COPY scenarios.json /npc/scenarios.json
+#6 CACHED
+
+#7 [2/7] COPY task.md /instruction/task.md
+#7 CACHED
+
+#8 [4/7] COPY dependencies.yml /utils/dependencies.yml
+#8 CACHED
+
+#9 [5/7] COPY populate_data.py /utils/populate_data.py
+#9 CACHED
+
+#10 [6/7] COPY documents_R1/ /utils/task_documents/
+#10 DONE 0.0s
+
+#11 [7/7] WORKDIR /workspace
+#11 DONE 0.0s
+
+#12 exporting to image
+#12 exporting layers 0.0s done
+#12 exporting manifest sha256:ec2587025c23e46f8b9e88ff8122f0ad4fc985192a7cc7dd72b75f90eb30ec35 done
+#12 exporting config sha256:ec3b58d0ee42364b1b666f9d3e2cb10d544e20e51f76d63943e83df694ff803b done
+#12 exporting attestation manifest sha256:e3dc40114b50407f1f5d121970103b2b63f22dd1a00534eb7945c8b8ee591705 done
+#12 exporting manifest list sha256:4ee0576f5d0de3ec8bc8169ac88350617c49447e679e7dcdbf0642f6fa55a549 done
+#12 naming to docker.io/library/tac-study21-m-medium-research-purchase:v01-r1 done
+#12 DONE 0.1s

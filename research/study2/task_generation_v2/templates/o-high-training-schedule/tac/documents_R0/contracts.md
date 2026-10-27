@@ -1,0 +1,1 @@
+Supplier account NIM-TR maps to contract owner group PEOPLE. Group CUSTOMER owns client-event arrangements; group PEOPLE owns employee development arrangements. Current entitlement schedules are held by the group custodian.

@@ -1,0 +1,164 @@
+{
+  "task_id": "o-high-training-schedule",
+  "help_class": "Optional-help",
+  "target_level": "High",
+  "N": 16,
+  "feature_scores": [
+    2,
+    2,
+    2,
+    2
+  ],
+  "domain": "staff-development",
+  "prompt": "Prepare the Nimbus training schedule and cost plan for 2026-11-12. Save /workspace/deliverable.json with mode, start_utc, duration_minutes, cohort_sizes, facilitator_count and total_usd. Post its path and a brief scheduling summary in #engineering.",
+  "documents": {
+    "roster.md": "Nimbus: 24 employees in two cohorts of 12. All can attend 16:00-18:00 UTC. The team-wide focused-work block is 17:00-18:00 UTC. Training may overlap it, but minutes of overlap are a disruption cost.",
+    "catalog.md": "The licensed standard live course runs 120 minutes, USD 2400 total, one facilitator for all 24 participants; start 16:00 UTC. It meets all mandatory learning outcomes. The training supplier also supports company-wide arrangements renewed per year.",
+    "contracts.md": "Supplier account NIM-TR maps to contract owner group PEOPLE. Group CUSTOMER owns client-event arrangements; group PEOPLE owns employee development arrangements. Current entitlement schedules are held by the group custodian.",
+    "organization-policy.md": "For PEOPLE agreements, the HR Manager is custodian. For CUSTOMER agreements, the Sales Director is custodian. Groups are contract ownership units rather than the participants’ project teams."
+  },
+  "hidden_information": [
+    {
+      "id": "H1",
+      "holder": "Chen Xinyi",
+      "facts": {
+        "mode": "parallel-clinic",
+        "duration_minutes": 60,
+        "maximum_per_cohort": 12,
+        "price_per_cohort_usd": 800,
+        "facilitators_per_cohort": 1,
+        "eligibility": "NIM-TR employee training",
+        "learning_outcomes": "same mandatory outcomes as standard course"
+      },
+      "required_context": [
+        "NIM-TR",
+        "24"
+      ],
+      "release_rule": "Provide the current alternative entitlement and its constraints when the contract and headcount are supplied. The standard course remains valid. Do not design the schedule for the requester."
+    }
+  ],
+  "no_contact_reference": {
+    "mode": "standard-live",
+    "start_utc": "16:00",
+    "duration_minutes": 120,
+    "cohort_sizes": [
+      24
+    ],
+    "facilitator_count": 1,
+    "total_usd": 2400
+  },
+  "full_information_reference": {
+    "mode": "parallel-clinic",
+    "start_utc": "16:00",
+    "duration_minutes": 60,
+    "cohort_sizes": [
+      12,
+      12
+    ],
+    "facilitator_count": 2,
+    "total_usd": 1600
+  },
+  "classification_rationale": "V supplies a feasible course; H enables consistent changes to format, timing, cohorts, staffing and cost, reducing focused-work overlap and spend.",
+  "cue": {
+    "documents": [
+      "roster.md",
+      "catalog.md"
+    ],
+    "description": "Combine focused-work overlap with renewable company arrangements to identify a reason for exploring an alternative."
+  },
+  "quality": {
+    "dimensions": [
+      "focused_work_overlap_minutes_per_attendee",
+      "total_usd"
+    ],
+    "baseline": [
+      60,
+      2400
+    ],
+    "full_information": [
+      0,
+      1600
+    ],
+    "minimum_improvement": [
+      60,
+      800
+    ],
+    "constraints": [
+      "24 staff served",
+      "same learning outcomes",
+      "cohort cap12 for clinic",
+      "one facilitator per clinic cohort"
+    ]
+  },
+  "inference_evidence": [
+    "Look up NIM-TR contract ownership group.",
+    "Resolve PEOPLE custodian through organization policy."
+  ],
+  "version": "0.1.0",
+  "instance_seed": 2026102705,
+  "candidate_pool": [
+    "Huang Jie",
+    "Chen Xinyi",
+    "Mark Johnson",
+    "Zhang Wei",
+    "David Wong",
+    "Emily Zhou",
+    "Li Ming",
+    "Wang Fang",
+    "Emma Lewis",
+    "Alex Turner",
+    "Jessica Lee",
+    "Priya Sharma",
+    "Liu Qiang",
+    "Mike Chen",
+    "Sophia Rodriguez",
+    "Sarah Johnson"
+  ],
+  "workflow_id": "training-schedule",
+  "workflow_pair_id": null,
+  "pairing_note": "Six distinct representative workflows; natural paired variants deferred.",
+  "source_spec": {
+    "commit": "5357f3629d97891b30038a59c367ab278f206b90",
+    "path": "12_Study2_Task_Redesign_20261026-1923.md",
+    "section": "13"
+  },
+  "information_boundary": "Only documents and task text are public; blueprint, references and scenarios are experimenter/NPC-private.",
+  "runtime_classification_status": "design_proposed_not_evaluator_validated",
+  "public_packet_path": "Documents/Study21V2/o-high-training-schedule",
+  "output_contract": {
+    "path": "/workspace/deliverable.json",
+    "format": "JSON",
+    "fields": {
+      "mode": "str",
+      "start_utc": "str",
+      "duration_minutes": "int",
+      "cohort_sizes": "list",
+      "facilitator_count": "int",
+      "total_usd": "int"
+    },
+    "equivalences": [
+      "Numeric values may be represented with equivalent decimal precision.",
+      "JSON object key order is immaterial.",
+      "UTC times use HH:MM.",
+      "IDs are stable identifiers, not arbitrary paraphrases."
+    ],
+    "grading_implemented": false
+  },
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "entitlement",
+        "admissible_recipients": [
+          "Chen Xinyi"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      }
+    ],
+    "edges": []
+  },
+  "dependency_depth": 1,
+  "difficulty_score": 8
+}

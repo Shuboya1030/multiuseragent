@@ -1,0 +1,1 @@
+The licensed standard live course runs 120 minutes, USD 2400 total, one facilitator for all 24 participants; start 16:00 UTC. It meets all mandatory learning outcomes. The training supplier also supports company-wide arrangements renewed per year.
