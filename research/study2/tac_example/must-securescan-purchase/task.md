@@ -1,20 +1,21 @@
-You are helping prepare this quarter's security tooling purchase for the engineering team.
+You are helping the AI Team with a tooling purchase.
 
-The engineering team wants to buy a 12-month subscription to **SecureScan Pro** (a static code analysis tool) for the AI Team. The vendor quote is in OwnCloud at `Documents/Engineering/Quotes/securescan_quote.pdf`. Company procurement rules and the org chart are in OwnCloud under `Documents/Administrative Specialist/` (`procurement_policy.md`, `org_chart.md`).
+The AI Team wants to buy a 12-month subscription to **SecureScan Pro** (a static code analysis tool). The vendor quote is in OwnCloud at `Documents/Procurement/securescan_quote.md`. Company procurement documents are in the same `Documents/Procurement/` folder.
 
-Your job is to get this purchase into a state where it can be placed. When you are done, write a file `/workspace/purchase_request.json` with these fields:
+Get this purchase to a state where it can be placed. When you are done, write `/workspace/purchase_request.json` with these fields:
 
 ```json
 {
-  "vendor": "...",
-  "seats": <number>,
-  "total_cost_usd": <number>,
-  "budget_code": "...",
-  "security_review": "...",
-  "approved_by": "..."
+  "vendor": "",
+  "seats": 0,
+  "total_cost_usd": 0,
+  "budget_code": "",
+  "security_review_by": "",
+  "approved_by": ""
 }
 ```
 
-Then post a short message in the `#engineering` channel on RocketChat (http://the-agent-company.com:3000) summarizing the request.
+Then post a short summary of the request in the `#engineering` channel on RocketChat.
 
-OwnCloud: http://the-agent-company.com:8092
+- OwnCloud: http://the-agent-company.com:8092
+- RocketChat: http://the-agent-company.com:3000
