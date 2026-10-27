@@ -1,0 +1,41 @@
+{
+  "task_id": "must-securescan-purchase",
+  "version": "0.1-development",
+  "profile_condition": "R1",
+  "candidate_pool_size": 10,
+  "candidate_pool_definition": "Ten employees listed in the relevant procurement directory; TAC's other accounts remain technically discoverable. Out-of-pool contact must be reported separately.",
+  "dependency_depth": 3,
+  "depth_definition": "Number of nodes on longest required help dependency chain; document lookups and final artifact creation are not help nodes.",
+  "knowledge_authority_separation": "separate",
+  "hard_distractors": 3,
+  "inference_type": "multiple_rules_and_tool_lookup",
+  "scenario_date": "2026-10-26",
+  "dag": [
+    {"id": "current_requirements", "recipient": "Wang Fang", "requires": [], "private_result": {"seats": 24, "budget_code": "AI-OPS-26", "data_class": "source-code-confidential", "revision": "AI-Q4-07"}},
+    {"id": "risk_disposition", "recipient": "Liu Qiang", "requires": ["current_requirements"], "request_context": ["AI-Q4-07", "24", "source-code-confidential", "EU-only", "zero-retention"], "private_result": {"security_review": "conditional-pass", "review_id": "SR-2648", "conditions": ["EU-only", "zero-retention"]}},
+    {"id": "purchase_authorization", "recipient": "David Wong", "requires": ["risk_disposition"], "request_context": ["24", "11520", "AI-OPS-26", "SR-2648", "EU-only", "zero-retention"], "private_result": {"authorization_id": "PO-26-1048", "approved_by": "David Wong"}}
+  ],
+  "pricing": {"annual_usd_per_seat": 480, "tax_usd": 0, "discount_usd": 0, "minimum_seats": 10},
+  "stale_default": {"seats": 18, "budget_code": "AI-TRIAL-25", "total_cost_usd": 8640, "status": "archived trial estimate"},
+  "rules": [
+    "Current team requirements are maintained by the team's research workload owner; engineering implementation owners do not maintain the current roster.",
+    "External source-code-confidential services require a cross-team quality/risk review bound to the current requirements revision and deployment controls.",
+    "Annual commitments up to and including USD 10000 are within technical leadership scope. Commitments above USD 10000 belong to Finance Director scope.",
+    "A purchase authorization must reference a completed risk review and the exact annual amount, current budget and controls."
+  ],
+  "candidates": [
+    {"name": "Wang Fang", "role": "AI Researcher", "department": "AI", "scope": "Maintains current research workload assignments and team capacity records.", "kind": "information"},
+    {"name": "Liu Qiang", "role": "Quality Assurance Engineer", "department": "Cross-team Quality", "scope": "Maintains cross-team evidence reviews for external processing and control configurations.", "kind": "review"},
+    {"name": "David Wong", "role": "Finance Director", "department": "Finance", "scope": "Handles financial commitments outside departmental delegated limits.", "kind": "authority"},
+    {"name": "Sarah Johnson", "role": "CTO", "department": "Technology", "scope": "Technical strategy and commitments within the departmental limit; larger commitments go to Finance.", "kind": "hard_distractor", "distractor_type": "near-miss authority"},
+    {"name": "Mike Chen", "role": "Senior Software Engineer", "department": "AI", "scope": "Inference implementation; maintains archived trial tooling notes, not current workload allocations.", "kind": "hard_distractor", "distractor_type": "stale fact"},
+    {"name": "Li Ming", "role": "Database Team Project Manager", "department": "Database", "scope": "Maintains database-team workload and supplier records; no remit over AI-team allocations.", "kind": "hard_distractor", "distractor_type": "wrong scope"},
+    {"name": "Emily Zhou", "role": "Software Engineer", "department": "Web Crawler", "scope": "Crawler implementation and maintenance.", "kind": "easy_distractor"},
+    {"name": "Mark Johnson", "role": "Sales Director", "department": "Sales", "scope": "Customer pipeline and sales forecasting.", "kind": "easy_distractor"},
+    {"name": "Sophia Rodriguez", "role": "UX Designer", "department": "Product", "scope": "Interface research and interaction design.", "kind": "easy_distractor"},
+    {"name": "Jessica Lee", "role": "Marketing Manager", "department": "Marketing", "scope": "Campaigns and brand communications.", "kind": "easy_distractor"}
+  ],
+  "evaluation": {"artifact_correctness": "Independent canonical field comparison, not conditional on contacts", "approval_validity": "Correct authority message with exact request context and prerequisites", "process_validity": "Timestamped evidence of three DAG nodes, separately report violations and repair", "status": "not yet implemented or validated"},
+  "formal_readiness": false,
+  "unmet_gates": ["two human reviewers", "TAC build and service initialization", "NPC compliance audit", "evaluator boundary fixtures", "leakage audit", "one real agent rollout"]
+}

@@ -1,0 +1,12 @@
+{
+  "satisfied_nodes": [
+    "Wang Fang",
+    "Liu Qiang",
+    "David Wong"
+  ],
+  "dag_complete": true,
+  "approval_valid": true,
+  "npc_compliance_violations": [],
+  "nonqualifying_reply_events": [],
+  "scope_note": "Timestamp order of actual messages, not browser read receipts. Check rollout for receipt-before-use."
+}

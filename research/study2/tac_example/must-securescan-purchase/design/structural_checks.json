@@ -1,0 +1,26 @@
+{
+  "checks": {
+    "ten_candidates": true,
+    "all_existing_tac_npcs": true,
+    "three_hard_distractors": true,
+    "depth_three": true,
+    "distinct_step_owners": true,
+    "threshold_crossing": true,
+    "no_new_api_runs": true
+  },
+  "not_verified": [
+    "TAC image build",
+    "live NPC compliance",
+    "evaluator correctness",
+    "two human reviewers",
+    "real rollout"
+  ],
+  "difficulty_score": 9,
+  "difficulty_components": [
+    2,
+    2,
+    1,
+    2,
+    2
+  ]
+}

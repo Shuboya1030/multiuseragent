@@ -1,0 +1,41 @@
+{
+  "input_hashes_verified": 21,
+  "agent_calls": 14,
+  "npc_calls": 3,
+  "agent_known_input_tokens": 58208,
+  "agent_known_output_tokens": 1886,
+  "npc_known_input_tokens": 4155,
+  "npc_known_output_tokens": 1229,
+  "estimated_cost_usd": 0.0077938,
+  "elapsed_seconds_agent": 28.854893922805786,
+  "cost_is_invoice": false,
+  "read_before_next_dependency_verified": true,
+  "reply_ids_match_real_server_history": true,
+  "outside_directory_contacts": 0,
+  "retries_by_examinee": 0,
+  "raw_tac_score": {
+    "total": 3,
+    "result": 2
+  },
+  "posthoc_format_diagnosis": {
+    "frozen_artifact_checkpoint": 0,
+    "difference": {
+      "field": "controls",
+      "actual": [
+        "EU-only processing",
+        "zero-retention"
+      ],
+      "expected": [
+        "EU-only",
+        "zero-retention"
+      ]
+    },
+    "posthoc_equivalence_rule": "EU-only processing -> EU-only (only this explicit synonym)",
+    "posthoc_canonical_match": true,
+    "original_scores_modified": false,
+    "interpretation": "Business content matches after this explicit synonym normalization; not a pre-run scoring rule."
+  },
+  "NPC_compliance_scope": "Only three successful-path exchanges observed; rejection/repair behavior remains untested.",
+  "not_OpenHands_browser_baseline": true,
+  "formal_R1_ready": false
+}

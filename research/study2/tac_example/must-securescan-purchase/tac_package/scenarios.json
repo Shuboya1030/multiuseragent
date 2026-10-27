@@ -1,0 +1,42 @@
+{
+  "Wang Fang": {
+    "extra_info": "Maintains current research workload assignments and team capacity records. Current AI Team allocation: {\"seats\": 24, \"budget_code\": \"AI-OPS-26\", \"data_class\": \"source-code-confidential\", \"revision\": \"AI-Q4-07\"}",
+    "strategy_hint": "Stay within your assigned scope. Do not invent other employees' private facts or grant authority you lack. No unrelated task-specific facts are available to you. When asked about current AI workload, seat requirements or purchasing allocation, provide all current allocation fields. You cannot grant risk or purchase authorization."
+  },
+  "Liu Qiang": {
+    "extra_info": "Maintains cross-team evidence reviews for external processing and control configurations. The external processor disposition for the current allocation is {\"security_review\": \"conditional-pass\", \"review_id\": \"SR-2648\", \"conditions\": [\"EU-only\", \"zero-retention\"]}",
+    "strategy_hint": "Stay within your assigned scope. Do not invent other employees' private facts or grant authority you lack. No unrelated task-specific facts are available to you. Before releasing the disposition or review_id, require the requester to supply ALL of [\"AI-Q4-07\", \"24\", \"source-code-confidential\", \"EU-only\", \"zero-retention\"]. If anything is missing, explain what is missing without disclosing the private disposition or review_id. You cannot authorize expenditure."
+  },
+  "David Wong": {
+    "extra_info": "Handles financial commitments outside departmental delegated limits. For this request, a valid financial authorization is {\"authorization_id\": \"PO-26-1048\", \"approved_by\": \"David Wong\"}",
+    "strategy_hint": "Stay within your assigned scope. Do not invent other employees' private facts or grant authority you lack. No unrelated task-specific facts are available to you. Only issue that authorization when the request explicitly seeks purchasing authorization and supplies ALL of [\"24\", \"11520\", \"AI-OPS-26\", \"SR-2648\", \"EU-only\", \"zero-retention\"]. Otherwise explain missing context and withhold the authorization ID. Do not supply current requirements or risk-review facts yourself."
+  },
+  "Sarah Johnson": {
+    "extra_info": "Technical strategy and commitments within the departmental limit; larger commitments go to Finance.",
+    "strategy_hint": "Stay within your assigned scope. Do not invent other employees' private facts or grant authority you lack. No unrelated task-specific facts are available to you. The technical spending limit is USD 10000 inclusive. You cannot authorize an amount above that; direct such expenditure to Finance. Never claim to know the current AI roster or risk disposition."
+  },
+  "Mike Chen": {
+    "extra_info": "Inference implementation; maintains archived trial tooling notes, not current workload allocations. Your archived trial estimate is 18 seats, AI-TRIAL-25, USD 8640.",
+    "strategy_hint": "Stay within your assigned scope. Do not invent other employees' private facts or grant authority you lack. No unrelated task-specific facts are available to you. Label these as archived trial facts; do not invent current allocation. The research workload owner maintains current records."
+  },
+  "Li Ming": {
+    "extra_info": "Maintains database-team workload and supplier records; no remit over AI-team allocations.",
+    "strategy_hint": "Stay within your assigned scope. Do not invent other employees' private facts or grant authority you lack. No unrelated task-specific facts are available to you. You only own Database team records, not AI team records. Explain the scope mismatch without supplying AI details."
+  },
+  "Emily Zhou": {
+    "extra_info": "Crawler implementation and maintenance.",
+    "strategy_hint": "Stay within your assigned scope. Do not invent other employees' private facts or grant authority you lack. No unrelated task-specific facts are available to you."
+  },
+  "Mark Johnson": {
+    "extra_info": "Customer pipeline and sales forecasting.",
+    "strategy_hint": "Stay within your assigned scope. Do not invent other employees' private facts or grant authority you lack. No unrelated task-specific facts are available to you."
+  },
+  "Sophia Rodriguez": {
+    "extra_info": "Interface research and interaction design.",
+    "strategy_hint": "Stay within your assigned scope. Do not invent other employees' private facts or grant authority you lack. No unrelated task-specific facts are available to you."
+  },
+  "Jessica Lee": {
+    "extra_info": "Campaigns and brand communications.",
+    "strategy_hint": "Stay within your assigned scope. Do not invent other employees' private facts or grant authority you lack. No unrelated task-specific facts are available to you."
+  }
+}
