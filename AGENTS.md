@@ -43,3 +43,26 @@
 | **Study 2 task redesign (LIVING doc)** | 12_Study2_Task_Redesign_<YYYYMMDD-HHMM>.md | update on every discussion; rename timestamp on edit; decision + change log at bottom |
 | Tenured-only advisor lists (filter added 2026-10-26: Assoc/Full Prof only) | research/uoft_tenured.md, research/ubc_tenured.md | ranks partly from search snippets; re-verify profile before emailing |
 | **Paper 0 AAAI skeleton (LIVING doc)** | 13_Paper0_AAAI_Skeleton_<YYYYMMDD-HHMM>.md | structure + analysis plan; experiment agent fills [RESULT] slots; this session owns writing/architecture |
+
+## Working rules (user instructions)
+- **Do NOT commit/push to GitHub unless the user explicitly asks** (2026-10-26). Keep changes local until told to check in.
+- Docker CLI on this machine: `C:/Users/shuyazong/AppData/Local/Programs/DockerDesktop/resources/bin/docker.exe` (not on PATH; prepend to PATH in each shell).
+- **Network restriction (company policy, 2026-10-26): do NOT access pypi.org / files.pythonhosted.org.** Use the company pip mirror only; ask before any external package download.
+
+
+## Advisor preferences & shortlist (updated 2026-10-26)
+**User preferences**
+- Only tenured advisors (Associate/Full Prof); exclude Assistant Profs & teaching-stream — believes senior profs mean less student pressure.
+- Wants agentic / LLM-agent / human-AI focus; rejected Donmez (UofT MIE) as too transportation/driving-focused.
+- Must keep Microsoft full-time job; scope UBC + UofT (Waterloo deprioritized for now).
+
+**Ranked shortlist (user's choice)**
+1. **Scott Sanner** — Professor, UofT MIE Industrial Eng (x-appt CS, Vector). LLM conversational recommenders (LLM-ConvRec), verifiable LLM reasoning (LLM-TRes), agentic planning. MIE flex PhD = allowed. Email ssanner@mie.utoronto.ca; lab https://d3m.mie.utoronto.ca/ (no prospective-student instructions, recruiting status unknown). Draft outreach email written 2026-10-26 (not yet sent); user nervous about first email.
+2. **Eric Baumer** — Assoc Prof, UofT iSchool (since Jul 2025; tenured at Lehigh). Human interaction with AI / NL tech, sociocultural. iSchool flex = allowed. https://ericbaumer.com/
+3. **Ashton Anderson** — Assoc Prof, UofT CS (UTSC). Over-reliance on LLM advice (CHI'25), LLM sycophancy (CHI'26), ChatBench human-AI eval (ACL'25). CS no flex → co-supervisor only.
+- Backups: Ishtiaque Ahmed (Assoc, CS x-appt iSchool, responsible AI); Sheila McIlraith (Prof, CS; agents/instructions; committee). UBC path: MERM (Zumbo/Wu) or HDLC (Shapka) primary + Conati/Yoon (CS) co-supervision, needs program approval.
+- Excluded: Kuzminykh, Ferguson (Assistant); Donmez (topic); Chignell (deceased); J.J. Williams (moved).
+
+**Open questions**: Can MIE/iSchool flex students have CS co-supervisor? Fall 2027 recruiting? On-campus expectations for Vancouver-based student? IRCC/work-permit vs full-time registration.
+
+**Contacted (informational)**: Michael Glueck (Autodesk Research; did UofT CS PhD while employed) — message drafted 2026-10-23.

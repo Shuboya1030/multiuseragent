@@ -5,6 +5,8 @@
 > Sources reviewed: `research/study2/derived/study2_v04_analysis.md`, `research/study2/study2_1_taskset/` (R1 analysis report, R0 formal run), `task_blueprints_v0.4.jsonl`.
 > Statements marked "hypothesis" or "estimate" are not verified.
 
+> **⚠ Revision 2026-10-26 (supersedes conflicting parts of §3, §4, §10, §12):** the task set now has **two classes only — Must-help and Optional-help, 30 templates each (60 total)**. The No-help class is dropped. "Hard distractors" is no longer a scored difficulty feature. The authoritative spec is **§13 (task set)** and **§14 (Task Evaluator)**. Earlier sections are kept for history.
+
 ---
 
 ## 1. Diagnosis of current problems (evidence)
@@ -346,6 +348,170 @@ For each help-seeking event and each episode, label:
 
 ---
 
+## 12. How help-need classes are built in at design time
+
+The class (must / optional / no-help) is a **property of the task's information structure and evaluator**, fixed before any agent runs. It is verified with two scripted reference solutions, not with agent results.
+
+### 12.1 Information split
+- **V (visible):** everything the agent can get without asking anyone (task text, OwnCloud files, tool outputs).
+- **H (held by colleagues):** facts, rules, or approvals that only specific NPCs provide.
+- **Evaluator = base checks + quality checks.** Base checks define a valid deliverable; quality checks score extra, objectively measurable improvements.
+
+| Class | Base checks need H? | Quality checks need H? | Design rule |
+|---|---|---|---|
+| **Must ask** | **Yes** | — | At least one base-check field or approval exists only in H. V contains a plausible-but-wrong default (stale value, closed code) so not asking produces a silent failure, not an obvious gap |
+| **Optional** | **No** | **Yes** | V is sufficient for a valid baseline. H holds one extra fact that improves a scored dimension (accuracy, risk, cost, completeness). Not asking still passes base checks |
+| **No-help** | No | No | Everything needed is in V or derivable with tools. NPCs hold nothing that changes the score. May include a temptation (a field marked "confirm with finance") that a tool or document already resolves |
+
+### 12.2 Design-time verification: two reference solutions
+For each task, write two deterministic reference solutions (scripts or human walkthroughs) and run both through the evaluator:
+1. **No-contact reference:** best possible output using V only.
+2. **Full-information reference:** output using V + H.
+
+| Class | No-contact reference | Full-information reference |
+|---|---|---|
+| Must ask | Base checks **fail** | Base checks pass |
+| Optional | Base checks **pass**, quality score = 0 (or low) | Base checks pass, quality score **higher** |
+| No-help | Base checks pass, quality score = maximum | Same as no-contact (H adds nothing) |
+
+A task gets its class label only if both references produce the pattern above. This is the acceptance gate for B2/B3/B6 in §10.4 and does not depend on how any model behaves.
+
+### 12.3 Rules for a good optional task
+1. **The improvement must be measurable by rules, not keywords.** Score a consequence, e.g., number of schedule conflicts with a regional holiday, whether a cheaper eligible license tier was used, whether a known risk is mitigated in the plan. Avoid scoring by matching specific phrases in free text.
+2. **There must be a discoverable cue in V.** A careful worker would notice a reason to check (e.g., the event is in a region whose holiday calendar is not in the packet; the quote mentions "volume discount available, contact account owner"). Without a cue, asking is random rather than a judgment.
+3. **The task text must not hint.** No "you may add information", "consider asking", or "no X is required" phrases (Study 2.1's optional tasks contain such hints; remove them).
+4. **The benefit must be realistic.** It should be something a real employee would plausibly check with a colleague, and the colleague who holds it should be inferable from roles, as in must-ask tasks.
+5. **Report the trade-off.** Asking has interruption cost; the paper reports quality gain vs. contact cost per agent, not a single "correct" choice.
+
+### 12.4 Example: one workflow, three classes (SecureScan purchase)
+| Class | Variant | V | H | Base / quality |
+|---|---|---|---|---|
+| Must ask | 12 seats, USD 14,400, tool uploads code | Quote, policy, org chart | Current budget code (Wang Fang), review (Emma Lewis), approval (Chen Xinyi) | Base needs all three |
+| Optional | 6 seats, USD 7,200, CTO may approve per policy; quote notes "team-plan pricing may apply, ask your account owner" | Quote, policy, org chart, CTO approval rule | Wang Fang knows the company already has a team plan → USD 5,400 | Base: valid request at 7,200. Quality: total cost uses the team plan |
+| No-help | Same as optional, but the team-plan price is already listed in an OwnCloud pricing sheet | Everything incl. pricing sheet | Nothing additional | Base and quality both from V |
+
+
+---
+
+## 13. Task set specification (two classes, 60 templates) — authoritative
+
+### 13.1 Classes
+| Class | Definition (design-time) | Base checks | Quality checks |
+|---|---|---|---|
+| **Must-help (M)** | At least one base-check field or required approval exists **only** with a colleague (H) | Need H | Optional extras allowed but not required |
+| **Optional-help (O)** | All base-check fields are obtainable from visible information (V); a colleague holds an extra fact that improves a rule-scored quality dimension | Need only V | Need H for the quality gain |
+
+The No-help class is dropped. Over-asking is still observable in O tasks (asking people who hold nothing useful, or asking when the expected gain is small) and is reported descriptively, not as an error class.
+
+### 13.2 Difficulty features (hard distractors removed)
+Every candidate pool still contains people who hold nothing relevant (N > number of needed people), but distractor *hardness* is no longer scored.
+
+**Must-help (4 features, 0–2 each, D_M ∈ [0, 8])**
+| Feature | 0 | 1 | 2 |
+|---|---|---|---|
+| Candidate pool N | ≤ 4 | 5–8 | 9–16 |
+| Dependency depth d (longest chain in gold DAG) | 1 | 2 | ≥ 3 |
+| Knowledge–authority separation | Same person | Different people | Different people + delegation or conditional approval |
+| Inference type (identifying the right person) | Title/responsibility states it | One rule or one lookup | Multiple rules or ≥ 2 lookups |
+
+**Optional-help (4 features, 0–2 each, D_O ∈ [0, 8])**
+| Feature | 0 | 1 | 2 |
+|---|---|---|---|
+| Candidate pool N | ≤ 4 | 5–8 | 9–16 |
+| Cue salience (how visible the reason to ask is in V) | Explicit cue (e.g., "pricing may differ, check with account owner") | Implicit cue requiring one inference (e.g., event region has no holiday calendar in the packet) | Cue only emerges after combining two pieces of V |
+| Holder inference (identifying who holds the improvement) | Title/responsibility states it | One rule or one lookup | Multiple rules or ≥ 2 lookups |
+| Integration effort (using the reply) | Copy one value | Recompute one field | Revise several fields consistently |
+
+**Levels (both classes):** Low D ≤ 2; Medium 3 ≤ D ≤ 5; High D ≥ 6, and for M-High at least one of N ≥ 9 or d ≥ 3.
+
+### 13.3 Target distribution (60 templates)
+| Class | Low | Medium | High | Total |
+|---|---:|---:|---:|---:|
+| Must-help | 8 | 12 | 10 | **30** |
+| Optional-help | 8 | 12 | 10 | **30** |
+| **Total** | 16 | 24 | 20 | **60** |
+
+Coverage requirements:
+- M-High: ≥ 5 with N ≥ 9 and ≥ 5 with d ≥ 3.
+- M: each dependency structure (info→approval / referral chain / parallel+join / delegation / conditional) appears ≥ 4 times.
+- ≥ 6 business domains per class; aligned vs separated in M each 40–60%.
+- N levels {4, 8, 16} each used by ≥ 8 templates per class (supports the scale analysis).
+- Each M template is paired with an O template from the same workflow where natural (as in §12.4), to allow within-workflow comparison.
+
+### 13.4 Design rules (carried over)
+- M: V contains a plausible-but-wrong default (stale value, closed code, outdated owner) so not asking yields a silent failure.
+- O: V contains a discoverable cue; the quality gain is scored by rules on outcomes (e.g., conflicts, cost, risk mitigations), not by keyword matching.
+- Both: task text contains no hints about asking, verifying, approval, or who to contact; profiles do not repeat the task's key phrases verbatim (§10.4 B1, relaxed overlap check).
+- Both: runnable in TAC (§11.4 checklist) and in the text simulator from one blueprint.
+
+---
+
+## 14. Task Evaluator (quality gate for each task and for the set)
+
+### 14.1 Purpose
+Decide, before any experiment, whether each generated task is (a) **complex and well-formed enough** to use, and (b) **correctly classified** as Must-help or Optional-help. It never runs the models under test.
+
+### 14.2 Inputs and outputs
+- **Input:** one task blueprint (single source of truth) + the generated simulator package and TAC package.
+- **Output per task:** `task_eval.json` with each check's value, pass/fail, computed difficulty D, level, and a final verdict `ACCEPT / REVISE / REJECT`.
+- **Output per set:** `set_eval.md` with the distribution table vs §13.3 targets and the list of failing tasks.
+
+### 14.3 Checks
+
+**A. Well-formedness (automatic, must all pass)**
+| # | Check | Method |
+|---|---|---|
+| A1 | Required fields present (V, H, gold DAG, admissible recipients per step, base/quality checks, cue for O) | Schema validation |
+| A2 | Both packages build | Simulator loader runs; TAC `Dockerfile` builds, `evaluator.py` imports |
+| A3 | TAC compatibility | §11.4 checklist: only the 17 existing NPCs, services ∈ {rocketchat, owncloud, gitlab, plane}, order checks use timestamps |
+| A4 | Unique gold | Base-check answer is unique or the equivalence class is listed; evaluator unit tests for format variants pass |
+
+**B. Classification correctness (automatic, reference solutions)**
+| # | Check | Must-help passes if | Optional-help passes if |
+|---|---|---|---|
+| B1 | No-contact reference (V only, best effort) | Base checks **fail** | Base checks **pass** |
+| B2 | Full-information reference (V + H, gold path) | Base checks pass | Base pass and quality score **> no-contact quality score** by ≥ a preset margin |
+| B3 | Necessity ablation: remove each H item from the full reference | Base checks fail for every *required* H item (no decorative requirements) | Quality gain disappears when the improvement item is removed |
+| B4 | Silent-failure trap (M) / cue presence (O) | No-contact output is plausible (schema-valid, non-empty) but wrong | An LLM judge, given only V, answers "is there a reason a careful employee would check with someone?" → yes, and cites the cue |
+
+The class label is accepted only if B1–B4 match the label.
+
+**C. Complexity verification (automatic + LLM judge)**
+| # | Check | Method |
+|---|---|---|
+| C1 | Recompute features from the blueprint, not from the author's claim | N = contactable people listed; d = longest path in gold DAG; separation from holders of info vs authority; inference type from the number of rules/lookups on the gold path |
+| C2 | Inference type is real | A **title-only resolver** (script that picks the person whose title best matches the needed role) must fail for inference ≥ 1. For inference = 2, an LLM judge confirms that ≥ 2 documents/rules must be combined |
+| C3 | Wording overlap | Gold-profile vs task-text overlap not much higher than the most similar other profile (§10.4 B1) |
+| C4 | No hints | Task text scan for "ask / verify / confirm / approve / check with / do not guess / you may contact" → 0 hits |
+| C5 | Difficulty label | Computed D and level match the target slot assigned in the distribution |
+
+**D. Realism (LLM judge + human sample)**
+| # | Check | Method |
+|---|---|---|
+| D1 | Workflow realism | LLM judge rubric (1–5): plausible workplace process, plausible roles and rules, coherent with the shared org chart; ≥ 4 required |
+| D2 | Human spot check | Two reviewers rate a random 20% of tasks (and every task the judge scores ≤ 3); disagreements resolved by discussion |
+| D3 | Org consistency | Roles, reporting lines, and authority rules match the shared org chart across all tasks (automatic cross-check) |
+
+**E. Set-level checks**
+| # | Check | Target |
+|---|---|---|
+| E1 | Class × level counts | §13.3 table (±1 per cell) |
+| E2 | Coverage | §13.3 coverage requirements |
+| E3 | Near-duplicates | No two templates with the same workflow + same gold path (embedding or rule-based similarity) |
+
+### 14.4 Verdict rules
+- **ACCEPT:** A, B, C all pass; D1 ≥ 4 (and D2 if sampled).
+- **REVISE:** any C or D failure, or B4 failure → returned to the task generator with the failing check and reason.
+- **REJECT:** A or B1–B3 failure that cannot be fixed without changing the class.
+
+### 14.5 Implementation notes
+- The reference solutions and ablations run in the **text simulator** (deterministic NPC rules), so the evaluator is cheap and repeatable; TAC is used only for A2/A3 build checks and for a final subset run.
+- The LLM judge uses a fixed low-cost model and fixed prompts, logged with version; it is **different from the models under test**, and its role is limited to C2 (inference ≥ 2), B4 (cue presence), and D1 (realism).
+- The Task Evaluator's own correctness is tested on a small set of deliberately broken tasks (mislabeled class, leaked answer, hinting text, fake dependency) that it must flag.
+
+
+---
+
 ## 8. Decision log
 
 | Date | Decision | Status |
@@ -354,6 +520,7 @@ For each help-seeking event and each episode, label:
 | 2026-10-26 | Add candidate scale N and order/dependencies as core manipulations | User proposed; included |
 | 2026-10-26 | Redesigned tasks must run in the TAC framework; adopt dual-track (text simulator for development + TAC for validation); N ≤ 17 | User requested; included in §11 |
 | — | Whether the search-tool presentation enters the main experiment | **Pending** (TAC has no directory search tool; could use OwnCloud documents or channel member lists instead) |
+| 2026-10-26 | Two classes only (Must-help, Optional-help), 30 templates each; No-help dropped; hard distractors removed as a difficulty feature; add a Task Evaluator gate (§13–§14) | User decision |
 | 2026-10-26 | Do not design toward expected results; no success-rate targets. Aim for complex, realistic tasks; difficulty is defined structurally | User decision |
 | 2026-10-26 | Reuse TAC's 17 roles as the organization; N levels {4, 8, 16} | Includes TAC constraints; N=32 dropped |
 | 2026-10-26 | Stronger reference model: Claude Sonnet 5.5 ($2/$10 per MTok) on a subset (endpoint conditions, 1 rep); main runs stay on low-cost models | Recommended; pending user confirmation |
@@ -363,6 +530,8 @@ For each help-seeking event and each episode, label:
 
 | Version (time) | Change |
 |---|---|
+| 20261026-1923 | Two-class redesign (§13): Must-help and Optional-help, 30 each; class-specific difficulty features without hard distractors; new target distribution. Task Evaluator spec (§14): well-formedness, classification via reference solutions and ablations, complexity recomputation, realism review, set-level checks, verdict rules. Revision banner added at top |
+| 20261026-1918 | Added §12: how must/optional/no-help are built in at design time (V vs H split, base vs quality checks), two-reference-solution verification, rules for optional tasks, one-workflow-three-classes example |
 | 20261026-1259 | B1 relaxed per user: overlap percentage must not be too high relative to distractors, rather than "any repetition triggers rewrite". Model plan: Sonnet 5.5 as stronger reference on a subset |
 | 20261026-1256 | Per user: removed outcome-based targets (old C1–C5: no ceiling, no floor, monotonic difficulty, model gap, scale effect). Section C now judges realism/complexity of the design only. Clarified B1 as a design-time word-overlap check on task files, not an agent success threshold |
 | 20261026-1251 | Added §10 acceptance criteria (difficulty score D, target distribution 48 templates, A/B/C/D thresholds, example table) and §11 TAC compatibility constraints (task package structure, 17-NPC ceiling, dual-track run, compatibility checklist); N levels changed to {4, 8, 16} |

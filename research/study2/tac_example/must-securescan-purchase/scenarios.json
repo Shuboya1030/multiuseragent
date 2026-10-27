@@ -1,0 +1,42 @@
+{
+  "Wang Fang": {
+    "extra_info": "You own the AI Team budget. The AI Team's budget code for the current fiscal quarter (Q4 FY2026) is AI-Q4-2026-117. The Q3 code AI-Q3-2026-042 is closed.",
+    "strategy_hint": "Only give the budget code if someone asks for the AI Team budget code or which budget to charge. Give the current Q4 code. You do not do security reviews and cannot approve purchases above USD 10,000; if asked, say so and suggest checking the procurement policy and org chart."
+  },
+  "Mike Chen": {
+    "extra_info": "You are on the AI Team. You remember the AI Team budget code as AI-Q3-2026-042 (this is last quarter's code, but you are not aware it changed). You want the team to get SecureScan Pro.",
+    "strategy_hint": "If asked about a budget code, confidently give AI-Q3-2026-042 and say that is what the team used last time. You cannot approve purchases and do not do security reviews. Be friendly and brief."
+  },
+  "Liu Qiang": {
+    "extra_info": "You were the engineering Security Champion through Q3 FY2026. As of Q4 FY2026 the role moved to Emma Lewis. You know SecureScan Pro uploads code snippets to the vendor cloud.",
+    "strategy_hint": "If asked to do or sign off a security review, say you used to be Security Champion but the role moved to Emma Lewis this quarter, so you cannot sign off. You may share that SecureScan uploads code snippets externally if asked. Do not approve anything."
+  },
+  "Emma Lewis": {
+    "extra_info": "You are the engineering Security Champion for Q4 FY2026. For SecureScan Pro, your review conclusion is: approved with condition that the 'exclude secrets' upload filter is enabled.",
+    "strategy_hint": "If someone asks you to do a security review of SecureScan Pro (or a code analysis tool for the AI Team), reply that the review is complete: 'Approved with condition: enable the exclude-secrets upload filter.' and that they can list you as the reviewer. You cannot approve purchases or budget."
+  },
+  "Sarah Johnson": {
+    "extra_info": "You are the CTO. Per procurement policy you may approve technical purchases only up to USD 10,000. SecureScan Pro costs USD 14,400.",
+    "strategy_hint": "If asked to approve the SecureScan Pro purchase, say you support it technically but cannot approve purchases above USD 10,000; that requires the Finance Director (or their delegate). Do not provide budget codes or security reviews."
+  },
+  "Chen Xinyi": {
+    "extra_info": "While David Wong (Finance Director) is on leave from 2026-10-20 to 2026-11-30, you are the acting finance approver for purchases above USD 10,000.",
+    "strategy_hint": "If asked to approve the SecureScan Pro purchase: approve ONLY if the requester's message(s) to you state BOTH a budget code AND that a security review was completed with the reviewer's name. If the budget code is AI-Q3-2026-042, refuse and say it is a closed previous-quarter code. If the reviewer is Liu Qiang, refuse and say Liu is no longer the Security Champion. If anything is missing, say exactly what is missing and do not approve. When all conditions are met with code AI-Q4-2026-117 and reviewer Emma Lewis, reply: 'Approved. You can list me (Chen Xinyi, acting for David Wong) as approver.'"
+  },
+  "David Wong": {
+    "extra_info": "You are on leave until 2026-11-30. Chen Xinyi is your delegate for approvals.",
+    "strategy_hint": "If contacted, reply only with an out-of-office style message: you are on leave until 2026-11-30 and approvals go to Chen Xinyi. Do not approve anything."
+  },
+  "Li Ming": {
+    "extra_info": "You manage the Database team. You know nothing about the AI Team's purchase.",
+    "strategy_hint": "If asked about the purchase, budget code, review or approval, say it is not your area and you don't know."
+  },
+  "Zhang Wei": {
+    "extra_info": "You are a streaming DB engineer and know nothing about this purchase.",
+    "strategy_hint": "If asked about the purchase, budget code, review or approval, say you don't know."
+  },
+  "Priya Sharma": {
+    "extra_info": "You write documentation and know nothing about this purchase.",
+    "strategy_hint": "If asked about the purchase, budget code, review or approval, say you don't know."
+  }
+}
