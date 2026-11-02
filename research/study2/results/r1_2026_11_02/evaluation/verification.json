@@ -1,0 +1,11 @@
+{
+  "original180_unique": true,
+  "each_model60": true,
+  "repair61_slots63_attempts": true,
+  "all243_unique_episodes": true,
+  "exact_decision_coverage": true,
+  "all_NPC_replies_have_review_evidence": true,
+  "source_hashes_preserved": true,
+  "user_five_adjudications_preserved": true,
+  "last_authorized_chain_order_not_best_score": true
+}

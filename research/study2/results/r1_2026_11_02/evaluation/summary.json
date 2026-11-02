@@ -1,0 +1,124 @@
+{
+  "original_unique_slots": 180,
+  "task_ids": 60,
+  "models": 3,
+  "repair_slots": 61,
+  "repair_attempts": 63,
+  "total_attempts": 243,
+  "original180": {
+    "openai": {
+      "slots": 60,
+      "business": {
+        "business_failure": 28,
+        "not_evaluable": 1,
+        "business_success": 31
+      },
+      "T_available": 59,
+      "R_available": 59,
+      "NPC_status": {
+        "not_observable": 56,
+        "confirmed_issue": 2,
+        "no_observed_issue": 2
+      }
+    },
+    "anthropic": {
+      "slots": 60,
+      "business": {
+        "business_success": 48,
+        "business_failure": 11,
+        "not_evaluable": 1
+      },
+      "T_available": 59,
+      "R_available": 59,
+      "NPC_status": {
+        "no_observed_issue": 32,
+        "confirmed_issue": 20,
+        "not_observable": 8
+      }
+    },
+    "kimi": {
+      "slots": 60,
+      "business": {
+        "business_success": 36,
+        "business_failure": 15,
+        "not_evaluable": 9
+      },
+      "T_available": 51,
+      "R_available": 51,
+      "NPC_status": {
+        "no_observed_issue": 18,
+        "confirmed_issue": 21,
+        "not_observable": 18,
+        "probable_issue": 2,
+        "unresolved": 1
+      }
+    }
+  },
+  "latest_authorized_display180": {
+    "openai": {
+      "slots": 60,
+      "business": {
+        "business_failure": 28,
+        "business_success": 32
+      },
+      "T_available": 60,
+      "R_available": 60,
+      "NPC_status": {
+        "not_observable": 57,
+        "no_observed_issue": 3
+      }
+    },
+    "anthropic": {
+      "slots": 60,
+      "business": {
+        "business_success": 51,
+        "business_failure": 9
+      },
+      "T_available": 60,
+      "R_available": 60,
+      "NPC_status": {
+        "no_observed_issue": 43,
+        "not_observable": 8,
+        "confirmed_issue": 9
+      }
+    },
+    "kimi": {
+      "slots": 60,
+      "business": {
+        "business_success": 50,
+        "business_failure": 10
+      },
+      "T_available": 60,
+      "R_available": 60,
+      "NPC_status": {
+        "no_observed_issue": 37,
+        "not_observable": 20,
+        "confirmed_issue": 2,
+        "probable_issue": 1
+      }
+    }
+  },
+  "original_gap_count": 12,
+  "all_attempt_gap_count": 14,
+  "display_gap_count": 0,
+  "display_user_decisions_required": 0,
+  "original_evaluable_results": 169,
+  "display_evaluable_results": 180,
+  "original_technical_censored": 11,
+  "display_technical_censored": 0,
+  "display_business_unresolved": 0,
+  "display_score_unavailable": 0,
+  "auxiliary_NPC_interpretation_gaps": 1,
+  "all_attempts_reviewed": true,
+  "review_missing_attempts": 0,
+  "original_source_hashes_preserved": 5638,
+  "NPC_issues": {
+    "items": 72,
+    "unique_attempts": 59
+  },
+  "no_new_API_or_rerun": true,
+  "no_R_prime": true,
+  "selection_rule": "last explicitly authorized attempt by chain order; never best score",
+  "repair_selection_bias": "Repairs target exceptions; latest-chain view is not a new unbiased replicate or replacement original180.",
+  "input_gate_condition_difference": "8 Kimi repair attempts used explicit user input-gate waiver; no accurate pre-count claim."
+}

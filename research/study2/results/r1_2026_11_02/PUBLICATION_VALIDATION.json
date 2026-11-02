@@ -1,0 +1,35 @@
+{
+  "original_slots": 180,
+  "attempts": 243,
+  "source_run_files": 5393,
+  "source_hashes_matched": 5638,
+  "strict_raw_scores_reproduced": 242,
+  "derived_scores_verified": 230,
+  "binding_user_decisions": 5,
+  "display_business": {
+    "pass": 133,
+    "fail": 47
+  },
+  "display_T_R_available": 180,
+  "settled_usd": "4.82256485",
+  "unknown_reservations": 5,
+  "unknown_reserved_usd": "0.11172275",
+  "implementation_hashes_not_located": [],
+  "archive_bytes": {
+    "archives/history.zip": 3513894,
+    "archives/packets.zip": 3416419,
+    "archives/openai-original.zip": 1039844,
+    "archives/anthropic-original.zip": 2472484,
+    "archives/kimi-original.zip": 1900925,
+    "archives/anthropic-repair.zip": 1007260,
+    "archives/openai-repair.zip": 106136,
+    "archives/kimi-repair.zip": 1695038,
+    "archives/tasks.zip": 583371,
+    "archives/context.zip": 785726
+  },
+  "network_calls": 0,
+  "clone_only_verification": true,
+  "publication_files": 37,
+  "credential_fields_and_patterns_checked": true,
+  "line_ending_conversion_disabled": true
+}

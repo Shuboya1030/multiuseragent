@@ -1,0 +1,1222 @@
+{
+  "summary": {
+    "matches": 242,
+    "not_available_incomplete_trace_or_evaluation": 1
+  },
+  "attempts": [
+    {
+      "id": "openai-m-high-access-recert-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-m-high-access-recert-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-m-high-access-recert-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-m-high-customer-data-request-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-m-high-customer-data-request-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-m-high-customer-data-request-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-m-high-db-migration-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-m-high-db-migration-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-m-high-db-migration-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-m-high-incident-postmortem-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-m-high-incident-postmortem-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-m-high-incident-postmortem-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-m-high-model-release-a0",
+      "raw_reproduction": "not_available_incomplete_trace_or_evaluation"
+    },
+    {
+      "id": "anthropic-m-high-model-release-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-m-high-model-release-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-m-high-payroll-correction-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-m-high-payroll-correction-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-m-high-payroll-correction-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-m-high-plugin-purchase-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-m-high-plugin-purchase-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-m-high-plugin-purchase-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-m-high-portal-launch-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-m-high-portal-launch-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-m-high-portal-launch-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-m-high-price-change-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-m-high-price-change-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-m-high-price-change-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-m-high-service-cutover-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-m-high-service-cutover-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-m-high-service-cutover-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-m-low-customer-mailing-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-m-low-customer-mailing-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-m-low-customer-mailing-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-m-low-gpu-job-request-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-m-low-gpu-job-request-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-m-low-gpu-job-request-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-m-low-ledger-allocation-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-m-low-ledger-allocation-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-m-low-ledger-allocation-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-m-low-new-hire-record-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-m-low-new-hire-record-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-m-low-new-hire-record-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-m-low-partner-key-config-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-m-low-partner-key-config-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-m-low-partner-key-config-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-m-low-policy-citation-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-m-low-policy-citation-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-m-low-policy-citation-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-m-low-regression-run-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-m-low-regression-run-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-m-low-regression-run-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-m-low-release-note-header-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-m-low-release-note-header-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-m-low-release-note-header-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-m-med-campaign-spend-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-m-med-campaign-spend-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-m-med-campaign-spend-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-m-med-conference-travel-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-m-med-conference-travel-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-m-med-conference-travel-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-m-med-contractor-invoice-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-m-med-contractor-invoice-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-m-med-contractor-invoice-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-m-med-flag-rollout-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-m-med-flag-rollout-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-m-med-flag-rollout-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-m-med-hiring-requisition-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-m-med-hiring-requisition-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-m-med-hiring-requisition-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-m-med-log-deletion-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-m-med-log-deletion-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-m-med-log-deletion-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-m-med-new-hire-equipment-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-m-med-new-hire-equipment-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-m-med-new-hire-equipment-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-m-med-research-data-export-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-m-med-research-data-export-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-m-med-research-data-export-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-m-med-security-exception-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-m-med-security-exception-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-m-med-security-exception-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-m-med-service-credit-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-m-med-service-credit-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-m-med-service-credit-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-m-med-support-renewal-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-m-med-support-renewal-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-m-med-support-renewal-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-m-medium-research-purchase-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-m-medium-research-purchase-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-m-medium-research-purchase-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-o-high-cloud-budget-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-o-high-cloud-budget-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-o-high-cloud-budget-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-o-high-docs-localization-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-o-high-docs-localization-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-o-high-docs-localization-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-o-high-eval-budget-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-o-high-eval-budget-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-o-high-eval-budget-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-o-high-floor-move-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-o-high-floor-move-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-o-high-floor-move-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-o-high-interview-panel-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-o-high-interview-panel-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-o-high-interview-panel-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-o-high-launch-announcement-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-o-high-launch-announcement-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-o-high-launch-announcement-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-o-high-sales-kickoff-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-o-high-sales-kickoff-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-o-high-sales-kickoff-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-o-high-security-training-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-o-high-security-training-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-o-high-security-training-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-o-high-stream-cluster-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-o-high-stream-cluster-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-o-high-stream-cluster-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-o-high-training-schedule-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-o-high-training-schedule-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-o-high-training-schedule-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-o-low-campaign-asset-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-o-low-campaign-asset-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-o-low-campaign-asset-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-o-low-changelog-template-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-o-low-changelog-template-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-o-low-changelog-template-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-o-low-demo-dataset-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-o-low-demo-dataset-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-o-low-demo-dataset-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-o-low-demo-shipment-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-o-low-demo-shipment-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-o-low-demo-shipment-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-o-low-press-factsheet-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-o-low-press-factsheet-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-o-low-press-factsheet-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-o-low-staging-region-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-o-low-staging-region-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-o-low-staging-region-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-o-low-survey-launch-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-o-low-survey-launch-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-o-low-survey-launch-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-o-low-team-lunch-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-o-low-team-lunch-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-o-low-team-lunch-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-o-med-ab-test-plan-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-o-med-ab-test-plan-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-o-med-ab-test-plan-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-o-med-backup-window-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-o-med-backup-window-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-o-med-backup-window-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-o-med-batch-schedule-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-o-med-batch-schedule-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-o-med-batch-schedule-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-o-med-brochure-translation-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-o-med-brochure-translation-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-o-med-brochure-translation-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-o-med-browser-matrix-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-o-med-browser-matrix-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-o-med-browser-matrix-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-o-med-license-reuse-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-o-med-license-reuse-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-o-med-license-reuse-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-o-med-offsite-date-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-o-med-offsite-date-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-o-med-offsite-date-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-o-med-partner-crawl-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-o-med-partner-crawl-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-o-med-partner-crawl-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-o-med-renewal-quote-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-o-med-renewal-quote-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-o-med-renewal-quote-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-o-med-support-macro-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-o-med-support-macro-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-o-med-support-macro-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-o-med-usability-budget-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-o-med-usability-budget-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-o-med-usability-budget-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-o-medium-event-package-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-o-medium-event-package-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-o-medium-event-package-a0",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-m-high-customer-data-request-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-m-high-price-change-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-m-high-plugin-purchase-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-m-high-portal-launch-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-m-low-customer-mailing-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-m-low-partner-key-config-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-m-med-conference-travel-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-m-med-hiring-requisition-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-m-med-log-deletion-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-m-med-research-data-export-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-m-med-security-exception-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-m-med-service-credit-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-m-medium-research-purchase-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-o-high-cloud-budget-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-o-high-docs-localization-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-o-high-eval-budget-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-o-high-launch-announcement-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-o-high-security-training-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-o-high-stream-cluster-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-o-high-training-schedule-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-o-low-changelog-template-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-o-low-demo-dataset-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-o-med-backup-window-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-o-med-batch-schedule-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-o-med-browser-matrix-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-o-med-license-reuse-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-o-med-usability-budget-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-m-high-customer-data-request-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-m-high-db-migration-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-m-high-incident-postmortem-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-m-high-portal-launch-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-m-low-customer-mailing-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-m-low-gpu-job-request-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-m-med-campaign-spend-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-m-med-flag-rollout-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-m-med-log-deletion-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-m-med-new-hire-equipment-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-m-med-research-data-export-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-m-med-security-exception-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-o-high-launch-announcement-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-o-high-security-training-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-o-high-stream-cluster-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-o-low-press-factsheet-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-o-low-survey-launch-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-o-med-ab-test-plan-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-o-med-backup-window-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-o-med-partner-crawl-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-o-med-renewal-quote-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-m-high-portal-launch-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-m-high-access-recert-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "openai-m-high-model-release-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "anthropic-m-high-service-cutover-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-m-med-service-credit-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-o-high-eval-budget-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-o-high-interview-panel-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-m-medium-research-purchase-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-m-high-model-release-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-o-high-training-schedule-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-o-low-staging-region-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-o-med-browser-matrix-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-o-med-offsite-date-a1",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-m-med-security-exception-a2",
+      "raw_reproduction": "matches",
+      "differences": {}
+    },
+    {
+      "id": "kimi-m-medium-research-purchase-a2",
+      "raw_reproduction": "matches",
+      "differences": {}
+    }
+  ]
+}

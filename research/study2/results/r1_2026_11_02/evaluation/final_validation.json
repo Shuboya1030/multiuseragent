@@ -1,0 +1,22 @@
+{
+  "original_slots": 180,
+  "attempts": 243,
+  "repair_slots": 61,
+  "repair_attempts": 63,
+  "binding_user_decisions_verified": 5,
+  "old_formula_arithmetic_verified": 230,
+  "additional_technical_attempts_success": 2,
+  "current_unevaluable_results": 0,
+  "current_content_undecided": 0,
+  "source_hashes_preserved": 5638,
+  "deliverable_hashes": {
+    "All_243_Attempts.csv": "7cb8cf9ff67b8b4580fe00fc2ca94172f8c4d06cde02ebf0cd714d39c9a2a8ea",
+    "All_Attempt_Gaps.csv": "0bedd5d09bc49dc003339b685e289cb6da6cf1b1d98f3c11574a543fac451cca",
+    "Current_Display_Gaps.csv": "d0c4ac4ebbb3de8fece684604430ef9e2fa32ea0d97e40b137b54d6530a255d1",
+    "Five_Gap_Termination_Correction.csv": "1c0f1ba4637d30e8edb6f98f444fc9647918e54ba7f5ed3ce2166c6413de0767",
+    "Five_Gap_Termination_Correction_CN.md": "0db430008d0cbde07d8023eb5d955d0ae77f9b34f7c669d17677df0f02a88df4",
+    "NPC_Issues_No_Automatic_Rerun.csv": "11bcd16bce8977c21c2038c42e500ad96de3538695e7575087b83739449bf4ac",
+    "R1_All_180_Slots.csv": "205cbd46b1c01cdfa288db7c465faa6af819c6d4418549ad8dce73cd272d6b74",
+    "R1_Final_Coverage_Evaluation_CN.md": "86b0e4f18395c898739d38fa19679cf9a4a64709e497d8fb9bb89632f3cbea21"
+  }
+}
