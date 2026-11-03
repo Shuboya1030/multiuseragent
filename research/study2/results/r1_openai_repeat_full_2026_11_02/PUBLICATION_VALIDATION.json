@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "public_files_checked": 3430,
+  "raw_attempt_files": 1844,
+  "attempts": 90,
+  "raw_scores_recomputed": 90,
+  "settled_new_calls": 933,
+  "agent_calls": 838,
+  "NPC_calls": 95,
+  "full_business_pass": 50,
+  "mini_business_pass": 2,
+  "new_cost_usd": "2.50614425",
+  "global_occupied_usd": "7.44043185",
+  "historical_unknown_count": 5,
+  "historical_unknown_usd": "0.11172275",
+  "new_unknown": 0,
+  "absolute_path_dependencies": 0,
+  "unredacted_credentials_detected": 0,
+  "omitted_research_records": 0,
+  "gold_validity_flags": [
+    "o-high-eval-budget"
+  ],
+  "R_prime_computed": false
+}

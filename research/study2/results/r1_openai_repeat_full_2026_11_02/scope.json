@@ -1,0 +1,902 @@
+[
+  {
+    "group": "mini_repeat",
+    "model": "gpt-5.4-mini-2026-03-17",
+    "task_id": "m-high-access-recert",
+    "help_class": "Must-help",
+    "original_episode_id": "b3163f22-df1e-4b4e-8b63-3900e20cd685",
+    "original_run": "../r1_2026_11_02/evidence/b3163f22-df1e-4b4e-8b63-3900e20cd685",
+    "task_blueprint_sha256": "a6fc0f6354cb177eb68aec3ea465019f73cfe558b2d6d869f093fcd8878dd18d",
+    "instance_seed": 2026102825
+  },
+  {
+    "group": "mini_repeat",
+    "model": "gpt-5.4-mini-2026-03-17",
+    "task_id": "m-high-customer-data-request",
+    "help_class": "Must-help",
+    "original_episode_id": "acd3d668-a0cb-4291-829a-1b76fbe345f8",
+    "original_run": "../r1_2026_11_02/evidence/acd3d668-a0cb-4291-829a-1b76fbe345f8",
+    "task_blueprint_sha256": "09d687617e7e0bcedfe48775a69d30fc47b5c9c75964bd25d7875b8bf1b61bf7",
+    "instance_seed": 2026102820
+  },
+  {
+    "group": "mini_repeat",
+    "model": "gpt-5.4-mini-2026-03-17",
+    "task_id": "m-high-db-migration",
+    "help_class": "Must-help",
+    "original_episode_id": "75d1bdcd-4da4-4f89-9ed5-095aa07079e7",
+    "original_run": "../r1_2026_11_02/evidence/75d1bdcd-4da4-4f89-9ed5-095aa07079e7",
+    "task_blueprint_sha256": "bc628bd25e92f7800df620f6a2956236bde177c9c3116f047a6b0d70ace6fd26",
+    "instance_seed": 2026102819
+  },
+  {
+    "group": "mini_repeat",
+    "model": "gpt-5.4-mini-2026-03-17",
+    "task_id": "m-high-incident-postmortem",
+    "help_class": "Must-help",
+    "original_episode_id": "0a3a2956-c843-4098-90ad-b5ee5a99cff0",
+    "original_run": "../r1_2026_11_02/evidence/0a3a2956-c843-4098-90ad-b5ee5a99cff0",
+    "task_blueprint_sha256": "35cf56f1ddf607aa64db4b2c309c903a73c8430b51fb3fc31463ac2250011ff5",
+    "instance_seed": 2026102822
+  },
+  {
+    "group": "mini_repeat",
+    "model": "gpt-5.4-mini-2026-03-17",
+    "task_id": "m-high-model-release",
+    "help_class": "Must-help",
+    "original_episode_id": "9a256688-547a-4223-893a-4b034734bf1d",
+    "original_run": "../r1_2026_11_02/evidence/9a256688-547a-4223-893a-4b034734bf1d",
+    "task_blueprint_sha256": "d2fe0c76a2f35880443dfdcd33fe6f6ad0df92bd4673b8bdb715516bfa3d70b2",
+    "instance_seed": 2026102818
+  },
+  {
+    "group": "mini_repeat",
+    "model": "gpt-5.4-mini-2026-03-17",
+    "task_id": "m-high-payroll-correction",
+    "help_class": "Must-help",
+    "original_episode_id": "2838ea52-c0e1-4fde-88f0-d44cbbf78fad",
+    "original_run": "../r1_2026_11_02/evidence/2838ea52-c0e1-4fde-88f0-d44cbbf78fad",
+    "task_blueprint_sha256": "bc67e8ae7519c623108de1a823edc11b65779108a37831475fb62036b6de70db",
+    "instance_seed": 2026102821
+  },
+  {
+    "group": "mini_repeat",
+    "model": "gpt-5.4-mini-2026-03-17",
+    "task_id": "m-high-plugin-purchase",
+    "help_class": "Must-help",
+    "original_episode_id": "692f15a5-8f4a-43eb-8f88-6c161f893e42",
+    "original_run": "../r1_2026_11_02/evidence/692f15a5-8f4a-43eb-8f88-6c161f893e42",
+    "task_blueprint_sha256": "a051ff09796b273dca67dfa6e422e49f7350782e2d1a2ba2d7cf7a677f2d9dda",
+    "instance_seed": 2026102823
+  },
+  {
+    "group": "mini_repeat",
+    "model": "gpt-5.4-mini-2026-03-17",
+    "task_id": "m-high-portal-launch",
+    "help_class": "Must-help",
+    "original_episode_id": "03ace86f-d920-4bc6-9818-eeae1d225559",
+    "original_run": "../r1_2026_11_02/evidence/03ace86f-d920-4bc6-9818-eeae1d225559",
+    "task_blueprint_sha256": "6e40ed268ebb9fa656696beb497b94c3bf6cdca22642a2a2bdca1053381b52bb",
+    "instance_seed": 2026102826
+  },
+  {
+    "group": "mini_repeat",
+    "model": "gpt-5.4-mini-2026-03-17",
+    "task_id": "m-high-price-change",
+    "help_class": "Must-help",
+    "original_episode_id": "b60a2184-8799-412b-83e9-4645302af4f9",
+    "original_run": "../r1_2026_11_02/evidence/b60a2184-8799-412b-83e9-4645302af4f9",
+    "task_blueprint_sha256": "43db1f33d0c199d7eace20e3392941c980fe0707c01755197233500f850b2437",
+    "instance_seed": 2026102824
+  },
+  {
+    "group": "mini_repeat",
+    "model": "gpt-5.4-mini-2026-03-17",
+    "task_id": "m-high-service-cutover",
+    "help_class": "Must-help",
+    "original_episode_id": "54f844d4-1683-4a9a-a340-bdd6808c4fd1",
+    "original_run": "../r1_2026_11_02/evidence/54f844d4-1683-4a9a-a340-bdd6808c4fd1",
+    "task_blueprint_sha256": "fe85c0e7ef85d408a39949d364b955a5e3b47236484f08251b0a9259ac7735a0",
+    "instance_seed": 2026102702
+  },
+  {
+    "group": "mini_repeat",
+    "model": "gpt-5.4-mini-2026-03-17",
+    "task_id": "m-low-customer-mailing",
+    "help_class": "Must-help",
+    "original_episode_id": "5e564b6b-1c7e-47b8-b98c-0ab36c1e7465",
+    "original_run": "../r1_2026_11_02/evidence/5e564b6b-1c7e-47b8-b98c-0ab36c1e7465",
+    "task_blueprint_sha256": "dda727af6a6f8431fe75f9cf0234552bb0be391fca1c2e88068ead6ff0ad90c8",
+    "instance_seed": 2026102804
+  },
+  {
+    "group": "mini_repeat",
+    "model": "gpt-5.4-mini-2026-03-17",
+    "task_id": "m-low-gpu-job-request",
+    "help_class": "Must-help",
+    "original_episode_id": "43f2eaaa-f8b2-43da-84ed-7f31abf0ebd9",
+    "original_run": "../r1_2026_11_02/evidence/43f2eaaa-f8b2-43da-84ed-7f31abf0ebd9",
+    "task_blueprint_sha256": "32f35e857263c3d02cc6444f1585df8b84344cc2b9a0bd818750a40aa4ce5e8f",
+    "instance_seed": 2026102803
+  },
+  {
+    "group": "mini_repeat",
+    "model": "gpt-5.4-mini-2026-03-17",
+    "task_id": "m-low-ledger-allocation",
+    "help_class": "Must-help",
+    "original_episode_id": "f548950d-912c-46a1-b073-8921ba2bec29",
+    "original_run": "../r1_2026_11_02/evidence/f548950d-912c-46a1-b073-8921ba2bec29",
+    "task_blueprint_sha256": "d74fe1890b670f19f881741fca4ffb5e03d4489bd2fc22836b7aa0071c19c9b9",
+    "instance_seed": 2026102700
+  },
+  {
+    "group": "mini_repeat",
+    "model": "gpt-5.4-mini-2026-03-17",
+    "task_id": "m-low-new-hire-record",
+    "help_class": "Must-help",
+    "original_episode_id": "f868e3c9-2321-4ab9-83f6-f585ae5a265e",
+    "original_run": "../r1_2026_11_02/evidence/f868e3c9-2321-4ab9-83f6-f585ae5a265e",
+    "task_blueprint_sha256": "6b5203762605712e079221065f68f626dc1df4dc995a41a1d762c9f3bb5c4fa6",
+    "instance_seed": 2026102800
+  },
+  {
+    "group": "mini_repeat",
+    "model": "gpt-5.4-mini-2026-03-17",
+    "task_id": "m-low-partner-key-config",
+    "help_class": "Must-help",
+    "original_episode_id": "935d9791-8bb3-4b6b-bf71-ed96c7c8cc79",
+    "original_run": "../r1_2026_11_02/evidence/935d9791-8bb3-4b6b-bf71-ed96c7c8cc79",
+    "task_blueprint_sha256": "06345a406907b07422e2eed2f0177d399a88253da70db20120cafb01e53d4b39",
+    "instance_seed": 2026102801
+  },
+  {
+    "group": "mini_repeat",
+    "model": "gpt-5.4-mini-2026-03-17",
+    "task_id": "m-low-policy-citation",
+    "help_class": "Must-help",
+    "original_episode_id": "81d0d180-9321-4b96-a461-97bd91fc5b58",
+    "original_run": "../r1_2026_11_02/evidence/81d0d180-9321-4b96-a461-97bd91fc5b58",
+    "task_blueprint_sha256": "9a433f071630ff487c6c0fe7e957b2eeb0ce36b0e8ec6b2e5570156ed442eb96",
+    "instance_seed": 2026102805
+  },
+  {
+    "group": "mini_repeat",
+    "model": "gpt-5.4-mini-2026-03-17",
+    "task_id": "m-low-regression-run",
+    "help_class": "Must-help",
+    "original_episode_id": "47e17eb8-9798-40ee-bc64-04e5c22ab59e",
+    "original_run": "../r1_2026_11_02/evidence/47e17eb8-9798-40ee-bc64-04e5c22ab59e",
+    "task_blueprint_sha256": "5695a40d2f69282d2f1367a86b529de4446e367b16e9fc086ad044471722db70",
+    "instance_seed": 2026102806
+  },
+  {
+    "group": "mini_repeat",
+    "model": "gpt-5.4-mini-2026-03-17",
+    "task_id": "m-low-release-note-header",
+    "help_class": "Must-help",
+    "original_episode_id": "fb4c818c-04a9-4ae7-bcb3-81c77d61696a",
+    "original_run": "../r1_2026_11_02/evidence/fb4c818c-04a9-4ae7-bcb3-81c77d61696a",
+    "task_blueprint_sha256": "58b11afa6e78e8123ba34885fc9ce518466310ce688a452a41fc3c6c904cc268",
+    "instance_seed": 2026102802
+  },
+  {
+    "group": "mini_repeat",
+    "model": "gpt-5.4-mini-2026-03-17",
+    "task_id": "m-med-campaign-spend",
+    "help_class": "Must-help",
+    "original_episode_id": "bff774c4-8ac5-4bd3-b8ed-a85e7e5d8c15",
+    "original_run": "../r1_2026_11_02/evidence/bff774c4-8ac5-4bd3-b8ed-a85e7e5d8c15",
+    "task_blueprint_sha256": "b3fd4b073b32ea665990bb94e5668985bbb052a0408443aaa32eec648f68fe48",
+    "instance_seed": 2026102814
+  },
+  {
+    "group": "mini_repeat",
+    "model": "gpt-5.4-mini-2026-03-17",
+    "task_id": "m-med-conference-travel",
+    "help_class": "Must-help",
+    "original_episode_id": "3dd2487d-80e4-4972-8770-abe3845f570d",
+    "original_run": "../r1_2026_11_02/evidence/3dd2487d-80e4-4972-8770-abe3845f570d",
+    "task_blueprint_sha256": "761d2e3fbaa0d53f326e089932e8bd7acf844a65b499cc6b8960c2e61cffea8c",
+    "instance_seed": 2026102809
+  },
+  {
+    "group": "mini_repeat",
+    "model": "gpt-5.4-mini-2026-03-17",
+    "task_id": "m-med-contractor-invoice",
+    "help_class": "Must-help",
+    "original_episode_id": "b457d6e3-72bf-4b52-af84-e8dfc0ed0220",
+    "original_run": "../r1_2026_11_02/evidence/b457d6e3-72bf-4b52-af84-e8dfc0ed0220",
+    "task_blueprint_sha256": "a6c01112e4bcb2a328b7a078128a32f316d7f4387b92fa5394024d4ad2a20eb9",
+    "instance_seed": 2026102807
+  },
+  {
+    "group": "mini_repeat",
+    "model": "gpt-5.4-mini-2026-03-17",
+    "task_id": "m-med-flag-rollout",
+    "help_class": "Must-help",
+    "original_episode_id": "db2b5341-7564-48b0-9a78-18e92069a023",
+    "original_run": "../r1_2026_11_02/evidence/db2b5341-7564-48b0-9a78-18e92069a023",
+    "task_blueprint_sha256": "eced2bd5bbbd84bc040c981301cf503bdd5368e657a387c279c2f4710364a473",
+    "instance_seed": 2026102811
+  },
+  {
+    "group": "mini_repeat",
+    "model": "gpt-5.4-mini-2026-03-17",
+    "task_id": "m-med-hiring-requisition",
+    "help_class": "Must-help",
+    "original_episode_id": "aa34ab38-e78d-4fa7-949c-fc24bbe6c4b8",
+    "original_run": "../r1_2026_11_02/evidence/aa34ab38-e78d-4fa7-949c-fc24bbe6c4b8",
+    "task_blueprint_sha256": "31a00a0c3e472316b18d1c68e1ee57c03fe592978a842dce7b385a78b3423db1",
+    "instance_seed": 2026102808
+  },
+  {
+    "group": "mini_repeat",
+    "model": "gpt-5.4-mini-2026-03-17",
+    "task_id": "m-med-log-deletion",
+    "help_class": "Must-help",
+    "original_episode_id": "dbf59a1f-7e52-4ad1-a9ae-cf7020ba5ff9",
+    "original_run": "../r1_2026_11_02/evidence/dbf59a1f-7e52-4ad1-a9ae-cf7020ba5ff9",
+    "task_blueprint_sha256": "0d9deb46f948e2561a36f18682ffda765311c0e556e8a03d456172eff17e9638",
+    "instance_seed": 2026102817
+  },
+  {
+    "group": "mini_repeat",
+    "model": "gpt-5.4-mini-2026-03-17",
+    "task_id": "m-med-new-hire-equipment",
+    "help_class": "Must-help",
+    "original_episode_id": "3bfc0ec2-1028-4e05-9239-962e8f9fae06",
+    "original_run": "../r1_2026_11_02/evidence/3bfc0ec2-1028-4e05-9239-962e8f9fae06",
+    "task_blueprint_sha256": "72498c4c2f34988456b7b19d09fe7226bd03f7956f94af5bd17f223767dbe9f5",
+    "instance_seed": 2026102812
+  },
+  {
+    "group": "mini_repeat",
+    "model": "gpt-5.4-mini-2026-03-17",
+    "task_id": "m-med-research-data-export",
+    "help_class": "Must-help",
+    "original_episode_id": "22a9992e-d749-4774-948c-d2a2f132c197",
+    "original_run": "../r1_2026_11_02/evidence/22a9992e-d749-4774-948c-d2a2f132c197",
+    "task_blueprint_sha256": "4386e11411920887e6c8c9c0a22857a627fbbc6e5c75f37dff3cb25493682492",
+    "instance_seed": 2026102810
+  },
+  {
+    "group": "mini_repeat",
+    "model": "gpt-5.4-mini-2026-03-17",
+    "task_id": "m-med-security-exception",
+    "help_class": "Must-help",
+    "original_episode_id": "fa6c9cdd-eb1d-4ed5-9033-1f4a41da9fbd",
+    "original_run": "../r1_2026_11_02/evidence/fa6c9cdd-eb1d-4ed5-9033-1f4a41da9fbd",
+    "task_blueprint_sha256": "751b01fad60c36b08aeb25f5a3afe8e9c28f365a02e1bd3af8466787450c016c",
+    "instance_seed": 2026102815
+  },
+  {
+    "group": "mini_repeat",
+    "model": "gpt-5.4-mini-2026-03-17",
+    "task_id": "m-med-service-credit",
+    "help_class": "Must-help",
+    "original_episode_id": "ce367f2d-02b8-4ad0-8db6-b8804ccf8246",
+    "original_run": "../r1_2026_11_02/evidence/ce367f2d-02b8-4ad0-8db6-b8804ccf8246",
+    "task_blueprint_sha256": "2715f5a789f780f203d7c15f2cae67c0d2292242607b94b7f8a674c1a3f01e84",
+    "instance_seed": 2026102813
+  },
+  {
+    "group": "mini_repeat",
+    "model": "gpt-5.4-mini-2026-03-17",
+    "task_id": "m-med-support-renewal",
+    "help_class": "Must-help",
+    "original_episode_id": "a2ef7826-aa29-4d12-84e5-bbf1bb746f10",
+    "original_run": "../r1_2026_11_02/evidence/a2ef7826-aa29-4d12-84e5-bbf1bb746f10",
+    "task_blueprint_sha256": "66a83941a9efbd05240149541a8e15a84466de9b2c2e575643c40d9865b45a7d",
+    "instance_seed": 2026102816
+  },
+  {
+    "group": "mini_repeat",
+    "model": "gpt-5.4-mini-2026-03-17",
+    "task_id": "m-medium-research-purchase",
+    "help_class": "Must-help",
+    "original_episode_id": "85223ef9-c705-405f-ab1a-eb43d1f49207",
+    "original_run": "../r1_2026_11_02/evidence/85223ef9-c705-405f-ab1a-eb43d1f49207",
+    "task_blueprint_sha256": "f55d4a7bad61b9693963e7e09c3d0dc4b5fcfdb8328afd3a1094181b2145ebb0",
+    "instance_seed": 2026102701
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "m-high-access-recert",
+    "help_class": "Must-help",
+    "original_episode_id": "b3163f22-df1e-4b4e-8b63-3900e20cd685",
+    "original_run": "../r1_2026_11_02/evidence/b3163f22-df1e-4b4e-8b63-3900e20cd685",
+    "task_blueprint_sha256": "a6fc0f6354cb177eb68aec3ea465019f73cfe558b2d6d869f093fcd8878dd18d",
+    "instance_seed": 2026102825
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "m-high-customer-data-request",
+    "help_class": "Must-help",
+    "original_episode_id": "acd3d668-a0cb-4291-829a-1b76fbe345f8",
+    "original_run": "../r1_2026_11_02/evidence/acd3d668-a0cb-4291-829a-1b76fbe345f8",
+    "task_blueprint_sha256": "09d687617e7e0bcedfe48775a69d30fc47b5c9c75964bd25d7875b8bf1b61bf7",
+    "instance_seed": 2026102820
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "m-high-db-migration",
+    "help_class": "Must-help",
+    "original_episode_id": "75d1bdcd-4da4-4f89-9ed5-095aa07079e7",
+    "original_run": "../r1_2026_11_02/evidence/75d1bdcd-4da4-4f89-9ed5-095aa07079e7",
+    "task_blueprint_sha256": "bc628bd25e92f7800df620f6a2956236bde177c9c3116f047a6b0d70ace6fd26",
+    "instance_seed": 2026102819
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "m-high-incident-postmortem",
+    "help_class": "Must-help",
+    "original_episode_id": "0a3a2956-c843-4098-90ad-b5ee5a99cff0",
+    "original_run": "../r1_2026_11_02/evidence/0a3a2956-c843-4098-90ad-b5ee5a99cff0",
+    "task_blueprint_sha256": "35cf56f1ddf607aa64db4b2c309c903a73c8430b51fb3fc31463ac2250011ff5",
+    "instance_seed": 2026102822
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "m-high-model-release",
+    "help_class": "Must-help",
+    "original_episode_id": "9a256688-547a-4223-893a-4b034734bf1d",
+    "original_run": "../r1_2026_11_02/evidence/9a256688-547a-4223-893a-4b034734bf1d",
+    "task_blueprint_sha256": "d2fe0c76a2f35880443dfdcd33fe6f6ad0df92bd4673b8bdb715516bfa3d70b2",
+    "instance_seed": 2026102818
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "m-high-payroll-correction",
+    "help_class": "Must-help",
+    "original_episode_id": "2838ea52-c0e1-4fde-88f0-d44cbbf78fad",
+    "original_run": "../r1_2026_11_02/evidence/2838ea52-c0e1-4fde-88f0-d44cbbf78fad",
+    "task_blueprint_sha256": "bc67e8ae7519c623108de1a823edc11b65779108a37831475fb62036b6de70db",
+    "instance_seed": 2026102821
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "m-high-plugin-purchase",
+    "help_class": "Must-help",
+    "original_episode_id": "692f15a5-8f4a-43eb-8f88-6c161f893e42",
+    "original_run": "../r1_2026_11_02/evidence/692f15a5-8f4a-43eb-8f88-6c161f893e42",
+    "task_blueprint_sha256": "a051ff09796b273dca67dfa6e422e49f7350782e2d1a2ba2d7cf7a677f2d9dda",
+    "instance_seed": 2026102823
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "m-high-portal-launch",
+    "help_class": "Must-help",
+    "original_episode_id": "03ace86f-d920-4bc6-9818-eeae1d225559",
+    "original_run": "../r1_2026_11_02/evidence/03ace86f-d920-4bc6-9818-eeae1d225559",
+    "task_blueprint_sha256": "6e40ed268ebb9fa656696beb497b94c3bf6cdca22642a2a2bdca1053381b52bb",
+    "instance_seed": 2026102826
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "m-high-price-change",
+    "help_class": "Must-help",
+    "original_episode_id": "b60a2184-8799-412b-83e9-4645302af4f9",
+    "original_run": "../r1_2026_11_02/evidence/b60a2184-8799-412b-83e9-4645302af4f9",
+    "task_blueprint_sha256": "43db1f33d0c199d7eace20e3392941c980fe0707c01755197233500f850b2437",
+    "instance_seed": 2026102824
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "m-high-service-cutover",
+    "help_class": "Must-help",
+    "original_episode_id": "54f844d4-1683-4a9a-a340-bdd6808c4fd1",
+    "original_run": "../r1_2026_11_02/evidence/54f844d4-1683-4a9a-a340-bdd6808c4fd1",
+    "task_blueprint_sha256": "fe85c0e7ef85d408a39949d364b955a5e3b47236484f08251b0a9259ac7735a0",
+    "instance_seed": 2026102702
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "m-low-customer-mailing",
+    "help_class": "Must-help",
+    "original_episode_id": "5e564b6b-1c7e-47b8-b98c-0ab36c1e7465",
+    "original_run": "../r1_2026_11_02/evidence/5e564b6b-1c7e-47b8-b98c-0ab36c1e7465",
+    "task_blueprint_sha256": "dda727af6a6f8431fe75f9cf0234552bb0be391fca1c2e88068ead6ff0ad90c8",
+    "instance_seed": 2026102804
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "m-low-gpu-job-request",
+    "help_class": "Must-help",
+    "original_episode_id": "43f2eaaa-f8b2-43da-84ed-7f31abf0ebd9",
+    "original_run": "../r1_2026_11_02/evidence/43f2eaaa-f8b2-43da-84ed-7f31abf0ebd9",
+    "task_blueprint_sha256": "32f35e857263c3d02cc6444f1585df8b84344cc2b9a0bd818750a40aa4ce5e8f",
+    "instance_seed": 2026102803
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "m-low-ledger-allocation",
+    "help_class": "Must-help",
+    "original_episode_id": "f548950d-912c-46a1-b073-8921ba2bec29",
+    "original_run": "../r1_2026_11_02/evidence/f548950d-912c-46a1-b073-8921ba2bec29",
+    "task_blueprint_sha256": "d74fe1890b670f19f881741fca4ffb5e03d4489bd2fc22836b7aa0071c19c9b9",
+    "instance_seed": 2026102700
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "m-low-new-hire-record",
+    "help_class": "Must-help",
+    "original_episode_id": "f868e3c9-2321-4ab9-83f6-f585ae5a265e",
+    "original_run": "../r1_2026_11_02/evidence/f868e3c9-2321-4ab9-83f6-f585ae5a265e",
+    "task_blueprint_sha256": "6b5203762605712e079221065f68f626dc1df4dc995a41a1d762c9f3bb5c4fa6",
+    "instance_seed": 2026102800
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "m-low-partner-key-config",
+    "help_class": "Must-help",
+    "original_episode_id": "935d9791-8bb3-4b6b-bf71-ed96c7c8cc79",
+    "original_run": "../r1_2026_11_02/evidence/935d9791-8bb3-4b6b-bf71-ed96c7c8cc79",
+    "task_blueprint_sha256": "06345a406907b07422e2eed2f0177d399a88253da70db20120cafb01e53d4b39",
+    "instance_seed": 2026102801
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "m-low-policy-citation",
+    "help_class": "Must-help",
+    "original_episode_id": "81d0d180-9321-4b96-a461-97bd91fc5b58",
+    "original_run": "../r1_2026_11_02/evidence/81d0d180-9321-4b96-a461-97bd91fc5b58",
+    "task_blueprint_sha256": "9a433f071630ff487c6c0fe7e957b2eeb0ce36b0e8ec6b2e5570156ed442eb96",
+    "instance_seed": 2026102805
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "m-low-regression-run",
+    "help_class": "Must-help",
+    "original_episode_id": "47e17eb8-9798-40ee-bc64-04e5c22ab59e",
+    "original_run": "../r1_2026_11_02/evidence/47e17eb8-9798-40ee-bc64-04e5c22ab59e",
+    "task_blueprint_sha256": "5695a40d2f69282d2f1367a86b529de4446e367b16e9fc086ad044471722db70",
+    "instance_seed": 2026102806
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "m-low-release-note-header",
+    "help_class": "Must-help",
+    "original_episode_id": "fb4c818c-04a9-4ae7-bcb3-81c77d61696a",
+    "original_run": "../r1_2026_11_02/evidence/fb4c818c-04a9-4ae7-bcb3-81c77d61696a",
+    "task_blueprint_sha256": "58b11afa6e78e8123ba34885fc9ce518466310ce688a452a41fc3c6c904cc268",
+    "instance_seed": 2026102802
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "m-med-campaign-spend",
+    "help_class": "Must-help",
+    "original_episode_id": "bff774c4-8ac5-4bd3-b8ed-a85e7e5d8c15",
+    "original_run": "../r1_2026_11_02/evidence/bff774c4-8ac5-4bd3-b8ed-a85e7e5d8c15",
+    "task_blueprint_sha256": "b3fd4b073b32ea665990bb94e5668985bbb052a0408443aaa32eec648f68fe48",
+    "instance_seed": 2026102814
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "m-med-conference-travel",
+    "help_class": "Must-help",
+    "original_episode_id": "3dd2487d-80e4-4972-8770-abe3845f570d",
+    "original_run": "../r1_2026_11_02/evidence/3dd2487d-80e4-4972-8770-abe3845f570d",
+    "task_blueprint_sha256": "761d2e3fbaa0d53f326e089932e8bd7acf844a65b499cc6b8960c2e61cffea8c",
+    "instance_seed": 2026102809
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "m-med-contractor-invoice",
+    "help_class": "Must-help",
+    "original_episode_id": "b457d6e3-72bf-4b52-af84-e8dfc0ed0220",
+    "original_run": "../r1_2026_11_02/evidence/b457d6e3-72bf-4b52-af84-e8dfc0ed0220",
+    "task_blueprint_sha256": "a6c01112e4bcb2a328b7a078128a32f316d7f4387b92fa5394024d4ad2a20eb9",
+    "instance_seed": 2026102807
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "m-med-flag-rollout",
+    "help_class": "Must-help",
+    "original_episode_id": "db2b5341-7564-48b0-9a78-18e92069a023",
+    "original_run": "../r1_2026_11_02/evidence/db2b5341-7564-48b0-9a78-18e92069a023",
+    "task_blueprint_sha256": "eced2bd5bbbd84bc040c981301cf503bdd5368e657a387c279c2f4710364a473",
+    "instance_seed": 2026102811
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "m-med-hiring-requisition",
+    "help_class": "Must-help",
+    "original_episode_id": "aa34ab38-e78d-4fa7-949c-fc24bbe6c4b8",
+    "original_run": "../r1_2026_11_02/evidence/aa34ab38-e78d-4fa7-949c-fc24bbe6c4b8",
+    "task_blueprint_sha256": "31a00a0c3e472316b18d1c68e1ee57c03fe592978a842dce7b385a78b3423db1",
+    "instance_seed": 2026102808
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "m-med-log-deletion",
+    "help_class": "Must-help",
+    "original_episode_id": "dbf59a1f-7e52-4ad1-a9ae-cf7020ba5ff9",
+    "original_run": "../r1_2026_11_02/evidence/dbf59a1f-7e52-4ad1-a9ae-cf7020ba5ff9",
+    "task_blueprint_sha256": "0d9deb46f948e2561a36f18682ffda765311c0e556e8a03d456172eff17e9638",
+    "instance_seed": 2026102817
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "m-med-new-hire-equipment",
+    "help_class": "Must-help",
+    "original_episode_id": "3bfc0ec2-1028-4e05-9239-962e8f9fae06",
+    "original_run": "../r1_2026_11_02/evidence/3bfc0ec2-1028-4e05-9239-962e8f9fae06",
+    "task_blueprint_sha256": "72498c4c2f34988456b7b19d09fe7226bd03f7956f94af5bd17f223767dbe9f5",
+    "instance_seed": 2026102812
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "m-med-research-data-export",
+    "help_class": "Must-help",
+    "original_episode_id": "22a9992e-d749-4774-948c-d2a2f132c197",
+    "original_run": "../r1_2026_11_02/evidence/22a9992e-d749-4774-948c-d2a2f132c197",
+    "task_blueprint_sha256": "4386e11411920887e6c8c9c0a22857a627fbbc6e5c75f37dff3cb25493682492",
+    "instance_seed": 2026102810
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "m-med-security-exception",
+    "help_class": "Must-help",
+    "original_episode_id": "fa6c9cdd-eb1d-4ed5-9033-1f4a41da9fbd",
+    "original_run": "../r1_2026_11_02/evidence/fa6c9cdd-eb1d-4ed5-9033-1f4a41da9fbd",
+    "task_blueprint_sha256": "751b01fad60c36b08aeb25f5a3afe8e9c28f365a02e1bd3af8466787450c016c",
+    "instance_seed": 2026102815
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "m-med-service-credit",
+    "help_class": "Must-help",
+    "original_episode_id": "ce367f2d-02b8-4ad0-8db6-b8804ccf8246",
+    "original_run": "../r1_2026_11_02/evidence/ce367f2d-02b8-4ad0-8db6-b8804ccf8246",
+    "task_blueprint_sha256": "2715f5a789f780f203d7c15f2cae67c0d2292242607b94b7f8a674c1a3f01e84",
+    "instance_seed": 2026102813
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "m-med-support-renewal",
+    "help_class": "Must-help",
+    "original_episode_id": "a2ef7826-aa29-4d12-84e5-bbf1bb746f10",
+    "original_run": "../r1_2026_11_02/evidence/a2ef7826-aa29-4d12-84e5-bbf1bb746f10",
+    "task_blueprint_sha256": "66a83941a9efbd05240149541a8e15a84466de9b2c2e575643c40d9865b45a7d",
+    "instance_seed": 2026102816
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "m-medium-research-purchase",
+    "help_class": "Must-help",
+    "original_episode_id": "85223ef9-c705-405f-ab1a-eb43d1f49207",
+    "original_run": "../r1_2026_11_02/evidence/85223ef9-c705-405f-ab1a-eb43d1f49207",
+    "task_blueprint_sha256": "f55d4a7bad61b9693963e7e09c3d0dc4b5fcfdb8328afd3a1094181b2145ebb0",
+    "instance_seed": 2026102701
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "o-high-cloud-budget",
+    "help_class": "Optional-help",
+    "original_episode_id": "7c2ad646-013e-4070-a19d-0a787bc148dc",
+    "original_run": "../r1_2026_11_02/evidence/7c2ad646-013e-4070-a19d-0a787bc148dc",
+    "task_blueprint_sha256": "2a37008c70e93237f89d4c1d6c99c2d933791ec5b72016d28193c25a24dd31d5",
+    "instance_seed": 2026102846
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "o-high-docs-localization",
+    "help_class": "Optional-help",
+    "original_episode_id": "a51bc420-1ec6-4c07-beba-1294922f8448",
+    "original_run": "../r1_2026_11_02/evidence/a51bc420-1ec6-4c07-beba-1294922f8448",
+    "task_blueprint_sha256": "832f41141a848ffc7da32e71a24a0d3de45868d98e2d84f8e112153392cb1e79",
+    "instance_seed": 2026102851
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "o-high-eval-budget",
+    "help_class": "Optional-help",
+    "original_episode_id": "aacc2e58-fd40-41b9-972b-2104e190d8e1",
+    "original_run": "../r1_2026_11_02/evidence/aacc2e58-fd40-41b9-972b-2104e190d8e1",
+    "task_blueprint_sha256": "dd4699632c06ba33581c47d46545db8830f4955aaee4501d6152ef3c7656e6ce",
+    "instance_seed": 2026102852
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "o-high-floor-move",
+    "help_class": "Optional-help",
+    "original_episode_id": "58e7a041-bc99-4770-854f-2a738cd5ca94",
+    "original_run": "../r1_2026_11_02/evidence/58e7a041-bc99-4770-854f-2a738cd5ca94",
+    "task_blueprint_sha256": "639e20fa715f82fd914a7d411f8595c6f57e00d2a23618d51daf813e7b64a2ac",
+    "instance_seed": 2026102853
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "o-high-interview-panel",
+    "help_class": "Optional-help",
+    "original_episode_id": "7c8a547f-a9cf-42fa-bf2d-33b49be2b21b",
+    "original_run": "../r1_2026_11_02/evidence/7c8a547f-a9cf-42fa-bf2d-33b49be2b21b",
+    "task_blueprint_sha256": "c2807d638e6bc6cf7dcf46414e2693e82f4da268469bdcccda79bd34bece46f7",
+    "instance_seed": 2026102847
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "o-high-launch-announcement",
+    "help_class": "Optional-help",
+    "original_episode_id": "1f339c08-8c20-4644-85f5-4765047ff37d",
+    "original_run": "../r1_2026_11_02/evidence/1f339c08-8c20-4644-85f5-4765047ff37d",
+    "task_blueprint_sha256": "25f977cf0bc2ae601d746aac912083048419165a13c33be3d3c90e926b5107e9",
+    "instance_seed": 2026102848
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "o-high-sales-kickoff",
+    "help_class": "Optional-help",
+    "original_episode_id": "a273f97d-fc86-476e-b129-0fefd433e597",
+    "original_run": "../r1_2026_11_02/evidence/a273f97d-fc86-476e-b129-0fefd433e597",
+    "task_blueprint_sha256": "09cb44a1df4d5017f45ac4ba60e50ee710568908399fe477dd351730df780efe",
+    "instance_seed": 2026102845
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "o-high-security-training",
+    "help_class": "Optional-help",
+    "original_episode_id": "70045be0-b533-4924-9f62-7f240cdc9364",
+    "original_run": "../r1_2026_11_02/evidence/70045be0-b533-4924-9f62-7f240cdc9364",
+    "task_blueprint_sha256": "3fe617fdcf7bbcebdb8f8c5ecca239f1083421b7edcb8e18ed9df594e978829f",
+    "instance_seed": 2026102850
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "o-high-stream-cluster",
+    "help_class": "Optional-help",
+    "original_episode_id": "ef2c8d1f-899b-47f8-b5dd-49e5eee85a8c",
+    "original_run": "../r1_2026_11_02/evidence/ef2c8d1f-899b-47f8-b5dd-49e5eee85a8c",
+    "task_blueprint_sha256": "c28d8bdf87bad689aa50c905744bd1b85c227c42d968384b6abdc6e28e5d5299",
+    "instance_seed": 2026102849
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "o-high-training-schedule",
+    "help_class": "Optional-help",
+    "original_episode_id": "b24e1347-61bf-4895-969e-245a907034df",
+    "original_run": "../r1_2026_11_02/evidence/b24e1347-61bf-4895-969e-245a907034df",
+    "task_blueprint_sha256": "d2db8395c6eb7fdff814e7f3bfdcdfb112bff434f9bd0764846c336c4c36f40b",
+    "instance_seed": 2026102705
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "o-low-campaign-asset",
+    "help_class": "Optional-help",
+    "original_episode_id": "5659a0ab-8ddb-42c7-8902-e4f4e9cfe5c1",
+    "original_run": "../r1_2026_11_02/evidence/5659a0ab-8ddb-42c7-8902-e4f4e9cfe5c1",
+    "task_blueprint_sha256": "98b7540e0ef6f08c38474eb238afa7d5d6ef9168724e96aa3cb96ccbb3ed271d",
+    "instance_seed": 2026102703
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "o-low-changelog-template",
+    "help_class": "Optional-help",
+    "original_episode_id": "982bc797-860f-46d2-ba2f-7ef41c3afb04",
+    "original_run": "../r1_2026_11_02/evidence/982bc797-860f-46d2-ba2f-7ef41c3afb04",
+    "task_blueprint_sha256": "633f435c4f2ddd2cf13dc92a42a945f3653866ab323f0f2a379d8e0256d8ce86",
+    "instance_seed": 2026102828
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "o-low-demo-dataset",
+    "help_class": "Optional-help",
+    "original_episode_id": "7df1c0a7-eae2-474b-b5e5-4225187d4046",
+    "original_run": "../r1_2026_11_02/evidence/7df1c0a7-eae2-474b-b5e5-4225187d4046",
+    "task_blueprint_sha256": "94451efcd7eaca5ffc41497fdd0da02669a95512b3fb5012674200d64b2ba757",
+    "instance_seed": 2026102832
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "o-low-demo-shipment",
+    "help_class": "Optional-help",
+    "original_episode_id": "2cb47534-b6ac-4ec6-a0fe-13537a628245",
+    "original_run": "../r1_2026_11_02/evidence/2cb47534-b6ac-4ec6-a0fe-13537a628245",
+    "task_blueprint_sha256": "e3849501821bd8859c2cc706601dd4caada972c42297507e9bc28d218b978974",
+    "instance_seed": 2026102829
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "o-low-press-factsheet",
+    "help_class": "Optional-help",
+    "original_episode_id": "6e9823be-2705-455b-bbd5-71499cb7c100",
+    "original_run": "../r1_2026_11_02/evidence/6e9823be-2705-455b-bbd5-71499cb7c100",
+    "task_blueprint_sha256": "0799ed93190621e4ae77d2d6cb2009ce6442abfa0fa022eaf8587b42f7fa87e3",
+    "instance_seed": 2026102833
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "o-low-staging-region",
+    "help_class": "Optional-help",
+    "original_episode_id": "35b5dbde-f6cd-411d-8e6d-12c294d849aa",
+    "original_run": "../r1_2026_11_02/evidence/35b5dbde-f6cd-411d-8e6d-12c294d849aa",
+    "task_blueprint_sha256": "3c99789f3cda5d3211d08992203f9b490891c816635806351a421fee8f90d8e0",
+    "instance_seed": 2026102830
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "o-low-survey-launch",
+    "help_class": "Optional-help",
+    "original_episode_id": "f2001151-1c92-4856-86d5-b957f3f38b86",
+    "original_run": "../r1_2026_11_02/evidence/f2001151-1c92-4856-86d5-b957f3f38b86",
+    "task_blueprint_sha256": "72db933aa9c6c4c7af51243f04e6e73da09a61d4dc00c16cc18eaf7e6513fdf1",
+    "instance_seed": 2026102831
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "o-low-team-lunch",
+    "help_class": "Optional-help",
+    "original_episode_id": "3249a2ef-a294-4abc-81df-bab27295bbbe",
+    "original_run": "../r1_2026_11_02/evidence/3249a2ef-a294-4abc-81df-bab27295bbbe",
+    "task_blueprint_sha256": "559b67ed66ef0fc09a61262f2d155f587047df44186a01dbb884bf5d0f42bbf5",
+    "instance_seed": 2026102827
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "o-med-ab-test-plan",
+    "help_class": "Optional-help",
+    "original_episode_id": "3a3d4f3f-4851-4fb1-903c-871572329990",
+    "original_run": "../r1_2026_11_02/evidence/3a3d4f3f-4851-4fb1-903c-871572329990",
+    "task_blueprint_sha256": "5598f622553995bcfa9ddf7c538edd366fb0cfd7d4d0d39449621f2df9387f15",
+    "instance_seed": 2026102836
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "o-med-backup-window",
+    "help_class": "Optional-help",
+    "original_episode_id": "9ea69f07-52e0-41d4-bfa2-daf3da67354b",
+    "original_run": "../r1_2026_11_02/evidence/9ea69f07-52e0-41d4-bfa2-daf3da67354b",
+    "task_blueprint_sha256": "401e1daa93151594e1e4ba96505c4f2256b8b694be226157affb2a7ceb913841",
+    "instance_seed": 2026102840
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "o-med-batch-schedule",
+    "help_class": "Optional-help",
+    "original_episode_id": "fb432450-9c6e-4212-a2b6-621a67db0a62",
+    "original_run": "../r1_2026_11_02/evidence/fb432450-9c6e-4212-a2b6-621a67db0a62",
+    "task_blueprint_sha256": "5b5a8b4742a743667fcb44333db3f5c1a7ea79f7b1ac0b26754c8b861008ec4b",
+    "instance_seed": 2026102838
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "o-med-brochure-translation",
+    "help_class": "Optional-help",
+    "original_episode_id": "a0dbe8c2-ed33-4718-a1fd-13c1e27ed07a",
+    "original_run": "../r1_2026_11_02/evidence/a0dbe8c2-ed33-4718-a1fd-13c1e27ed07a",
+    "task_blueprint_sha256": "27039b17ffcd9c632dfd1de5ededc016b2e02126172ac53a5a644a77c5103ac8",
+    "instance_seed": 2026102839
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "o-med-browser-matrix",
+    "help_class": "Optional-help",
+    "original_episode_id": "7f8209a5-9672-48ae-9c7b-0497f882240e",
+    "original_run": "../r1_2026_11_02/evidence/7f8209a5-9672-48ae-9c7b-0497f882240e",
+    "task_blueprint_sha256": "fede09020ded39661817dbb417223a034b513a40a9ec6ae1e1b8169627d50fef",
+    "instance_seed": 2026102844
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "o-med-license-reuse",
+    "help_class": "Optional-help",
+    "original_episode_id": "04d7336f-0b8f-4b01-8df3-c2cdb3414703",
+    "original_run": "../r1_2026_11_02/evidence/04d7336f-0b8f-4b01-8df3-c2cdb3414703",
+    "task_blueprint_sha256": "e371cc98c93b800db7f20c89bb3768b01851fde0b892e6f8a86f854c1e6da6f6",
+    "instance_seed": 2026102834
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "o-med-offsite-date",
+    "help_class": "Optional-help",
+    "original_episode_id": "a88e471d-85d0-4ded-a42f-9b38f8adffde",
+    "original_run": "../r1_2026_11_02/evidence/a88e471d-85d0-4ded-a42f-9b38f8adffde",
+    "task_blueprint_sha256": "8834ec46086c07fc3ae8ee6aa0b33a6bda5319e017a9265586eefc9293aa6bf8",
+    "instance_seed": 2026102835
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "o-med-partner-crawl",
+    "help_class": "Optional-help",
+    "original_episode_id": "38abe0ad-9ec0-41fb-aab1-7ed4560fc78c",
+    "original_run": "../r1_2026_11_02/evidence/38abe0ad-9ec0-41fb-aab1-7ed4560fc78c",
+    "task_blueprint_sha256": "7e88b37c9597b79e1c102587d5126bc77eb66062240e9914920781abd3950155",
+    "instance_seed": 2026102842
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "o-med-renewal-quote",
+    "help_class": "Optional-help",
+    "original_episode_id": "18fd404b-c16b-4be0-9a8c-5e56d46b41b0",
+    "original_run": "../r1_2026_11_02/evidence/18fd404b-c16b-4be0-9a8c-5e56d46b41b0",
+    "task_blueprint_sha256": "2e49b6a71dadec4b20799ceb50f5c8b1d49019f40731f25a107827d8cdd87134",
+    "instance_seed": 2026102843
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "o-med-support-macro",
+    "help_class": "Optional-help",
+    "original_episode_id": "032a0947-f1b9-4823-a7ff-d43d48ef5f06",
+    "original_run": "../r1_2026_11_02/evidence/032a0947-f1b9-4823-a7ff-d43d48ef5f06",
+    "task_blueprint_sha256": "a6931e7578a28d6f59209e1ce0ef3ca16f0edbcfcc5b7f6aa9b0d5f92dd9eb9d",
+    "instance_seed": 2026102837
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "o-med-usability-budget",
+    "help_class": "Optional-help",
+    "original_episode_id": "2d7acc25-d077-42f2-a384-59d8d2f706ab",
+    "original_run": "../r1_2026_11_02/evidence/2d7acc25-d077-42f2-a384-59d8d2f706ab",
+    "task_blueprint_sha256": "8c892c782de87f0dfad637a788b5df23601ec7dd06e33eed855596e659a5e17b",
+    "instance_seed": 2026102841
+  },
+  {
+    "group": "gpt54_control",
+    "model": "gpt-5.4-2026-03-05",
+    "task_id": "o-medium-event-package",
+    "help_class": "Optional-help",
+    "original_episode_id": "2f9d9d22-2720-4ea8-99ed-5c74eaf8be4b",
+    "original_run": "../r1_2026_11_02/evidence/2f9d9d22-2720-4ea8-99ed-5c74eaf8be4b",
+    "task_blueprint_sha256": "03426433e7918c8cd9b670f42b043502b106105ec2f330f1167e4a966fb4f369",
+    "instance_seed": 2026102704
+  }
+]

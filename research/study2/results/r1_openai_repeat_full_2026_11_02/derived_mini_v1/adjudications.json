@@ -1,0 +1,1305 @@
+[
+  {
+    "group": "mini_repeat",
+    "task_id": "m-high-access-recert",
+    "episode_id": "b72d5e74-474f-4c50-8b39-4b33ec2ce453",
+    "business": "business_failure",
+    "projected_artifact": {
+      "accounts_to_keep": 1,
+      "accounts_to_remove": 13,
+      "hr_status_ref": "Chen Xinyi confirms current employment status for staff on the API server access list.",
+      "authorization_ref": "Current access lists come from the API server operations team; CTO approval is required, and for 2026-11-05 the CTO is away without sign-off access with Zhang Wei designated as technical deputy."
+    },
+    "projection_notes": [
+      "accounts_to_keep: actual named list -> actual count 1; not gold count",
+      "accounts_to_remove: actual named list -> actual count 13; not gold count"
+    ],
+    "matched_gold_fields": {
+      "accounts_to_keep": false,
+      "accounts_to_remove": false,
+      "hr_status_ref": false,
+      "authorization_ref": false
+    },
+    "T": 0.0,
+    "R": 0.0,
+    "C": 0,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "Q": null,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "contact_labels": [],
+    "independent_NPC_or_agent_process_issues": [],
+    "reason": "Actual answer retains incorrect current core facts; not a format-only or implicit-approval denial.",
+    "rule_version": "semantic-content-pending-truthful-extra-v3-repeat-mini-v1",
+    "reviewer": "nonblind AI direct review; no new user case adjudication or paid judge",
+    "source_packet": "review_inputs/mini_repeat__m-high-access-recert.json",
+    "source_packet_sha256": "60bf4bb3e6a7f9f5a5aaa8953b5c0b3959461b48ac4a0b3bd4bdf109e1bd5f53",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "mini_repeat",
+    "task_id": "m-high-customer-data-request",
+    "episode_id": "e5894752-fa82-40fa-93fb-7525dd6d3397",
+    "business": "business_failure",
+    "projected_artifact": {
+      "account_id": "C-881",
+      "data_categories": [
+        "usage logs"
+      ],
+      "record_count": 12000,
+      "signed_by": "Sarah Johnson",
+      "authorization_ref": "2026-11-05 response record for Contoso data request"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "account_id": false,
+      "data_categories": false,
+      "record_count": false,
+      "signed_by": true,
+      "authorization_ref": false
+    },
+    "T": 0.2,
+    "R": 0.2,
+    "C": 0,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "Q": null,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "contact_labels": [],
+    "independent_NPC_or_agent_process_issues": [],
+    "reason": "Actual answer retains incorrect current core facts; not a format-only or implicit-approval denial.",
+    "rule_version": "semantic-content-pending-truthful-extra-v3-repeat-mini-v1",
+    "reviewer": "nonblind AI direct review; no new user case adjudication or paid judge",
+    "source_packet": "review_inputs/mini_repeat__m-high-customer-data-request.json",
+    "source_packet_sha256": "a47c88376ffe8b3c600c023e5a29fb816b757667aeac6443ee695eddb3674293",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "mini_repeat",
+    "task_id": "m-high-db-migration",
+    "episode_id": "1775e927-aca7-4318-b105-e8c6b5db14a9",
+    "business": "business_failure",
+    "projected_artifact": {
+      "migration_id": "M-14",
+      "downtime_minutes": 30,
+      "test_signoff": "Liu Qiang",
+      "authorization_ref": "Database project manager approval under 60 minutes downtime"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "migration_id": false,
+      "downtime_minutes": false,
+      "test_signoff": false,
+      "authorization_ref": false
+    },
+    "T": 0.0,
+    "R": -0.05,
+    "C": 1,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "Q": null,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "contact_labels": [
+      {
+        "request_id": "biBkYXGCTFQvAqRDP",
+        "person": "Zhang Wei",
+        "role_cost": 1,
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Nonredundant request to the task's relevant fact holder or authorized approver; no wrong-person/auth violation. Later failure to read/adopt a useful reply is disclosed separately, not invented as an additional old-R waste category."
+      }
+    ],
+    "independent_NPC_or_agent_process_issues": [
+      {
+        "kind": "agent_did_not_read_delivered_reply",
+        "explanation": "Actual NPC reply was delivered, but send_message returned only an acknowledgement. No read_messages call exposed that reply to the Agent; do not describe the reply as knowledge acquired by the Agent. Not a transport failure."
+      }
+    ],
+    "reason": "Actual answer retains incorrect current core facts; not a format-only or implicit-approval denial.",
+    "rule_version": "semantic-content-pending-truthful-extra-v3-repeat-mini-v1",
+    "reviewer": "nonblind AI direct review; no new user case adjudication or paid judge",
+    "source_packet": "review_inputs/mini_repeat__m-high-db-migration.json",
+    "source_packet_sha256": "0bdd1780a0bbe85d8338145fdebd85e7ed16939850ae5dbc97ee9d1c5a340370",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "mini_repeat",
+    "task_id": "m-high-incident-postmortem",
+    "episode_id": "b549b668-7719-4103-a0de-6fb7df2292a4",
+    "business": "business_failure",
+    "projected_artifact": {
+      "incident_id": "INC-221",
+      "root_cause_code": "RC-NET",
+      "duration_minutes": 35,
+      "publication_reference": "Huang Jie"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "incident_id": true,
+      "root_cause_code": false,
+      "duration_minutes": false,
+      "publication_reference": false
+    },
+    "T": 0.25,
+    "R": 0.25,
+    "C": 0,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "Q": null,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "contact_labels": [],
+    "independent_NPC_or_agent_process_issues": [],
+    "reason": "Actual answer retains incorrect current core facts; not a format-only or implicit-approval denial.",
+    "rule_version": "semantic-content-pending-truthful-extra-v3-repeat-mini-v1",
+    "reviewer": "nonblind AI direct review; no new user case adjudication or paid judge",
+    "source_packet": "review_inputs/mini_repeat__m-high-incident-postmortem.json",
+    "source_packet_sha256": "9640a876bba34e76cd43f20aa28dece3522fedcadc70bbd895fe1d328b1aa69f",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "mini_repeat",
+    "task_id": "m-high-model-release",
+    "episode_id": "44a3495e-8da6-4c7e-b762-56eb55d64347",
+    "business": "business_failure",
+    "projected_artifact": null,
+    "projection_notes": [
+      "No workspace, final text or public deliverable."
+    ],
+    "matched_gold_fields": {
+      "checkpoint": false,
+      "eval_report_id": false,
+      "safety_attestation": false,
+      "release_tier": false,
+      "mandate_reference": false
+    },
+    "T": 0,
+    "R": -0.05,
+    "C": 1,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "Q": null,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "contact_labels": [
+      {
+        "request_id": "itFKsz3jKsBdapt4S",
+        "person": "Wang Fang",
+        "role_cost": 1,
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Nonredundant request to the task's relevant fact holder or authorized approver; no wrong-person/auth violation. Later failure to read/adopt a useful reply is disclosed separately, not invented as an additional old-R waste category."
+      }
+    ],
+    "independent_NPC_or_agent_process_issues": [
+      {
+        "kind": "agent_did_not_read_delivered_reply",
+        "explanation": "Actual NPC reply was delivered, but send_message returned only an acknowledgement. No read_messages call exposed that reply to the Agent; do not describe the reply as knowledge acquired by the Agent. Not a transport failure."
+      }
+    ],
+    "reason": "No deliverable at all after normal submit.",
+    "rule_version": "semantic-content-pending-truthful-extra-v3-repeat-mini-v1",
+    "reviewer": "nonblind AI direct review; no new user case adjudication or paid judge",
+    "source_packet": "review_inputs/mini_repeat__m-high-model-release.json",
+    "source_packet_sha256": "64e57edb9d07be7ced41bf4153f1e9dbac4a5a0ef6ffc8275ebe299001049f25",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "mini_repeat",
+    "task_id": "m-high-payroll-correction",
+    "episode_id": "39481be0-4407-4567-b22e-78631c30ff3a",
+    "business": "business_failure",
+    "projected_artifact": {
+      "hours": 30,
+      "hr_verification_id": "HR-2026-10-25-DB-ONCALL-30",
+      "amount_usd": 1800,
+      "signed_by": "Chen Xinyi",
+      "authorization_ref": "FIN-APPROVED-2026-11-05-DB-ONCALL"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "hours": false,
+      "hr_verification_id": false,
+      "amount_usd": false,
+      "signed_by": false,
+      "authorization_ref": false
+    },
+    "T": 0.0,
+    "R": 0.0,
+    "C": 0,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "Q": null,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "contact_labels": [],
+    "independent_NPC_or_agent_process_issues": [],
+    "reason": "Actual answer retains incorrect current core facts; not a format-only or implicit-approval denial.",
+    "rule_version": "semantic-content-pending-truthful-extra-v3-repeat-mini-v1",
+    "reviewer": "nonblind AI direct review; no new user case adjudication or paid judge",
+    "source_packet": "review_inputs/mini_repeat__m-high-payroll-correction.json",
+    "source_packet_sha256": "5bed02605d91cd9aa0b26c2c6958690338d9ed6110f61733a183d76366a19d75",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "mini_repeat",
+    "task_id": "m-high-plugin-purchase",
+    "episode_id": "569be5d0-b23e-4f63-9fed-eae2bd1d44e0",
+    "business": "business_success",
+    "projected_artifact": {
+      "seats": 28,
+      "total_usd": 12600,
+      "security_review_id": "SR-LCX-4",
+      "signed_by": "Chen Xinyi",
+      "authorization_ref": "PO-APR-912"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "seats": true,
+      "total_usd": true,
+      "security_review_id": true,
+      "signed_by": true,
+      "authorization_ref": true
+    },
+    "T": 1.0,
+    "R": -0.3,
+    "C": 10,
+    "Nauth": 2,
+    "Nwaste": 2,
+    "Q": null,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "contact_labels": [
+      {
+        "request_id": "Bo8qF6XfyFLvbQcAA",
+        "person": "Alex Turner",
+        "role_cost": 1,
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Nonredundant request to the task's relevant fact holder or authorized approver; no wrong-person/auth violation. Later failure to read/adopt a useful reply is disclosed separately, not invented as an additional old-R waste category."
+      },
+      {
+        "request_id": "GCyiWFD3hrWRfDH7E",
+        "person": "Emma Lewis",
+        "role_cost": 1,
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Nonredundant request to the task's relevant fact holder or authorized approver; no wrong-person/auth violation. Later failure to read/adopt a useful reply is disclosed separately, not invented as an additional old-R waste category."
+      },
+      {
+        "request_id": "QXBwxY9bgiEghkSWq",
+        "person": "Sarah Johnson",
+        "role_cost": 3,
+        "Nauth": 1,
+        "Nwaste": 1,
+        "reason": "Asked for approval/reference from the wrong currently authorized signer. The public purchase policy routes this USD12600 order to Finance, and the public out-of-office document names acting approver Chen. A redirection reply does not turn the original avoidable approval request into a correct-role request under the unchanged old-R wrong_person rule."
+      },
+      {
+        "request_id": "8ML6tHdG7vokavKYW",
+        "person": "David Wong",
+        "role_cost": 3,
+        "Nauth": 1,
+        "Nwaste": 1,
+        "reason": "Asked for approval/reference from the wrong currently authorized signer. The public purchase policy routes this USD12600 order to Finance, and the public out-of-office document names acting approver Chen. A redirection reply does not turn the original avoidable approval request into a correct-role request under the unchanged old-R wrong_person rule."
+      },
+      {
+        "request_id": "4RurgW5P494qSyCNx",
+        "person": "Chen Xinyi",
+        "role_cost": 2,
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Nonredundant request to the task's relevant fact holder or authorized approver; no wrong-person/auth violation. Later failure to read/adopt a useful reply is disclosed separately, not invented as an additional old-R waste category."
+      }
+    ],
+    "independent_NPC_or_agent_process_issues": [],
+    "reason": "All current gold content is recoverable from the actual delivered answer. Business/atomic T do not certify every private-DAG transition.",
+    "rule_version": "semantic-content-pending-truthful-extra-v3-repeat-mini-v1",
+    "reviewer": "nonblind AI direct review; no new user case adjudication or paid judge",
+    "source_packet": "review_inputs/mini_repeat__m-high-plugin-purchase.json",
+    "source_packet_sha256": "c66194cad7ef9b5e1ee538eaea9dd7a27796b5266354e85490874188c4ff2b99",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "mini_repeat",
+    "task_id": "m-high-portal-launch",
+    "episode_id": "24b37da6-32cc-49cf-8345-28b10ace7652",
+    "business": "business_failure",
+    "projected_artifact": {
+      "docs_build_id": "DB-301",
+      "qa_signoff": "Liu Qiang",
+      "launch_date": "2026-11-12",
+      "authorization_ref": "Jessica Chen (delegated approval for Huang Jie, per OOO 2026-11-04 to 2026-11-20)"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "docs_build_id": false,
+      "qa_signoff": false,
+      "launch_date": false,
+      "authorization_ref": false
+    },
+    "T": 0.0,
+    "R": 0.0,
+    "C": 0,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "Q": null,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "contact_labels": [],
+    "independent_NPC_or_agent_process_issues": [],
+    "reason": "Actual answer retains incorrect current core facts; not a format-only or implicit-approval denial.",
+    "rule_version": "semantic-content-pending-truthful-extra-v3-repeat-mini-v1",
+    "reviewer": "nonblind AI direct review; no new user case adjudication or paid judge",
+    "source_packet": "review_inputs/mini_repeat__m-high-portal-launch.json",
+    "source_packet_sha256": "2d491dc60e2dfec47d1cc441675f841bf37d7886bbef862baa27ebf2c88d07e1",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "mini_repeat",
+    "task_id": "m-high-price-change",
+    "episode_id": "adc275f6-d4a1-49d6-86e5-7aa6cc333543",
+    "business": "business_success",
+    "projected_artifact": {
+      "list_price_usd": 59,
+      "discount_percent": 25,
+      "margin_check_id": "MC-59-25",
+      "signed_by": "Sarah Johnson",
+      "authorization_ref": "PRC-APR-12"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "list_price_usd": true,
+      "discount_percent": true,
+      "margin_check_id": true,
+      "signed_by": true,
+      "authorization_ref": true
+    },
+    "T": 1.0,
+    "R": 0.75,
+    "C": 5,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "Q": null,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "contact_labels": [
+      {
+        "request_id": "x2P9YW8aMrbD879Jp",
+        "person": "Huang Jie",
+        "role_cost": 2,
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Nonredundant request to the task's relevant fact holder or authorized approver; no wrong-person/auth violation. Later failure to read/adopt a useful reply is disclosed separately, not invented as an additional old-R waste category."
+      },
+      {
+        "request_id": "iArNKqWL8Mr3QXbMn",
+        "person": "Sarah Johnson",
+        "role_cost": 3,
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Nonredundant request to the task's relevant fact holder or authorized approver; no wrong-person/auth violation. Later failure to read/adopt a useful reply is disclosed separately, not invented as an additional old-R waste category."
+      }
+    ],
+    "independent_NPC_or_agent_process_issues": [
+      {
+        "kind": "NPC_premature_grant_and_required_context_value_disclosure",
+        "message_id": "Hv4HvmNzBpeRjCxRv",
+        "request_id": "iArNKqWL8Mr3QXbMn",
+        "explanation": "Sarah's H3 owns only PRC-APR-12; MC-59-25 occurs in required_context. No Finance conversation occurred and the request did not cite the check. NPC nevertheless granted approval and supplied MC-59-25. The agent's answer contains all gold facts, so content passes; this does not certify a real Finance margin check or a valid simulator prerequisite."
+      }
+    ],
+    "reason": "All current gold content is recoverable from the actual delivered answer. Business/atomic T do not certify every private-DAG transition.",
+    "rule_version": "semantic-content-pending-truthful-extra-v3-repeat-mini-v1",
+    "reviewer": "nonblind AI direct review; no new user case adjudication or paid judge",
+    "source_packet": "review_inputs/mini_repeat__m-high-price-change.json",
+    "source_packet_sha256": "a3edd6bf17f527c919a1f00823a80819436ae101995f2f6b29422755142c200b",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "mini_repeat",
+    "task_id": "m-high-service-cutover",
+    "episode_id": "0eea9031-f63d-4174-8db2-8802b29b62b0",
+    "business": "business_failure",
+    "projected_artifact": {
+      "allocation_revision": "A-6",
+      "replica_count": 4,
+      "window_utc": "01:00-01:30",
+      "readiness_reference": "QA-OLD-6",
+      "mandate_reference": "TECH-DRAFT-6",
+      "rollback_minutes": 10
+    },
+    "projection_notes": [
+      "Explicit UTC RFC3339 interval recovered as 01:00-01:30; still the wrong current window."
+    ],
+    "matched_gold_fields": {
+      "allocation_revision": false,
+      "replica_count": false,
+      "window_utc": false,
+      "readiness_reference": false,
+      "mandate_reference": false,
+      "rollback_minutes": false
+    },
+    "T": 0.0,
+    "R": 0.0,
+    "C": 0,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "Q": null,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "contact_labels": [],
+    "independent_NPC_or_agent_process_issues": [],
+    "reason": "Actual answer retains incorrect current core facts; not a format-only or implicit-approval denial.",
+    "rule_version": "semantic-content-pending-truthful-extra-v3-repeat-mini-v1",
+    "reviewer": "nonblind AI direct review; no new user case adjudication or paid judge",
+    "source_packet": "review_inputs/mini_repeat__m-high-service-cutover.json",
+    "source_packet_sha256": "b5e0f17db912abbf3d4553b7987a76de266810d0af92d1d37bd42cd26c737c0f",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "mini_repeat",
+    "task_id": "m-low-customer-mailing",
+    "episode_id": "24b171db-1a5d-4c06-8f51-1560d9fd909c",
+    "business": "business_failure",
+    "projected_artifact": {
+      "segment_id": "SEG-Q3-ENT",
+      "recipient_count": 420,
+      "send_date": "2026-11-12",
+      "authorization_ref": "APR-Q3"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "segment_id": false,
+      "recipient_count": false,
+      "send_date": true,
+      "authorization_ref": false
+    },
+    "T": 0.25,
+    "R": 0.25,
+    "C": 0,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "Q": null,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "contact_labels": [],
+    "independent_NPC_or_agent_process_issues": [],
+    "reason": "Actual answer retains incorrect current core facts; not a format-only or implicit-approval denial.",
+    "rule_version": "semantic-content-pending-truthful-extra-v3-repeat-mini-v1",
+    "reviewer": "nonblind AI direct review; no new user case adjudication or paid judge",
+    "source_packet": "review_inputs/mini_repeat__m-low-customer-mailing.json",
+    "source_packet_sha256": "e72533fb1e4873d15632aea2cfbb276084005b203dc888356fd3f8b2d9d06c2a",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "mini_repeat",
+    "task_id": "m-low-gpu-job-request",
+    "episode_id": "b299d260-2463-47a7-9b9b-dbe7452cbead",
+    "business": "business_failure",
+    "projected_artifact": {
+      "experiment": "E-55",
+      "gpu_hours": 120,
+      "queue": "research-a",
+      "quota_ref": "Q-OLD-12"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "experiment": true,
+      "gpu_hours": false,
+      "queue": false,
+      "quota_ref": false
+    },
+    "T": 0.25,
+    "R": 0.25,
+    "C": 0,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "Q": null,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "contact_labels": [],
+    "independent_NPC_or_agent_process_issues": [],
+    "reason": "Actual answer retains incorrect current core facts; not a format-only or implicit-approval denial.",
+    "rule_version": "semantic-content-pending-truthful-extra-v3-repeat-mini-v1",
+    "reviewer": "nonblind AI direct review; no new user case adjudication or paid judge",
+    "source_packet": "review_inputs/mini_repeat__m-low-gpu-job-request.json",
+    "source_packet_sha256": "b87eac416270f1e66d8f04421e9d117405da27fe65e4e60ffc0db0ad18db02ae",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "mini_repeat",
+    "task_id": "m-low-ledger-allocation",
+    "episode_id": "8fba885e-2763-42af-993f-780bbeded635",
+    "business": "business_failure",
+    "projected_artifact": {
+      "invoice_id": "INV-841",
+      "amount_usd": 2400,
+      "cost_center": "CC-410",
+      "ledger_period": "2026-11"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "invoice_id": true,
+      "amount_usd": true,
+      "cost_center": false,
+      "ledger_period": true
+    },
+    "T": 0.75,
+    "R": 0.75,
+    "C": 0,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "Q": null,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "contact_labels": [],
+    "independent_NPC_or_agent_process_issues": [],
+    "reason": "Actual answer retains incorrect current core facts; not a format-only or implicit-approval denial.",
+    "rule_version": "semantic-content-pending-truthful-extra-v3-repeat-mini-v1",
+    "reviewer": "nonblind AI direct review; no new user case adjudication or paid judge",
+    "source_packet": "review_inputs/mini_repeat__m-low-ledger-allocation.json",
+    "source_packet_sha256": "fd539400a03141f908df71c87500cef445da6fccd632d1ccb52bea4533f1438d",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "mini_repeat",
+    "task_id": "m-low-new-hire-record",
+    "episode_id": "8ff28897-7afa-40f2-8420-dd64bf41c128",
+    "business": "business_failure",
+    "projected_artifact": {
+      "offer_id": "O-317",
+      "employee_id": "TMP-317",
+      "start_date": "2026-11-02",
+      "department": "Search"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "offer_id": true,
+      "employee_id": false,
+      "start_date": false,
+      "department": true
+    },
+    "T": 0.5,
+    "R": 0.5,
+    "C": 0,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "Q": null,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "contact_labels": [],
+    "independent_NPC_or_agent_process_issues": [],
+    "reason": "Actual answer retains incorrect current core facts; not a format-only or implicit-approval denial.",
+    "rule_version": "semantic-content-pending-truthful-extra-v3-repeat-mini-v1",
+    "reviewer": "nonblind AI direct review; no new user case adjudication or paid judge",
+    "source_packet": "review_inputs/mini_repeat__m-low-new-hire-record.json",
+    "source_packet_sha256": "20f8d995e089340f71d6b4fdf309191ee2b3de1d9464c24fa8fe62046739e8ad",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "mini_repeat",
+    "task_id": "m-low-partner-key-config",
+    "episode_id": "6e730cf4-c84e-4c9f-90cb-9f07e5429b70",
+    "business": "business_failure",
+    "projected_artifact": {
+      "partner": "Orbit",
+      "key_alias": "ORB-K1",
+      "scope": "read:search",
+      "expires_on": "2026-11-30"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "partner": true,
+      "key_alias": false,
+      "scope": true,
+      "expires_on": false
+    },
+    "T": 0.5,
+    "R": 0.5,
+    "C": 0,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "Q": null,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "contact_labels": [],
+    "independent_NPC_or_agent_process_issues": [],
+    "reason": "Actual answer retains incorrect current core facts; not a format-only or implicit-approval denial.",
+    "rule_version": "semantic-content-pending-truthful-extra-v3-repeat-mini-v1",
+    "reviewer": "nonblind AI direct review; no new user case adjudication or paid judge",
+    "source_packet": "review_inputs/mini_repeat__m-low-partner-key-config.json",
+    "source_packet_sha256": "d22a8cb5d469f0ca0071a49884ab3bd6f137c478feb511810c6a1530ff9dc189",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "mini_repeat",
+    "task_id": "m-low-policy-citation",
+    "episode_id": "85d33e2f-12e2-46ad-ab06-da07f786cef7",
+    "business": "business_failure",
+    "projected_artifact": {
+      "policy": "remote-work",
+      "version": "v3.1",
+      "effective_date": "2026-01-01",
+      "url_slug": "remote-work-v3"
+    },
+    "projection_notes": [
+      "policy: 'remote-work policy' semantically denotes 'remote-work' in the public task"
+    ],
+    "matched_gold_fields": {
+      "policy": true,
+      "version": false,
+      "effective_date": false,
+      "url_slug": false
+    },
+    "T": 0.25,
+    "R": 0.25,
+    "C": 0,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "Q": null,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "contact_labels": [],
+    "independent_NPC_or_agent_process_issues": [],
+    "reason": "Actual answer retains incorrect current core facts; not a format-only or implicit-approval denial.",
+    "rule_version": "semantic-content-pending-truthful-extra-v3-repeat-mini-v1",
+    "reviewer": "nonblind AI direct review; no new user case adjudication or paid judge",
+    "source_packet": "review_inputs/mini_repeat__m-low-policy-citation.json",
+    "source_packet_sha256": "54730ac44e39242156bfacffc420f52b60d6ecfe9c6492c4fb3bae5b54cb4b4a",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "mini_repeat",
+    "task_id": "m-low-regression-run",
+    "episode_id": "11f153bc-4a36-45d1-8b1c-e1c8a7676d4a",
+    "business": "business_failure",
+    "projected_artifact": {
+      "build": "Colly 3.2",
+      "test_plan_id": "TP-31",
+      "suite_size": 180,
+      "environment": "staging-1"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "build": true,
+      "test_plan_id": false,
+      "suite_size": false,
+      "environment": false
+    },
+    "T": 0.25,
+    "R": 0.25,
+    "C": 0,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "Q": null,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "contact_labels": [],
+    "independent_NPC_or_agent_process_issues": [],
+    "reason": "Actual answer retains incorrect current core facts; not a format-only or implicit-approval denial.",
+    "rule_version": "semantic-content-pending-truthful-extra-v3-repeat-mini-v1",
+    "reviewer": "nonblind AI direct review; no new user case adjudication or paid judge",
+    "source_packet": "review_inputs/mini_repeat__m-low-regression-run.json",
+    "source_packet_sha256": "d00a2478d56ada3ef830fb15f6e6bcff4b8863975a009f96d4634c72207fbdcc",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "mini_repeat",
+    "task_id": "m-low-release-note-header",
+    "episode_id": "ac756844-3f5a-4bf1-86cf-646e7bf37df6",
+    "business": "business_failure",
+    "projected_artifact": {
+      "product": "OpenSearch",
+      "version": "2.11.0",
+      "release_date": "2026-11-12",
+      "known_issue_id": "KI-88"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "product": true,
+      "version": false,
+      "release_date": false,
+      "known_issue_id": false
+    },
+    "T": 0.25,
+    "R": 0.25,
+    "C": 0,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "Q": null,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "contact_labels": [],
+    "independent_NPC_or_agent_process_issues": [],
+    "reason": "Actual answer retains incorrect current core facts; not a format-only or implicit-approval denial.",
+    "rule_version": "semantic-content-pending-truthful-extra-v3-repeat-mini-v1",
+    "reviewer": "nonblind AI direct review; no new user case adjudication or paid judge",
+    "source_packet": "review_inputs/mini_repeat__m-low-release-note-header.json",
+    "source_packet_sha256": "51ef137766aaf39bbb7fb09fa17d5ec41bbcf8818c96b291860c9b4f64d898c1",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "mini_repeat",
+    "task_id": "m-med-campaign-spend",
+    "episode_id": "437fc69f-dd96-495c-b736-886569afc8e3",
+    "business": "business_failure",
+    "projected_artifact": {
+      "campaign": "Q4 webinar",
+      "spend_usd": 4200,
+      "signed_by": "Mark Johnson",
+      "authorization_ref": "Spend policy: spend up to USD 5000 approved by Sales Director; plan.md lists USD 4200 media spend for the Q4 webinar campaign."
+    },
+    "projection_notes": [
+      "campaign: 'Q4 webinar campaign' semantically denotes 'Q4 webinar' in the public task"
+    ],
+    "matched_gold_fields": {
+      "campaign": true,
+      "spend_usd": false,
+      "signed_by": false,
+      "authorization_ref": false
+    },
+    "T": 0.25,
+    "R": 0.25,
+    "C": 0,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "Q": null,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "contact_labels": [],
+    "independent_NPC_or_agent_process_issues": [],
+    "reason": "Actual answer retains incorrect current core facts; not a format-only or implicit-approval denial.",
+    "rule_version": "semantic-content-pending-truthful-extra-v3-repeat-mini-v1",
+    "reviewer": "nonblind AI direct review; no new user case adjudication or paid judge",
+    "source_packet": "review_inputs/mini_repeat__m-med-campaign-spend.json",
+    "source_packet_sha256": "2195c581b72ff80723c9c53f57c899b14b4499b77025a61395926bb67c28d20d",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "mini_repeat",
+    "task_id": "m-med-conference-travel",
+    "episode_id": "21ce013b-f63e-4015-94ec-38365d433450",
+    "business": "business_failure",
+    "projected_artifact": {
+      "travelers": 1,
+      "total_usd": 6400,
+      "budget_code": "AI-TR-25",
+      "signed_by": "David Wong",
+      "authorization_ref": "travel-policy: AI budget holder confirms travelers/budget; Finance Director approves conference travel"
+    },
+    "projection_notes": [
+      "travelers: actual named list -> actual count 1; not gold count"
+    ],
+    "matched_gold_fields": {
+      "travelers": false,
+      "total_usd": false,
+      "budget_code": false,
+      "signed_by": false,
+      "authorization_ref": false
+    },
+    "T": 0.0,
+    "R": 0.0,
+    "C": 0,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "Q": null,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "contact_labels": [],
+    "independent_NPC_or_agent_process_issues": [],
+    "reason": "Actual answer retains incorrect current core facts; not a format-only or implicit-approval denial.",
+    "rule_version": "semantic-content-pending-truthful-extra-v3-repeat-mini-v1",
+    "reviewer": "nonblind AI direct review; no new user case adjudication or paid judge",
+    "source_packet": "review_inputs/mini_repeat__m-med-conference-travel.json",
+    "source_packet_sha256": "c965f8ea7409cb605489dd068796bfd0bf514cc350b5d459648c65e29d0fc2ad",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "mini_repeat",
+    "task_id": "m-med-contractor-invoice",
+    "episode_id": "42888dac-30f4-4872-9ab3-5808e5c0d3a8",
+    "business": "business_failure",
+    "projected_artifact": {
+      "vendor": "DBX Consulting",
+      "hours": 64,
+      "amount_usd": 9600,
+      "authorization_ref": "Li Ming"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "vendor": true,
+      "hours": false,
+      "amount_usd": false,
+      "authorization_ref": false
+    },
+    "T": 0.25,
+    "R": 0.25,
+    "C": 0,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "Q": null,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "contact_labels": [],
+    "independent_NPC_or_agent_process_issues": [],
+    "reason": "Actual answer retains incorrect current core facts; not a format-only or implicit-approval denial.",
+    "rule_version": "semantic-content-pending-truthful-extra-v3-repeat-mini-v1",
+    "reviewer": "nonblind AI direct review; no new user case adjudication or paid judge",
+    "source_packet": "review_inputs/mini_repeat__m-med-contractor-invoice.json",
+    "source_packet_sha256": "4b3e3db63f45d8c06233b9f4cd4c5346210ff4b5ec4316d6e4b76e7d7cdf31b8",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "mini_repeat",
+    "task_id": "m-med-flag-rollout",
+    "episode_id": "b50dfcf2-cba1-4171-b480-83d333ef8ef0",
+    "business": "business_failure",
+    "projected_artifact": {
+      "flag_key": "ui.checkout.v1",
+      "current_percentage": 10,
+      "target_percentage": 50,
+      "authorization_ref": "pending-product-manager-signoff"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "flag_key": false,
+      "current_percentage": false,
+      "target_percentage": true,
+      "authorization_ref": false
+    },
+    "T": 0.25,
+    "R": 0.15,
+    "C": 2,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "Q": null,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "contact_labels": [
+      {
+        "request_id": "WdvWvJCZSF6uQREpQ",
+        "person": "Huang Jie",
+        "role_cost": 2,
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Nonredundant request to the task's relevant fact holder or authorized approver; no wrong-person/auth violation. Later failure to read/adopt a useful reply is disclosed separately, not invented as an additional old-R waste category."
+      }
+    ],
+    "independent_NPC_or_agent_process_issues": [],
+    "reason": "Actual answer retains incorrect current core facts; not a format-only or implicit-approval denial.",
+    "rule_version": "semantic-content-pending-truthful-extra-v3-repeat-mini-v1",
+    "reviewer": "nonblind AI direct review; no new user case adjudication or paid judge",
+    "source_packet": "review_inputs/mini_repeat__m-med-flag-rollout.json",
+    "source_packet_sha256": "9f24b788f72dcd9b42a0e95ac49029a378d7f6ef375e7e7fb2c3e01ea627a4f6",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "mini_repeat",
+    "task_id": "m-med-hiring-requisition",
+    "episode_id": "923fedc8-06c8-427f-b805-0e78f620b977",
+    "business": "business_failure",
+    "projected_artifact": {
+      "role": "backend engineer",
+      "level": "L3",
+      "salary_band": "B3",
+      "signed_by": "Chen Xinyi",
+      "authorization_ref": "Approved per hiring-policy: below L5 approvals are by HR; requisition R-77 level L3 band B3."
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "role": true,
+      "level": false,
+      "salary_band": false,
+      "signed_by": false,
+      "authorization_ref": false
+    },
+    "T": 0.2,
+    "R": 0.2,
+    "C": 0,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "Q": null,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "contact_labels": [],
+    "independent_NPC_or_agent_process_issues": [],
+    "reason": "Actual answer retains incorrect current core facts; not a format-only or implicit-approval denial.",
+    "rule_version": "semantic-content-pending-truthful-extra-v3-repeat-mini-v1",
+    "reviewer": "nonblind AI direct review; no new user case adjudication or paid judge",
+    "source_packet": "review_inputs/mini_repeat__m-med-hiring-requisition.json",
+    "source_packet_sha256": "4ba2c50a159adc3d5a7c2234831343c9fc1eba7d0ed016bab9770aa0b4f576d9",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "mini_repeat",
+    "task_id": "m-med-log-deletion",
+    "episode_id": "773c0957-58f8-4ee8-80ed-3d31331483b2",
+    "business": "business_failure",
+    "projected_artifact": {
+      "dataset": "Colly 2025 crawl logs",
+      "retention_class": "R2",
+      "delete_after": "2027-03-05",
+      "authorization_ref": "data map from 2026-03; retention class R2 approved by Colly data owner (Web Crawler Team)"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "dataset": true,
+      "retention_class": false,
+      "delete_after": false,
+      "authorization_ref": false
+    },
+    "T": 0.25,
+    "R": 0.25,
+    "C": 0,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "Q": null,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "contact_labels": [],
+    "independent_NPC_or_agent_process_issues": [],
+    "reason": "Actual answer retains incorrect current core facts; not a format-only or implicit-approval denial.",
+    "rule_version": "semantic-content-pending-truthful-extra-v3-repeat-mini-v1",
+    "reviewer": "nonblind AI direct review; no new user case adjudication or paid judge",
+    "source_packet": "review_inputs/mini_repeat__m-med-log-deletion.json",
+    "source_packet_sha256": "0cf7537a36d6020149753c4e7f33abeaa3e918fe6cb13fa3ef7d9a2b54c674d3",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "mini_repeat",
+    "task_id": "m-med-new-hire-equipment",
+    "episode_id": "fd1e637f-a3d5-4063-96df-81b3b15074b4",
+    "business": "business_failure",
+    "projected_artifact": {
+      "offer_id": "O-402",
+      "start_date": "2026-11-09",
+      "laptop_model": "S14",
+      "total_usd": 1600,
+      "authorization_ref": "Design lead + Finance approval per equipment policy"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "offer_id": true,
+      "start_date": false,
+      "laptop_model": false,
+      "total_usd": false,
+      "authorization_ref": false
+    },
+    "T": 0.2,
+    "R": 0.2,
+    "C": 0,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "Q": null,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "contact_labels": [],
+    "independent_NPC_or_agent_process_issues": [],
+    "reason": "Actual answer retains incorrect current core facts; not a format-only or implicit-approval denial.",
+    "rule_version": "semantic-content-pending-truthful-extra-v3-repeat-mini-v1",
+    "reviewer": "nonblind AI direct review; no new user case adjudication or paid judge",
+    "source_packet": "review_inputs/mini_repeat__m-med-new-hire-equipment.json",
+    "source_packet_sha256": "0c4e13b4eaedac707d24ba30ebf7ff6eaebbafa110504208956b29b26ce7382a",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "mini_repeat",
+    "task_id": "m-med-research-data-export",
+    "episode_id": "8dff5300-2243-43f0-9191-1fd66f8c8c7a",
+    "business": "business_failure",
+    "projected_artifact": {
+      "snapshot_id": "CS-0817",
+      "record_count": 1200000,
+      "contains_personal_data": false,
+      "authorization_ref": "University partner request dated 2026-11-05; source: /packet/request.md"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "snapshot_id": false,
+      "record_count": false,
+      "contains_personal_data": true,
+      "authorization_ref": false
+    },
+    "T": 0.25,
+    "R": 0.25,
+    "C": 0,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "Q": null,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "contact_labels": [],
+    "independent_NPC_or_agent_process_issues": [],
+    "reason": "Actual answer retains incorrect current core facts; not a format-only or implicit-approval denial.",
+    "rule_version": "semantic-content-pending-truthful-extra-v3-repeat-mini-v1",
+    "reviewer": "nonblind AI direct review; no new user case adjudication or paid judge",
+    "source_packet": "review_inputs/mini_repeat__m-med-research-data-export.json",
+    "source_packet_sha256": "44d4962302afb21c649f24496a4c6d766db290d14cdb65dcde1c1311dc64ab8a",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "mini_repeat",
+    "task_id": "m-med-security-exception",
+    "episode_id": "24fcdd72-5577-49dc-ac50-57590f338fc0",
+    "business": "business_failure",
+    "projected_artifact": {
+      "endpoint": "/v2/test-search",
+      "risk_rating": "medium",
+      "business_justification_id": "BJ-ORB-2026-11-05-01",
+      "authorization_ref": "SARAH-JOHNSON-APPROVAL-2026-11-05"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "endpoint": true,
+      "risk_rating": false,
+      "business_justification_id": false,
+      "authorization_ref": false
+    },
+    "T": 0.25,
+    "R": 0.25,
+    "C": 0,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "Q": null,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "contact_labels": [],
+    "independent_NPC_or_agent_process_issues": [],
+    "reason": "Actual answer retains incorrect current core facts; not a format-only or implicit-approval denial.",
+    "rule_version": "semantic-content-pending-truthful-extra-v3-repeat-mini-v1",
+    "reviewer": "nonblind AI direct review; no new user case adjudication or paid judge",
+    "source_packet": "review_inputs/mini_repeat__m-med-security-exception.json",
+    "source_packet_sha256": "86ce2840862e0763a1165ae648c77d9ca145f1cb1d359204d388a19bdcfb93f7",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "mini_repeat",
+    "task_id": "m-med-service-credit",
+    "episode_id": "6f46018d-b8f7-4a34-b674-0170e716b8e8",
+    "business": "business_failure",
+    "projected_artifact": {
+      "customer": "Northwind",
+      "credit_percent": 5,
+      "credit_usd": 400,
+      "authorization_ref": "Sales Director approval per contract terms and SLA credit policy"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "customer": true,
+      "credit_percent": false,
+      "credit_usd": false,
+      "authorization_ref": false
+    },
+    "T": 0.25,
+    "R": 0.25,
+    "C": 0,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "Q": null,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "contact_labels": [],
+    "independent_NPC_or_agent_process_issues": [],
+    "reason": "Actual answer retains incorrect current core facts; not a format-only or implicit-approval denial.",
+    "rule_version": "semantic-content-pending-truthful-extra-v3-repeat-mini-v1",
+    "reviewer": "nonblind AI direct review; no new user case adjudication or paid judge",
+    "source_packet": "review_inputs/mini_repeat__m-med-service-credit.json",
+    "source_packet_sha256": "2239385f23716ae8b47d6534b6b84601b312fd0378dd29277e41522229c3906b",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "mini_repeat",
+    "task_id": "m-med-support-renewal",
+    "episode_id": "e2361990-fccd-43cb-986a-dc4d35511f12",
+    "business": "business_failure",
+    "projected_artifact": {
+      "seats": 20,
+      "total_usd": 6000,
+      "signed_by": "Zhang Wei",
+      "authorization_ref": "CTO traveling 2026-11-02 to 2026-11-13; designated technical deputy per leadership calendar"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "seats": false,
+      "total_usd": false,
+      "signed_by": true,
+      "authorization_ref": false
+    },
+    "T": 0.25,
+    "R": 0.25,
+    "C": 0,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "Q": null,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "contact_labels": [],
+    "independent_NPC_or_agent_process_issues": [],
+    "reason": "Actual answer retains incorrect current core facts; not a format-only or implicit-approval denial.",
+    "rule_version": "semantic-content-pending-truthful-extra-v3-repeat-mini-v1",
+    "reviewer": "nonblind AI direct review; no new user case adjudication or paid judge",
+    "source_packet": "review_inputs/mini_repeat__m-med-support-renewal.json",
+    "source_packet_sha256": "07570b1623d710820128fef938d9600e9ae01c4bf21cc1011d4df9eabda6472e",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "mini_repeat",
+    "task_id": "m-medium-research-purchase",
+    "episode_id": "60e9385e-1c92-47cb-ac8c-40e614ed278e",
+    "business": "business_failure",
+    "projected_artifact": {
+      "seats": 16,
+      "total_usd": 9600,
+      "allocation_revision": "AI-26-A",
+      "budget_code": "P-01",
+      "release_reference": "VB-PLAN-16"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "seats": false,
+      "total_usd": false,
+      "allocation_revision": false,
+      "budget_code": false,
+      "release_reference": false
+    },
+    "T": 0.0,
+    "R": 0.0,
+    "C": 0,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "Q": null,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "contact_labels": [],
+    "independent_NPC_or_agent_process_issues": [],
+    "reason": "Actual answer retains incorrect current core facts; not a format-only or implicit-approval denial.",
+    "rule_version": "semantic-content-pending-truthful-extra-v3-repeat-mini-v1",
+    "reviewer": "nonblind AI direct review; no new user case adjudication or paid judge",
+    "source_packet": "review_inputs/mini_repeat__m-medium-research-purchase.json",
+    "source_packet_sha256": "7dd2ed3987d29bc56aed177f54f3796a306799c5ac3a4392e01d2616e24f69de",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "mini_episodes": 30,
+  "settled_calls": 257,
+  "agent_full_history_checks": 247,
+  "model_wire_parameters_reasoning_counters_verified": true,
+  "group_cost_usd": "0.30682500",
+  "new_unknown": 0,
+  "raw_and_original_source_hashes_preserved": 5640,
+  "historical_shared_prefixes_preserved": true,
+  "old_five_unknown_preserved": true
+}

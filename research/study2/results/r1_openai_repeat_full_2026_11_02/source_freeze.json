@@ -1,0 +1,38 @@
+{
+  "published_commit": "823a12ae733ff790dd6910d6423c49731dc694ac",
+  "source_dataset_sha256": "86619f732ed2058a11251c6b3df18f3f10b86bb27bb272c9ee0527d382d422e8",
+  "frozen_implementation_hashes": {
+    "audit_episode.py": "1f078129c93147c38bfc019eec4d97859f472c3b90a7bf42bb5229a68960ce1d",
+    "execute_batch.py": "c3c03f613163d048cd4d3e7f474d257ccb843476247415e4aeb1c0e95e60b131",
+    "haiku_context_safety_v1.py": "28d6419f1e21c37e9c0d7c9cd1828a46a09ed2290365033e5a0ca763f28491b8",
+    "initialize_progress.py": "8c3fe74713e08a79f8d5b87a2a4b6b22066cab6390e41415076fcff2d00e0614",
+    "kimi_account_pacing_v1.py": "525ef7197d9a21e7bcdca31e8cec2807c5d55bfe9a72109465fb2e812a5d0f22",
+    "kimi_account_pacing_v2.py": "372b97f4ba4bea0f8a8fe3300d9d151a5c61719b66addfac8db2bf344f8ab789",
+    "natural_npc_comparison.py": "07e7b828063a63dccaf3bffc9f678c1c1f8608bae2e64b159b49cacdbc994744",
+    "runner/frozen_repair.py": "e7f96604686c5f6ab45c87a49f5dd098a1b05539eebd0bce9a5c33c5a7b523ed",
+    "guarded_npc_runtime_v4/frozen_runtime/rest_runner.py": "860ae007f853d25de71347dd811f2f3bc40ff5abfcaa336d58878f3b812af0d6"
+  },
+  "source_cursor": "../r1_2026_11_02/provenance/independent/r1_two_technical_reruns/frozen_stage/two_runner/stage/service_cursor.json",
+  "source_cursor_sha256": "b90c862580f2401ce23cfa66b013d96b01acd5f4fe3dd893ba1405d51f591568",
+  "source_STOP_sha256": "25b65545a77389be147baf97f70c33152123858a83b0564d633559992a10526d",
+  "seed_policy": "Original task instance_seed retained; no API random seed added.",
+  "NPC_condition": "controlled_rest_conversational_repair_v6; differs from original formal NPC",
+  "agent_parameter_policy": {
+    "reasoning_effort": "none",
+    "max_completion_tokens": 2048,
+    "tool_choice": "auto",
+    "parallel_tool_calls": false,
+    "temperature": "omitted as in original",
+    "steps": 64,
+    "max_input_token_bound": 32768
+  },
+  "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4",
+  "full_prices_per_million": {
+    "input": "2.50",
+    "cached_input": "0.25",
+    "output": "15.00"
+  },
+  "budget": "Single shared historical USD20 ledger; preserve original five unknown reservations.",
+  "paid_probes_or_extra_pilots": 0,
+  "automatic_second_attempts": 0
+}

@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "scope_unique_attempts": 90,
+  "semantic_reviews": 90,
+  "full_reviews": 60,
+  "mini_reviews": 30,
+  "new_unsettled_calls": 0,
+  "settled_calls": 933,
+  "call_counts": {
+    "mini_repeat_agent": 247,
+    "mini_repeat_npc": 10,
+    "gpt54_control_agent": 591,
+    "gpt54_control_npc": 85
+  },
+  "group_costs_usd": {
+    "mini_repeat": "0.30682500",
+    "gpt54_control": "2.19931925"
+  },
+  "global_settled_usd": "7.32870910",
+  "historical_unknown_count": 5,
+  "historical_unknown_usd": "0.11172275",
+  "global_occupied_usd": "7.44043185",
+  "all_wire_models_history_parameters_verified": true,
+  "all_thirty_first_wires_only_model_differs": true,
+  "original_source_hashes_preserved": 5640,
+  "historical_pacer_ledger_prefixes_preserved": true,
+  "controller_finished_lock_released": true,
+  "R_prime_computed": false,
+  "reference_scoring_gaps": 0,
+  "dataset_validity_caveat": "o-high-eval-budget optimized GPU hours are underdetermined"
+}

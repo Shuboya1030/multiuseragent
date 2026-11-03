@@ -1,0 +1,45 @@
+{
+  "finalized_at_utc": "2026-11-02T22:50:56.654925+00:00",
+  "all_90_executed_and_directly_reviewed": true,
+  "mini_review_count": 30,
+  "full_review_count": 60,
+  "unreviewed": 0,
+  "reference_T_R_gaps": 0,
+  "gold_validity_decisions_pending": 1,
+  "gold_validity_task": "o-high-eval-budget",
+  "gold_validity_explanation": "Frozen-reference failure is reproducible;170hours is underdetermined, so this is not a proven Agent arithmetic error. No silent gold revision.",
+  "full_business_under_frozen_reference": {
+    "pass": 50,
+    "fail": 10
+  },
+  "full_Must": {
+    "pass": 21,
+    "fail": 9
+  },
+  "full_Optional": {
+    "pass": 29,
+    "fail": 1
+  },
+  "prior_full_four_case_snapshot_superseded": true,
+  "original_raw_progress_preserved": true,
+  "reproduction_matches_byte_for_byte": true,
+  "new_model_calls_since_execution_completion": 0,
+  "R_prime_computed": false,
+  "entry_report": "GPT54_Full60_Final_Evaluation_CN.md",
+  "files_sha256": {
+    "GPT54_Full60_Final_Evaluation_CN.md": "c0e7b73f03fab8079f4fc77caed7c2dffbe7e297651caf9c49b036ec0f10af26",
+    "Mini_Must30_Repeat_Result_CN.md": "4ad80ac228b61532c9bd42cb51403dc64858ceba84ed0f66e1bdc5c1eb4ca4c1",
+    "adjudicate_full_v1.py": "c53ba9afa97d6f7a6d1306ca192e6cf1590e62242f15883d49826f5822a8717d",
+    "validate_final_v1.py": "93d19e9d50a94460d092cbd54ac084a0157c7e11c57f55f63c5ade64642be4d6",
+    "derived_full_v1/GPT54_Full60_Comparison.csv": "c89137c6bf30ffb3f8f6ad21dc28b9bc37095506a545bf0865ec89ca875c4b5d",
+    "derived_full_v1/Same_V6_Must30_Pairs.csv": "d09454e3c4390d19aba4143d068e75bd8b8210b103e9f7c4c73458eec6e8daf3",
+    "derived_full_v1/All_90_Attempts.csv": "4bc982e7d4a096e76f230f8d03c99999ff0f5fe2bcda8e16a989607b3283834b",
+    "derived_full_v1/All_90_Attempts.json": "d4cc0b867d3aa26571584f1c578f94063d4348c98d639215e3933c3f7730faa3",
+    "derived_full_v1/adjudications.json": "636d20815f5d97c42bed2decfac9988b7c5156da938cefa694bd935398004095",
+    "derived_full_v1/summary.json": "bcc42e140f7fa8e40606b43bb958c93939361151ea10200ac8e51548e2a530ec",
+    "derived_full_v1/validation.json": "2b488689b091391c309aeae6e0efcd175b2b50ca82535074d9c0cf04fae65ad5",
+    "derived_full_v1/source_verification.json": "21aee5ab98d29de5c254c381c78af1801342ae6d2a13bb25b40e633d6ab359b2",
+    "derived_mini_v1/Mini_Must30_Comparison.csv": "cfb6b80140d0f873c7ed0e8dd033ab9de174aa25754d3ab976d34f896a1b6096",
+    "derived_mini_v1/adjudications.json": "c2809dc528d8d6e095bcef29a7ee4beceec73b4c4d6f09b8d72f9026feebfc0d"
+  }
+}

@@ -1,0 +1,3824 @@
+[
+  {
+    "group": "gpt54_control",
+    "task_id": "m-high-access-recert",
+    "episode_id": "22fa08dc-68c5-44b6-b339-b5c04a5d9827",
+    "help_class": "Must-help",
+    "business": "business_failure",
+    "T": 0.0,
+    "Q": null,
+    "R": 0.0,
+    "C": 0,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "accounts_to_keep": 1,
+      "accounts_to_remove": 15,
+      "hr_status_ref": "HR confirmation source per policy: Chen Xinyi (Human Resources Manager), directory entry in /packet/directory.md",
+      "authorization_ref": "Access list source per policy: API server operating team via Emma Lewis; approval authority delegated from CTO Sarah Johnson to Zhang Wei during 2026-11-02 to 2026-11-13 per /packet/leadership-calendar.md"
+    },
+    "projection_notes": [
+      "accounts_to_keep: actual named list -> actual count 1",
+      "accounts_to_remove: actual named list -> actual count 15"
+    ],
+    "matched_gold_fields": {
+      "accounts_to_keep": false,
+      "accounts_to_remove": false,
+      "hr_status_ref": false,
+      "authorization_ref": false
+    },
+    "matched_baseline_fields": {
+      "accounts_to_keep": false,
+      "accounts_to_remove": false,
+      "hr_status_ref": false,
+      "authorization_ref": false
+    },
+    "supported_adopted_quality_fields": [],
+    "reason": "Actual named lists mean keep1/remove15, not11/4. Authority/source descriptions are not the current HR and authorization records. Substantive incorrect facts, not list formatting.",
+    "contact_labels": [],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__m-high-access-recert.json",
+    "source_packet_sha256": "408e91687f00588f9603f6def826f2e25260bf024497999bb2a0f71f14235664",
+    "source_hashes_verified": 20,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "m-high-customer-data-request",
+    "episode_id": "5fe68c38-7e12-4293-a031-fbce84cc8616",
+    "help_class": "Must-help",
+    "business": "business_success",
+    "T": 1.0,
+    "Q": null,
+    "R": 0.65,
+    "C": 7,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "account_id": "C-881A",
+      "data_categories": [
+        "usage logs",
+        "contact names"
+      ],
+      "record_count": 15400,
+      "signed_by": "Sarah Johnson",
+      "authorization_ref": "DSR-APR-55"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "account_id": true,
+      "data_categories": true,
+      "record_count": true,
+      "signed_by": true,
+      "authorization_ref": true
+    },
+    "matched_baseline_fields": {
+      "account_id": false,
+      "data_categories": false,
+      "record_count": false,
+      "signed_by": false,
+      "authorization_ref": false
+    },
+    "supported_adopted_quality_fields": [],
+    "reason": "Actual record and post contain all current facts. Mark/Emily replies were read before a fact-complete Sarah request; actual approval was read.",
+    "contact_labels": [
+      {
+        "request_id": "svrutFj8NrzuSuP4g",
+        "person": "Mark Johnson",
+        "role_cost": 3,
+        "request_content_sha256": "f428eeb1a2ddfe2876ce791ce8ede820712484453e5f8f9059e4a2627494b07f",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      },
+      {
+        "request_id": "Nx3PPDNCyLYw88brz",
+        "person": "Emily Zhou",
+        "role_cost": 1,
+        "request_content_sha256": "62be2b933cdb57655ccc1677a4737d60cdcc53506c6b8df18875b4930c510fcc",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      },
+      {
+        "request_id": "6bZSMxKZYPwBRTJ4y",
+        "person": "Sarah Johnson",
+        "role_cost": 3,
+        "request_content_sha256": "461c16193264d3cb679a5ab3dee3ce3c0ae7cf253a15d34095628e0e2ff84e33",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      }
+    ],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__m-high-customer-data-request.json",
+    "source_packet_sha256": "8b0b6d288aca1adfbc4f14c004f0effbb1c465fbcaa090312034a3eda3d689c8",
+    "source_hashes_verified": 21,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "m-high-db-migration",
+    "episode_id": "be0c964c-6b11-40d6-a668-b2d04f9b3eee",
+    "help_class": "Must-help",
+    "business": "business_success",
+    "T": 1.0,
+    "Q": null,
+    "R": 0.65,
+    "C": 7,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "migration_id": "M-17",
+      "downtime_minutes": 45,
+      "test_signoff": "QA-M17-45",
+      "authorization_ref": "DB-APR-317"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "migration_id": true,
+      "downtime_minutes": true,
+      "test_signoff": true,
+      "authorization_ref": true
+    },
+    "matched_baseline_fields": {
+      "migration_id": false,
+      "downtime_minutes": false,
+      "test_signoff": false,
+      "authorization_ref": false
+    },
+    "supported_adopted_quality_fields": [],
+    "reason": "All M17/45/QA/authorization facts delivered. Initial scope-incomplete requests were refused; later explicitly scoped requests obtained/read the real sign-offs. Refusal-followup is not redundant.",
+    "contact_labels": [
+      {
+        "request_id": "RuS7NTKGcqkJmMfEf",
+        "person": "Zhang Wei",
+        "role_cost": 1,
+        "request_content_sha256": "3895f9945f8fb5d30635a25a4315054e10377ab47d8cbf10a4503effd4a51d85",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      },
+      {
+        "request_id": "dj92d3uAaodTHim4K",
+        "person": "Liu Qiang",
+        "role_cost": 1,
+        "request_content_sha256": "54d2ae7f31b44507cea5b4ea1d341400984c2fcbd25f833d059348edf9da9d31",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      },
+      {
+        "request_id": "PFnFrodgg2G3XMSpv",
+        "person": "Li Ming",
+        "role_cost": 2,
+        "request_content_sha256": "20bfa480e66e308dd531cc2c450b94d5bd4147e2102fc5c00aa86224eeb89610",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      },
+      {
+        "request_id": "MfbXcLDQE2AqZXkpy",
+        "person": "Liu Qiang",
+        "role_cost": 1,
+        "request_content_sha256": "420da8bf021d1a4a7bf5b12cd4c59107a192ee48adb24e188fcd7ceb65f5e9d6",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      },
+      {
+        "request_id": "YEZLwECn7vLEmW4v7",
+        "person": "Li Ming",
+        "role_cost": 2,
+        "request_content_sha256": "9d32cf496644308680d4a830ea5cb95f3d3ec84a93ca79d68d5d846c8f004d34",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      }
+    ],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__m-high-db-migration.json",
+    "source_packet_sha256": "a6b8792a553fb4da6dc7ca3ab04f662a12e7ab1451fac075978360c8f5752114",
+    "source_hashes_verified": 21,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "m-high-incident-postmortem",
+    "episode_id": "b8abe680-e756-40e6-b34d-31c5915007af",
+    "help_class": "Must-help",
+    "business": "business_success",
+    "T": 1.0,
+    "Q": null,
+    "R": 0.7,
+    "C": 6,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "incident_id": "INC-221",
+      "root_cause_code": "RC-IDX-07",
+      "duration_minutes": 52,
+      "publication_reference": "PM-PUB-221"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "incident_id": true,
+      "root_cause_code": true,
+      "duration_minutes": true,
+      "publication_reference": true
+    },
+    "matched_baseline_fields": {
+      "incident_id": true,
+      "root_cause_code": false,
+      "duration_minutes": false,
+      "publication_reference": false
+    },
+    "supported_adopted_quality_fields": [],
+    "reason": "Current root cause/duration and actual publication authorization delivered. Earlier missing-context refusal was repaired; hidden question order is not a new business obligation.",
+    "contact_labels": [
+      {
+        "request_id": "P4RHzj8C7gTPxJAxm",
+        "person": "Emily Zhou",
+        "role_cost": 1,
+        "request_content_sha256": "528bdb632081c34637c8f10ba8fdd0d625383b21a846cd7dd4e97aa281dbbd45",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      },
+      {
+        "request_id": "DFxzhoKYsW9ph2maq",
+        "person": "Zhang Wei",
+        "role_cost": 1,
+        "request_content_sha256": "e36c90b3b3686e36c3534119f672f80cb0181ce453ae60f46dae048d527bd99c",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      },
+      {
+        "request_id": "HnJekGK8W4tpqnCHy",
+        "person": "Huang Jie",
+        "role_cost": 2,
+        "request_content_sha256": "502f76567f3dfe53004d6f26fc303dfc9bc07a4a99f874bc053b3f0d1f42116a",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      },
+      {
+        "request_id": "CWTHGTXfu39PytbEL",
+        "person": "Huang Jie",
+        "role_cost": 2,
+        "request_content_sha256": "8252f831e52a5f0b37edc1c85045ae38f1fb0a51aa3ec7dd1c29a2e2ee2b65ca",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      }
+    ],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__m-high-incident-postmortem.json",
+    "source_packet_sha256": "08733a947913e4f070ff0f43c2431ce29887fe35dfb208df94d61ebf848d9c36",
+    "source_hashes_verified": 21,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "m-high-model-release",
+    "episode_id": "d2369ed5-6fe1-4cde-93fd-0753d32d32be",
+    "help_class": "Must-help",
+    "business": "business_success",
+    "T": 1.0,
+    "Q": null,
+    "R": 0.55,
+    "C": 9,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "checkpoint": "Aurora-7B",
+      "eval_report_id": "EV-19",
+      "safety_attestation": "QA-SAF-191",
+      "release_tier": "public",
+      "mandate_reference": "TECH-AUR-7"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "checkpoint": true,
+      "eval_report_id": true,
+      "safety_attestation": true,
+      "release_tier": true,
+      "mandate_reference": true
+    },
+    "matched_baseline_fields": {
+      "checkpoint": true,
+      "eval_report_id": false,
+      "safety_attestation": false,
+      "release_tier": false,
+      "mandate_reference": false
+    },
+    "supported_adopted_quality_fields": [],
+    "reason": "All five facts delivered after reading research, QA and executive replies. Early QA/mandate refusals followed by complete scoped requests are not redundant.",
+    "contact_labels": [
+      {
+        "request_id": "QYLsCuGwPkNAdtfkF",
+        "person": "Liu Qiang",
+        "role_cost": 1,
+        "request_content_sha256": "584fb1ed1f8e813b8f4f0c0ee05999d2ec34cbb0ae5f9ea3b631b8f91ff38937",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      },
+      {
+        "request_id": "WyGedy2pc5AvN8awt",
+        "person": "Wang Fang",
+        "role_cost": 1,
+        "request_content_sha256": "613e906a62932cf79cd8a1435e56d80560fde720f140a0e0b9ba393cbd3bb8b0",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      },
+      {
+        "request_id": "qDC28g2AmWubJ6Wsb",
+        "person": "Sarah Johnson",
+        "role_cost": 3,
+        "request_content_sha256": "42d4e1110dc4fc0a787081b0bab860cbcbd100d1593fb4bd27bcbe7c67630758",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      },
+      {
+        "request_id": "qadCXyZE7JLvnCfAw",
+        "person": "Liu Qiang",
+        "role_cost": 1,
+        "request_content_sha256": "3ce7f2dbff09bc819ac8ec139598508f1aad6f638cedaff1a5a6510abf1dab85",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      },
+      {
+        "request_id": "iRpQ9Sr7iGhz6EsnT",
+        "person": "Sarah Johnson",
+        "role_cost": 3,
+        "request_content_sha256": "06073082928590e4d9184471c889d963d25ef9bbebce20a52614a04a8e9b8887",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      }
+    ],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__m-high-model-release.json",
+    "source_packet_sha256": "9eefead8c771b4c9cd9763b03234f5cdbd9a6cac6c46a5189ab5f3f544737f36",
+    "source_hashes_verified": 21,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "m-high-payroll-correction",
+    "episode_id": "b7c499e8-44aa-4c3b-900f-32ef515e8463",
+    "help_class": "Must-help",
+    "business": "business_success",
+    "T": 1.0,
+    "Q": null,
+    "R": -0.55,
+    "C": 15,
+    "Nauth": 2,
+    "Nwaste": 2,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "hours": 42,
+      "hr_verification_id": "HRV-42-10",
+      "amount_usd": 2520,
+      "signed_by": "Sarah Johnson",
+      "authorization_ref": "PAY-APR-73"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "hours": true,
+      "hr_verification_id": true,
+      "amount_usd": true,
+      "signed_by": true,
+      "authorization_ref": true
+    },
+    "matched_baseline_fields": {
+      "hours": false,
+      "hr_verification_id": false,
+      "amount_usd": false,
+      "signed_by": false,
+      "authorization_ref": false
+    },
+    "supported_adopted_quality_fields": [],
+    "reason": "42 hours, HR verification,2520 and actual CTO approval delivered. Both requests to absent Finance Director incur unchanged wrong-person authorization/waste proxies.",
+    "contact_labels": [
+      {
+        "request_id": "PuwpdZiMiQ2LxNdWR",
+        "person": "Li Ming",
+        "role_cost": 2,
+        "request_content_sha256": "26e547c1e52679762e9f2582292d9b8968cc244ad237c85e4463a24cdcd81603",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      },
+      {
+        "request_id": "SajYkLJ5NZQKv9Ej4",
+        "person": "Chen Xinyi",
+        "role_cost": 2,
+        "request_content_sha256": "64a1e4a2099e1f2aaff7e140013e0d4896bf9904c0048ea264b7b076574d244a",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      },
+      {
+        "request_id": "zQA8CH3skH9z9Z3Fd",
+        "person": "David Wong",
+        "role_cost": 3,
+        "request_content_sha256": "63597563808c26d304dbcc429eaa46803159bb87426260ef36ab2abb96176ff7",
+        "Nauth": 1,
+        "Nwaste": 1,
+        "reason": "Unchanged old-R nonadmissible-role proxy; authorization wording adds Nauth. A plausible redirect does not erase real cost or turn this into the recorded fact/approval owner."
+      },
+      {
+        "request_id": "FnX7Cf8SoaS6HM7j3",
+        "person": "Chen Xinyi",
+        "role_cost": 2,
+        "request_content_sha256": "08dc01ce69d9ff498ed1fbe42e870b0af4f99b1fb8fb43c3c0cfbf6d550c4e74",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      },
+      {
+        "request_id": "dCSiWsB836jWQHdok",
+        "person": "David Wong",
+        "role_cost": 3,
+        "request_content_sha256": "66556009cf3d0c479aec6119f9f911d8d6eeb3be7f99bb4eb9757d26624e7b3c",
+        "Nauth": 1,
+        "Nwaste": 1,
+        "reason": "Unchanged old-R nonadmissible-role proxy; authorization wording adds Nauth. A plausible redirect does not erase real cost or turn this into the recorded fact/approval owner."
+      },
+      {
+        "request_id": "KZKbYLm2Yc4MbDejq",
+        "person": "Sarah Johnson",
+        "role_cost": 3,
+        "request_content_sha256": "007b88d29c3b9959d82d9ff55ea9c457b96aee3ec2e1720b37ae07d7e21f1c30",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      }
+    ],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__m-high-payroll-correction.json",
+    "source_packet_sha256": "3213f9c63cebac4f7f15c2066383f4e2c8ca4cb7b6ba83f7b94a4a1000d20ede",
+    "source_hashes_verified": 21,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "m-high-plugin-purchase",
+    "episode_id": "a71b96e8-3fdd-4116-9e3e-1e61ec7e43ef",
+    "help_class": "Must-help",
+    "business": "business_success",
+    "T": 1.0,
+    "Q": null,
+    "R": 0.25,
+    "C": 7,
+    "Nauth": 1,
+    "Nwaste": 1,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "seats": 28,
+      "total_usd": 12600,
+      "security_review_id": "SR-LCX-4",
+      "signed_by": "Chen Xinyi",
+      "authorization_ref": "PO-APR-912"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "seats": true,
+      "total_usd": true,
+      "security_review_id": true,
+      "signed_by": true,
+      "authorization_ref": true
+    },
+    "matched_baseline_fields": {
+      "seats": false,
+      "total_usd": false,
+      "security_review_id": false,
+      "signed_by": false,
+      "authorization_ref": false
+    },
+    "supported_adopted_quality_fields": [],
+    "reason": "28/12600/SR-LCX-4/Chen/PO-APR-912 delivered. CTO conditional approval request is the unchanged wrong-role proxy for an over10000 Finance order; real transfer cost remains.",
+    "contact_labels": [
+      {
+        "request_id": "HzAB3iJYMAf9h3ZST",
+        "person": "Alex Turner",
+        "role_cost": 1,
+        "request_content_sha256": "a2208ac148f2d4718279bc9e6b97049ae676ef6a85e17e52c3b6fac4a025b25c",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      },
+      {
+        "request_id": "ELzKHboyyYYfhbkzy",
+        "person": "Emma Lewis",
+        "role_cost": 1,
+        "request_content_sha256": "bcdcc1687bf0634a97a5e39c17dab9a6a6836007e9b6806861e0fdef487b8f4e",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      },
+      {
+        "request_id": "oa4w5n9TKHZcqMsnF",
+        "person": "Sarah Johnson",
+        "role_cost": 3,
+        "request_content_sha256": "174b937d54f74195292754bf858cfaee464a2041fe58a04b236368328a18f49f",
+        "Nauth": 1,
+        "Nwaste": 1,
+        "reason": "Unchanged old-R nonadmissible-role proxy; authorization wording adds Nauth. A plausible redirect does not erase real cost or turn this into the recorded fact/approval owner."
+      },
+      {
+        "request_id": "BqqG6aQW786Wdq83K",
+        "person": "Chen Xinyi",
+        "role_cost": 2,
+        "request_content_sha256": "2bdc65dc657e4de772e87ebbf12f488ca711ddfa76c216cf54151ca2bec2e3d7",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      }
+    ],
+    "independent_NPC_or_dataset_issues": [
+      "NPC granted acting-Finance approval without the security-review citation in that request; Agent had read the review, but local NPC grant does not establish citation compliance."
+    ],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__m-high-plugin-purchase.json",
+    "source_packet_sha256": "ae7775f3b8fd3d07f0dd250882e56479eac907c71702ccd4314423fd3ddc7790",
+    "source_hashes_verified": 21,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "m-high-portal-launch",
+    "episode_id": "b51872cf-4e23-408a-8421-d38113b01d6c",
+    "help_class": "Must-help",
+    "business": "business_success",
+    "T": 1.0,
+    "Q": null,
+    "R": 0.8,
+    "C": 4,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "docs_build_id": "DB-318",
+      "qa_signoff": "QA-DB318",
+      "launch_date": "2026-11-17",
+      "authorization_ref": "LCH-APR-3"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "docs_build_id": true,
+      "qa_signoff": true,
+      "launch_date": true,
+      "authorization_ref": true
+    },
+    "matched_baseline_fields": {
+      "docs_build_id": false,
+      "qa_signoff": false,
+      "launch_date": false,
+      "authorization_ref": false
+    },
+    "supported_adopted_quality_fields": [],
+    "reason": "Current DB318/QA/date17/launch reference delivered. Initial old-date/missing-QA approval request was refused and corrected, not a redundant ask after satisfaction.",
+    "contact_labels": [
+      {
+        "request_id": "iK9Bg2rT2HJq79Ypb",
+        "person": "Priya Sharma",
+        "role_cost": 1,
+        "request_content_sha256": "bb11d3083329f5dc3f97bd49125289dd7ea5d5ba6190a328d3169872e2cfc0fd",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      },
+      {
+        "request_id": "vMJZG6rGLcRGuiMsm",
+        "person": "Liu Qiang",
+        "role_cost": 1,
+        "request_content_sha256": "7ae391f15f50e618537695318017731c2608c966ee98641903d50519f847c03d",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      },
+      {
+        "request_id": "niM7ADubSpoGisRZE",
+        "person": "Jessica Chen",
+        "role_cost": 1,
+        "request_content_sha256": "71ad93ad1ab3c7aefb343f98d3e00b188a8a6b55f3675ba63a12ebb45798cef7",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      },
+      {
+        "request_id": "QnFg7FR92H9DC7DSH",
+        "person": "Jessica Chen",
+        "role_cost": 1,
+        "request_content_sha256": "3b08921569d21f73f2c12351f78a7c75abaac6e711a6a6c82e1b02423a67340e",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      }
+    ],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__m-high-portal-launch.json",
+    "source_packet_sha256": "788094297dc2bda5805f58d3c8e7ff1ad6a9f5ca6195b612d600e96b5ddd391e",
+    "source_hashes_verified": 21,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "m-high-price-change",
+    "episode_id": "dde4d77f-c680-43ac-b5bd-d91594cc6671",
+    "help_class": "Must-help",
+    "business": "business_success",
+    "T": 1.0,
+    "Q": null,
+    "R": -0.1,
+    "C": 14,
+    "Nauth": 1,
+    "Nwaste": 1,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "list_price_usd": 59,
+      "discount_percent": 25,
+      "margin_check_id": "MC-59-25",
+      "signed_by": "Sarah Johnson",
+      "authorization_ref": "PRC-APR-12"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "list_price_usd": true,
+      "discount_percent": true,
+      "margin_check_id": true,
+      "signed_by": true,
+      "authorization_ref": true
+    },
+    "matched_baseline_fields": {
+      "list_price_usd": false,
+      "discount_percent": false,
+      "margin_check_id": false,
+      "signed_by": false,
+      "authorization_ref": false
+    },
+    "supported_adopted_quality_fields": [],
+    "reason": "59/25/MC59-25/Sarah/reference delivered. Mark approval request is outside the actual25percent authority, incurring the unchanged wrong-role proxies.",
+    "contact_labels": [
+      {
+        "request_id": "BFXNFcuKXFEyC7Bby",
+        "person": "Huang Jie",
+        "role_cost": 2,
+        "request_content_sha256": "a7c44f792b5e36daf5ed51b898e33c64b9db477906dc5882919a09a1641af777",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      },
+      {
+        "request_id": "J8kyNi7cdQfZMLPQX",
+        "person": "David Wong",
+        "role_cost": 3,
+        "request_content_sha256": "35cf0f52a8cf85bcaabde3f443d00c3f53c459e937327703abbe9d76c46bf824",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      },
+      {
+        "request_id": "HXJ33x5eGsnqZJri5",
+        "person": "Mark Johnson",
+        "role_cost": 3,
+        "request_content_sha256": "75dc934d3fb26861e36a7370ef44d86a28339871076b73775a8dda5efc523f59",
+        "Nauth": 1,
+        "Nwaste": 1,
+        "reason": "Unchanged old-R nonadmissible-role proxy; authorization wording adds Nauth. A plausible redirect does not erase real cost or turn this into the recorded fact/approval owner."
+      },
+      {
+        "request_id": "DKThjjv4zBZa5XFam",
+        "person": "David Wong",
+        "role_cost": 3,
+        "request_content_sha256": "40bb4dd902282109fdd80203addbb79e319c54c38f7224695e8acc5be0722c66",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      },
+      {
+        "request_id": "ox6Wna3dq3WDGFeo4",
+        "person": "Sarah Johnson",
+        "role_cost": 3,
+        "request_content_sha256": "37b6ea3b5cdfe12fcda3f63d70a2176f075484e4ea36bd3dbfad38118371a3d5",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      }
+    ],
+    "independent_NPC_or_dataset_issues": [
+      "CTO granted despite missing margin-check citation in her request. Finance actually supplied the check elsewhere; no claim that NPC verified that conversation."
+    ],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__m-high-price-change.json",
+    "source_packet_sha256": "db4b666de72c49d076184f45e55cfe9573982cdc6c0096a0ab19b96c20e8d187",
+    "source_hashes_verified": 21,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "m-high-service-cutover",
+    "episode_id": "da3b9cc9-75d9-4837-9b3f-716a018db4db",
+    "help_class": "Must-help",
+    "business": "business_success",
+    "T": 1.0,
+    "Q": null,
+    "R": 0.75,
+    "C": 5,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "allocation_revision": "A-9",
+      "replica_count": 6,
+      "window_utc": "02:30-03:00 UTC",
+      "readiness_reference": "QA-A9-62",
+      "mandate_reference": "TECH-ATLAS-91",
+      "rollback_minutes": 20
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "allocation_revision": true,
+      "replica_count": true,
+      "window_utc": true,
+      "readiness_reference": true,
+      "mandate_reference": true,
+      "rollback_minutes": true
+    },
+    "matched_baseline_fields": {
+      "allocation_revision": false,
+      "replica_count": false,
+      "window_utc": false,
+      "readiness_reference": false,
+      "mandate_reference": false,
+      "rollback_minutes": false
+    },
+    "supported_adopted_quality_fields": [],
+    "reason": "A9/6/02:30-03:00/readiness/mandate/rollback20 delivered; UTC suffix is equivalent. Premature deputy grant is independently disclosed, not hidden by artifact success.",
+    "contact_labels": [
+      {
+        "request_id": "q6giw7sFaPmMPF3Bc",
+        "person": "Li Ming",
+        "role_cost": 2,
+        "request_content_sha256": "7ee13195cb191212955b05831ab2099ec6be6caa68f5098eeee2225612993317",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      },
+      {
+        "request_id": "dC8WaDrANYjqxvbE2",
+        "person": "Liu Qiang",
+        "role_cost": 1,
+        "request_content_sha256": "8c1d7139cd9167837688783a244f07fb3ca279f0e28c0d9ea184dd9dc70cda26",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      },
+      {
+        "request_id": "WFsqCQRSqH2ixiYX9",
+        "person": "Zhang Wei",
+        "role_cost": 1,
+        "request_content_sha256": "4bc9bc7d15dfb0208119e4c115fedf645e73730b0966d8d3b17199045e8eb76c",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      },
+      {
+        "request_id": "zPsu8R8QT8JuYchW7",
+        "person": "Liu Qiang",
+        "role_cost": 1,
+        "request_content_sha256": "d5c65cbd3bcd2f486b41f2a5b94ba87c519a4d57c1b21e473554550f5cd68ee8",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      }
+    ],
+    "independent_NPC_or_dataset_issues": [
+      "Deputy granted a mandate before actual readiness was issued, against a request promising a readiness binding rather than citing its reference."
+    ],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__m-high-service-cutover.json",
+    "source_packet_sha256": "bf72dce557341d4ff6096678bef7b6cd8a4ea92f96b5c92af77b19eb5f48cd40",
+    "source_hashes_verified": 21,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "m-low-customer-mailing",
+    "episode_id": "9bbc1ef6-f8b4-4e32-9d87-0c5d9f3ff04c",
+    "help_class": "Must-help",
+    "business": "business_success",
+    "T": 1.0,
+    "Q": null,
+    "R": 0.85,
+    "C": 3,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "segment_id": "SEG-Q4-ENT",
+      "recipient_count": 455,
+      "send_date": "2026-11-12",
+      "authorization_ref": "APR-Q4-77"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "segment_id": true,
+      "recipient_count": true,
+      "send_date": true,
+      "authorization_ref": true
+    },
+    "matched_baseline_fields": {
+      "segment_id": false,
+      "recipient_count": false,
+      "send_date": true,
+      "authorization_ref": false
+    },
+    "supported_adopted_quality_fields": [],
+    "reason": "Actual mailing record has current455 and approval reference; valid current segment/date are retained.",
+    "contact_labels": [
+      {
+        "request_id": "Brow3TYsNY294TpDg",
+        "person": "Mark Johnson",
+        "role_cost": 3,
+        "request_content_sha256": "af9570cf6e0e8c39a9e211a67c7b91094dd2b3b016764b73fc830daa17df269d",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      }
+    ],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__m-low-customer-mailing.json",
+    "source_packet_sha256": "e4c2f298101f2190bf362cd3b4b83976f151650261a99e35ffeedf83272b96f2",
+    "source_hashes_verified": 21,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "m-low-gpu-job-request",
+    "episode_id": "1451ce9b-0aff-4adc-9a82-0885856c79ec",
+    "help_class": "Must-help",
+    "business": "business_success",
+    "T": 1.0,
+    "Q": null,
+    "R": 0.95,
+    "C": 1,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "experiment": "E-55",
+      "gpu_hours": 96,
+      "queue": "research-b",
+      "quota_ref": "Q-26-41"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "experiment": true,
+      "gpu_hours": true,
+      "queue": true,
+      "quota_ref": true
+    },
+    "matched_baseline_fields": {
+      "experiment": true,
+      "gpu_hours": false,
+      "queue": false,
+      "quota_ref": false
+    },
+    "supported_adopted_quality_fields": [],
+    "reason": "Read current96/research-b/quota reply and delivered all four fields.",
+    "contact_labels": [
+      {
+        "request_id": "Ws83oqG8oNPE4vuy6",
+        "person": "Wang Fang",
+        "role_cost": 1,
+        "request_content_sha256": "c04820557d8ea8881d494511b2f483450e2e3226ebd22afebe580ca8c0520e28",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      }
+    ],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__m-low-gpu-job-request.json",
+    "source_packet_sha256": "7b988888c3cc73a46cd2bdd42c3f11df6901d36fd78186f858581d7ee493b5d4",
+    "source_hashes_verified": 21,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "m-low-ledger-allocation",
+    "episode_id": "6af87a1d-40a4-415d-abda-3467a3cdb276",
+    "help_class": "Must-help",
+    "business": "business_failure",
+    "T": 0.75,
+    "Q": null,
+    "R": 0.75,
+    "C": 0,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "invoice_id": "INV-841",
+      "amount_usd": 2400,
+      "cost_center": "CC-410",
+      "ledger_period": "2026-11"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "invoice_id": true,
+      "amount_usd": true,
+      "cost_center": false,
+      "ledger_period": true
+    },
+    "matched_baseline_fields": {
+      "invoice_id": true,
+      "amount_usd": true,
+      "cost_center": true,
+      "ledger_period": true
+    },
+    "supported_adopted_quality_fields": [],
+    "reason": "Actual CC410 is the stale cost center, not currentCC628; other three fields correct. No alternative correct value in final text/posts.",
+    "contact_labels": [],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__m-low-ledger-allocation.json",
+    "source_packet_sha256": "2f7129b4c0f05e7043a1d4ee3af67aa7bca65b6414699f3442996788b0d58e08",
+    "source_hashes_verified": 20,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "m-low-new-hire-record",
+    "episode_id": "12e81788-a407-4eeb-820d-bd8dc0a11f40",
+    "help_class": "Must-help",
+    "business": "business_success",
+    "T": 1.0,
+    "Q": null,
+    "R": 0.9,
+    "C": 2,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "offer_id": "O-317",
+      "employee_id": "E-20931",
+      "start_date": "2026-11-16",
+      "department": "Search"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "offer_id": true,
+      "employee_id": true,
+      "start_date": true,
+      "department": true
+    },
+    "matched_baseline_fields": {
+      "offer_id": true,
+      "employee_id": false,
+      "start_date": false,
+      "department": true
+    },
+    "supported_adopted_quality_fields": [],
+    "reason": "Actual HR reply supplies E20931/Nov16. Search department remains the public role context; HR's lack of department authority does not contradict that public fact.",
+    "contact_labels": [
+      {
+        "request_id": "hokDNcwhZxHRrQux8",
+        "person": "Chen Xinyi",
+        "role_cost": 2,
+        "request_content_sha256": "1a46551261eca7b95be562251fa167c3f1e63311092380df735ac6ef1d31599d",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      }
+    ],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__m-low-new-hire-record.json",
+    "source_packet_sha256": "67dc6bcf50dad58cfe538c1525dd2b0349cb20b349aca195c36fe8f004635400",
+    "source_hashes_verified": 21,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "m-low-partner-key-config",
+    "episode_id": "1cb9b14d-43e2-44b4-ad36-f682d2565315",
+    "help_class": "Must-help",
+    "business": "business_failure",
+    "T": 0.5,
+    "Q": null,
+    "R": 0.5,
+    "C": 0,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "partner": "Orbit",
+      "key_alias": "ORB-K1",
+      "scope": "read:search",
+      "expires_on": "2026-11-30"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "partner": true,
+      "key_alias": false,
+      "scope": true,
+      "expires_on": false
+    },
+    "matched_baseline_fields": {
+      "partner": true,
+      "key_alias": true,
+      "scope": true,
+      "expires_on": true
+    },
+    "supported_adopted_quality_fields": [],
+    "reason": "Actual old ORBK1/Nov30 are not currentORBK3/Feb28; partner and scope correct.",
+    "contact_labels": [],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__m-low-partner-key-config.json",
+    "source_packet_sha256": "65ebdda16790207e0c2ceaeadeead23607594c0885ef0a1cf359c790c3198453",
+    "source_hashes_verified": 20,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "m-low-policy-citation",
+    "episode_id": "837290ac-c37e-4374-a404-9330f14cb350",
+    "help_class": "Must-help",
+    "business": "business_success",
+    "T": 1.0,
+    "Q": null,
+    "R": 0.95,
+    "C": 1,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "policy": "remote-work",
+      "version": "v4.0",
+      "effective_date": "2026-10-01",
+      "url_slug": "remote-work-v4"
+    },
+    "projection_notes": [
+      "policy: actual 'remote-work policy' equivalently denotes 'remote-work'"
+    ],
+    "matched_gold_fields": {
+      "policy": true,
+      "version": true,
+      "effective_date": true,
+      "url_slug": true
+    },
+    "matched_baseline_fields": {
+      "policy": true,
+      "version": false,
+      "effective_date": false,
+      "url_slug": false
+    },
+    "supported_adopted_quality_fields": [],
+    "reason": "Remote-work policy denotes remote-work; current v4/date/slug actually obtained and delivered. Strict policy-label false negative corrected.",
+    "contact_labels": [
+      {
+        "request_id": "4hX8S3vsa2R5kr2zy",
+        "person": "Priya Sharma",
+        "role_cost": 1,
+        "request_content_sha256": "06340b607a0db96e94585cb00d5d02f3603a07d3a9d1ab9f143404943d17ba6f",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      }
+    ],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__m-low-policy-citation.json",
+    "source_packet_sha256": "79cb0e9a626a1b108c3d03a6e1bbf1512d8b437c8847a713bfed9010a4c8751b",
+    "source_hashes_verified": 21,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "m-low-regression-run",
+    "episode_id": "aad44fb2-ce74-47a6-a245-e8b2325c3ab3",
+    "help_class": "Must-help",
+    "business": "business_success",
+    "T": 1.0,
+    "Q": null,
+    "R": 0.95,
+    "C": 1,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "build": "Colly 3.2",
+      "test_plan_id": "TP-32",
+      "suite_size": 214,
+      "environment": "staging-3"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "build": true,
+      "test_plan_id": true,
+      "suite_size": true,
+      "environment": true
+    },
+    "matched_baseline_fields": {
+      "build": true,
+      "test_plan_id": false,
+      "suite_size": false,
+      "environment": false
+    },
+    "supported_adopted_quality_fields": [],
+    "reason": "All current test plan/suite/environment obtained and delivered.",
+    "contact_labels": [
+      {
+        "request_id": "KJs7evH8YKLnX9qxS",
+        "person": "Liu Qiang",
+        "role_cost": 1,
+        "request_content_sha256": "0f87dfa8e094d7843806e70f30e99e7052fba03fb1cb5e50cd1d78b635f43439",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      }
+    ],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__m-low-regression-run.json",
+    "source_packet_sha256": "8512315c20d358f476f786f277c0d72b5a5ef2f5580dc1945124357811bb5182",
+    "source_hashes_verified": 21,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "m-low-release-note-header",
+    "episode_id": "6beac7c8-a561-4570-849c-0055fba4ecd5",
+    "help_class": "Must-help",
+    "business": "business_success",
+    "T": 1.0,
+    "Q": null,
+    "R": 0.9,
+    "C": 2,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "product": "OpenSearch",
+      "version": "2.12.0",
+      "release_date": "2026-11-19",
+      "known_issue_id": "KI-104"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "product": true,
+      "version": true,
+      "release_date": true,
+      "known_issue_id": true
+    },
+    "matched_baseline_fields": {
+      "product": true,
+      "version": false,
+      "release_date": false,
+      "known_issue_id": false
+    },
+    "supported_adopted_quality_fields": [],
+    "reason": "All current version/date/known-issue facts obtained and delivered.",
+    "contact_labels": [
+      {
+        "request_id": "NBeW8dgS5BoQdZJit",
+        "person": "Huang Jie",
+        "role_cost": 2,
+        "request_content_sha256": "3c6a6aa37fdf61e07fe84fc598f2d2487fdf55d0bb8542ff2037d47d3f6f9022",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      }
+    ],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__m-low-release-note-header.json",
+    "source_packet_sha256": "934f14f9497535b49d8a0084f5a69b86e347c0d123ef743af08924e9099b8af0",
+    "source_hashes_verified": 21,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "m-med-campaign-spend",
+    "episode_id": "344d4787-69df-4e49-bc17-7bb8e746982c",
+    "help_class": "Must-help",
+    "business": "business_success",
+    "T": 1.0,
+    "Q": null,
+    "R": 0.75,
+    "C": 5,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "campaign": "Q4 webinar",
+      "spend_usd": 7300,
+      "signed_by": "David Wong",
+      "authorization_ref": "MKT-APR-81"
+    },
+    "projection_notes": [
+      "campaign: actual 'Q4 webinar campaign' equivalently denotes 'Q4 webinar'"
+    ],
+    "matched_gold_fields": {
+      "campaign": true,
+      "spend_usd": true,
+      "signed_by": true,
+      "authorization_ref": true
+    },
+    "matched_baseline_fields": {
+      "campaign": true,
+      "spend_usd": false,
+      "signed_by": false,
+      "authorization_ref": false
+    },
+    "supported_adopted_quality_fields": [],
+    "reason": "Q4 webinar campaign is the same campaign.7300 and actual Finance approval delivered; descriptive suffix does not invalidate content.",
+    "contact_labels": [
+      {
+        "request_id": "AKZqJ7dyjhWfX78cA",
+        "person": "Jessica Lee",
+        "role_cost": 2,
+        "request_content_sha256": "4690bfef4955ca3b93488780a36186677e5072eecd63ac763f91ef9e34b84c8b",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      },
+      {
+        "request_id": "7TWEbneDtfGnfJny9",
+        "person": "David Wong",
+        "role_cost": 3,
+        "request_content_sha256": "bf76bb67215f7cd722ccd96849f10d31e7550806800ee28ce046809192eccbe9",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      }
+    ],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__m-med-campaign-spend.json",
+    "source_packet_sha256": "c198f82c5719acf63cf92a0aa6665fdcc943485983bd0539fff2fa3f5e4ed324",
+    "source_hashes_verified": 21,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "m-med-conference-travel",
+    "episode_id": "3e257f4d-3681-42d0-b7e8-0b437bce7dc6",
+    "help_class": "Must-help",
+    "business": "business_failure",
+    "T": 0.4,
+    "Q": null,
+    "R": 0.1,
+    "C": 6,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "travelers": 0,
+      "total_usd": 9100,
+      "budget_code": "AI-TR-26",
+      "signed_by": null,
+      "authorization_ref": null
+    },
+    "projection_notes": [
+      "Empty delivered traveler list does not convey intermediate known count3."
+    ],
+    "matched_gold_fields": {
+      "travelers": false,
+      "total_usd": true,
+      "budget_code": true,
+      "signed_by": false,
+      "authorization_ref": false
+    },
+    "matched_baseline_fields": {
+      "travelers": false,
+      "total_usd": false,
+      "budget_code": false,
+      "signed_by": false,
+      "authorization_ref": false
+    },
+    "supported_adopted_quality_fields": [],
+    "reason": "Final record has an empty traveler list and final post omits count3; it does not deliver the count learned in intermediate contacts. Correct9100/budget and explicitly pending approval give2/5 atomic fields, not fabricated approval credit. NPC invented a names-only gate.",
+    "contact_labels": [
+      {
+        "request_id": "eWtQb6GhuNENM6t6a",
+        "person": "Wang Fang",
+        "role_cost": 1,
+        "request_content_sha256": "4f3efdff4d349a6361538587768d136ad628cc1ddc9e796b20ba9640a26cf167",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      },
+      {
+        "request_id": "ovzfuXnzbgSxhP9x9",
+        "person": "Chen Xinyi",
+        "role_cost": 2,
+        "request_content_sha256": "43ab63596ea9e851001df8b5b31c802e0ab20e401c4ac10a26b5d6d4e7ba6653",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      },
+      {
+        "request_id": "ft5825uBZh7RdtJRN",
+        "person": "Wang Fang",
+        "role_cost": 1,
+        "request_content_sha256": "1c0439a93551008d7afa9eaf4094653511ea54cfe63163016c8ac0194ea2b3a5",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      },
+      {
+        "request_id": "SmB5XPgHqLecWxkGD",
+        "person": "Chen Xinyi",
+        "role_cost": 2,
+        "request_content_sha256": "d8607045e2caf3859fc27faffc685ff97a1894bd5f3744fa19c39400d54c8cd8",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      }
+    ],
+    "independent_NPC_or_dataset_issues": [
+      "NPC demanded traveler names despite frozen release context requiring only3/9100/budget; those names do not exist in gold facts. Agent then omitted known count from final record."
+    ],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__m-med-conference-travel.json",
+    "source_packet_sha256": "43deabad7541867c38f20d73dfcf5531a35d227f700e3c5c94c49c6e5dfed831",
+    "source_hashes_verified": 21,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "m-med-contractor-invoice",
+    "episode_id": "b5fe1cbb-6f36-4945-94d4-1f2494bbb6ce",
+    "help_class": "Must-help",
+    "business": "business_failure",
+    "T": 0.25,
+    "Q": null,
+    "R": 0.25,
+    "C": 0,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "vendor": "DBX Consulting",
+      "hours": 64,
+      "amount_usd": 9600,
+      "authorization_ref": "Li Ming approval per contractor policy for JanusGraph / DBX invoice"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "vendor": true,
+      "hours": false,
+      "amount_usd": false,
+      "authorization_ref": false
+    },
+    "matched_baseline_fields": {
+      "vendor": true,
+      "hours": true,
+      "amount_usd": true,
+      "authorization_ref": false
+    },
+    "supported_adopted_quality_fields": [],
+    "reason": "64/9600 are stale versus88/13200. Policy approver description is not the current approval reference; vendor alone correct.",
+    "contact_labels": [],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__m-med-contractor-invoice.json",
+    "source_packet_sha256": "50cfb2b71ebb95ee65d76a948bbf278a236cb02af03c2768c8ceebb3f184adfa",
+    "source_hashes_verified": 20,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "m-med-flag-rollout",
+    "episode_id": "3f728534-3ba4-4bcb-b85b-ebcb5e76b3ba",
+    "help_class": "Must-help",
+    "business": "business_failure",
+    "T": 0.5,
+    "Q": null,
+    "R": 0.4,
+    "C": 2,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "flag_key": "ui.checkout.v1",
+      "current_percentage": 10,
+      "target_percentage": 50,
+      "authorization_ref": "FLG-APR-63"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "flag_key": false,
+      "current_percentage": false,
+      "target_percentage": true,
+      "authorization_ref": true
+    },
+    "matched_baseline_fields": {
+      "flag_key": true,
+      "current_percentage": true,
+      "target_percentage": true,
+      "authorization_ref": false
+    },
+    "supported_adopted_quality_fields": [],
+    "reason": "Actual v1/10percent are stale versusv2/20percent. Target50 and returned reference correct; approval does not repair wrong current flag facts.",
+    "contact_labels": [
+      {
+        "request_id": "bHFdupdu7QBT2jyh7",
+        "person": "Huang Jie",
+        "role_cost": 2,
+        "request_content_sha256": "c558c30280a975f28db720223c15cf6a5db6007e8e57fe1e282a29c4da811bdc",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      }
+    ],
+    "independent_NPC_or_dataset_issues": [
+      "Product approver granted without establishing the current flag key/percentage; final Agent still used oldv1/10percent."
+    ],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__m-med-flag-rollout.json",
+    "source_packet_sha256": "3b3207be470db9c8d28efb6a062c67160765a3346355766eb5b4321c44adf888",
+    "source_hashes_verified": 21,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "m-med-hiring-requisition",
+    "episode_id": "507eb262-6587-4db2-93a3-e22df47db7e9",
+    "help_class": "Must-help",
+    "business": "business_success",
+    "T": 1.0,
+    "Q": null,
+    "R": 0.75,
+    "C": 5,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "role": "backend engineer",
+      "level": "L5",
+      "salary_band": "B5",
+      "signed_by": "Sarah Johnson",
+      "authorization_ref": "REQ-APR-310"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "role": true,
+      "level": true,
+      "salary_band": true,
+      "signed_by": true,
+      "authorization_ref": true
+    },
+    "matched_baseline_fields": {
+      "role": true,
+      "level": false,
+      "salary_band": false,
+      "signed_by": false,
+      "authorization_ref": false
+    },
+    "supported_adopted_quality_fields": [],
+    "reason": "Actual role/L5/B5 and actual scoped CTO approval complete.",
+    "contact_labels": [
+      {
+        "request_id": "72BHbBZcvWBdcw3K9",
+        "person": "Huang Jie",
+        "role_cost": 2,
+        "request_content_sha256": "d2321fe6bb508e853d29e772259f63998836e835394ac68345e397e5d3fe2710",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      },
+      {
+        "request_id": "gmhjvLtcpFqmPKaes",
+        "person": "Sarah Johnson",
+        "role_cost": 3,
+        "request_content_sha256": "4b126f0fee8b3430531ae42078aa6b410f22b97d45487b7b010f34d1ebae8c61",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      }
+    ],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__m-med-hiring-requisition.json",
+    "source_packet_sha256": "be855558717694f372c406305456a8b5e3c60866954134e514c351682d0ca2fa",
+    "source_hashes_verified": 21,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "m-med-log-deletion",
+    "episode_id": "f8f5e82a-486d-48bc-83b6-01bcf8848d54",
+    "help_class": "Must-help",
+    "business": "business_success",
+    "T": 1.0,
+    "Q": null,
+    "R": 0.95,
+    "C": 1,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "dataset": "Colly 2025 crawl logs",
+      "retention_class": "R3",
+      "delete_after": "2026-12-31",
+      "authorization_ref": "DEL-APR-12"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "dataset": true,
+      "retention_class": true,
+      "delete_after": true,
+      "authorization_ref": true
+    },
+    "matched_baseline_fields": {
+      "dataset": true,
+      "retention_class": false,
+      "delete_after": false,
+      "authorization_ref": false
+    },
+    "supported_adopted_quality_fields": [],
+    "reason": "Correct current owner actually supplies retention/date/authorization; all content delivered.",
+    "contact_labels": [
+      {
+        "request_id": "iBZsJ5araKMbz9gkC",
+        "person": "Emily Zhou",
+        "role_cost": 1,
+        "request_content_sha256": "d9f77309e2c4cd3ec407804e4cae2f45b9008172dcb4584115b32e55880f7084",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      }
+    ],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__m-med-log-deletion.json",
+    "source_packet_sha256": "3a4eccbad06904bdddadd257a95626c11aff1bf918df71eac0f29d968d6671c2",
+    "source_hashes_verified": 21,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "m-med-new-hire-equipment",
+    "episode_id": "5003c744-ebbc-4c0f-af48-bef3d28bab8a",
+    "help_class": "Must-help",
+    "business": "business_failure",
+    "T": 0.6,
+    "Q": null,
+    "R": 0.4,
+    "C": 4,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "offer_id": "O-402",
+      "start_date": "2026-11-09",
+      "laptop_model": "P16",
+      "total_usd": 1600,
+      "authorization_ref": "EQ-APR-209"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "offer_id": true,
+      "start_date": false,
+      "laptop_model": true,
+      "total_usd": false,
+      "authorization_ref": true
+    },
+    "matched_baseline_fields": {
+      "offer_id": true,
+      "start_date": true,
+      "laptop_model": false,
+      "total_usd": true,
+      "authorization_ref": false
+    },
+    "supported_adopted_quality_fields": [],
+    "reason": "Actual oldNov9/1600 remain wrong versusNov23/2900 despite correctP16 and returned approval. NPC granted against incomplete/wrong scope.",
+    "contact_labels": [
+      {
+        "request_id": "WM4XkhwpRPChNmFu7",
+        "person": "Sophia Rodriguez",
+        "role_cost": 1,
+        "request_content_sha256": "f488df0d8ddb38b353daf398a13838bfe8fbe096ad4da6842414043ec58de66d",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      },
+      {
+        "request_id": "9MKaHFkjXZ7CSrExK",
+        "person": "David Wong",
+        "role_cost": 3,
+        "request_content_sha256": "5700a51a98d5db3ee2f0fe4d256f661c047dc85500fe7295355ef1a464c2e684",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      }
+    ],
+    "independent_NPC_or_dataset_issues": [
+      "Finance granted despite stale claimed HR dateNov9, no actual HR contact, and absent correct2900 amount."
+    ],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__m-med-new-hire-equipment.json",
+    "source_packet_sha256": "bbb88c4788ded3868272b0eca16c076d7005e0dd08b31f03d16d98034dc1fb5f",
+    "source_hashes_verified": 21,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "m-med-research-data-export",
+    "episode_id": "3b882c84-bc02-474f-b6b2-fc4fecc8de78",
+    "help_class": "Must-help",
+    "business": "business_failure",
+    "T": 0.25,
+    "Q": null,
+    "R": 0.25,
+    "C": 0,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "snapshot_id": "CS-0817",
+      "record_count": 1200000,
+      "contains_personal_data": false,
+      "authorization_ref": "data-release-policy.md"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "snapshot_id": false,
+      "record_count": false,
+      "contains_personal_data": true,
+      "authorization_ref": false
+    },
+    "matched_baseline_fields": {
+      "snapshot_id": true,
+      "record_count": true,
+      "contains_personal_data": true,
+      "authorization_ref": false
+    },
+    "supported_adopted_quality_fields": [],
+    "reason": "OldCS0817/1200000 are wrong versusCS1019/1480000; policy filename is not a release reference. Boolean alone correct.",
+    "contact_labels": [],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__m-med-research-data-export.json",
+    "source_packet_sha256": "e9c6e440f83b3a20960166f28947f9418313213660f97652b4d01735186bc552",
+    "source_hashes_verified": 20,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "m-med-security-exception",
+    "episode_id": "56791995-7e7d-46d8-b858-7b0416efd5f0",
+    "help_class": "Must-help",
+    "business": "business_success",
+    "T": 1.0,
+    "Q": null,
+    "R": 0.55,
+    "C": 9,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "endpoint": "/v2/test-search",
+      "risk_rating": "high",
+      "business_justification_id": "BJ-1188",
+      "authorization_ref": "SEC-EX-44"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "endpoint": true,
+      "risk_rating": true,
+      "business_justification_id": true,
+      "authorization_ref": true
+    },
+    "matched_baseline_fields": {
+      "endpoint": true,
+      "risk_rating": false,
+      "business_justification_id": false,
+      "authorization_ref": false
+    },
+    "supported_adopted_quality_fields": [],
+    "reason": "Actual high risk/BJ1188 obtained and cited after initial refusal; actual scoped authorization then read and delivered.",
+    "contact_labels": [
+      {
+        "request_id": "gaAZddQorgCAqAi9Q",
+        "person": "Emma Lewis",
+        "role_cost": 1,
+        "request_content_sha256": "4c555920c75583e343dd4082ba250a84662cd083f9b28a6ad50e76b858caa62f",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      },
+      {
+        "request_id": "4mWNTMHbZmmFyDTkD",
+        "person": "Huang Jie",
+        "role_cost": 2,
+        "request_content_sha256": "7cf2da689889c2b5e6498789611ee224d3a96ab2f85aaf8643cacd0225ace3ed",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      },
+      {
+        "request_id": "cZpiz9tijjZLYxfDg",
+        "person": "Sarah Johnson",
+        "role_cost": 3,
+        "request_content_sha256": "cee2836eb76e9997e41fb3c6a70af496d0984bb624e709a8f6174cdc78c2f950",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      },
+      {
+        "request_id": "xwu77PXWCqnzXJEw5",
+        "person": "Sarah Johnson",
+        "role_cost": 3,
+        "request_content_sha256": "da53e39b5943400c515ba92081c12bfa1581a2535e43dff5855d4b3e0d1f0760",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      }
+    ],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__m-med-security-exception.json",
+    "source_packet_sha256": "51e6d05540c90cc7a47ab643322c22771b1c05180e221d7af5f7db197d222f58",
+    "source_hashes_verified": 21,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "m-med-service-credit",
+    "episode_id": "3ed54d19-aa66-4efb-8845-dc7482769fb9",
+    "help_class": "Must-help",
+    "business": "business_success",
+    "T": 1.0,
+    "Q": null,
+    "R": 0.85,
+    "C": 3,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "customer": "Northwind",
+      "credit_percent": 10,
+      "credit_usd": 800,
+      "authorization_ref": "CR-APR-902"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "customer": true,
+      "credit_percent": true,
+      "credit_usd": true,
+      "authorization_ref": true
+    },
+    "matched_baseline_fields": {
+      "customer": true,
+      "credit_percent": false,
+      "credit_usd": false,
+      "authorization_ref": false
+    },
+    "supported_adopted_quality_fields": [],
+    "reason": "Current contract10percent and actual authorization read;800 correctly derived from8000.",
+    "contact_labels": [
+      {
+        "request_id": "wpsXPenhiHoqbMJMm",
+        "person": "Mark Johnson",
+        "role_cost": 3,
+        "request_content_sha256": "d7e193300162b14f506c613f1abcd94c4f7c1f0692a39d0f9015a216738f7c31",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      }
+    ],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__m-med-service-credit.json",
+    "source_packet_sha256": "5c83b9d01df7440936f3d4117f96288b7a3c25d8c7afb98569e63da463888843",
+    "source_hashes_verified": 21,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "m-med-support-renewal",
+    "episode_id": "71938810-a001-4914-ab39-afb3498d7459",
+    "help_class": "Must-help",
+    "business": "business_failure",
+    "T": 0.75,
+    "Q": null,
+    "R": 0.7,
+    "C": 1,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "seats": 26,
+      "total_usd": 7800,
+      "signed_by": "Zhang Wei",
+      "authorization_ref": "Designated technical deputy for CTO travel 2026-11-02 to 2026-11-13"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "seats": true,
+      "total_usd": true,
+      "signed_by": true,
+      "authorization_ref": false
+    },
+    "matched_baseline_fields": {
+      "seats": false,
+      "total_usd": false,
+      "signed_by": false,
+      "authorization_ref": false
+    },
+    "supported_adopted_quality_fields": [],
+    "reason": "26/7800 and designated signer correct. File places a delegation description in authorization_ref, and neither explicitly marks authorization pending nor requests sign-off. Missing approval status/reference is substantive; no requirement to invent or obtain an approved ID is imposed on an explicitly pending request.",
+    "contact_labels": [
+      {
+        "request_id": "2MhRKqEtg9cWHhpPE",
+        "person": "Alex Turner",
+        "role_cost": 1,
+        "request_content_sha256": "f21b941b3d158cbfa5007fe296d9c11eaef95ccd3b4e2aac018b0e0e8984912f",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      }
+    ],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__m-med-support-renewal.json",
+    "source_packet_sha256": "b90050c9f368def066b3b9b3d3c35db146012edf9bb5847a7e1ec585400f9ce1",
+    "source_hashes_verified": 21,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "m-medium-research-purchase",
+    "episode_id": "67e5105a-e31b-4a5d-aa89-8407de1b276c",
+    "help_class": "Must-help",
+    "business": "business_success",
+    "T": 1.0,
+    "Q": null,
+    "R": 0.6,
+    "C": 8,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "seats": 20,
+      "total_usd": 12000,
+      "allocation_revision": "P-03",
+      "budget_code": "AI-26-B",
+      "release_reference": "VB-REL-203"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "seats": true,
+      "total_usd": true,
+      "allocation_revision": true,
+      "budget_code": true,
+      "release_reference": true
+    },
+    "matched_baseline_fields": {
+      "seats": false,
+      "total_usd": false,
+      "allocation_revision": false,
+      "budget_code": false,
+      "release_reference": false
+    },
+    "supported_adopted_quality_fields": [],
+    "reason": "All current20/P03/12000/budget/release facts delivered. Second research request supplies previously missing budget, not redundant repetition.",
+    "contact_labels": [
+      {
+        "request_id": "EWCdZjWAyiiojng4x",
+        "person": "Wang Fang",
+        "role_cost": 1,
+        "request_content_sha256": "aafbc048109e0a085cad2d100d703ba0406afaa73337c9a2ea157f7a7ec151ad",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      },
+      {
+        "request_id": "5zjKhxaTrdMWZWTf2",
+        "person": "David Wong",
+        "role_cost": 3,
+        "request_content_sha256": "5c84e5d17a8701864703803edefde6cba5e23b47d8046e50c41d9bf496d408a4",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      },
+      {
+        "request_id": "exgqtreyBgPKwvdTz",
+        "person": "Wang Fang",
+        "role_cost": 1,
+        "request_content_sha256": "6daf73961545b45c3c340c3003fcc1e8190a8a996b38e7b25c659eef285a6e4f",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      },
+      {
+        "request_id": "Yntr2i4fSgDT6vD24",
+        "person": "David Wong",
+        "role_cost": 3,
+        "request_content_sha256": "27c90021594158052eb69718398dbfddf86293c5016e5501fb89a16b7c54627b",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      }
+    ],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__m-medium-research-purchase.json",
+    "source_packet_sha256": "ad5ca108de2f0c11ac3e36ec9414384d1fbe05d7921f960fcf0271433440e905",
+    "source_hashes_verified": 21,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "o-high-cloud-budget",
+    "episode_id": "9ed9be16-2b60-4707-947a-0a86a99c6b55",
+    "help_class": "Optional-help",
+    "business": "business_success",
+    "T": 1.0,
+    "Q": 1.0,
+    "R": 0.95,
+    "C": 1,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "instance_count": 8,
+      "commitment": "1-year committed",
+      "annual_usd": 20160
+    },
+    "projection_notes": [
+      "commitment: actual '1-year' equivalently denotes '1-year committed'"
+    ],
+    "matched_gold_fields": {
+      "instance_count": true,
+      "commitment": true,
+      "annual_usd": true
+    },
+    "matched_baseline_fields": {
+      "instance_count": false,
+      "commitment": false,
+      "annual_usd": false
+    },
+    "supported_adopted_quality_fields": [
+      "instance_count",
+      "commitment",
+      "annual_usd"
+    ],
+    "reason": "Actual1-year plus post1-year commitment is equivalent to1-year committed; all optimized content supported by read capacity-owner reply.",
+    "contact_labels": [
+      {
+        "request_id": "RtcMNj5iWv5iXxH6A",
+        "person": "Emma Lewis",
+        "role_cost": 1,
+        "request_content_sha256": "3b7c40e2af52b2c02037e80ec86bdd76a8d31cba917439089d8b875ec323a686",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      }
+    ],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__o-high-cloud-budget.json",
+    "source_packet_sha256": "56adae4233d6c03267101538eb219f77505f4477b67a439e27d85979ebf91a74",
+    "source_hashes_verified": 21,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "o-high-docs-localization",
+    "episode_id": "e46172d7-ef5e-4ae9-8884-7b97bf56f915",
+    "help_class": "Optional-help",
+    "business": "business_success",
+    "T": 1.0,
+    "Q": 1.0,
+    "R": 0.95,
+    "C": 1,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "words_to_translate": 44000,
+      "tm_reuse_percent": 45,
+      "vendor_cost_usd": 4400
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "words_to_translate": true,
+      "tm_reuse_percent": true,
+      "vendor_cost_usd": true
+    },
+    "matched_baseline_fields": {
+      "words_to_translate": false,
+      "tm_reuse_percent": false,
+      "vendor_cost_usd": false
+    },
+    "supported_adopted_quality_fields": [
+      "words_to_translate",
+      "tm_reuse_percent",
+      "vendor_cost_usd"
+    ],
+    "reason": "Actual45percent TM reuse correctly gives44000 words and4400; all optimized fields supported/derived.",
+    "contact_labels": [
+      {
+        "request_id": "toKoiTwhCRJxRsa2b",
+        "person": "Priya Sharma",
+        "role_cost": 1,
+        "request_content_sha256": "a61332d38754e5c2e9bd7e9547821658b00d27bdabd4f0297a33a6fa7e225030",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      }
+    ],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__o-high-docs-localization.json",
+    "source_packet_sha256": "801ae82e00085f471b656ebf740865c1a1e787df40aa003ddb225b04951a35a8",
+    "source_hashes_verified": 21,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "o-high-eval-budget",
+    "episode_id": "b86e6ac0-4f48-4e5d-b1eb-194311f10ebf",
+    "help_class": "Optional-help",
+    "business": "business_failure",
+    "T": 0,
+    "Q": 0,
+    "R": -0.05,
+    "C": 1,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "benchmarks_to_run": 7,
+      "gpu_hours": 175,
+      "cost_usd": 525
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "benchmarks_to_run": true,
+      "gpu_hours": false,
+      "cost_usd": false
+    },
+    "matched_baseline_fields": {
+      "benchmarks_to_run": false,
+      "gpu_hours": false,
+      "cost_usd": false
+    },
+    "supported_adopted_quality_fields": [
+      "benchmarks_to_run"
+    ],
+    "reason": "Actual7/175/525 differs from frozen optimized7/170/510 and baseline12/300/900. Classified reference failure under unchanged base-valid rule, not format failure. Public total and private cached-count5 do not determine170: gold underdetermination is separately flagged; this is not proof of Agent arithmetic error.",
+    "contact_labels": [
+      {
+        "request_id": "Xz8BYrXCEcjCucNaP",
+        "person": "Wang Fang",
+        "role_cost": 1,
+        "request_content_sha256": "985669dddf36a3158ccac2c2ce1f6a2058d78335397dab61b2b075046872894f",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      }
+    ],
+    "independent_NPC_or_dataset_issues": [
+      "Frozen gold170 GPU hours cannot be recovered uniquely from12benchmarks/300hours and private cached_benchmarks5. A hidden runtime allocation is absent; equal-weight estimate175 is arithmetic-consistent but not frozen gold. Dataset-validity decision remains distinct from reproducible reference score."
+    ],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__o-high-eval-budget.json",
+    "source_packet_sha256": "7164378a9d8396cb1df1886d28fb05356ad77cf498767c7c0472dd5cc157a7ff",
+    "source_hashes_verified": 21,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "o-high-floor-move",
+    "episode_id": "554200b1-479c-404d-9de4-36ff2adde29d",
+    "help_class": "Optional-help",
+    "business": "business_success",
+    "T": 0.75,
+    "Q": 0.5,
+    "R": 0.65,
+    "C": 2,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "desks": 40,
+      "accessible_desks": 3,
+      "move_date": "2026-12-05"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "desks": true,
+      "accessible_desks": true,
+      "move_date": false
+    },
+    "matched_baseline_fields": {
+      "desks": true,
+      "accessible_desks": false,
+      "move_date": true
+    },
+    "supported_adopted_quality_fields": [
+      "accessible_desks"
+    ],
+    "reason": "40 desks and accessible3 are valid; retains allowed baselineDec5 rather than optimizedDec12. One of two differing fields adopted, Q1/2.",
+    "contact_labels": [
+      {
+        "request_id": "gJNGYvXBugNJRTuN2",
+        "person": "Chen Xinyi",
+        "role_cost": 2,
+        "request_content_sha256": "4ffad91974446ef34c227ce9998213324608d577287c1bc77dd2b3c76d2bb33b",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      }
+    ],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__o-high-floor-move.json",
+    "source_packet_sha256": "6427beaa09d90789ec2585613a76b6bbbb0a95b1361b55b8ae18aabf95142d56",
+    "source_hashes_verified": 21,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "o-high-interview-panel",
+    "episode_id": "96217e21-aadc-440d-b063-6f771ccb0301",
+    "help_class": "Optional-help",
+    "business": "business_success",
+    "T": 0.75,
+    "Q": 0.5,
+    "R": 0.65,
+    "C": 2,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "panel_size": 4,
+      "certified_interviewers": 4,
+      "training_cost_usd": 1800
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "panel_size": true,
+      "certified_interviewers": true,
+      "training_cost_usd": false
+    },
+    "matched_baseline_fields": {
+      "panel_size": true,
+      "certified_interviewers": false,
+      "training_cost_usd": true
+    },
+    "supported_adopted_quality_fields": [
+      "certified_interviewers"
+    ],
+    "reason": "Certified4 adopted; all-six training1800 remains explicitly allowed. One of two differing fields adopted, Q1/2; not a claim of actual training-cost savings.",
+    "contact_labels": [
+      {
+        "request_id": "rAyfnFEQ9DQc9Xebs",
+        "person": "Chen Xinyi",
+        "role_cost": 2,
+        "request_content_sha256": "ffd12e2c31772e0e633f9d8aa5b8025f3d77ee71102405724a2a6c1b651e32e2",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      }
+    ],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__o-high-interview-panel.json",
+    "source_packet_sha256": "ec4f014e5b8ddb61a139d4e89e5bf9558a3fb4b1bc9ce2fba186bace157c1d72",
+    "source_hashes_verified": 21,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "o-high-launch-announcement",
+    "episode_id": "1adf40b7-d706-421d-bbf7-31c90144abdc",
+    "help_class": "Optional-help",
+    "business": "business_success",
+    "T": 0.5,
+    "Q": 0.0,
+    "R": 0.5,
+    "C": 0,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "launch_date": "2026-11-19",
+      "channels": [
+        "blog",
+        "email"
+      ],
+      "partner_co_announce": true
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "launch_date": false,
+      "channels": false,
+      "partner_co_announce": true
+    },
+    "matched_baseline_fields": {
+      "launch_date": true,
+      "channels": true,
+      "partner_co_announce": false
+    },
+    "supported_adopted_quality_fields": [],
+    "reason": "Baseline target/date and solo channels retained; coannounce flag is an unsupported extra with no NPC contact. Original fieldwise baseline-valid contract accepts this hybrid but grants Q0; no actual partner commitment or date alignment is certified.",
+    "contact_labels": [],
+    "independent_NPC_or_dataset_issues": [
+      "No product-owner contact establishes partner commitment for retainedNov19; Q0 and mixed-plan caveat, not evidence of a negotiated co-launch."
+    ],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__o-high-launch-announcement.json",
+    "source_packet_sha256": "b72e429375be232c2297e287dc28e8d6f89deaa3deedca057694d4700462d5c4",
+    "source_hashes_verified": 20,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "o-high-sales-kickoff",
+    "episode_id": "97db23c2-3f90-4b31-be49-56a677c24802",
+    "help_class": "Optional-help",
+    "business": "business_success",
+    "T": 0.5,
+    "Q": 0.0,
+    "R": 0.5,
+    "C": 0,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "venue": "Bayview",
+      "start_date": "2027-01-20",
+      "nightly_rate_usd": 210,
+      "total_usd": 25200
+    },
+    "projection_notes": [
+      "venue: actual 'Hotel Bayview' equivalently denotes 'Bayview'"
+    ],
+    "matched_gold_fields": {
+      "venue": true,
+      "start_date": false,
+      "nightly_rate_usd": false,
+      "total_usd": false
+    },
+    "matched_baseline_fields": {
+      "venue": true,
+      "start_date": true,
+      "nightly_rate_usd": true,
+      "total_usd": true
+    },
+    "supported_adopted_quality_fields": [],
+    "reason": "Hotel Bayview denotes Bayview. Otherwise exactly legal public baseline; no optimization/contact credit.",
+    "contact_labels": [],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__o-high-sales-kickoff.json",
+    "source_packet_sha256": "1212a9c5163f0a222b87398e38cd3af4d1e689183bbe2de9fb9d62684cad8711",
+    "source_hashes_verified": 20,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "o-high-security-training",
+    "episode_id": "9c654000-091a-411e-9475-20810f6cd97e",
+    "help_class": "Optional-help",
+    "business": "business_success",
+    "T": 1.0,
+    "Q": 1.0,
+    "R": 0.95,
+    "C": 1,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "as_of": "2026-11-05",
+      "modules": [
+        "phishing"
+      ],
+      "staff_trained": 30,
+      "seat_cost_usd": 1200
+    },
+    "projection_notes": [
+      "Required phishing content explicitly included; correct extra modules retained in raw, not penalized as an exact-list mismatch."
+    ],
+    "matched_gold_fields": {
+      "modules": true,
+      "staff_trained": true,
+      "seat_cost_usd": true
+    },
+    "matched_baseline_fields": {
+      "modules": false,
+      "staff_trained": false,
+      "seat_cost_usd": false
+    },
+    "supported_adopted_quality_fields": [
+      "modules",
+      "staff_trained",
+      "seat_cost_usd"
+    ],
+    "reason": "Phishing/email-safety module explicitly present; correct extra modules do not erase it. Read failing-group30 fact and adopted30/1200. Same content principle as prior user decision, without copying that decision to this episode.",
+    "contact_labels": [
+      {
+        "request_id": "9i66xMyKXG2Kkaaqm",
+        "person": "Emma Lewis",
+        "role_cost": 1,
+        "request_content_sha256": "9db18ef228133b65d0fd9eb74d14c0cb850d462d017943082e09309a087e804c",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      }
+    ],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__o-high-security-training.json",
+    "source_packet_sha256": "e9856e013e6108ab6a3b502d66183bd301443bb2394f3ecbaf6ce40cb8fec5d7",
+    "source_hashes_verified": 21,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "o-high-stream-cluster",
+    "episode_id": "0fee1407-74fc-46aa-b77b-7315fc8408d7",
+    "help_class": "Optional-help",
+    "business": "business_success",
+    "T": 0.5,
+    "Q": 0.0,
+    "R": 0.5,
+    "C": 0,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "cluster": "sa-1",
+      "new_nodes": 6,
+      "monthly_usd": 5400
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "cluster": false,
+      "new_nodes": false,
+      "monthly_usd": false
+    },
+    "matched_baseline_fields": {
+      "cluster": true,
+      "new_nodes": true,
+      "monthly_usd": true
+    },
+    "supported_adopted_quality_fields": [],
+    "reason": "Exactly valid public baseline, Q0.",
+    "contact_labels": [],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__o-high-stream-cluster.json",
+    "source_packet_sha256": "f92c7faea49cd6be942b4801bc10e1f4c6f9fb2b86eaa6d01050ea017368d9f7",
+    "source_hashes_verified": 20,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "o-high-training-schedule",
+    "episode_id": "2ee8ce5c-f55a-4831-84da-ffe8999668c6",
+    "help_class": "Optional-help",
+    "business": "business_success",
+    "T": 1.0,
+    "Q": 1.0,
+    "R": 0.9,
+    "C": 2,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "mode": "parallel-clinic",
+      "start_utc": "16:00",
+      "duration_minutes": 60,
+      "cohort_sizes": [
+        12,
+        12
+      ],
+      "facilitator_count": 2,
+      "total_usd": 1600
+    },
+    "projection_notes": [
+      "start_utc: actual '2026-11-12T16:00:00Z' equivalently denotes '16:00'"
+    ],
+    "matched_gold_fields": {
+      "mode": true,
+      "start_utc": true,
+      "duration_minutes": true,
+      "cohort_sizes": true,
+      "facilitator_count": true,
+      "total_usd": true
+    },
+    "matched_baseline_fields": {
+      "mode": false,
+      "start_utc": true,
+      "duration_minutes": false,
+      "cohort_sizes": false,
+      "facilitator_count": false,
+      "total_usd": false
+    },
+    "supported_adopted_quality_fields": [
+      "mode",
+      "duration_minutes",
+      "cohort_sizes",
+      "facilitator_count",
+      "total_usd"
+    ],
+    "reason": "RFC3339 Nov12T16:00Z equals16:00 UTC. Read entitlement and derived two12-person parallel60min cohorts/two facilitators/1600; fully optimized.",
+    "contact_labels": [
+      {
+        "request_id": "cnpZPNFuhjMyPyfhZ",
+        "person": "Chen Xinyi",
+        "role_cost": 2,
+        "request_content_sha256": "1675052026c7802c09b4eaaf09922f383676577b1a258f88188a67cf40828233",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      }
+    ],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__o-high-training-schedule.json",
+    "source_packet_sha256": "ff78096da7658bbeba293fb72f47036bc3ada95cab42838c80f9496979a4f562",
+    "source_hashes_verified": 21,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "o-low-campaign-asset",
+    "episode_id": "ae81d613-a16d-4765-9a2b-4d235bb9829e",
+    "help_class": "Optional-help",
+    "business": "business_success",
+    "T": 0.5,
+    "Q": 0.0,
+    "R": 0.5,
+    "C": 0,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "campaign": "Cedar",
+      "headline": "Build together",
+      "hero_asset": "evergreen-v2.svg"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "campaign": true,
+      "headline": true,
+      "hero_asset": false
+    },
+    "matched_baseline_fields": {
+      "campaign": true,
+      "headline": true,
+      "hero_asset": true
+    },
+    "supported_adopted_quality_fields": [],
+    "reason": "Exactly valid public baseline, Q0.",
+    "contact_labels": [],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__o-low-campaign-asset.json",
+    "source_packet_sha256": "bd35cbcfffb7e42671faca2aa18ab6afcd46e7cb4b02d265727d09f4bc34dc25",
+    "source_hashes_verified": 20,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "o-low-changelog-template",
+    "episode_id": "19d14acc-128e-4772-be77-642983c74978",
+    "help_class": "Optional-help",
+    "business": "business_success",
+    "T": 0.5,
+    "Q": 0.0,
+    "R": 0.5,
+    "C": 0,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "version": "v3.4",
+      "template_id": "T-2",
+      "sections": [
+        "Summary",
+        "Changes"
+      ]
+    },
+    "projection_notes": [
+      "template_id: actual 'T-2 (2024)' equivalently denotes 'T-2'"
+    ],
+    "matched_gold_fields": {
+      "version": true,
+      "template_id": false,
+      "sections": false
+    },
+    "matched_baseline_fields": {
+      "version": true,
+      "template_id": true,
+      "sections": true
+    },
+    "supported_adopted_quality_fields": [],
+    "reason": "T2(2024) identifies the same public T2 template, not a different stable ID; baseline sections/version correct, Q0.",
+    "contact_labels": [],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__o-low-changelog-template.json",
+    "source_packet_sha256": "524fc62a55d6e57fe7c4bf0a9ec5cbb00c9ac4f5c431a9dce4a48df46691fe2f",
+    "source_hashes_verified": 20,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "o-low-demo-dataset",
+    "episode_id": "16da3f9d-4133-486d-ac51-f9f2bca08af7",
+    "help_class": "Optional-help",
+    "business": "business_success",
+    "T": 0.5,
+    "Q": 0.0,
+    "R": 0.5,
+    "C": 0,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "dataset_id": "DS-DEMO-2",
+      "document_count": 420000,
+      "refreshed_on": "2025-12-01"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "dataset_id": false,
+      "document_count": false,
+      "refreshed_on": false
+    },
+    "matched_baseline_fields": {
+      "dataset_id": true,
+      "document_count": true,
+      "refreshed_on": true
+    },
+    "supported_adopted_quality_fields": [],
+    "reason": "Exactly valid public baseline, Q0.",
+    "contact_labels": [],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__o-low-demo-dataset.json",
+    "source_packet_sha256": "9c1601f74c852035a8c5aaa339774c1d4e7366ef17bc907503935a94cb22c928",
+    "source_hashes_verified": 20,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "o-low-demo-shipment",
+    "episode_id": "f9fcbad9-2352-425b-9c18-032a98ddffbb",
+    "help_class": "Optional-help",
+    "business": "business_success",
+    "T": 0.5,
+    "Q": 0.0,
+    "R": 0.5,
+    "C": 0,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "customer": "Fabrikam",
+      "carrier": "GroundCo",
+      "ship_date": "2026-11-12",
+      "delivery_days": 6
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "customer": true,
+      "carrier": false,
+      "ship_date": true,
+      "delivery_days": false
+    },
+    "matched_baseline_fields": {
+      "customer": true,
+      "carrier": true,
+      "ship_date": true,
+      "delivery_days": true
+    },
+    "supported_adopted_quality_fields": [],
+    "reason": "Exactly valid public baseline, Q0.",
+    "contact_labels": [],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__o-low-demo-shipment.json",
+    "source_packet_sha256": "6032a9ed707338b5da976f28f0df37f1203d34c48fcdfaef51dd7a6fe38c25e3",
+    "source_hashes_verified": 20,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "o-low-press-factsheet",
+    "episode_id": "673d262a-bc43-42d5-a954-8e1a57612db0",
+    "help_class": "Optional-help",
+    "business": "business_success",
+    "T": 0.75,
+    "Q": 0.5,
+    "R": 0.65,
+    "C": 2,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "headline": "OpenSearch gets faster",
+      "exec_quote_id": "Q-1102",
+      "boilerplate_version": "B-2026"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "headline": false,
+      "exec_quote_id": true,
+      "boilerplate_version": true
+    },
+    "matched_baseline_fields": {
+      "headline": true,
+      "exec_quote_id": false,
+      "boilerplate_version": true
+    },
+    "supported_adopted_quality_fields": [
+      "exec_quote_id"
+    ],
+    "reason": "Approved quote1102 adopted, baseline generic headline retained; one of two differing fields supported, Q1/2.",
+    "contact_labels": [
+      {
+        "request_id": "JmZnijMaPFxFJjZAv",
+        "person": "Jessica Lee",
+        "role_cost": 2,
+        "request_content_sha256": "462e7c3debc0f41cf0b225883c4867fee2352bde361a25aafd544ea720ae318a",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      }
+    ],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__o-low-press-factsheet.json",
+    "source_packet_sha256": "7729940a83536bb3ed91f59ff920941946e8f9e96e3ec6541cc8a8c1ee8fb970",
+    "source_hashes_verified": 21,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "o-low-staging-region",
+    "episode_id": "a082df95-2cb0-4a59-b2f2-031a165ab575",
+    "help_class": "Optional-help",
+    "business": "business_success",
+    "T": 0.5,
+    "Q": 0.0,
+    "R": 0.5,
+    "C": 0,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "region": "us-east",
+      "instance_type": "std-8",
+      "monthly_usd": 1200
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "region": false,
+      "instance_type": true,
+      "monthly_usd": false
+    },
+    "matched_baseline_fields": {
+      "region": true,
+      "instance_type": true,
+      "monthly_usd": true
+    },
+    "supported_adopted_quality_fields": [],
+    "reason": "Exactly valid public baseline, Q0.",
+    "contact_labels": [],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__o-low-staging-region.json",
+    "source_packet_sha256": "2c98d505550120b6b16207d460af98401d475aa7d66115589726f89562dea552",
+    "source_hashes_verified": 20,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "o-low-survey-launch",
+    "episode_id": "b648487f-4829-41c7-a3e4-78d7d50f15ba",
+    "help_class": "Optional-help",
+    "business": "business_success",
+    "T": 1.0,
+    "Q": 1.0,
+    "R": 0.9,
+    "C": 2,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "launch_date": "2026-11-30",
+      "close_date": "2026-12-11",
+      "reminder_count": 2
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "launch_date": true,
+      "close_date": true,
+      "reminder_count": true
+    },
+    "matched_baseline_fields": {
+      "launch_date": false,
+      "close_date": false,
+      "reminder_count": true
+    },
+    "supported_adopted_quality_fields": [
+      "launch_date",
+      "close_date"
+    ],
+    "reason": "Actual newNov30/Dec11 adopted from read HR reply; contradictory opening wording is independently disclosed, not used to erase explicit allowed new dates.",
+    "contact_labels": [
+      {
+        "request_id": "SyqSe95BkjQWToRTF",
+        "person": "Chen Xinyi",
+        "role_cost": 2,
+        "request_content_sha256": "381c466418e6601c4bb00bb8b0c1d59ba82f07333e8ef7945f5820fe317311eb",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      }
+    ],
+    "independent_NPC_or_dataset_issues": [
+      "HR says proposed window okay while citing a conflict onNov23 and explicitly permitting newNov30/Dec11. Agent adopts the unambiguous alternative."
+    ],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__o-low-survey-launch.json",
+    "source_packet_sha256": "e38f594525015fddeeeaa3eaebf8e2abd9047dcdc39c60cfe44756b444469a2a",
+    "source_hashes_verified": 21,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "o-low-team-lunch",
+    "episode_id": "51e68da3-9df3-4677-8724-b0ee6e920640",
+    "help_class": "Optional-help",
+    "business": "business_success",
+    "T": 1.0,
+    "Q": 1.0,
+    "R": 0.9,
+    "C": 2,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "headcount": 22,
+      "menu": "M1",
+      "vegetarian_meals": 6,
+      "total_usd": 550
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "headcount": true,
+      "menu": true,
+      "vegetarian_meals": true,
+      "total_usd": true
+    },
+    "matched_baseline_fields": {
+      "headcount": true,
+      "menu": true,
+      "vegetarian_meals": false,
+      "total_usd": true
+    },
+    "supported_adopted_quality_fields": [
+      "vegetarian_meals"
+    ],
+    "reason": "Actual aggregate vegetarian6 adopted; other public fields correct; fully optimized.",
+    "contact_labels": [
+      {
+        "request_id": "4NG8CiaQ44hmuys4T",
+        "person": "Chen Xinyi",
+        "role_cost": 2,
+        "request_content_sha256": "7173e75bbbb1a6b332413ee45ef706ad9b4942c2e620aeca43b1c63af5639fd0",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      }
+    ],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__o-low-team-lunch.json",
+    "source_packet_sha256": "bf298788cece9cba51c0d56c57f2e4138f0507b204ada43987f8b6a3c11b9a1e",
+    "source_hashes_verified": 21,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "o-med-ab-test-plan",
+    "episode_id": "e0249010-3206-439e-9045-4524a35af6f4",
+    "help_class": "Optional-help",
+    "business": "business_success",
+    "T": 1.0,
+    "Q": 1.0,
+    "R": 0.95,
+    "C": 1,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "sample_size": 120000,
+      "duration_days": 9,
+      "compute_usd": 1800
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "sample_size": true,
+      "duration_days": true,
+      "compute_usd": true
+    },
+    "matched_baseline_fields": {
+      "sample_size": false,
+      "duration_days": false,
+      "compute_usd": false
+    },
+    "supported_adopted_quality_fields": [
+      "sample_size",
+      "duration_days",
+      "compute_usd"
+    ],
+    "reason": "Actual measured0.18 and explicit120000/9/1800 plan read and adopted. Baseline also remaining valid does not negate optimized plan.",
+    "contact_labels": [
+      {
+        "request_id": "B9aWdvYPkJ2K62ovW",
+        "person": "Wang Fang",
+        "role_cost": 1,
+        "request_content_sha256": "20aa7555ac2b46e5c28e40f09a5d44c85afd5f79fb2802de4ef52c85298b873f",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      }
+    ],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__o-med-ab-test-plan.json",
+    "source_packet_sha256": "49c02adc157dbcc4fb8a384e8674cc08387fe6ab9e0b8b05b06190cfe6fdf974",
+    "source_hashes_verified": 21,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "o-med-backup-window",
+    "episode_id": "e02920d3-5d1a-43ad-b43e-650cf544b015",
+    "help_class": "Optional-help",
+    "business": "business_success",
+    "T": 0.5,
+    "Q": 0.0,
+    "R": 0.5,
+    "C": 0,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "window_utc": "01:00 UTC",
+      "retention_days": 30,
+      "storage_tb": 12
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "window_utc": false,
+      "retention_days": false,
+      "storage_tb": false
+    },
+    "matched_baseline_fields": {
+      "window_utc": true,
+      "retention_days": true,
+      "storage_tb": true
+    },
+    "supported_adopted_quality_fields": [],
+    "reason": "01:00 UTC equals baseline01:00; otherwise legal baseline, Q0.",
+    "contact_labels": [],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__o-med-backup-window.json",
+    "source_packet_sha256": "8943c1f6b320c73f020ae37ba32b5ed89a5d2986ba8f793ad2ac42c076dc5dc4",
+    "source_hashes_verified": 20,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "o-med-batch-schedule",
+    "episode_id": "fe34841f-b884-47be-a1e9-d999821799d3",
+    "help_class": "Optional-help",
+    "business": "business_success",
+    "T": 0.5,
+    "Q": 0.0,
+    "R": 0.5,
+    "C": 0,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "start_utc": "18:00",
+      "gpu_type": "A100",
+      "monthly_usd": 3600
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "start_utc": false,
+      "gpu_type": true,
+      "monthly_usd": false
+    },
+    "matched_baseline_fields": {
+      "start_utc": true,
+      "gpu_type": true,
+      "monthly_usd": true
+    },
+    "supported_adopted_quality_fields": [],
+    "reason": "Exactly valid public baseline18:00/A100/3600, Q0; prior other-episode user ruling is not required here.",
+    "contact_labels": [],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__o-med-batch-schedule.json",
+    "source_packet_sha256": "102e08334aa33fb3fee60d0acccd1921ef042b28cfe1cbd7a61e85bb949a156e",
+    "source_hashes_verified": 20,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "o-med-brochure-translation",
+    "episode_id": "1fb9cd69-222a-4152-805a-9a15d4ad5717",
+    "help_class": "Optional-help",
+    "business": "business_success",
+    "T": 0.5,
+    "Q": 0.0,
+    "R": 0.5,
+    "C": 0,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "vendor": "LinguaPro",
+      "words": 12000,
+      "total_usd": 1440
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "vendor": true,
+      "words": true,
+      "total_usd": false
+    },
+    "matched_baseline_fields": {
+      "vendor": true,
+      "words": true,
+      "total_usd": true
+    },
+    "supported_adopted_quality_fields": [],
+    "reason": "Exactly valid public baseline, Q0.",
+    "contact_labels": [],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__o-med-brochure-translation.json",
+    "source_packet_sha256": "9a50d7d6e36c90473fe46b02356db17e6ea11472129fe8957f112c3ea2e1ad55",
+    "source_hashes_verified": 20,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "o-med-browser-matrix",
+    "episode_id": "f7993efb-c632-4661-8b40-be6bb13a043a",
+    "help_class": "Optional-help",
+    "business": "business_success",
+    "T": 1.0,
+    "Q": 1.0,
+    "R": 0.8,
+    "C": 2,
+    "Nauth": 0,
+    "Nwaste": 1,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "as_of": "2026-11-05",
+      "project": "E-commerce Website Redesign",
+      "browsers": 4,
+      "devices": 4,
+      "cell_count": 16,
+      "sources": [
+        "QA response: current supported browser list is the 2024 matrix and remains acceptable; supported browsers total = 4",
+        "2024 matrix note: 6 browsers x 4 devices = 24 cells"
+      ],
+      "notes": "Using the current supported browser count from QA and the 2024 device count from the prior matrix because QA could not share a fuller device matrix and no newer device count was available in the packet."
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "browsers": true,
+      "devices": true,
+      "cell_count": true
+    },
+    "matched_baseline_fields": {
+      "browsers": false,
+      "devices": true,
+      "cell_count": false
+    },
+    "supported_adopted_quality_fields": [
+      "browsers",
+      "cell_count"
+    ],
+    "reason": "Actual4/4/16 fully adopts read QA count and derived cells. Further frontend request had no matrix record; unchanged wrong-role waste proxy1, not a business failure.",
+    "contact_labels": [
+      {
+        "request_id": "dhJvZyubQ3tYhrHmh",
+        "person": "Liu Qiang",
+        "role_cost": 1,
+        "request_content_sha256": "a13499336bdeac255e62fada647ce6b5f95e8a823c67d6bfaf4b39514ff0c5e3",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      },
+      {
+        "request_id": "BjPiHcLzTDxfvQ3uD",
+        "person": "Jessica Chen",
+        "role_cost": 1,
+        "request_content_sha256": "cd2e7484e7f38d03b721ead77a1c5c4b5918a14cf47bf28a90bd15492fd2dc2c",
+        "Nauth": 0,
+        "Nwaste": 1,
+        "reason": "Unchanged old-R nonadmissible-role proxy; authorization wording adds Nauth. A plausible redirect does not erase real cost or turn this into the recorded fact/approval owner."
+      }
+    ],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__o-med-browser-matrix.json",
+    "source_packet_sha256": "582e76a4759726f24ad1d5dc59888c9ec391d08c1696e2e3b027f8f8a71be917",
+    "source_hashes_verified": 21,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "o-med-license-reuse",
+    "episode_id": "9c2044b0-86ce-405f-81f2-ca2d9ad78947",
+    "help_class": "Optional-help",
+    "business": "business_success",
+    "T": 0.6666666666666666,
+    "Q": 0.3333333333333333,
+    "R": 0.6166666667,
+    "C": 1,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "seats_to_buy": 10,
+      "seats_reassigned": 6,
+      "total_usd": 1800
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "seats_to_buy": false,
+      "seats_reassigned": true,
+      "total_usd": false
+    },
+    "matched_baseline_fields": {
+      "seats_to_buy": true,
+      "seats_reassigned": false,
+      "total_usd": true
+    },
+    "supported_adopted_quality_fields": [
+      "seats_reassigned"
+    ],
+    "reason": "Baseline purchase10/1800 explicitly remains valid; adopted/recorded6 idle seats gives one of three differing fields under original fieldwise Q. Partial/hybrid scoring is not evidence that spending was reduced.",
+    "contact_labels": [
+      {
+        "request_id": "Z8TtFjo6egqCHTrRs",
+        "person": "Sophia Rodriguez",
+        "role_cost": 1,
+        "request_content_sha256": "5321c1b620b806ede23726de93b4871de6a320093d0a60b55e17ab7fa32b6f11",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      }
+    ],
+    "independent_NPC_or_dataset_issues": [
+      "Partial fieldwise Q grants credit for6 while total expenditure remains1800. This proxy is not cost savings or proof that16 seats are required."
+    ],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__o-med-license-reuse.json",
+    "source_packet_sha256": "e194a99c81b35153734abff594275d910f635e44149387dbf551f516558fd6fb",
+    "source_hashes_verified": 21,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "o-med-offsite-date",
+    "episode_id": "349f2c8d-8313-4fe5-b17f-19920b0b6db7",
+    "help_class": "Optional-help",
+    "business": "business_success",
+    "T": 1.0,
+    "Q": 1.0,
+    "R": 0.9,
+    "C": 2,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "date": "2026-11-12",
+      "venue": "Lakeview",
+      "attendees": 12,
+      "calendar_conflicts": 0
+    },
+    "projection_notes": [
+      "Listed historical conflict concerns abandonedNov11; actual selectedNov12 has no reported conflict."
+    ],
+    "matched_gold_fields": {
+      "date": true,
+      "venue": true,
+      "attendees": true,
+      "calendar_conflicts": true
+    },
+    "matched_baseline_fields": {
+      "date": false,
+      "venue": true,
+      "attendees": true,
+      "calendar_conflicts": true
+    },
+    "supported_adopted_quality_fields": [
+      "date"
+    ],
+    "reason": "Nov12 selected. The conflict list explicitly describes the abandonedNov11 date, hence current-date conflicts0; does not transplant gold0 onto an unresolved conflict.",
+    "contact_labels": [
+      {
+        "request_id": "jA2kNio7uDRt7B9qF",
+        "person": "Chen Xinyi",
+        "role_cost": 2,
+        "request_content_sha256": "4c75cb3ca35f4f4ab2360ccea179aeb30d4bbbf90e5c66896e8e3ea603bc19d5",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      }
+    ],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__o-med-offsite-date.json",
+    "source_packet_sha256": "8c2cc523cbb70c4a090b807885c07ff3fa313d4b85fec503304182f2b2713999",
+    "source_hashes_verified": 21,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "o-med-partner-crawl",
+    "episode_id": "70a14f3b-bad8-4130-b9da-bf505fe416ec",
+    "help_class": "Optional-help",
+    "business": "business_success",
+    "T": 0.5,
+    "Q": 0.0,
+    "R": 0.5,
+    "C": 0,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "rate_limit_rps": 2,
+      "user_agent": "tac-crawler",
+      "est_hours": 40
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "rate_limit_rps": false,
+      "user_agent": false,
+      "est_hours": false
+    },
+    "matched_baseline_fields": {
+      "rate_limit_rps": true,
+      "user_agent": true,
+      "est_hours": true
+    },
+    "supported_adopted_quality_fields": [],
+    "reason": "Exactly valid public baseline, Q0.",
+    "contact_labels": [],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__o-med-partner-crawl.json",
+    "source_packet_sha256": "2b916a0b7d362dcf7cf13c7fb7fb79f22f3fc435cad51d7155cd9de18493e1b3",
+    "source_hashes_verified": 20,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "o-med-renewal-quote",
+    "episode_id": "640dc7a5-4c78-401a-ad0f-438e5db0e8ea",
+    "help_class": "Optional-help",
+    "business": "business_success",
+    "T": 1.0,
+    "Q": 1.0,
+    "R": 0.85,
+    "C": 3,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "term_years": 3,
+      "annual_usd": 21600,
+      "total_usd": 64800
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "term_years": true,
+      "annual_usd": true,
+      "total_usd": true
+    },
+    "matched_baseline_fields": {
+      "term_years": false,
+      "annual_usd": false,
+      "total_usd": false
+    },
+    "supported_adopted_quality_fields": [
+      "term_years",
+      "annual_usd",
+      "total_usd"
+    ],
+    "reason": "Explicit3-year21600/64800 terms actually obtained/read and fully adopted.",
+    "contact_labels": [
+      {
+        "request_id": "hKdkWjWee6bGWNMxu",
+        "person": "Mark Johnson",
+        "role_cost": 3,
+        "request_content_sha256": "fe593f300943acc347059ea8bf14af6be05b9c97f978b7b80eaf54acccdea646",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      }
+    ],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__o-med-renewal-quote.json",
+    "source_packet_sha256": "140b070bd335e1b6d01e7de6ed314d9138b8d79908fc83bacbdfb0d99ec976b6",
+    "source_hashes_verified": 21,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "o-med-support-macro",
+    "episode_id": "51258a5c-9e41-409c-bd79-1fe16137c41b",
+    "help_class": "Optional-help",
+    "business": "business_success",
+    "T": 1.0,
+    "Q": 1.0,
+    "R": 0.9,
+    "C": 2,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "macro_id": "MAC-14",
+      "eta_text": "Fixed in 2.12 on 2026-11-19",
+      "workaround": "Reindex from the console"
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "macro_id": true,
+      "eta_text": true,
+      "workaround": true
+    },
+    "matched_baseline_fields": {
+      "macro_id": true,
+      "eta_text": false,
+      "workaround": false
+    },
+    "supported_adopted_quality_fields": [
+      "eta_text",
+      "workaround"
+    ],
+    "reason": "Current exact ETA/workaround actually obtained/read and fully adopted.",
+    "contact_labels": [
+      {
+        "request_id": "kKg9oGH7EZCdKSHNY",
+        "person": "Huang Jie",
+        "role_cost": 2,
+        "request_content_sha256": "bd7e355ab8582af1892edbf0d3938e68981426b60c827574408f21bb2ec1db86",
+        "Nauth": 0,
+        "Nwaste": 0,
+        "reason": "Directly reviewed relevant fact/authority request, unmet-context repair or request for previously unavailable detail; not a duplicate request for already-complete identical content. Correct-role premature requests cost C but are not automatically Nauth/waste."
+      }
+    ],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__o-med-support-macro.json",
+    "source_packet_sha256": "18d8dd9f54bdbb67c1fabd5d384160d8528a9205d2542a5be10fd064b996971a",
+    "source_hashes_verified": 21,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "o-med-usability-budget",
+    "episode_id": "5933d8dc-7c17-4ba0-846b-578f1b4daa55",
+    "help_class": "Optional-help",
+    "business": "business_success",
+    "T": 0.5,
+    "Q": 0.0,
+    "R": 0.5,
+    "C": 0,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "participants": 15,
+      "external_recruits": 15,
+      "incentive_total_usd": 1500
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "participants": true,
+      "external_recruits": false,
+      "incentive_total_usd": false
+    },
+    "matched_baseline_fields": {
+      "participants": true,
+      "external_recruits": true,
+      "incentive_total_usd": true
+    },
+    "supported_adopted_quality_fields": [],
+    "reason": "Exactly valid public baseline15 external/1500, Q0.",
+    "contact_labels": [],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__o-med-usability-budget.json",
+    "source_packet_sha256": "c1c0eea656a39b0fd9bf04edb5c91ab76478903af5f01eba700260f57962e952",
+    "source_hashes_verified": 20,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  },
+  {
+    "group": "gpt54_control",
+    "task_id": "o-medium-event-package",
+    "episode_id": "ced53d11-ce65-4b97-81ce-39ceea6563eb",
+    "help_class": "Optional-help",
+    "business": "business_success",
+    "T": 0.5,
+    "Q": 0.0,
+    "R": 0.5,
+    "C": 0,
+    "Nauth": 0,
+    "Nwaste": 0,
+    "weights": {
+      "lambda": 0.05,
+      "mu": 0.3,
+      "nu": 0.1
+    },
+    "projected_artifact": {
+      "attendees": 30,
+      "package_code": "STD30",
+      "total_usd": 2100
+    },
+    "projection_notes": [],
+    "matched_gold_fields": {
+      "attendees": true,
+      "package_code": false,
+      "total_usd": false
+    },
+    "matched_baseline_fields": {
+      "attendees": true,
+      "package_code": true,
+      "total_usd": true
+    },
+    "supported_adopted_quality_fields": [],
+    "reason": "Exactly valid public STD30/2100 baseline, Q0.",
+    "contact_labels": [],
+    "independent_NPC_or_dataset_issues": [],
+    "all_answer_surfaces_directly_reviewed": true,
+    "source_packet": "review_inputs/gpt54_control__o-medium-event-package.json",
+    "source_packet_sha256": "efd388736c95ee920ccf4d55923d25170af1802a40c95247a37bef7f26b0bf54",
+    "source_hashes_verified": 20,
+    "rule_version": "semantic-content-pending-truthful-extra-v3-full-v1",
+    "reviewer": "nonblind AI direct offline review; no paid judge",
+    "raw_unchanged": true,
+    "R_prime_computed": false
+  }
+]

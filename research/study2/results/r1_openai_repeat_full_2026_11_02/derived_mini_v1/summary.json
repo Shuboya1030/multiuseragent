@@ -1,0 +1,32 @@
+{
+  "scope": 30,
+  "submitted_or_normal_stop": 30,
+  "technical_censored": 0,
+  "semantic_evaluable": 30,
+  "business_pass": 2,
+  "business_fail": 28,
+  "business_success_rate": 0.06666666666666667,
+  "contacted_tasks": 5,
+  "actual_contacts": 10,
+  "mean_T": 0.26166666666666666,
+  "mean_R": 0.2033333333333333,
+  "settled_research_cost_usd": "0.30682500",
+  "agent_calls": 247,
+  "NPC_calls": 10,
+  "new_unknown_calls": 0,
+  "latest_to_repeat_transitions": {
+    "business_failure -> business_failure": 26,
+    "business_failure -> business_success": 1,
+    "business_success -> business_success": 1,
+    "business_success -> business_failure": 2
+  },
+  "original_to_repeat_transitions": {
+    "business_failure -> business_failure": 25,
+    "not_evaluable -> business_failure": 1,
+    "business_failure -> business_success": 2,
+    "business_success -> business_failure": 2
+  },
+  "fixed_scope_same_condition_three_runs": false,
+  "R_prime_computed": false,
+  "full60_control_still_separate": true
+}

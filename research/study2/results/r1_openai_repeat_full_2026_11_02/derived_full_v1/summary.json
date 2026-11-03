@@ -1,0 +1,59 @@
+{
+  "all": {
+    "n": 60,
+    "business_pass": 50,
+    "business_fail": 10,
+    "mean_T": 0.7652777777777777,
+    "mean_R": 0.6077777777783333,
+    "contacted_tasks": 41,
+    "contacts": 85,
+    "agent_calls": 591,
+    "NPC_calls": 85,
+    "settled_cost_usd": "2.19931925"
+  },
+  "Must": {
+    "n": 30,
+    "business_pass": 21,
+    "business_fail": 9,
+    "mean_T": 0.8333333333333334,
+    "mean_R": 0.5666666666666667,
+    "contacted_tasks": 25,
+    "contacts": 68,
+    "agent_calls": 355,
+    "NPC_calls": 68,
+    "settled_cost_usd": "1.37163300"
+  },
+  "Optional": {
+    "n": 30,
+    "business_pass": 29,
+    "business_fail": 1,
+    "mean_T": 0.6972222222222223,
+    "mean_R": 0.64888888889,
+    "contacted_tasks": 16,
+    "contacts": 17,
+    "agent_calls": 236,
+    "NPC_calls": 17,
+    "settled_cost_usd": "0.82768625"
+  },
+  "semantic_evaluable": 60,
+  "unevaluated": 0,
+  "technical_censored": 0,
+  "numerical_T_R_gaps": 0,
+  "dataset_underdetermination_flags": [
+    "o-high-eval-budget"
+  ],
+  "unresolved_gold_validity_not_an_unreported_zero": true,
+  "same_v6_Must_mini_to_full_transitions": {
+    "business_failure -> business_failure": 9,
+    "business_failure -> business_success": 19,
+    "business_success -> business_success": 2
+  },
+  "original_mini_to_full_transitions": {
+    "business_failure -> business_failure": 9,
+    "business_failure -> business_success": 19,
+    "not_evaluable -> business_success": 1,
+    "business_success -> business_success": 30,
+    "business_success -> business_failure": 1
+  },
+  "R_prime_computed": false
+}
