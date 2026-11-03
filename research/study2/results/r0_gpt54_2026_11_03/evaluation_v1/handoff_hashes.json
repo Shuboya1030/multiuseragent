@@ -1,0 +1,13 @@
+{
+  "Study21_R0_Final_Report_CN.md": "df0f29d4b2be9b867d033499d4b85faeeedf5c9689b64bbf424e93ffae4a2f9a",
+  "review_decisions.json": "4125a57fca3dac43972ab22b522f89a5de245cc6173e8f1da760ec1d6fac9adf",
+  "evaluation_v1/adjudications.json": "8741a2a951f1d8b4cb0cb1fe368502c1bec1d76811e0a5e1d34aa38d0800a26f",
+  "evaluation_v1/budget_provenance.json": "7c9535e84b15f5ac31c292a181e88561f7615fdef03d89cee2559285505bb867",
+  "evaluation_v1/call_index.csv": "c71ff684a3677c3238002937b26d2541e0001f0959e0e19ec9ac643be508520c",
+  "evaluation_v1/episode_index.csv": "56e499c001e84bbff2dbb2d3012079182d60260ee3c8e1131ef83c22f6e71b96",
+  "evaluation_v1/final_validation.json": "4df80a1fb443ba4770442bd229f51cd865e2c68238d70cbe4fd4d57681e31124",
+  "evaluation_v1/R0_R1_Paired60.csv": "6c51e60c85b36d214d6e244e3048b73d0fb2c1ec407bc9f3788da45e8de68902",
+  "evaluation_v1/R0_R1_Paired60.partial_checkpoint.csv": "0cb56440ed60b486b90f8431091f1c7e880ea10e4567206d3ae10049fb4802da",
+  "evaluation_v1/R0_R1_Paired_Partial.csv": "68c2a2e2a22c3861a5863abdd8f11ffda618e61d9bee44424f41927a3fb0a47a",
+  "evaluation_v1/summary.json": "b3950f148bd635975e8f280a017dd8ac7fc1dbc61991c7afb83f9a7dea8e46b7"
+}

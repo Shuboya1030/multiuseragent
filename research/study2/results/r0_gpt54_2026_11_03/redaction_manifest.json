@@ -1,0 +1,3085 @@
+{
+  "source_read_only": true,
+  "research_records_omitted": [],
+  "source_to_public_hash_mapping": "manifest.json",
+  "redactions_by_type": {
+    "unnecessary_external_runtime_endpoint_removed": 248,
+    "private_local_path_removed": 2,
+    "local_path_to_portable_reference": 17129
+  },
+  "entries": [
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/execute_batch.py",
+      "target": "frozen_stage/execute_batch.py",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "2796fd624746e1f3ca6f2bfc063286b1d8ce90ea3afc341fff3d9b3d66176d6d",
+      "published_sha256": "d8487bcb2b09ae31dc6b0f797175afaf61aed652f448ef864c892d4e2d319f61",
+      "source_bytes": 18455,
+      "published_bytes": 18396,
+      "redactions": {
+        "private_local_path_removed": 1
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/haiku_context_safety_v1.py",
+      "target": "frozen_stage/haiku_context_safety_v1.py",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "28d6419f1e21c37e9c0d7c9cd1828a46a09ed2290365033e5a0ca763f28491b8",
+      "published_sha256": "f39a495f71ab3ff5602721180ab15ca9fa38cbd5f6c58e973253d8759985c46f",
+      "source_bytes": 7767,
+      "published_bytes": 7767,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 4
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/authorization.json",
+      "target": "frozen_stage/runner/authorization.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "0aeda5b42ba9f26dbc868985b4081595b3ef934f0c9e2473a95be5156f9f50d4",
+      "published_sha256": "9b2591c4066a1ec0d1a28350c6966e2e67c8fadd2ac41fcbdcbf9ea353bb3e24",
+      "source_bytes": 970999,
+      "published_bytes": 657229,
+      "redactions": {
+        "local_path_to_portable_reference": 3425
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/baseline.json",
+      "target": "frozen_stage/runner/baseline.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "27036941d6316756b60cfe408969030e730d0285a6835ccb30618d6a3cf4ded2",
+      "published_sha256": "f55bbc19aaad703a6feacb3518c030b25e64f866a67b777e34c68c5dd8ff2520",
+      "source_bytes": 2397668,
+      "published_bytes": 1542995,
+      "redactions": {
+        "local_path_to_portable_reference": 9068
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/controller.finished.97eb2858f1ec4b6dad697916024e0646.json",
+      "target": "frozen_stage/runner/controller.finished.97eb2858f1ec4b6dad697916024e0646.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "ce23db6bfb90ad21b428a61907b9603933349a716b5cbc3d2cb7364f5b19cef6",
+      "published_sha256": "763e2d1f7417b23f8d6dab4103d5d23986f61929e4e98bf55a5c46b7cbe078bc",
+      "source_bytes": 171,
+      "published_bytes": 73,
+      "redactions": {
+        "local_path_to_portable_reference": 1
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/controller.finished.json",
+      "target": "frozen_stage/runner/controller.finished.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "c82c82734ef056d8667db87a45059b8fd835ccabf1b0072649aeaa6b52ed5fe4",
+      "published_sha256": "54636bac86acd50ab1f56187217d56a7c04e314d922354cfbb825bbf773d9d11",
+      "source_bytes": 172,
+      "published_bytes": 74,
+      "redactions": {
+        "local_path_to_portable_reference": 1
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/controller.zero_call_finished.json",
+      "target": "frozen_stage/runner/controller.zero_call_finished.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "29d319f46ef3bc8a96f94404f4b117208471c564778565eccbb3892890a8e871",
+      "published_sha256": "318f6e989ff7b33ac756b4d790453c6b14a0f3b7ccab83ddfff2e85f5f52a241",
+      "source_bytes": 172,
+      "published_bytes": 74,
+      "redactions": {
+        "local_path_to_portable_reference": 1
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/controller_error.zero_call_gate_failure.json",
+      "target": "frozen_stage/runner/controller_error.zero_call_gate_failure.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "93b35c6d0ba8af1f9afa24fed1b7f7a032c4ac2e630c4b6e7da6481758d24145",
+      "published_sha256": "ca57e7d34273ec249a57eaeaf35d6ba610e8f827caf85c2442a1c3643e5641a8",
+      "source_bytes": 376,
+      "published_bytes": 247,
+      "redactions": {
+        "local_path_to_portable_reference": 1
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/progress.json",
+      "target": "frozen_stage/runner/progress.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "cfd348a439388c1d0cc6cda01a5d00f9221d5e6fb9607e7956ef76527e53aa01",
+      "published_sha256": "9f95450d15265fd022df6f8febf538f8de7f695c40f56b09619c4a4172dda65c",
+      "source_bytes": 288529,
+      "published_bytes": 276585,
+      "redactions": {
+        "local_path_to_portable_reference": 121
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/queue.json",
+      "target": "frozen_stage/runner/queue.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "7804f9b8f3f0794eee6e4bf2b218a28309e2535e318d0b4c7d26f967756917fe",
+      "published_sha256": "4e80b21f29f34ed3725cd7cdc67485d68c2bd81803c13add479340362fe00a67",
+      "source_bytes": 269081,
+      "published_bytes": 257242,
+      "redactions": {
+        "local_path_to_portable_reference": 120
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-high-access-recert/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-high-access-recert/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "a26500e9d7e01645b1df515d3bc453e195c58c7a6b2473d5d95f69434f385a00",
+      "published_sha256": "26bb807cdb4622fe0629b22d22112069f4b49603afbbe2145a91508867faf03c",
+      "source_bytes": 5329,
+      "published_bytes": 4677,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-high-access-recert/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-high-access-recert/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "2e693ba586f99e64c5feb45b7a484de7318e906dc30fb1b86e699d5265f6718b",
+      "published_sha256": "89d1928e9520cc951ffe5b0540173d20139934c1229d89cf3f95f0fb7449bf20",
+      "source_bytes": 3332,
+      "published_bytes": 2609,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-high-customer-data-request/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-high-customer-data-request/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "dfa155a9ff3d01cb421516a786abfe3637d2cf48792bf6b529e87d62535cc6bd",
+      "published_sha256": "73a068374f5a65af863a53af29c3042cfc522da3404361c55d4c028d5dd8b02b",
+      "source_bytes": 5353,
+      "published_bytes": 4701,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-high-customer-data-request/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-high-customer-data-request/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "e2868b88b3dc9791359ba4d98c054901a58f8645e4169f12a79bf46a58c344a1",
+      "published_sha256": "0e270b4d4d6fd731b09a847c3fad56a1f15877fa1d663276e9c88f8018498e9a",
+      "source_bytes": 3340,
+      "published_bytes": 2617,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-high-db-migration/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-high-db-migration/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "7cf8c393e712b5dd7dc1f0510a2cda2ba9f2e84edc355016cf0e46131c925809",
+      "published_sha256": "8464f2f5185508e7bc386f2b8840217354252b667516ad169b02b6c45634cb2b",
+      "source_bytes": 5326,
+      "published_bytes": 4674,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-high-db-migration/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-high-db-migration/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "888b0b36492ad4930c0b7c1fbe7057d2d6454a853e11e2306580370d6b2fa1b9",
+      "published_sha256": "70dec0bf8c099cf2b26d40c1d08f061023d851362a6d89364e1b772871bd8933",
+      "source_bytes": 3331,
+      "published_bytes": 2608,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-high-incident-postmortem/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-high-incident-postmortem/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "dcc1a235f6c7f34e7bc5f7118cc4763463d473ea2ae7437f95c19edf0dcf16ef",
+      "published_sha256": "913ed53eab2d2fe8642eb7dea77499c379fd12e4786686e243da94417832dd30",
+      "source_bytes": 5347,
+      "published_bytes": 4695,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-high-incident-postmortem/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-high-incident-postmortem/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "ce8890c23313cea010c2849c311d0791d430e9becb7e15ea77f379298800ee62",
+      "published_sha256": "39bd0f52cffff1d697b4bf6161835e80d2a2586c2b2dbce1e517551f2dc60fdc",
+      "source_bytes": 3338,
+      "published_bytes": 2615,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-high-model-release/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-high-model-release/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "14fbdf87fa0ee2eb83af7fefd14f2c7c0b02afeffd4d03051c8b6d396fa2d7e6",
+      "published_sha256": "2718f4e10e723f22da9eb07bfbbb81de2b20ff79ba9611822a2989c399db4bd5",
+      "source_bytes": 5329,
+      "published_bytes": 4677,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-high-model-release/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-high-model-release/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "59a86f14a76535005f15419073b5841c3468ac6f577a334c85f2d37a5683f6a0",
+      "published_sha256": "ab67357235b0ff1333ff7de2975b4a83f23fe07ccb171150225a6119335f56a6",
+      "source_bytes": 3332,
+      "published_bytes": 2609,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-high-payroll-correction/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-high-payroll-correction/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "e4ae4943e51f5db171497d62294ff289ef95961c60d3933a9612371da2a378eb",
+      "published_sha256": "5d007fb39cdcc31e05c929af710af003836f5cddd4467afc99236778a8abb6de",
+      "source_bytes": 5344,
+      "published_bytes": 4692,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-high-payroll-correction/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-high-payroll-correction/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "935a5798144c85e22f55efa13bb37a34e964863893ea439c557ee07e3cf2e108",
+      "published_sha256": "29d2fe9df3766422aee0a68d002f6bd7e8d59f77ec64b9d818606f00ade88de4",
+      "source_bytes": 3337,
+      "published_bytes": 2614,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-high-plugin-purchase/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-high-plugin-purchase/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "a3203a6f90aced6c84343275453133c6ecdca386b20d1d5cac876b5db35f7132",
+      "published_sha256": "0524931d6f17e18f06de365a984381b1c304d916757bf5fbc1ccfbd475ec1796",
+      "source_bytes": 5335,
+      "published_bytes": 4683,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-high-plugin-purchase/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-high-plugin-purchase/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "fdb9cd1327b1c1e3ddeb6c11cd5f6480d520fca3a22d9c2550da7ed07c4d2c28",
+      "published_sha256": "bf4d3a771158dce89c72454abed709dcd1ae2cd1879122dc85881002320958c3",
+      "source_bytes": 3334,
+      "published_bytes": 2611,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-high-portal-launch/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-high-portal-launch/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "aa5254ba65bb194f6f91e32683af699b644965870165502db69c2d2ccb795a00",
+      "published_sha256": "8700128b3669c1ac003a273cc1e3d8ea64d247c12a7b99b388f938f4500d8cff",
+      "source_bytes": 5329,
+      "published_bytes": 4677,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-high-portal-launch/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-high-portal-launch/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "473333f4f415e0fb30aa11317715647893eabb33425555664c1d6261486f6f7c",
+      "published_sha256": "ead1f501b61904eda7ec43113d598e1049bf54ccded70c74f98a77b012f33c68",
+      "source_bytes": 3332,
+      "published_bytes": 2609,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-high-price-change/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-high-price-change/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "033516face5247add45068adf42f5dd07c3fcb1c4c03ad99c39bed63e032119d",
+      "published_sha256": "1ace987ab6acc3b16ece75529c39785cc5263988a0d19e9eb5b28305a89fbc77",
+      "source_bytes": 5326,
+      "published_bytes": 4674,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-high-price-change/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-high-price-change/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "d8ce0db41b88e6d57d8c6dbd03115b2f08f3bade08460e92a15e508617aa8bae",
+      "published_sha256": "40667eb9f35ebc2ea0dc6fdd814ab4b8be07e12881f362cb53a95f3b49190051",
+      "source_bytes": 3331,
+      "published_bytes": 2608,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-high-service-cutover/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-high-service-cutover/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "e9ef8f82a803fb97b5b9928f8772bae3836453b29e47a77e6f0ea83517257e68",
+      "published_sha256": "2e0413989061ff132ef39572976a61da6cd8d42002ee885445b615fecdb2c9c9",
+      "source_bytes": 5335,
+      "published_bytes": 4683,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-high-service-cutover/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-high-service-cutover/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "d5ee23a31ac74a3f8b5d5cd358ce990c2eac372fbe0c83c2a5fce1c5816af53e",
+      "published_sha256": "19a4ae2140ba6439c94be7aff0e93304b435f1cf3da80c4d0db6f46c5b49592a",
+      "source_bytes": 3334,
+      "published_bytes": 2611,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-low-customer-mailing/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-low-customer-mailing/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "67239f60d9770515d773385440792e5518eac0c9b9fff6e9cecc06181179e88e",
+      "published_sha256": "a0edbfd360444cfb9463ac973a963335f9ab8703ef7061bf5bffd5d1c71f52f5",
+      "source_bytes": 5335,
+      "published_bytes": 4683,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-low-customer-mailing/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-low-customer-mailing/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "9a4de95a0f90a435ee957adbc93765dfaf244b8a90264f38b66b748743c2c6cb",
+      "published_sha256": "de7280e41e761e4dd4fafa9d500cc9a68572fe742ceca618b95e33614388d966",
+      "source_bytes": 3334,
+      "published_bytes": 2611,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-low-customer-mailing__zero_call_checkpoint/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-low-customer-mailing__zero_call_checkpoint/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "67239f60d9770515d773385440792e5518eac0c9b9fff6e9cecc06181179e88e",
+      "published_sha256": "a0edbfd360444cfb9463ac973a963335f9ab8703ef7061bf5bffd5d1c71f52f5",
+      "source_bytes": 5335,
+      "published_bytes": 4683,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-low-gpu-job-request/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-low-gpu-job-request/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "118bd761b4f94ac43df9b017c0b13c128e8942cdd92a5b5401bf7ddb49d5b1b3",
+      "published_sha256": "92f7263a32d2701726c277f617b329899f44b5d55dd53ee7a5c11f02f764f134",
+      "source_bytes": 5332,
+      "published_bytes": 4680,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-low-gpu-job-request/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-low-gpu-job-request/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "f3b6b63bd7cb42ed2acabc08612b8bf30657f0c794cf85de36479294a453dd0d",
+      "published_sha256": "8d83b9130951b5e150c7c78ee8f021aa1578e2a3ffd2ece22dee0158d5080e53",
+      "source_bytes": 3333,
+      "published_bytes": 2610,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-low-ledger-allocation/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-low-ledger-allocation/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "b7edb3c089935ef7d0967b9107da6a24d4cd36db83232b0ffdbd1214dd74658e",
+      "published_sha256": "3513a6666c66947c32030c40f38e3f6a9990ec48073500407890f0b40faf685c",
+      "source_bytes": 5338,
+      "published_bytes": 4686,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-low-ledger-allocation/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-low-ledger-allocation/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "bd4cdb539fb0aa1255028c251ecd0e8cafd5c13b4793ba2404c885395e15f8c3",
+      "published_sha256": "bda1233f0701708f8bca2523376f23b3a929220d8832bed056d124b6d81fba2e",
+      "source_bytes": 3335,
+      "published_bytes": 2612,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-low-new-hire-record/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-low-new-hire-record/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "edf0d036bd227587637a9c9be53578c88d9dcba0e04e027029ca18f02530d0cd",
+      "published_sha256": "ccc35b90bbbc7d13650da6b74f59904ce29d3ab2b9a7d3cf644508758b6c2952",
+      "source_bytes": 5332,
+      "published_bytes": 4680,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-low-new-hire-record/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-low-new-hire-record/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "31f45dcb407a07b0cca6ea50d7e2b3beeb448465d674201bc568ce6131dc694d",
+      "published_sha256": "7bae37aba36c69078de7e6fec26bf7b1fb4d786e170cfd41052461a0c096951b",
+      "source_bytes": 3333,
+      "published_bytes": 2610,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-low-partner-key-config/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-low-partner-key-config/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "caaaca5879d98a6d009075fede33b3915a76918787fc5220574f1b817a888085",
+      "published_sha256": "70db71f93daa1c20ed6c689c6e8573adb0ff73e391c79b38f24f2078572aa11b",
+      "source_bytes": 5341,
+      "published_bytes": 4689,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-low-partner-key-config/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-low-partner-key-config/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "e8eadfd3bb438c1fb21f84aa98ef7ed33df297adbe099276055c18a204433b5a",
+      "published_sha256": "e02c7a56360fc2c62a622eb6e487e18617461938a84cd81fadc3eb03703640e7",
+      "source_bytes": 3336,
+      "published_bytes": 2613,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-low-policy-citation/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-low-policy-citation/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "b807905eced16f1e84ba0fc3d14a1f635021b90b7052e6a64b14297213e81c0d",
+      "published_sha256": "6cfed7ec2c867fac0052b51670b1f9b9920f866d540a276a9b9f9a7507bea3b8",
+      "source_bytes": 5332,
+      "published_bytes": 4680,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-low-policy-citation/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-low-policy-citation/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "9efc37a0ce93bb3313bad240f2dad1440856c88044a9c8c199088ccdc673eca1",
+      "published_sha256": "05ade53323a744a3eb3c484fa85a01721c90dbd1dae402ecbbbc60cbb0126c18",
+      "source_bytes": 3333,
+      "published_bytes": 2610,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-low-regression-run/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-low-regression-run/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "def8dcb0f84628ef58ba5408a62736dcec8f1094a54449a04ff517ef2ab96b5b",
+      "published_sha256": "6dee4688cecdde4a033f8cc5c65f3f38471d2ef524935f5db751955bf6e71550",
+      "source_bytes": 5329,
+      "published_bytes": 4677,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-low-regression-run/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-low-regression-run/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "cf350514f6265a5c29e075466bb82184d8f61b7544cadf4508937883baf7d0af",
+      "published_sha256": "8a18c90566191208bf2ba0035a421285422daccaa76ce47eb633772e7bbd3543",
+      "source_bytes": 3332,
+      "published_bytes": 2609,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-low-release-note-header/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-low-release-note-header/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "113479bd9c4457a55ec5325e213ca9f386e780dd53e8e372a306ce713c4ec27e",
+      "published_sha256": "4dc75c704e3a427dc36215420cf761d7383882773b38d2ad1f9faa21bab8e23a",
+      "source_bytes": 5344,
+      "published_bytes": 4692,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-low-release-note-header/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-low-release-note-header/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "07c8fc7e6c77f8a412e3fccbf3cee0ca9a4d210686958320f3fddf8fc8f3e48b",
+      "published_sha256": "4756073f0f7721342bd2f79c33e7ffc2fa40124adfc4c606afcdc91597ef871c",
+      "source_bytes": 3337,
+      "published_bytes": 2614,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-med-campaign-spend/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-med-campaign-spend/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "9e27fb3f0213c570c455d3f8e8596b0a63db2dd30cce7e71c12cca196918f57d",
+      "published_sha256": "6c508e27f2075ef835f328cde411f11b74c6248edbd53761f8edef92f972bf89",
+      "source_bytes": 5329,
+      "published_bytes": 4677,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-med-campaign-spend/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-med-campaign-spend/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "f8df028dec49cdeb379714c0b798f8e3d27585039515e8b24bfc600a0d5dddce",
+      "published_sha256": "81cf4ca49d75b06603a948d980103edf1999234b80f6339cbddda01c0503b95f",
+      "source_bytes": 3332,
+      "published_bytes": 2609,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-med-conference-travel/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-med-conference-travel/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "a1ab2e402896052964af644ae489d715c4ec6043b09645225f10efc4ed798eea",
+      "published_sha256": "6029b0caab966af3df4a6f342609d133382e6b7f4d061d388d0740b4bf756b79",
+      "source_bytes": 5338,
+      "published_bytes": 4686,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-med-conference-travel/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-med-conference-travel/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "389e411c2c5893eef01cfffe38492addc366a575ee717fa4a0014e57010d9995",
+      "published_sha256": "9548a3985c09d11736a6401192808fe8d554fc79d006b0d1b4c1ddce1d1ad14a",
+      "source_bytes": 3335,
+      "published_bytes": 2612,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-med-contractor-invoice/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-med-contractor-invoice/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "34e05a9df150c809f7c7c8c7072176b849e031f97258855708f2ee9d0acfda32",
+      "published_sha256": "04f839370290fa4af4d41f98277fa6e79f01af482ea1600d35f1cf9e76a3e026",
+      "source_bytes": 5341,
+      "published_bytes": 4689,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-med-contractor-invoice/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-med-contractor-invoice/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "23e037af4753a6fd91dc4058f623615ea2cd4e4ee301e1ac4ba0de7db62d59eb",
+      "published_sha256": "7bf2e8cdb655b5b4dbc43abd0e0ee7ac0b0031e82478e98a7741423eb28d36ca",
+      "source_bytes": 3336,
+      "published_bytes": 2613,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-med-flag-rollout/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-med-flag-rollout/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "847f3a133fb8843ca9286c9abe1ffd91aad9a2cb267286ffd840149c1203da31",
+      "published_sha256": "b3f29deb052e32184be08780d96dedf8bbce45181e861e5c7d6ba7582b5a8f3c",
+      "source_bytes": 5323,
+      "published_bytes": 4671,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-med-flag-rollout/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-med-flag-rollout/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "de8d95bbb513f674d8e27723d036613e411e8575e66b3b8c8fb6efe5ebbf7e6b",
+      "published_sha256": "bc46440eb1199e70ea9511f6f8f207cbc7e86ee3ebe990c367f37893aa06992c",
+      "source_bytes": 3330,
+      "published_bytes": 2607,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-med-hiring-requisition/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-med-hiring-requisition/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "057f80f84fa17675c738ce925fa287b9ce1bb84b7e24dc1fb09ffd641aa4f664",
+      "published_sha256": "6bcd5731b4f994e5d9d336ffb7ba978cbe9be2fb4c3d3b1b55686263ddfd2316",
+      "source_bytes": 5341,
+      "published_bytes": 4689,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-med-hiring-requisition/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-med-hiring-requisition/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "8c36e0e55349cfc319ffe79da0a9e9b0748b4abb28be4821291b2e720034a562",
+      "published_sha256": "1306391c626c7445ab64e59db5f41780e01984585923f5bb92a9801d7d760d85",
+      "source_bytes": 3336,
+      "published_bytes": 2613,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-med-log-deletion/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-med-log-deletion/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "59485b8f125bcded5a1a8ad45b59e0e7f81b568c92de8652df4ab5ce6037a228",
+      "published_sha256": "535d96ca699582a63fe3b6e96310d54adfeb0654aa6579cc36a2c10e42f871ec",
+      "source_bytes": 5323,
+      "published_bytes": 4671,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-med-log-deletion/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-med-log-deletion/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "58fed34b0fa8d404292a829f581f6706bb2ad73bd05dc61b3c303c2f04dbcdd1",
+      "published_sha256": "348e3a1607068d133130b4d546a77f2321f7aab121892241dbf2dbf87ebe88e2",
+      "source_bytes": 3330,
+      "published_bytes": 2607,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-med-new-hire-equipment/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-med-new-hire-equipment/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "04f2bd827fa83a06f2b48b29ad709e10040f48fefe880f21d4977be428b94dff",
+      "published_sha256": "d0d70ef34a4de877c30850f8d7a5c7b2cb95a9f1673096025635551e170be1c6",
+      "source_bytes": 5341,
+      "published_bytes": 4689,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-med-new-hire-equipment/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-med-new-hire-equipment/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "1e89d043087d61febba2e987814dd30437daacaa03febe0ccac66979452f38f7",
+      "published_sha256": "a99383121ab55cbe5524e1348a87216e6e7b4a0bceed921e2a08295e39e85950",
+      "source_bytes": 3336,
+      "published_bytes": 2613,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-med-research-data-export/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-med-research-data-export/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "c1fcd095f1ed9548f26611c4e05b33b4ee70f4c7880304fba311051b5ed2b3a3",
+      "published_sha256": "e104f6a63eb52600e5993e3265facb18b7b70d5245387a02aebf8ae7a6ad291a",
+      "source_bytes": 5347,
+      "published_bytes": 4695,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-med-research-data-export/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-med-research-data-export/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "a25aa97e001ee5c5021577b9c24b264ae666c5c7435f25a5e6fcdacec43885e9",
+      "published_sha256": "0bec770756250883067ebbda1ba11c018fc8ef507e8a266555ec64657e26a445",
+      "source_bytes": 3338,
+      "published_bytes": 2615,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-med-security-exception/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-med-security-exception/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "fb510490b35dd8d32b9bbdbcf1e5ddef5899a9075880910a7c9ff9477b28b896",
+      "published_sha256": "8262a8b094e441b675a09d6972f7dd6a03fac5732130576cd8948bab38b57bf8",
+      "source_bytes": 5341,
+      "published_bytes": 4689,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-med-security-exception/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-med-security-exception/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "2afb57411c58d8b020a2b6feb6722e424d4d2c30e708113aa99baf0beaa11ec6",
+      "published_sha256": "3efcbbcca72684a2f85c942151ef9628a9f773402e2128ec885f38bf4616e59f",
+      "source_bytes": 3336,
+      "published_bytes": 2613,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-med-service-credit/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-med-service-credit/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "dfe1555f6eb95ff1d3fb12fd2289468e02b00bd18ab9ca9d6016102033732806",
+      "published_sha256": "6d4b6b7251806a1382a64c2461a7ae28026817a95875a61e0e3c4668607f6142",
+      "source_bytes": 5329,
+      "published_bytes": 4677,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-med-service-credit/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-med-service-credit/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "536bae3af5c4ecfea73e4d4ae84fe6f8bbe412d3b1368ec4ce5288715b02563e",
+      "published_sha256": "d3196b3a1077dc7c857ea40f7ad348d1db2f33adcd51b65f5d16c10628dd93a5",
+      "source_bytes": 3332,
+      "published_bytes": 2609,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-med-support-renewal/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-med-support-renewal/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "8c3e7998b46e41ee10da54ae50a7592d078a1f4dd791dbcfcf929cd515494301",
+      "published_sha256": "6bae651097f309495b6543f4fbae9c4f741dc82920ca6e4e8e8e918f2a0b7103",
+      "source_bytes": 5332,
+      "published_bytes": 4680,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-med-support-renewal/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-med-support-renewal/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "5fa7187e0c95d09a36b59a7620b3ca197b32d35e5a83596bc54de98e0aba26fe",
+      "published_sha256": "6a67af5748edc995d209b620225aeee3d86899dead0c7a131c99f7fd0050d129",
+      "source_bytes": 3333,
+      "published_bytes": 2610,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-medium-research-purchase/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-medium-research-purchase/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "8f5ed2db64a4f456d325e2e6a75c6b20074786d29bdf91dac88f23e142cee4e0",
+      "published_sha256": "78e9e807a17112adf017de1b45850f032abcca3a75a244bb6bf01486a950b68d",
+      "source_bytes": 5347,
+      "published_bytes": 4695,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/m-medium-research-purchase/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/m-medium-research-purchase/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "b4f5174400606e5f2b8eca38ff55f570154cd0cb0b7a92911d120a2737009d1a",
+      "published_sha256": "ddea6465ac4f8351ede3329a64370f1511f6740617e0887c6110c9ab12db1979",
+      "source_bytes": 3338,
+      "published_bytes": 2615,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-high-cloud-budget/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-high-cloud-budget/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "bc4ab59b30243b92a66b20c01cb7da27a72b82bd02ebf6733c1155be86711ccd",
+      "published_sha256": "2f7b5261c9ee0fa674272d7f6beb48ce76861831859c3677bb08415d624a8c79",
+      "source_bytes": 5326,
+      "published_bytes": 4674,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-high-cloud-budget/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-high-cloud-budget/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "555517280e3c06ee7b68e699a46f472033d27c768d74de6a338ac80b46869b75",
+      "published_sha256": "d7b3578261af086b2abd72a0193c6551756a91fe16a76e809894986ef5fe68fd",
+      "source_bytes": 3331,
+      "published_bytes": 2608,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-high-docs-localization/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-high-docs-localization/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "8a39f0f406680c58e420a588d7adde8096864e62cc8085974c82af17226a32bd",
+      "published_sha256": "046538599d79af63fc73749493399607ad5e9a363ac35064ff0f691fb7930793",
+      "source_bytes": 5341,
+      "published_bytes": 4689,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-high-docs-localization/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-high-docs-localization/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "c8505ea4b4860a395501ece74ad92a1f47ca081a3f36a6816babe550b22a3673",
+      "published_sha256": "3d96a61f05d3c48d420a00dead7232ce1e822b632d36dc80db99fee6c77c847b",
+      "source_bytes": 3336,
+      "published_bytes": 2613,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-high-eval-budget/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-high-eval-budget/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "a425f20937fa8082924e3304992450746d7a8989cb33d2f557409239cc007f4c",
+      "published_sha256": "700964b8912e9ee8680bcf8e778e16d4e1371bdec88ec1393ea7aa02a81cebc2",
+      "source_bytes": 5323,
+      "published_bytes": 4671,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-high-eval-budget/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-high-eval-budget/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "8803929e60c263dbe629c6d009f3984bea461e9451a2fa2438284c5842ff6e94",
+      "published_sha256": "7b2e653cb618e68e1255b8e3a060fd210b10e7d2a07a1c2eda362193e9ef7e90",
+      "source_bytes": 3330,
+      "published_bytes": 2607,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-high-floor-move/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-high-floor-move/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "684a465df10165bedfd2aaf9362abb05b0b96516bb87e9dce37988d80c90825c",
+      "published_sha256": "8b0628282217f2114a1d037b879993566c28316dbce991437e4c47cb20d4de88",
+      "source_bytes": 5320,
+      "published_bytes": 4668,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-high-floor-move/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-high-floor-move/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "f64ae70311924e609581244f7d026f8a0733ff95c814cd89205ec7a392047cbe",
+      "published_sha256": "eaf969534b7b0ae4be70f8ab94656093bce6a6c6e6db0e964a108c6852cdea1e",
+      "source_bytes": 3329,
+      "published_bytes": 2606,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-high-interview-panel/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-high-interview-panel/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "cee099a550031d5d6aec15e9aa16907dd9212f6e390793debf3b90b98750d509",
+      "published_sha256": "109cf941360e2e557c5a60208e3975bd137a36f10c50c28bcbb2037dd535f10a",
+      "source_bytes": 5335,
+      "published_bytes": 4683,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-high-interview-panel/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-high-interview-panel/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "62698503d1057adf87e620bc7bcd085b240cfd2603e8b5b5ce33a82646f77d56",
+      "published_sha256": "53cbed13b25a9ecb5f02264c8968b011c5e833409358140bcb7a5396f485cd60",
+      "source_bytes": 3334,
+      "published_bytes": 2611,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-high-launch-announcement/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-high-launch-announcement/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "7a694f825835f7a074b6f0e19b8f750db6207502d7255da1196549b09e458f63",
+      "published_sha256": "760b678e7d39a0a7e45510150d1ce9c877f5eab57c89b6f61d82ce66517cafd9",
+      "source_bytes": 5347,
+      "published_bytes": 4695,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-high-launch-announcement/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-high-launch-announcement/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "8a650c83cb7aed81ab4f2e6124acfe7a2c9b720e8d86175a4279a7dbdc9c99a9",
+      "published_sha256": "60d68f00b2d10c49517f8e7c4b6a090d77621b652b4b751bdb6290f8694cd25c",
+      "source_bytes": 3338,
+      "published_bytes": 2615,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-high-sales-kickoff/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-high-sales-kickoff/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "9f0c5566903cfb01390a00184de31022b3a2b3fd341af4835df9c718f13d3971",
+      "published_sha256": "6188865a6bdb507661b70f2553441bccf5a837a5e91c5d77af3e7d18c5381df5",
+      "source_bytes": 5329,
+      "published_bytes": 4677,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-high-sales-kickoff/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-high-sales-kickoff/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "59a598733976a8fe9ca2d87606f433c51cac20263019621f449ee3c961fddca2",
+      "published_sha256": "1416b69e675ccbadd82773e58b2bba1a709aee377fdb938ac883a1ae1877f9f7",
+      "source_bytes": 3332,
+      "published_bytes": 2609,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-high-security-training/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-high-security-training/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "9f8896a9c1a8d31cf2b9c7524f19be26fc8117bf729dc8535832080584d350b7",
+      "published_sha256": "5303fc4a67ee248792b2a8d3d8a3d590da55448af3333f0272b7f5ea34f8fb5c",
+      "source_bytes": 5341,
+      "published_bytes": 4689,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-high-security-training/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-high-security-training/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "8939e1bc097ad6556ba21bd3802333a831eb32e04f34618772bfac08e7e3c59a",
+      "published_sha256": "33e2e8b4e464542e22cbc51f2a98accc2efb664e36d9b347aa6c2667a893d192",
+      "source_bytes": 3336,
+      "published_bytes": 2613,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-high-stream-cluster/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-high-stream-cluster/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "27b4774d40c13342436cfa0adfb4ac391a168fb396c5ab742c6f521d72a25992",
+      "published_sha256": "2b082bce9aa06ed291c853800186343bd826d46520a4bd7106d462e62065339c",
+      "source_bytes": 5332,
+      "published_bytes": 4680,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-high-stream-cluster/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-high-stream-cluster/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "3ffb41ddf855cbc804ec8aa4066f5c1093fd4a5e2790ec074cde138e03914688",
+      "published_sha256": "9d905de1ae7d9bfee3e22f559296c1958e115172fed23871c15bef02529bd76f",
+      "source_bytes": 3333,
+      "published_bytes": 2610,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-high-training-schedule/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-high-training-schedule/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "eb6288668ca64cec36afe301df4d017f676cf135b8437330b01150df9a869c22",
+      "published_sha256": "cca68a128ff322f0a8c777982d00bcc2acb88afc4dc3e5dd83dbd38ef024c892",
+      "source_bytes": 5341,
+      "published_bytes": 4689,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-high-training-schedule/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-high-training-schedule/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "09fda903fa69a169e4a63aecdf973f52ac4d9d89da8553fd8bafac59e8152ea8",
+      "published_sha256": "be968714cb85b89eef8137d5543df62da434c5490b9763f7f1221ae05e5b2e46",
+      "source_bytes": 3336,
+      "published_bytes": 2613,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-low-campaign-asset/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-low-campaign-asset/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "001da3f9cd77e9b45481c30e9ba2be24e27dd91ffc1480c29c9edcf9cb5238cc",
+      "published_sha256": "12dcbff8f7bc9c41065a8c25829837f5f77efaa2d747361f374006609f090b72",
+      "source_bytes": 5329,
+      "published_bytes": 4677,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-low-campaign-asset/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-low-campaign-asset/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "bc14dcab0de43aabcf6fb7f3c7f0c1c4827b050e1a02a1758d88e077f26bc7f7",
+      "published_sha256": "d06328cc730148c3588231c8be374f21261857bea94cc013d7bcf1aada7e2ee0",
+      "source_bytes": 3332,
+      "published_bytes": 2609,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-low-changelog-template/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-low-changelog-template/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "5a857f4e52504ce3773c39d0e1e1e367f6e2566f3d11d49ecad89ee65bbc5ae5",
+      "published_sha256": "260c2092602b7c5450a851f16a77bd115a51230181c30903d75448e1d40100ef",
+      "source_bytes": 5341,
+      "published_bytes": 4689,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-low-changelog-template/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-low-changelog-template/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "f6d55dba0ced7dcc7ae36330bb9cf4c00b40272440b480de70b98569f081bcfe",
+      "published_sha256": "45931b62fac1ab867366056df78777d600662b2450b25f2bb558fa21e3f48858",
+      "source_bytes": 3336,
+      "published_bytes": 2613,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-low-demo-dataset/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-low-demo-dataset/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "02d09bb695a8d6cfd21b927093871b40400791df223ac758a451e87ac1794ee0",
+      "published_sha256": "9974c47e95c410e8f7997a3365ff50db90f2464df75cd4ec4f1c4f91dd28ad3c",
+      "source_bytes": 5323,
+      "published_bytes": 4671,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-low-demo-dataset/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-low-demo-dataset/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "bea90f32070d73732a42055f786488f1ef9abea98bebd4cfde4a2c589d75259c",
+      "published_sha256": "93bb25ef4e2ecf668038158fb5a49c9b26971f495bd4a3ef990ecedafb2399a4",
+      "source_bytes": 3330,
+      "published_bytes": 2607,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-low-demo-shipment/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-low-demo-shipment/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "cf43a05a65d50f0e662da1df23b331afe2d126e355b55b3afbe3d09dc24e1784",
+      "published_sha256": "9ddd8947c8c328bfe98c63fd9e2980ceb1f7665b8add5f85252db0960541fe57",
+      "source_bytes": 5326,
+      "published_bytes": 4674,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-low-demo-shipment/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-low-demo-shipment/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "c9eb1c71a16fa0ef16faab6565fff4d640ac1d3376b8d10445d5079d6b8fea7b",
+      "published_sha256": "de0de316a884718f8e46391812315bee4f4104c7d08c99fda9db7d27c697e6d0",
+      "source_bytes": 3331,
+      "published_bytes": 2608,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-low-press-factsheet/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-low-press-factsheet/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "34b4278d6c321c9bce3ecedf7ed7f5d2c00066bb8b4351da351162da60619cac",
+      "published_sha256": "813541f998d9c305bf2bae04308ce5064ddc6f046a6d34cea53abe86c7eab86b",
+      "source_bytes": 5332,
+      "published_bytes": 4680,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-low-press-factsheet/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-low-press-factsheet/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "2ba7261f44c8193d6286842cea05864d39b8a7aabe7566aecefdf19871dccfa1",
+      "published_sha256": "173350d5120b1eb20faeceab3c14695e3a1494118da5c019075287a2625df064",
+      "source_bytes": 3333,
+      "published_bytes": 2610,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-low-staging-region/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-low-staging-region/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "1f2357225560ea1518c3b52a81611c9c4cd18287ef3884b1de354321f5b913b2",
+      "published_sha256": "5f6fe93c01881df0e3cf25e75bebf676a7361e5e735cafd93bdfc288b3e37744",
+      "source_bytes": 5329,
+      "published_bytes": 4677,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-low-staging-region/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-low-staging-region/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "ba64ed49c5a7d6f4d0b454e17140888dd09958cad294bd9149a0f8c72b424779",
+      "published_sha256": "e2caf882be10a0f9e2fc3fc1904801029334c62920f5d3bc8421b1f4e928032b",
+      "source_bytes": 3332,
+      "published_bytes": 2609,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-low-survey-launch/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-low-survey-launch/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "843a433edbdcd0450e16668143926d3c36e210536f27396f997835565499b612",
+      "published_sha256": "2119a0170030a719131bfc6f38756735c7f609f1f60240c5ab860cf78fa2f1c4",
+      "source_bytes": 5326,
+      "published_bytes": 4674,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-low-survey-launch/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-low-survey-launch/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "42a3cc1df367a60b492965cc1d703bdb5b02ad63193c6490cc01e488a5d7e47d",
+      "published_sha256": "baa0ee994b4fef9cd5921522f2fbe66f2276a56a79908dbce671872d9accaaaf",
+      "source_bytes": 3331,
+      "published_bytes": 2608,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-low-team-lunch/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-low-team-lunch/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "26458ae91a9a0bea3ce493e88a2ca7b493aa113e1f090fd38730d92dd505416d",
+      "published_sha256": "76c094d8c80e6e6f1c079cb85e1b31a9723ca841dd9e67a905ac22864c5fefcc",
+      "source_bytes": 5317,
+      "published_bytes": 4665,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-low-team-lunch/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-low-team-lunch/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "3dbb84f4d60dfe6b9c01c8f04be6e0472b60f9bf95ec5ddfc986a663e340519e",
+      "published_sha256": "065df8d629a47e4b699f2e49f629aa2cf6bed0927b9f57b51f8c33e11ea33e28",
+      "source_bytes": 3328,
+      "published_bytes": 2605,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-med-ab-test-plan/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-med-ab-test-plan/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "83d4e5ab09e5a0f4d6b5b08387214cb09a7b289aba34b6c0f6bd06261c9c1448",
+      "published_sha256": "19a9bb0b7ee9180a7792b9032d3321cf8e71fd7764c6a27e5f6ded905e55a543",
+      "source_bytes": 5323,
+      "published_bytes": 4671,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-med-ab-test-plan/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-med-ab-test-plan/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "22f69436ed4ff5834b21e42dd945e52c2667eb522752c98d7c19abc39950af52",
+      "published_sha256": "5e86edd5d5d56e35f565ebddeaab705d19a765b79dce3b965e9053c323d7437b",
+      "source_bytes": 3330,
+      "published_bytes": 2607,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-med-backup-window/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-med-backup-window/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "6a5c0bc18650f2001c35b2b66c2bfcb0a46c168f639c91f77cbe9f396622b20a",
+      "published_sha256": "4db592c7d8be3ae4bfe15bb20197b268b49764e08d27344d8fc6758a50184be8",
+      "source_bytes": 5326,
+      "published_bytes": 4674,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-med-backup-window/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-med-backup-window/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "9906b78026595a762e3f47efa75328f0af251675e290edb6f9eec4b44afc75de",
+      "published_sha256": "92edb40c0775e1c2899395c4e482db6902ed8f5641bc13ff347abb1c563084f2",
+      "source_bytes": 3331,
+      "published_bytes": 2608,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-med-batch-schedule/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-med-batch-schedule/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "e0697e1251d849ce0c00e9eb8611edb0d5f46175c0be9eb4229f62501f572064",
+      "published_sha256": "59383b3838431dd5bf795f2f0370b23f06b1b4ad1de18ecd2ccec90dd37fa5b2",
+      "source_bytes": 5329,
+      "published_bytes": 4677,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-med-batch-schedule/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-med-batch-schedule/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "d553c38ce5a54da362d8cea264f06ca8bf3c101f90f11f164389862a7e181cb2",
+      "published_sha256": "5afff2f630807cb90385f050228a85f373e92961a39f3485d601fd4fe97d5bb7",
+      "source_bytes": 3332,
+      "published_bytes": 2609,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-med-brochure-translation/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-med-brochure-translation/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "e929fd260e983c82890af230f5d445ff85e3d38732157a44b8f9998fc046828c",
+      "published_sha256": "503c522745c06bbf51677d7abdac66daa2cd91c9e312be1789bce4e33521be9b",
+      "source_bytes": 5347,
+      "published_bytes": 4695,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-med-brochure-translation/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-med-brochure-translation/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "0bfe1e724a0a8c9304d6d3866ec23a46f559f0765c3594f61eca11937af07718",
+      "published_sha256": "6b4d2e6e8ffa018d7f0e0c625d65e1ad8e67cedce5fb2af53ee088ff64b2eb9b",
+      "source_bytes": 3338,
+      "published_bytes": 2615,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-med-browser-matrix/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-med-browser-matrix/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "25a965532c2749859284536cc1a2fb7536ed297e7bec07089dafba72a9617d35",
+      "published_sha256": "5d89c55ad3d04c84fc6ead3847e1832cce77bc293af0f4e20155ed78b42e04ee",
+      "source_bytes": 5329,
+      "published_bytes": 4677,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-med-browser-matrix/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-med-browser-matrix/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "8fe8b989c9d0eaebe887399ba41bee147b5bc16fb847d79eb45bdd9e399bd550",
+      "published_sha256": "b35522c9214864f90e24892c989cbf350d7544e66b1ce57380b8ba2879d28b2b",
+      "source_bytes": 3332,
+      "published_bytes": 2609,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-med-license-reuse/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-med-license-reuse/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "a67e9dd9722afd5dee1084c42748f691b8b576b19ca253a261d9f586487a890f",
+      "published_sha256": "0ab1ece0d53d4ff9422c1990185782351ec31566ef6b58475ed5bb6a9ebd0660",
+      "source_bytes": 5326,
+      "published_bytes": 4674,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-med-license-reuse/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-med-license-reuse/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "6590922f01d60bdb293b40ff956b1b1ea37a50bb9df5d7cddab9c1815fc20f00",
+      "published_sha256": "7358dfe01c1d95512c9a566def7f57b7ecc1cededef657749dad69ead715c68b",
+      "source_bytes": 3331,
+      "published_bytes": 2608,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-med-offsite-date/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-med-offsite-date/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "87756cf53875d778cec107396c29b834d415906c5d543ccda20d5372c8c69292",
+      "published_sha256": "74d4cc702cf896ecc145603b1292104af5b8dff20d4d79651fc67d93ed3a270b",
+      "source_bytes": 5323,
+      "published_bytes": 4671,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-med-offsite-date/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-med-offsite-date/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "e269b419875f47bbc5050bda8a2f9be45094577230d93fa2deb66f91b279b21b",
+      "published_sha256": "d8a6b6d833721af226e085a2ba11b0ee39ccd51896cb21276870f8fe85e4026a",
+      "source_bytes": 3330,
+      "published_bytes": 2607,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-med-partner-crawl/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-med-partner-crawl/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "534539725f9f7d3d4a4ffc579e4014e4a07b5532ad897964f19b4f5091caa205",
+      "published_sha256": "125b8dfea4f176c006c1136d52fbee4c18d5b174bb6426c28d7dc001a7ba34f4",
+      "source_bytes": 5326,
+      "published_bytes": 4674,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-med-partner-crawl/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-med-partner-crawl/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "3e7d512d1c8aab52559a2268a8f63e5cb69f036580db0b3afed9afb477cfe081",
+      "published_sha256": "d2228acc36704f7102c606501dbeaae9fc4b7c7398d477a2f60836a4c39089dd",
+      "source_bytes": 3331,
+      "published_bytes": 2608,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-med-renewal-quote/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-med-renewal-quote/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "f10dee4569bd1050d48881d036e79134b4a26f41dd43a7a25bf859af6393669b",
+      "published_sha256": "2b82b8f2ba9a4d94264eff0bd03f588959d60dfe6b09fab21ec4a52c98ffe6f1",
+      "source_bytes": 5326,
+      "published_bytes": 4674,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-med-renewal-quote/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-med-renewal-quote/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "d53870d63e57d3d423bd2b2cde224a7babada536823784eae1464fbf6d158449",
+      "published_sha256": "d7926ea70bb077cf0bf73a357b1fc062774b4792f468fbd3f380491a789b3772",
+      "source_bytes": 3331,
+      "published_bytes": 2608,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-med-support-macro/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-med-support-macro/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "9a13346f2af928be52079f727b0521e3f059bcaa9ef7ffb99b71962452248d80",
+      "published_sha256": "c70168b1c58e0fa9ad26f1d4df4c96ab5008d4695d2fa6328a497232b734461a",
+      "source_bytes": 5326,
+      "published_bytes": 4674,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-med-support-macro/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-med-support-macro/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "5d8444b60659ec3fe106ac4fe8f8d132726c8ca30c082e905e5cc3d94559b578",
+      "published_sha256": "1bd980c6643fa8a526eecafd7e968553ed0b51640673efccc8079fb3033d6a35",
+      "source_bytes": 3331,
+      "published_bytes": 2608,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-med-usability-budget/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-med-usability-budget/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "e08fdc411582f866d07a9ba8318b5918f293a6b870cbee8340b2f435dc6b6d5c",
+      "published_sha256": "1a4cc0883f270aa3f6eed932dd8120db385005f06bdf0f025e24759cdb74bf98",
+      "source_bytes": 5335,
+      "published_bytes": 4683,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-med-usability-budget/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-med-usability-budget/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "c6ee002b9b4b71ece5064784a5b6fb2bdb103b37feb037436e1c2fdfac7ef80b",
+      "published_sha256": "20bb03cfb49499ca108e2f9ed8c4962f2148bcac99d7f3533b087f37960b232e",
+      "source_bytes": 3334,
+      "published_bytes": 2611,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-medium-event-package/config.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-medium-event-package/config.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "43e588332914ae5227d4a8c5776c2c4ea6e5a705f334230170ade0d52fa46cb0",
+      "published_sha256": "6686c1fc8ccc5d9a9c41b47286e85c502c4757290ec0906a413e720c92cdafe4",
+      "source_bytes": 5335,
+      "published_bytes": 4683,
+      "redactions": {
+        "local_path_to_portable_reference": 5
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/r0_gpt54/o-medium-event-package/readiness.json",
+      "target": "frozen_stage/runner/stage/r0_gpt54/o-medium-event-package/readiness.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "ea97d21b31e352e754ca05ad9a4ad98aa1dcce8e9bccad0f75a3d8798247a567",
+      "published_sha256": "db3b8ec603b539c63e1e37b376d91294a092c4301b88aa85cc550c0bdc59c7a1",
+      "source_bytes": 3334,
+      "published_bytes": 2611,
+      "redactions": {
+        "local_path_to_portable_reference": 10
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/frozen_stage/runner/stage/service_cursor.json",
+      "target": "frozen_stage/runner/stage/service_cursor.json",
+      "archive": "archives/runtime_context.zip",
+      "source_sha256": "46ff3b9487f2598ead226ba980114481bc0cddaac90e110ff1cd9e61df1c5964",
+      "published_sha256": "e0387d8717c9b9178d6f6395fdc6a23f71579dcc1053466f9b70b583bda553ee",
+      "source_bytes": 221,
+      "published_bytes": 115,
+      "redactions": {
+        "local_path_to_portable_reference": 1
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/scope.json",
+      "target": "scope.json",
+      "archive": null,
+      "source_sha256": "390d93ce1a92477702b0b720d4379ca19c72954c3ff7a2098d639760bb2868a4",
+      "published_sha256": "23bdc1aa599099afb7e4723474c2928d59c67681f735639e8d7a5cd88c6d2bf3",
+      "source_bytes": 42900,
+      "published_bytes": 36701,
+      "redactions": {
+        "local_path_to_portable_reference": 60
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/source_freeze.json",
+      "target": "source_freeze.json",
+      "archive": null,
+      "source_sha256": "83f44e7c168786c2f13ec175416e685d0d547929c9e656299078a0abb5766275",
+      "published_sha256": "8879c7671e568ed73f479dbf1df5914f18e3058b84638c20f753f863b56516f3",
+      "source_bytes": 963769,
+      "published_bytes": 650013,
+      "redactions": {
+        "local_path_to_portable_reference": 3425
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/runtime/Dockerfile.base",
+      "target": "task_inputs/runtime/Dockerfile.base",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "fba6e7f3ed528dc0b3217d7273471976f0c0c3edf021d215ff8054d9e68a1623",
+      "published_sha256": "fc2daf9a71991e3070c6a6b67505b097f0dbc4ce0faace6a6cb1f346065ffa6f",
+      "source_bytes": 677,
+      "published_bytes": 671,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 1
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/runtime/test_rest.py",
+      "target": "task_inputs/runtime/test_rest.py",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "f41f33a2cc3470e6a081de803f54abcf6618d204ffa8c1fbe0357f0585b1f892",
+      "published_sha256": "b2488c7587db5fca4a6f8d8cb69e66423ad5d572992443f25e9e83b047c65361",
+      "source_bytes": 34871,
+      "published_bytes": 34870,
+      "redactions": {
+        "private_local_path_removed": 1,
+        "unnecessary_external_runtime_endpoint_removed": 3
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-high-access-recert/simulator/task.json",
+      "target": "task_inputs/templates/m-high-access-recert/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "a167f7aad1c1875ff634fb40d1c0aa7e0493ff177e9587768976170506573db5",
+      "published_sha256": "38d42cb2129216f46f7defa224f93533c5ba40c1774620ed29fb9cdb996d704f",
+      "source_bytes": 9044,
+      "published_bytes": 9032,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-high-access-recert/tac/task.md",
+      "target": "task_inputs/templates/m-high-access-recert/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "b8f26c110020a2b1ab9ae68f648a0102117fe57c5e5c40d93f14cfe6f11b44b7",
+      "published_sha256": "c6e95e393cb92c6a9e7a48fbdb782415b40975ef6e90c4cae32fb3c32d4a6747",
+      "source_bytes": 408,
+      "published_bytes": 396,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-high-customer-data-request/simulator/task.json",
+      "target": "task_inputs/templates/m-high-customer-data-request/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "e39c8bfb8de05b626f80b1b20f89bb817361a67ed0f4b3eaa4e38a49f6fd8512",
+      "published_sha256": "b9c1d2d294f7229eb3649ec469b29f34f78a3d2edd0cec6e2a79139cd7a1167e",
+      "source_bytes": 9065,
+      "published_bytes": 9053,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-high-customer-data-request/tac/task.md",
+      "target": "task_inputs/templates/m-high-customer-data-request/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "6746ffdaf6be05771f92b50d7c2efe568c3eba1994a74f212fcb181a87f16a78",
+      "published_sha256": "3092f21412a5975e11799d99ea37a0b03e81d583463d60a591b08b8df5dc0855",
+      "source_bytes": 432,
+      "published_bytes": 420,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-high-db-migration/simulator/task.json",
+      "target": "task_inputs/templates/m-high-db-migration/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "3cef30f6105fe51ece502dbef1b6f79b274d08005b2c0520ae8cfe9aa0fa213f",
+      "published_sha256": "03f0a1206c4fa99465df521832ba2e6e4a43fbe3ad24529f316574b648348b54",
+      "source_bytes": 8670,
+      "published_bytes": 8658,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-high-db-migration/tac/task.md",
+      "target": "task_inputs/templates/m-high-db-migration/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "6ddccc9406c32a760e50f934987277617a281c4b5a91acb40ad9f2a67273a9b0",
+      "published_sha256": "0c138d5ecd3131585237cacd52a20f77987455505a1f4c588656a8082ee60b8c",
+      "source_bytes": 379,
+      "published_bytes": 367,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-high-incident-postmortem/simulator/task.json",
+      "target": "task_inputs/templates/m-high-incident-postmortem/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "d034d9b67b8594d9a1df7ee4a12c6dff6b70e22dcda63821df91d6736596117e",
+      "published_sha256": "5e642144148cc1c4c261a0c9fc7f08060653b43839a7acc9dfe33ef30c773ab0",
+      "source_bytes": 9152,
+      "published_bytes": 9140,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-high-incident-postmortem/tac/task.md",
+      "target": "task_inputs/templates/m-high-incident-postmortem/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "198b59477346d8914e5a3fa32680ed05ea299e1d311519636f394ba8ce43f6cc",
+      "published_sha256": "68d097a8c28e9c4f223bab49422d87046d45de112fd350e7881acfae8658e847",
+      "source_bytes": 442,
+      "published_bytes": 430,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-high-model-release/simulator/task.json",
+      "target": "task_inputs/templates/m-high-model-release/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "01567b08eb336166a5451dd37a4fc6689e0e9537b9d4ed7247793121d44e6e48",
+      "published_sha256": "72d02c4d7d8030275518e7bffd057bbe76e03b213e0374a67d0b16a316d83930",
+      "source_bytes": 9062,
+      "published_bytes": 9050,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-high-model-release/tac/task.md",
+      "target": "task_inputs/templates/m-high-model-release/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "f6eb5829f835bd8d5fcf1a156483ca2e6cc0c7ce8b969f97391d3846f0554cf4",
+      "published_sha256": "b3df6d6b855612edea2d3e7bac55265a63541f09fdea2d932d187e0c9a922346",
+      "source_bytes": 407,
+      "published_bytes": 395,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-high-payroll-correction/simulator/task.json",
+      "target": "task_inputs/templates/m-high-payroll-correction/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "c0d1e26eb8c169c2e1a5c9e69a25883115722a2d57e21828e54f24727eb86f3d",
+      "published_sha256": "c8be174cdb70de6c719180af85289d42869e3d867d3771a5ec88be5578e0528f",
+      "source_bytes": 6538,
+      "published_bytes": 6526,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-high-payroll-correction/tac/task.md",
+      "target": "task_inputs/templates/m-high-payroll-correction/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "ee9d502f596c219044181f388c1e607ac985801566b7ebe17e2c858b57d2cc43",
+      "published_sha256": "5b13d3129fc2c7d949d6fcd163ae74697972dcde712173d53c18e17048712688",
+      "source_bytes": 435,
+      "published_bytes": 423,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-high-plugin-purchase/simulator/task.json",
+      "target": "task_inputs/templates/m-high-plugin-purchase/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "d2e5edac4b7df809ac3d59141d0cb7b8143d7534adbb55ba9c1ba0f6a4e8ab0a",
+      "published_sha256": "4eaa4ed52c35869823edbfb8606705d940b654838071ffa44c7a4204a70202c2",
+      "source_bytes": 9277,
+      "published_bytes": 9265,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-high-plugin-purchase/tac/task.md",
+      "target": "task_inputs/templates/m-high-plugin-purchase/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "41c51d7bb2c16b782414f378004f314dc85196d1cdc44c65f4b5758be926084e",
+      "published_sha256": "4d46a8edf5a418970c8d087a779a15bff9a79dc578e6ef2eb2956c3f1027507b",
+      "source_bytes": 395,
+      "published_bytes": 383,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-high-portal-launch/simulator/task.json",
+      "target": "task_inputs/templates/m-high-portal-launch/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "b0c463eab7f34fc901a248b84c5da1e181f8ce439f8764ed938753dd00b0c1b3",
+      "published_sha256": "749b41f2141250d6263595095bb3aa8d0bba23be35557cbb6a97e19f2ce5e37b",
+      "source_bytes": 9352,
+      "published_bytes": 9340,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-high-portal-launch/tac/task.md",
+      "target": "task_inputs/templates/m-high-portal-launch/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "eb19822ce5c66cd8ccf12f67bea96ab50f011f7d7070479db32bf5416e751e98",
+      "published_sha256": "193bfd2237a6f85d63886a4230a216a4ce0688577ca75c3714aacbd87a8c2d7e",
+      "source_bytes": 401,
+      "published_bytes": 389,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-high-price-change/simulator/task.json",
+      "target": "task_inputs/templates/m-high-price-change/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "dd7d37d91fb8007fb1cdc3a15772ae7bea08a481546bf467c1ebe11e1f3f554f",
+      "published_sha256": "af875df18f60102b1417fccb4d34a9050eefdb8ac815d0f7ec3f80675087f722",
+      "source_bytes": 6463,
+      "published_bytes": 6451,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-high-price-change/tac/task.md",
+      "target": "task_inputs/templates/m-high-price-change/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "562a45c7a2ca820c65cbd757ff9ef0a031bc40a2e7a302fbb61130bdc9b92e4f",
+      "published_sha256": "f13cd823e971495f77d8364480c0e724ed57a347ebb1c7de98b1cbbd1189819a",
+      "source_bytes": 404,
+      "published_bytes": 392,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-high-service-cutover/simulator/task.json",
+      "target": "task_inputs/templates/m-high-service-cutover/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "2525c6be77f715ed44dc4c57a5028e24d292430a62589b74368df7e1cb2e9060",
+      "published_sha256": "a417291a2f4b1ffe8bdc0854320704049425ace38e92beb81eaa2c94c5431e3a",
+      "source_bytes": 10648,
+      "published_bytes": 10636,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-high-service-cutover/tac/task.md",
+      "target": "task_inputs/templates/m-high-service-cutover/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "11ffb0deda19136db392153c6ec01061375f0e2457c07eabe6571f55ff2e2644",
+      "published_sha256": "7aa7b24f9c9964d6ea3728b275c4ff340a39cc4246a06fbe5e8671234cfb84b3",
+      "source_bytes": 413,
+      "published_bytes": 401,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-low-customer-mailing/simulator/task.json",
+      "target": "task_inputs/templates/m-low-customer-mailing/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "15b415e1795ab57014f6cd5cc0af0885a73b2f4a76a457a081dcf85d46d80377",
+      "published_sha256": "da9bda71946adc463f5aa343e0fda4253d2a8bdb57c1e410691f4cf2d7b9a3a5",
+      "source_bytes": 4575,
+      "published_bytes": 4563,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-low-customer-mailing/tac/task.md",
+      "target": "task_inputs/templates/m-low-customer-mailing/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "bd3ac85ef421bf525c99fdbc1445de914bc7d7322fcd42e7dff73825ca7d18b3",
+      "published_sha256": "a5b9e6da8a395332f20096ef2c6196902fc1f6600b6c1a6f654eac3c3feea464",
+      "source_bytes": 415,
+      "published_bytes": 403,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-low-gpu-job-request/simulator/task.json",
+      "target": "task_inputs/templates/m-low-gpu-job-request/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "3a6bd46ad6bcb13d9699251b4d66dd139c8101505f103aa0a6d4d421959a202d",
+      "published_sha256": "72d69165f23ba8a529835b05fcdf7b82c5b62ba8552c19c8d2344305ed857835",
+      "source_bytes": 7783,
+      "published_bytes": 7771,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-low-gpu-job-request/tac/task.md",
+      "target": "task_inputs/templates/m-low-gpu-job-request/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "ab16f5fc19dcf79ac9d096d6cbb2023ad2f8ca023929cab3b97dbb838a38cc1d",
+      "published_sha256": "ee6d13c981d8e47d059a425981d0bef453d40b1143b57d37e48d37822ee675c5",
+      "source_bytes": 358,
+      "published_bytes": 346,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-low-ledger-allocation/simulator/task.json",
+      "target": "task_inputs/templates/m-low-ledger-allocation/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "78918ef29d39eab39490aca556ba5fb82829c713e8ede3e700412962b33cb258",
+      "published_sha256": "ee1c1881ee8c9c4b7cb484c56c048296b2551f5895c698b0befdbeee8bdd8a2e",
+      "source_bytes": 3983,
+      "published_bytes": 3971,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-low-ledger-allocation/tac/task.md",
+      "target": "task_inputs/templates/m-low-ledger-allocation/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "308d8d97f9fac4537122b8ced1128be53164c65831f1bd4d7e577fb16f00dc95",
+      "published_sha256": "cf3d4ac6c8bb95663d9063c154dfe081a5220ff6427b6f7d084be03a4f6741a4",
+      "source_bytes": 372,
+      "published_bytes": 360,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-low-new-hire-record/simulator/task.json",
+      "target": "task_inputs/templates/m-low-new-hire-record/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "c501eaeea00e3fbb0e2677689e574a65214610afb54d3de178f09877522b2fc1",
+      "published_sha256": "b452374edccb6b897ccabb93c7515617255cedd5236a5abbd0300667825d258c",
+      "source_bytes": 3948,
+      "published_bytes": 3936,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-low-new-hire-record/tac/task.md",
+      "target": "task_inputs/templates/m-low-new-hire-record/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "38b2fbd3a29fc7d39e51b623cc82d7b90204c3b13fa2c731c3ddfb8808da44a7",
+      "published_sha256": "912f486b575e173a9d31137e7d289aa0456e307ba7f99f9192e841f7f05f3261",
+      "source_bytes": 382,
+      "published_bytes": 370,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-low-partner-key-config/simulator/task.json",
+      "target": "task_inputs/templates/m-low-partner-key-config/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "23f8cbd134250d641ab00a8dc66056e5d3ac5bad86e7c2980f1a09775b32d6f3",
+      "published_sha256": "20cdfdc6dcfc107c7f642b0b1c121565dab075a89ed7e53db3c53d31dbeb504a",
+      "source_bytes": 5067,
+      "published_bytes": 5055,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-low-partner-key-config/tac/task.md",
+      "target": "task_inputs/templates/m-low-partner-key-config/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "5fc714d2e9bc621f527424bcc40b71138a37f1ba131593d9f4abda4126068fa0",
+      "published_sha256": "b400239db3838fa5a7d0fde4ef88fe203fc89d31d8ebd7c2c72ce829060ce847",
+      "source_bytes": 360,
+      "published_bytes": 348,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-low-policy-citation/simulator/task.json",
+      "target": "task_inputs/templates/m-low-policy-citation/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "eb8501add391d57cb783a21cfbbbe817265f7f85a8e3bb16fb8cad22fce1e922",
+      "published_sha256": "c0a80c69027e7fb394c48bfe26a79dab1e71c0bc6ad7cc6a591032976f93d5be",
+      "source_bytes": 5099,
+      "published_bytes": 5087,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-low-policy-citation/tac/task.md",
+      "target": "task_inputs/templates/m-low-policy-citation/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "3781be345709de59b5bcc01e47b65c037e898db2e5bbddbc4d17185d021c4920",
+      "published_sha256": "c88b7387348cf29ba9a89c15c01827e612ad5d257459d53e49a67cf16bc9ec8b",
+      "source_bytes": 381,
+      "published_bytes": 369,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-low-regression-run/simulator/task.json",
+      "target": "task_inputs/templates/m-low-regression-run/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "b11c783b4496782a44cb0d5fadfd57cca966078b4939ab1a83bd00d3cbc8fe54",
+      "published_sha256": "543903c5c1222f4900344d7f4bcbdede3f086c63cce62f485ac4a1b19f5d16da",
+      "source_bytes": 4113,
+      "published_bytes": 4101,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-low-regression-run/tac/task.md",
+      "target": "task_inputs/templates/m-low-regression-run/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "5bbd08ad897eda65b43df5e3cb139c0b0a298fb848145fa5898321c9c7029ce8",
+      "published_sha256": "021339d15ad7f530c9e140adc4db6905b56bd6927711a3bfb49127265e6276c5",
+      "source_bytes": 372,
+      "published_bytes": 360,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-low-release-note-header/simulator/task.json",
+      "target": "task_inputs/templates/m-low-release-note-header/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "a70263bb99d3cb99bc63c87f634453eb88f51bb7e279d44fbeec7c495fb872cc",
+      "published_sha256": "fa54e06cab19a5f9984c4668b308d36f1264ab69bc8169b4de7fb753b61e0e6e",
+      "source_bytes": 4295,
+      "published_bytes": 4283,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-low-release-note-header/tac/task.md",
+      "target": "task_inputs/templates/m-low-release-note-header/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "33d915e0163f2985ad7f9a8f9f84522cc50522fedb91f08ca83652e5feb4fd0d",
+      "published_sha256": "d7b49899154ac8482a6abda6be71e7c24ae8ac2ad3fef4cba123400d1bcf50d8",
+      "source_bytes": 398,
+      "published_bytes": 386,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-med-campaign-spend/simulator/task.json",
+      "target": "task_inputs/templates/m-med-campaign-spend/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "ec3c26c69e4801e4915cf7e0ae0bfc634040910cf22dc7948fe82487986eb5b6",
+      "published_sha256": "d383f11561a9b7d18a9b692ca54e523bb376edd75060e398ba8414a45dd34e38",
+      "source_bytes": 4513,
+      "published_bytes": 4501,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-med-campaign-spend/tac/task.md",
+      "target": "task_inputs/templates/m-med-campaign-spend/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "05e959854b869d376eed398330d7978a9b643a6b6234031f5175b9c57a8d4f20",
+      "published_sha256": "48b1738fefae25c7b07b65b48daaa2d8f4ad16a064496e2b22ef11eea791198c",
+      "source_bytes": 388,
+      "published_bytes": 376,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-med-conference-travel/simulator/task.json",
+      "target": "task_inputs/templates/m-med-conference-travel/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "97e6165ebbfa7bf954b32ffbacd354f8097d26ce0c786862aa85d68519dd05ac",
+      "published_sha256": "be304b87f5438b1b3fdad0c74ade6cc2aa97db90013fb0b3896c769109067f0f",
+      "source_bytes": 6042,
+      "published_bytes": 6030,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-med-conference-travel/tac/task.md",
+      "target": "task_inputs/templates/m-med-conference-travel/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "1cf08bf64a7c298a56ca239b9e38a61c15ddc9ce972d55af8eb58a30265ac417",
+      "published_sha256": "3f5fb10e11c738e2df6e8be474364ea5a32e6d420a22242a350c7fb3bac90add",
+      "source_bytes": 397,
+      "published_bytes": 385,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-med-contractor-invoice/simulator/task.json",
+      "target": "task_inputs/templates/m-med-contractor-invoice/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "8151c630dd986ce59dd0491d6d6733d6a65f201e94138ae5e43af93ae2008caf",
+      "published_sha256": "4667110d9c786ce5c0ce2bd8619de60718c4f15208dadc6c71ffeb4da56e3b80",
+      "source_bytes": 5633,
+      "published_bytes": 5621,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-med-contractor-invoice/tac/task.md",
+      "target": "task_inputs/templates/m-med-contractor-invoice/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "007d2bcc53e58e2463e99327d38b01b13ede59d8d1efd50f0bc81f70d2d98f58",
+      "published_sha256": "857996eccb08a85b60b99f6b5c12f51aa2d59c7edd94c42447a58dfd6b6bbb3f",
+      "source_bytes": 383,
+      "published_bytes": 371,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-med-flag-rollout/simulator/task.json",
+      "target": "task_inputs/templates/m-med-flag-rollout/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "2c750aa6e6e032e46e524e775dc17ffbf4a4ef8f8eaeaeaeaf00e7aad23af21f",
+      "published_sha256": "d914e3b37dd762457c66e962f9004922624efa32c6b971825486243cfa3e6fbc",
+      "source_bytes": 4925,
+      "published_bytes": 4913,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-med-flag-rollout/tac/task.md",
+      "target": "task_inputs/templates/m-med-flag-rollout/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "ad341bc45315b03544a68cfd123814c8a3098a4fa7861414025ebc027c948fa7",
+      "published_sha256": "93073ad4f61519b99f508d8cfac3b5990ce58cfd87a29efa320bb2b6e80cc5f0",
+      "source_bytes": 406,
+      "published_bytes": 394,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-med-hiring-requisition/simulator/task.json",
+      "target": "task_inputs/templates/m-med-hiring-requisition/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "dc0cefee799fc74289084e1f5984b8f87bfe43fa3304705b30a81cfc5f35abfb",
+      "published_sha256": "7b644e3206698798cad6be92a555f5da4954824178fd78916112919ff0436123",
+      "source_bytes": 4649,
+      "published_bytes": 4637,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-med-hiring-requisition/tac/task.md",
+      "target": "task_inputs/templates/m-med-hiring-requisition/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "4b3e2eb3aa355828a2a181385b93d87655d91f102caf32bfe0db5622066e6146",
+      "published_sha256": "10aaf5fcb38623abd13c63dd3de6b3a7439d6e5a949f46cdeeba7bf676132c3e",
+      "source_bytes": 397,
+      "published_bytes": 385,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-med-log-deletion/simulator/task.json",
+      "target": "task_inputs/templates/m-med-log-deletion/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "fcfccd03322bdfacd4721034637d16b0fbfa777fc950c0d743b8c9304dda4ca9",
+      "published_sha256": "1c1ec3410f3d07f0397170ce42a0d9769b307f310143162ea89fa18901390c4a",
+      "source_bytes": 4684,
+      "published_bytes": 4672,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-med-log-deletion/tac/task.md",
+      "target": "task_inputs/templates/m-med-log-deletion/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "ff35ee85c85f2b87071834fd4dbed998669894ac603afb9e1305e1ca2ffdbb92",
+      "published_sha256": "bee1ef10fc3201f98de49e0b44c3c514cdac42f7771605ecf9c9193520e53d7f",
+      "source_bytes": 384,
+      "published_bytes": 372,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-med-new-hire-equipment/simulator/task.json",
+      "target": "task_inputs/templates/m-med-new-hire-equipment/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "2d3d4086f307f1b14725c8979876a6c3c97dc9167c7817ff866fd62cc45587ee",
+      "published_sha256": "2af42f3f633eddcc7448499d1d82b9e4affa084ab07352605b5974dacd28d281",
+      "source_bytes": 4972,
+      "published_bytes": 4960,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-med-new-hire-equipment/tac/task.md",
+      "target": "task_inputs/templates/m-med-new-hire-equipment/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "20afa88b497752d2e4c47e84b81dbab34407475f94b4b02e9cb118b72efe4f14",
+      "published_sha256": "9ec7b8982bd2626636aff820caee7d03613eee50fae00c85ff2e1b6a2ba0de7f",
+      "source_bytes": 409,
+      "published_bytes": 397,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-med-research-data-export/simulator/task.json",
+      "target": "task_inputs/templates/m-med-research-data-export/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "0bcf27f2fd362f77feddbf9f4f83a9a8e7346e3a0555af6aa06a761d05ce11fd",
+      "published_sha256": "9d150077443a244494164a2c6a408cbe37821d2b8340a21cc96d6de7112c1387",
+      "source_bytes": 8276,
+      "published_bytes": 8264,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-med-research-data-export/tac/task.md",
+      "target": "task_inputs/templates/m-med-research-data-export/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "71a5aa9c63a91a840401a5a760a30746831fa02b0d21c4536ed890a7743d4783",
+      "published_sha256": "0b32987a590aaaf1e107fefdf7a73b602bd998b6eb348e7d3288fbc9afd68ed5",
+      "source_bytes": 433,
+      "published_bytes": 421,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-med-security-exception/simulator/task.json",
+      "target": "task_inputs/templates/m-med-security-exception/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "d9a578ee2225c29b4c87da18747f367d7e129aa2b96cc1b4f03da220b9566ee6",
+      "published_sha256": "fe2247d1a8115888af201ddcf1199c9d90b96331a5951cc571141283dd11ec19",
+      "source_bytes": 6277,
+      "published_bytes": 6265,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-med-security-exception/tac/task.md",
+      "target": "task_inputs/templates/m-med-security-exception/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "100c3001346c17901fb1fda42b945e76b676a1f0a6169310b69d821ee14bbd56",
+      "published_sha256": "9413814867958d8253154c37756766a545bc54b34f4a9c5ad135e786f2c19e44",
+      "source_bytes": 443,
+      "published_bytes": 431,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-med-service-credit/simulator/task.json",
+      "target": "task_inputs/templates/m-med-service-credit/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "fd04d7aa991787b23856e4cef4fe6660d41620a7c33ee8b0c0b28605faa980c0",
+      "published_sha256": "b154f21748e72773913e7b4157b01224cb1d8990b202296d79533049447a7686",
+      "source_bytes": 8124,
+      "published_bytes": 8112,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-med-service-credit/tac/task.md",
+      "target": "task_inputs/templates/m-med-service-credit/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "02d80931c64e95264fc13c57668ee7750707f6e180e4dd38ac953c97b4c3221d",
+      "published_sha256": "b6147804ce9009cd1ff19d346d20f480e1fea1ad46205cc7f698b3013a23802a",
+      "source_bytes": 428,
+      "published_bytes": 416,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-med-support-renewal/simulator/task.json",
+      "target": "task_inputs/templates/m-med-support-renewal/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "8b8901b10777f3af7ebf5e671aed5b96354d4bf327898c7d6be98951e08ead99",
+      "published_sha256": "f9b15392c0776d3c88bc76e40662b7415883e3d7871c6f851013343d1abf8c87",
+      "source_bytes": 5923,
+      "published_bytes": 5911,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-med-support-renewal/tac/task.md",
+      "target": "task_inputs/templates/m-med-support-renewal/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "c8904f6a18031a58cd16f1285019529f771a16ae00215f97209567ad17ee415f",
+      "published_sha256": "2ea29b6e048d5b2f927191bf9207226c62f75e1342000aa861588a2e9348a9da",
+      "source_bytes": 365,
+      "published_bytes": 353,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-medium-research-purchase/simulator/task.json",
+      "target": "task_inputs/templates/m-medium-research-purchase/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "542111a33aceb1be5aabe48765e1ab580a768ef6faa5b51c0ea80f020ccb108b",
+      "published_sha256": "a7052c9736b7d6867a20b95d8c39c965fef4b5a450660dd4664de95d7732c91d",
+      "source_bytes": 6280,
+      "published_bytes": 6268,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/m-medium-research-purchase/tac/task.md",
+      "target": "task_inputs/templates/m-medium-research-purchase/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "f788f7fb6fed7f315b1da8fc08897b8d81e7c3b1681f1e0ea6c874bd4c2de76c",
+      "published_sha256": "0864cbc3b95747a94eeef07f8826e6a7d58f15c19479809a4630b131fb0da5c1",
+      "source_bytes": 408,
+      "published_bytes": 396,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-high-cloud-budget/simulator/task.json",
+      "target": "task_inputs/templates/o-high-cloud-budget/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "fc07db09574df29c494b2d79c3fe6459c0f60e2694fa55356d3803e5f25773ad",
+      "published_sha256": "2fb6dd576969e67446a1914234796ea2cd22ed09092eb77601d7dca4c9c9f883",
+      "source_bytes": 7497,
+      "published_bytes": 7485,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-high-cloud-budget/tac/task.md",
+      "target": "task_inputs/templates/o-high-cloud-budget/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "468dbaa410e7b376ac8c3626fe5d58e06b494716e871d1ecf8594ce242452c2e",
+      "published_sha256": "fb32c5d6e0d7f7d45d4c77493a829973ef9b832e28d97f57c83c00d41d83cb4f",
+      "source_bytes": 356,
+      "published_bytes": 344,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-high-docs-localization/simulator/task.json",
+      "target": "task_inputs/templates/o-high-docs-localization/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "40bdcd9b28689f5364cdc77ab4c291bb7fb619ea3d7acb4ac059cae0d841d01d",
+      "published_sha256": "445a739b20e4de542774c60a2c411cfe9d2d4a4b0591e6742c6ced9c099a8268",
+      "source_bytes": 7538,
+      "published_bytes": 7526,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-high-docs-localization/tac/task.md",
+      "target": "task_inputs/templates/o-high-docs-localization/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "a3f9111a2b24e30dc683b5c0fcfdd6d5b08c3b1bbf6f708c3a3e57c07c6524f2",
+      "published_sha256": "26263bc129269c4040b75569120d447fe235d7d5c0a37cfa421a2cc9cfeb2569",
+      "source_bytes": 380,
+      "published_bytes": 368,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-high-eval-budget/simulator/task.json",
+      "target": "task_inputs/templates/o-high-eval-budget/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "b841e57d466351ef87fcca77e3e5840c5a88c11fc5c4af61948b07bd2be2cb23",
+      "published_sha256": "3207ef101ece0ef98f9e44d80145ce3f5df9c9bbd9aa3a2c2fd53f0e87746593",
+      "source_bytes": 7470,
+      "published_bytes": 7458,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-high-eval-budget/tac/task.md",
+      "target": "task_inputs/templates/o-high-eval-budget/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "dda8ed8deeca6131f2a595d25355c427ca1f11608502d1c7ea221c982908cd83",
+      "published_sha256": "f7d7260fccf7416244d93c088c0921caf780b85939b65e60e72e1ea48470a7fd",
+      "source_bytes": 349,
+      "published_bytes": 337,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-high-floor-move/simulator/task.json",
+      "target": "task_inputs/templates/o-high-floor-move/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "43463664400385fbf07db1b412e64951748a7a1886900ab796f69737c466939a",
+      "published_sha256": "7d2036f1f35f8189e33992874b09f394f37e6a9939ac14ec39392e9a7f745190",
+      "source_bytes": 4943,
+      "published_bytes": 4931,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-high-floor-move/tac/task.md",
+      "target": "task_inputs/templates/o-high-floor-move/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "55f606681e764b40e6c57a6096dca4ea4537d452d8b10a8258f29e12c4971003",
+      "published_sha256": "329503d778abbce357c75c35148d4d51000d7cc1e44cc1892868303f419116a5",
+      "source_bytes": 343,
+      "published_bytes": 331,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-high-interview-panel/simulator/task.json",
+      "target": "task_inputs/templates/o-high-interview-panel/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "60d242135f676b574e99be147b59b1660d6254bd5eee877ed76d0e2789761cd8",
+      "published_sha256": "cac88dd463570016ef2af0bf1d52a9b6498297a9168b9c94b1a570607987ee39",
+      "source_bytes": 5158,
+      "published_bytes": 5146,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-high-interview-panel/tac/task.md",
+      "target": "task_inputs/templates/o-high-interview-panel/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "453ff42a47992e1c46ba08096d2fdae32f98202641c9bdd8644c97944db83a0d",
+      "published_sha256": "a9d84faadbfcf4aad51c0a82046d16cb23e41c89987159e37ca4dff9a8c7fd31",
+      "source_bytes": 385,
+      "published_bytes": 373,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-high-launch-announcement/simulator/task.json",
+      "target": "task_inputs/templates/o-high-launch-announcement/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "7be851e385635091a427d16764c69ae79d8c0877a59075f3f9151a5066559922",
+      "published_sha256": "46983f03e27df33d166dc69c286e47807e4b00f3313428c36a35d5160413f511",
+      "source_bytes": 7633,
+      "published_bytes": 7621,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-high-launch-announcement/tac/task.md",
+      "target": "task_inputs/templates/o-high-launch-announcement/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "4cb86617a186d6bf66a1f3439c5b059aa68c0f438f84dd58547f45831ac7e8a1",
+      "published_sha256": "54721e256cfd5943f3a939e222a02cb691b706adf7a29025aef6e733e04e1bdc",
+      "source_bytes": 372,
+      "published_bytes": 360,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-high-sales-kickoff/simulator/task.json",
+      "target": "task_inputs/templates/o-high-sales-kickoff/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "f963df94d4ebef13a1b4455135b34e74be4160f2e8759d6da5fd64afbc6b724b",
+      "published_sha256": "86e9c4d3f536c5e9a5ec9848bec8293859f6396b19fe5da67734372aceefce85",
+      "source_bytes": 7717,
+      "published_bytes": 7705,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-high-sales-kickoff/tac/task.md",
+      "target": "task_inputs/templates/o-high-sales-kickoff/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "5c750dd49ff6e05e35a8281fee2dd6193311e1c54d48df224b85e0c77b52484b",
+      "published_sha256": "c5d0657e45dd836c0ba51e0e4a08e9f1321c6a663ee96fb3b538e38edc8a0613",
+      "source_bytes": 358,
+      "published_bytes": 346,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-high-security-training/simulator/task.json",
+      "target": "task_inputs/templates/o-high-security-training/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "966e7623932ab3d8ae8aa34082728c0859d10a643f7e8dd2ba9c4ca778fba98a",
+      "published_sha256": "8deed6ef8741a54dabf1c474d33cbe7028585a7dc6a9fb6432669add38d80a3a",
+      "source_bytes": 5009,
+      "published_bytes": 4997,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-high-security-training/tac/task.md",
+      "target": "task_inputs/templates/o-high-security-training/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "4f15aec18091649e21b051bc94e252467513df0d3cee27c65ffd7e2c3599852d",
+      "published_sha256": "d043d05c1c74df4c0f19ec512e1ebdcfcfffa6f2e288e58d8069e45f8dd1cd08",
+      "source_bytes": 351,
+      "published_bytes": 339,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-high-stream-cluster/simulator/task.json",
+      "target": "task_inputs/templates/o-high-stream-cluster/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "820f187ef2c99a59e0457532ca45e5aca1cd5a1a374623667d66b42585963961",
+      "published_sha256": "18dd482a7929bf8599103d38869bcab761597c0529145bc9b1a935eaf7886a03",
+      "source_bytes": 7561,
+      "published_bytes": 7549,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-high-stream-cluster/tac/task.md",
+      "target": "task_inputs/templates/o-high-stream-cluster/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "3df23e2b28a648874719488f315b5d618b27cc23c94efda9fc957f9c45ffb1ae",
+      "published_sha256": "2ff13ce22d5d3f581817c609f731c832791f6d067fa62e8b7ff612027de9d58f",
+      "source_bytes": 350,
+      "published_bytes": 338,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-high-training-schedule/simulator/task.json",
+      "target": "task_inputs/templates/o-high-training-schedule/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "6ef3c6ad0b8e68708860b11cc5da4b130ed4a2d3717617cf3fbb5cc2a4235cad",
+      "published_sha256": "f01fd366efd44a3db96c99646b838fa370fe6953773c7bfbb416a59464eb7212",
+      "source_bytes": 8753,
+      "published_bytes": 8741,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-high-training-schedule/tac/task.md",
+      "target": "task_inputs/templates/o-high-training-schedule/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "994f72be47241f6bd9e80ec891803dd74ef6ee0a28934ef16d5c12050e79e3ae",
+      "published_sha256": "f7ba3101880428dbed43f9c854847caff6be0a1991a4a2f67b0d2b69523e6c8f",
+      "source_bytes": 408,
+      "published_bytes": 396,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-low-campaign-asset/simulator/task.json",
+      "target": "task_inputs/templates/o-low-campaign-asset/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "7704b1d3f2f7b6ddc13560d1002883f4b5743bea9542ebeb446c72b328cbf439",
+      "published_sha256": "8d5af34d2f98b30506acc2a280268fc04459ac151e956b67939c56f3cd6698f3",
+      "source_bytes": 4515,
+      "published_bytes": 4503,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-low-campaign-asset/tac/task.md",
+      "target": "task_inputs/templates/o-low-campaign-asset/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "b26a657fb8865a11735410c095c2516ea68464c060ee58845d50b738e8770e6b",
+      "published_sha256": "2b71c67d0c79d6facc63e22aaad9c818180c5c793102ef149383099b9bbedd81",
+      "source_bytes": 339,
+      "published_bytes": 327,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-low-changelog-template/simulator/task.json",
+      "target": "task_inputs/templates/o-low-changelog-template/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "795fed4eb026d9d60d0450931cf99a90a2b0e0624920db17981b908882e80f2a",
+      "published_sha256": "2e58dc54156ce15f1942a9e81bcb2c5bdac4df62c8e0b07306e300551f344a95",
+      "source_bytes": 3765,
+      "published_bytes": 3753,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-low-changelog-template/tac/task.md",
+      "target": "task_inputs/templates/o-low-changelog-template/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "2153a45be0c1787be118f081bf7dde40e01d1cdc1924a0da270f3d079246ae1a",
+      "published_sha256": "978e3fd48c6a97391b6f73d9339d20d726ad0ad5ddf430980e90e7df81b1eb95",
+      "source_bytes": 344,
+      "published_bytes": 332,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-low-demo-dataset/simulator/task.json",
+      "target": "task_inputs/templates/o-low-demo-dataset/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "06a690c8a227da91a5ab5950a7af43d9576fbb4b07800e8b10be91c9764abf38",
+      "published_sha256": "8db48e8ed8ffd07a5785f6db5e1d70aa0644c4b7ae2868708ed66519c0d51d80",
+      "source_bytes": 5023,
+      "published_bytes": 5011,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-low-demo-dataset/tac/task.md",
+      "target": "task_inputs/templates/o-low-demo-dataset/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "65c76a4890ea8788e8b9bedf7ab3ddb198405d501ec8dd0076a83a6fe5078dff",
+      "published_sha256": "e8cff2c1611bcca63a8aa1f044da2fad265fadc0a596e5b9b32765e3346c68a7",
+      "source_bytes": 358,
+      "published_bytes": 346,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-low-demo-shipment/simulator/task.json",
+      "target": "task_inputs/templates/o-low-demo-shipment/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "f1ab78895de85793d5baefb5e02416a78a67940e6730d5795de3eab9b6b57431",
+      "published_sha256": "d053ccec5c60846958be630e9fc355f7ed7b958a4466d4a34891fe54f597f10f",
+      "source_bytes": 3759,
+      "published_bytes": 3747,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-low-demo-shipment/tac/task.md",
+      "target": "task_inputs/templates/o-low-demo-shipment/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "cc1bddb6fe914a2cfc236c0577dc9ed38b308ce390eef3264150fdd4ff354318",
+      "published_sha256": "4bc4da0384e5823ec1b873ee97fc6d50c4c3c1b8b7301f9d3e8b8c0db15de5a7",
+      "source_bytes": 378,
+      "published_bytes": 366,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-low-press-factsheet/simulator/task.json",
+      "target": "task_inputs/templates/o-low-press-factsheet/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "d9dc8aad5320346d6702695067a976f1aefec38d25b1e59dcf561a4a66c1417d",
+      "published_sha256": "c097315ab9036c76509bf15a815884f1138dc71c809789c3a2de1cc8f0ff1c5a",
+      "source_bytes": 3885,
+      "published_bytes": 3873,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-low-press-factsheet/tac/task.md",
+      "target": "task_inputs/templates/o-low-press-factsheet/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "ef28bc4e9779c3a6f0101024ab603725f455aa971dba88bad5cfd06b479b9268",
+      "published_sha256": "4022f2b95eb28ac92eebf0ef75048a7c935c547b05b619c130bd4fae2a14261b",
+      "source_bytes": 375,
+      "published_bytes": 363,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-low-staging-region/simulator/task.json",
+      "target": "task_inputs/templates/o-low-staging-region/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "514058b7aa876f817e0cd3f7b89565cca2184572c863a4cb17e49f2116417270",
+      "published_sha256": "bf48db95fa1d55bf83264e2dd52d935cacfa4ba3160f0c6cdd16a30b72e26f67",
+      "source_bytes": 7345,
+      "published_bytes": 7333,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-low-staging-region/tac/task.md",
+      "target": "task_inputs/templates/o-low-staging-region/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "5b80f0b5997be2305f0c43aeb2df46dd6c8083d1e40e804928bca44d283df4f6",
+      "published_sha256": "14062a9623b99a5c75a98cb9b87d79ce6eaa6a3db4e9613ad0164b6011979bc7",
+      "source_bytes": 367,
+      "published_bytes": 355,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-low-survey-launch/simulator/task.json",
+      "target": "task_inputs/templates/o-low-survey-launch/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "db1bb411de96ee7819254865c7e56b545a5fd5121d4fb763567c1ffe20fc25b2",
+      "published_sha256": "38468252cd6257ab15072e2f7e24e931f23e0c735a918da5ce5b0688f8d1527e",
+      "source_bytes": 3800,
+      "published_bytes": 3788,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-low-survey-launch/tac/task.md",
+      "target": "task_inputs/templates/o-low-survey-launch/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "ea0110bab28aab19091225f0522b896806b534ff5f7889ff3a42843ea3c407a2",
+      "published_sha256": "9576baa9c5e375c4f9c327edab7971432ccb227b552cbaf35a6af81703c5e385",
+      "source_bytes": 348,
+      "published_bytes": 336,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-low-team-lunch/simulator/task.json",
+      "target": "task_inputs/templates/o-low-team-lunch/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "7aad464e032e73ddf67a8a92c7cf4dffc02a006be43e38f854d3523679c55d55",
+      "published_sha256": "60abd205d8c3ef4c0cb1d5686a44cb5f237930aaded8488fac42e35296859feb",
+      "source_bytes": 3724,
+      "published_bytes": 3712,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-low-team-lunch/tac/task.md",
+      "target": "task_inputs/templates/o-low-team-lunch/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "33fc5828859a03213e4cfbe04bc1129d350626734166fc1ad6b7da71e8f4caca",
+      "published_sha256": "eb88d15a2b003f73584d0ccc9095d29443cd295d3bb499bacf20f2b48113a97e",
+      "source_bytes": 397,
+      "published_bytes": 385,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-med-ab-test-plan/simulator/task.json",
+      "target": "task_inputs/templates/o-med-ab-test-plan/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "f53261a201b170dece48d50a7057b9a58fa797f1442537416bfc010c73042d30",
+      "published_sha256": "8fba25131a1f35b67d79f92ef8be445bc7dcf9c5933b38a55466d8366496cd87",
+      "source_bytes": 3771,
+      "published_bytes": 3759,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-med-ab-test-plan/tac/task.md",
+      "target": "task_inputs/templates/o-med-ab-test-plan/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "ffab132619282907626262f72e929cbc55b9f4d870f903500f50e29055e53928",
+      "published_sha256": "e33bae55b34d6ae5b4f3a8c0d781c3dee9e04ae15b42386c7a8cd56952a2476c",
+      "source_bytes": 362,
+      "published_bytes": 350,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-med-backup-window/simulator/task.json",
+      "target": "task_inputs/templates/o-med-backup-window/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "6d2931c1885399f177ae9057c31f12c2d428428b449e36117fa28ef11bcaa237",
+      "published_sha256": "5c5e738c31c65a2d41aca4249a15cafef930313ede36f073a2a0c5a926122c20",
+      "source_bytes": 3869,
+      "published_bytes": 3857,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-med-backup-window/tac/task.md",
+      "target": "task_inputs/templates/o-med-backup-window/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "250475b1664a846de452a59294a2633a70167d94a5ecc8dad8d4a7a24e15f4e9",
+      "published_sha256": "fdce71b113755258ae0ab9d11406ba4a1dec83c356d414f63e926ac321b47d0b",
+      "source_bytes": 363,
+      "published_bytes": 351,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-med-batch-schedule/simulator/task.json",
+      "target": "task_inputs/templates/o-med-batch-schedule/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "e2d7d36fec7856439bbb4102eef3636ac71e424c4b391e8935a29400d353fc36",
+      "published_sha256": "6e2005d0708ce04a979a67e245c84c50be46f646881a75b765438b73e0a4a444",
+      "source_bytes": 7373,
+      "published_bytes": 7361,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-med-batch-schedule/tac/task.md",
+      "target": "task_inputs/templates/o-med-batch-schedule/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "99387cd33a0b2b0b4fd8dc7f1e60596da6b8b4dc9397afa199d09a6c859f6d07",
+      "published_sha256": "2737a97bb915dc5c9394f0c12e08418a2402d927645e6fae86ae4cd6610cf545",
+      "source_bytes": 343,
+      "published_bytes": 331,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-med-brochure-translation/simulator/task.json",
+      "target": "task_inputs/templates/o-med-brochure-translation/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "f01fdfd5fd5c7a945b542820e2f1cd44cc00365611dc44a10045c3d413192643",
+      "published_sha256": "4ce6c1c344cfff13bf2d07bdfa5b2634308ac494d79b5c5d8ae0b8edaba0ce3a",
+      "source_bytes": 3818,
+      "published_bytes": 3806,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-med-brochure-translation/tac/task.md",
+      "target": "task_inputs/templates/o-med-brochure-translation/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "ba7751778b3ea6e4fd802101e86d68f5d28f52cfc524836d4a4a51e0ea224563",
+      "published_sha256": "048b34f6160e9fe0f7357da3e10dd87b1d5e14204ed5221ca7d23c1aa53712ef",
+      "source_bytes": 376,
+      "published_bytes": 364,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-med-browser-matrix/simulator/task.json",
+      "target": "task_inputs/templates/o-med-browser-matrix/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "caf96d19ad8b7e887a434db69f98559e07c248cd4479efb654673cb109fbb74c",
+      "published_sha256": "2952088cf0ff7d6c593ab40c6f1e8e8216c2141e19934735da8e173fef9887ba",
+      "source_bytes": 5090,
+      "published_bytes": 5078,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-med-browser-matrix/tac/task.md",
+      "target": "task_inputs/templates/o-med-browser-matrix/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "00643e7db877a9c3b987159043d80f7d0339334e32842a4169b3ca25ba9ced49",
+      "published_sha256": "d90dea6317d1eda9dad1e2f2d593e1c7cf776174e033dc6eb5caa5b1cc4c2b13",
+      "source_bytes": 359,
+      "published_bytes": 347,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-med-license-reuse/simulator/task.json",
+      "target": "task_inputs/templates/o-med-license-reuse/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "68b795c6bf95921650061e068cec9485924b747b34293ac702ab819e779789df",
+      "published_sha256": "7d2530959de2e8dc0b78fdf068997217931a0d1dfe2cced55088d7aa108b38ba",
+      "source_bytes": 5062,
+      "published_bytes": 5050,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-med-license-reuse/tac/task.md",
+      "target": "task_inputs/templates/o-med-license-reuse/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "da7b224b568484a6b42b256262ebd60242ab8816dcdc50fffcd8a7a1ebe74a91",
+      "published_sha256": "2c4df00b8f735590c778cd9acafe588b16f304f4cb948ec6c977bef44312e7bc",
+      "source_bytes": 383,
+      "published_bytes": 371,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-med-offsite-date/simulator/task.json",
+      "target": "task_inputs/templates/o-med-offsite-date/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "73c4efd3345cc32f95bc21a92d4d2241323b4d9b629b4ed0452bad3ded40d706",
+      "published_sha256": "f20fc4165db699fad73fe7380952402021dbbf5124bf32ab024d281386040600",
+      "source_bytes": 7553,
+      "published_bytes": 7541,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-med-offsite-date/tac/task.md",
+      "target": "task_inputs/templates/o-med-offsite-date/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "e3793632eba09bccba09aaa6c2094099f9d3e54c9469a5a097702cc89ec0f8d3",
+      "published_sha256": "69760285b854da38e5060c11c1a1905232b41d0fb55aa3897e38516d66a7ddab",
+      "source_bytes": 346,
+      "published_bytes": 334,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-med-partner-crawl/simulator/task.json",
+      "target": "task_inputs/templates/o-med-partner-crawl/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "e763d51f6cf828a62120ce0f1ae1b4d3d4730225ba4086124a5c6bfc015e8070",
+      "published_sha256": "4e02f0f3478dea11366997c1521361b50644cbb8076d87262d200ef53946539f",
+      "source_bytes": 7467,
+      "published_bytes": 7455,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-med-partner-crawl/tac/task.md",
+      "target": "task_inputs/templates/o-med-partner-crawl/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "e38b502d96b00049324c3e99cb753035f0968db51cd7e6b7d9b4f24aa2a61d21",
+      "published_sha256": "495ac6edfa5af66f225d6a53d6e57e44929cf849f78d7d8cf8d71f6de8df0a00",
+      "source_bytes": 363,
+      "published_bytes": 351,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-med-renewal-quote/simulator/task.json",
+      "target": "task_inputs/templates/o-med-renewal-quote/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "3c7be0a429e1d797b73dac4f153493a35cb4c0b8b2adfcc733dbbea7a91ef4e0",
+      "published_sha256": "0733035b91b4cf39eb407b8d5587918be627df88fee8498f1d11480ed43358d1",
+      "source_bytes": 3861,
+      "published_bytes": 3849,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-med-renewal-quote/tac/task.md",
+      "target": "task_inputs/templates/o-med-renewal-quote/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "1977222c8d4785591b5525924ff986bccbe9d3d28c6d77f4b5f3f413c1915029",
+      "published_sha256": "cbcfa78ff85229dacd3bf0f05de82c07acea07e1b339f1647a1f41028f33b03a",
+      "source_bytes": 349,
+      "published_bytes": 337,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-med-support-macro/simulator/task.json",
+      "target": "task_inputs/templates/o-med-support-macro/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "152862d452582c17f8717e5da3f6d4217359de73da283b3614a64173547df534",
+      "published_sha256": "a79c15de487cd9f062c9ef70321b05788ed10d636cd9d5f558bf96aca80540bb",
+      "source_bytes": 4948,
+      "published_bytes": 4936,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-med-support-macro/tac/task.md",
+      "target": "task_inputs/templates/o-med-support-macro/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "f3994725a260246859a50fb4557aee45f727a9bd575d75ccb4589da92b4e5c09",
+      "published_sha256": "bbff3dba15cc5b97443cb095097dddfd3d5a2d816d4e0f8562b58d6741ca348f",
+      "source_bytes": 354,
+      "published_bytes": 342,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-med-usability-budget/simulator/task.json",
+      "target": "task_inputs/templates/o-med-usability-budget/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "fc2c33b556ff58429442b6cd6cb7205fbfa08f22ec1233310390b3078312535a",
+      "published_sha256": "42782e0d3c6f3862ebc55e5be27f5c83d9495ca040a26d7959e423a76503e77a",
+      "source_bytes": 4972,
+      "published_bytes": 4960,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-med-usability-budget/tac/task.md",
+      "target": "task_inputs/templates/o-med-usability-budget/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "44179a6315ff3a6c0040ca010084ec3d263cc6377c0f66340c3733a8de1ad46f",
+      "published_sha256": "68f7e2a8313e3dfab22f02e0664ab47fc7742a0530b4f87e02db887ac8da730b",
+      "source_bytes": 371,
+      "published_bytes": 359,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-medium-event-package/simulator/task.json",
+      "target": "task_inputs/templates/o-medium-event-package/simulator/task.json",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "4f4410d2e64a5ac04a512d7dc3c3fddbeec2b795e4c5971351ef31af954d67d1",
+      "published_sha256": "e198b80d45b3a79017a41919ff0023204d20c299bacba16cc3f628ffeb3d2bb8",
+      "source_bytes": 5593,
+      "published_bytes": 5581,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    },
+    {
+      "source": "primary/r0_gpt54_v1/task_inputs/templates/o-medium-event-package/tac/task.md",
+      "target": "task_inputs/templates/o-medium-event-package/tac/task.md",
+      "archive": "archives/frozen_inputs.zip",
+      "source_sha256": "85d4b064703f208a1db38217234921cb6b2509259aafe5dedc8c5521ffbc6237",
+      "published_sha256": "fb21a789240bf91b14c5f016156fa33fb7be840217c6769bda813a3c14b719cc",
+      "source_bytes": 337,
+      "published_bytes": 325,
+      "redactions": {
+        "unnecessary_external_runtime_endpoint_removed": 2
+      }
+    }
+  ]
+}

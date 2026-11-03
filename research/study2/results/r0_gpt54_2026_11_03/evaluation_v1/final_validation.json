@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "scope": 60,
+  "reviewed": 60,
+  "Must": 30,
+  "Optional": 30,
+  "unique_episodes": 60,
+  "actual_calls": 728,
+  "agent_calls": 626,
+  "NPC_calls": 102,
+  "R0_cost_usd": "1.97668125",
+  "global_settled_usd": "9.30539035",
+  "old_unknown_count": 5,
+  "old_unknown_usd": "0.11172275",
+  "new_unknown": 0,
+  "global_occupied_usd": "9.41711310",
+  "historical_source_hashes_preserved": 9064,
+  "all_wires_models_limits_full_history_directory_verified": true,
+  "extra_model_attempts": 0,
+  "R_prime_computed": false,
+  "gold_validity_dispute": [
+    "o-high-eval-budget"
+  ],
+  "no_external_dependencies_downloaded": true
+}

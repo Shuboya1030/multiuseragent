@@ -1,0 +1,10 @@
+{
+  "condition": "R0",
+  "paired_baseline": "The contemporaneous GPT-5.4 full60 R1 group; explicit pairs are in scope.json and R0_R1_Paired60.csv.",
+  "original_episode_id_in_raw_manifest": "Preserved lineage to the original mini task instance, not the R1 paired-control ID. Use paired_R1_episode_id in scope/queue for the control mapping.",
+  "original_public_task_and_directory_unchanged_in_readiness": "Inherited generic frozen-input readiness flag. It is not evidence that R0 and R1 directories are equal. Exact actual wires/readback/directory_presentation show R0, and only the directory differs from paired R1.",
+  "initialization_failures": "Two zero-model-request setup failures are separately preserved, with the same60 planned attempt IDs. They are not two extra research attempts.",
+  "network": "Original local services and api.openai.com only; unexpected targets/redirects rejected. No dependency installation, image pull or external download command.",
+  "CDN_request_provenance": "User reported a global-cdn access prompt. No matching Docker host-log entry or active Docker updater/installer was identified; exact domain/request/download is unverified, not asserted absent system-wide.",
+  "R_prime_computed": false
+}

@@ -1,0 +1,53 @@
+{
+  "reviewed": 60,
+  "terminated_review_packets": 60,
+  "unreviewed_terminated": [],
+  "total": {
+    "n": 60,
+    "business_pass": 54,
+    "mean_T": 0.8,
+    "mean_R": 0.5816666666666667,
+    "contacted_tasks": 46,
+    "contacts": 102,
+    "agent_calls": 626,
+    "NPC_calls": 102
+  },
+  "Must": {
+    "n": 30,
+    "business_pass": 26,
+    "mean_T": 0.9333333333333333,
+    "mean_R": 0.5516666666666666,
+    "contacted_tasks": 29,
+    "contacts": 84,
+    "agent_calls": 386,
+    "NPC_calls": 84
+  },
+  "Optional": {
+    "n": 30,
+    "business_pass": 28,
+    "mean_T": 0.6666666666666666,
+    "mean_R": 0.6116666666666667,
+    "contacted_tasks": 17,
+    "contacts": 18,
+    "agent_calls": 240,
+    "NPC_calls": 18
+  },
+  "sensitivity_excluding_gold_dispute": {
+    "n": 59,
+    "business_pass": 54,
+    "mean_T": 0.8135593220338984,
+    "mean_R": 0.5923728813559322,
+    "contacted_tasks": 45,
+    "contacts": 101,
+    "agent_calls": 616,
+    "NPC_calls": 101
+  },
+  "paired_business_transitions": {
+    "business_success -> business_failure": 6,
+    "business_success -> business_success": 48,
+    "business_failure -> business_failure": 4,
+    "business_failure -> business_success": 2
+  },
+  "rule_version": "semantic-content-pending-truthful-extra-v3-r0-v1",
+  "R_prime_computed": false
+}

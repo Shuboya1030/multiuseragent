@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "attempts": 60,
+  "raw_scores_replayed": 60,
+  "semantic_scores_replayed": 60,
+  "calls": 728,
+  "roles": {
+    "agent": 626,
+    "npc": 102
+  },
+  "business_pass": 54,
+  "research_files": 3342,
+  "omitted_research_records": 0,
+  "unredacted_credentials_detected": 0,
+  "absolute_path_dependencies": 0,
+  "R_prime_computed": false
+}
