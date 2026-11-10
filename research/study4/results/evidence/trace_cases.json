@@ -1,0 +1,3925 @@
+{
+  "schema": "study4-public-selected-traces-v1",
+  "derived_from": "final V2 offline extraction",
+  "not_original_trace_bytes": true,
+  "raw_requests_and_private_reference_library_omitted": true,
+  "original_hashes_do_not_hash_these_excerpts": true,
+  "line_numbering": "original JSONL 1-based; event index 0-based",
+  "cases": [
+    {
+      "task_id": "m-low-customer-mailing",
+      "arm": "native_mini",
+      "classification": "Must-help",
+      "public_instruction": "As of 2026-11-05: Prepare the customer mailing request for the Q4 upgrade notice to enterprise accounts. Save /workspace/deliverable.json with segment_id, recipient_count, send_date, authorization_ref. Post a short summary and the file path in #engineering.",
+      "original_archive_id_NOT_uploaded_directory": "study4_teacher87_eval_v6_native_mini_gpu_gate_v4_frozen_flags",
+      "original_result_basename": "teacher87-dev16-m-low-customer-mailing-native_mini-r1.json",
+      "original_result_bytes_sha256": "86766eeb7a8509f1e7eaffa770938ec1ef33468cce44fb035b5c0112bb7a01bf",
+      "original_trace_basename": "teacher87-dev16-m-low-customer-mailing-native_mini-r1.trace.jsonl",
+      "original_trace_bytes_sha256": "3a80efdd4e60ecf948c1b5dc3f0ae915f8daa1ad94d83216de8ad12f8d4b1564",
+      "original_trace_lines": 24,
+      "metrics": {
+        "business_pass": false,
+        "task_quality_T": 0.75,
+        "original_R1_utility_R": 0.6,
+        "contact_cost_C": 3.0,
+        "Nauth": 0,
+        "Nwaste": 0,
+        "all_public_task_requirements_done": true,
+        "workflow_business_success": false,
+        "full_quality_complete_task": false,
+        "semantic_review_status": "pending_separate_version"
+      },
+      "delivery": {
+        "artifact_present": true,
+        "required_channel_summary_recorded": true,
+        "task_submitted": true,
+        "all_public_task_requirements_done": true
+      },
+      "cycles": [
+        {
+          "cycle": 0,
+          "decision_event": {
+            "line_1based": 3,
+            "event_index_0based": 2
+          },
+          "before_public_state_counts": {
+            "cycle": 0,
+            "remaining": 8,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 0,
+            "done": false
+          },
+          "legal_actions": [
+            "NO_ASK",
+            "ASK:Mark Johnson",
+            "ASK:Li Ming",
+            "ASK:Jessica Chen",
+            "ASK:Jessica Lee"
+          ],
+          "actual_action": "ASK:Mark Johnson",
+          "label_probabilities": null,
+          "top_two": null,
+          "probability_top_gap": null,
+          "inferred_log_score_top_gap": null,
+          "absolute_label_scores": null,
+          "absolute_scores_status": "not persisted per cycle",
+          "deterministic_action_probability": null,
+          "native_API_action_probability": null,
+          "actual_tool_commands_parsed_from_recorded_outputs": [
+            {
+              "mode": "NATIVE",
+              "tool": "ask_colleague",
+              "arguments": {
+                "person_id": "Mark Johnson",
+                "question": "Please provide the current enterprise account segment ID and authorization reference to use for the Q4 upgrade notice customer mailing. We already have the send date 2026-11-12 and last quarter’s reference was SEG-Q3-ENT / APR-Q3, but I need the current approved values."
+              }
+            },
+            {
+              "mode": "SELF",
+              "tool": "write_file",
+              "arguments": {
+                "path": "/workspace/deliverable.json",
+                "content": "{\"segment_id\":\"SEG-Q4-ENT\",\"recipient_count\":455,\"send_date\":\"2026-11-12\",\"authorization_ref\":\"APR-Q3\"}"
+              }
+            }
+          ],
+          "original_event_references": [
+            {
+              "line_1based": 3,
+              "event_index_0based": 2,
+              "event_type": "native_agent_action"
+            },
+            {
+              "line_1based": 4,
+              "event_index_0based": 3,
+              "event_type": "help_requested"
+            },
+            {
+              "line_1based": 6,
+              "event_index_0based": 5,
+              "event_type": "help_sent"
+            },
+            {
+              "line_1based": 7,
+              "event_index_0based": 6,
+              "event_type": "reply_delivered"
+            },
+            {
+              "line_1based": 8,
+              "event_index_0based": 7,
+              "event_type": "agent_task_started"
+            },
+            {
+              "line_1based": 10,
+              "event_index_0based": 9,
+              "event_type": "agent_task_completed"
+            },
+            {
+              "line_1based": 11,
+              "event_index_0based": 10,
+              "event_type": "cycle_completed"
+            }
+          ],
+          "after_public_state_counts": {
+            "cycle": 1,
+            "remaining": 7,
+            "phase": "decision",
+            "contact_cost": 3.0,
+            "history_length": 4,
+            "done": false
+          }
+        },
+        {
+          "cycle": 1,
+          "decision_event": {
+            "line_1based": 13,
+            "event_index_0based": 12
+          },
+          "before_public_state_counts": {
+            "cycle": 1,
+            "remaining": 7,
+            "phase": "decision",
+            "contact_cost": 3.0,
+            "history_length": 4,
+            "done": false
+          },
+          "legal_actions": [
+            "NO_ASK",
+            "ASK:Mark Johnson",
+            "ASK:Li Ming",
+            "ASK:Jessica Chen",
+            "ASK:Jessica Lee"
+          ],
+          "actual_action": "NO_ASK",
+          "label_probabilities": null,
+          "top_two": null,
+          "probability_top_gap": null,
+          "inferred_log_score_top_gap": null,
+          "absolute_label_scores": null,
+          "absolute_scores_status": "not persisted per cycle",
+          "deterministic_action_probability": null,
+          "native_API_action_probability": null,
+          "actual_tool_commands_parsed_from_recorded_outputs": [
+            {
+              "mode": "NATIVE",
+              "tool": "post_channel",
+              "arguments": {
+                "channel": "#engineering",
+                "content": "Customer mailing request prepared and saved at /workspace/deliverable.json. Summary: enterprise Q4 upgrade notice with segment SEG-Q4-ENT, 455 recipients, send date 2026-11-12, authorization ref APR-Q3."
+              }
+            }
+          ],
+          "original_event_references": [
+            {
+              "line_1based": 13,
+              "event_index_0based": 12,
+              "event_type": "native_agent_action"
+            },
+            {
+              "line_1based": 14,
+              "event_index_0based": 13,
+              "event_type": "agent_task_started"
+            },
+            {
+              "line_1based": 16,
+              "event_index_0based": 15,
+              "event_type": "agent_task_completed"
+            },
+            {
+              "line_1based": 17,
+              "event_index_0based": 16,
+              "event_type": "cycle_completed"
+            }
+          ],
+          "after_public_state_counts": {
+            "cycle": 2,
+            "remaining": 6,
+            "phase": "decision",
+            "contact_cost": 3.0,
+            "history_length": 5,
+            "done": false
+          }
+        },
+        {
+          "cycle": 2,
+          "decision_event": {
+            "line_1based": 19,
+            "event_index_0based": 18
+          },
+          "before_public_state_counts": {
+            "cycle": 2,
+            "remaining": 6,
+            "phase": "decision",
+            "contact_cost": 3.0,
+            "history_length": 5,
+            "done": false
+          },
+          "legal_actions": [
+            "NO_ASK",
+            "ASK:Mark Johnson",
+            "ASK:Li Ming",
+            "ASK:Jessica Chen",
+            "ASK:Jessica Lee"
+          ],
+          "actual_action": "NO_ASK",
+          "label_probabilities": null,
+          "top_two": null,
+          "probability_top_gap": null,
+          "inferred_log_score_top_gap": null,
+          "absolute_label_scores": null,
+          "absolute_scores_status": "not persisted per cycle",
+          "deterministic_action_probability": null,
+          "native_API_action_probability": null,
+          "actual_tool_commands_parsed_from_recorded_outputs": [
+            {
+              "mode": "NATIVE",
+              "tool": "submit",
+              "arguments": {
+                "answer": "Completed: /workspace/deliverable.json saved with the customer mailing JSON. Posted summary to #engineering: enterprise Q4 upgrade notice, segment SEG-Q4-ENT, 455 recipients, send date 2026-11-12, authorization ref APR-Q3."
+              }
+            }
+          ],
+          "original_event_references": [
+            {
+              "line_1based": 19,
+              "event_index_0based": 18,
+              "event_type": "native_agent_action"
+            },
+            {
+              "line_1based": 20,
+              "event_index_0based": 19,
+              "event_type": "agent_task_started"
+            },
+            {
+              "line_1based": 22,
+              "event_index_0based": 21,
+              "event_type": "agent_task_completed"
+            },
+            {
+              "line_1based": 23,
+              "event_index_0based": 22,
+              "event_type": "cycle_completed"
+            }
+          ],
+          "after_public_state_counts": {
+            "cycle": 3,
+            "remaining": 5,
+            "phase": "decision",
+            "contact_cost": 3.0,
+            "history_length": 6,
+            "done": true
+          }
+        }
+      ]
+    },
+    {
+      "task_id": "m-low-customer-mailing",
+      "arm": "sft87",
+      "classification": "Must-help",
+      "public_instruction": "As of 2026-11-05: Prepare the customer mailing request for the Q4 upgrade notice to enterprise accounts. Save /workspace/deliverable.json with segment_id, recipient_count, send_date, authorization_ref. Post a short summary and the file path in #engineering.",
+      "original_archive_id_NOT_uploaded_directory": "study4_teacher87_eval_v6_native_mini_gpu_gate_v4_frozen_flags",
+      "original_result_basename": "teacher87-dev16-m-low-customer-mailing-sft87-r1.json",
+      "original_result_bytes_sha256": "5ddbff2c664a2b22fe1c7d745d5caa5985ded726286c487a133ea8deecd7d1bc",
+      "original_trace_basename": "teacher87-dev16-m-low-customer-mailing-sft87-r1.trace.jsonl",
+      "original_trace_bytes_sha256": "b9b85d31a5a4a7749f2303c5dc11fe2d69d35e1896db279b831aebd4af52d626",
+      "original_trace_lines": 50,
+      "metrics": {
+        "business_pass": false,
+        "task_quality_T": 0.5,
+        "original_R1_utility_R": 0.5,
+        "contact_cost_C": 0.0,
+        "Nauth": 0,
+        "Nwaste": 0,
+        "all_public_task_requirements_done": false,
+        "workflow_business_success": false,
+        "full_quality_complete_task": false,
+        "semantic_review_status": "pending_separate_version"
+      },
+      "delivery": {
+        "artifact_present": true,
+        "required_channel_summary_recorded": true,
+        "task_submitted": false,
+        "all_public_task_requirements_done": false
+      },
+      "cycles": [
+        {
+          "cycle": 0,
+          "decision_event": {
+            "line_1based": 3,
+            "event_index_0based": 2
+          },
+          "before_public_state_counts": {
+            "cycle": 0,
+            "remaining": 8,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 0,
+            "done": false
+          },
+          "legal_actions": [
+            "NO_ASK",
+            "ASK:Mark Johnson",
+            "ASK:Li Ming",
+            "ASK:Jessica Chen",
+            "ASK:Jessica Lee"
+          ],
+          "actual_action": "NO_ASK",
+          "label_probabilities": {
+            "ASK:Jessica Chen": 0.0462764909083245,
+            "ASK:Jessica Lee": 0.005923401645011868,
+            "ASK:Li Ming": 0.026594736772954118,
+            "ASK:Mark Johnson": 0.17169060144382098,
+            "NO_ASK": 0.7495147692298886
+          },
+          "top_two": [
+            "NO_ASK",
+            "ASK:Mark Johnson"
+          ],
+          "probability_top_gap": 0.5778241677860676,
+          "inferred_log_score_top_gap": 1.4737319946289065,
+          "absolute_label_scores": null,
+          "absolute_scores_status": "not persisted per cycle",
+          "deterministic_action_probability": 1.0,
+          "native_API_action_probability": null,
+          "actual_tool_commands_parsed_from_recorded_outputs": [
+            {
+              "mode": "SELF",
+              "tool": "write_file",
+              "arguments": {
+                "path": "/workspace/deliverable.json",
+                "content": "{\"segment_id\":\"SEG-Q3-ENT\",\"recipient_count\":420,\"send_date\":\"2026-11-12\",\"authorization_ref\":\"APR-Q3\"}"
+              }
+            }
+          ],
+          "original_event_references": [
+            {
+              "line_1based": 3,
+              "event_index_0based": 2,
+              "event_type": "control_decision"
+            },
+            {
+              "line_1based": 4,
+              "event_index_0based": 3,
+              "event_type": "agent_task_started"
+            },
+            {
+              "line_1based": 6,
+              "event_index_0based": 5,
+              "event_type": "agent_task_completed"
+            },
+            {
+              "line_1based": 7,
+              "event_index_0based": 6,
+              "event_type": "cycle_completed"
+            }
+          ],
+          "after_public_state_counts": {
+            "cycle": 1,
+            "remaining": 7,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 1,
+            "done": false
+          }
+        },
+        {
+          "cycle": 1,
+          "decision_event": {
+            "line_1based": 9,
+            "event_index_0based": 8
+          },
+          "before_public_state_counts": {
+            "cycle": 1,
+            "remaining": 7,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 1,
+            "done": false
+          },
+          "legal_actions": [
+            "NO_ASK",
+            "ASK:Mark Johnson",
+            "ASK:Li Ming",
+            "ASK:Jessica Chen",
+            "ASK:Jessica Lee"
+          ],
+          "actual_action": "NO_ASK",
+          "label_probabilities": {
+            "ASK:Jessica Chen": 0.030673508716273664,
+            "ASK:Jessica Lee": 0.0032001538069436953,
+            "ASK:Li Ming": 0.009380513557146674,
+            "ASK:Mark Johnson": 0.08063040521043373,
+            "NO_ASK": 0.8761154187092022
+          },
+          "top_two": [
+            "NO_ASK",
+            "ASK:Mark Johnson"
+          ],
+          "probability_top_gap": 0.7954850134987684,
+          "inferred_log_score_top_gap": 2.385622024536133,
+          "absolute_label_scores": null,
+          "absolute_scores_status": "not persisted per cycle",
+          "deterministic_action_probability": 1.0,
+          "native_API_action_probability": null,
+          "actual_tool_commands_parsed_from_recorded_outputs": [
+            {
+              "mode": "SELF",
+              "tool": "post_channel",
+              "arguments": {
+                "channel": "#engineering",
+                "content": "Prepared customer mailing deliverable for enterprise upgrade notice.\nFile: /workspace/deliverable.json"
+              }
+            }
+          ],
+          "original_event_references": [
+            {
+              "line_1based": 9,
+              "event_index_0based": 8,
+              "event_type": "control_decision"
+            },
+            {
+              "line_1based": 10,
+              "event_index_0based": 9,
+              "event_type": "agent_task_started"
+            },
+            {
+              "line_1based": 12,
+              "event_index_0based": 11,
+              "event_type": "agent_task_completed"
+            },
+            {
+              "line_1based": 13,
+              "event_index_0based": 12,
+              "event_type": "cycle_completed"
+            }
+          ],
+          "after_public_state_counts": {
+            "cycle": 2,
+            "remaining": 6,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 2,
+            "done": false
+          }
+        },
+        {
+          "cycle": 2,
+          "decision_event": {
+            "line_1based": 15,
+            "event_index_0based": 14
+          },
+          "before_public_state_counts": {
+            "cycle": 2,
+            "remaining": 6,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 2,
+            "done": false
+          },
+          "legal_actions": [
+            "NO_ASK",
+            "ASK:Mark Johnson",
+            "ASK:Li Ming",
+            "ASK:Jessica Chen",
+            "ASK:Jessica Lee"
+          ],
+          "actual_action": "NO_ASK",
+          "label_probabilities": {
+            "ASK:Jessica Chen": 0.030056150997130982,
+            "ASK:Jessica Lee": 0.0036912042843533833,
+            "ASK:Li Ming": 0.011077093343893531,
+            "ASK:Mark Johnson": 0.0849637928738134,
+            "NO_ASK": 0.8702117585008087
+          },
+          "top_two": [
+            "NO_ASK",
+            "ASK:Mark Johnson"
+          ],
+          "probability_top_gap": 0.7852479656269953,
+          "inferred_log_score_top_gap": 2.3265113830566406,
+          "absolute_label_scores": null,
+          "absolute_scores_status": "not persisted per cycle",
+          "deterministic_action_probability": 1.0,
+          "native_API_action_probability": null,
+          "actual_tool_commands_parsed_from_recorded_outputs": [
+            {
+              "mode": "SELF",
+              "tool": "write_file",
+              "arguments": {
+                "path": "/workspace/deliverable.json",
+                "content": "{\"segment_id\":\"SEG-Q3-ENT\",\"recipient_count\":420,\"send_date\":\"2026-11-12\",\"authorization_ref\":\"APR-Q3\"}"
+              }
+            }
+          ],
+          "original_event_references": [
+            {
+              "line_1based": 15,
+              "event_index_0based": 14,
+              "event_type": "control_decision"
+            },
+            {
+              "line_1based": 16,
+              "event_index_0based": 15,
+              "event_type": "agent_task_started"
+            },
+            {
+              "line_1based": 18,
+              "event_index_0based": 17,
+              "event_type": "agent_task_completed"
+            },
+            {
+              "line_1based": 19,
+              "event_index_0based": 18,
+              "event_type": "cycle_completed"
+            }
+          ],
+          "after_public_state_counts": {
+            "cycle": 3,
+            "remaining": 5,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 3,
+            "done": false
+          }
+        },
+        {
+          "cycle": 3,
+          "decision_event": {
+            "line_1based": 21,
+            "event_index_0based": 20
+          },
+          "before_public_state_counts": {
+            "cycle": 3,
+            "remaining": 5,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 3,
+            "done": false
+          },
+          "legal_actions": [
+            "NO_ASK",
+            "ASK:Mark Johnson",
+            "ASK:Li Ming",
+            "ASK:Jessica Chen",
+            "ASK:Jessica Lee"
+          ],
+          "actual_action": "NO_ASK",
+          "label_probabilities": {
+            "ASK:Jessica Chen": 0.04102216372580834,
+            "ASK:Jessica Lee": 0.0031813873622354343,
+            "ASK:Li Ming": 0.010676194614171096,
+            "ASK:Mark Johnson": 0.09644517502672238,
+            "NO_ASK": 0.8486750792710626
+          },
+          "top_two": [
+            "NO_ASK",
+            "ASK:Mark Johnson"
+          ],
+          "probability_top_gap": 0.7522299042443402,
+          "inferred_log_score_top_gap": 2.174701690673828,
+          "absolute_label_scores": null,
+          "absolute_scores_status": "not persisted per cycle",
+          "deterministic_action_probability": 1.0,
+          "native_API_action_probability": null,
+          "actual_tool_commands_parsed_from_recorded_outputs": [
+            {
+              "mode": "SELF",
+              "tool": "post_channel",
+              "arguments": {
+                "channel": "#engineering",
+                "content": "Prepared customer mailing deliverable for enterprise upgrade notice.\nFile: /workspace/deliverable.json"
+              }
+            }
+          ],
+          "original_event_references": [
+            {
+              "line_1based": 21,
+              "event_index_0based": 20,
+              "event_type": "control_decision"
+            },
+            {
+              "line_1based": 22,
+              "event_index_0based": 21,
+              "event_type": "agent_task_started"
+            },
+            {
+              "line_1based": 24,
+              "event_index_0based": 23,
+              "event_type": "agent_task_completed"
+            },
+            {
+              "line_1based": 25,
+              "event_index_0based": 24,
+              "event_type": "cycle_completed"
+            }
+          ],
+          "after_public_state_counts": {
+            "cycle": 4,
+            "remaining": 4,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 4,
+            "done": false
+          }
+        },
+        {
+          "cycle": 4,
+          "decision_event": {
+            "line_1based": 27,
+            "event_index_0based": 26
+          },
+          "before_public_state_counts": {
+            "cycle": 4,
+            "remaining": 4,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 4,
+            "done": false
+          },
+          "legal_actions": [
+            "NO_ASK",
+            "ASK:Mark Johnson",
+            "ASK:Li Ming",
+            "ASK:Jessica Chen",
+            "ASK:Jessica Lee"
+          ],
+          "actual_action": "NO_ASK",
+          "label_probabilities": {
+            "ASK:Jessica Chen": 0.06669610264417987,
+            "ASK:Jessica Lee": 0.006011849799388067,
+            "ASK:Li Ming": 0.020799166380262246,
+            "ASK:Mark Johnson": 0.16530065981016087,
+            "NO_ASK": 0.741192221366009
+          },
+          "top_two": [
+            "NO_ASK",
+            "ASK:Mark Johnson"
+          ],
+          "probability_top_gap": 0.5758915615558482,
+          "inferred_log_score_top_gap": 1.5004940032958982,
+          "absolute_label_scores": null,
+          "absolute_scores_status": "not persisted per cycle",
+          "deterministic_action_probability": 1.0,
+          "native_API_action_probability": null,
+          "actual_tool_commands_parsed_from_recorded_outputs": [
+            {
+              "mode": "SELF",
+              "tool": "write_file",
+              "arguments": {
+                "path": "/workspace/deliverable.json",
+                "content": "{\"segment_id\":\"SEG-Q3-ENT\",\"recipient_count\":420,\"send_date\":\"2026-11-12\",\"authorization_ref\":\"APR-Q3\"}"
+              }
+            }
+          ],
+          "original_event_references": [
+            {
+              "line_1based": 27,
+              "event_index_0based": 26,
+              "event_type": "control_decision"
+            },
+            {
+              "line_1based": 28,
+              "event_index_0based": 27,
+              "event_type": "agent_task_started"
+            },
+            {
+              "line_1based": 30,
+              "event_index_0based": 29,
+              "event_type": "agent_task_completed"
+            },
+            {
+              "line_1based": 31,
+              "event_index_0based": 30,
+              "event_type": "cycle_completed"
+            }
+          ],
+          "after_public_state_counts": {
+            "cycle": 5,
+            "remaining": 3,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 5,
+            "done": false
+          }
+        },
+        {
+          "cycle": 5,
+          "decision_event": {
+            "line_1based": 33,
+            "event_index_0based": 32
+          },
+          "before_public_state_counts": {
+            "cycle": 5,
+            "remaining": 3,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 5,
+            "done": false
+          },
+          "legal_actions": [
+            "NO_ASK",
+            "ASK:Mark Johnson",
+            "ASK:Li Ming",
+            "ASK:Jessica Chen",
+            "ASK:Jessica Lee"
+          ],
+          "actual_action": "NO_ASK",
+          "label_probabilities": {
+            "ASK:Jessica Chen": 0.0650986955970339,
+            "ASK:Jessica Lee": 0.005468416861996472,
+            "ASK:Li Ming": 0.019370218781798065,
+            "ASK:Mark Johnson": 0.16242260574598438,
+            "NO_ASK": 0.7476400630131874
+          },
+          "top_two": [
+            "NO_ASK",
+            "ASK:Mark Johnson"
+          ],
+          "probability_top_gap": 0.5852174572672031,
+          "inferred_log_score_top_gap": 1.52672004699707,
+          "absolute_label_scores": null,
+          "absolute_scores_status": "not persisted per cycle",
+          "deterministic_action_probability": 1.0,
+          "native_API_action_probability": null,
+          "actual_tool_commands_parsed_from_recorded_outputs": [
+            {
+              "mode": "SELF",
+              "tool": "write_file",
+              "arguments": {
+                "path": "/workspace/deliverable.json",
+                "content": "{\"segment_id\":\"SEG-Q3-ENT\",\"recipient_count\":420,\"send_date\":\"2026-11-12\",\"authorization_ref\":\"APR-Q3\"}"
+              }
+            }
+          ],
+          "original_event_references": [
+            {
+              "line_1based": 33,
+              "event_index_0based": 32,
+              "event_type": "control_decision"
+            },
+            {
+              "line_1based": 34,
+              "event_index_0based": 33,
+              "event_type": "agent_task_started"
+            },
+            {
+              "line_1based": 36,
+              "event_index_0based": 35,
+              "event_type": "agent_task_completed"
+            },
+            {
+              "line_1based": 37,
+              "event_index_0based": 36,
+              "event_type": "cycle_completed"
+            }
+          ],
+          "after_public_state_counts": {
+            "cycle": 6,
+            "remaining": 2,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 6,
+            "done": false
+          }
+        },
+        {
+          "cycle": 6,
+          "decision_event": {
+            "line_1based": 39,
+            "event_index_0based": 38
+          },
+          "before_public_state_counts": {
+            "cycle": 6,
+            "remaining": 2,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 6,
+            "done": false
+          },
+          "legal_actions": [
+            "NO_ASK",
+            "ASK:Mark Johnson",
+            "ASK:Li Ming",
+            "ASK:Jessica Chen",
+            "ASK:Jessica Lee"
+          ],
+          "actual_action": "NO_ASK",
+          "label_probabilities": {
+            "ASK:Jessica Chen": 0.04562736842997962,
+            "ASK:Jessica Lee": 0.004098786602940905,
+            "ASK:Li Ming": 0.015505731068492712,
+            "ASK:Mark Johnson": 0.13377928500254663,
+            "NO_ASK": 0.8009888288960403
+          },
+          "top_two": [
+            "NO_ASK",
+            "ASK:Mark Johnson"
+          ],
+          "probability_top_gap": 0.6672095438934936,
+          "inferred_log_score_top_gap": 1.7896556854248047,
+          "absolute_label_scores": null,
+          "absolute_scores_status": "not persisted per cycle",
+          "deterministic_action_probability": 1.0,
+          "native_API_action_probability": null,
+          "actual_tool_commands_parsed_from_recorded_outputs": [
+            {
+              "mode": "SELF",
+              "tool": "write_file",
+              "arguments": {
+                "path": "/workspace/deliverable.json",
+                "content": "{\"segment_id\":\"SEG-Q4-ENT\",\"recipient_count\":420,\"send_date\":\"2026-11-12\",\"authorization_ref\":\"APR-Q3\"}"
+              }
+            }
+          ],
+          "original_event_references": [
+            {
+              "line_1based": 39,
+              "event_index_0based": 38,
+              "event_type": "control_decision"
+            },
+            {
+              "line_1based": 40,
+              "event_index_0based": 39,
+              "event_type": "agent_task_started"
+            },
+            {
+              "line_1based": 42,
+              "event_index_0based": 41,
+              "event_type": "agent_task_completed"
+            },
+            {
+              "line_1based": 43,
+              "event_index_0based": 42,
+              "event_type": "cycle_completed"
+            }
+          ],
+          "after_public_state_counts": {
+            "cycle": 7,
+            "remaining": 1,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 7,
+            "done": false
+          }
+        },
+        {
+          "cycle": 7,
+          "decision_event": {
+            "line_1based": 45,
+            "event_index_0based": 44
+          },
+          "before_public_state_counts": {
+            "cycle": 7,
+            "remaining": 1,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 7,
+            "done": false
+          },
+          "legal_actions": [
+            "NO_ASK",
+            "ASK:Mark Johnson",
+            "ASK:Li Ming",
+            "ASK:Jessica Chen",
+            "ASK:Jessica Lee"
+          ],
+          "actual_action": "NO_ASK",
+          "label_probabilities": {
+            "ASK:Jessica Chen": 0.04682732888835522,
+            "ASK:Jessica Lee": 0.00476376338156522,
+            "ASK:Li Ming": 0.014901114484249888,
+            "ASK:Mark Johnson": 0.10647767474510217,
+            "NO_ASK": 0.8270301185007275
+          },
+          "top_two": [
+            "NO_ASK",
+            "ASK:Mark Johnson"
+          ],
+          "probability_top_gap": 0.7205524437556253,
+          "inferred_log_score_top_gap": 2.049905776977539,
+          "absolute_label_scores": null,
+          "absolute_scores_status": "not persisted per cycle",
+          "deterministic_action_probability": 1.0,
+          "native_API_action_probability": null,
+          "actual_tool_commands_parsed_from_recorded_outputs": [
+            {
+              "mode": "SELF",
+              "tool": "post_channel",
+              "arguments": {
+                "channel": "#engineering",
+                "content": "Prepared Q4 enterprise customer mailing deliverable.\nFile: /workspace/deliverable.json"
+              }
+            }
+          ],
+          "original_event_references": [
+            {
+              "line_1based": 45,
+              "event_index_0based": 44,
+              "event_type": "control_decision"
+            },
+            {
+              "line_1based": 46,
+              "event_index_0based": 45,
+              "event_type": "agent_task_started"
+            },
+            {
+              "line_1based": 48,
+              "event_index_0based": 47,
+              "event_type": "agent_task_completed"
+            },
+            {
+              "line_1based": 49,
+              "event_index_0based": 48,
+              "event_type": "cycle_completed"
+            }
+          ],
+          "after_public_state_counts": {
+            "cycle": 8,
+            "remaining": 0,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 8,
+            "done": true
+          }
+        }
+      ]
+    },
+    {
+      "task_id": "m-low-policy-citation",
+      "arm": "sft87",
+      "classification": "Must-help",
+      "public_instruction": "As of 2026-11-05: Prepare the compliance checklist entry citing the remote-work policy. Save /workspace/deliverable.json with policy, version, effective_date, url_slug. Post a short summary and the file path in #engineering.",
+      "original_archive_id_NOT_uploaded_directory": "study4_teacher87_eval_v6_native_mini_gpu_gate_v4_frozen_flags",
+      "original_result_basename": "teacher87-dev16-m-low-policy-citation-sft87-r1.json",
+      "original_result_bytes_sha256": "c6fd2ab8f4f0486e82acc70c7d059460727575c434f608dda72c7689ac9f07ef",
+      "original_trace_basename": "teacher87-dev16-m-low-policy-citation-sft87-r1.trace.jsonl",
+      "original_trace_bytes_sha256": "7ff2b8fe1bc8a5327c384f88b1d507328a9d37e09494a1f144ca3870e59f9993",
+      "original_trace_lines": 50,
+      "metrics": {
+        "business_pass": false,
+        "task_quality_T": 0.25,
+        "original_R1_utility_R": 0.25,
+        "contact_cost_C": 0.0,
+        "Nauth": 0,
+        "Nwaste": 0,
+        "all_public_task_requirements_done": false,
+        "workflow_business_success": false,
+        "full_quality_complete_task": false,
+        "semantic_review_status": "pending_separate_version"
+      },
+      "delivery": {
+        "artifact_present": true,
+        "required_channel_summary_recorded": true,
+        "task_submitted": false,
+        "all_public_task_requirements_done": false
+      },
+      "cycles": [
+        {
+          "cycle": 0,
+          "decision_event": {
+            "line_1based": 3,
+            "event_index_0based": 2
+          },
+          "before_public_state_counts": {
+            "cycle": 0,
+            "remaining": 8,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 0,
+            "done": false
+          },
+          "legal_actions": [
+            "NO_ASK",
+            "ASK:Alex Turner",
+            "ASK:Sophia Rodriguez",
+            "ASK:Emily Zhou",
+            "ASK:Jessica Chen",
+            "ASK:Emma Lewis",
+            "ASK:Priya Sharma",
+            "ASK:Jessica Lee",
+            "ASK:Huang Jie"
+          ],
+          "actual_action": "NO_ASK",
+          "label_probabilities": {
+            "ASK:Alex Turner": 0.0344076101030446,
+            "ASK:Emily Zhou": 0.024353968211175973,
+            "ASK:Emma Lewis": 0.0014786924857782572,
+            "ASK:Huang Jie": 0.0311867709266931,
+            "ASK:Jessica Chen": 0.033524189421069626,
+            "ASK:Jessica Lee": 0.006832424813849024,
+            "ASK:Priya Sharma": 0.020835582860449047,
+            "ASK:Sophia Rodriguez": 0.02168393366747799,
+            "NO_ASK": 0.8256968275104625
+          },
+          "top_two": [
+            "NO_ASK",
+            "ASK:Alex Turner"
+          ],
+          "probability_top_gap": 0.7912892174074179,
+          "inferred_log_score_top_gap": 3.177949905395508,
+          "absolute_label_scores": null,
+          "absolute_scores_status": "not persisted per cycle",
+          "deterministic_action_probability": 1.0,
+          "native_API_action_probability": null,
+          "actual_tool_commands_parsed_from_recorded_outputs": [
+            {
+              "mode": "SELF",
+              "tool": "write_file",
+              "arguments": {
+                "path": "/workspace/deliverable.json",
+                "content": "{\"policy\":\"remote-work\",\"version\":\"v3.1\",\"effective_date\":\"2026-01-01\",\"url_slug\":\"remote-work-v3\"}"
+              }
+            }
+          ],
+          "original_event_references": [
+            {
+              "line_1based": 3,
+              "event_index_0based": 2,
+              "event_type": "control_decision"
+            },
+            {
+              "line_1based": 4,
+              "event_index_0based": 3,
+              "event_type": "agent_task_started"
+            },
+            {
+              "line_1based": 6,
+              "event_index_0based": 5,
+              "event_type": "agent_task_completed"
+            },
+            {
+              "line_1based": 7,
+              "event_index_0based": 6,
+              "event_type": "cycle_completed"
+            }
+          ],
+          "after_public_state_counts": {
+            "cycle": 1,
+            "remaining": 7,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 1,
+            "done": false
+          }
+        },
+        {
+          "cycle": 1,
+          "decision_event": {
+            "line_1based": 9,
+            "event_index_0based": 8
+          },
+          "before_public_state_counts": {
+            "cycle": 1,
+            "remaining": 7,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 1,
+            "done": false
+          },
+          "legal_actions": [
+            "NO_ASK",
+            "ASK:Alex Turner",
+            "ASK:Sophia Rodriguez",
+            "ASK:Emily Zhou",
+            "ASK:Jessica Chen",
+            "ASK:Emma Lewis",
+            "ASK:Priya Sharma",
+            "ASK:Jessica Lee",
+            "ASK:Huang Jie"
+          ],
+          "actual_action": "NO_ASK",
+          "label_probabilities": {
+            "ASK:Alex Turner": 0.0313162455240847,
+            "ASK:Emily Zhou": 0.02027087662625317,
+            "ASK:Emma Lewis": 0.001323667599068676,
+            "ASK:Huang Jie": 0.0207125969035734,
+            "ASK:Jessica Chen": 0.020039529200031277,
+            "ASK:Jessica Lee": 0.004372644241666504,
+            "ASK:Priya Sharma": 0.01708060222385335,
+            "ASK:Sophia Rodriguez": 0.016094476378971056,
+            "NO_ASK": 0.868789361302498
+          },
+          "top_two": [
+            "NO_ASK",
+            "ASK:Alex Turner"
+          ],
+          "probability_top_gap": 0.8374731157784132,
+          "inferred_log_score_top_gap": 3.3229637145996094,
+          "absolute_label_scores": null,
+          "absolute_scores_status": "not persisted per cycle",
+          "deterministic_action_probability": 1.0,
+          "native_API_action_probability": null,
+          "actual_tool_commands_parsed_from_recorded_outputs": [
+            {
+              "mode": "SELF",
+              "tool": "post_channel",
+              "arguments": {
+                "channel": "#engineering",
+                "content": "Compliance checklist entry saved: remote-work policy v3.1 (effective 2026-01-01, slug remote-work-v3). File: /workspace/deliverable.json"
+              }
+            }
+          ],
+          "original_event_references": [
+            {
+              "line_1based": 9,
+              "event_index_0based": 8,
+              "event_type": "control_decision"
+            },
+            {
+              "line_1based": 10,
+              "event_index_0based": 9,
+              "event_type": "agent_task_started"
+            },
+            {
+              "line_1based": 12,
+              "event_index_0based": 11,
+              "event_type": "agent_task_completed"
+            },
+            {
+              "line_1based": 13,
+              "event_index_0based": 12,
+              "event_type": "cycle_completed"
+            }
+          ],
+          "after_public_state_counts": {
+            "cycle": 2,
+            "remaining": 6,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 2,
+            "done": false
+          }
+        },
+        {
+          "cycle": 2,
+          "decision_event": {
+            "line_1based": 15,
+            "event_index_0based": 14
+          },
+          "before_public_state_counts": {
+            "cycle": 2,
+            "remaining": 6,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 2,
+            "done": false
+          },
+          "legal_actions": [
+            "NO_ASK",
+            "ASK:Alex Turner",
+            "ASK:Sophia Rodriguez",
+            "ASK:Emily Zhou",
+            "ASK:Jessica Chen",
+            "ASK:Emma Lewis",
+            "ASK:Priya Sharma",
+            "ASK:Jessica Lee",
+            "ASK:Huang Jie"
+          ],
+          "actual_action": "NO_ASK",
+          "label_probabilities": {
+            "ASK:Alex Turner": 0.02284022705522645,
+            "ASK:Emily Zhou": 0.015949884603158885,
+            "ASK:Emma Lewis": 0.0006204763645372339,
+            "ASK:Huang Jie": 0.013761098997179642,
+            "ASK:Jessica Chen": 0.0160779247849766,
+            "ASK:Jessica Lee": 0.002803447499742686,
+            "ASK:Priya Sharma": 0.012094451649599,
+            "ASK:Sophia Rodriguez": 0.011477757900119052,
+            "NO_ASK": 0.9043747311454606
+          },
+          "top_two": [
+            "NO_ASK",
+            "ASK:Alex Turner"
+          ],
+          "probability_top_gap": 0.8815345040902342,
+          "inferred_log_score_top_gap": 3.678720474243164,
+          "absolute_label_scores": null,
+          "absolute_scores_status": "not persisted per cycle",
+          "deterministic_action_probability": 1.0,
+          "native_API_action_probability": null,
+          "actual_tool_commands_parsed_from_recorded_outputs": [
+            {
+              "mode": "SELF",
+              "tool": "post_channel",
+              "arguments": {
+                "channel": "#engineering",
+                "content": "Compliance checklist entry saved: remote-work policy v3.1 (effective 2026-01-01, slug remote-work-v3). File: /workspace/deliverable.json"
+              }
+            }
+          ],
+          "original_event_references": [
+            {
+              "line_1based": 15,
+              "event_index_0based": 14,
+              "event_type": "control_decision"
+            },
+            {
+              "line_1based": 16,
+              "event_index_0based": 15,
+              "event_type": "agent_task_started"
+            },
+            {
+              "line_1based": 18,
+              "event_index_0based": 17,
+              "event_type": "agent_task_completed"
+            },
+            {
+              "line_1based": 19,
+              "event_index_0based": 18,
+              "event_type": "cycle_completed"
+            }
+          ],
+          "after_public_state_counts": {
+            "cycle": 3,
+            "remaining": 5,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 3,
+            "done": false
+          }
+        },
+        {
+          "cycle": 3,
+          "decision_event": {
+            "line_1based": 21,
+            "event_index_0based": 20
+          },
+          "before_public_state_counts": {
+            "cycle": 3,
+            "remaining": 5,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 3,
+            "done": false
+          },
+          "legal_actions": [
+            "NO_ASK",
+            "ASK:Alex Turner",
+            "ASK:Sophia Rodriguez",
+            "ASK:Emily Zhou",
+            "ASK:Jessica Chen",
+            "ASK:Emma Lewis",
+            "ASK:Priya Sharma",
+            "ASK:Jessica Lee",
+            "ASK:Huang Jie"
+          ],
+          "actual_action": "NO_ASK",
+          "label_probabilities": {
+            "ASK:Alex Turner": 0.01936383624348674,
+            "ASK:Emily Zhou": 0.011086488174874554,
+            "ASK:Emma Lewis": 0.0004897016056561454,
+            "ASK:Huang Jie": 0.013318943176782611,
+            "ASK:Jessica Chen": 0.01284895402741154,
+            "ASK:Jessica Lee": 0.0025518748188205066,
+            "ASK:Priya Sharma": 0.008800178112930894,
+            "ASK:Sophia Rodriguez": 0.006988147316113248,
+            "NO_ASK": 0.9245518765239236
+          },
+          "top_two": [
+            "NO_ASK",
+            "ASK:Alex Turner"
+          ],
+          "probability_top_gap": 0.9051880402804369,
+          "inferred_log_score_top_gap": 3.8659019470214844,
+          "absolute_label_scores": null,
+          "absolute_scores_status": "not persisted per cycle",
+          "deterministic_action_probability": 1.0,
+          "native_API_action_probability": null,
+          "actual_tool_commands_parsed_from_recorded_outputs": [
+            {
+              "mode": "SELF",
+              "tool": "post_channel",
+              "arguments": {
+                "channel": "#engineering",
+                "content": "Compliance checklist entry saved: remote-work policy v3.1 (effective 2026-01-01, slug remote-work-v3). File: /workspace/deliverable.json"
+              }
+            }
+          ],
+          "original_event_references": [
+            {
+              "line_1based": 21,
+              "event_index_0based": 20,
+              "event_type": "control_decision"
+            },
+            {
+              "line_1based": 22,
+              "event_index_0based": 21,
+              "event_type": "agent_task_started"
+            },
+            {
+              "line_1based": 24,
+              "event_index_0based": 23,
+              "event_type": "agent_task_completed"
+            },
+            {
+              "line_1based": 25,
+              "event_index_0based": 24,
+              "event_type": "cycle_completed"
+            }
+          ],
+          "after_public_state_counts": {
+            "cycle": 4,
+            "remaining": 4,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 4,
+            "done": false
+          }
+        },
+        {
+          "cycle": 4,
+          "decision_event": {
+            "line_1based": 27,
+            "event_index_0based": 26
+          },
+          "before_public_state_counts": {
+            "cycle": 4,
+            "remaining": 4,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 4,
+            "done": false
+          },
+          "legal_actions": [
+            "NO_ASK",
+            "ASK:Alex Turner",
+            "ASK:Sophia Rodriguez",
+            "ASK:Emily Zhou",
+            "ASK:Jessica Chen",
+            "ASK:Emma Lewis",
+            "ASK:Priya Sharma",
+            "ASK:Jessica Lee",
+            "ASK:Huang Jie"
+          ],
+          "actual_action": "NO_ASK",
+          "label_probabilities": {
+            "ASK:Alex Turner": 0.023521422608312817,
+            "ASK:Emily Zhou": 0.015086679165096832,
+            "ASK:Emma Lewis": 0.0007349179311605502,
+            "ASK:Huang Jie": 0.015971070015757365,
+            "ASK:Jessica Chen": 0.020179276129677882,
+            "ASK:Jessica Lee": 0.0039925580652327595,
+            "ASK:Priya Sharma": 0.013063706326039865,
+            "ASK:Sophia Rodriguez": 0.012679009303970607,
+            "NO_ASK": 0.8947713604547515
+          },
+          "top_two": [
+            "NO_ASK",
+            "ASK:Alex Turner"
+          ],
+          "probability_top_gap": 0.8712499378464387,
+          "inferred_log_score_top_gap": 3.6386566162109375,
+          "absolute_label_scores": null,
+          "absolute_scores_status": "not persisted per cycle",
+          "deterministic_action_probability": 1.0,
+          "native_API_action_probability": null,
+          "actual_tool_commands_parsed_from_recorded_outputs": [
+            {
+              "mode": "SELF",
+              "tool": "post_channel",
+              "arguments": {
+                "channel": "#engineering",
+                "content": "Compliance checklist entry saved: remote-work policy v3.1 (effective 2026-01-01, slug remote-work-v3). File: /workspace/deliverable.json"
+              }
+            }
+          ],
+          "original_event_references": [
+            {
+              "line_1based": 27,
+              "event_index_0based": 26,
+              "event_type": "control_decision"
+            },
+            {
+              "line_1based": 28,
+              "event_index_0based": 27,
+              "event_type": "agent_task_started"
+            },
+            {
+              "line_1based": 30,
+              "event_index_0based": 29,
+              "event_type": "agent_task_completed"
+            },
+            {
+              "line_1based": 31,
+              "event_index_0based": 30,
+              "event_type": "cycle_completed"
+            }
+          ],
+          "after_public_state_counts": {
+            "cycle": 5,
+            "remaining": 3,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 5,
+            "done": false
+          }
+        },
+        {
+          "cycle": 5,
+          "decision_event": {
+            "line_1based": 33,
+            "event_index_0based": 32
+          },
+          "before_public_state_counts": {
+            "cycle": 5,
+            "remaining": 3,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 5,
+            "done": false
+          },
+          "legal_actions": [
+            "NO_ASK",
+            "ASK:Alex Turner",
+            "ASK:Sophia Rodriguez",
+            "ASK:Emily Zhou",
+            "ASK:Jessica Chen",
+            "ASK:Emma Lewis",
+            "ASK:Priya Sharma",
+            "ASK:Jessica Lee",
+            "ASK:Huang Jie"
+          ],
+          "actual_action": "NO_ASK",
+          "label_probabilities": {
+            "ASK:Alex Turner": 0.024001108929134315,
+            "ASK:Emily Zhou": 0.013846600655117808,
+            "ASK:Emma Lewis": 0.0004623101658281128,
+            "ASK:Huang Jie": 0.012142076867566343,
+            "ASK:Jessica Chen": 0.016493565496741965,
+            "ASK:Jessica Lee": 0.0028759650966308074,
+            "ASK:Priya Sharma": 0.00921359108278235,
+            "ASK:Sophia Rodriguez": 0.010983060419959645,
+            "NO_ASK": 0.9099817212862386
+          },
+          "top_two": [
+            "NO_ASK",
+            "ASK:Alex Turner"
+          ],
+          "probability_top_gap": 0.8859806123571042,
+          "inferred_log_score_top_gap": 3.635324478149414,
+          "absolute_label_scores": null,
+          "absolute_scores_status": "not persisted per cycle",
+          "deterministic_action_probability": 1.0,
+          "native_API_action_probability": null,
+          "actual_tool_commands_parsed_from_recorded_outputs": [
+            {
+              "mode": "SELF",
+              "tool": "post_channel",
+              "arguments": {
+                "channel": "#engineering",
+                "content": "Compliance checklist entry saved: remote-work policy v3.1 (effective 2026-01-01, slug remote-work-v3). File: /workspace/deliverable.json"
+              }
+            }
+          ],
+          "original_event_references": [
+            {
+              "line_1based": 33,
+              "event_index_0based": 32,
+              "event_type": "control_decision"
+            },
+            {
+              "line_1based": 34,
+              "event_index_0based": 33,
+              "event_type": "agent_task_started"
+            },
+            {
+              "line_1based": 36,
+              "event_index_0based": 35,
+              "event_type": "agent_task_completed"
+            },
+            {
+              "line_1based": 37,
+              "event_index_0based": 36,
+              "event_type": "cycle_completed"
+            }
+          ],
+          "after_public_state_counts": {
+            "cycle": 6,
+            "remaining": 2,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 6,
+            "done": false
+          }
+        },
+        {
+          "cycle": 6,
+          "decision_event": {
+            "line_1based": 39,
+            "event_index_0based": 38
+          },
+          "before_public_state_counts": {
+            "cycle": 6,
+            "remaining": 2,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 6,
+            "done": false
+          },
+          "legal_actions": [
+            "NO_ASK",
+            "ASK:Alex Turner",
+            "ASK:Sophia Rodriguez",
+            "ASK:Emily Zhou",
+            "ASK:Jessica Chen",
+            "ASK:Emma Lewis",
+            "ASK:Priya Sharma",
+            "ASK:Jessica Lee",
+            "ASK:Huang Jie"
+          ],
+          "actual_action": "NO_ASK",
+          "label_probabilities": {
+            "ASK:Alex Turner": 0.033048291319976324,
+            "ASK:Emily Zhou": 0.014198610681403814,
+            "ASK:Emma Lewis": 0.0007691619025451583,
+            "ASK:Huang Jie": 0.022995378124530088,
+            "ASK:Jessica Chen": 0.020094220817326418,
+            "ASK:Jessica Lee": 0.00497589827686177,
+            "ASK:Priya Sharma": 0.020255993920918477,
+            "ASK:Sophia Rodriguez": 0.017538663330253907,
+            "NO_ASK": 0.866123781626184
+          },
+          "top_two": [
+            "NO_ASK",
+            "ASK:Alex Turner"
+          ],
+          "probability_top_gap": 0.8330754903062076,
+          "inferred_log_score_top_gap": 3.2660579681396484,
+          "absolute_label_scores": null,
+          "absolute_scores_status": "not persisted per cycle",
+          "deterministic_action_probability": 1.0,
+          "native_API_action_probability": null,
+          "actual_tool_commands_parsed_from_recorded_outputs": [
+            {
+              "mode": "SELF",
+              "tool": "post_channel",
+              "arguments": {
+                "channel": "#engineering",
+                "content": "Compliance checklist entry saved: remote-work policy v3.1 (effective 2026-01-01, slug remote-work-v3). File: /workspace/deliverable.json"
+              }
+            }
+          ],
+          "original_event_references": [
+            {
+              "line_1based": 39,
+              "event_index_0based": 38,
+              "event_type": "control_decision"
+            },
+            {
+              "line_1based": 40,
+              "event_index_0based": 39,
+              "event_type": "agent_task_started"
+            },
+            {
+              "line_1based": 42,
+              "event_index_0based": 41,
+              "event_type": "agent_task_completed"
+            },
+            {
+              "line_1based": 43,
+              "event_index_0based": 42,
+              "event_type": "cycle_completed"
+            }
+          ],
+          "after_public_state_counts": {
+            "cycle": 7,
+            "remaining": 1,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 7,
+            "done": false
+          }
+        },
+        {
+          "cycle": 7,
+          "decision_event": {
+            "line_1based": 45,
+            "event_index_0based": 44
+          },
+          "before_public_state_counts": {
+            "cycle": 7,
+            "remaining": 1,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 7,
+            "done": false
+          },
+          "legal_actions": [
+            "NO_ASK",
+            "ASK:Alex Turner",
+            "ASK:Sophia Rodriguez",
+            "ASK:Emily Zhou",
+            "ASK:Jessica Chen",
+            "ASK:Emma Lewis",
+            "ASK:Priya Sharma",
+            "ASK:Jessica Lee",
+            "ASK:Huang Jie"
+          ],
+          "actual_action": "NO_ASK",
+          "label_probabilities": {
+            "ASK:Alex Turner": 0.019250045778423073,
+            "ASK:Emily Zhou": 0.009315267776777375,
+            "ASK:Emma Lewis": 0.0006464591074513322,
+            "ASK:Huang Jie": 0.015526016503475302,
+            "ASK:Jessica Chen": 0.018604160709154736,
+            "ASK:Jessica Lee": 0.0038745622524685138,
+            "ASK:Priya Sharma": 0.009788979959411971,
+            "ASK:Sophia Rodriguez": 0.012330254779376802,
+            "NO_ASK": 0.9106642531334609
+          },
+          "top_two": [
+            "NO_ASK",
+            "ASK:Alex Turner"
+          ],
+          "probability_top_gap": 0.8914142073550378,
+          "inferred_log_score_top_gap": 3.856660842895508,
+          "absolute_label_scores": null,
+          "absolute_scores_status": "not persisted per cycle",
+          "deterministic_action_probability": 1.0,
+          "native_API_action_probability": null,
+          "actual_tool_commands_parsed_from_recorded_outputs": [
+            {
+              "mode": "SELF",
+              "tool": "post_channel",
+              "arguments": {
+                "channel": "#engineering",
+                "content": "Compliance checklist entry saved: remote-work policy v3.1 (effective 2026-01-01, slug remote-work-v3). File: /workspace/deliverable.json"
+              }
+            }
+          ],
+          "original_event_references": [
+            {
+              "line_1based": 45,
+              "event_index_0based": 44,
+              "event_type": "control_decision"
+            },
+            {
+              "line_1based": 46,
+              "event_index_0based": 45,
+              "event_type": "agent_task_started"
+            },
+            {
+              "line_1based": 48,
+              "event_index_0based": 47,
+              "event_type": "agent_task_completed"
+            },
+            {
+              "line_1based": 49,
+              "event_index_0based": 48,
+              "event_type": "cycle_completed"
+            }
+          ],
+          "after_public_state_counts": {
+            "cycle": 8,
+            "remaining": 0,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 8,
+            "done": true
+          }
+        }
+      ]
+    },
+    {
+      "task_id": "m-low-policy-citation",
+      "arm": "native_mini",
+      "classification": "Must-help",
+      "public_instruction": "As of 2026-11-05: Prepare the compliance checklist entry citing the remote-work policy. Save /workspace/deliverable.json with policy, version, effective_date, url_slug. Post a short summary and the file path in #engineering.",
+      "original_archive_id_NOT_uploaded_directory": "study4_teacher87_eval_v6_native_mini_gpu_gate_v4_frozen_flags",
+      "original_result_basename": "teacher87-dev16-m-low-policy-citation-native_mini-r1.json",
+      "original_result_bytes_sha256": "d1af7c73222fee2b04dd2cf9560b42a8fb152ebfa741f12f68e6a5cca4564909",
+      "original_trace_basename": "teacher87-dev16-m-low-policy-citation-native_mini-r1.trace.jsonl",
+      "original_trace_bytes_sha256": "7ccc86e144fe4bd498d315cd67c94602b94d02b4e60bb1f7e7d303cc2cdf14fa",
+      "original_trace_lines": 20,
+      "metrics": {
+        "business_pass": false,
+        "task_quality_T": 0.25,
+        "original_R1_utility_R": 0.25,
+        "contact_cost_C": 0.0,
+        "Nauth": 0,
+        "Nwaste": 0,
+        "all_public_task_requirements_done": true,
+        "workflow_business_success": false,
+        "full_quality_complete_task": false,
+        "semantic_review_status": "pending_separate_version"
+      },
+      "delivery": {
+        "artifact_present": true,
+        "required_channel_summary_recorded": true,
+        "task_submitted": true,
+        "all_public_task_requirements_done": true
+      },
+      "cycles": [
+        {
+          "cycle": 0,
+          "decision_event": {
+            "line_1based": 3,
+            "event_index_0based": 2
+          },
+          "before_public_state_counts": {
+            "cycle": 0,
+            "remaining": 8,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 0,
+            "done": false
+          },
+          "legal_actions": [
+            "NO_ASK",
+            "ASK:Alex Turner",
+            "ASK:Sophia Rodriguez",
+            "ASK:Emily Zhou",
+            "ASK:Jessica Chen",
+            "ASK:Emma Lewis",
+            "ASK:Priya Sharma",
+            "ASK:Jessica Lee",
+            "ASK:Huang Jie"
+          ],
+          "actual_action": "NO_ASK",
+          "label_probabilities": null,
+          "top_two": null,
+          "probability_top_gap": null,
+          "inferred_log_score_top_gap": null,
+          "absolute_label_scores": null,
+          "absolute_scores_status": "not persisted per cycle",
+          "deterministic_action_probability": null,
+          "native_API_action_probability": null,
+          "actual_tool_commands_parsed_from_recorded_outputs": [
+            {
+              "mode": "NATIVE",
+              "tool": "write_file",
+              "arguments": {
+                "path": "/workspace/deliverable.json",
+                "content": "{\"policy\":\"remote-work\",\"version\":\"v3.1\",\"effective_date\":\"2026-01-01\",\"url_slug\":\"remote-work-v3\"}"
+              }
+            }
+          ],
+          "original_event_references": [
+            {
+              "line_1based": 3,
+              "event_index_0based": 2,
+              "event_type": "native_agent_action"
+            },
+            {
+              "line_1based": 4,
+              "event_index_0based": 3,
+              "event_type": "agent_task_started"
+            },
+            {
+              "line_1based": 6,
+              "event_index_0based": 5,
+              "event_type": "agent_task_completed"
+            },
+            {
+              "line_1based": 7,
+              "event_index_0based": 6,
+              "event_type": "cycle_completed"
+            }
+          ],
+          "after_public_state_counts": {
+            "cycle": 1,
+            "remaining": 7,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 1,
+            "done": false
+          }
+        },
+        {
+          "cycle": 1,
+          "decision_event": {
+            "line_1based": 9,
+            "event_index_0based": 8
+          },
+          "before_public_state_counts": {
+            "cycle": 1,
+            "remaining": 7,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 1,
+            "done": false
+          },
+          "legal_actions": [
+            "NO_ASK",
+            "ASK:Alex Turner",
+            "ASK:Sophia Rodriguez",
+            "ASK:Emily Zhou",
+            "ASK:Jessica Chen",
+            "ASK:Emma Lewis",
+            "ASK:Priya Sharma",
+            "ASK:Jessica Lee",
+            "ASK:Huang Jie"
+          ],
+          "actual_action": "NO_ASK",
+          "label_probabilities": null,
+          "top_two": null,
+          "probability_top_gap": null,
+          "inferred_log_score_top_gap": null,
+          "absolute_label_scores": null,
+          "absolute_scores_status": "not persisted per cycle",
+          "deterministic_action_probability": null,
+          "native_API_action_probability": null,
+          "actual_tool_commands_parsed_from_recorded_outputs": [
+            {
+              "mode": "NATIVE",
+              "tool": "post_channel",
+              "arguments": {
+                "channel": "#engineering",
+                "content": "Compliance checklist entry ready: /workspace/deliverable.json"
+              }
+            }
+          ],
+          "original_event_references": [
+            {
+              "line_1based": 9,
+              "event_index_0based": 8,
+              "event_type": "native_agent_action"
+            },
+            {
+              "line_1based": 10,
+              "event_index_0based": 9,
+              "event_type": "agent_task_started"
+            },
+            {
+              "line_1based": 12,
+              "event_index_0based": 11,
+              "event_type": "agent_task_completed"
+            },
+            {
+              "line_1based": 13,
+              "event_index_0based": 12,
+              "event_type": "cycle_completed"
+            }
+          ],
+          "after_public_state_counts": {
+            "cycle": 2,
+            "remaining": 6,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 2,
+            "done": false
+          }
+        },
+        {
+          "cycle": 2,
+          "decision_event": {
+            "line_1based": 15,
+            "event_index_0based": 14
+          },
+          "before_public_state_counts": {
+            "cycle": 2,
+            "remaining": 6,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 2,
+            "done": false
+          },
+          "legal_actions": [
+            "NO_ASK",
+            "ASK:Alex Turner",
+            "ASK:Sophia Rodriguez",
+            "ASK:Emily Zhou",
+            "ASK:Jessica Chen",
+            "ASK:Emma Lewis",
+            "ASK:Priya Sharma",
+            "ASK:Jessica Lee",
+            "ASK:Huang Jie"
+          ],
+          "actual_action": "NO_ASK",
+          "label_probabilities": null,
+          "top_two": null,
+          "probability_top_gap": null,
+          "inferred_log_score_top_gap": null,
+          "absolute_label_scores": null,
+          "absolute_scores_status": "not persisted per cycle",
+          "deterministic_action_probability": null,
+          "native_API_action_probability": null,
+          "actual_tool_commands_parsed_from_recorded_outputs": [
+            {
+              "mode": "NATIVE",
+              "tool": "submit",
+              "arguments": {
+                "answer": "{\"policy\":\"remote-work\",\"version\":\"v3.1\",\"effective_date\":\"2026-01-01\",\"url_slug\":\"remote-work-v3\"}"
+              }
+            }
+          ],
+          "original_event_references": [
+            {
+              "line_1based": 15,
+              "event_index_0based": 14,
+              "event_type": "native_agent_action"
+            },
+            {
+              "line_1based": 16,
+              "event_index_0based": 15,
+              "event_type": "agent_task_started"
+            },
+            {
+              "line_1based": 18,
+              "event_index_0based": 17,
+              "event_type": "agent_task_completed"
+            },
+            {
+              "line_1based": 19,
+              "event_index_0based": 18,
+              "event_type": "cycle_completed"
+            }
+          ],
+          "after_public_state_counts": {
+            "cycle": 3,
+            "remaining": 5,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 3,
+            "done": true
+          }
+        }
+      ]
+    },
+    {
+      "task_id": "m-medium-research-purchase",
+      "arm": "sft87",
+      "classification": "Must-help",
+      "public_instruction": "Prepare the twelve-month VectorBench order for project Pine as of 2026-11-02. Save /workspace/deliverable.json with seats, total_usd, allocation_revision, budget_code and release_reference. Post its path and a brief order summary in #engineering.",
+      "original_archive_id_NOT_uploaded_directory": "study4_teacher87_eval_v6_native_mini_gpu_gate_v4_frozen_flags",
+      "original_result_basename": "teacher87-dev16-m-medium-research-purchase-sft87-r1.json",
+      "original_result_bytes_sha256": "d04c691a49bb14ad31020813ff85e86a16e7223110486e2f45875b583f0b61b5",
+      "original_trace_basename": "teacher87-dev16-m-medium-research-purchase-sft87-r1.trace.jsonl",
+      "original_trace_bytes_sha256": "8949e6a7fcca48d1d416b64fd1b8cbf5479e6cb4b0d8bda3b6a8773460710632",
+      "original_trace_lines": 50,
+      "metrics": {
+        "business_pass": false,
+        "task_quality_T": 0.0,
+        "original_R1_utility_R": 0.0,
+        "contact_cost_C": 0.0,
+        "Nauth": 0,
+        "Nwaste": 0,
+        "all_public_task_requirements_done": false,
+        "workflow_business_success": false,
+        "full_quality_complete_task": false,
+        "semantic_review_status": "pending_separate_version"
+      },
+      "delivery": {
+        "artifact_present": true,
+        "required_channel_summary_recorded": true,
+        "task_submitted": false,
+        "all_public_task_requirements_done": false
+      },
+      "cycles": [
+        {
+          "cycle": 0,
+          "decision_event": {
+            "line_1based": 3,
+            "event_index_0based": 2
+          },
+          "before_public_state_counts": {
+            "cycle": 0,
+            "remaining": 8,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 0,
+            "done": false
+          },
+          "legal_actions": [
+            "NO_ASK",
+            "ASK:Jessica Lee",
+            "ASK:Priya Sharma",
+            "ASK:Zhang Wei",
+            "ASK:Huang Jie",
+            "ASK:David Wong",
+            "ASK:Emily Zhou",
+            "ASK:Mike Chen",
+            "ASK:Wang Fang"
+          ],
+          "actual_action": "NO_ASK",
+          "label_probabilities": {
+            "ASK:David Wong": 0.008260848401817627,
+            "ASK:Emily Zhou": 0.03403490163405758,
+            "ASK:Huang Jie": 0.016613122801008098,
+            "ASK:Jessica Lee": 0.043766576566538075,
+            "ASK:Mike Chen": 0.0010173364859129921,
+            "ASK:Priya Sharma": 0.013896253964255778,
+            "ASK:Wang Fang": 0.010703104018517737,
+            "ASK:Zhang Wei": 0.013857504768790706,
+            "NO_ASK": 0.8578503513591015
+          },
+          "top_two": [
+            "NO_ASK",
+            "ASK:Jessica Lee"
+          ],
+          "probability_top_gap": 0.8140837747925634,
+          "inferred_log_score_top_gap": 2.9755592346191406,
+          "absolute_label_scores": null,
+          "absolute_scores_status": "not persisted per cycle",
+          "deterministic_action_probability": 1.0,
+          "native_API_action_probability": null,
+          "actual_tool_commands_parsed_from_recorded_outputs": [
+            {
+              "mode": "SELF",
+              "tool": "write_file",
+              "arguments": {
+                "path": "/workspace/deliverable.json",
+                "content": "{\"seats\":16,\"total_usd\":9600,\"allocation_revision\":\"AI-26-A\",\"budget_code\":\"P-01\",\"release_reference\":\"VB-PLAN-16\"}"
+              }
+            }
+          ],
+          "original_event_references": [
+            {
+              "line_1based": 3,
+              "event_index_0based": 2,
+              "event_type": "control_decision"
+            },
+            {
+              "line_1based": 4,
+              "event_index_0based": 3,
+              "event_type": "agent_task_started"
+            },
+            {
+              "line_1based": 6,
+              "event_index_0based": 5,
+              "event_type": "agent_task_completed"
+            },
+            {
+              "line_1based": 7,
+              "event_index_0based": 6,
+              "event_type": "cycle_completed"
+            }
+          ],
+          "after_public_state_counts": {
+            "cycle": 1,
+            "remaining": 7,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 1,
+            "done": false
+          }
+        },
+        {
+          "cycle": 1,
+          "decision_event": {
+            "line_1based": 9,
+            "event_index_0based": 8
+          },
+          "before_public_state_counts": {
+            "cycle": 1,
+            "remaining": 7,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 1,
+            "done": false
+          },
+          "legal_actions": [
+            "NO_ASK",
+            "ASK:Jessica Lee",
+            "ASK:Priya Sharma",
+            "ASK:Zhang Wei",
+            "ASK:Huang Jie",
+            "ASK:David Wong",
+            "ASK:Emily Zhou",
+            "ASK:Mike Chen",
+            "ASK:Wang Fang"
+          ],
+          "actual_action": "NO_ASK",
+          "label_probabilities": {
+            "ASK:David Wong": 0.011531850411862277,
+            "ASK:Emily Zhou": 0.049784514376939676,
+            "ASK:Huang Jie": 0.016739681324189837,
+            "ASK:Jessica Lee": 0.04771348077977627,
+            "ASK:Mike Chen": 0.001716264743251136,
+            "ASK:Priya Sharma": 0.01620736583714944,
+            "ASK:Wang Fang": 0.013663910918179943,
+            "ASK:Zhang Wei": 0.019181416600583968,
+            "NO_ASK": 0.8234615150080674
+          },
+          "top_two": [
+            "NO_ASK",
+            "ASK:Emily Zhou"
+          ],
+          "probability_top_gap": 0.7736770006311278,
+          "inferred_log_score_top_gap": 2.8058128356933594,
+          "absolute_label_scores": null,
+          "absolute_scores_status": "not persisted per cycle",
+          "deterministic_action_probability": 1.0,
+          "native_API_action_probability": null,
+          "actual_tool_commands_parsed_from_recorded_outputs": [
+            {
+              "mode": "SELF",
+              "tool": "post_channel",
+              "arguments": {
+                "channel": "#engineering",
+                "content": "Prepared VectorBench order for Pine and saved the deliverable at /workspace/deliverable.json. Summary: 16 seats, USD 9,600 total, allocation revision AI-26-A, budget code P-01, release reference VB-PLAN-16."
+              }
+            }
+          ],
+          "original_event_references": [
+            {
+              "line_1based": 9,
+              "event_index_0based": 8,
+              "event_type": "control_decision"
+            },
+            {
+              "line_1based": 10,
+              "event_index_0based": 9,
+              "event_type": "agent_task_started"
+            },
+            {
+              "line_1based": 12,
+              "event_index_0based": 11,
+              "event_type": "agent_task_completed"
+            },
+            {
+              "line_1based": 13,
+              "event_index_0based": 12,
+              "event_type": "cycle_completed"
+            }
+          ],
+          "after_public_state_counts": {
+            "cycle": 2,
+            "remaining": 6,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 2,
+            "done": false
+          }
+        },
+        {
+          "cycle": 2,
+          "decision_event": {
+            "line_1based": 15,
+            "event_index_0based": 14
+          },
+          "before_public_state_counts": {
+            "cycle": 2,
+            "remaining": 6,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 2,
+            "done": false
+          },
+          "legal_actions": [
+            "NO_ASK",
+            "ASK:Jessica Lee",
+            "ASK:Priya Sharma",
+            "ASK:Zhang Wei",
+            "ASK:Huang Jie",
+            "ASK:David Wong",
+            "ASK:Emily Zhou",
+            "ASK:Mike Chen",
+            "ASK:Wang Fang"
+          ],
+          "actual_action": "NO_ASK",
+          "label_probabilities": {
+            "ASK:David Wong": 0.00772099069675322,
+            "ASK:Emily Zhou": 0.03454175389769342,
+            "ASK:Huang Jie": 0.01304524245025326,
+            "ASK:Jessica Lee": 0.03887050115512531,
+            "ASK:Mike Chen": 0.001185923705284058,
+            "ASK:Priya Sharma": 0.01068811391393163,
+            "ASK:Wang Fang": 0.007968847055907752,
+            "ASK:Zhang Wei": 0.013547788711780757,
+            "NO_ASK": 0.8724308384132706
+          },
+          "top_two": [
+            "NO_ASK",
+            "ASK:Jessica Lee"
+          ],
+          "probability_top_gap": 0.8335603372581453,
+          "inferred_log_score_top_gap": 3.1110477447509766,
+          "absolute_label_scores": null,
+          "absolute_scores_status": "not persisted per cycle",
+          "deterministic_action_probability": 1.0,
+          "native_API_action_probability": null,
+          "actual_tool_commands_parsed_from_recorded_outputs": [
+            {
+              "mode": "SELF",
+              "tool": "post_channel",
+              "arguments": {
+                "channel": "#engineering",
+                "content": "Prepared the VectorBench order for Pine and saved it at /workspace/deliverable.json. Summary: 16 seats, USD 9,600 total, allocation revision AI-26-A, budget code P-01, release reference VB-PLAN-16."
+              }
+            }
+          ],
+          "original_event_references": [
+            {
+              "line_1based": 15,
+              "event_index_0based": 14,
+              "event_type": "control_decision"
+            },
+            {
+              "line_1based": 16,
+              "event_index_0based": 15,
+              "event_type": "agent_task_started"
+            },
+            {
+              "line_1based": 18,
+              "event_index_0based": 17,
+              "event_type": "agent_task_completed"
+            },
+            {
+              "line_1based": 19,
+              "event_index_0based": 18,
+              "event_type": "cycle_completed"
+            }
+          ],
+          "after_public_state_counts": {
+            "cycle": 3,
+            "remaining": 5,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 3,
+            "done": false
+          }
+        },
+        {
+          "cycle": 3,
+          "decision_event": {
+            "line_1based": 21,
+            "event_index_0based": 20
+          },
+          "before_public_state_counts": {
+            "cycle": 3,
+            "remaining": 5,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 3,
+            "done": false
+          },
+          "legal_actions": [
+            "NO_ASK",
+            "ASK:Jessica Lee",
+            "ASK:Priya Sharma",
+            "ASK:Zhang Wei",
+            "ASK:Huang Jie",
+            "ASK:David Wong",
+            "ASK:Emily Zhou",
+            "ASK:Mike Chen",
+            "ASK:Wang Fang"
+          ],
+          "actual_action": "NO_ASK",
+          "label_probabilities": {
+            "ASK:David Wong": 0.007397010893080899,
+            "ASK:Emily Zhou": 0.03618560668787189,
+            "ASK:Huang Jie": 0.012861907439560435,
+            "ASK:Jessica Lee": 0.05651801802939075,
+            "ASK:Mike Chen": 0.0010292867172464178,
+            "ASK:Priya Sharma": 0.010538689385015164,
+            "ASK:Wang Fang": 0.009671582848300676,
+            "ASK:Zhang Wei": 0.01629766078932145,
+            "NO_ASK": 0.8495002372102124
+          },
+          "top_two": [
+            "NO_ASK",
+            "ASK:Jessica Lee"
+          ],
+          "probability_top_gap": 0.7929822191808217,
+          "inferred_log_score_top_gap": 2.7100887298583984,
+          "absolute_label_scores": null,
+          "absolute_scores_status": "not persisted per cycle",
+          "deterministic_action_probability": 1.0,
+          "native_API_action_probability": null,
+          "actual_tool_commands_parsed_from_recorded_outputs": [
+            {
+              "mode": "SELF",
+              "tool": "post_channel",
+              "arguments": {
+                "channel": "#engineering",
+                "content": "Prepared the VectorBench order for Pine and saved it at /workspace/deliverable.json. Summary: 16 seats, USD 9,600 total, allocation revision AI-26-A, budget code P-01, release reference VB-PLAN-16."
+              }
+            }
+          ],
+          "original_event_references": [
+            {
+              "line_1based": 21,
+              "event_index_0based": 20,
+              "event_type": "control_decision"
+            },
+            {
+              "line_1based": 22,
+              "event_index_0based": 21,
+              "event_type": "agent_task_started"
+            },
+            {
+              "line_1based": 24,
+              "event_index_0based": 23,
+              "event_type": "agent_task_completed"
+            },
+            {
+              "line_1based": 25,
+              "event_index_0based": 24,
+              "event_type": "cycle_completed"
+            }
+          ],
+          "after_public_state_counts": {
+            "cycle": 4,
+            "remaining": 4,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 4,
+            "done": false
+          }
+        },
+        {
+          "cycle": 4,
+          "decision_event": {
+            "line_1based": 27,
+            "event_index_0based": 26
+          },
+          "before_public_state_counts": {
+            "cycle": 4,
+            "remaining": 4,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 4,
+            "done": false
+          },
+          "legal_actions": [
+            "NO_ASK",
+            "ASK:Jessica Lee",
+            "ASK:Priya Sharma",
+            "ASK:Zhang Wei",
+            "ASK:Huang Jie",
+            "ASK:David Wong",
+            "ASK:Emily Zhou",
+            "ASK:Mike Chen",
+            "ASK:Wang Fang"
+          ],
+          "actual_action": "NO_ASK",
+          "label_probabilities": {
+            "ASK:David Wong": 0.008522963667739254,
+            "ASK:Emily Zhou": 0.046803312415865876,
+            "ASK:Huang Jie": 0.02466652926421726,
+            "ASK:Jessica Lee": 0.09275606287547998,
+            "ASK:Mike Chen": 0.0012152330095774183,
+            "ASK:Priya Sharma": 0.022444228008363317,
+            "ASK:Wang Fang": 0.013604339095406743,
+            "ASK:Zhang Wei": 0.02054121422995004,
+            "NO_ASK": 0.7694461174334
+          },
+          "top_two": [
+            "NO_ASK",
+            "ASK:Jessica Lee"
+          ],
+          "probability_top_gap": 0.67669005455792,
+          "inferred_log_score_top_gap": 2.1156978607177734,
+          "absolute_label_scores": null,
+          "absolute_scores_status": "not persisted per cycle",
+          "deterministic_action_probability": 1.0,
+          "native_API_action_probability": null,
+          "actual_tool_commands_parsed_from_recorded_outputs": [
+            {
+              "mode": "SELF",
+              "tool": "post_channel",
+              "arguments": {
+                "channel": "#engineering",
+                "content": "Prepared the VectorBench order for Pine and saved it at /workspace/deliverable.json. Summary: 16 seats, USD 9,600 total, allocation revision AI-26-A, budget code P-01, release reference VB-PLAN-16."
+              }
+            }
+          ],
+          "original_event_references": [
+            {
+              "line_1based": 27,
+              "event_index_0based": 26,
+              "event_type": "control_decision"
+            },
+            {
+              "line_1based": 28,
+              "event_index_0based": 27,
+              "event_type": "agent_task_started"
+            },
+            {
+              "line_1based": 30,
+              "event_index_0based": 29,
+              "event_type": "agent_task_completed"
+            },
+            {
+              "line_1based": 31,
+              "event_index_0based": 30,
+              "event_type": "cycle_completed"
+            }
+          ],
+          "after_public_state_counts": {
+            "cycle": 5,
+            "remaining": 3,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 5,
+            "done": false
+          }
+        },
+        {
+          "cycle": 5,
+          "decision_event": {
+            "line_1based": 33,
+            "event_index_0based": 32
+          },
+          "before_public_state_counts": {
+            "cycle": 5,
+            "remaining": 3,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 5,
+            "done": false
+          },
+          "legal_actions": [
+            "NO_ASK",
+            "ASK:Jessica Lee",
+            "ASK:Priya Sharma",
+            "ASK:Zhang Wei",
+            "ASK:Huang Jie",
+            "ASK:David Wong",
+            "ASK:Emily Zhou",
+            "ASK:Mike Chen",
+            "ASK:Wang Fang"
+          ],
+          "actual_action": "NO_ASK",
+          "label_probabilities": {
+            "ASK:David Wong": 0.00627982383294247,
+            "ASK:Emily Zhou": 0.032071587508067864,
+            "ASK:Huang Jie": 0.023260703103955206,
+            "ASK:Jessica Lee": 0.06187622639183891,
+            "ASK:Mike Chen": 0.0008063295514410486,
+            "ASK:Priya Sharma": 0.01559512551350285,
+            "ASK:Wang Fang": 0.009482440940171144,
+            "ASK:Zhang Wei": 0.017915470362041743,
+            "NO_ASK": 0.8327122927960386
+          },
+          "top_two": [
+            "NO_ASK",
+            "ASK:Jessica Lee"
+          ],
+          "probability_top_gap": 0.7708360664041998,
+          "inferred_log_score_top_gap": 2.5995521545410156,
+          "absolute_label_scores": null,
+          "absolute_scores_status": "not persisted per cycle",
+          "deterministic_action_probability": 1.0,
+          "native_API_action_probability": null,
+          "actual_tool_commands_parsed_from_recorded_outputs": [
+            {
+              "mode": "SELF",
+              "tool": "post_channel",
+              "arguments": {
+                "channel": "#engineering",
+                "content": "Prepared the VectorBench order for Pine and saved it at /workspace/deliverable.json. Summary: 16 seats, USD 9,600 total, allocation revision AI-26-A, budget code P-01, release reference VB-PLAN-16."
+              }
+            }
+          ],
+          "original_event_references": [
+            {
+              "line_1based": 33,
+              "event_index_0based": 32,
+              "event_type": "control_decision"
+            },
+            {
+              "line_1based": 34,
+              "event_index_0based": 33,
+              "event_type": "agent_task_started"
+            },
+            {
+              "line_1based": 36,
+              "event_index_0based": 35,
+              "event_type": "agent_task_completed"
+            },
+            {
+              "line_1based": 37,
+              "event_index_0based": 36,
+              "event_type": "cycle_completed"
+            }
+          ],
+          "after_public_state_counts": {
+            "cycle": 6,
+            "remaining": 2,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 6,
+            "done": false
+          }
+        },
+        {
+          "cycle": 6,
+          "decision_event": {
+            "line_1based": 39,
+            "event_index_0based": 38
+          },
+          "before_public_state_counts": {
+            "cycle": 6,
+            "remaining": 2,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 6,
+            "done": false
+          },
+          "legal_actions": [
+            "NO_ASK",
+            "ASK:Jessica Lee",
+            "ASK:Priya Sharma",
+            "ASK:Zhang Wei",
+            "ASK:Huang Jie",
+            "ASK:David Wong",
+            "ASK:Emily Zhou",
+            "ASK:Mike Chen",
+            "ASK:Wang Fang"
+          ],
+          "actual_action": "NO_ASK",
+          "label_probabilities": {
+            "ASK:David Wong": 0.005053673790306955,
+            "ASK:Emily Zhou": 0.026444430704960515,
+            "ASK:Huang Jie": 0.01692937444499653,
+            "ASK:Jessica Lee": 0.036974332364059066,
+            "ASK:Mike Chen": 0.0006717244446197572,
+            "ASK:Priya Sharma": 0.010730549217844915,
+            "ASK:Wang Fang": 0.008153381284695114,
+            "ASK:Zhang Wei": 0.013191930071492285,
+            "NO_ASK": 0.8818506036770247
+          },
+          "top_two": [
+            "NO_ASK",
+            "ASK:Jessica Lee"
+          ],
+          "probability_top_gap": 0.8448762713129656,
+          "inferred_log_score_top_gap": 3.1717987060546875,
+          "absolute_label_scores": null,
+          "absolute_scores_status": "not persisted per cycle",
+          "deterministic_action_probability": 1.0,
+          "native_API_action_probability": null,
+          "actual_tool_commands_parsed_from_recorded_outputs": [
+            {
+              "mode": "SELF",
+              "tool": "post_channel",
+              "arguments": {
+                "channel": "#engineering",
+                "content": "Prepared the VectorBench order for Pine and saved it at /workspace/deliverable.json. Summary: 16 seats, USD 9,600 total, allocation revision AI-26-A, budget code P-01, release reference VB-PLAN-16."
+              }
+            }
+          ],
+          "original_event_references": [
+            {
+              "line_1based": 39,
+              "event_index_0based": 38,
+              "event_type": "control_decision"
+            },
+            {
+              "line_1based": 40,
+              "event_index_0based": 39,
+              "event_type": "agent_task_started"
+            },
+            {
+              "line_1based": 42,
+              "event_index_0based": 41,
+              "event_type": "agent_task_completed"
+            },
+            {
+              "line_1based": 43,
+              "event_index_0based": 42,
+              "event_type": "cycle_completed"
+            }
+          ],
+          "after_public_state_counts": {
+            "cycle": 7,
+            "remaining": 1,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 7,
+            "done": false
+          }
+        },
+        {
+          "cycle": 7,
+          "decision_event": {
+            "line_1based": 45,
+            "event_index_0based": 44
+          },
+          "before_public_state_counts": {
+            "cycle": 7,
+            "remaining": 1,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 7,
+            "done": false
+          },
+          "legal_actions": [
+            "NO_ASK",
+            "ASK:Jessica Lee",
+            "ASK:Priya Sharma",
+            "ASK:Zhang Wei",
+            "ASK:Huang Jie",
+            "ASK:David Wong",
+            "ASK:Emily Zhou",
+            "ASK:Mike Chen",
+            "ASK:Wang Fang"
+          ],
+          "actual_action": "NO_ASK",
+          "label_probabilities": {
+            "ASK:David Wong": 0.004447684798017007,
+            "ASK:Emily Zhou": 0.025836909893011,
+            "ASK:Huang Jie": 0.019677703627613695,
+            "ASK:Jessica Lee": 0.037046672485940735,
+            "ASK:Mike Chen": 0.0005788338259160937,
+            "ASK:Priya Sharma": 0.009671780866288178,
+            "ASK:Wang Fang": 0.008092057206372561,
+            "ASK:Zhang Wei": 0.01158459556961801,
+            "NO_ASK": 0.8830637617272228
+          },
+          "top_two": [
+            "NO_ASK",
+            "ASK:Jessica Lee"
+          ],
+          "probability_top_gap": 0.846017089241282,
+          "inferred_log_score_top_gap": 3.1712188720703125,
+          "absolute_label_scores": null,
+          "absolute_scores_status": "not persisted per cycle",
+          "deterministic_action_probability": 1.0,
+          "native_API_action_probability": null,
+          "actual_tool_commands_parsed_from_recorded_outputs": [
+            {
+              "mode": "SELF",
+              "tool": "post_channel",
+              "arguments": {
+                "channel": "#engineering",
+                "content": "Prepared the VectorBench order for Pine and saved it at /workspace/deliverable.json. Summary: 16 seats, USD 9,600 total, allocation revision AI-26-A, budget code P-01, release reference VB-PLAN-16."
+              }
+            }
+          ],
+          "original_event_references": [
+            {
+              "line_1based": 45,
+              "event_index_0based": 44,
+              "event_type": "control_decision"
+            },
+            {
+              "line_1based": 46,
+              "event_index_0based": 45,
+              "event_type": "agent_task_started"
+            },
+            {
+              "line_1based": 48,
+              "event_index_0based": 47,
+              "event_type": "agent_task_completed"
+            },
+            {
+              "line_1based": 49,
+              "event_index_0based": 48,
+              "event_type": "cycle_completed"
+            }
+          ],
+          "after_public_state_counts": {
+            "cycle": 8,
+            "remaining": 0,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 8,
+            "done": true
+          }
+        }
+      ]
+    },
+    {
+      "task_id": "m-medium-research-purchase",
+      "arm": "native_mini",
+      "classification": "Must-help",
+      "public_instruction": "Prepare the twelve-month VectorBench order for project Pine as of 2026-11-02. Save /workspace/deliverable.json with seats, total_usd, allocation_revision, budget_code and release_reference. Post its path and a brief order summary in #engineering.",
+      "original_archive_id_NOT_uploaded_directory": "study4_teacher87_eval_v6_native_mini_gpu_gate_v4_frozen_flags",
+      "original_result_basename": "teacher87-dev16-m-medium-research-purchase-native_mini-r1.json",
+      "original_result_bytes_sha256": "0b80e4d48334f41c78bf08e372eb26cb8ee768b98faada1852f69c2c6c8955f4",
+      "original_trace_basename": "teacher87-dev16-m-medium-research-purchase-native_mini-r1.trace.jsonl",
+      "original_trace_bytes_sha256": "2652ab31e7fa2ac64726ea0c5eb6922aa9be0a3c273e98cfa993085e8eb2f545",
+      "original_trace_lines": 20,
+      "metrics": {
+        "business_pass": false,
+        "task_quality_T": 0.0,
+        "original_R1_utility_R": 0.0,
+        "contact_cost_C": 0.0,
+        "Nauth": 0,
+        "Nwaste": 0,
+        "all_public_task_requirements_done": true,
+        "workflow_business_success": false,
+        "full_quality_complete_task": false,
+        "semantic_review_status": "pending_separate_version"
+      },
+      "delivery": {
+        "artifact_present": true,
+        "required_channel_summary_recorded": true,
+        "task_submitted": true,
+        "all_public_task_requirements_done": true
+      },
+      "cycles": [
+        {
+          "cycle": 0,
+          "decision_event": {
+            "line_1based": 3,
+            "event_index_0based": 2
+          },
+          "before_public_state_counts": {
+            "cycle": 0,
+            "remaining": 8,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 0,
+            "done": false
+          },
+          "legal_actions": [
+            "NO_ASK",
+            "ASK:Jessica Lee",
+            "ASK:Priya Sharma",
+            "ASK:Zhang Wei",
+            "ASK:Huang Jie",
+            "ASK:David Wong",
+            "ASK:Emily Zhou",
+            "ASK:Mike Chen",
+            "ASK:Wang Fang"
+          ],
+          "actual_action": "NO_ASK",
+          "label_probabilities": null,
+          "top_two": null,
+          "probability_top_gap": null,
+          "inferred_log_score_top_gap": null,
+          "absolute_label_scores": null,
+          "absolute_scores_status": "not persisted per cycle",
+          "deterministic_action_probability": null,
+          "native_API_action_probability": null,
+          "actual_tool_commands_parsed_from_recorded_outputs": [
+            {
+              "mode": "NATIVE",
+              "tool": "write_file",
+              "arguments": {
+                "path": "/workspace/deliverable.json",
+                "content": "{\"seats\":16,\"total_usd\":9600,\"allocation_revision\":\"AI-26-A\",\"budget_code\":\"P-01\",\"release_reference\":\"VB-PLAN-16\"}"
+              }
+            }
+          ],
+          "original_event_references": [
+            {
+              "line_1based": 3,
+              "event_index_0based": 2,
+              "event_type": "native_agent_action"
+            },
+            {
+              "line_1based": 4,
+              "event_index_0based": 3,
+              "event_type": "agent_task_started"
+            },
+            {
+              "line_1based": 6,
+              "event_index_0based": 5,
+              "event_type": "agent_task_completed"
+            },
+            {
+              "line_1based": 7,
+              "event_index_0based": 6,
+              "event_type": "cycle_completed"
+            }
+          ],
+          "after_public_state_counts": {
+            "cycle": 1,
+            "remaining": 7,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 1,
+            "done": false
+          }
+        },
+        {
+          "cycle": 1,
+          "decision_event": {
+            "line_1based": 9,
+            "event_index_0based": 8
+          },
+          "before_public_state_counts": {
+            "cycle": 1,
+            "remaining": 7,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 1,
+            "done": false
+          },
+          "legal_actions": [
+            "NO_ASK",
+            "ASK:Jessica Lee",
+            "ASK:Priya Sharma",
+            "ASK:Zhang Wei",
+            "ASK:Huang Jie",
+            "ASK:David Wong",
+            "ASK:Emily Zhou",
+            "ASK:Mike Chen",
+            "ASK:Wang Fang"
+          ],
+          "actual_action": "NO_ASK",
+          "label_probabilities": null,
+          "top_two": null,
+          "probability_top_gap": null,
+          "inferred_log_score_top_gap": null,
+          "absolute_label_scores": null,
+          "absolute_scores_status": "not persisted per cycle",
+          "deterministic_action_probability": null,
+          "native_API_action_probability": null,
+          "actual_tool_commands_parsed_from_recorded_outputs": [
+            {
+              "mode": "NATIVE",
+              "tool": "post_channel",
+              "arguments": {
+                "channel": "#engineering",
+                "content": "Prepared VectorBench order for Pine: 16 seats, USD 9,600 total, allocation revision AI-26-A, budget code P-01, release reference VB-PLAN-16. Deliverable saved at /workspace/deliverable.json."
+              }
+            }
+          ],
+          "original_event_references": [
+            {
+              "line_1based": 9,
+              "event_index_0based": 8,
+              "event_type": "native_agent_action"
+            },
+            {
+              "line_1based": 10,
+              "event_index_0based": 9,
+              "event_type": "agent_task_started"
+            },
+            {
+              "line_1based": 12,
+              "event_index_0based": 11,
+              "event_type": "agent_task_completed"
+            },
+            {
+              "line_1based": 13,
+              "event_index_0based": 12,
+              "event_type": "cycle_completed"
+            }
+          ],
+          "after_public_state_counts": {
+            "cycle": 2,
+            "remaining": 6,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 2,
+            "done": false
+          }
+        },
+        {
+          "cycle": 2,
+          "decision_event": {
+            "line_1based": 15,
+            "event_index_0based": 14
+          },
+          "before_public_state_counts": {
+            "cycle": 2,
+            "remaining": 6,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 2,
+            "done": false
+          },
+          "legal_actions": [
+            "NO_ASK",
+            "ASK:Jessica Lee",
+            "ASK:Priya Sharma",
+            "ASK:Zhang Wei",
+            "ASK:Huang Jie",
+            "ASK:David Wong",
+            "ASK:Emily Zhou",
+            "ASK:Mike Chen",
+            "ASK:Wang Fang"
+          ],
+          "actual_action": "NO_ASK",
+          "label_probabilities": null,
+          "top_two": null,
+          "probability_top_gap": null,
+          "inferred_log_score_top_gap": null,
+          "absolute_label_scores": null,
+          "absolute_scores_status": "not persisted per cycle",
+          "deterministic_action_probability": null,
+          "native_API_action_probability": null,
+          "actual_tool_commands_parsed_from_recorded_outputs": [
+            {
+              "mode": "NATIVE",
+              "tool": "submit",
+              "arguments": {
+                "answer": "Completed: /workspace/deliverable.json saved with seats=16, total_usd=9600, allocation_revision=AI-26-A, budget_code=P-01, release_reference=VB-PLAN-16. Posted summary to #engineering."
+              }
+            }
+          ],
+          "original_event_references": [
+            {
+              "line_1based": 15,
+              "event_index_0based": 14,
+              "event_type": "native_agent_action"
+            },
+            {
+              "line_1based": 16,
+              "event_index_0based": 15,
+              "event_type": "agent_task_started"
+            },
+            {
+              "line_1based": 18,
+              "event_index_0based": 17,
+              "event_type": "agent_task_completed"
+            },
+            {
+              "line_1based": 19,
+              "event_index_0based": 18,
+              "event_type": "cycle_completed"
+            }
+          ],
+          "after_public_state_counts": {
+            "cycle": 3,
+            "remaining": 5,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 3,
+            "done": true
+          }
+        }
+      ]
+    },
+    {
+      "task_id": "o-low-demo-dataset",
+      "arm": "native_mini",
+      "classification": "Optional-help",
+      "public_instruction": "As of 2026-11-05: Prepare the sales demo setup for search relevance. Save /workspace/deliverable.json with dataset_id, document_count, refreshed_on. Post a short summary and the file path in #engineering.",
+      "original_archive_id_NOT_uploaded_directory": "study4_teacher87_eval_v6_native_mini_gpu_gate_v4_frozen_flags",
+      "original_result_basename": "teacher87-dev16-o-low-demo-dataset-native_mini-r1.json",
+      "original_result_bytes_sha256": "04e76416b2064583fbc702fe6b9cf648074c72ca3f8d7f0681827c07fd3dd924",
+      "original_trace_basename": "teacher87-dev16-o-low-demo-dataset-native_mini-r1.trace.jsonl",
+      "original_trace_bytes_sha256": "7e589ceceb74ecb58653b6cbc2b48bf3566b0a746f3e2c171d881fbf1ccdab3e",
+      "original_trace_lines": 20,
+      "metrics": {
+        "business_pass": true,
+        "task_quality_T": 0.5,
+        "original_R1_utility_R": 0.5,
+        "contact_cost_C": 0.0,
+        "Nauth": 0,
+        "Nwaste": 0,
+        "all_public_task_requirements_done": true,
+        "workflow_business_success": true,
+        "full_quality_complete_task": false,
+        "semantic_review_status": "pending_separate_version"
+      },
+      "delivery": {
+        "artifact_present": true,
+        "required_channel_summary_recorded": true,
+        "task_submitted": true,
+        "all_public_task_requirements_done": true
+      },
+      "cycles": [
+        {
+          "cycle": 0,
+          "decision_event": {
+            "line_1based": 3,
+            "event_index_0based": 2
+          },
+          "before_public_state_counts": {
+            "cycle": 0,
+            "remaining": 8,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 0,
+            "done": false
+          },
+          "legal_actions": [
+            "NO_ASK",
+            "ASK:Emily Zhou",
+            "ASK:Priya Sharma",
+            "ASK:Zhang Wei",
+            "ASK:David Wong",
+            "ASK:Mark Johnson",
+            "ASK:Jessica Lee",
+            "ASK:Sarah Johnson",
+            "ASK:Li Ming"
+          ],
+          "actual_action": "NO_ASK",
+          "label_probabilities": null,
+          "top_two": null,
+          "probability_top_gap": null,
+          "inferred_log_score_top_gap": null,
+          "absolute_label_scores": null,
+          "absolute_scores_status": "not persisted per cycle",
+          "deterministic_action_probability": null,
+          "native_API_action_probability": null,
+          "actual_tool_commands_parsed_from_recorded_outputs": [
+            {
+              "mode": "NATIVE",
+              "tool": "write_file",
+              "arguments": {
+                "path": "/workspace/deliverable.json",
+                "content": "{\"dataset_id\":\"DS-DEMO-2\",\"document_count\":420000,\"refreshed_on\":\"2025-12-01\"}"
+              }
+            }
+          ],
+          "original_event_references": [
+            {
+              "line_1based": 3,
+              "event_index_0based": 2,
+              "event_type": "native_agent_action"
+            },
+            {
+              "line_1based": 4,
+              "event_index_0based": 3,
+              "event_type": "agent_task_started"
+            },
+            {
+              "line_1based": 6,
+              "event_index_0based": 5,
+              "event_type": "agent_task_completed"
+            },
+            {
+              "line_1based": 7,
+              "event_index_0based": 6,
+              "event_type": "cycle_completed"
+            }
+          ],
+          "after_public_state_counts": {
+            "cycle": 1,
+            "remaining": 7,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 1,
+            "done": false
+          }
+        },
+        {
+          "cycle": 1,
+          "decision_event": {
+            "line_1based": 9,
+            "event_index_0based": 8
+          },
+          "before_public_state_counts": {
+            "cycle": 1,
+            "remaining": 7,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 1,
+            "done": false
+          },
+          "legal_actions": [
+            "NO_ASK",
+            "ASK:Emily Zhou",
+            "ASK:Priya Sharma",
+            "ASK:Zhang Wei",
+            "ASK:David Wong",
+            "ASK:Mark Johnson",
+            "ASK:Jessica Lee",
+            "ASK:Sarah Johnson",
+            "ASK:Li Ming"
+          ],
+          "actual_action": "NO_ASK",
+          "label_probabilities": null,
+          "top_two": null,
+          "probability_top_gap": null,
+          "inferred_log_score_top_gap": null,
+          "absolute_label_scores": null,
+          "absolute_scores_status": "not persisted per cycle",
+          "deterministic_action_probability": null,
+          "native_API_action_probability": null,
+          "actual_tool_commands_parsed_from_recorded_outputs": [
+            {
+              "mode": "NATIVE",
+              "tool": "post_channel",
+              "arguments": {
+                "channel": "#engineering",
+                "content": "Prepared sales demo search-relevance deliverable at /workspace/deliverable.json with dataset_id DS-DEMO-2, document_count 420000, refreshed_on 2025-12-01."
+              }
+            }
+          ],
+          "original_event_references": [
+            {
+              "line_1based": 9,
+              "event_index_0based": 8,
+              "event_type": "native_agent_action"
+            },
+            {
+              "line_1based": 10,
+              "event_index_0based": 9,
+              "event_type": "agent_task_started"
+            },
+            {
+              "line_1based": 12,
+              "event_index_0based": 11,
+              "event_type": "agent_task_completed"
+            },
+            {
+              "line_1based": 13,
+              "event_index_0based": 12,
+              "event_type": "cycle_completed"
+            }
+          ],
+          "after_public_state_counts": {
+            "cycle": 2,
+            "remaining": 6,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 2,
+            "done": false
+          }
+        },
+        {
+          "cycle": 2,
+          "decision_event": {
+            "line_1based": 15,
+            "event_index_0based": 14
+          },
+          "before_public_state_counts": {
+            "cycle": 2,
+            "remaining": 6,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 2,
+            "done": false
+          },
+          "legal_actions": [
+            "NO_ASK",
+            "ASK:Emily Zhou",
+            "ASK:Priya Sharma",
+            "ASK:Zhang Wei",
+            "ASK:David Wong",
+            "ASK:Mark Johnson",
+            "ASK:Jessica Lee",
+            "ASK:Sarah Johnson",
+            "ASK:Li Ming"
+          ],
+          "actual_action": "NO_ASK",
+          "label_probabilities": null,
+          "top_two": null,
+          "probability_top_gap": null,
+          "inferred_log_score_top_gap": null,
+          "absolute_label_scores": null,
+          "absolute_scores_status": "not persisted per cycle",
+          "deterministic_action_probability": null,
+          "native_API_action_probability": null,
+          "actual_tool_commands_parsed_from_recorded_outputs": [
+            {
+              "mode": "NATIVE",
+              "tool": "submit",
+              "arguments": {
+                "answer": "Done. Deliverable saved at /workspace/deliverable.json and summary posted to #engineering."
+              }
+            }
+          ],
+          "original_event_references": [
+            {
+              "line_1based": 15,
+              "event_index_0based": 14,
+              "event_type": "native_agent_action"
+            },
+            {
+              "line_1based": 16,
+              "event_index_0based": 15,
+              "event_type": "agent_task_started"
+            },
+            {
+              "line_1based": 18,
+              "event_index_0based": 17,
+              "event_type": "agent_task_completed"
+            },
+            {
+              "line_1based": 19,
+              "event_index_0based": 18,
+              "event_type": "cycle_completed"
+            }
+          ],
+          "after_public_state_counts": {
+            "cycle": 3,
+            "remaining": 5,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 3,
+            "done": true
+          }
+        }
+      ]
+    },
+    {
+      "task_id": "o-low-demo-dataset",
+      "arm": "sft87",
+      "classification": "Optional-help",
+      "public_instruction": "As of 2026-11-05: Prepare the sales demo setup for search relevance. Save /workspace/deliverable.json with dataset_id, document_count, refreshed_on. Post a short summary and the file path in #engineering.",
+      "original_archive_id_NOT_uploaded_directory": "study4_teacher87_eval_v6_native_mini_gpu_gate_v4_frozen_flags",
+      "original_result_basename": "teacher87-dev16-o-low-demo-dataset-sft87-r1.json",
+      "original_result_bytes_sha256": "776f7f0aadb738c62cd0f16833f4625f5d192f68105433618774e7e4c29e7367",
+      "original_trace_basename": "teacher87-dev16-o-low-demo-dataset-sft87-r1.trace.jsonl",
+      "original_trace_bytes_sha256": "71ac6e02842e41cee6b523ee689ef8e214220ab15a24753557d7bc83ba752511",
+      "original_trace_lines": 50,
+      "metrics": {
+        "business_pass": true,
+        "task_quality_T": 0.5,
+        "original_R1_utility_R": 0.5,
+        "contact_cost_C": 0.0,
+        "Nauth": 0,
+        "Nwaste": 0,
+        "all_public_task_requirements_done": false,
+        "workflow_business_success": false,
+        "full_quality_complete_task": false,
+        "semantic_review_status": "pending_separate_version"
+      },
+      "delivery": {
+        "artifact_present": true,
+        "required_channel_summary_recorded": true,
+        "task_submitted": false,
+        "all_public_task_requirements_done": false
+      },
+      "cycles": [
+        {
+          "cycle": 0,
+          "decision_event": {
+            "line_1based": 3,
+            "event_index_0based": 2
+          },
+          "before_public_state_counts": {
+            "cycle": 0,
+            "remaining": 8,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 0,
+            "done": false
+          },
+          "legal_actions": [
+            "NO_ASK",
+            "ASK:Emily Zhou",
+            "ASK:Priya Sharma",
+            "ASK:Zhang Wei",
+            "ASK:David Wong",
+            "ASK:Mark Johnson",
+            "ASK:Jessica Lee",
+            "ASK:Sarah Johnson",
+            "ASK:Li Ming"
+          ],
+          "actual_action": "NO_ASK",
+          "label_probabilities": {
+            "ASK:David Wong": 0.009486617196222088,
+            "ASK:Emily Zhou": 0.18413233628404801,
+            "ASK:Jessica Lee": 0.013959499464482758,
+            "ASK:Li Ming": 0.015052619227778168,
+            "ASK:Mark Johnson": 0.0061372291464273825,
+            "ASK:Priya Sharma": 0.03137396815854021,
+            "ASK:Sarah Johnson": 0.01710040480854818,
+            "ASK:Zhang Wei": 0.008126383628711965,
+            "NO_ASK": 0.7146309420852412
+          },
+          "top_two": [
+            "NO_ASK",
+            "ASK:Emily Zhou"
+          ],
+          "probability_top_gap": 0.5304986058011932,
+          "inferred_log_score_top_gap": 1.3561115264892576,
+          "absolute_label_scores": null,
+          "absolute_scores_status": "not persisted per cycle",
+          "deterministic_action_probability": 1.0,
+          "native_API_action_probability": null,
+          "actual_tool_commands_parsed_from_recorded_outputs": [
+            {
+              "mode": "SELF",
+              "tool": "write_file",
+              "arguments": {
+                "path": "/workspace/deliverable.json",
+                "content": "{\"dataset_id\":\"DS-DEMO-2\",\"document_count\":420000,\"refreshed_on\":\"2025-12-01\"}"
+              }
+            }
+          ],
+          "original_event_references": [
+            {
+              "line_1based": 3,
+              "event_index_0based": 2,
+              "event_type": "control_decision"
+            },
+            {
+              "line_1based": 4,
+              "event_index_0based": 3,
+              "event_type": "agent_task_started"
+            },
+            {
+              "line_1based": 6,
+              "event_index_0based": 5,
+              "event_type": "agent_task_completed"
+            },
+            {
+              "line_1based": 7,
+              "event_index_0based": 6,
+              "event_type": "cycle_completed"
+            }
+          ],
+          "after_public_state_counts": {
+            "cycle": 1,
+            "remaining": 7,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 1,
+            "done": false
+          }
+        },
+        {
+          "cycle": 1,
+          "decision_event": {
+            "line_1based": 9,
+            "event_index_0based": 8
+          },
+          "before_public_state_counts": {
+            "cycle": 1,
+            "remaining": 7,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 1,
+            "done": false
+          },
+          "legal_actions": [
+            "NO_ASK",
+            "ASK:Emily Zhou",
+            "ASK:Priya Sharma",
+            "ASK:Zhang Wei",
+            "ASK:David Wong",
+            "ASK:Mark Johnson",
+            "ASK:Jessica Lee",
+            "ASK:Sarah Johnson",
+            "ASK:Li Ming"
+          ],
+          "actual_action": "NO_ASK",
+          "label_probabilities": {
+            "ASK:David Wong": 0.008496395461778149,
+            "ASK:Emily Zhou": 0.13926701095104416,
+            "ASK:Jessica Lee": 0.012357019731217826,
+            "ASK:Li Ming": 0.007072190983444626,
+            "ASK:Mark Johnson": 0.004925005119267961,
+            "ASK:Priya Sharma": 0.02188562400748354,
+            "ASK:Sarah Johnson": 0.010426275692317294,
+            "ASK:Zhang Wei": 0.00680686597619875,
+            "NO_ASK": 0.7887636120772477
+          },
+          "top_two": [
+            "NO_ASK",
+            "ASK:Emily Zhou"
+          ],
+          "probability_top_gap": 0.6494966011262036,
+          "inferred_log_score_top_gap": 1.7340736389160158,
+          "absolute_label_scores": null,
+          "absolute_scores_status": "not persisted per cycle",
+          "deterministic_action_probability": 1.0,
+          "native_API_action_probability": null,
+          "actual_tool_commands_parsed_from_recorded_outputs": [
+            {
+              "mode": "SELF",
+              "tool": "post_channel",
+              "arguments": {
+                "channel": "#engineering",
+                "content": "Saved deliverable for sales demo setup: /workspace/deliverable.json"
+              }
+            }
+          ],
+          "original_event_references": [
+            {
+              "line_1based": 9,
+              "event_index_0based": 8,
+              "event_type": "control_decision"
+            },
+            {
+              "line_1based": 10,
+              "event_index_0based": 9,
+              "event_type": "agent_task_started"
+            },
+            {
+              "line_1based": 12,
+              "event_index_0based": 11,
+              "event_type": "agent_task_completed"
+            },
+            {
+              "line_1based": 13,
+              "event_index_0based": 12,
+              "event_type": "cycle_completed"
+            }
+          ],
+          "after_public_state_counts": {
+            "cycle": 2,
+            "remaining": 6,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 2,
+            "done": false
+          }
+        },
+        {
+          "cycle": 2,
+          "decision_event": {
+            "line_1based": 15,
+            "event_index_0based": 14
+          },
+          "before_public_state_counts": {
+            "cycle": 2,
+            "remaining": 6,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 2,
+            "done": false
+          },
+          "legal_actions": [
+            "NO_ASK",
+            "ASK:Emily Zhou",
+            "ASK:Priya Sharma",
+            "ASK:Zhang Wei",
+            "ASK:David Wong",
+            "ASK:Mark Johnson",
+            "ASK:Jessica Lee",
+            "ASK:Sarah Johnson",
+            "ASK:Li Ming"
+          ],
+          "actual_action": "NO_ASK",
+          "label_probabilities": {
+            "ASK:David Wong": 0.006597488126184984,
+            "ASK:Emily Zhou": 0.08904265446554326,
+            "ASK:Jessica Lee": 0.00746887848559386,
+            "ASK:Li Ming": 0.005982372385382505,
+            "ASK:Mark Johnson": 0.0036783430085845286,
+            "ASK:Priya Sharma": 0.011625734411478347,
+            "ASK:Sarah Johnson": 0.006723186370085618,
+            "ASK:Zhang Wei": 0.004924298451187793,
+            "NO_ASK": 0.8639570442959593
+          },
+          "top_two": [
+            "NO_ASK",
+            "ASK:Emily Zhou"
+          ],
+          "probability_top_gap": 0.774914389830416,
+          "inferred_log_score_top_gap": 2.2724075317382812,
+          "absolute_label_scores": null,
+          "absolute_scores_status": "not persisted per cycle",
+          "deterministic_action_probability": 1.0,
+          "native_API_action_probability": null,
+          "actual_tool_commands_parsed_from_recorded_outputs": [
+            {
+              "mode": "SELF",
+              "tool": "post_channel",
+              "arguments": {
+                "channel": "#engineering",
+                "content": "Saved deliverable for sales demo setup: /workspace/deliverable.json"
+              }
+            }
+          ],
+          "original_event_references": [
+            {
+              "line_1based": 15,
+              "event_index_0based": 14,
+              "event_type": "control_decision"
+            },
+            {
+              "line_1based": 16,
+              "event_index_0based": 15,
+              "event_type": "agent_task_started"
+            },
+            {
+              "line_1based": 18,
+              "event_index_0based": 17,
+              "event_type": "agent_task_completed"
+            },
+            {
+              "line_1based": 19,
+              "event_index_0based": 18,
+              "event_type": "cycle_completed"
+            }
+          ],
+          "after_public_state_counts": {
+            "cycle": 3,
+            "remaining": 5,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 3,
+            "done": false
+          }
+        },
+        {
+          "cycle": 3,
+          "decision_event": {
+            "line_1based": 21,
+            "event_index_0based": 20
+          },
+          "before_public_state_counts": {
+            "cycle": 3,
+            "remaining": 5,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 3,
+            "done": false
+          },
+          "legal_actions": [
+            "NO_ASK",
+            "ASK:Emily Zhou",
+            "ASK:Priya Sharma",
+            "ASK:Zhang Wei",
+            "ASK:David Wong",
+            "ASK:Mark Johnson",
+            "ASK:Jessica Lee",
+            "ASK:Sarah Johnson",
+            "ASK:Li Ming"
+          ],
+          "actual_action": "NO_ASK",
+          "label_probabilities": {
+            "ASK:David Wong": 0.003935652198854597,
+            "ASK:Emily Zhou": 0.057611480356495354,
+            "ASK:Jessica Lee": 0.003865150684372148,
+            "ASK:Li Ming": 0.0035249699609734074,
+            "ASK:Mark Johnson": 0.0022993265691151547,
+            "ASK:Priya Sharma": 0.0059495927150270125,
+            "ASK:Sarah Johnson": 0.0043405283280841065,
+            "ASK:Zhang Wei": 0.0026445256107538342,
+            "NO_ASK": 0.9158287735763244
+          },
+          "top_two": [
+            "NO_ASK",
+            "ASK:Emily Zhou"
+          ],
+          "probability_top_gap": 0.8582172932198291,
+          "inferred_log_score_top_gap": 2.7661075592041016,
+          "absolute_label_scores": null,
+          "absolute_scores_status": "not persisted per cycle",
+          "deterministic_action_probability": 1.0,
+          "native_API_action_probability": null,
+          "actual_tool_commands_parsed_from_recorded_outputs": [
+            {
+              "mode": "SELF",
+              "tool": "post_channel",
+              "arguments": {
+                "channel": "#engineering",
+                "content": "Saved deliverable for sales demo setup: /workspace/deliverable.json"
+              }
+            }
+          ],
+          "original_event_references": [
+            {
+              "line_1based": 21,
+              "event_index_0based": 20,
+              "event_type": "control_decision"
+            },
+            {
+              "line_1based": 22,
+              "event_index_0based": 21,
+              "event_type": "agent_task_started"
+            },
+            {
+              "line_1based": 24,
+              "event_index_0based": 23,
+              "event_type": "agent_task_completed"
+            },
+            {
+              "line_1based": 25,
+              "event_index_0based": 24,
+              "event_type": "cycle_completed"
+            }
+          ],
+          "after_public_state_counts": {
+            "cycle": 4,
+            "remaining": 4,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 4,
+            "done": false
+          }
+        },
+        {
+          "cycle": 4,
+          "decision_event": {
+            "line_1based": 27,
+            "event_index_0based": 26
+          },
+          "before_public_state_counts": {
+            "cycle": 4,
+            "remaining": 4,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 4,
+            "done": false
+          },
+          "legal_actions": [
+            "NO_ASK",
+            "ASK:Emily Zhou",
+            "ASK:Priya Sharma",
+            "ASK:Zhang Wei",
+            "ASK:David Wong",
+            "ASK:Mark Johnson",
+            "ASK:Jessica Lee",
+            "ASK:Sarah Johnson",
+            "ASK:Li Ming"
+          ],
+          "actual_action": "NO_ASK",
+          "label_probabilities": {
+            "ASK:David Wong": 0.005834036841888936,
+            "ASK:Emily Zhou": 0.09792248356974795,
+            "ASK:Jessica Lee": 0.007333911528683181,
+            "ASK:Li Ming": 0.0043289684846705995,
+            "ASK:Mark Johnson": 0.0028163171963081412,
+            "ASK:Priya Sharma": 0.008715749592779749,
+            "ASK:Sarah Johnson": 0.007008914041970309,
+            "ASK:Zhang Wei": 0.0032416230514264142,
+            "NO_ASK": 0.8627979956925245
+          },
+          "top_two": [
+            "NO_ASK",
+            "ASK:Emily Zhou"
+          ],
+          "probability_top_gap": 0.7648755121227765,
+          "inferred_log_score_top_gap": 2.176004409790039,
+          "absolute_label_scores": null,
+          "absolute_scores_status": "not persisted per cycle",
+          "deterministic_action_probability": 1.0,
+          "native_API_action_probability": null,
+          "actual_tool_commands_parsed_from_recorded_outputs": [
+            {
+              "mode": "SELF",
+              "tool": "post_channel",
+              "arguments": {
+                "channel": "#engineering",
+                "content": "Saved deliverable for sales demo setup: /workspace/deliverable.json"
+              }
+            }
+          ],
+          "original_event_references": [
+            {
+              "line_1based": 27,
+              "event_index_0based": 26,
+              "event_type": "control_decision"
+            },
+            {
+              "line_1based": 28,
+              "event_index_0based": 27,
+              "event_type": "agent_task_started"
+            },
+            {
+              "line_1based": 30,
+              "event_index_0based": 29,
+              "event_type": "agent_task_completed"
+            },
+            {
+              "line_1based": 31,
+              "event_index_0based": 30,
+              "event_type": "cycle_completed"
+            }
+          ],
+          "after_public_state_counts": {
+            "cycle": 5,
+            "remaining": 3,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 5,
+            "done": false
+          }
+        },
+        {
+          "cycle": 5,
+          "decision_event": {
+            "line_1based": 33,
+            "event_index_0based": 32
+          },
+          "before_public_state_counts": {
+            "cycle": 5,
+            "remaining": 3,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 5,
+            "done": false
+          },
+          "legal_actions": [
+            "NO_ASK",
+            "ASK:Emily Zhou",
+            "ASK:Priya Sharma",
+            "ASK:Zhang Wei",
+            "ASK:David Wong",
+            "ASK:Mark Johnson",
+            "ASK:Jessica Lee",
+            "ASK:Sarah Johnson",
+            "ASK:Li Ming"
+          ],
+          "actual_action": "NO_ASK",
+          "label_probabilities": {
+            "ASK:David Wong": 0.0063592750266647175,
+            "ASK:Emily Zhou": 0.1183069875168013,
+            "ASK:Jessica Lee": 0.009986413236303865,
+            "ASK:Li Ming": 0.005248946970728276,
+            "ASK:Mark Johnson": 0.003633683216523416,
+            "ASK:Priya Sharma": 0.009531483343583006,
+            "ASK:Sarah Johnson": 0.007661026591079147,
+            "ASK:Zhang Wei": 0.004418395988959002,
+            "NO_ASK": 0.8348537881093572
+          },
+          "top_two": [
+            "NO_ASK",
+            "ASK:Emily Zhou"
+          ],
+          "probability_top_gap": 0.7165468005925559,
+          "inferred_log_score_top_gap": 1.9539737701416016,
+          "absolute_label_scores": null,
+          "absolute_scores_status": "not persisted per cycle",
+          "deterministic_action_probability": 1.0,
+          "native_API_action_probability": null,
+          "actual_tool_commands_parsed_from_recorded_outputs": [
+            {
+              "mode": "SELF",
+              "tool": "post_channel",
+              "arguments": {
+                "channel": "#engineering",
+                "content": "Saved deliverable for sales demo setup: /workspace/deliverable.json"
+              }
+            }
+          ],
+          "original_event_references": [
+            {
+              "line_1based": 33,
+              "event_index_0based": 32,
+              "event_type": "control_decision"
+            },
+            {
+              "line_1based": 34,
+              "event_index_0based": 33,
+              "event_type": "agent_task_started"
+            },
+            {
+              "line_1based": 36,
+              "event_index_0based": 35,
+              "event_type": "agent_task_completed"
+            },
+            {
+              "line_1based": 37,
+              "event_index_0based": 36,
+              "event_type": "cycle_completed"
+            }
+          ],
+          "after_public_state_counts": {
+            "cycle": 6,
+            "remaining": 2,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 6,
+            "done": false
+          }
+        },
+        {
+          "cycle": 6,
+          "decision_event": {
+            "line_1based": 39,
+            "event_index_0based": 38
+          },
+          "before_public_state_counts": {
+            "cycle": 6,
+            "remaining": 2,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 6,
+            "done": false
+          },
+          "legal_actions": [
+            "NO_ASK",
+            "ASK:Emily Zhou",
+            "ASK:Priya Sharma",
+            "ASK:Zhang Wei",
+            "ASK:David Wong",
+            "ASK:Mark Johnson",
+            "ASK:Jessica Lee",
+            "ASK:Sarah Johnson",
+            "ASK:Li Ming"
+          ],
+          "actual_action": "NO_ASK",
+          "label_probabilities": {
+            "ASK:David Wong": 0.00600476864867738,
+            "ASK:Emily Zhou": 0.12541184442658462,
+            "ASK:Jessica Lee": 0.011268480531103195,
+            "ASK:Li Ming": 0.0058993731743636766,
+            "ASK:Mark Johnson": 0.0035716253453486955,
+            "ASK:Priya Sharma": 0.010419653265255275,
+            "ASK:Sarah Johnson": 0.007359863045222805,
+            "ASK:Zhang Wei": 0.0044857642318805015,
+            "NO_ASK": 0.8255786273315638
+          },
+          "top_two": [
+            "NO_ASK",
+            "ASK:Emily Zhou"
+          ],
+          "probability_top_gap": 0.7001667829049792,
+          "inferred_log_score_top_gap": 1.884481430053711,
+          "absolute_label_scores": null,
+          "absolute_scores_status": "not persisted per cycle",
+          "deterministic_action_probability": 1.0,
+          "native_API_action_probability": null,
+          "actual_tool_commands_parsed_from_recorded_outputs": [
+            {
+              "mode": "SELF",
+              "tool": "post_channel",
+              "arguments": {
+                "channel": "#engineering",
+                "content": "Saved deliverable for sales demo setup: /workspace/deliverable.json"
+              }
+            }
+          ],
+          "original_event_references": [
+            {
+              "line_1based": 39,
+              "event_index_0based": 38,
+              "event_type": "control_decision"
+            },
+            {
+              "line_1based": 40,
+              "event_index_0based": 39,
+              "event_type": "agent_task_started"
+            },
+            {
+              "line_1based": 42,
+              "event_index_0based": 41,
+              "event_type": "agent_task_completed"
+            },
+            {
+              "line_1based": 43,
+              "event_index_0based": 42,
+              "event_type": "cycle_completed"
+            }
+          ],
+          "after_public_state_counts": {
+            "cycle": 7,
+            "remaining": 1,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 7,
+            "done": false
+          }
+        },
+        {
+          "cycle": 7,
+          "decision_event": {
+            "line_1based": 45,
+            "event_index_0based": 44
+          },
+          "before_public_state_counts": {
+            "cycle": 7,
+            "remaining": 1,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 7,
+            "done": false
+          },
+          "legal_actions": [
+            "NO_ASK",
+            "ASK:Emily Zhou",
+            "ASK:Priya Sharma",
+            "ASK:Zhang Wei",
+            "ASK:David Wong",
+            "ASK:Mark Johnson",
+            "ASK:Jessica Lee",
+            "ASK:Sarah Johnson",
+            "ASK:Li Ming"
+          ],
+          "actual_action": "NO_ASK",
+          "label_probabilities": {
+            "ASK:David Wong": 0.006410852469867505,
+            "ASK:Emily Zhou": 0.12115001556106163,
+            "ASK:Jessica Lee": 0.009123971269654585,
+            "ASK:Li Ming": 0.0057869081385476815,
+            "ASK:Mark Johnson": 0.0035977539845957153,
+            "ASK:Priya Sharma": 0.012695510182241103,
+            "ASK:Sarah Johnson": 0.0080251522987558,
+            "ASK:Zhang Wei": 0.006344447598882687,
+            "NO_ASK": 0.8268653884963933
+          },
+          "top_two": [
+            "NO_ASK",
+            "ASK:Emily Zhou"
+          ],
+          "probability_top_gap": 0.7057153729353317,
+          "inferred_log_score_top_gap": 1.920612335205078,
+          "absolute_label_scores": null,
+          "absolute_scores_status": "not persisted per cycle",
+          "deterministic_action_probability": 1.0,
+          "native_API_action_probability": null,
+          "actual_tool_commands_parsed_from_recorded_outputs": [
+            {
+              "mode": "SELF",
+              "tool": "post_channel",
+              "arguments": {
+                "channel": "#engineering",
+                "content": "Saved deliverable for sales demo setup: /workspace/deliverable.json"
+              }
+            }
+          ],
+          "original_event_references": [
+            {
+              "line_1based": 45,
+              "event_index_0based": 44,
+              "event_type": "control_decision"
+            },
+            {
+              "line_1based": 46,
+              "event_index_0based": 45,
+              "event_type": "agent_task_started"
+            },
+            {
+              "line_1based": 48,
+              "event_index_0based": 47,
+              "event_type": "agent_task_completed"
+            },
+            {
+              "line_1based": 49,
+              "event_index_0based": 48,
+              "event_type": "cycle_completed"
+            }
+          ],
+          "after_public_state_counts": {
+            "cycle": 8,
+            "remaining": 0,
+            "phase": "decision",
+            "contact_cost": 0.0,
+            "history_length": 8,
+            "done": true
+          }
+        }
+      ]
+    }
+  ]
+}

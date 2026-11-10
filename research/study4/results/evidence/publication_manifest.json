@@ -1,0 +1,60 @@
+{
+  "schema": "study4-documentation-publication-v1",
+  "as_of": "2026-11-10",
+  "scope": "Ten reviewed documentation/derived-evidence files only; this manifest does not hash itself.",
+  "published_file_hash_encoding": "UTF8 LF bytes stored by Git; Windows CRLF checkout bytes may differ. Original source-artifact hashes in summary.json retain original byte semantics.",
+  "original_hashes_and_excerpt_hashes_are_separate": true,
+  "new_API_calls": 0,
+  "new_GPU_inferences": 0,
+  "new_training_updates": 0,
+  "validation": {
+    "relative_links_checked": 43,
+    "paired_tasks": 16,
+    "original_file_hashes_checked": 64,
+    "selected_trace_arms": 8,
+    "selected_cycles": 44,
+    "selected_actual_tool_outputs_checked_against_ledger": 45,
+    "original_event_references": 179,
+    "ledger_calls_settled_unchanged": 181,
+    "original_checkpoint_and_ledger_sha_unchanged": true,
+    "sensitive_strings_and_upload_scope_reviewed": true
+  },
+  "files": {
+    "research/study4/README.md": {
+      "bytes": 4066,
+      "sha256": "a60a797a169bfe7d8b90ea4f73868f0432a8b1ed68f7fc0573e0ab2da6e102bd"
+    },
+    "research/study4/results/TRAINING_PROCESS_ZH.md": {
+      "bytes": 8579,
+      "sha256": "c21dab412bf1a40572415e804ba3969e188ae76880014c3375f6f2b28d854c41"
+    },
+    "research/study4/results/TEACHER87_NATIVE_MINI_DEV16_RESULTS_ZH.md": {
+      "bytes": 7739,
+      "sha256": "e6132c976620f0b8926fdee6243ce3c6160401a312282adb95f591d1a3b80f49"
+    },
+    "research/study4/results/DIAGNOSIS_ZH.md": {
+      "bytes": 8354,
+      "sha256": "1f45f0341ce3742ed994231bcf73cda70da2306dbe0e092f257b78cbcc535ec5"
+    },
+    "research/study4/results/NEXT_STEPS_ZH.md": {
+      "bytes": 7937,
+      "sha256": "018f05887e411462dcc272e3714c8cec87ec38a74987826ad81f74752288847a"
+    },
+    "research/study4/results/EVIDENCE_ZH.md": {
+      "bytes": 4382,
+      "sha256": "bb1597fb586891600eeda265a934d554711d2bdc542c00b1b31e47e3fa2aa289"
+    },
+    "research/study4/results/TRACE_CASES_ZH.md": {
+      "bytes": 33163,
+      "sha256": "feaae354cce685d27066a4e217a65b54473c9561bdccc8299d5f3d6bf09af3b4"
+    },
+    "research/study4/results/evidence/summary.json": {
+      "bytes": 67942,
+      "sha256": "53148ca61afdeacd8d333ec9213c7fe79fee7ee7ffe2be9b725f9de3b110c1b7"
+    },
+    "research/study4/results/evidence/trace_cases.json": {
+      "bytes": 133648,
+      "sha256": "d1c27c8219fac06a114a4ae3cc2519997f51fef581d558d7a6211d564923e6ec"
+    }
+  }
+}

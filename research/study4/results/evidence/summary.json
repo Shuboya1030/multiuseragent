@@ -1,0 +1,2019 @@
+{
+  "schema": "study4-public-research-summary-v1",
+  "as_of": "2026-11-10",
+  "scope": "Completed GPT-only imitation, native-mini paired development evaluation and offline diagnosis; not independent test, RL, or full reproducible release.",
+  "training": {
+    "base": {
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "model_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+      "tokenizer_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+      "lora_rank": 8,
+      "lora_alpha": 8,
+      "target_modules": [
+        "q_proj",
+        "v_proj"
+      ],
+      "dtype": "float32",
+      "gradient_checkpointing": true,
+      "suffix_only_logits": true,
+      "scoring": "sum-label-plus-eos-logprob-v1",
+      "max_context": 4352,
+      "public_objective": {
+        "quality_full": 1.0,
+        "quality_optional_public_baseline": 0.5,
+        "lambda_weighted_contact_cost": 0.15,
+        "formula": "quality - lambda_weighted_contact_cost * publicly_priced_contacts",
+        "safety": "No unassigned grant; safety and semantic uncertainty are separate constraints."
+      }
+    },
+    "completed_updates": 87,
+    "completed_epochs": 3,
+    "teacher": "GPT-only actual behavior, not oracle",
+    "full_trajectories": 59,
+    "historical_partial_trajectories": 1,
+    "decisions": 292,
+    "full_trajectory_decisions": 291,
+    "partial_decisions": 1,
+    "split_counts": {
+      "train": {
+        "n": 230,
+        "actions": {
+          "NO_ASK": 192,
+          "ASK:Emma Lewis": 4,
+          "ASK:Mark Johnson": 2,
+          "ASK:Emily Zhou": 2,
+          "ASK:Sarah Johnson": 4,
+          "ASK:Zhang Wei": 1,
+          "ASK:Liu Qiang": 3,
+          "ASK:Li Ming": 2,
+          "ASK:Chen Xinyi": 5,
+          "ASK:Alex Turner": 2,
+          "ASK:Huang Jie": 7,
+          "ASK:David Wong": 1,
+          "ASK:Wang Fang": 1,
+          "ASK:Sophia Rodriguez": 2,
+          "ASK:Priya Sharma": 1,
+          "ASK:Jessica Lee": 1
+        },
+        "NO_ASK_fraction": 0.8347826086956521,
+        "by_class": {
+          "Must-help": {
+            "decisions": 107,
+            "tasks": 20,
+            "counts": {
+              "NO_ASK": 81,
+              "ASK": 26
+            }
+          },
+          "Optional-help": {
+            "decisions": 123,
+            "tasks": 24,
+            "counts": {
+              "NO_ASK": 111,
+              "ASK": 12
+            }
+          }
+        },
+        "by_cycle": {
+          "0": {
+            "NO_ASK": 17,
+            "ASK": 27
+          },
+          "1": {
+            "NO_ASK": 37,
+            "ASK": 6
+          },
+          "2": {
+            "NO_ASK": 41,
+            "ASK": 2
+          },
+          "3": {
+            "NO_ASK": 28,
+            "ASK": 1
+          },
+          "4": {
+            "NO_ASK": 20,
+            "ASK": 1
+          },
+          "5": {
+            "NO_ASK": 18,
+            "ASK": 1
+          },
+          "6": {
+            "NO_ASK": 17
+          },
+          "7": {
+            "NO_ASK": 14
+          }
+        }
+      },
+      "dev": {
+        "n": 62,
+        "actions": {
+          "ASK:Mark Johnson": 3,
+          "NO_ASK": 51,
+          "ASK:Wang Fang": 2,
+          "ASK:David Wong": 1,
+          "ASK:Chen Xinyi": 3,
+          "ASK:Priya Sharma": 1,
+          "ASK:Li Ming": 1
+        },
+        "NO_ASK_fraction": 0.8225806451612904,
+        "by_class": {
+          "Must-help": {
+            "decisions": 34,
+            "tasks": 10,
+            "counts": {
+              "ASK": 9,
+              "NO_ASK": 25
+            }
+          },
+          "Optional-help": {
+            "decisions": 28,
+            "tasks": 6,
+            "counts": {
+              "NO_ASK": 26,
+              "ASK": 2
+            }
+          }
+        },
+        "by_cycle": {
+          "0": {
+            "ASK": 10,
+            "NO_ASK": 6
+          },
+          "1": {
+            "ASK": 1,
+            "NO_ASK": 15
+          },
+          "2": {
+            "NO_ASK": 16
+          },
+          "3": {
+            "NO_ASK": 4
+          },
+          "4": {
+            "NO_ASK": 4
+          },
+          "5": {
+            "NO_ASK": 2
+          },
+          "6": {
+            "NO_ASK": 2
+          },
+          "7": {
+            "NO_ASK": 2
+          }
+        }
+      }
+    },
+    "checkpoint_metrics": [
+      {
+        "epoch": 0,
+        "step": 0,
+        "fixed_data": true,
+        "train": {
+          "nll": 3.546925646205734,
+          "accuracy": 0.021739130434782608,
+          "entropy": 1.5779310623009835,
+          "decisions": 230
+        },
+        "dev": {
+          "nll": 3.3657144477499235,
+          "accuracy": 0.08064516129032258,
+          "entropy": 1.598027912860138,
+          "decisions": 62
+        }
+      },
+      {
+        "epoch": 1,
+        "step": 29,
+        "fixed_data": true,
+        "train": {
+          "nll": 2.544742702779668,
+          "accuracy": 0.04782608695652174,
+          "entropy": 1.6343983045047752,
+          "decisions": 230
+        },
+        "dev": {
+          "nll": 2.3889901249574397,
+          "accuracy": 0.12903225806451613,
+          "entropy": 1.634282088041094,
+          "decisions": 62
+        }
+      },
+      {
+        "epoch": 2,
+        "step": 58,
+        "fixed_data": true,
+        "train": {
+          "nll": 1.4449493307512042,
+          "accuracy": 0.5565217391304348,
+          "entropy": 1.4925441807476212,
+          "decisions": 230
+        },
+        "dev": {
+          "nll": 1.314780799238782,
+          "accuracy": 0.45161290322580644,
+          "entropy": 1.4814474539245637,
+          "decisions": 62
+        }
+      },
+      {
+        "epoch": 3,
+        "step": 87,
+        "fixed_data": true,
+        "train": {
+          "nll": 0.9546932747651715,
+          "accuracy": 0.8347826086956521,
+          "entropy": 0.7471551878389444,
+          "decisions": 230
+        },
+        "dev": {
+          "nll": 0.79996022992633,
+          "accuracy": 0.8225806451612904,
+          "entropy": 0.8115087478635156,
+          "decisions": 62
+        }
+      }
+    ],
+    "selected_step": 87,
+    "selection": "minimum fixed full-dev imitation NLL; ties earlier",
+    "reward_used_for_training": false,
+    "per_example_full_dev_predictions_persisted": false,
+    "optimizer": {
+      "name": "AdamW",
+      "learning_rate": 1e-05,
+      "weight_decay": 0,
+      "clip_norm": 1,
+      "batch_size": 8,
+      "last_batch_size": 6,
+      "uniform_decision_weight": true
+    },
+    "fingerprints": {
+      "checkpoint_original_file_bytes_sha256": "846fef7fdfc19fde8a6d9cb7a75fff7d3dd8023036c1b357e99f2f8d73161a91",
+      "checkpoint_original_file_bytes": 17697737,
+      "checkpoint_internal_canonical_digest": "9c8700e6b68cc4914b8a0f1484efa6485a02aa7047af942b338ca2ff96e5656b",
+      "binding_canonical_digests": {
+        "config_sha256": "0b69f05a5b0941c3e43d8bad1d9bba1e32fbcd177f97640bcbfd783786374e69",
+        "dataset_sha256": "ad78840aa4878a84544c10b185be31bddc9c15c9b9e97d2128e9c7deefa11518",
+        "split_sha256": "05e14584f5c7549cffb32ca9d6c5d2daddb7407bbafea155d586f08377010d2b",
+        "token_receipt_sha256": "62edb5cd4a307d016ef89e11199d683f558c5ccd2ce9d8d5f656c6812bbe3d2b",
+        "admission_sha256": "e423801794e106869b2523bf9e22fdf09ea91322617c2f66f77869240ec75d08",
+        "source_sha256": "a2ca24df463a53183c26494fad87fce93f92a8075da233dcc41218ad60e8e482"
+      },
+      "original_input_file_bytes_sha256": {
+        "MODEL_INPUTS.jsonl": "a2d4b1484e97d8e0bfa8b59dd889c972b6e4a0eafc360dc4c4862de457d692dc",
+        "DECISION_INDEX_LOCAL_ONLY.jsonl": "088e447cb18fab28b3415791cd99396c189cb1a5b66620c04c179dc0c1c98f11",
+        "SPLIT_PROPOSAL.json": "9f17647ad354d86e77d7c414868072d864f558ff903de45290dc1b359cd44fc6",
+        "ACTUAL_TOKEN_AUDIT.json": "8e3001c3980461b19289d219882a792c8be977a6e70656f8d46cc72d8c6a5c71",
+        "checkpoint-step-0087.json": "846fef7fdfc19fde8a6d9cb7a75fff7d3dd8023036c1b357e99f2f8d73161a91"
+      }
+    },
+    "label_suffix_token_lengths": {
+      "ASK:Alex Turner": [
+        9
+      ],
+      "ASK:Chen Xinyi": [
+        12
+      ],
+      "ASK:David Wong": [
+        9
+      ],
+      "ASK:Emily Zhou": [
+        9
+      ],
+      "ASK:Emma Lewis": [
+        9
+      ],
+      "ASK:Huang Jie": [
+        10
+      ],
+      "ASK:Jessica Chen": [
+        9
+      ],
+      "ASK:Jessica Lee": [
+        9
+      ],
+      "ASK:Li Ming": [
+        9
+      ],
+      "ASK:Liu Qiang": [
+        10
+      ],
+      "ASK:Mark Johnson": [
+        9
+      ],
+      "ASK:Mike Chen": [
+        9
+      ],
+      "ASK:Priya Sharma": [
+        10
+      ],
+      "ASK:Sarah Johnson": [
+        9
+      ],
+      "ASK:Sophia Rodriguez": [
+        10
+      ],
+      "ASK:Wang Fang": [
+        10
+      ],
+      "ASK:Zhang Wei": [
+        10
+      ],
+      "NO_ASK": [
+        8
+      ]
+    }
+  },
+  "evaluation": {
+    "agent_snapshot": "gpt-5.4-mini-2026-03-17",
+    "selected_step": 87,
+    "planned_and_completed_episodes": 32,
+    "paired_tasks": 16,
+    "Must_help": 10,
+    "Optional_help": 6,
+    "groups": {
+      "Must-help": {
+        "arms": {
+          "native_mini": {
+            "planned": 10,
+            "completed_results": 10,
+            "known_business_outcomes": 10,
+            "business_successes": 0,
+            "unscored_or_unknown_not_failures": 0,
+            "observed_business_success_rate": 0.0,
+            "planned_business_success_rate_identification_bounds": [
+              0.0,
+              0.0
+            ],
+            "workflow_business_success": {
+              "known": 10,
+              "successes": 0,
+              "observed_rate": 0.0,
+              "unscored_or_unknown_not_failures": 0,
+              "planned_rate_identification_bounds": [
+                0.0,
+                0.0
+              ]
+            },
+            "observed_means": {
+              "task_quality_T": {
+                "n": 10,
+                "mean": 0.375
+              },
+              "original_R1_utility_R": {
+                "n": 10,
+                "mean": 0.36
+              },
+              "contact_cost_C": {
+                "n": 10,
+                "mean": 0.3
+              }
+            }
+          },
+          "sft87": {
+            "planned": 10,
+            "completed_results": 10,
+            "known_business_outcomes": 10,
+            "business_successes": 0,
+            "unscored_or_unknown_not_failures": 0,
+            "observed_business_success_rate": 0.0,
+            "planned_business_success_rate_identification_bounds": [
+              0.0,
+              0.0
+            ],
+            "workflow_business_success": {
+              "known": 10,
+              "successes": 0,
+              "observed_rate": 0.0,
+              "unscored_or_unknown_not_failures": 0,
+              "planned_rate_identification_bounds": [
+                0.0,
+                0.0
+              ]
+            },
+            "observed_means": {
+              "task_quality_T": {
+                "n": 10,
+                "mean": 0.35
+              },
+              "original_R1_utility_R": {
+                "n": 10,
+                "mean": 0.35
+              },
+              "contact_cost_C": {
+                "n": 10,
+                "mean": 0.0
+              }
+            }
+          }
+        },
+        "paired_delta_SFT_minus_native": {
+          "business_pass": {
+            "pairs": 10,
+            "mean": 0.0,
+            "task_bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "planned_pairs": 10,
+            "missing_or_unknown_pairs": 0
+          },
+          "workflow_business_success": {
+            "pairs": 10,
+            "mean": 0.0,
+            "task_bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "planned_pairs": 10,
+            "missing_or_unknown_pairs": 0
+          },
+          "task_quality_T": {
+            "pairs": 10,
+            "mean": -0.025,
+            "task_bootstrap95": [
+              -0.075,
+              0.0
+            ],
+            "planned_pairs": 10,
+            "missing_or_unknown_pairs": 0
+          },
+          "original_R1_utility_R": {
+            "pairs": 10,
+            "mean": -0.009999999999999998,
+            "task_bootstrap95": [
+              -0.029999999999999992,
+              0.0
+            ],
+            "planned_pairs": 10,
+            "missing_or_unknown_pairs": 0
+          },
+          "contact_cost_C": {
+            "pairs": 10,
+            "mean": -0.3,
+            "task_bootstrap95": [
+              -0.9,
+              0.0
+            ],
+            "planned_pairs": 10,
+            "missing_or_unknown_pairs": 0
+          }
+        }
+      },
+      "Optional-help": {
+        "arms": {
+          "native_mini": {
+            "planned": 6,
+            "completed_results": 6,
+            "known_business_outcomes": 6,
+            "business_successes": 5,
+            "unscored_or_unknown_not_failures": 0,
+            "observed_business_success_rate": 0.8333333333333334,
+            "planned_business_success_rate_identification_bounds": [
+              0.8333333333333334,
+              0.8333333333333334
+            ],
+            "workflow_business_success": {
+              "known": 6,
+              "successes": 4,
+              "observed_rate": 0.6666666666666666,
+              "unscored_or_unknown_not_failures": 0,
+              "planned_rate_identification_bounds": [
+                0.6666666666666666,
+                0.6666666666666666
+              ]
+            },
+            "observed_means": {
+              "task_quality_T": {
+                "n": 6,
+                "mean": 0.4166666666666667
+              },
+              "original_R1_utility_R": {
+                "n": 6,
+                "mean": 0.4166666666666667
+              },
+              "contact_cost_C": {
+                "n": 6,
+                "mean": 0.0
+              }
+            }
+          },
+          "sft87": {
+            "planned": 6,
+            "completed_results": 6,
+            "known_business_outcomes": 6,
+            "business_successes": 5,
+            "unscored_or_unknown_not_failures": 0,
+            "observed_business_success_rate": 0.8333333333333334,
+            "planned_business_success_rate_identification_bounds": [
+              0.8333333333333334,
+              0.8333333333333334
+            ],
+            "workflow_business_success": {
+              "known": 6,
+              "successes": 0,
+              "observed_rate": 0.0,
+              "unscored_or_unknown_not_failures": 0,
+              "planned_rate_identification_bounds": [
+                0.0,
+                0.0
+              ]
+            },
+            "observed_means": {
+              "task_quality_T": {
+                "n": 6,
+                "mean": 0.4166666666666667
+              },
+              "original_R1_utility_R": {
+                "n": 6,
+                "mean": 0.4166666666666667
+              },
+              "contact_cost_C": {
+                "n": 6,
+                "mean": 0.0
+              }
+            }
+          }
+        },
+        "paired_delta_SFT_minus_native": {
+          "business_pass": {
+            "pairs": 6,
+            "mean": 0.0,
+            "task_bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "planned_pairs": 6,
+            "missing_or_unknown_pairs": 0
+          },
+          "workflow_business_success": {
+            "pairs": 6,
+            "mean": -0.6666666666666666,
+            "task_bootstrap95": [
+              -1.0,
+              -0.3333333333333333
+            ],
+            "planned_pairs": 6,
+            "missing_or_unknown_pairs": 0
+          },
+          "task_quality_T": {
+            "pairs": 6,
+            "mean": 0.0,
+            "task_bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "planned_pairs": 6,
+            "missing_or_unknown_pairs": 0
+          },
+          "original_R1_utility_R": {
+            "pairs": 6,
+            "mean": 0.0,
+            "task_bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "planned_pairs": 6,
+            "missing_or_unknown_pairs": 0
+          },
+          "contact_cost_C": {
+            "pairs": 6,
+            "mean": 0.0,
+            "task_bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "planned_pairs": 6,
+            "missing_or_unknown_pairs": 0
+          }
+        }
+      },
+      "all16dev": {
+        "arms": {
+          "native_mini": {
+            "planned": 16,
+            "completed_results": 16,
+            "known_business_outcomes": 16,
+            "business_successes": 5,
+            "unscored_or_unknown_not_failures": 0,
+            "observed_business_success_rate": 0.3125,
+            "planned_business_success_rate_identification_bounds": [
+              0.3125,
+              0.3125
+            ],
+            "workflow_business_success": {
+              "known": 16,
+              "successes": 4,
+              "observed_rate": 0.25,
+              "unscored_or_unknown_not_failures": 0,
+              "planned_rate_identification_bounds": [
+                0.25,
+                0.25
+              ]
+            },
+            "observed_means": {
+              "task_quality_T": {
+                "n": 16,
+                "mean": 0.390625
+              },
+              "original_R1_utility_R": {
+                "n": 16,
+                "mean": 0.38125
+              },
+              "contact_cost_C": {
+                "n": 16,
+                "mean": 0.1875
+              }
+            }
+          },
+          "sft87": {
+            "planned": 16,
+            "completed_results": 16,
+            "known_business_outcomes": 16,
+            "business_successes": 5,
+            "unscored_or_unknown_not_failures": 0,
+            "observed_business_success_rate": 0.3125,
+            "planned_business_success_rate_identification_bounds": [
+              0.3125,
+              0.3125
+            ],
+            "workflow_business_success": {
+              "known": 16,
+              "successes": 0,
+              "observed_rate": 0.0,
+              "unscored_or_unknown_not_failures": 0,
+              "planned_rate_identification_bounds": [
+                0.0,
+                0.0
+              ]
+            },
+            "observed_means": {
+              "task_quality_T": {
+                "n": 16,
+                "mean": 0.375
+              },
+              "original_R1_utility_R": {
+                "n": 16,
+                "mean": 0.375
+              },
+              "contact_cost_C": {
+                "n": 16,
+                "mean": 0.0
+              }
+            }
+          }
+        },
+        "paired_delta_SFT_minus_native": {
+          "business_pass": {
+            "pairs": 16,
+            "mean": 0.0,
+            "task_bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "planned_pairs": 16,
+            "missing_or_unknown_pairs": 0
+          },
+          "workflow_business_success": {
+            "pairs": 16,
+            "mean": -0.25,
+            "task_bootstrap95": [
+              -0.5,
+              -0.0625
+            ],
+            "planned_pairs": 16,
+            "missing_or_unknown_pairs": 0
+          },
+          "task_quality_T": {
+            "pairs": 16,
+            "mean": -0.015625,
+            "task_bootstrap95": [
+              -0.046875,
+              0.0
+            ],
+            "planned_pairs": 16,
+            "missing_or_unknown_pairs": 0
+          },
+          "original_R1_utility_R": {
+            "pairs": 16,
+            "mean": -0.006249999999999999,
+            "task_bootstrap95": [
+              -0.018749999999999996,
+              0.0
+            ],
+            "planned_pairs": 16,
+            "missing_or_unknown_pairs": 0
+          },
+          "contact_cost_C": {
+            "pairs": 16,
+            "mean": -0.1875,
+            "task_bootstrap95": [
+              -0.5625,
+              0.0
+            ],
+            "planned_pairs": 16,
+            "missing_or_unknown_pairs": 0
+          }
+        }
+      }
+    },
+    "bootstrap_seed": 98121,
+    "bootstrap_resamples": 2000,
+    "bootstrap_unit": "task, not control decision",
+    "independent_test": false,
+    "pure_adapter_weight_ablation": false,
+    "semantic_review": "pending_separate_version",
+    "API": {
+      "agent_calls": 181,
+      "input_tokens": 506076,
+      "output_tokens": 9688,
+      "settled_ordinary_price_upper_usd": "0.42315300",
+      "cap_usd": "30.00",
+      "held_usd": "0",
+      "unresolved_calls": 0
+    },
+    "sft_all_actions": {
+      "NO_ASK": 124,
+      "ASK": 0
+    },
+    "native_actions": {
+      "NO_ASK": 55,
+      "ASK": 1
+    },
+    "native_API_calls": 57,
+    "sft_API_calls": 124,
+    "ordinary_price_upper_usd_by_arm": {
+      "native_mini": 0.12031425,
+      "sft87": 0.30283875
+    },
+    "frozen_flags_actual_gate_passed": true,
+    "actual_gate_original_file_bytes_sha256": "a5afe55d59f19450dde8bd27c077a688cb07a86a7f98d823316b098cc64aefdf",
+    "source_summary_original_file_bytes_sha256": "1c4acbccf5632b9bb29bcdd6a4131dd932695d34a93cb6af0129006d434242da",
+    "all_32_metrics": [
+      {
+        "task_id": "m-low-customer-mailing",
+        "arm": "native_mini",
+        "metrics": {
+          "business_pass": false,
+          "task_quality_T": 0.75,
+          "original_R1_utility_R": 0.6,
+          "contact_cost_C": 3.0,
+          "Nauth": 0,
+          "Nwaste": 0,
+          "all_public_task_requirements_done": true,
+          "workflow_business_success": false,
+          "full_quality_complete_task": false,
+          "semantic_review_status": "pending_separate_version"
+        }
+      },
+      {
+        "task_id": "m-low-customer-mailing",
+        "arm": "sft87",
+        "metrics": {
+          "business_pass": false,
+          "task_quality_T": 0.5,
+          "original_R1_utility_R": 0.5,
+          "contact_cost_C": 0.0,
+          "Nauth": 0,
+          "Nwaste": 0,
+          "all_public_task_requirements_done": false,
+          "workflow_business_success": false,
+          "full_quality_complete_task": false,
+          "semantic_review_status": "pending_separate_version"
+        }
+      },
+      {
+        "task_id": "m-low-gpu-job-request",
+        "arm": "sft87",
+        "metrics": {
+          "business_pass": false,
+          "task_quality_T": 0.25,
+          "original_R1_utility_R": 0.25,
+          "contact_cost_C": 0.0,
+          "Nauth": 0,
+          "Nwaste": 0,
+          "all_public_task_requirements_done": false,
+          "workflow_business_success": false,
+          "full_quality_complete_task": false,
+          "semantic_review_status": "pending_separate_version"
+        }
+      },
+      {
+        "task_id": "m-low-gpu-job-request",
+        "arm": "native_mini",
+        "metrics": {
+          "business_pass": false,
+          "task_quality_T": 0.25,
+          "original_R1_utility_R": 0.25,
+          "contact_cost_C": 0.0,
+          "Nauth": 0,
+          "Nwaste": 0,
+          "all_public_task_requirements_done": true,
+          "workflow_business_success": false,
+          "full_quality_complete_task": false,
+          "semantic_review_status": "pending_separate_version"
+        }
+      },
+      {
+        "task_id": "m-low-ledger-allocation",
+        "arm": "native_mini",
+        "metrics": {
+          "business_pass": false,
+          "task_quality_T": 0.75,
+          "original_R1_utility_R": 0.75,
+          "contact_cost_C": 0.0,
+          "Nauth": 0,
+          "Nwaste": 0,
+          "all_public_task_requirements_done": true,
+          "workflow_business_success": false,
+          "full_quality_complete_task": false,
+          "semantic_review_status": "pending_separate_version"
+        }
+      },
+      {
+        "task_id": "m-low-ledger-allocation",
+        "arm": "sft87",
+        "metrics": {
+          "business_pass": false,
+          "task_quality_T": 0.75,
+          "original_R1_utility_R": 0.75,
+          "contact_cost_C": 0.0,
+          "Nauth": 0,
+          "Nwaste": 0,
+          "all_public_task_requirements_done": false,
+          "workflow_business_success": false,
+          "full_quality_complete_task": false,
+          "semantic_review_status": "pending_separate_version"
+        }
+      },
+      {
+        "task_id": "m-low-new-hire-record",
+        "arm": "sft87",
+        "metrics": {
+          "business_pass": false,
+          "task_quality_T": 0.5,
+          "original_R1_utility_R": 0.5,
+          "contact_cost_C": 0.0,
+          "Nauth": 0,
+          "Nwaste": 0,
+          "all_public_task_requirements_done": false,
+          "workflow_business_success": false,
+          "full_quality_complete_task": false,
+          "semantic_review_status": "pending_separate_version"
+        }
+      },
+      {
+        "task_id": "m-low-new-hire-record",
+        "arm": "native_mini",
+        "metrics": {
+          "business_pass": false,
+          "task_quality_T": 0.5,
+          "original_R1_utility_R": 0.5,
+          "contact_cost_C": 0.0,
+          "Nauth": 0,
+          "Nwaste": 0,
+          "all_public_task_requirements_done": true,
+          "workflow_business_success": false,
+          "full_quality_complete_task": false,
+          "semantic_review_status": "pending_separate_version"
+        }
+      },
+      {
+        "task_id": "m-low-partner-key-config",
+        "arm": "native_mini",
+        "metrics": {
+          "business_pass": false,
+          "task_quality_T": 0.5,
+          "original_R1_utility_R": 0.5,
+          "contact_cost_C": 0.0,
+          "Nauth": 0,
+          "Nwaste": 0,
+          "all_public_task_requirements_done": true,
+          "workflow_business_success": false,
+          "full_quality_complete_task": false,
+          "semantic_review_status": "pending_separate_version"
+        }
+      },
+      {
+        "task_id": "m-low-partner-key-config",
+        "arm": "sft87",
+        "metrics": {
+          "business_pass": false,
+          "task_quality_T": 0.5,
+          "original_R1_utility_R": 0.5,
+          "contact_cost_C": 0.0,
+          "Nauth": 0,
+          "Nwaste": 0,
+          "all_public_task_requirements_done": false,
+          "workflow_business_success": false,
+          "full_quality_complete_task": false,
+          "semantic_review_status": "pending_separate_version"
+        }
+      },
+      {
+        "task_id": "m-low-policy-citation",
+        "arm": "sft87",
+        "metrics": {
+          "business_pass": false,
+          "task_quality_T": 0.25,
+          "original_R1_utility_R": 0.25,
+          "contact_cost_C": 0.0,
+          "Nauth": 0,
+          "Nwaste": 0,
+          "all_public_task_requirements_done": false,
+          "workflow_business_success": false,
+          "full_quality_complete_task": false,
+          "semantic_review_status": "pending_separate_version"
+        }
+      },
+      {
+        "task_id": "m-low-policy-citation",
+        "arm": "native_mini",
+        "metrics": {
+          "business_pass": false,
+          "task_quality_T": 0.25,
+          "original_R1_utility_R": 0.25,
+          "contact_cost_C": 0.0,
+          "Nauth": 0,
+          "Nwaste": 0,
+          "all_public_task_requirements_done": true,
+          "workflow_business_success": false,
+          "full_quality_complete_task": false,
+          "semantic_review_status": "pending_separate_version"
+        }
+      },
+      {
+        "task_id": "m-med-contractor-invoice",
+        "arm": "native_mini",
+        "metrics": {
+          "business_pass": false,
+          "task_quality_T": 0.25,
+          "original_R1_utility_R": 0.25,
+          "contact_cost_C": 0.0,
+          "Nauth": 0,
+          "Nwaste": 0,
+          "all_public_task_requirements_done": true,
+          "workflow_business_success": false,
+          "full_quality_complete_task": false,
+          "semantic_review_status": "pending_separate_version"
+        }
+      },
+      {
+        "task_id": "m-med-contractor-invoice",
+        "arm": "sft87",
+        "metrics": {
+          "business_pass": false,
+          "task_quality_T": 0.25,
+          "original_R1_utility_R": 0.25,
+          "contact_cost_C": 0.0,
+          "Nauth": 0,
+          "Nwaste": 0,
+          "all_public_task_requirements_done": false,
+          "workflow_business_success": false,
+          "full_quality_complete_task": false,
+          "semantic_review_status": "pending_separate_version"
+        }
+      },
+      {
+        "task_id": "m-med-research-data-export",
+        "arm": "sft87",
+        "metrics": {
+          "business_pass": false,
+          "task_quality_T": 0.25,
+          "original_R1_utility_R": 0.25,
+          "contact_cost_C": 0.0,
+          "Nauth": 0,
+          "Nwaste": 0,
+          "all_public_task_requirements_done": false,
+          "workflow_business_success": false,
+          "full_quality_complete_task": false,
+          "semantic_review_status": "pending_separate_version"
+        }
+      },
+      {
+        "task_id": "m-med-research-data-export",
+        "arm": "native_mini",
+        "metrics": {
+          "business_pass": false,
+          "task_quality_T": 0.25,
+          "original_R1_utility_R": 0.25,
+          "contact_cost_C": 0.0,
+          "Nauth": 0,
+          "Nwaste": 0,
+          "all_public_task_requirements_done": true,
+          "workflow_business_success": false,
+          "full_quality_complete_task": false,
+          "semantic_review_status": "pending_separate_version"
+        }
+      },
+      {
+        "task_id": "m-med-service-credit",
+        "arm": "native_mini",
+        "metrics": {
+          "business_pass": false,
+          "task_quality_T": 0.25,
+          "original_R1_utility_R": 0.25,
+          "contact_cost_C": 0.0,
+          "Nauth": 0,
+          "Nwaste": 0,
+          "all_public_task_requirements_done": true,
+          "workflow_business_success": false,
+          "full_quality_complete_task": false,
+          "semantic_review_status": "pending_separate_version"
+        }
+      },
+      {
+        "task_id": "m-med-service-credit",
+        "arm": "sft87",
+        "metrics": {
+          "business_pass": false,
+          "task_quality_T": 0.25,
+          "original_R1_utility_R": 0.25,
+          "contact_cost_C": 0.0,
+          "Nauth": 0,
+          "Nwaste": 0,
+          "all_public_task_requirements_done": false,
+          "workflow_business_success": false,
+          "full_quality_complete_task": false,
+          "semantic_review_status": "pending_separate_version"
+        }
+      },
+      {
+        "task_id": "m-medium-research-purchase",
+        "arm": "sft87",
+        "metrics": {
+          "business_pass": false,
+          "task_quality_T": 0.0,
+          "original_R1_utility_R": 0.0,
+          "contact_cost_C": 0.0,
+          "Nauth": 0,
+          "Nwaste": 0,
+          "all_public_task_requirements_done": false,
+          "workflow_business_success": false,
+          "full_quality_complete_task": false,
+          "semantic_review_status": "pending_separate_version"
+        }
+      },
+      {
+        "task_id": "m-medium-research-purchase",
+        "arm": "native_mini",
+        "metrics": {
+          "business_pass": false,
+          "task_quality_T": 0.0,
+          "original_R1_utility_R": 0.0,
+          "contact_cost_C": 0.0,
+          "Nauth": 0,
+          "Nwaste": 0,
+          "all_public_task_requirements_done": true,
+          "workflow_business_success": false,
+          "full_quality_complete_task": false,
+          "semantic_review_status": "pending_separate_version"
+        }
+      },
+      {
+        "task_id": "o-high-eval-budget",
+        "arm": "native_mini",
+        "metrics": {
+          "business_pass": true,
+          "task_quality_T": 0.5,
+          "original_R1_utility_R": 0.5,
+          "contact_cost_C": 0.0,
+          "Nauth": 0,
+          "Nwaste": 0,
+          "all_public_task_requirements_done": true,
+          "workflow_business_success": true,
+          "full_quality_complete_task": false,
+          "semantic_review_status": "pending_separate_version"
+        }
+      },
+      {
+        "task_id": "o-high-eval-budget",
+        "arm": "sft87",
+        "metrics": {
+          "business_pass": true,
+          "task_quality_T": 0.5,
+          "original_R1_utility_R": 0.5,
+          "contact_cost_C": 0.0,
+          "Nauth": 0,
+          "Nwaste": 0,
+          "all_public_task_requirements_done": false,
+          "workflow_business_success": false,
+          "full_quality_complete_task": false,
+          "semantic_review_status": "pending_separate_version"
+        }
+      },
+      {
+        "task_id": "o-high-floor-move",
+        "arm": "sft87",
+        "metrics": {
+          "business_pass": false,
+          "task_quality_T": 0.0,
+          "original_R1_utility_R": 0.0,
+          "contact_cost_C": 0.0,
+          "Nauth": 0,
+          "Nwaste": 0,
+          "all_public_task_requirements_done": true,
+          "workflow_business_success": false,
+          "full_quality_complete_task": false,
+          "semantic_review_status": "pending_separate_version"
+        }
+      },
+      {
+        "task_id": "o-high-floor-move",
+        "arm": "native_mini",
+        "metrics": {
+          "business_pass": false,
+          "task_quality_T": 0.0,
+          "original_R1_utility_R": 0.0,
+          "contact_cost_C": 0.0,
+          "Nauth": 0,
+          "Nwaste": 0,
+          "all_public_task_requirements_done": true,
+          "workflow_business_success": false,
+          "full_quality_complete_task": false,
+          "semantic_review_status": "pending_separate_version"
+        }
+      },
+      {
+        "task_id": "o-low-demo-dataset",
+        "arm": "native_mini",
+        "metrics": {
+          "business_pass": true,
+          "task_quality_T": 0.5,
+          "original_R1_utility_R": 0.5,
+          "contact_cost_C": 0.0,
+          "Nauth": 0,
+          "Nwaste": 0,
+          "all_public_task_requirements_done": true,
+          "workflow_business_success": true,
+          "full_quality_complete_task": false,
+          "semantic_review_status": "pending_separate_version"
+        }
+      },
+      {
+        "task_id": "o-low-demo-dataset",
+        "arm": "sft87",
+        "metrics": {
+          "business_pass": true,
+          "task_quality_T": 0.5,
+          "original_R1_utility_R": 0.5,
+          "contact_cost_C": 0.0,
+          "Nauth": 0,
+          "Nwaste": 0,
+          "all_public_task_requirements_done": false,
+          "workflow_business_success": false,
+          "full_quality_complete_task": false,
+          "semantic_review_status": "pending_separate_version"
+        }
+      },
+      {
+        "task_id": "o-low-team-lunch",
+        "arm": "sft87",
+        "metrics": {
+          "business_pass": true,
+          "task_quality_T": 0.5,
+          "original_R1_utility_R": 0.5,
+          "contact_cost_C": 0.0,
+          "Nauth": 0,
+          "Nwaste": 0,
+          "all_public_task_requirements_done": false,
+          "workflow_business_success": false,
+          "full_quality_complete_task": false,
+          "semantic_review_status": "pending_separate_version"
+        }
+      },
+      {
+        "task_id": "o-low-team-lunch",
+        "arm": "native_mini",
+        "metrics": {
+          "business_pass": true,
+          "task_quality_T": 0.5,
+          "original_R1_utility_R": 0.5,
+          "contact_cost_C": 0.0,
+          "Nauth": 0,
+          "Nwaste": 0,
+          "all_public_task_requirements_done": false,
+          "workflow_business_success": false,
+          "full_quality_complete_task": false,
+          "semantic_review_status": "pending_separate_version"
+        }
+      },
+      {
+        "task_id": "o-med-ab-test-plan",
+        "arm": "native_mini",
+        "metrics": {
+          "business_pass": true,
+          "task_quality_T": 0.5,
+          "original_R1_utility_R": 0.5,
+          "contact_cost_C": 0.0,
+          "Nauth": 0,
+          "Nwaste": 0,
+          "all_public_task_requirements_done": true,
+          "workflow_business_success": true,
+          "full_quality_complete_task": false,
+          "semantic_review_status": "pending_separate_version"
+        }
+      },
+      {
+        "task_id": "o-med-ab-test-plan",
+        "arm": "sft87",
+        "metrics": {
+          "business_pass": true,
+          "task_quality_T": 0.5,
+          "original_R1_utility_R": 0.5,
+          "contact_cost_C": 0.0,
+          "Nauth": 0,
+          "Nwaste": 0,
+          "all_public_task_requirements_done": false,
+          "workflow_business_success": false,
+          "full_quality_complete_task": false,
+          "semantic_review_status": "pending_separate_version"
+        }
+      },
+      {
+        "task_id": "o-med-usability-budget",
+        "arm": "sft87",
+        "metrics": {
+          "business_pass": true,
+          "task_quality_T": 0.5,
+          "original_R1_utility_R": 0.5,
+          "contact_cost_C": 0.0,
+          "Nauth": 0,
+          "Nwaste": 0,
+          "all_public_task_requirements_done": false,
+          "workflow_business_success": false,
+          "full_quality_complete_task": false,
+          "semantic_review_status": "pending_separate_version"
+        }
+      },
+      {
+        "task_id": "o-med-usability-budget",
+        "arm": "native_mini",
+        "metrics": {
+          "business_pass": true,
+          "task_quality_T": 0.5,
+          "original_R1_utility_R": 0.5,
+          "contact_cost_C": 0.0,
+          "Nauth": 0,
+          "Nwaste": 0,
+          "all_public_task_requirements_done": true,
+          "workflow_business_success": true,
+          "full_quality_complete_task": false,
+          "semantic_review_status": "pending_separate_version"
+        }
+      }
+    ],
+    "original_64_result_and_trace_file_bytes_sha256": {
+      "teacher87-dev16-m-low-customer-mailing-native_mini-r1.json": "86766eeb7a8509f1e7eaffa770938ec1ef33468cce44fb035b5c0112bb7a01bf",
+      "teacher87-dev16-m-low-customer-mailing-native_mini-r1.trace.jsonl": "3a80efdd4e60ecf948c1b5dc3f0ae915f8daa1ad94d83216de8ad12f8d4b1564",
+      "teacher87-dev16-m-low-customer-mailing-sft87-r1.json": "5ddbff2c664a2b22fe1c7d745d5caa5985ded726286c487a133ea8deecd7d1bc",
+      "teacher87-dev16-m-low-customer-mailing-sft87-r1.trace.jsonl": "b9b85d31a5a4a7749f2303c5dc11fe2d69d35e1896db279b831aebd4af52d626",
+      "teacher87-dev16-m-low-gpu-job-request-sft87-r1.json": "d5f8f7c84986898695972515de306f3106ab7c927810462ee82cb3a81dea5266",
+      "teacher87-dev16-m-low-gpu-job-request-sft87-r1.trace.jsonl": "7d51c7b371b9218e9a3d180cf805a75c85943c845c7eb0ce0baddbfcae263366",
+      "teacher87-dev16-m-low-gpu-job-request-native_mini-r1.json": "d83c3353d8c61358c08595f47025ebe24cccd40ea403a4e133d8f734db1d8758",
+      "teacher87-dev16-m-low-gpu-job-request-native_mini-r1.trace.jsonl": "cc295910ebbfe66fdb1b6dbc60edb9d86e8a438004da46b79949a10aa8f2e82d",
+      "teacher87-dev16-m-low-ledger-allocation-native_mini-r1.json": "32eb2e1aa8df10a2396040f05371ed145a4436cdce2c18c59b8c4a233ae1cfcf",
+      "teacher87-dev16-m-low-ledger-allocation-native_mini-r1.trace.jsonl": "a015844ebeb74683d0cc312ecb21a039893ca5717c456f9f87565d7189cbbc7b",
+      "teacher87-dev16-m-low-ledger-allocation-sft87-r1.json": "e094782c491ae8527d76f1c3af6cac88f4a32558ac5b548a4dea2e71ef1b5339",
+      "teacher87-dev16-m-low-ledger-allocation-sft87-r1.trace.jsonl": "fa9d76b55477349420d36163adc05bd7889455a73f6ef805aadb12f19bb5b91e",
+      "teacher87-dev16-m-low-new-hire-record-sft87-r1.json": "a6a1e63eb8b2966cef0c238d0da2a25f2bfe3f48f2d5e95463d1c586d6598d61",
+      "teacher87-dev16-m-low-new-hire-record-sft87-r1.trace.jsonl": "012f0d12fafc1ba1fa35980d68dfb5af8a4b2998ae79d0ece0f5fc44a9e09dd7",
+      "teacher87-dev16-m-low-new-hire-record-native_mini-r1.json": "614bf740a64a7447a0f655a69d43a44be8223a08035187015d085d32f2f3e2d6",
+      "teacher87-dev16-m-low-new-hire-record-native_mini-r1.trace.jsonl": "2445acba854c2a06b8dcc09c6da9199537b2b2ba4d079c995e9d106d31d1397d",
+      "teacher87-dev16-m-low-partner-key-config-native_mini-r1.json": "17d91de6701602052280e5ed38be572b05c70c148fe86fa115c1379d5c982011",
+      "teacher87-dev16-m-low-partner-key-config-native_mini-r1.trace.jsonl": "677cc31f799505e6b762ae098feca4fd0d51f3f059cd23db565f6926e9c54361",
+      "teacher87-dev16-m-low-partner-key-config-sft87-r1.json": "a6d540e7de483b23390f31c87cd1031a16fe8b368b8ba364c178ae0052017018",
+      "teacher87-dev16-m-low-partner-key-config-sft87-r1.trace.jsonl": "46ceb73ae7c94f255f65f3ceed88df067d8a7082df14bdbd4d5edda07e76102b",
+      "teacher87-dev16-m-low-policy-citation-sft87-r1.json": "c6fd2ab8f4f0486e82acc70c7d059460727575c434f608dda72c7689ac9f07ef",
+      "teacher87-dev16-m-low-policy-citation-sft87-r1.trace.jsonl": "7ff2b8fe1bc8a5327c384f88b1d507328a9d37e09494a1f144ca3870e59f9993",
+      "teacher87-dev16-m-low-policy-citation-native_mini-r1.json": "d1af7c73222fee2b04dd2cf9560b42a8fb152ebfa741f12f68e6a5cca4564909",
+      "teacher87-dev16-m-low-policy-citation-native_mini-r1.trace.jsonl": "7ccc86e144fe4bd498d315cd67c94602b94d02b4e60bb1f7e7d303cc2cdf14fa",
+      "teacher87-dev16-m-med-contractor-invoice-native_mini-r1.json": "f81f590863c57ecb8e1ff95a752430a16a7c042e0be9bd067e627d1da2ffb92e",
+      "teacher87-dev16-m-med-contractor-invoice-native_mini-r1.trace.jsonl": "0a82ffe97fd898a8146391d8a9ee1b4f54e557e1b339294ff4d36a29a7758b47",
+      "teacher87-dev16-m-med-contractor-invoice-sft87-r1.json": "dd8ba5b296dc25a497f9a526577be3df9a73a253cc7934db8e6e02088bd08bbd",
+      "teacher87-dev16-m-med-contractor-invoice-sft87-r1.trace.jsonl": "a0f63e1cf5e18bb5f3d93269f6b7ceba8cd5d4ca7aa48cfda11ea99ab2103461",
+      "teacher87-dev16-m-med-research-data-export-sft87-r1.json": "4ddcdec210c7afd0dbf72270a344c7ea0046d2a87e0b9b5792f6e037125e0d21",
+      "teacher87-dev16-m-med-research-data-export-sft87-r1.trace.jsonl": "e9b47268b11450d51ff28622f38f7b2f1fdc885c37400a6239cc13e954241693",
+      "teacher87-dev16-m-med-research-data-export-native_mini-r1.json": "2536594be4a6ee29532c84c36baf735e9097f8a7314c71cee3a9c1b0d4dc4918",
+      "teacher87-dev16-m-med-research-data-export-native_mini-r1.trace.jsonl": "8662f7cc0956a562a57fa545c652608b23df9519cc99d49fe76117da93e8ceb7",
+      "teacher87-dev16-m-med-service-credit-native_mini-r1.json": "1b27c0582d9bbc8d4d88642a4dd76bfc169b3e3c04ab3d7498e00e6aab0e0b12",
+      "teacher87-dev16-m-med-service-credit-native_mini-r1.trace.jsonl": "216a4a2976b95aa4dfb65812fe3197c8d03b98a514758bc1ff76a7b572e0ac86",
+      "teacher87-dev16-m-med-service-credit-sft87-r1.json": "0bfd713e529d98afba9caabc68867780e1c7cc1b5b0df33fda7d8a83f1dfeb7e",
+      "teacher87-dev16-m-med-service-credit-sft87-r1.trace.jsonl": "9a81c86cbc55d915c55c1ca5911462177917bea591e7bd4f40de9944b893ac89",
+      "teacher87-dev16-m-medium-research-purchase-sft87-r1.json": "d04c691a49bb14ad31020813ff85e86a16e7223110486e2f45875b583f0b61b5",
+      "teacher87-dev16-m-medium-research-purchase-sft87-r1.trace.jsonl": "8949e6a7fcca48d1d416b64fd1b8cbf5479e6cb4b0d8bda3b6a8773460710632",
+      "teacher87-dev16-m-medium-research-purchase-native_mini-r1.json": "0b80e4d48334f41c78bf08e372eb26cb8ee768b98faada1852f69c2c6c8955f4",
+      "teacher87-dev16-m-medium-research-purchase-native_mini-r1.trace.jsonl": "2652ab31e7fa2ac64726ea0c5eb6922aa9be0a3c273e98cfa993085e8eb2f545",
+      "teacher87-dev16-o-high-eval-budget-native_mini-r1.json": "1937f070692b6ae0f00e0ccd484b6c6574dee4c7701d08a99c3cd4e89ca71cd0",
+      "teacher87-dev16-o-high-eval-budget-native_mini-r1.trace.jsonl": "be04946a31d006c25593b0c16796f28336ceb4ec57b50fdf51eb05e3602dcc4f",
+      "teacher87-dev16-o-high-eval-budget-sft87-r1.json": "6cc8d8b7a883dad32445b973eb35275d1403f843a0bf36cdd020392e7ab0dd9d",
+      "teacher87-dev16-o-high-eval-budget-sft87-r1.trace.jsonl": "5a7113257451b225b9dd95b57710286954bf8a4a0fe9fdd751599c7d859341b7",
+      "teacher87-dev16-o-high-floor-move-sft87-r1.json": "9a2d311ce800fd94c50f2011c88a612e077423131ac5e03a129fc2bbafffa3be",
+      "teacher87-dev16-o-high-floor-move-sft87-r1.trace.jsonl": "1024d9f19b941dea38d212f8ee27fea17d671ea27d6a6369c0117b01d941ac0f",
+      "teacher87-dev16-o-high-floor-move-native_mini-r1.json": "8ddd80975bd355a31f01a772eb4ebcc7881e2a88d3d549d7216b6cc0a6d4a29d",
+      "teacher87-dev16-o-high-floor-move-native_mini-r1.trace.jsonl": "71460585d762adaaa428fc8b866b5485fa5bbe30ed383ad6edd904bf7852bd11",
+      "teacher87-dev16-o-low-demo-dataset-native_mini-r1.json": "04e76416b2064583fbc702fe6b9cf648074c72ca3f8d7f0681827c07fd3dd924",
+      "teacher87-dev16-o-low-demo-dataset-native_mini-r1.trace.jsonl": "7e589ceceb74ecb58653b6cbc2b48bf3566b0a746f3e2c171d881fbf1ccdab3e",
+      "teacher87-dev16-o-low-demo-dataset-sft87-r1.json": "776f7f0aadb738c62cd0f16833f4625f5d192f68105433618774e7e4c29e7367",
+      "teacher87-dev16-o-low-demo-dataset-sft87-r1.trace.jsonl": "71ac6e02842e41cee6b523ee689ef8e214220ab15a24753557d7bc83ba752511",
+      "teacher87-dev16-o-low-team-lunch-sft87-r1.json": "43e2ef34a8e56a3cdd2ff4a0ab6df40045b51e1c7c38751942489cf22a761440",
+      "teacher87-dev16-o-low-team-lunch-sft87-r1.trace.jsonl": "e471528aa1dc56b6a4f5f242c6f364b9d27e629db20501ed900631fcf3ff4456",
+      "teacher87-dev16-o-low-team-lunch-native_mini-r1.json": "f50eac69325f1f29a8e7dc192716258cbb8c8dc415bb2a25138cfcc4e47d1e1d",
+      "teacher87-dev16-o-low-team-lunch-native_mini-r1.trace.jsonl": "32405a814a4126f1c72a2e8beb32afc76ef9a0dcee310bf61a8663c277c88aeb",
+      "teacher87-dev16-o-med-ab-test-plan-native_mini-r1.json": "a1d86c239c6890bcf5202f22c15db8302bdf9696d5431de63096510022a02f77",
+      "teacher87-dev16-o-med-ab-test-plan-native_mini-r1.trace.jsonl": "db8a9be4e9cb3d49018ac66c287ac2540d6b84d1594279439ec43aece76ac3e0",
+      "teacher87-dev16-o-med-ab-test-plan-sft87-r1.json": "ca8d20a6dcb1d30d37243022213cd3ff36cf84c1497d4a83bc02873b2294fc43",
+      "teacher87-dev16-o-med-ab-test-plan-sft87-r1.trace.jsonl": "a80a94491b74bef3c0e1866a5284b06a0dbd9b124d6826c878f89e0bb1353160",
+      "teacher87-dev16-o-med-usability-budget-sft87-r1.json": "fafb86af9600c4bf46f812deb4545d3e52081255f15fd31a88692dda0d5ad66b",
+      "teacher87-dev16-o-med-usability-budget-sft87-r1.trace.jsonl": "c102856556d9b78e25c070588d02069d6cf9b72620a6bf64ee053e8abc347222",
+      "teacher87-dev16-o-med-usability-budget-native_mini-r1.json": "54d7b5908051d75cde79994cb7ea5c4e31f94cd20f74b0f79f6c4f335c6abe17",
+      "teacher87-dev16-o-med-usability-budget-native_mini-r1.trace.jsonl": "43e9783031c09aa7829c0a335e69446e41e457dc554d247250426bca1b79ac78"
+    }
+  },
+  "diagnosis": {
+    "initial_16_binary_confusion": {
+      "ASK->NO_ASK": 10,
+      "NO_ASK->NO_ASK": 6
+    },
+    "exact_teacher_state_matches": [
+      {
+        "task_id": "m-low-customer-mailing",
+        "cycle": 0,
+        "teacher_label": "ASK:Mark Johnson",
+        "prediction": "NO_ASK",
+        "original_trace_basename": "teacher87-dev16-m-low-customer-mailing-sft87-r1.trace.jsonl",
+        "line_1based": 3
+      },
+      {
+        "task_id": "m-low-gpu-job-request",
+        "cycle": 0,
+        "teacher_label": "ASK:Wang Fang",
+        "prediction": "NO_ASK",
+        "original_trace_basename": "teacher87-dev16-m-low-gpu-job-request-sft87-r1.trace.jsonl",
+        "line_1based": 3
+      },
+      {
+        "task_id": "m-low-ledger-allocation",
+        "cycle": 0,
+        "teacher_label": "ASK:David Wong",
+        "prediction": "NO_ASK",
+        "original_trace_basename": "teacher87-dev16-m-low-ledger-allocation-sft87-r1.trace.jsonl",
+        "line_1based": 3
+      },
+      {
+        "task_id": "m-low-new-hire-record",
+        "cycle": 0,
+        "teacher_label": "ASK:Chen Xinyi",
+        "prediction": "NO_ASK",
+        "original_trace_basename": "teacher87-dev16-m-low-new-hire-record-sft87-r1.trace.jsonl",
+        "line_1based": 3
+      },
+      {
+        "task_id": "m-low-partner-key-config",
+        "cycle": 0,
+        "teacher_label": "NO_ASK",
+        "prediction": "NO_ASK",
+        "original_trace_basename": "teacher87-dev16-m-low-partner-key-config-sft87-r1.trace.jsonl",
+        "line_1based": 3
+      },
+      {
+        "task_id": "m-low-partner-key-config",
+        "cycle": 1,
+        "teacher_label": "NO_ASK",
+        "prediction": "NO_ASK",
+        "original_trace_basename": "teacher87-dev16-m-low-partner-key-config-sft87-r1.trace.jsonl",
+        "line_1based": 9
+      },
+      {
+        "task_id": "m-low-policy-citation",
+        "cycle": 0,
+        "teacher_label": "ASK:Priya Sharma",
+        "prediction": "NO_ASK",
+        "original_trace_basename": "teacher87-dev16-m-low-policy-citation-sft87-r1.trace.jsonl",
+        "line_1based": 3
+      },
+      {
+        "task_id": "m-med-contractor-invoice",
+        "cycle": 0,
+        "teacher_label": "ASK:Li Ming",
+        "prediction": "NO_ASK",
+        "original_trace_basename": "teacher87-dev16-m-med-contractor-invoice-sft87-r1.trace.jsonl",
+        "line_1based": 3
+      },
+      {
+        "task_id": "m-med-research-data-export",
+        "cycle": 0,
+        "teacher_label": "NO_ASK",
+        "prediction": "NO_ASK",
+        "original_trace_basename": "teacher87-dev16-m-med-research-data-export-sft87-r1.trace.jsonl",
+        "line_1based": 3
+      },
+      {
+        "task_id": "m-med-service-credit",
+        "cycle": 0,
+        "teacher_label": "ASK:Mark Johnson",
+        "prediction": "NO_ASK",
+        "original_trace_basename": "teacher87-dev16-m-med-service-credit-sft87-r1.trace.jsonl",
+        "line_1based": 3
+      },
+      {
+        "task_id": "m-medium-research-purchase",
+        "cycle": 0,
+        "teacher_label": "ASK:Wang Fang",
+        "prediction": "NO_ASK",
+        "original_trace_basename": "teacher87-dev16-m-medium-research-purchase-sft87-r1.trace.jsonl",
+        "line_1based": 3
+      },
+      {
+        "task_id": "o-high-eval-budget",
+        "cycle": 0,
+        "teacher_label": "NO_ASK",
+        "prediction": "NO_ASK",
+        "original_trace_basename": "teacher87-dev16-o-high-eval-budget-sft87-r1.trace.jsonl",
+        "line_1based": 3
+      },
+      {
+        "task_id": "o-high-eval-budget",
+        "cycle": 1,
+        "teacher_label": "NO_ASK",
+        "prediction": "NO_ASK",
+        "original_trace_basename": "teacher87-dev16-o-high-eval-budget-sft87-r1.trace.jsonl",
+        "line_1based": 9
+      },
+      {
+        "task_id": "o-high-floor-move",
+        "cycle": 0,
+        "teacher_label": "ASK:Chen Xinyi",
+        "prediction": "NO_ASK",
+        "original_trace_basename": "teacher87-dev16-o-high-floor-move-sft87-r1.trace.jsonl",
+        "line_1based": 3
+      },
+      {
+        "task_id": "o-low-demo-dataset",
+        "cycle": 0,
+        "teacher_label": "NO_ASK",
+        "prediction": "NO_ASK",
+        "original_trace_basename": "teacher87-dev16-o-low-demo-dataset-sft87-r1.trace.jsonl",
+        "line_1based": 3
+      },
+      {
+        "task_id": "o-low-demo-dataset",
+        "cycle": 1,
+        "teacher_label": "NO_ASK",
+        "prediction": "NO_ASK",
+        "original_trace_basename": "teacher87-dev16-o-low-demo-dataset-sft87-r1.trace.jsonl",
+        "line_1based": 9
+      },
+      {
+        "task_id": "o-low-team-lunch",
+        "cycle": 0,
+        "teacher_label": "ASK:Chen Xinyi",
+        "prediction": "NO_ASK",
+        "original_trace_basename": "teacher87-dev16-o-low-team-lunch-sft87-r1.trace.jsonl",
+        "line_1based": 3
+      },
+      {
+        "task_id": "o-med-ab-test-plan",
+        "cycle": 0,
+        "teacher_label": "NO_ASK",
+        "prediction": "NO_ASK",
+        "original_trace_basename": "teacher87-dev16-o-med-ab-test-plan-sft87-r1.trace.jsonl",
+        "line_1based": 3
+      },
+      {
+        "task_id": "o-med-ab-test-plan",
+        "cycle": 1,
+        "teacher_label": "NO_ASK",
+        "prediction": "NO_ASK",
+        "original_trace_basename": "teacher87-dev16-o-med-ab-test-plan-sft87-r1.trace.jsonl",
+        "line_1based": 9
+      },
+      {
+        "task_id": "o-med-usability-budget",
+        "cycle": 0,
+        "teacher_label": "NO_ASK",
+        "prediction": "NO_ASK",
+        "original_trace_basename": "teacher87-dev16-o-med-usability-budget-sft87-r1.trace.jsonl",
+        "line_1based": 3
+      },
+      {
+        "task_id": "o-med-usability-budget",
+        "cycle": 1,
+        "teacher_label": "NO_ASK",
+        "prediction": "NO_ASK",
+        "original_trace_basename": "teacher87-dev16-o-med-usability-budget-sft87-r1.trace.jsonl",
+        "line_1based": 9
+      }
+    ],
+    "matched_21_confusion": {
+      "TP": 0,
+      "FN": 10,
+      "TN": 11,
+      "FP": 0
+    },
+    "full_62_confusion": null,
+    "full_dev_ASK_recall_upper_bound_conditional_on_same_deterministic_scoring": 0.09090909090909091,
+    "helped_teacher_state_counts": {
+      "train": {
+        "with_read_messages": 99,
+        "ASK": 10,
+        "NO_ASK": 89
+      },
+      "dev": {
+        "with_read_messages": 24,
+        "ASK": 1,
+        "NO_ASK": 23
+      }
+    },
+    "initial_ASK_recipient_rankings_not_executed_actions": [
+      {
+        "task_id": "m-low-customer-mailing",
+        "teacher_label": "ASK:Mark Johnson",
+        "highest_scoring_ASK": "ASK:Mark Johnson",
+        "same": true
+      },
+      {
+        "task_id": "m-low-gpu-job-request",
+        "teacher_label": "ASK:Wang Fang",
+        "highest_scoring_ASK": "ASK:Wang Fang",
+        "same": true
+      },
+      {
+        "task_id": "m-low-ledger-allocation",
+        "teacher_label": "ASK:David Wong",
+        "highest_scoring_ASK": "ASK:David Wong",
+        "same": true
+      },
+      {
+        "task_id": "m-low-new-hire-record",
+        "teacher_label": "ASK:Chen Xinyi",
+        "highest_scoring_ASK": "ASK:Liu Qiang",
+        "same": false
+      },
+      {
+        "task_id": "m-low-policy-citation",
+        "teacher_label": "ASK:Priya Sharma",
+        "highest_scoring_ASK": "ASK:Alex Turner",
+        "same": false
+      },
+      {
+        "task_id": "m-med-contractor-invoice",
+        "teacher_label": "ASK:Li Ming",
+        "highest_scoring_ASK": "ASK:Mike Chen",
+        "same": false
+      },
+      {
+        "task_id": "m-med-service-credit",
+        "teacher_label": "ASK:Mark Johnson",
+        "highest_scoring_ASK": "ASK:Mike Chen",
+        "same": false
+      },
+      {
+        "task_id": "m-medium-research-purchase",
+        "teacher_label": "ASK:Wang Fang",
+        "highest_scoring_ASK": "ASK:Jessica Lee",
+        "same": false
+      },
+      {
+        "task_id": "o-high-floor-move",
+        "teacher_label": "ASK:Chen Xinyi",
+        "highest_scoring_ASK": "ASK:Jessica Lee",
+        "same": false
+      },
+      {
+        "task_id": "o-low-team-lunch",
+        "teacher_label": "ASK:Chen Xinyi",
+        "highest_scoring_ASK": "ASK:Chen Xinyi",
+        "same": true
+      }
+    ],
+    "single_existing_engineering_probe_not_full_baseline": {
+      "task_id": "m-low-customer-mailing",
+      "raw_label_scores": {
+        "adapter_off": {
+          "NO_ASK": -21.27948760986328,
+          "ASK:Mark Johnson": -18.276559829711914,
+          "ASK:Li Ming": -20.235950469970703,
+          "ASK:Jessica Chen": -19.594924926757812,
+          "ASK:Jessica Lee": -21.70865249633789
+        },
+        "selected87": {
+          "NO_ASK": -18.30502700805664,
+          "ASK:Mark Johnson": -19.778759002685547,
+          "ASK:Li Ming": -21.643739700317383,
+          "ASK:Jessica Chen": -21.089818954467773,
+          "ASK:Jessica Lee": -23.14554214477539
+        }
+      },
+      "softmax_probabilities": {
+        "adapter_off_engineering_probe": {
+          "NO_ASK": 0.03330578167162128,
+          "ASK:Mark Johnson": 0.6709259584755389,
+          "ASK:Li Ming": 0.0945631765055661,
+          "ASK:Jessica Chen": 0.1795212685752168,
+          "ASK:Jessica Lee": 0.0216838147720569
+        },
+        "selected87_probe": {
+          "NO_ASK": 0.7495147692298886,
+          "ASK:Mark Johnson": 0.17169060144382098,
+          "ASK:Li Ming": 0.026594736772954118,
+          "ASK:Jessica Chen": 0.0462764909083245,
+          "ASK:Jessica Lee": 0.005923401645011868
+        }
+      },
+      "engineering_probe_not_full_baseline_rollout": true
+    },
+    "code_fingerprints_not_a_source_release": {
+      "teacher_sft_train.py": {
+        "original_bytes_sha256": "a2ca24df463a53183c26494fad87fce93f92a8075da233dcc41218ad60e8e482",
+        "not_uploaded_in_this_document_commit": true,
+        "symbol_lines": [
+          {
+            "line_1based": 19,
+            "text": "def action_loss(scores, selected):"
+          },
+          {
+            "line_1based": 35,
+            "text": "def numpy_stdlib_equivalence(scores, selected):"
+          },
+          {
+            "line_1based": 49,
+            "text": "def ordered_batches(rows, epoch, batch_size):"
+          },
+          {
+            "line_1based": 54,
+            "text": "def context4352_config(original):"
+          },
+          {
+            "line_1based": 64,
+            "text": "def validate_inputs(data, tokens, admission, config_path=None, fit_only=False):"
+          },
+          {
+            "line_1based": 103,
+            "text": "class ImitationLoop:"
+          },
+          {
+            "line_1based": 177,
+            "text": "class TorchLoRABackend:"
+          },
+          {
+            "line_1based": 237,
+            "text": "def gradient_fit(backend, rows, token_rows):"
+          },
+          {
+            "line_1based": 269,
+            "text": "def verify_first_restore(loop):"
+          },
+          {
+            "line_1based": 307,
+            "text": "def restore_versioned_checkpoint(loop, row, parent_source_sha256):"
+          },
+          {
+            "line_1based": 320,
+            "text": "def run(data, token_path, admission_path, output, checkpoint=None, config_path=None, fit_only=False,"
+          }
+        ]
+      },
+      "teacher_sft_data.py": {
+        "original_bytes_sha256": "805ef777f2f60ad8f31d9654ba5885be0724ee42b6e472a62ba3fe5cecd1002e",
+        "not_uploaded_in_this_document_commit": true,
+        "symbol_lines": [
+          {
+            "line_1based": 19,
+            "text": "PUBLIC_OBJECTIVE = {\"quality_full\": 1.0, \"quality_optional_public_baseline\": 0.5,"
+          },
+          {
+            "line_1based": 25,
+            "text": "def model_request(request):"
+          },
+          {
+            "line_1based": 32,
+            "text": "def verify_seal(path, roots):"
+          },
+          {
+            "line_1based": 40,
+            "text": "def group_split(cases):"
+          },
+          {
+            "line_1based": 92,
+            "text": "def decision_from_row(row, job, trace, result, provenance, split, review):"
+          },
+          {
+            "line_1based": 129,
+            "text": "def build(files, output):"
+          }
+        ]
+      },
+      "model_policy.py": {
+        "original_bytes_sha256": "9aa7f648368838c1f255a1439ff3378408b615af5c12d4ea41eeb123595ab56f",
+        "not_uploaded_in_this_document_commit": true,
+        "symbol_lines": [
+          {
+            "line_1based": 19,
+            "text": "def scoring_request(observation, stage):"
+          },
+          {
+            "line_1based": 31,
+            "text": "def normalize(scores, labels):"
+          },
+          {
+            "line_1based": 42,
+            "text": "class CategoricalPolicy:"
+          },
+          {
+            "line_1based": 108,
+            "text": "class LocalCausalScorer:"
+          },
+          {
+            "line_1based": 175,
+            "text": "def load_local_lora(model_directory, tokenizer_directory, identity, *, rank=16,"
+          },
+          {
+            "line_1based": 214,
+            "text": "def assert_same_capability(comparison):"
+          }
+        ]
+      },
+      "teacher_sft_task_eval.py": {
+        "original_bytes_sha256": "a6c3ae26c9d660204e390034654fadd4b482220486e481d03b232ec17f7015a9",
+        "not_uploaded_in_this_document_commit": true,
+        "symbol_lines": [
+          {
+            "line_1based": 32,
+            "text": "def verified_model(training_root, data):"
+          },
+          {
+            "line_1based": 64,
+            "text": "class TaskScorer:"
+          },
+          {
+            "line_1based": 107,
+            "text": "class TaskController:"
+          },
+          {
+            "line_1based": 128,
+            "text": "def load_scorer(model_directory, config, checkpoint, binding):"
+          },
+          {
+            "line_1based": 160,
+            "text": "def result_metrics(outcome):"
+          },
+          {
+            "line_1based": 182,
+            "text": "def evaluate_task(case, controller, question_generate, work_generate, executor_identity,"
+          },
+          {
+            "line_1based": 239,
+            "text": "def confirmed_dev_plan(case_bindings, model_binding, decision_reference, budget_reference=None):"
+          },
+          {
+            "line_1based": 291,
+            "text": "def prepare(training_root, data, six_cases, remaining_cases, output, decision_reference=None,"
+          }
+        ]
+      },
+      "teacher87_native_agent.py": {
+        "original_bytes_sha256": "dd88fdd11cd893c4328436f8e1461bac09de09a491e758e9e694b43916047d4d",
+        "not_uploaded_in_this_document_commit": true,
+        "symbol_lines": [
+          {
+            "line_1based": 11,
+            "text": "AGENT_PROMPT = EXECUTOR_PROMPT.replace("
+          },
+          {
+            "line_1based": 30,
+            "text": "class NativeMiniExecutor(OriginalTeacherExecutor):"
+          },
+          {
+            "line_1based": 78,
+            "text": "def native_episode(runtime, executor, guard):"
+          }
+        ]
+      },
+      "teacher87_eval_budget.py": {
+        "original_bytes_sha256": "464bb6d7362ed1197d09c28b6e7136e5dd7b87679997608877aedd022e7af499",
+        "not_uploaded_in_this_document_commit": true,
+        "symbol_lines": [
+          {
+            "line_1based": 18,
+            "text": "def reservation(request):"
+          },
+          {
+            "line_1based": 34,
+            "text": "class EvalLedger:"
+          },
+          {
+            "line_1based": 128,
+            "text": "class AgentText:"
+          }
+        ]
+      },
+      "teacher60_original_adapter.py": {
+        "original_bytes_sha256": "38ca71b341434c351e78749a704e8c34adf9bee141472d6b01614874c490cb61",
+        "not_uploaded_in_this_document_commit": true,
+        "symbol_lines": [
+          {
+            "line_1based": 26,
+            "text": "def sha(data):"
+          },
+          {
+            "line_1based": 30,
+            "text": "def normalized(text):"
+          },
+          {
+            "line_1based": 36,
+            "text": "def context_present(text, needed):"
+          },
+          {
+            "line_1based": 45,
+            "text": "class ScopedNPC:"
+          },
+          {
+            "line_1based": 90,
+            "text": "class ScopedChat(LocalNPCChat):"
+          },
+          {
+            "line_1based": 103,
+            "text": "class OriginalTeacherExecutor:"
+          },
+          {
+            "line_1based": 142,
+            "text": "class OriginalServiceRuntime(ServiceRuntime):"
+          },
+          {
+            "line_1based": 175,
+            "text": "def compile_case(blueprint, scenarios, costs, directory, scorer_source, provenance):"
+          },
+          {
+            "line_1based": 205,
+            "text": "def freeze_six(audit, output):"
+          },
+          {
+            "line_1based": 244,
+            "text": "def original_score(case, runtime, receipts):"
+          },
+          {
+            "line_1based": 302,
+            "text": "class OfficialTeacherTransport:"
+          },
+          {
+            "line_1based": 325,
+            "text": "def build_factory(cases, config, output, transport):"
+          }
+        ]
+      },
+      "teacher60_pipeline.py": {
+        "original_bytes_sha256": "278844eef1fbe1a27b9e11d077e5b760b6369a7ba8f907d7bde56f1a74bc165c",
+        "not_uploaded_in_this_document_commit": true,
+        "symbol_lines": [
+          {
+            "line_1based": 22,
+            "text": "def blockers(config):"
+          },
+          {
+            "line_1based": 70,
+            "text": "def validate_config(config):"
+          },
+          {
+            "line_1based": 76,
+            "text": "def schedule(config, candidate_manifest):"
+          },
+          {
+            "line_1based": 89,
+            "text": "class TeacherLedger:"
+          },
+          {
+            "line_1based": 191,
+            "text": "def public_response(value):"
+          },
+          {
+            "line_1based": 202,
+            "text": "class TeacherText:"
+          },
+          {
+            "line_1based": 246,
+            "text": "class TeacherController:"
+          },
+          {
+            "line_1based": 262,
+            "text": "def teacher_rollout(runtime, controller, state_guard):"
+          },
+          {
+            "line_1based": 289,
+            "text": "def run_pilot(config, candidate_manifest, root, build_episode, score_components):"
+          }
+        ]
+      },
+      "help_protocol_v2.py": {
+        "original_bytes_sha256": "d42f5b7cdb37d41d06cd5330d466ea1c59967753e0e77ff61c45ba5c53cd291b",
+        "not_uploaded_in_this_document_commit": true,
+        "symbol_lines": [
+          {
+            "line_1based": 16,
+            "text": "EXECUTOR_PROMPT_REVISION = \"tools-explicit-r2\""
+          },
+          {
+            "line_1based": 17,
+            "text": "EXECUTOR_PROMPT = \"\"\"You are the fixed workplace Agent, not its help controller."
+          },
+          {
+            "line_1based": 42,
+            "text": "class HelpObservation:"
+          },
+          {
+            "line_1based": 63,
+            "text": "def decode_observation(data):"
+          },
+          {
+            "line_1based": 81,
+            "text": "class _AgentView:"
+          },
+          {
+            "line_1based": 98,
+            "text": "class _DeliveryTool:"
+          },
+          {
+            "line_1based": 107,
+            "text": "class _ReadSnapshot:"
+          },
+          {
+            "line_1based": 117,
+            "text": "class HelpRuntime:"
+          }
+        ]
+      },
+      "services.py": {
+        "original_bytes_sha256": "5a24800e04cf950d0dc66628cf4b4ddae510aad7e3d9140ff0734b42de0ef5b7",
+        "not_uploaded_in_this_document_commit": true,
+        "symbol_lines": [
+          {
+            "line_1based": 12,
+            "text": "class AmbiguousWrite(RuntimeError):"
+          },
+          {
+            "line_1based": 16,
+            "text": "class JSONTransport:"
+          },
+          {
+            "line_1based": 53,
+            "text": "class WriteJournal:"
+          },
+          {
+            "line_1based": 87,
+            "text": "class ChatMessage:"
+          },
+          {
+            "line_1based": 95,
+            "text": "class RocketChat:"
+          },
+          {
+            "line_1based": 163,
+            "text": "class ControlledNPCChat:"
+          },
+          {
+            "line_1based": 200,
+            "text": "class ChatCompletionJSON:"
+          },
+          {
+            "line_1based": 226,
+            "text": "class WorkTask:"
+          },
+          {
+            "line_1based": 239,
+            "text": "class ToolCommand:"
+          },
+          {
+            "line_1based": 245,
+            "text": "class WorkObservation:"
+          },
+          {
+            "line_1based": 259,
+            "text": "class WorkExecutor:"
+          },
+          {
+            "line_1based": 297,
+            "text": "class ServiceRuntime:"
+          },
+          {
+            "line_1based": 401,
+            "text": "def controller_step(runtime, controller, rng):"
+          }
+        ]
+      },
+      "help_pipeline_v2.py": {
+        "original_bytes_sha256": "9dcb89047fb239655928bd32b65d2f557b8b69397c71c1b402ac6807e29c30cf",
+        "not_uploaded_in_this_document_commit": true
+      }
+    }
+  },
+  "publication": {
+    "new_API_calls": 0,
+    "new_GPU_inferences": 0,
+    "new_training_updates": 0,
+    "original_32_episodes_32_traces_model_and_ledger_unchanged": true,
+    "private_reference_library_raw_requests_ledger_checkpoint_not_uploaded": true
+  }
+}
