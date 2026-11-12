@@ -213,6 +213,10 @@ class DurableLedger:
             require(operation == "ordinary" and index == 0 and
                     fingerprint(request) == continuation["request_sha256"],
                     "Only frozen single prompt-v2 validation")
+        native = self.plan.get("native_recovery")
+        if native is not None and native["phase"] == "validation":
+            require(operation == "ordinary" and index == 0 and fingerprint(request) == native["request_sha256"],
+                    "Only exact single native validation")
         body, bound, observation, assistance = prepare_request(request, operation, self.plan)
         call_id = f"{episode}:{operation}:{index}"
         cached = self._reserve(call_id, episode, operation, hashlib.sha256(body).hexdigest(), bound)

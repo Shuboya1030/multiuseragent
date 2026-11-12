@@ -7,7 +7,8 @@ MODEL_MAXIMUM_BOUND = {
 
 
 def uses_model_maximum(plan):
-    return plan["token_bound"] == MODEL_MAXIMUM_BOUND
+    from .native_protocol import BOUND
+    return plan["token_bound"] in (MODEL_MAXIMUM_BOUND, BOUND)
 
 
 def reservation_output_bound(plan):

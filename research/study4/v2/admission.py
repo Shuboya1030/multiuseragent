@@ -23,7 +23,8 @@ SOURCE_FILES = ("admission.py", "durable.py", "http_transport.py", "mini_request
                 "contracts.py", "executor.py", "oracle.py", "npc_rule.py", "budget.py", "provider_bound.py",
                 "configs/provider_model_maximum_bound_v1.json", "paid_driver.py", "runtime.py",
                 "scheduler.py", "benchmark.py", "configs/ceiling_pilot.json", "response_diagnosis.py",
-                "recovery_guard.py", "diagnostic_dispatch.py", "ceiling_continuation.py")
+                "recovery_guard.py", "diagnostic_dispatch.py", "ceiling_continuation.py",
+                "native_protocol.py", "native_driver.py", "configs/native_function_contract_v1.json")
 
 
 def runtime_binding():
@@ -96,6 +97,9 @@ def validate_binding(plan, approval, root, endpoint, now=None):
 def token_bound(body, plan):
     require(isinstance(body, bytes) and len(body) <= plan["max_request_bytes"], "Serialized request byte cap")
     proof = plan["token_bound"]
+    from .native_protocol import BOUND, VERSION
+    require((proof == BOUND) == (plan.get("native_protocol") == VERSION),
+            "Native local-function billing scope/version mismatch")
     if uses_model_maximum(plan):
         require(plan["mode"] in {"provider", "local_test"} and proof["model"] == MODEL and
                 plan["caps"]["input_tokens"] == proof["input_tokens"] and
@@ -110,10 +114,20 @@ def token_bound(body, plan):
 
 def prepare_request(request, operation, plan):
     require(operation in {"control", "question", "ordinary"}, "Only scheduled mini operations")
-    require(isinstance(request.get("input"), list) and len(request["input"]) == 2 and
-            all(isinstance(item, dict) and isinstance(item.get("content"), str) for item in request["input"]),
+    native = plan.get("native_protocol")
+    if native is not None:
+        from .native_protocol import VERSION, build_native_request
+        require(native == VERSION, "Native protocol version mismatch")
+        require(isinstance(request.get("input"), list) and len(request["input"]) >= 2 and
+                isinstance(request["input"][0].get("content"), str) and
+                isinstance(request["input"][-1].get("content"), str), "Explicit native text/history input")
+        body = strict_json(request["input"][-1]["content"])
+    else:
+        body = None
+    require(native is not None or (isinstance(request.get("input"), list) and len(request["input"]) == 2 and
+            all(isinstance(item, dict) and isinstance(item.get("content"), str) for item in request["input"])),
             "Only explicit text messages; no image/audio/file/conversation input")
-    body = strict_json(request["input"][1]["content"])
+    body = body if native is not None else strict_json(request["input"][1]["content"])
     observation = body["state"]
     kwargs = {}
     if operation == "control":
@@ -121,8 +135,12 @@ def prepare_request(request, operation, plan):
         kwargs["proposed"] = None if proposal is None else parse_tool(canonical(proposal))
     elif operation == "question":
         kwargs = {"person_id": body["person_id"], "assistance": body.get("request_plan")}
-    builder = build_provider_request if uses_model_maximum(plan) else build_request
-    require(request == builder(operation, observation, **kwargs), "Static public wire/schema/model/billing domain drift")
+    if native is not None:
+        expected = build_native_request(operation, observation, native_history=request["input"][1:-1], **kwargs)
+    else:
+        builder = build_provider_request if uses_model_maximum(plan) else build_request
+        expected = builder(operation, observation, **kwargs)
+    require(request == expected, "Static public wire/schema/model/billing domain drift")
     require(request["max_output_tokens"] == plan["caps"]["output_tokens"], "Output cap drift")
     raw = canonical(request).encode("utf-8")
     bound = token_bound(raw, plan)
@@ -141,6 +159,18 @@ def decode_response(raw, operation, observation, assistance, plan, input_bound):
                 isinstance(response["id"], str) and response["id"], "Incomplete/model-drift response")
         return response["output"]
     output = at_stage("response_envelope", envelope)
+    if plan.get("native_protocol") is not None:
+        from .native_protocol import decode_native_output
+        data, function = decode_native_output(output, operation, observation, assistance)
+        def native_usage():
+            incoming, outgoing = response["usage"]["input_tokens"], response["usage"]["output_tokens"]
+            require(type(incoming) is int and type(outgoing) is int and 0 <= incoming <= input_bound and
+                    0 <= outgoing <= plan["caps"]["output_tokens"], "Usage missing/invalid/above reservation")
+            return incoming, outgoing
+        incoming, outgoing = at_stage("usage", native_usage)
+        return {"data": data, "native_function": function,
+                "usage": {"input_tokens": incoming, "output_tokens": outgoing},
+                "response_id": response["id"], "model": response["model"]}
     def message():
         require(isinstance(output, list) and len(output) == 1 and output[0]["type"] == "message" and
                 output[0]["role"] == "assistant", "Foreign/multiple/tool response")

@@ -6,6 +6,9 @@ from .contracts import fingerprint, require
 
 
 def prior_hold(plan):
+    if plan.get("native_recovery") is not None:
+        from .native_driver import verify_history
+        return verify_history(plan["native_recovery"]["history"])["held"]
     if plan.get("continuation") is not None:
         from .ceiling_continuation import verify_history
         return verify_history(plan["continuation"]["history"])[0]
@@ -24,6 +27,10 @@ def prior_hold(plan):
 
 
 def validate_recovery(plan, approval):
+    if plan.get("native_recovery") is not None:
+        from .native_driver import validate_recovery as validate_native
+        validate_native(plan, approval)
+        return
     if plan.get("continuation") is not None:
         from .ceiling_continuation import validate_continuation
         validate_continuation(plan, approval)
@@ -49,6 +56,9 @@ def validate_recovery(plan, approval):
 
 
 def prior_settled(plan):
+    if plan.get("native_recovery") is not None:
+        from .native_driver import verify_history
+        return verify_history(plan["native_recovery"]["history"])["settled"]
     if plan.get("continuation") is not None:
         from .ceiling_continuation import verify_history
         return verify_history(plan["continuation"]["history"])[1]

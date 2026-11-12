@@ -111,7 +111,11 @@ class PaidMini:
 def run_fresh(root, plan, approval, transport, on_group=None):
     root = Path(root).resolve()
     validate_binding(plan, approval, root, transport.endpoint)
-    if plan.get("continuation") is not None:
+    if plan.get("native_recovery") is not None:
+        from .native_driver import make_plan
+        require(plan["native_recovery"]["phase"] == "batch" and plan == make_plan(plan["native_recovery"]),
+                "Only exact authorized native continuation of frozen48 slots")
+    elif plan.get("continuation") is not None:
         from .ceiling_continuation import make_plan
         require(plan["continuation"]["phase"] == "batch" and plan == make_plan(plan["continuation"]),
                 "Only exact authorized continuation of frozen48 slots")
@@ -129,13 +133,19 @@ def run_fresh(root, plan, approval, transport, on_group=None):
             current = slot
             journal.append({"kind": "episode_start", **slot})
             task = load_task(slot["task_id"])
-            mini = PaidMini(ledger, transport, slot["episode_id"], journal)
+            if plan.get("native_protocol") is not None:
+                from .native_driver import NativeMini
+                mini = NativeMini(ledger, transport, slot["episode_id"], journal)
+            else:
+                mini = PaidMini(ledger, transport, slot["episode_id"], journal)
             runtime = SharedRuntime(task.public, mini, BenchmarkNPC(task), slot["episode_id"],
                                     max_actions=plan["max_actions"])
             scheduler = FourArmScheduler(runtime, mini, slot["arm"], BenchmarkReference(task), now)
             timestamp_sink = runtime.event_sink
             def observed_event(event):
                 timestamp_sink(event)
+                if plan.get("native_protocol") is not None:
+                    mini.observe_event(event)
                 journal.append({"kind": "runtime_event", "episode_id": slot["episode_id"], "event": event})
             runtime.event_sink = observed_event
             try:

@@ -6,6 +6,7 @@
 旧SFT87及其32episode结果不变，[旧结果入口](../README.md)继续保留。
 
 阅读：[v1.1设计/变更合同](DESIGN_v1_1_ZH.md)＋[v1.2本地适配补充](LOCAL_ADAPTER_CONTRACT_v1_2_ZH.md) →
+[原生单函数升级合同](NATIVE_FUNCTION_PROTOCOL_v1_ZH.md) →
 [最新实际ceiling部分轨迹/停止报告](reports/CEILING_V2_ACTUAL_PARTIAL_ZH.md) →
 [前次prompt v2传输停止与诊断修复](reports/PROMPT_V2_VALIDATION_STOP_ZH.md) →
 [前次双动作诊断](reports/SINGLE_DIAGNOSTIC_ACTUAL_ZH.md) →
@@ -33,6 +34,7 @@ python -m unittest research.study4.v2.test_diagnostic_dispatch -v
 python -m unittest research.study4.v2.test_prompt_single_action -v
 python -m unittest research.study4.v2.test_ceiling_continuation -v
 python -m unittest research.study4.v2.test_transport_diagnosis -v
+python -m unittest research.study4.v2.test_native_protocol -v
 python -m research.study4.v2.local_acceptance --output LOCAL_PROOF_NEW.json
 python -m research.study4.v2.local_ceiling_check --output LOCAL_ADAPTER_NEW.json
 ```

@@ -66,10 +66,19 @@ def inspect_response_shape(raw):
     result["output_count"] = len(output)
     items = []
     for item in output[:16]:
-        row = {"shape": key_shape(item, {"type", "role", "content", "summary", "id", "status"})}
+        row = {"shape": key_shape(item, {"type", "role", "content", "summary", "id", "status",
+                                       "name", "arguments", "call_id"})}
         if isinstance(item, dict):
             row["type"] = known_enum(item.get("type"), OUTPUT_TYPES)
             row["role"] = known_enum(item.get("role"), ("assistant", "user", "system"))
+            if item.get("type") == "function_call":
+                row["function"] = known_enum(item.get("name"), set(FIELDS) | {"choose_help", "compose_help_request"})
+                if isinstance(item.get("arguments"), str):
+                    try:
+                        row["argument_shape"] = key_shape(strict_json(item["arguments"]),
+                                                         ARG_KEYS | APP_KEYS)
+                    except ValueError as error:
+                        row["arguments_parse_error_type"] = type(error).__name__
             content = item.get("content")
             row["content_type"] = type(content).__name__
             if isinstance(content, list):
