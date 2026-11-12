@@ -1,0 +1,22 @@
+{
+  "schema": "study4-v2-read-only-scorer-binding-v1",
+  "repository": "Shuboya1030/tribalbench",
+  "commit": "4260bdc626548f59042f318cdf0566490e91b9d5",
+  "path": "scorer/scorer.py",
+  "source_url": "https://github.com/Shuboya1030/tribalbench/blob/4260bdc626548f59042f318cdf0566490e91b9d5/scorer/scorer.py",
+  "original_bytes_sha256": "e6b47e4a251bdc44d2fbfe389e12b81273e6472092958fe04e33297f28a33e78",
+  "git_blob_sha": "85ff59b7beacde667c7c60932e763aecf9e7fe92",
+  "grader_version": "tribalbench-1.0",
+  "weights": {"lambda": 0.05, "mu": 0.3, "nu": 0.1},
+  "actual_source_R": "T - lambda*max(0,C-C_star) - mu*Nauth - nu*max(0,Nwaste-Nauth)",
+  "Must_C_star": "sum over gold DAG nodes of minimum admissible recipient cost (default cost 1)",
+  "Optional_C_star": 0,
+  "Nwaste": "wrong_person + redundant",
+  "Nauth": "authorization-keyword requests to non-admissible recipients",
+  "read_at": "2026-11-11",
+  "read_via": "GitHub read API at immutable ref; base64 original bytes hashed",
+  "remote_source_executed": false,
+  "official_scoring_in_local_fixture_report": false,
+  "official_runner_scoring_gate": "blocked until frozen source acquisition, execution and evidence-binding integration are separately accepted",
+  "historical_SFT87_rule_unchanged": true
+}

@@ -3,6 +3,10 @@
 更新：2026-11-10。**训练已完成；当前模型没有体现任务收益。**
 本目录是研究报告发布，不是可直接复跑的完整训练包；原始数据、模型和请求未随本次上传。
 
+**2026-11-11 v2推进**：[共享协议与零付费第一阶段](v2/README.md)已另立版本，
+含设计v1.1、可本地复跑的fixture基础、实际门报告和待签ceiling预算；
+不改下述SFT87历史结果，不代表新训练或真实ceiling已完成。
+
 研究问题：在固定任务执行器和NPC的能力下，单独学习联合决策 **when（何时求助）＋whom（向谁求助）**，
 能否比prompt或先when后whom获得更好的质量—成本权衡？这是待检验假设，不是已实现结论。
 
@@ -34,6 +38,8 @@
 小型机器可读证据：[训练/评测摘要](results/evidence/summary.json)、
 [精选trace索引](results/evidence/trace_cases.json)、
 [本次发布文件指纹](results/evidence/publication_manifest.json)。
+上述旧发布manifest针对提交`3c6e8b3`的历史LF字节（包括当时README），
+不用于断言随后新增导航的README字节未变；v2有独立文件指纹。
 
 ## 已做与未做
 
