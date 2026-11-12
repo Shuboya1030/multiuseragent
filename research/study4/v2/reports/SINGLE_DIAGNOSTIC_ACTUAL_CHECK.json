@@ -1,0 +1,611 @@
+{
+  "schema": "study4-single-diagnostic-actual-check-1",
+  "local_date": "2026-11-12",
+  "actual_runtime_binding": {
+    "platform": "Windows",
+    "protocol": "study4-controller-v2-local-1.1",
+    "python": "3.12.10",
+    "source_byte_semantics": "UTF8 LF normalized",
+    "source_sha256": {
+      "admission.py": "df0e86bd681cc90d14b592ffd9f216e4f2bbfd46600bc769d894b834c45f647c",
+      "benchmark.py": "46a4671470d41425481aa9f61373cbb103819aca7f2a73330828a0494b72f0b9",
+      "budget.py": "1bd91deddb52c55ba64d3a9fa7fc46216a739b44385d76d0a39fb0d6f10edf63",
+      "configs/ceiling_pilot.json": "523e0caae6c4ffe99459ac02ad30ecd7e4f4dcb224c8787b4a47163fee4b9afd",
+      "configs/provider_model_maximum_bound_v1.json": "afa837d1f46acd3d5a3309d92439947e226f3a2fe78aa0b97b736cd3aa91434f",
+      "contracts.py": "150c4fe0e04f8033ba75275072b77488748081ee3992d9c90bbb59b3b99ed087",
+      "diagnostic_dispatch.py": "8b8bc910a696e1f403849f0d5d8d15c1f164a76c2ffc1e61b73f72d663ee4bd8",
+      "durable.py": "3ae65d3a8fca6ae1d85bf1ae1efb0e7298cf871c6378537cd06b8e3a4f726d7a",
+      "executor.py": "2044e4e1d454ff31df3bf67a7094e1470191eff28046a553b3dd5f1496862c6d",
+      "http_transport.py": "9da1baf666850d8d32998ed5ffb8ec8c61b123fd32d5cef69172f9bd408924ac",
+      "mini_request.py": "911d6fa9ffce6136209217b7f38f5f00b3005a9552f1b8d3dd03f33b0b2eafce",
+      "npc_rule.py": "82e3b757921f9ac9a4bec32228ee2178945472e48030c03cb313c19812907f0e",
+      "oracle.py": "785ac2c980c0619e948278181c9d4c5cdcb6c4d1b8086469b63afd495955c6e4",
+      "paid_driver.py": "7fdb11a42b2f2341a15016cc88a1081dec05b4e40e3d5f810ebee181879e735e",
+      "provider_bound.py": "ea3988374b3df4172fdc58756b33c877b5b2e46433136e2fa9075622fca1a5b4",
+      "recovery_guard.py": "5678f75f32e942d9cde4d45c317c342b2fa711d856ebbc85dbab05d367fad817",
+      "response_diagnosis.py": "05460e461d17412d4cc7b8175aeb74bf11ba7e0a99612a0bac0ddebe127c104f",
+      "runtime.py": "e721937e4151ace616be81ab4299aa77f7816ae4f8837c3672fa46c7adeb7ae1",
+      "scheduler.py": "d5aa3f3ec86b9b6401e7a4f42909c1a08dd95508ff5a3dbdaf565327fd239cf3"
+    }
+  },
+  "actual_source_preserved_commit": null,
+  "original_request_sha256": "977150bed8a4c3477abbee2fa260b5e782925770747b2cd2a626e91acbacd8c9",
+  "same_request_semantics_not_same_response": true,
+  "actual_original_failure_cause_still_unknown": true,
+  "original_old_batch_file_sha256_unchanged": {
+    "APPROVAL.json": "da7cf3d68a8e0eb092325a5bf30c657655bda347244fdae47e7a1cbb084ad67c",
+    "FINAL_RECEIPT.json": "ff0e53edab3b6790f2691e219ce06ccf4c88fa7b51025d1f617acd979a288910",
+    "FRESH_STARTED.json": "860b8ec7864568ee1bfa27a857ca893fe93c52efa5721c1080cd4f76302374fd",
+    "FROZEN_PLAN.json": "a24a58e551463fdcf32fb30c9ca3369791f871db6a811c573bae1730d7ce8fce",
+    "events.jsonl": "8bf92ecaadf8fd6efc86259efdc81711499dc41345eaf3365892154539b5e0f7",
+    "slot-00-INCOMPLETE.json": "0d542d68e0e3b81437775548f70696462e0d2235d8b9dd91ff6c1a9fa22dbbba",
+    "study4-v2-rule-ceiling50-20261111-v1.lock": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "study4-v2-rule-ceiling50-20261111-v1.sqlite3": "4dbd8da07c0128b1d86ad2ac356fc218a7f2dc024a46242fe7959fba16349fe7",
+    "study4-v2-rule-ceiling50-20261111-v1.sqlite3-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "study4-v2-rule-ceiling50-20261111-v1.sqlite3-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "actual_diagnostic_file_sha256": {
+    "ACTUAL_RESPONSE_SHAPE.json": "2919909340db0fff8407d70156bc755317d4ba504f13e1524d031ecfe430e750",
+    "APPROVAL.json": "201fadd3f991e5ee3e08c1f00b1f96bcb7cd5cbe2b5090f0236cd47d638852a8",
+    "DIAGNOSTIC_FINAL.json": "4e7e3848aa6bb156ff2843ab44316762b68b3bee9ae5e38313aa2327ef7af3e6",
+    "DIAGNOSTIC_STARTED.json": "1e1f3943a8695cef6bfc1c9bcdc4346516dd282b1e664a1e39c5547786ebd7a7",
+    "PLAN.json": "25e949539a4b8028329575099eddefac820bec100fe30acf9219dc25c80741b3",
+    "PRE_NETWORK_GATE_APPROVAL.json": "c5612698796f9c07d9fc923137089bce3adac9d27128afe248f7a98be4dcc40b",
+    "PRE_NETWORK_GATE_OBSERVATION.json": "944eadf2dbbb6be4c7bd20bfc80a50778cb8a752367795cb7b24a2e953118e24",
+    "PRE_NETWORK_GATE_PLAN.json": "aefca629d9f32bcd1023671683ccab5726259e16e4040847a48c700986c2e014",
+    "REQUEST.json": "915b9f4c4355d8527ebd9fe5bd474a4a153e6d22102006c27472dee4782186cf",
+    "study4-v2-single-diagnostic-20261112-v1.lock": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "study4-v2-single-diagnostic-20261112-v1.sqlite3": "ed647e4806c0f4c803311e2b0883fa2a1276618a58b2a0c1a36f6f9aef656387"
+  },
+  "actual_original_files_byte_unchanged": true,
+  "actual_response_shape": {
+    "actual_not_reconstruction": true,
+    "diagnostic": {
+      "reported_usage_NOT_settlement": {
+        "input_tokens": 1101,
+        "output_tokens": 134
+      },
+      "returned_model_matches": true,
+      "service_tier": "default",
+      "status": "completed"
+    },
+    "response_bytes": 3531,
+    "response_sha256": "8771ed5e7e505d482885843e044636de7c168488efc7ed1c57484f2c19f3de04",
+    "shape": {
+      "no_arbitrary_response_text_or_key_values_retained": true,
+      "output": [
+        {
+          "content": [
+            {
+              "application_shape": {
+                "known_keys": [
+                  "arguments",
+                  "tool"
+                ],
+                "known_value_types": {
+                  "arguments": "str",
+                  "tool": "str"
+                },
+                "other_key_count": 0,
+                "type": "dict"
+              },
+              "argument_shape": {
+                "known_keys": [
+                  "content",
+                  "path"
+                ],
+                "known_value_types": {
+                  "content": "str",
+                  "path": "str"
+                },
+                "other_key_count": 0,
+                "type": "dict"
+              },
+              "shape": {
+                "known_keys": [
+                  "annotations",
+                  "logprobs",
+                  "text",
+                  "type"
+                ],
+                "known_value_types": {
+                  "annotations": "list",
+                  "logprobs": "list",
+                  "text": "str",
+                  "type": "str"
+                },
+                "other_key_count": 0,
+                "type": "dict"
+              },
+              "tool": "write_file",
+              "type": "output_text"
+            }
+          ],
+          "content_count": 1,
+          "content_type": "list",
+          "role": "assistant",
+          "shape": {
+            "known_keys": [
+              "content",
+              "id",
+              "role",
+              "status",
+              "type"
+            ],
+            "known_value_types": {
+              "content": "list",
+              "id": "str",
+              "role": "str",
+              "status": "str",
+              "type": "str"
+            },
+            "other_key_count": 1,
+            "type": "dict"
+          },
+          "type": "message"
+        },
+        {
+          "content": [
+            {
+              "application_shape": {
+                "known_keys": [
+                  "arguments",
+                  "tool"
+                ],
+                "known_value_types": {
+                  "arguments": "str",
+                  "tool": "str"
+                },
+                "other_key_count": 0,
+                "type": "dict"
+              },
+              "argument_shape": {
+                "known_keys": [
+                  "channel",
+                  "content"
+                ],
+                "known_value_types": {
+                  "channel": "str",
+                  "content": "str"
+                },
+                "other_key_count": 0,
+                "type": "dict"
+              },
+              "shape": {
+                "known_keys": [
+                  "annotations",
+                  "logprobs",
+                  "text",
+                  "type"
+                ],
+                "known_value_types": {
+                  "annotations": "list",
+                  "logprobs": "list",
+                  "text": "str",
+                  "type": "str"
+                },
+                "other_key_count": 0,
+                "type": "dict"
+              },
+              "tool": "post_channel",
+              "type": "output_text"
+            }
+          ],
+          "content_count": 1,
+          "content_type": "list",
+          "role": "assistant",
+          "shape": {
+            "known_keys": [
+              "content",
+              "id",
+              "role",
+              "status",
+              "type"
+            ],
+            "known_value_types": {
+              "content": "list",
+              "id": "str",
+              "role": "str",
+              "status": "str",
+              "type": "str"
+            },
+            "other_key_count": 1,
+            "type": "dict"
+          },
+          "type": "message"
+        }
+      ],
+      "output_count": 2,
+      "output_type": "list",
+      "root": {
+        "known_keys": [
+          "error",
+          "id",
+          "incomplete_details",
+          "model",
+          "output",
+          "service_tier",
+          "status",
+          "usage"
+        ],
+        "known_value_types": {
+          "error": "NoneType",
+          "id": "str",
+          "incomplete_details": "NoneType",
+          "model": "str",
+          "output": "list",
+          "service_tier": "str",
+          "status": "str",
+          "usage": "dict"
+        },
+        "other_key_count": 30,
+        "type": "dict"
+      }
+    }
+  },
+  "actual_final": {
+    "at": "2026-11-12T18:22:55.239970+00:00",
+    "automatic_retry": false,
+    "budget": {
+      "calls": 1,
+      "cap_USD": "50.00",
+      "held_USD_upper": "1.716000",
+      "in_flight": 0,
+      "mode": "provider",
+      "occupied_USD_upper": "1.716000",
+      "prior_unknown_held_USD": "0.858000",
+      "settled": 0,
+      "unknown": 1
+    },
+    "calls": [
+      {
+        "charged": null,
+        "diagnostic": {
+          "cause_type": "ValueError",
+          "reported_usage_NOT_settlement": {
+            "input_tokens": 1101,
+            "output_tokens": 134
+          },
+          "response_shape": {
+            "no_arbitrary_response_text_or_key_values_retained": true,
+            "output": [
+              {
+                "content": [
+                  {
+                    "application_shape": {
+                      "known_keys": [
+                        "arguments",
+                        "tool"
+                      ],
+                      "known_value_types": {
+                        "arguments": "str",
+                        "tool": "str"
+                      },
+                      "other_key_count": 0,
+                      "type": "dict"
+                    },
+                    "argument_shape": {
+                      "known_keys": [
+                        "content",
+                        "path"
+                      ],
+                      "known_value_types": {
+                        "content": "str",
+                        "path": "str"
+                      },
+                      "other_key_count": 0,
+                      "type": "dict"
+                    },
+                    "shape": {
+                      "known_keys": [
+                        "annotations",
+                        "logprobs",
+                        "text",
+                        "type"
+                      ],
+                      "known_value_types": {
+                        "annotations": "list",
+                        "logprobs": "list",
+                        "text": "str",
+                        "type": "str"
+                      },
+                      "other_key_count": 0,
+                      "type": "dict"
+                    },
+                    "tool": "write_file",
+                    "type": "output_text"
+                  }
+                ],
+                "content_count": 1,
+                "content_type": "list",
+                "role": "assistant",
+                "shape": {
+                  "known_keys": [
+                    "content",
+                    "id",
+                    "role",
+                    "status",
+                    "type"
+                  ],
+                  "known_value_types": {
+                    "content": "list",
+                    "id": "str",
+                    "role": "str",
+                    "status": "str",
+                    "type": "str"
+                  },
+                  "other_key_count": 1,
+                  "type": "dict"
+                },
+                "type": "message"
+              },
+              {
+                "content": [
+                  {
+                    "application_shape": {
+                      "known_keys": [
+                        "arguments",
+                        "tool"
+                      ],
+                      "known_value_types": {
+                        "arguments": "str",
+                        "tool": "str"
+                      },
+                      "other_key_count": 0,
+                      "type": "dict"
+                    },
+                    "argument_shape": {
+                      "known_keys": [
+                        "channel",
+                        "content"
+                      ],
+                      "known_value_types": {
+                        "channel": "str",
+                        "content": "str"
+                      },
+                      "other_key_count": 0,
+                      "type": "dict"
+                    },
+                    "shape": {
+                      "known_keys": [
+                        "annotations",
+                        "logprobs",
+                        "text",
+                        "type"
+                      ],
+                      "known_value_types": {
+                        "annotations": "list",
+                        "logprobs": "list",
+                        "text": "str",
+                        "type": "str"
+                      },
+                      "other_key_count": 0,
+                      "type": "dict"
+                    },
+                    "tool": "post_channel",
+                    "type": "output_text"
+                  }
+                ],
+                "content_count": 1,
+                "content_type": "list",
+                "role": "assistant",
+                "shape": {
+                  "known_keys": [
+                    "content",
+                    "id",
+                    "role",
+                    "status",
+                    "type"
+                  ],
+                  "known_value_types": {
+                    "content": "list",
+                    "id": "str",
+                    "role": "str",
+                    "status": "str",
+                    "type": "str"
+                  },
+                  "other_key_count": 1,
+                  "type": "dict"
+                },
+                "type": "message"
+              }
+            ],
+            "output_count": 2,
+            "output_type": "list",
+            "root": {
+              "known_keys": [
+                "error",
+                "id",
+                "incomplete_details",
+                "model",
+                "output",
+                "service_tier",
+                "status",
+                "usage"
+              ],
+              "known_value_types": {
+                "error": "NoneType",
+                "id": "str",
+                "incomplete_details": "NoneType",
+                "model": "str",
+                "output": "list",
+                "service_tier": "str",
+                "status": "str",
+                "usage": "dict"
+              },
+              "other_key_count": 30,
+              "type": "dict"
+            }
+          },
+          "returned_model_matches": true,
+          "service_tier": "default",
+          "status": "completed",
+          "validation_stage": "output_items",
+          "validator_frames": [
+            {
+              "file": "response_diagnosis.py",
+              "function": "at_stage",
+              "line": 35
+            },
+            {
+              "file": "admission.py",
+              "function": "message",
+              "line": 145
+            },
+            {
+              "file": "contracts.py",
+              "function": "require",
+              "line": 33
+            }
+          ]
+        },
+        "error_type": "ResponseStageError",
+        "id": "diagnostic-only-no-tools:ordinary:0",
+        "input_bound": 272000,
+        "input_tokens": null,
+        "output_bound": 128000,
+        "output_tokens": null,
+        "reserved": "0.8580",
+        "response_bytes": 3531,
+        "response_sha256": "8771ed5e7e505d482885843e044636de7c168488efc7ed1c57484f2c19f3de04",
+        "state": "unknown"
+      }
+    ],
+    "complete_episodes": 0,
+    "environment_tools_executed": 0,
+    "error_type": "ResponseStageError",
+    "model_HTTP_attempts": 1,
+    "plan_sha256": "ffb85c32427f04a446372626161bd3c6ea6642a4886c1087520d1ce7c5c7bf94",
+    "prior_unknown_unchanged": true,
+    "request_sha256": "977150bed8a4c3477abbee2fa260b5e782925770747b2cd2a626e91acbacd8c9",
+    "schema": "study4-single-diagnostic-v1"
+  },
+  "cumulative_model_calls": 2,
+  "cumulative_unknown_calls": 2,
+  "settled_calls": 0,
+  "same_total_cap_USD": "50.00",
+  "cumulative_occupied_USD_upper": "1.716000",
+  "this_reported_usage_reference_NOT_settlement_USD": ".001571625",
+  "actual_tools": 0,
+  "actual_complete_episodes": 0,
+  "no_GET_or_paid_retry": true,
+  "new_request_allowance_exhausted": true,
+  "GPU_jobs": 0,
+  "pre_network_gate_observation": {
+    "approval_scope_or_request_changed": false,
+    "diagnostic_ledger_created": false,
+    "first_guard": "Frozen original zero-length WAL/shm matched; no unapplied WAL frames",
+    "fix": "Only mutex file omitted from under-lock byte reads; every actual research/ledger artifact remains exact",
+    "model_HTTP_calls": 0,
+    "second_guard": "Own Windows byte-range lock prevented hashing original mutex byte"
+  },
+  "local_tests_passed": 103,
+  "passed_test_ids": [
+    "research.study4.v2.test_diagnostic_dispatch.SingleDiagnosticTests.test_exact_frozen_empty_wal_allowed_but_any_wal_frames_block",
+    "research.study4.v2.test_diagnostic_dispatch.SingleDiagnosticTests.test_exactly_one_success_settles_only_new_call_prior_unchanged_no_tools_or_replay",
+    "research.study4.v2.test_diagnostic_dispatch.SingleDiagnosticTests.test_one_decode_failure_retains_both_unknowns_and_safe_actual_shape",
+    "research.study4.v2.test_diagnostic_dispatch.SingleDiagnosticTests.test_prior_tamper_and_request_drift_block_before_call_or_new_ledger",
+    "research.study4.v2.test_persistent_diagnosis.PersistentDiagnosisTests.test_exact_failure_stage_and_safe_shape_survive_real_child_exit",
+    "research.study4.v2.test_persistent_diagnosis.PersistentDiagnosisTests.test_known_envelope_shapes_inspected_without_acceptance_or_task_values",
+    "research.study4.v2.test_persistent_diagnosis.PersistentDiagnosisTests.test_old_ledger_schema_not_reinterpreted_as_new",
+    "research.study4.v2.test_persistent_diagnosis.PersistentDiagnosisTests.test_recovery_requires_new_source_and_includes_old_unknown_in_same50cap",
+    "research.study4.v2.test_response_diagnosis.OfflineDiagnosisTests.test_candidate_layers_reproduce_separate_failures_not_actual_root_cause",
+    "research.study4.v2.test_response_diagnosis.OfflineDiagnosisTests.test_embedded_arguments_diagnostic_keeps_only_allowlisted_key_types",
+    "research.study4.v2.test_paid_driver.FreshDriverTests.test_complete_scripted48_journal_hashes_and_rerun_cannot_pay_or_repost",
+    "research.study4.v2.test_paid_driver.FreshDriverTests.test_exact_frozen_scope_balanced_groups_and_no_provider_seed_claim",
+    "research.study4.v2.test_paid_driver.FreshDriverTests.test_frozen_plan_or_approval_drift_never_creates_ledger",
+    "research.study4.v2.test_paid_driver.FreshDriverTests.test_tool_side_effect_then_interrupt_never_replayed_even_if_models_settled",
+    "research.study4.v2.test_paid_driver.FreshDriverTests.test_usage_failure_stops_whole_fresh_batch_keeps_unknown_and_no_resumption",
+    "research.study4.v2.test_provider_bound.ModelMaximumTests.test_durable_reserve_full_max_settle_reported_mock_usage_and_replay_without_send",
+    "research.study4.v2.test_provider_bound.ModelMaximumTests.test_public_actions_unchanged_and_whole_model_bound_not_prompt_token_estimate",
+    "research.study4.v2.test_provider_bound.ModelMaximumTests.test_real_provider_dispatch_still_blocks_without_independent_approval_before_any_files_or_dns",
+    "research.study4.v2.test_provider_bound.ModelMaximumTests.test_remaining_less_than_full_reserve_blocks_even_after_small_settlement",
+    "research.study4.v2.test_provider_bound.ModelMaximumTests.test_unknown_usage_tier_or_overbound_keeps_full_max_after_restart",
+    "research.study4.v2.test_provider_bound.ModelMaximumTests.test_unsupported_billable_modes_rejected_before_reserve_or_transport",
+    "research.study4.v2.test_durable_preflight.DurableTests.test_aggregate_call_token_and_per_operation_limits_survive_settlement",
+    "research.study4.v2.test_durable_preflight.DurableTests.test_batch_process_exclusion_and_no_create_overwrite",
+    "research.study4.v2.test_durable_preflight.DurableTests.test_byte_bound_is_only_proved_for_local_identity_and_unicode_bytes",
+    "research.study4.v2.test_durable_preflight.DurableTests.test_duplicate_embedded_tool_arguments_cannot_silently_change_the_action",
+    "research.study4.v2.test_durable_preflight.DurableTests.test_expired_wrong_storage_or_runtime_binding_blocks_creation",
+    "research.study4.v2.test_durable_preflight.DurableTests.test_pending_or_unmatched_authorization_blocks_before_files_dns_or_socket",
+    "research.study4.v2.test_durable_preflight.DurableTests.test_persist_before_send_and_reopen_completed_without_resending",
+    "research.study4.v2.test_durable_preflight.DurableTests.test_real_process_crash_after_settle_replays_and_does_not_pay_again",
+    "research.study4.v2.test_durable_preflight.DurableTests.test_real_process_crash_reservation_or_sent_becomes_unknown_without_retry",
+    "research.study4.v2.test_durable_preflight.DurableTests.test_reused_id_changed_request_and_mutated_binding_block_without_send",
+    "research.study4.v2.test_durable_preflight.DurableTests.test_socket_failure_is_one_unknown_attempt_with_no_retry",
+    "research.study4.v2.test_durable_preflight.DurableTests.test_static_schema_is_local_validation_not_provider_acceptance",
+    "research.study4.v2.test_durable_preflight.DurableTests.test_tiny_usd_call_total_tokens_and_episode_limits_prevent_send",
+    "research.study4.v2.test_durable_preflight.DurableTests.test_unknown_usage_parse_model_and_resource_errors_hold_max_and_stop",
+    "research.study4.v2.test_durable_preflight.HTTPTests.test_endpoint_and_permit_gates_do_not_resolve_external_hosts",
+    "research.study4.v2.test_durable_preflight.HTTPTests.test_loopback_absolute_deadline_and_cleanup",
+    "research.study4.v2.test_durable_preflight.HTTPTests.test_loopback_http_observes_committed_sending_no_auth_and_replay_skips_socket",
+    "research.study4.v2.test_durable_preflight.HTTPTests.test_redirect_is_not_followed_and_response_size_cap_retains_unknown",
+    "research.study4.v2.test_ceiling_adapter.BudgetTests.test_global_episode_bound_and_rule_NPC_cost_mode",
+    "research.study4.v2.test_ceiling_adapter.BudgetTests.test_pending_budget_dispatches_nothing",
+    "research.study4.v2.test_ceiling_adapter.BudgetTests.test_pending_inflight_blocks_parallel_reserve",
+    "research.study4.v2.test_ceiling_adapter.BudgetTests.test_reserve_settle_funds_usage_and_never_uses_float_math",
+    "research.study4.v2.test_ceiling_adapter.BudgetTests.test_token_call_usd_and_per_episode_operation_limits_pre_dispatch",
+    "research.study4.v2.test_ceiling_adapter.BudgetTests.test_unknown_full_exposure_and_usage_overrun_never_released",
+    "research.study4.v2.test_ceiling_adapter.SchedulingTests.test_C_wrong_recipient_is_not_privately_corrected",
+    "research.study4.v2.test_ceiling_adapter.SchedulingTests.test_bad_output_with_settled_usage_stops_as_infra_not_unknown_money",
+    "research.study4.v2.test_ceiling_adapter.SchedulingTests.test_failure_after_dispatch_retains_unknown_and_stops_without_retry",
+    "research.study4.v2.test_ceiling_adapter.SchedulingTests.test_four_action_checkpoint_and_nonboundary_do_not_add_control_calls",
+    "research.study4.v2.test_ceiling_adapter.SchedulingTests.test_invalid_control_response_disables_client_even_without_scheduler",
+    "research.study4.v2.test_ceiling_adapter.SchedulingTests.test_missing_usage_is_unknown_and_cannot_dispatch_again",
+    "research.study4.v2.test_ceiling_adapter.SchedulingTests.test_no_ask_reuses_proposal_and_does_not_call_question_or_refresh",
+    "research.study4.v2.test_ceiling_adapter.SchedulingTests.test_privileged_what_only_passes_public_intent_and_obtained_ids",
+    "research.study4.v2.test_ceiling_adapter.SchedulingTests.test_prompt_metadata_leak_and_unread_assistance_are_rejected",
+    "research.study4.v2.test_ceiling_adapter.SchedulingTests.test_shared_ordinary_wire_schema_and_no_arm_or_gold_in_prompt",
+    "research.study4.v2.test_ceiling_adapter.SchedulingTests.test_speculative_action_cannot_survive_ask",
+    "research.study4.v2.test_ceiling_adapter.SchedulingTests.test_start_proposal_reply_reasons_coalesced_once_and_ask_refreshes",
+    "research.study4.v2.test_ceiling_adapter.ScorerAdapterTests.test_dependency_partial_refusal_and_bound_rule_evidence",
+    "research.study4.v2.test_ceiling_adapter.ScorerAdapterTests.test_exact_pinned_source_and_24_structured_rule_cases",
+    "research.study4.v2.test_ceiling_adapter.ScorerAdapterTests.test_official_optional_no_contact_remains_half_quality",
+    "research.study4.v2.test_ceiling_adapter.ScorerAdapterTests.test_public_load_does_not_depend_on_private_labels",
+    "research.study4.v2.test_ceiling_adapter.ScorerAdapterTests.test_submit_separate_from_official_content_and_infra_never_zero_filled",
+    "research.study4.v2.test_ceiling_adapter.ScorerAdapterTests.test_trace_scope_edit_and_stale_review_refused",
+    "research.study4.v2.test_ceiling_adapter.ScorerAdapterTests.test_unreviewed_structured_trace_is_unknown_not_automatic_success",
+    "research.study4.v2.test_ceiling_adapter.TrainingInterfaceTests.test_early_submit_or_unread_values_are_not_trainable_labels",
+    "research.study4.v2.test_ceiling_adapter.TrainingInterfaceTests.test_public_projection_and_masked_three_heads_no_fake_RL_probability",
+    "research.study4.v2.test_ceiling_adapter.TrainingInterfaceTests.test_split_overlap_and_unidentifiable_targets_fail",
+    "research.study4.v2.test_protocol.ProtocolTests.test_all_arms_share_identical_ordinary_request_and_schema",
+    "research.study4.v2.test_protocol.ProtocolTests.test_ambiguous_public_states_do_not_get_unique_private_labels",
+    "research.study4.v2.test_protocol.ProtocolTests.test_ask_delivers_before_exactly_one_ordinary_action",
+    "research.study4.v2.test_protocol.ProtocolTests.test_bad_artifact_can_finish_delivery_without_business_success",
+    "research.study4.v2.test_protocol.ProtocolTests.test_bounded_stops_are_not_submitted_and_cyclic_dag_is_rejected",
+    "research.study4.v2.test_protocol.ProtocolTests.test_ceiling_budget_counts_episodes_refresh_calls_and_both_token_prices",
+    "research.study4.v2.test_protocol.ProtocolTests.test_context_protects_replies_and_summary_and_fails_if_protected_overflows",
+    "research.study4.v2.test_protocol.ProtocolTests.test_decision_points_include_proposal_reply_and_four_step_guard",
+    "research.study4.v2.test_protocol.ProtocolTests.test_illegal_tools_or_controller_private_fields_fail_explicitly",
+    "research.study4.v2.test_protocol.ProtocolTests.test_information_complete_is_not_delivery_or_business_success",
+    "research.study4.v2.test_protocol.ProtocolTests.test_no_private_values_before_release_and_source_conflicts_retained",
+    "research.study4.v2.test_protocol.ProtocolTests.test_numeric_context_match_is_token_bound_not_substring",
+    "research.study4.v2.test_protocol.ProtocolTests.test_partial_reply_and_refusal_can_recover",
+    "research.study4.v2.test_protocol.ProtocolTests.test_private_metadata_is_rejected_below_top_level",
+    "research.study4.v2.test_protocol.ProtocolTests.test_private_snapshot_branch_restore_without_double_contact_or_replay",
+    "research.study4.v2.test_protocol.ProtocolTests.test_question_cannot_drop_selected_context",
+    "research.study4.v2.test_protocol.ProtocolTests.test_quoted_intent_or_swapped_context_cannot_release",
+    "research.study4.v2.test_protocol.ProtocolTests.test_reference_paths_and_public_label_compatibility",
+    "research.study4.v2.test_protocol.ProtocolTests.test_repeated_post_keeps_history_and_rewrite_invalidates_summary",
+    "research.study4.v2.test_protocol.ProtocolTests.test_repeated_read_is_idempotent_and_edited_identity_rejected",
+    "research.study4.v2.test_protocol.ProtocolTests.test_report_is_local_proof_not_real_ceiling_or_generator_completion",
+    "research.study4.v2.test_protocol.ProtocolTests.test_self_can_submit_but_must_complete_delivery_first",
+    "research.study4.v2.test_protocol.ProtocolTests.test_threshold_arithmetic_source_and_authority",
+    "research.study4.v2.test_protocol.ProtocolTests.test_unknown_reply_cannot_enter_public_memory",
+    "research.study4.test_help_protocol_v2.Tests.test_continuous_ask_delivers_real_replies_and_agent_progresses_then_submits",
+    "research.study4.test_help_protocol_v2.Tests.test_foreign_reply_or_edited_message_rejected",
+    "research.study4.test_help_protocol_v2.Tests.test_native_v1_policy_checkpoint_and_corpus_do_not_pass_v2_contracts",
+    "research.study4.test_help_protocol_v2.Tests.test_no_ask_normal_work_no_contact_or_message_model",
+    "research.study4.test_help_protocol_v2.Tests.test_no_new_controller_gate_between_help_and_normal_task_and_cycle_limit_is_bounded",
+    "research.study4.test_help_protocol_v2.Tests.test_randomized_v2_collection_and_training_contract_are_consistent_not_trained",
+    "research.study4.test_help_protocol_v2.Tests.test_reply_is_not_public_until_verified_delivery_and_v1_state_rejected",
+    "research.study4.test_help_protocol_v2.Tests.test_send_failure_or_timeout_stops_without_agent_action_or_fake_answer",
+    "research.study4.test_help_protocol_v2.Tests.test_v1_runtime_keeps_ask_only_semantics",
+    "research.study4.test_teacher87_native_agent.Tests.test_native_must_help_really_selects_person_question_then_normal_actions",
+    "research.study4.test_teacher87_native_agent.Tests.test_native_rejects_unknown_recipient_before_sending",
+    "research.study4.test_teacher87_native_agent.Tests.test_shared_prompt_expresses_native_and_controlled_modes_without_unconditional_ban"
+  ],
+  "historical_fixture_report_exact_current_reproduction": true,
+  "historical_adapter_report_exact_current_reproduction": true,
+  "old_results_checkpoint_and_closed_ledger_hashes_unchanged": true
+}

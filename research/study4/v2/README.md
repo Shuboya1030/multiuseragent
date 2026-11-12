@@ -5,7 +5,8 @@
 旧SFT87及其32episode结果不变，[旧结果入口](../README.md)继续保留。
 
 阅读：[v1.1设计/变更合同](DESIGN_v1_1_ZH.md)＋[v1.2本地适配补充](LOCAL_ADAPTER_CONTRACT_v1_2_ZH.md) →
-[最新持久诊断v2修复](reports/PERSISTENT_DIAGNOSIS_V2_ZH.md) →
+[最新一次真实诊断结果](reports/SINGLE_DIAGNOSTIC_ACTUAL_ZH.md) →
+[持久诊断v2修复](reports/PERSISTENT_DIAGNOSIS_V2_ZH.md) →
 [USD50真实接口停止报告](reports/CEILING50_ACTUAL_STOP_ZH.md)（[模型最大费用上界](reports/MODEL_MAXIMUM_BOUND_ZH.md)、
 [持久执行前门](reports/DURABLE_PREFLIGHT_ZH.md)、
 [适配阶段](reports/LOCAL_ADAPTER_STAGE_ZH.md)、
@@ -25,6 +26,7 @@ python -m unittest research.study4.v2.test_durable_preflight -v
 python -m unittest research.study4.v2.test_provider_bound -v
 python -m unittest research.study4.v2.test_paid_driver -v
 python -m unittest research.study4.v2.test_persistent_diagnosis -v
+python -m unittest research.study4.v2.test_diagnostic_dispatch -v
 python -m research.study4.v2.local_acceptance --output LOCAL_PROOF_NEW.json
 python -m research.study4.v2.local_ceiling_check --output LOCAL_ADAPTER_NEW.json
 ```
@@ -65,6 +67,7 @@ durable tests仅创建临时SQLite及本机127.0.0.1 HTTP服务，故障退出�
 | [response_diagnosis.py](response_diagnosis.py) | 实际decode路径逐阶段错误和脱敏shape，失败事务持久化；不保留任意正文 |
 | [recovery_guard.py](recovery_guard.py) | 默认禁用的单诊断例外门，同50总帽先计入旧unknown；无provider恢复dispatcher |
 | [test_persistent_diagnosis.py](test_persistent_diagnosis.py) | 7阶段真实子进程退出后读回、旧metadata拒绝、累计旧占用与新批准门 |
+| [diagnostic_dispatch.py](diagnostic_dispatch.py) | 显式新批准的一次请求，继承旧unknown并持原批mutex；不执行工具、不恢复episode |
 
 v1的`HelpRuntime/ServiceRuntime`不改：本版本保留它们的tool envelope、虚拟路径边界、
 stable ID/幂等读和ASK→自动交付→普通一步语义，做独立的小型本地协议实现。
@@ -94,7 +97,9 @@ context_view仅验收保留/溢出规则，未用真实Qwen tokenizer证明6k容
 [其发布字节指纹](reports/MODEL_MAXIMUM_PUBLICATION_MANIFEST.json)绑定历史commit `77f1a11`。
 [当前实际停止证据](reports/CEILING50_ACTUAL_CHECK.json)、[冻结scope摘录](reports/CEILING50_FROZEN_SCOPE.json)与
 [原失败发布字节指纹](reports/CEILING50_PUBLICATION_MANIFEST.json)绑定历史commit `88f1134`。
-[当前诊断机器验收](reports/PERSISTENT_DIAGNOSIS_V2_CHECK.json)与
-[当前发布字节指纹](reports/PERSISTENT_DIAGNOSIS_V2_PUBLICATION_MANIFEST.json)另列。
+[持久诊断机器验收](reports/PERSISTENT_DIAGNOSIS_V2_CHECK.json)与
+[其发布字节指纹](reports/PERSISTENT_DIAGNOSIS_V2_PUBLICATION_MANIFEST.json)绑定历史commit `0cfe45c`。
+[当前单请求实际证据](reports/SINGLE_DIAGNOSTIC_ACTUAL_CHECK.json)与
+[当前发布字节指纹](reports/SINGLE_DIAGNOSTIC_PUBLICATION_MANIFEST.json)另列。
 TribalBench原MIT scorer已固定字节、复制并实际本地执行；旧fixture checker依然不是`tribalbench-1.0`。
 付费ceiling、真实API/NPC语义/持久费用、新split/generator/模型均需后续阶段门。

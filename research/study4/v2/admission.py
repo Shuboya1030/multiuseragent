@@ -23,7 +23,7 @@ SOURCE_FILES = ("admission.py", "durable.py", "http_transport.py", "mini_request
                 "contracts.py", "executor.py", "oracle.py", "npc_rule.py", "budget.py", "provider_bound.py",
                 "configs/provider_model_maximum_bound_v1.json", "paid_driver.py", "runtime.py",
                 "scheduler.py", "benchmark.py", "configs/ceiling_pilot.json", "response_diagnosis.py",
-                "recovery_guard.py")
+                "recovery_guard.py", "diagnostic_dispatch.py")
 
 
 def runtime_binding():

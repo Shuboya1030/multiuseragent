@@ -204,6 +204,9 @@ class DurableLedger:
         require(transport.mode == self.plan["mode"], "Transport authorization scope mismatch")
         require(episode in self.plan["episodes"] and type(index) is int and index >= 0,
                 "Only frozen episode/call identities")
+        if self.plan.get("dispatcher_version") is not None:
+            require(operation == "ordinary" and index == 0 and
+                    fingerprint(request) == self.plan["request_sha256"], "Only frozen single ordinary diagnostic")
         body, bound, observation, assistance = prepare_request(request, operation, self.plan)
         call_id = f"{episode}:{operation}:{index}"
         cached = self._reserve(call_id, episode, operation, hashlib.sha256(body).hexdigest(), bound)

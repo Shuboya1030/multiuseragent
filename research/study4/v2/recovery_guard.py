@@ -1,4 +1,4 @@
-"""Default-disabled diagnostic exception: account for prior unknown; no dispatcher/tool resume."""
+"""Explicit single-request diagnostic exception; old unknown remains occupied."""
 from decimal import Decimal
 
 from .budget import BudgetBlocked
@@ -31,6 +31,11 @@ def validate_recovery(plan, approval):
     require(extra.get("recovery_sha256") == fingerprint(recovery) and
             extra.get("new_direct_user_source") == recovery["new_direct_user_source"],
             "Recovery exception must exactly bind old hold and new direct approval")
-    # No real-provider recovery dispatcher exists in this checkpoint.
     if plan["mode"] != "local_test":
-        raise BudgetBlocked("Provider diagnostic recovery executor not enabled; do not infer permission")
+        from .diagnostic_dispatch import SOURCE, VERSION, verify_prior
+        if plan.get("dispatcher_version") != VERSION:
+            raise BudgetBlocked("Provider diagnostic recovery executor not enabled for this plan")
+        require(recovery["new_direct_user_source"] == SOURCE and
+                extra["new_direct_user_source"] == SOURCE and plan.get("environment_tools_allowed") is False,
+                "Only current direct single-diagnostic authority; tools forbidden")
+        verify_prior(recovery)
