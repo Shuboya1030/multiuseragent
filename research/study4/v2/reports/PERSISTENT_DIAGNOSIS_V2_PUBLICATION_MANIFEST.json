@@ -150,13 +150,13 @@
       "byte_semantics": "Git UTF8 LF bytes"
     },
     "research/study4/v2/reports/CEILING50_ACTUAL_CHECK.json": {
-      "bytes": 15723,
-      "sha256": "eae79396c63b0317b766a89177bdff06de60ad47d7c9f64019c14c9ba27134e0",
+      "bytes": 15869,
+      "sha256": "22fc2326c16b1c804da58b73135f45f9640712f57d46de991322651a7f0b4177",
       "byte_semantics": "Git UTF8 LF bytes"
     },
     "research/study4/v2/reports/CEILING50_ACTUAL_STOP_ZH.md": {
-      "bytes": 7261,
-      "sha256": "ffc84252243b9d4288d14a12314eb2f8ca856c8678b4baecf5d320197e39e7c5",
+      "bytes": 7435,
+      "sha256": "bdc87b03995c28ae6ae2f35b2d8b722b78ac0fe2a2a03889b736762f4d23cb10",
       "byte_semantics": "Git UTF8 LF bytes"
     },
     "research/study4/v2/reports/CEILING50_FROZEN_SCOPE.json": {
