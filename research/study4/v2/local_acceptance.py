@@ -4,7 +4,7 @@ from dataclasses import asdict, replace
 import json
 from pathlib import Path
 
-from .contracts import Decision, canonical, fingerprint
+from .contracts import PROTOCOL, Decision, canonical, fingerprint
 from .executor import SharedExecutor
 from .fixtures import PublicFixtureExecutor, fixture_proof, fixture_suite
 from .npc_rule import RuleNPC
@@ -49,7 +49,7 @@ def run_suite():
     self_delivery = sum(r["always_SELF"]["proof"]["user_delivery_complete"]
                         and r["always_SELF"]["proof"]["bridge_submitted"] for r in results)
     report = {
-        "schema": "study4-v2-local-fixture-acceptance-v1", "protocol_version": "study4-controller-v2-local-1.1",
+        "schema": "study4-v2-local-fixture-acceptance-v2", "protocol_version": PROTOCOL,
         "new_model_API_calls": 0, "new_GPU_jobs": 0, "new_training_updates": 0,
         "mock_executor_only": True, "official_TribalBench_scorer_executed": False,
         "fixture_count": len(results), "reference_fixture_proof_complete": reference_complete,

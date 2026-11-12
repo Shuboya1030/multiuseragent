@@ -60,11 +60,12 @@ class ProtocolTests(unittest.TestCase):
         rt.cycle(Decision("ASK", "owner", "current record"))
         self.assertEqual(rt.npc.released, {"record"})
         before_calls = rt.executor.calls
-        rt.cycle(Decision("SUBMIT"))
+        with self.assertRaisesRegex(ValueError, "help-only"):
+            rt.cycle(Decision("SUBMIT"))
         self.assertEqual(rt.executor.calls, before_calls)
         self.assertFalse(rt.terminal)
         self.assertFalse(rt.progress()["user_delivery_complete"])
-        self.assertEqual(rt.history[-1]["kind"], "submission_blocked")
+        self.assertFalse(any(row["kind"] == "submission_blocked" for row in rt.history))
         self.assertIsNone(rt.progress()["business_success"])
 
     def test_ask_delivers_before_exactly_one_ordinary_action(self):

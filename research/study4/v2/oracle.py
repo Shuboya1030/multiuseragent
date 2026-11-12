@@ -1,7 +1,7 @@
 """Privileged DAG reference and necessary public-label consistency checks."""
 from copy import deepcopy
 
-from .contracts import Decision, fingerprint, require
+from .contracts import CONTROL_ACTIONS, PROTOCOL, Decision, fingerprint, require
 from .npc_rule import has_authority
 
 
@@ -35,7 +35,7 @@ class DAGReference:
                 require(decisions, "Ready private step has no obtained context: reference cannot solve this state")
                 return tuple(decisions)
             require(not unsatisfied, "No ready private node; reference state is inconsistent")
-        return (Decision("SUBMIT" if observation["progress"]["user_delivery_complete"] else "SELF"),)
+        return (Decision("SELF"),)
 
     def choose(self, observation, released):
         return self.acceptable(observation, released)[0]
@@ -45,6 +45,7 @@ def validate_public_observation(observation):
     expected = {"protocol", "task", "workspace", "history", "obtained_values", "progress",
                 "normal_actions", "remaining", "contact_cost", "terminal", "failed"}
     require(set(observation) in (expected, expected | {"context"}), "Unknown/private observation fields")
+    require(observation["protocol"] == PROTOCOL, "Historical observation protocol is not help-only")
     require(set(observation["task"]) == {"instruction", "people", "intents", "output_fields",
                                         "artifact_path", "channel", "calculations"}, "Private task metadata")
     require(all(set(p) == {"person_id", "role", "knowledge", "authority", "cost"}
@@ -63,6 +64,8 @@ def validate_public_observation(observation):
                           "in_reply_to", "path", "channel", "tool", "answer", "reason",
                           "bridge_submitted", "exception_type", "business_outcome"}
     require(all(set(event) <= allowed_event_keys for event in observation["history"]), "Private history metadata")
+    require(all(event["kind"] != "control_decision" or event.get("action") in CONTROL_ACTIONS
+                for event in observation["history"]), "Historical three-state control history forbidden")
 
 
 def public_signature(observation):
@@ -80,6 +83,7 @@ def public_signature(observation):
 
 
 def label_signature(decision, observation):
+    require(decision.action in CONTROL_ACTIONS, "Historical three-state supervision label forbidden")
     included = [v for v in observation["obtained_values"] if v["value_id"] in decision.include_value_ids]
     return fingerprint({"action": decision.action, "person": decision.person_id, "intent": decision.intent,
                         "included": [(v["key"], v["value"], v["source_person_id"]) for v in included]})

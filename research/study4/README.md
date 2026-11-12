@@ -11,6 +11,8 @@
 真实完成A/B两题例，C本地缺文件读取停批；同一Optional题T/R从.5/.5到1/.9，
 但B为特权参考，0完整四臂block，不能宣称训练收益或ceiling通过。
 累计unknownUSD3.432＋settled上界USD0.069303300，仍占原USD50；
+后续[controller仅SELF/ASK的职责修复](v2/reports/HELP_ONLY_REPAIR_ZH.md)已零API本地验收，
+submit仍由ordinary executor产生；尚无新版真实验证或收益，原actual与费用不变。
 不改下述SFT87历史结果，不代表新训练或真实ceiling已完成。
 
 研究问题：在固定任务执行器和NPC的能力下，单独学习联合决策 **when（何时求助）＋whom（向谁求助）**，

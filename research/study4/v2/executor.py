@@ -1,18 +1,18 @@
 """One ordinary schema and prompt for every arm, with an injected fixed callback."""
 from copy import deepcopy
 
-from .contracts import Tool, require, strict_json
+from .contracts import PROTOCOL, Tool, require, strict_json
 from .npc_rule import contains_field, contains_intent
 
-PROTOCOL = "study4-controller-v2-local-1.1"
-ORDINARY_PROMPT_VERSION = "study4-ordinary-single-action-v2"
+ORDINARY_PROMPT_VERSION = "study4-ordinary-help-only-v3"
 ORDINARY_PROMPT = (
     "For this interaction turn, choose only the next ONE ordinary action. "
     "Return exactly ONE final assistant message containing ONE tool envelope: {tool,arguments}. "
     "Then stop and wait for the tool result in the next interaction turn. "
     "Do not emit commentary, a second assistant JSON, or subsequent post/submit actions in this response. "
     "Use only public evidence and received replies. Do not contact colleagues, invent grants, "
-    "or repeat a post without new information. SELF is one action, not a post instruction. "
+    "or repeat a post without new information. SELF means no new help request, not tool approval "
+    "or a post instruction. Each executor turn still produces one ordinary action. "
     "The overall goal across later interaction turns is to write the requested artifact, "
     "post its path and summary after the write result, and submit after delivery is complete. "
     "Those are separate future turns, not additional actions to output now. "

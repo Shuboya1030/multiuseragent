@@ -155,9 +155,6 @@ class SharedRuntime:
         self.after_reply = False
         self._event("control_decision", action=decision.action, person_id=decision.person_id)
         try:
-            if decision.action == "SUBMIT" and not self.progress()["user_delivery_complete"]:
-                self._normal(parse_tool(canonical({"tool": "submit", "arguments": {"answer": ""}})))
-                return self.observe()
             if decision.action == "ASK":
                 require(self.contacts < self.max_actions, "Contact cap reached")
                 selected = [v for v in observation["obtained_values"] if v["value_id"] in decision.include_value_ids]
@@ -173,8 +170,6 @@ class SharedRuntime:
                 self._deliver({"message_id": request_id.removesuffix(":out") + ":reply",
                                "in_reply_to": request_id, "person_id": decision.person_id, "content": reply})
             command = proposed_tool if proposed_tool is not None else self.executor.ordinary(self.observe())
-            require(decision.action != "SUBMIT" or command.name == "submit",
-                    "SUBMIT requires an executor-produced submission, not a controller answer")
             self._normal(command)
         except Exception as error:
             self.failed = True

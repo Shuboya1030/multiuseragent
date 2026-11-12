@@ -1,0 +1,1905 @@
+{
+  "Phase2_generator_and_real_executor_gate": "not run; only hand-authored unit fixtures",
+  "always_SELF_content_valid": 2,
+  "always_SELF_public_delivery_and_submit": 9,
+  "fixture_count": 9,
+  "fixtures": [
+    {
+      "always_SELF": {
+        "contact_cost": 0.0,
+        "contacts": 0,
+        "mock_executor_callback_calls": 3,
+        "normal_actions": 3,
+        "proof": {
+          "bridge_submitted": true,
+          "checker": "local-fixture-proof-v1-NOT-TribalBench",
+          "content_valid": false,
+          "full_reference_and_release_match": false,
+          "proof_complete": false,
+          "user_delivery_complete": true
+        },
+        "trajectory": [
+          {
+            "contacts": 0,
+            "decision": {
+              "action": "SELF",
+              "include_value_ids": [],
+              "intent": null,
+              "person_id": null
+            },
+            "normal_actions": 1,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 1,
+              "bridge_submitted": false,
+              "business_success": null,
+              "posted_current_revision": false,
+              "user_delivery_complete": false
+            },
+            "public_observation_sha256": "f89beaa88afc79918f2aa90903030e90b0f2a78996346e2dcb7aabda218a3cf1"
+          },
+          {
+            "contacts": 0,
+            "decision": {
+              "action": "SELF",
+              "include_value_ids": [],
+              "intent": null,
+              "person_id": null
+            },
+            "normal_actions": 2,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 1,
+              "bridge_submitted": false,
+              "business_success": null,
+              "posted_current_revision": true,
+              "user_delivery_complete": true
+            },
+            "public_observation_sha256": "ef274c66362be55159d90f7e24ec53135fd289f43bdee8673139da5c7a812aba"
+          },
+          {
+            "contacts": 0,
+            "decision": {
+              "action": "SELF",
+              "include_value_ids": [],
+              "intent": null,
+              "person_id": null
+            },
+            "normal_actions": 3,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 1,
+              "bridge_submitted": true,
+              "business_success": null,
+              "posted_current_revision": true,
+              "user_delivery_complete": true
+            },
+            "public_observation_sha256": "5e4d76afb16ee6472082bcd70ce653d02d0141409b81f1b71c63d1030597173f"
+          }
+        ]
+      },
+      "declared_reference_path": "improve",
+      "fixture_canonical_sha256": "b8f27986c130a041d1e41d3c9bd2c5588c0646d20ed7c4260527376c85b1a6f7",
+      "fixture_id": "single-info",
+      "not_accepted_generated_benchmark_task": true,
+      "privileged_DAG_reference": {
+        "contact_cost": 1.0,
+        "contacts": 1,
+        "mock_executor_callback_calls": 4,
+        "normal_actions": 3,
+        "proof": {
+          "bridge_submitted": true,
+          "checker": "local-fixture-proof-v1-NOT-TribalBench",
+          "content_valid": true,
+          "full_reference_and_release_match": true,
+          "proof_complete": true,
+          "user_delivery_complete": true
+        },
+        "trajectory": [
+          {
+            "contacts": 1,
+            "decision": {
+              "action": "ASK",
+              "include_value_ids": [],
+              "intent": "current record",
+              "person_id": "owner"
+            },
+            "normal_actions": 1,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 1,
+              "bridge_submitted": false,
+              "business_success": null,
+              "posted_current_revision": false,
+              "user_delivery_complete": false
+            },
+            "public_observation_sha256": "f89beaa88afc79918f2aa90903030e90b0f2a78996346e2dcb7aabda218a3cf1"
+          },
+          {
+            "contacts": 1,
+            "decision": {
+              "action": "SELF",
+              "include_value_ids": [],
+              "intent": null,
+              "person_id": null
+            },
+            "normal_actions": 2,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 1,
+              "bridge_submitted": false,
+              "business_success": null,
+              "posted_current_revision": true,
+              "user_delivery_complete": true
+            },
+            "public_observation_sha256": "c827956f67c71859220986814bb2d07da3b7d3b6b40edf2413480456f9be3b30"
+          },
+          {
+            "contacts": 1,
+            "decision": {
+              "action": "SELF",
+              "include_value_ids": [],
+              "intent": null,
+              "person_id": null
+            },
+            "normal_actions": 3,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 1,
+              "bridge_submitted": true,
+              "business_success": null,
+              "posted_current_revision": true,
+              "user_delivery_complete": true
+            },
+            "public_observation_sha256": "f630d1b34c454a57a903ab1ac34f3c8f18679046901f6090ce6f9138be3a96d9"
+          }
+        ]
+      }
+    },
+    {
+      "always_SELF": {
+        "contact_cost": 0.0,
+        "contacts": 0,
+        "mock_executor_callback_calls": 3,
+        "normal_actions": 3,
+        "proof": {
+          "bridge_submitted": true,
+          "checker": "local-fixture-proof-v1-NOT-TribalBench",
+          "content_valid": false,
+          "full_reference_and_release_match": false,
+          "proof_complete": false,
+          "user_delivery_complete": true
+        },
+        "trajectory": [
+          {
+            "contacts": 0,
+            "decision": {
+              "action": "SELF",
+              "include_value_ids": [],
+              "intent": null,
+              "person_id": null
+            },
+            "normal_actions": 1,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 1,
+              "bridge_submitted": false,
+              "business_success": null,
+              "posted_current_revision": false,
+              "user_delivery_complete": false
+            },
+            "public_observation_sha256": "4eb5e8e25463c33ec18bfd98a7c81950e43a46bb37fea916cb19d9d5e1bcf695"
+          },
+          {
+            "contacts": 0,
+            "decision": {
+              "action": "SELF",
+              "include_value_ids": [],
+              "intent": null,
+              "person_id": null
+            },
+            "normal_actions": 2,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 1,
+              "bridge_submitted": false,
+              "business_success": null,
+              "posted_current_revision": true,
+              "user_delivery_complete": true
+            },
+            "public_observation_sha256": "e7efd18ae0dd544a7a824e4ac0a5660fcc29858a00715ef9239bf363c31ef845"
+          },
+          {
+            "contacts": 0,
+            "decision": {
+              "action": "SELF",
+              "include_value_ids": [],
+              "intent": null,
+              "person_id": null
+            },
+            "normal_actions": 3,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 1,
+              "bridge_submitted": true,
+              "business_success": null,
+              "posted_current_revision": true,
+              "user_delivery_complete": true
+            },
+            "public_observation_sha256": "f7f095ba8e870304473c765aa737bfe41847470b9508e20fc7305a10587a92e3"
+          }
+        ]
+      },
+      "declared_reference_path": "improve",
+      "fixture_canonical_sha256": "0b0c23750ea0a973c58acdd4af0cb5ae2c0a741690fae79be98a207be43e642e",
+      "fixture_id": "info-approval",
+      "not_accepted_generated_benchmark_task": true,
+      "privileged_DAG_reference": {
+        "contact_cost": 3.0,
+        "contacts": 2,
+        "mock_executor_callback_calls": 6,
+        "normal_actions": 4,
+        "proof": {
+          "bridge_submitted": true,
+          "checker": "local-fixture-proof-v1-NOT-TribalBench",
+          "content_valid": true,
+          "full_reference_and_release_match": true,
+          "proof_complete": true,
+          "user_delivery_complete": true
+        },
+        "trajectory": [
+          {
+            "contacts": 1,
+            "decision": {
+              "action": "ASK",
+              "include_value_ids": [],
+              "intent": "current record",
+              "person_id": "owner"
+            },
+            "normal_actions": 1,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 1,
+              "bridge_submitted": false,
+              "business_success": null,
+              "posted_current_revision": false,
+              "user_delivery_complete": false
+            },
+            "public_observation_sha256": "4eb5e8e25463c33ec18bfd98a7c81950e43a46bb37fea916cb19d9d5e1bcf695"
+          },
+          {
+            "contacts": 2,
+            "decision": {
+              "action": "ASK",
+              "include_value_ids": [
+                "info-approval:privileged_DAG_reference:contact:0:reply:record"
+              ],
+              "intent": "release record",
+              "person_id": "manager"
+            },
+            "normal_actions": 2,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 2,
+              "bridge_submitted": false,
+              "business_success": null,
+              "posted_current_revision": false,
+              "user_delivery_complete": false
+            },
+            "public_observation_sha256": "4e699d5a5b36001106a8a27385dbb4d61f550ff9c2cd963406103a8187010bd0"
+          },
+          {
+            "contacts": 2,
+            "decision": {
+              "action": "SELF",
+              "include_value_ids": [],
+              "intent": null,
+              "person_id": null
+            },
+            "normal_actions": 3,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 2,
+              "bridge_submitted": false,
+              "business_success": null,
+              "posted_current_revision": true,
+              "user_delivery_complete": true
+            },
+            "public_observation_sha256": "7f6a568863c4b46fe1c6d10337dcf3caacda289e7ac951f29b53aa242f2deee1"
+          },
+          {
+            "contacts": 2,
+            "decision": {
+              "action": "SELF",
+              "include_value_ids": [],
+              "intent": null,
+              "person_id": null
+            },
+            "normal_actions": 4,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 2,
+              "bridge_submitted": true,
+              "business_success": null,
+              "posted_current_revision": true,
+              "user_delivery_complete": true
+            },
+            "public_observation_sha256": "59f40112961c78ee93bbf4c572877f7e9af2ad7719932282c4e057170c053aeb"
+          }
+        ]
+      }
+    },
+    {
+      "always_SELF": {
+        "contact_cost": 0.0,
+        "contacts": 0,
+        "mock_executor_callback_calls": 3,
+        "normal_actions": 3,
+        "proof": {
+          "bridge_submitted": true,
+          "checker": "local-fixture-proof-v1-NOT-TribalBench",
+          "content_valid": false,
+          "full_reference_and_release_match": false,
+          "proof_complete": false,
+          "user_delivery_complete": true
+        },
+        "trajectory": [
+          {
+            "contacts": 0,
+            "decision": {
+              "action": "SELF",
+              "include_value_ids": [],
+              "intent": null,
+              "person_id": null
+            },
+            "normal_actions": 1,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 1,
+              "bridge_submitted": false,
+              "business_success": null,
+              "posted_current_revision": false,
+              "user_delivery_complete": false
+            },
+            "public_observation_sha256": "b13f13aba62c1a6a3fd6e360b00345f2f91e4863b781549bd9ad68ba309eafc6"
+          },
+          {
+            "contacts": 0,
+            "decision": {
+              "action": "SELF",
+              "include_value_ids": [],
+              "intent": null,
+              "person_id": null
+            },
+            "normal_actions": 2,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 1,
+              "bridge_submitted": false,
+              "business_success": null,
+              "posted_current_revision": true,
+              "user_delivery_complete": true
+            },
+            "public_observation_sha256": "dc3d0d35c85c53467d3b71821ed9f94065281275ea7632f031045435920c9e4c"
+          },
+          {
+            "contacts": 0,
+            "decision": {
+              "action": "SELF",
+              "include_value_ids": [],
+              "intent": null,
+              "person_id": null
+            },
+            "normal_actions": 3,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 1,
+              "bridge_submitted": true,
+              "business_success": null,
+              "posted_current_revision": true,
+              "user_delivery_complete": true
+            },
+            "public_observation_sha256": "8c8282d0b11ca359881a956f62932b0be001dbc87beb527ebfde9d6a4c4a3d13"
+          }
+        ]
+      },
+      "declared_reference_path": "improve",
+      "fixture_canonical_sha256": "edd1cccd1b517d070ea020a83fb5276824faa36b6a2dbe3e4c793bab9a0ad5ad",
+      "fixture_id": "parallel-join",
+      "not_accepted_generated_benchmark_task": true,
+      "privileged_DAG_reference": {
+        "contact_cost": 4.0,
+        "contacts": 3,
+        "mock_executor_callback_calls": 8,
+        "normal_actions": 5,
+        "proof": {
+          "bridge_submitted": true,
+          "checker": "local-fixture-proof-v1-NOT-TribalBench",
+          "content_valid": true,
+          "full_reference_and_release_match": true,
+          "proof_complete": true,
+          "user_delivery_complete": true
+        },
+        "trajectory": [
+          {
+            "contacts": 1,
+            "decision": {
+              "action": "ASK",
+              "include_value_ids": [],
+              "intent": "current record",
+              "person_id": "owner"
+            },
+            "normal_actions": 1,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 1,
+              "bridge_submitted": false,
+              "business_success": null,
+              "posted_current_revision": false,
+              "user_delivery_complete": false
+            },
+            "public_observation_sha256": "b13f13aba62c1a6a3fd6e360b00345f2f91e4863b781549bd9ad68ba309eafc6"
+          },
+          {
+            "contacts": 2,
+            "decision": {
+              "action": "ASK",
+              "include_value_ids": [],
+              "intent": "current amount",
+              "person_id": "deputy"
+            },
+            "normal_actions": 2,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 2,
+              "bridge_submitted": false,
+              "business_success": null,
+              "posted_current_revision": false,
+              "user_delivery_complete": false
+            },
+            "public_observation_sha256": "a403a31fff5907ad34c0b1ec2960dc16660558221bf85258e331eafb64c065ab"
+          },
+          {
+            "contacts": 3,
+            "decision": {
+              "action": "ASK",
+              "include_value_ids": [
+                "parallel-join:privileged_DAG_reference:contact:0:reply:record",
+                "parallel-join:privileged_DAG_reference:contact:1:reply:amount"
+              ],
+              "intent": "release record",
+              "person_id": "manager"
+            },
+            "normal_actions": 3,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 3,
+              "bridge_submitted": false,
+              "business_success": null,
+              "posted_current_revision": false,
+              "user_delivery_complete": false
+            },
+            "public_observation_sha256": "c1d365465d40d50e42a90b2b1a969f2811bc52c79e9925d6c20cc41ac799af28"
+          },
+          {
+            "contacts": 3,
+            "decision": {
+              "action": "SELF",
+              "include_value_ids": [],
+              "intent": null,
+              "person_id": null
+            },
+            "normal_actions": 4,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 3,
+              "bridge_submitted": false,
+              "business_success": null,
+              "posted_current_revision": true,
+              "user_delivery_complete": true
+            },
+            "public_observation_sha256": "5d825277128ea508db71e567291f5ead457f5029c181376bf7c1eef1fae461f9"
+          },
+          {
+            "contacts": 3,
+            "decision": {
+              "action": "SELF",
+              "include_value_ids": [],
+              "intent": null,
+              "person_id": null
+            },
+            "normal_actions": 5,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 3,
+              "bridge_submitted": true,
+              "business_success": null,
+              "posted_current_revision": true,
+              "user_delivery_complete": true
+            },
+            "public_observation_sha256": "00a029780ad5bdb94320583fee4fd86d50ec8279992fb1f0539453849c01c75b"
+          }
+        ]
+      }
+    },
+    {
+      "always_SELF": {
+        "contact_cost": 0.0,
+        "contacts": 0,
+        "mock_executor_callback_calls": 3,
+        "normal_actions": 3,
+        "proof": {
+          "bridge_submitted": true,
+          "checker": "local-fixture-proof-v1-NOT-TribalBench",
+          "content_valid": false,
+          "full_reference_and_release_match": false,
+          "proof_complete": false,
+          "user_delivery_complete": true
+        },
+        "trajectory": [
+          {
+            "contacts": 0,
+            "decision": {
+              "action": "SELF",
+              "include_value_ids": [],
+              "intent": null,
+              "person_id": null
+            },
+            "normal_actions": 1,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 1,
+              "bridge_submitted": false,
+              "business_success": null,
+              "posted_current_revision": false,
+              "user_delivery_complete": false
+            },
+            "public_observation_sha256": "02ca101f77b6a736dd2d840580724ff765cd62c88c0c098f99008a15f42102e6"
+          },
+          {
+            "contacts": 0,
+            "decision": {
+              "action": "SELF",
+              "include_value_ids": [],
+              "intent": null,
+              "person_id": null
+            },
+            "normal_actions": 2,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 1,
+              "bridge_submitted": false,
+              "business_success": null,
+              "posted_current_revision": true,
+              "user_delivery_complete": true
+            },
+            "public_observation_sha256": "6d075507d99d338ca5e8614eb14c879293de65771de7ea04666ad81ea5534286"
+          },
+          {
+            "contacts": 0,
+            "decision": {
+              "action": "SELF",
+              "include_value_ids": [],
+              "intent": null,
+              "person_id": null
+            },
+            "normal_actions": 3,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 1,
+              "bridge_submitted": true,
+              "business_success": null,
+              "posted_current_revision": true,
+              "user_delivery_complete": true
+            },
+            "public_observation_sha256": "9ae4ab7ea77d80b9e806654d69d3668577975c3e648d5f16fa8866348027b60e"
+          }
+        ]
+      },
+      "declared_reference_path": "improve",
+      "fixture_canonical_sha256": "573877dc7f64d28586b81ae8a3b1eb66a73ec3c557ac1e646780a03548fb2aca",
+      "fixture_id": "referral",
+      "not_accepted_generated_benchmark_task": true,
+      "privileged_DAG_reference": {
+        "contact_cost": 2.0,
+        "contacts": 2,
+        "mock_executor_callback_calls": 6,
+        "normal_actions": 4,
+        "proof": {
+          "bridge_submitted": true,
+          "checker": "local-fixture-proof-v1-NOT-TribalBench",
+          "content_valid": true,
+          "full_reference_and_release_match": true,
+          "proof_complete": true,
+          "user_delivery_complete": true
+        },
+        "trajectory": [
+          {
+            "contacts": 1,
+            "decision": {
+              "action": "ASK",
+              "include_value_ids": [],
+              "intent": "active owner",
+              "person_id": "routing"
+            },
+            "normal_actions": 1,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 1,
+              "bridge_submitted": false,
+              "business_success": null,
+              "posted_current_revision": false,
+              "user_delivery_complete": false
+            },
+            "public_observation_sha256": "02ca101f77b6a736dd2d840580724ff765cd62c88c0c098f99008a15f42102e6"
+          },
+          {
+            "contacts": 2,
+            "decision": {
+              "action": "ASK",
+              "include_value_ids": [
+                "referral:privileged_DAG_reference:contact:0:reply:active_person"
+              ],
+              "intent": "current record",
+              "person_id": "deputy"
+            },
+            "normal_actions": 2,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 2,
+              "bridge_submitted": false,
+              "business_success": null,
+              "posted_current_revision": false,
+              "user_delivery_complete": false
+            },
+            "public_observation_sha256": "e0915c23dcd9570c8aab6a7ef50cea007d0b55be4b8ed735e31758b8ae7e5cbe"
+          },
+          {
+            "contacts": 2,
+            "decision": {
+              "action": "SELF",
+              "include_value_ids": [],
+              "intent": null,
+              "person_id": null
+            },
+            "normal_actions": 3,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 2,
+              "bridge_submitted": false,
+              "business_success": null,
+              "posted_current_revision": true,
+              "user_delivery_complete": true
+            },
+            "public_observation_sha256": "374ae9df839d01d195430e7ff84312342f5532b9e68d987c6d1be111cf951b5c"
+          },
+          {
+            "contacts": 2,
+            "decision": {
+              "action": "SELF",
+              "include_value_ids": [],
+              "intent": null,
+              "person_id": null
+            },
+            "normal_actions": 4,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 2,
+              "bridge_submitted": true,
+              "business_success": null,
+              "posted_current_revision": true,
+              "user_delivery_complete": true
+            },
+            "public_observation_sha256": "5621432542af139458da95f079f6d885d3ec3c2eaed33d9dad6e0efd5d8399c2"
+          }
+        ]
+      }
+    },
+    {
+      "always_SELF": {
+        "contact_cost": 0.0,
+        "contacts": 0,
+        "mock_executor_callback_calls": 3,
+        "normal_actions": 3,
+        "proof": {
+          "bridge_submitted": true,
+          "checker": "local-fixture-proof-v1-NOT-TribalBench",
+          "content_valid": false,
+          "full_reference_and_release_match": false,
+          "proof_complete": false,
+          "user_delivery_complete": true
+        },
+        "trajectory": [
+          {
+            "contacts": 0,
+            "decision": {
+              "action": "SELF",
+              "include_value_ids": [],
+              "intent": null,
+              "person_id": null
+            },
+            "normal_actions": 1,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 1,
+              "bridge_submitted": false,
+              "business_success": null,
+              "posted_current_revision": false,
+              "user_delivery_complete": false
+            },
+            "public_observation_sha256": "8f0a28702c82c48f8fe0d5dd58e1f6cdc980e8a5d5a19915e96facfc9a401b36"
+          },
+          {
+            "contacts": 0,
+            "decision": {
+              "action": "SELF",
+              "include_value_ids": [],
+              "intent": null,
+              "person_id": null
+            },
+            "normal_actions": 2,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 1,
+              "bridge_submitted": false,
+              "business_success": null,
+              "posted_current_revision": true,
+              "user_delivery_complete": true
+            },
+            "public_observation_sha256": "1442d0591ccf1c788fec2bd75a43f1eea405defda6261933f2ee3da2a76f37a7"
+          },
+          {
+            "contacts": 0,
+            "decision": {
+              "action": "SELF",
+              "include_value_ids": [],
+              "intent": null,
+              "person_id": null
+            },
+            "normal_actions": 3,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 1,
+              "bridge_submitted": true,
+              "business_success": null,
+              "posted_current_revision": true,
+              "user_delivery_complete": true
+            },
+            "public_observation_sha256": "a27af343a83646cda6797a64bfee9339bc1a492a4ef5c2ebd22330967eef5ceb"
+          }
+        ]
+      },
+      "declared_reference_path": "improve",
+      "fixture_canonical_sha256": "154fdb4511c519d4eb3a0b4d2f8339d2b9b47ed2dd81cb24dceca511d0728b7a",
+      "fixture_id": "delegation",
+      "not_accepted_generated_benchmark_task": true,
+      "privileged_DAG_reference": {
+        "contact_cost": 2.0,
+        "contacts": 2,
+        "mock_executor_callback_calls": 6,
+        "normal_actions": 4,
+        "proof": {
+          "bridge_submitted": true,
+          "checker": "local-fixture-proof-v1-NOT-TribalBench",
+          "content_valid": true,
+          "full_reference_and_release_match": true,
+          "proof_complete": true,
+          "user_delivery_complete": true
+        },
+        "trajectory": [
+          {
+            "contacts": 1,
+            "decision": {
+              "action": "ASK",
+              "include_value_ids": [],
+              "intent": "active deputy",
+              "person_id": "routing"
+            },
+            "normal_actions": 1,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 1,
+              "bridge_submitted": false,
+              "business_success": null,
+              "posted_current_revision": false,
+              "user_delivery_complete": false
+            },
+            "public_observation_sha256": "8f0a28702c82c48f8fe0d5dd58e1f6cdc980e8a5d5a19915e96facfc9a401b36"
+          },
+          {
+            "contacts": 2,
+            "decision": {
+              "action": "ASK",
+              "include_value_ids": [
+                "delegation:privileged_DAG_reference:contact:0:reply:active_person"
+              ],
+              "intent": "current record",
+              "person_id": "deputy"
+            },
+            "normal_actions": 2,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 2,
+              "bridge_submitted": false,
+              "business_success": null,
+              "posted_current_revision": false,
+              "user_delivery_complete": false
+            },
+            "public_observation_sha256": "cbe1766f835b36a1bb857a42d443edb9a7b50c6ae85e17748d7e3d28f422c568"
+          },
+          {
+            "contacts": 2,
+            "decision": {
+              "action": "SELF",
+              "include_value_ids": [],
+              "intent": null,
+              "person_id": null
+            },
+            "normal_actions": 3,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 2,
+              "bridge_submitted": false,
+              "business_success": null,
+              "posted_current_revision": true,
+              "user_delivery_complete": true
+            },
+            "public_observation_sha256": "ad1609b5ca6693e1e5c6e7bb13125d47bf8a042e671f80d7137c1bf27b2dae85"
+          },
+          {
+            "contacts": 2,
+            "decision": {
+              "action": "SELF",
+              "include_value_ids": [],
+              "intent": null,
+              "person_id": null
+            },
+            "normal_actions": 4,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 2,
+              "bridge_submitted": true,
+              "business_success": null,
+              "posted_current_revision": true,
+              "user_delivery_complete": true
+            },
+            "public_observation_sha256": "35e19419665e2774ce877cfdadcb3ac6f441c70746416004d59cf6634aa1581c"
+          }
+        ]
+      }
+    },
+    {
+      "always_SELF": {
+        "contact_cost": 0.0,
+        "contacts": 0,
+        "mock_executor_callback_calls": 3,
+        "normal_actions": 3,
+        "proof": {
+          "bridge_submitted": true,
+          "checker": "local-fixture-proof-v1-NOT-TribalBench",
+          "content_valid": false,
+          "full_reference_and_release_match": false,
+          "proof_complete": false,
+          "user_delivery_complete": true
+        },
+        "trajectory": [
+          {
+            "contacts": 0,
+            "decision": {
+              "action": "SELF",
+              "include_value_ids": [],
+              "intent": null,
+              "person_id": null
+            },
+            "normal_actions": 1,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 1,
+              "bridge_submitted": false,
+              "business_success": null,
+              "posted_current_revision": false,
+              "user_delivery_complete": false
+            },
+            "public_observation_sha256": "19ec8b9ae79a5b75afc40837defec1216e1d9b3f7cb3c40956b0ae145a9296b3"
+          },
+          {
+            "contacts": 0,
+            "decision": {
+              "action": "SELF",
+              "include_value_ids": [],
+              "intent": null,
+              "person_id": null
+            },
+            "normal_actions": 2,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 1,
+              "bridge_submitted": false,
+              "business_success": null,
+              "posted_current_revision": true,
+              "user_delivery_complete": true
+            },
+            "public_observation_sha256": "ddc0fededcd65347ef6ef4f2cc461a35392fb2195b7396fe39f40577ce5708d1"
+          },
+          {
+            "contacts": 0,
+            "decision": {
+              "action": "SELF",
+              "include_value_ids": [],
+              "intent": null,
+              "person_id": null
+            },
+            "normal_actions": 3,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 1,
+              "bridge_submitted": true,
+              "business_success": null,
+              "posted_current_revision": true,
+              "user_delivery_complete": true
+            },
+            "public_observation_sha256": "611517a48f6d87dc7808594d0d4510d5eb3a61c822beaaefc7a6dbf45fe5fb2e"
+          }
+        ]
+      },
+      "declared_reference_path": "improve",
+      "fixture_canonical_sha256": "d7c5f36c4232d431476a000274c8c3a386f1cb133e7348b3769812dc0b567a6c",
+      "fixture_id": "threshold-10",
+      "not_accepted_generated_benchmark_task": true,
+      "privileged_DAG_reference": {
+        "contact_cost": 3.0,
+        "contacts": 2,
+        "mock_executor_callback_calls": 6,
+        "normal_actions": 4,
+        "proof": {
+          "bridge_submitted": true,
+          "checker": "local-fixture-proof-v1-NOT-TribalBench",
+          "content_valid": true,
+          "full_reference_and_release_match": true,
+          "proof_complete": true,
+          "user_delivery_complete": true
+        },
+        "trajectory": [
+          {
+            "contacts": 1,
+            "decision": {
+              "action": "ASK",
+              "include_value_ids": [],
+              "intent": "current seats",
+              "person_id": "owner"
+            },
+            "normal_actions": 1,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 1,
+              "bridge_submitted": false,
+              "business_success": null,
+              "posted_current_revision": false,
+              "user_delivery_complete": false
+            },
+            "public_observation_sha256": "19ec8b9ae79a5b75afc40837defec1216e1d9b3f7cb3c40956b0ae145a9296b3"
+          },
+          {
+            "contacts": 2,
+            "decision": {
+              "action": "ASK",
+              "include_value_ids": [
+                "threshold-10:privileged_DAG_reference:contact:0:reply:seats",
+                "calculation:65a802707a8b20bb60273a3be4e693885f09ead24e2916050fdc3c5c537e2077"
+              ],
+              "intent": "release purchase",
+              "person_id": "manager"
+            },
+            "normal_actions": 2,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 2,
+              "bridge_submitted": false,
+              "business_success": null,
+              "posted_current_revision": false,
+              "user_delivery_complete": false
+            },
+            "public_observation_sha256": "245ee9f5ea47e4c5409f43a572532b509eccb98fbffbcc4184388cc6669be5ca"
+          },
+          {
+            "contacts": 2,
+            "decision": {
+              "action": "SELF",
+              "include_value_ids": [],
+              "intent": null,
+              "person_id": null
+            },
+            "normal_actions": 3,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 2,
+              "bridge_submitted": false,
+              "business_success": null,
+              "posted_current_revision": true,
+              "user_delivery_complete": true
+            },
+            "public_observation_sha256": "f0d67b26e2c9eeceb03a8c918f6a71a912298afd9f26f1170827a305ce54b635"
+          },
+          {
+            "contacts": 2,
+            "decision": {
+              "action": "SELF",
+              "include_value_ids": [],
+              "intent": null,
+              "person_id": null
+            },
+            "normal_actions": 4,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 2,
+              "bridge_submitted": true,
+              "business_success": null,
+              "posted_current_revision": true,
+              "user_delivery_complete": true
+            },
+            "public_observation_sha256": "e28d476dc6af89b9a6757efa055d19982a6dfefcccbbe391c7302326012ef90f"
+          }
+        ]
+      }
+    },
+    {
+      "always_SELF": {
+        "contact_cost": 0.0,
+        "contacts": 0,
+        "mock_executor_callback_calls": 3,
+        "normal_actions": 3,
+        "proof": {
+          "bridge_submitted": true,
+          "checker": "local-fixture-proof-v1-NOT-TribalBench",
+          "content_valid": false,
+          "full_reference_and_release_match": false,
+          "proof_complete": false,
+          "user_delivery_complete": true
+        },
+        "trajectory": [
+          {
+            "contacts": 0,
+            "decision": {
+              "action": "SELF",
+              "include_value_ids": [],
+              "intent": null,
+              "person_id": null
+            },
+            "normal_actions": 1,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 1,
+              "bridge_submitted": false,
+              "business_success": null,
+              "posted_current_revision": false,
+              "user_delivery_complete": false
+            },
+            "public_observation_sha256": "19ec8b9ae79a5b75afc40837defec1216e1d9b3f7cb3c40956b0ae145a9296b3"
+          },
+          {
+            "contacts": 0,
+            "decision": {
+              "action": "SELF",
+              "include_value_ids": [],
+              "intent": null,
+              "person_id": null
+            },
+            "normal_actions": 2,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 1,
+              "bridge_submitted": false,
+              "business_success": null,
+              "posted_current_revision": true,
+              "user_delivery_complete": true
+            },
+            "public_observation_sha256": "e39d120fb9ab01d87dedfd2942cc778f128ebc1c11be64164501f7f86350088d"
+          },
+          {
+            "contacts": 0,
+            "decision": {
+              "action": "SELF",
+              "include_value_ids": [],
+              "intent": null,
+              "person_id": null
+            },
+            "normal_actions": 3,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 1,
+              "bridge_submitted": true,
+              "business_success": null,
+              "posted_current_revision": true,
+              "user_delivery_complete": true
+            },
+            "public_observation_sha256": "c7b02b31bff5acf2ebfb506f958acb945b00cdb5f7080b3760a845a0ba96910a"
+          }
+        ]
+      },
+      "declared_reference_path": "improve",
+      "fixture_canonical_sha256": "b245f16bb7a135b9ba2f53b1709e5408df74b305d29e65bf704c89d5900a3bdb",
+      "fixture_id": "threshold-20",
+      "not_accepted_generated_benchmark_task": true,
+      "privileged_DAG_reference": {
+        "contact_cost": 4.0,
+        "contacts": 2,
+        "mock_executor_callback_calls": 6,
+        "normal_actions": 4,
+        "proof": {
+          "bridge_submitted": true,
+          "checker": "local-fixture-proof-v1-NOT-TribalBench",
+          "content_valid": true,
+          "full_reference_and_release_match": true,
+          "proof_complete": true,
+          "user_delivery_complete": true
+        },
+        "trajectory": [
+          {
+            "contacts": 1,
+            "decision": {
+              "action": "ASK",
+              "include_value_ids": [],
+              "intent": "current seats",
+              "person_id": "owner"
+            },
+            "normal_actions": 1,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 1,
+              "bridge_submitted": false,
+              "business_success": null,
+              "posted_current_revision": false,
+              "user_delivery_complete": false
+            },
+            "public_observation_sha256": "19ec8b9ae79a5b75afc40837defec1216e1d9b3f7cb3c40956b0ae145a9296b3"
+          },
+          {
+            "contacts": 2,
+            "decision": {
+              "action": "ASK",
+              "include_value_ids": [
+                "threshold-20:privileged_DAG_reference:contact:0:reply:seats",
+                "calculation:2d5b1a4980f4e25fea0858a9013324297e9957430dea65d8b477461cef03e222"
+              ],
+              "intent": "release purchase",
+              "person_id": "director"
+            },
+            "normal_actions": 2,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 2,
+              "bridge_submitted": false,
+              "business_success": null,
+              "posted_current_revision": false,
+              "user_delivery_complete": false
+            },
+            "public_observation_sha256": "434347c7edffc2ea38348828da620b5deebd9b335cec13912a21bdacf526cf54"
+          },
+          {
+            "contacts": 2,
+            "decision": {
+              "action": "SELF",
+              "include_value_ids": [],
+              "intent": null,
+              "person_id": null
+            },
+            "normal_actions": 3,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 2,
+              "bridge_submitted": false,
+              "business_success": null,
+              "posted_current_revision": true,
+              "user_delivery_complete": true
+            },
+            "public_observation_sha256": "8ea3977dc58a9d2f7df8ac454a939e18463240d01287d48d9873abe5da40d149"
+          },
+          {
+            "contacts": 2,
+            "decision": {
+              "action": "SELF",
+              "include_value_ids": [],
+              "intent": null,
+              "person_id": null
+            },
+            "normal_actions": 4,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 2,
+              "bridge_submitted": true,
+              "business_success": null,
+              "posted_current_revision": true,
+              "user_delivery_complete": true
+            },
+            "public_observation_sha256": "780dd2d0695e918ec943c47d3addafffd661e8f5b8108f573b9e016eeae91844"
+          }
+        ]
+      }
+    },
+    {
+      "always_SELF": {
+        "contact_cost": 0.0,
+        "contacts": 0,
+        "mock_executor_callback_calls": 3,
+        "normal_actions": 3,
+        "proof": {
+          "bridge_submitted": true,
+          "checker": "local-fixture-proof-v1-NOT-TribalBench",
+          "content_valid": true,
+          "full_reference_and_release_match": false,
+          "proof_complete": true,
+          "user_delivery_complete": true
+        },
+        "trajectory": [
+          {
+            "contacts": 0,
+            "decision": {
+              "action": "SELF",
+              "include_value_ids": [],
+              "intent": null,
+              "person_id": null
+            },
+            "normal_actions": 1,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 1,
+              "bridge_submitted": false,
+              "business_success": null,
+              "posted_current_revision": false,
+              "user_delivery_complete": false
+            },
+            "public_observation_sha256": "8c33a9e656c32d17e46158db865c7936f0febad456d8042bf472f85c2064f4d4"
+          },
+          {
+            "contacts": 0,
+            "decision": {
+              "action": "SELF",
+              "include_value_ids": [],
+              "intent": null,
+              "person_id": null
+            },
+            "normal_actions": 2,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 1,
+              "bridge_submitted": false,
+              "business_success": null,
+              "posted_current_revision": true,
+              "user_delivery_complete": true
+            },
+            "public_observation_sha256": "3e916adb1460bd149fd33e16a3e3dc69440dd130641140e2d397628df0d16efa"
+          },
+          {
+            "contacts": 0,
+            "decision": {
+              "action": "SELF",
+              "include_value_ids": [],
+              "intent": null,
+              "person_id": null
+            },
+            "normal_actions": 3,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 1,
+              "bridge_submitted": true,
+              "business_success": null,
+              "posted_current_revision": true,
+              "user_delivery_complete": true
+            },
+            "public_observation_sha256": "d656a76d4cb649f19b8ff787dba82faae54a73917005e96a2ab94aa362d90fcc"
+          }
+        ]
+      },
+      "declared_reference_path": "baseline",
+      "fixture_canonical_sha256": "3de6128678f5a183be7323bb92f9626a987fe5bbc993c260097faba240675c4d",
+      "fixture_id": "optional-baseline",
+      "not_accepted_generated_benchmark_task": true,
+      "privileged_DAG_reference": {
+        "contact_cost": 0.0,
+        "contacts": 0,
+        "mock_executor_callback_calls": 3,
+        "normal_actions": 3,
+        "proof": {
+          "bridge_submitted": true,
+          "checker": "local-fixture-proof-v1-NOT-TribalBench",
+          "content_valid": true,
+          "full_reference_and_release_match": false,
+          "proof_complete": true,
+          "user_delivery_complete": true
+        },
+        "trajectory": [
+          {
+            "contacts": 0,
+            "decision": {
+              "action": "SELF",
+              "include_value_ids": [],
+              "intent": null,
+              "person_id": null
+            },
+            "normal_actions": 1,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 1,
+              "bridge_submitted": false,
+              "business_success": null,
+              "posted_current_revision": false,
+              "user_delivery_complete": false
+            },
+            "public_observation_sha256": "8c33a9e656c32d17e46158db865c7936f0febad456d8042bf472f85c2064f4d4"
+          },
+          {
+            "contacts": 0,
+            "decision": {
+              "action": "SELF",
+              "include_value_ids": [],
+              "intent": null,
+              "person_id": null
+            },
+            "normal_actions": 2,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 1,
+              "bridge_submitted": false,
+              "business_success": null,
+              "posted_current_revision": true,
+              "user_delivery_complete": true
+            },
+            "public_observation_sha256": "ebe71d62715574fb0038169f2537b291b51264889935df2dc8b1d76658db0b12"
+          },
+          {
+            "contacts": 0,
+            "decision": {
+              "action": "SELF",
+              "include_value_ids": [],
+              "intent": null,
+              "person_id": null
+            },
+            "normal_actions": 3,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 1,
+              "bridge_submitted": true,
+              "business_success": null,
+              "posted_current_revision": true,
+              "user_delivery_complete": true
+            },
+            "public_observation_sha256": "4d755d3dd392a9e448d3659adde83885f10cfe7e930d39d8a48eadc709995727"
+          }
+        ]
+      }
+    },
+    {
+      "always_SELF": {
+        "contact_cost": 0.0,
+        "contacts": 0,
+        "mock_executor_callback_calls": 3,
+        "normal_actions": 3,
+        "proof": {
+          "bridge_submitted": true,
+          "checker": "local-fixture-proof-v1-NOT-TribalBench",
+          "content_valid": true,
+          "full_reference_and_release_match": false,
+          "proof_complete": true,
+          "user_delivery_complete": true
+        },
+        "trajectory": [
+          {
+            "contacts": 0,
+            "decision": {
+              "action": "SELF",
+              "include_value_ids": [],
+              "intent": null,
+              "person_id": null
+            },
+            "normal_actions": 1,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 1,
+              "bridge_submitted": false,
+              "business_success": null,
+              "posted_current_revision": false,
+              "user_delivery_complete": false
+            },
+            "public_observation_sha256": "9ac6a74e2d51179574e85c8d1efaba4b34dfe8cce486e0c30ae47a1cd2466c04"
+          },
+          {
+            "contacts": 0,
+            "decision": {
+              "action": "SELF",
+              "include_value_ids": [],
+              "intent": null,
+              "person_id": null
+            },
+            "normal_actions": 2,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 1,
+              "bridge_submitted": false,
+              "business_success": null,
+              "posted_current_revision": true,
+              "user_delivery_complete": true
+            },
+            "public_observation_sha256": "43238e526bf201ab3c1ce1738c747f436604ed70232e3d0addb520c8709449e6"
+          },
+          {
+            "contacts": 0,
+            "decision": {
+              "action": "SELF",
+              "include_value_ids": [],
+              "intent": null,
+              "person_id": null
+            },
+            "normal_actions": 3,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 1,
+              "bridge_submitted": true,
+              "business_success": null,
+              "posted_current_revision": true,
+              "user_delivery_complete": true
+            },
+            "public_observation_sha256": "31d15f7963132033f0c57502ddb40a754ef452965854ccea8bdae1e259319677"
+          }
+        ]
+      },
+      "declared_reference_path": "improve",
+      "fixture_canonical_sha256": "4b7ea6f6d8b16af01ec4b08dc25fb9671b1a88a87c3f00e21929f19efda20b05",
+      "fixture_id": "optional-improve",
+      "not_accepted_generated_benchmark_task": true,
+      "privileged_DAG_reference": {
+        "contact_cost": 1.0,
+        "contacts": 1,
+        "mock_executor_callback_calls": 4,
+        "normal_actions": 3,
+        "proof": {
+          "bridge_submitted": true,
+          "checker": "local-fixture-proof-v1-NOT-TribalBench",
+          "content_valid": true,
+          "full_reference_and_release_match": true,
+          "proof_complete": true,
+          "user_delivery_complete": true
+        },
+        "trajectory": [
+          {
+            "contacts": 1,
+            "decision": {
+              "action": "ASK",
+              "include_value_ids": [],
+              "intent": "current record",
+              "person_id": "owner"
+            },
+            "normal_actions": 1,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 1,
+              "bridge_submitted": false,
+              "business_success": null,
+              "posted_current_revision": false,
+              "user_delivery_complete": false
+            },
+            "public_observation_sha256": "9ac6a74e2d51179574e85c8d1efaba4b34dfe8cce486e0c30ae47a1cd2466c04"
+          },
+          {
+            "contacts": 1,
+            "decision": {
+              "action": "SELF",
+              "include_value_ids": [],
+              "intent": null,
+              "person_id": null
+            },
+            "normal_actions": 2,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 1,
+              "bridge_submitted": false,
+              "business_success": null,
+              "posted_current_revision": true,
+              "user_delivery_complete": true
+            },
+            "public_observation_sha256": "a11b438920e79fb55f1c97500399ed89a9cdfccd04f2acc55ce9ce39d110f4f6"
+          },
+          {
+            "contacts": 1,
+            "decision": {
+              "action": "SELF",
+              "include_value_ids": [],
+              "intent": null,
+              "person_id": null
+            },
+            "normal_actions": 3,
+            "progress": {
+              "artifact_present": true,
+              "artifact_public_shape_valid": true,
+              "artifact_revision": 1,
+              "bridge_submitted": true,
+              "business_success": null,
+              "posted_current_revision": true,
+              "user_delivery_complete": true
+            },
+            "public_observation_sha256": "9f88e02364470a53c72e8ea06eca6c5ffecab4e5b26466a15e121ca0a7560c59"
+          }
+        ]
+      }
+    }
+  ],
+  "intentional_unidentifiable_negative_control": [
+    {
+      "public_signature": "f89beaa88afc79918f2aa90903030e90b0f2a78996346e2dcb7aabda218a3cf1",
+      "shared_acceptable_label_fingerprints": [],
+      "states": 2,
+      "status": "unidentifiable",
+      "unique_label": false
+    }
+  ],
+  "local_protocol_gate_passed": true,
+  "mock_executor_only": true,
+  "new_GPU_jobs": 0,
+  "new_model_API_calls": 0,
+  "new_training_updates": 0,
+  "official_TribalBench_scorer_executed": false,
+  "protocol_version": "study4-controller-v2-local-1.2-help-only",
+  "public_state_label_compatibility": [
+    {
+      "public_signature": "f89beaa88afc79918f2aa90903030e90b0f2a78996346e2dcb7aabda218a3cf1",
+      "shared_acceptable_label_fingerprints": [
+        "a0226dc0a1de0bec4965e00dea1f6b7399dbb81ec1ef31a5789474f83eea1607",
+        "d2e4d531e8b5a467d164e7d044989e0557a408b242b58eb6aee09ca1c66f0d5b"
+      ],
+      "states": 1,
+      "status": "compatible",
+      "unique_label": false
+    },
+    {
+      "public_signature": "a11f7191a31bf52c95cfd75229c51df8da2998f1efeaa4c600474aafa3b3c3b1",
+      "shared_acceptable_label_fingerprints": [
+        "0e5cbfbf01f7e2d07fdd44d1adbe6db7f3c02f3dd0362ceab24805983b422755"
+      ],
+      "states": 1,
+      "status": "compatible",
+      "unique_label": true
+    },
+    {
+      "public_signature": "b706e4afdd98515bbf4a15240e8adabecaf59b07d7085fad4fa0d955745d8b34",
+      "shared_acceptable_label_fingerprints": [
+        "0e5cbfbf01f7e2d07fdd44d1adbe6db7f3c02f3dd0362ceab24805983b422755"
+      ],
+      "states": 1,
+      "status": "compatible",
+      "unique_label": true
+    },
+    {
+      "public_signature": "4eb5e8e25463c33ec18bfd98a7c81950e43a46bb37fea916cb19d9d5e1bcf695",
+      "shared_acceptable_label_fingerprints": [
+        "a0226dc0a1de0bec4965e00dea1f6b7399dbb81ec1ef31a5789474f83eea1607"
+      ],
+      "states": 1,
+      "status": "compatible",
+      "unique_label": true
+    },
+    {
+      "public_signature": "27c7073c083c6f32e2c675901499316fe5b370bddb13299bc9eeb0a1398710de",
+      "shared_acceptable_label_fingerprints": [
+        "e32a187ccd8e5f27bd57052ac25db580764f55f06d5c73111801d900fc0c7395"
+      ],
+      "states": 1,
+      "status": "compatible",
+      "unique_label": true
+    },
+    {
+      "public_signature": "d0dc6b1e1054fbf7aed7c504dabf2c2d20fac8d50d475e807552a06a721af71a",
+      "shared_acceptable_label_fingerprints": [
+        "0e5cbfbf01f7e2d07fdd44d1adbe6db7f3c02f3dd0362ceab24805983b422755"
+      ],
+      "states": 1,
+      "status": "compatible",
+      "unique_label": true
+    },
+    {
+      "public_signature": "1dcbc04bc700f632b83e45b431d95ea7c39dfdc6efa7e6ff1cf9956eb839851e",
+      "shared_acceptable_label_fingerprints": [
+        "0e5cbfbf01f7e2d07fdd44d1adbe6db7f3c02f3dd0362ceab24805983b422755"
+      ],
+      "states": 1,
+      "status": "compatible",
+      "unique_label": true
+    },
+    {
+      "public_signature": "b13f13aba62c1a6a3fd6e360b00345f2f91e4863b781549bd9ad68ba309eafc6",
+      "shared_acceptable_label_fingerprints": [
+        "9ef473bb865a06348461a9c56531e43bd3127f9369c4840e025edcc53cc8e154",
+        "a0226dc0a1de0bec4965e00dea1f6b7399dbb81ec1ef31a5789474f83eea1607"
+      ],
+      "states": 1,
+      "status": "compatible",
+      "unique_label": false
+    },
+    {
+      "public_signature": "6ee949adfb6b88885d5f8bb34efd2ee419e6837233d2217cf240b7399301eea6",
+      "shared_acceptable_label_fingerprints": [
+        "9ef473bb865a06348461a9c56531e43bd3127f9369c4840e025edcc53cc8e154"
+      ],
+      "states": 1,
+      "status": "compatible",
+      "unique_label": true
+    },
+    {
+      "public_signature": "413c78ec50ec81253c02140449154a1c3093ce2f4b654b75b2e16fa7924f8e28",
+      "shared_acceptable_label_fingerprints": [
+        "879333d9cc629eecce07d99b458a0417e274967843f43921d39cc2504e7c65c2"
+      ],
+      "states": 1,
+      "status": "compatible",
+      "unique_label": true
+    },
+    {
+      "public_signature": "77f66d04da7bc131c4b7dd402a29eeec0f0bc3be201e8720c2bde657424876cb",
+      "shared_acceptable_label_fingerprints": [
+        "0e5cbfbf01f7e2d07fdd44d1adbe6db7f3c02f3dd0362ceab24805983b422755"
+      ],
+      "states": 1,
+      "status": "compatible",
+      "unique_label": true
+    },
+    {
+      "public_signature": "7defe92fa14052582f158bf045cae0da48ff22a27597b43d65bd0e5ff07fa9d3",
+      "shared_acceptable_label_fingerprints": [
+        "0e5cbfbf01f7e2d07fdd44d1adbe6db7f3c02f3dd0362ceab24805983b422755"
+      ],
+      "states": 1,
+      "status": "compatible",
+      "unique_label": true
+    },
+    {
+      "public_signature": "02ca101f77b6a736dd2d840580724ff765cd62c88c0c098f99008a15f42102e6",
+      "shared_acceptable_label_fingerprints": [
+        "4e438e2252aedae41178e8cb0a836b62f362efccb93b0e50bbc92ef362797ad2"
+      ],
+      "states": 1,
+      "status": "compatible",
+      "unique_label": true
+    },
+    {
+      "public_signature": "2bec0ce4c2d28f3d2a910f9d138912b1b86b8d2b4ee9dcc2e0a65fc484c8e55f",
+      "shared_acceptable_label_fingerprints": [
+        "ba72d79090d186d3260d233bba05214988114ae5a59de0f5250a01877c266196"
+      ],
+      "states": 1,
+      "status": "compatible",
+      "unique_label": true
+    },
+    {
+      "public_signature": "7deac7c5375627aaebc731e83053ba63516d2671692e0a321f4a639fa9483b56",
+      "shared_acceptable_label_fingerprints": [
+        "0e5cbfbf01f7e2d07fdd44d1adbe6db7f3c02f3dd0362ceab24805983b422755"
+      ],
+      "states": 1,
+      "status": "compatible",
+      "unique_label": true
+    },
+    {
+      "public_signature": "c997d29ada55768a49a752795e4e3abb478539c5a9a2c202b4e14d1203c3fa21",
+      "shared_acceptable_label_fingerprints": [
+        "0e5cbfbf01f7e2d07fdd44d1adbe6db7f3c02f3dd0362ceab24805983b422755"
+      ],
+      "states": 1,
+      "status": "compatible",
+      "unique_label": true
+    },
+    {
+      "public_signature": "8f0a28702c82c48f8fe0d5dd58e1f6cdc980e8a5d5a19915e96facfc9a401b36",
+      "shared_acceptable_label_fingerprints": [
+        "0a578489c52cfdf8516e6a8236ba05b886b43b6b57b9d17d745afeb512a02df1"
+      ],
+      "states": 1,
+      "status": "compatible",
+      "unique_label": true
+    },
+    {
+      "public_signature": "36695c3232bb2c6b54e1ca85650a62ba8bfc54175b110a1e73744e3454c83d05",
+      "shared_acceptable_label_fingerprints": [
+        "ba72d79090d186d3260d233bba05214988114ae5a59de0f5250a01877c266196"
+      ],
+      "states": 1,
+      "status": "compatible",
+      "unique_label": true
+    },
+    {
+      "public_signature": "01cdaad22bb7a888ecaddb562c47634da78d375e91005fa0371fada7f8b647bc",
+      "shared_acceptable_label_fingerprints": [
+        "0e5cbfbf01f7e2d07fdd44d1adbe6db7f3c02f3dd0362ceab24805983b422755"
+      ],
+      "states": 1,
+      "status": "compatible",
+      "unique_label": true
+    },
+    {
+      "public_signature": "263afa729127d2edb01c3d21150d06fcf63d3cd818ac6b7db92c91b1c5011039",
+      "shared_acceptable_label_fingerprints": [
+        "0e5cbfbf01f7e2d07fdd44d1adbe6db7f3c02f3dd0362ceab24805983b422755"
+      ],
+      "states": 1,
+      "status": "compatible",
+      "unique_label": true
+    },
+    {
+      "public_signature": "19ec8b9ae79a5b75afc40837defec1216e1d9b3f7cb3c40956b0ae145a9296b3",
+      "shared_acceptable_label_fingerprints": [
+        "e08494e78e9ba7349f7f88153d0616230536f908322cf02ca23d9e60283e1353"
+      ],
+      "states": 2,
+      "status": "compatible",
+      "unique_label": true
+    },
+    {
+      "public_signature": "bf0aecb0a2b111033354c0d70c1718c521c316707b59e8f84b948de4ca8ea8ff",
+      "shared_acceptable_label_fingerprints": [
+        "0b7f5f7fb5c1f00918cc4eadcfee068d18e8d5ce88d0d1f55bda036e3e1c4600"
+      ],
+      "states": 1,
+      "status": "compatible",
+      "unique_label": true
+    },
+    {
+      "public_signature": "334eff1c4d88b41095a8296de7d73a080ed534a6b435ac4ed98afcf3c2dae4e6",
+      "shared_acceptable_label_fingerprints": [
+        "0e5cbfbf01f7e2d07fdd44d1adbe6db7f3c02f3dd0362ceab24805983b422755"
+      ],
+      "states": 1,
+      "status": "compatible",
+      "unique_label": true
+    },
+    {
+      "public_signature": "09bd24696604193e601ecafe7da6eed5fd87242eeb363f86bfcfd52ab518261d",
+      "shared_acceptable_label_fingerprints": [
+        "0e5cbfbf01f7e2d07fdd44d1adbe6db7f3c02f3dd0362ceab24805983b422755"
+      ],
+      "states": 1,
+      "status": "compatible",
+      "unique_label": true
+    },
+    {
+      "public_signature": "99ad30315ddc290778987f87004142969f44fcb860916d495baebcc1c9c93998",
+      "shared_acceptable_label_fingerprints": [
+        "14e8537e23b793f07657c309a83097b2ffdff0b566f1e30bcef4cd4a25c20510"
+      ],
+      "states": 1,
+      "status": "compatible",
+      "unique_label": true
+    },
+    {
+      "public_signature": "619380c197191d2fab363bd32d30243c623ee7be0769504878bb87c79ddae3c5",
+      "shared_acceptable_label_fingerprints": [
+        "0e5cbfbf01f7e2d07fdd44d1adbe6db7f3c02f3dd0362ceab24805983b422755"
+      ],
+      "states": 1,
+      "status": "compatible",
+      "unique_label": true
+    },
+    {
+      "public_signature": "7866745c4e785c7f5a9bcddf497f5a9236916c0c9407bb724b07a58c313a2b4f",
+      "shared_acceptable_label_fingerprints": [
+        "0e5cbfbf01f7e2d07fdd44d1adbe6db7f3c02f3dd0362ceab24805983b422755"
+      ],
+      "states": 1,
+      "status": "compatible",
+      "unique_label": true
+    },
+    {
+      "public_signature": "8c33a9e656c32d17e46158db865c7936f0febad456d8042bf472f85c2064f4d4",
+      "shared_acceptable_label_fingerprints": [
+        "0e5cbfbf01f7e2d07fdd44d1adbe6db7f3c02f3dd0362ceab24805983b422755"
+      ],
+      "states": 1,
+      "status": "compatible",
+      "unique_label": true
+    },
+    {
+      "public_signature": "a1d3769f4956841a1bfb819474486c19bc4561966fbc5d81e00a13c56c3d964d",
+      "shared_acceptable_label_fingerprints": [
+        "0e5cbfbf01f7e2d07fdd44d1adbe6db7f3c02f3dd0362ceab24805983b422755"
+      ],
+      "states": 1,
+      "status": "compatible",
+      "unique_label": true
+    },
+    {
+      "public_signature": "f4af0cb76133700ace51d82f6b71be25fc64eb757d4000544522e433dcf7c104",
+      "shared_acceptable_label_fingerprints": [
+        "0e5cbfbf01f7e2d07fdd44d1adbe6db7f3c02f3dd0362ceab24805983b422755"
+      ],
+      "states": 1,
+      "status": "compatible",
+      "unique_label": true
+    },
+    {
+      "public_signature": "9ac6a74e2d51179574e85c8d1efaba4b34dfe8cce486e0c30ae47a1cd2466c04",
+      "shared_acceptable_label_fingerprints": [
+        "a0226dc0a1de0bec4965e00dea1f6b7399dbb81ec1ef31a5789474f83eea1607"
+      ],
+      "states": 1,
+      "status": "compatible",
+      "unique_label": true
+    },
+    {
+      "public_signature": "7de8401679aae9052b2add80880e03b73253d606ddec309d76c209edec8d8d4f",
+      "shared_acceptable_label_fingerprints": [
+        "0e5cbfbf01f7e2d07fdd44d1adbe6db7f3c02f3dd0362ceab24805983b422755"
+      ],
+      "states": 1,
+      "status": "compatible",
+      "unique_label": true
+    },
+    {
+      "public_signature": "40b400f9a2de98b155b22a6f7f47c34c8324dbf8fad837c722b740ccce162241",
+      "shared_acceptable_label_fingerprints": [
+        "0e5cbfbf01f7e2d07fdd44d1adbe6db7f3c02f3dd0362ceab24805983b422755"
+      ],
+      "states": 1,
+      "status": "compatible",
+      "unique_label": true
+    }
+  ],
+  "real_mini_ceiling_gate": "not run; requires separate authorization",
+  "reference_fixture_proof_complete": 9,
+  "schema": "study4-v2-local-fixture-acceptance-v2"
+}

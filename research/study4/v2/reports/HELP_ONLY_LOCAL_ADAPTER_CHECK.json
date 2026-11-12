@@ -1,0 +1,3013 @@
+{
+  "schema": "study4-v2-local-adapter-check-1",
+  "mode": "SCRIPTED-LOCAL-NOT-mini-inference",
+  "source_revision": "4260bdc626548f59042f318cdf0566490e91b9d5",
+  "source_files_byte_verified": 38,
+  "cases": [
+    {
+      "task_id": "m-low-customer-mailing",
+      "arm": "A",
+      "official": {
+        "grader_version": "tribalbench-1.0",
+        "task_id": "m-low-customer-mailing",
+        "help_class": "Must-help",
+        "submitted": true,
+        "base_pass": true,
+        "quality_score": null,
+        "T": 1.0,
+        "R": 1.0,
+        "R_all_contacts": 0.7,
+        "weights": {
+          "lambda": 0.05,
+          "mu": 0.3,
+          "nu": 0.1
+        },
+        "evaluation_status": "scored",
+        "evidence": [
+          {
+            "node_id": "h1",
+            "message_id": "LOCAL:m-low-customer-mailing:A:contact:0:reply",
+            "request_id": "LOCAL:m-low-customer-mailing:A:contact:0:out",
+            "status": "accepted",
+            "reason": "Exact environment release receipt",
+            "value_match": true,
+            "context_match": true,
+            "observed_refusal": false
+          },
+          {
+            "node_id": "h2",
+            "message_id": "LOCAL:m-low-customer-mailing:A:contact:0:reply",
+            "request_id": "LOCAL:m-low-customer-mailing:A:contact:0:out",
+            "status": "rejected",
+            "reason": "prerequisite_not_satisfied_before_request",
+            "value_match": false,
+            "context_match": false,
+            "observed_refusal": false
+          },
+          {
+            "node_id": "h1",
+            "message_id": "LOCAL:m-low-customer-mailing:A:contact:1:reply",
+            "request_id": "LOCAL:m-low-customer-mailing:A:contact:1:out",
+            "status": "rejected",
+            "reason": "No release for this node",
+            "value_match": false,
+            "context_match": true,
+            "observed_refusal": false
+          },
+          {
+            "node_id": "h2",
+            "message_id": "LOCAL:m-low-customer-mailing:A:contact:1:reply",
+            "request_id": "LOCAL:m-low-customer-mailing:A:contact:1:out",
+            "status": "accepted",
+            "reason": "Exact environment release receipt",
+            "value_match": true,
+            "context_match": true,
+            "observed_refusal": false
+          }
+        ],
+        "unknown_nodes": [],
+        "artifact": {
+          "artifact_correct": true,
+          "field_accuracy": 1.0
+        },
+        "fields": {
+          "segment_id": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "recipient_count": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "send_date": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": true
+          },
+          "authorization_ref": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          }
+        },
+        "process": {
+          "nodes_satisfied": [
+            "h1",
+            "h2"
+          ],
+          "all_nodes_satisfied": true,
+          "order_ok": true,
+          "contacts": [
+            "Mark Johnson"
+          ],
+          "n_asks": 2,
+          "first_contact": "Mark Johnson",
+          "first_contact_valid": true,
+          "interruption_cost": 6.0
+        },
+        "errors": {
+          "wrong_person": 0,
+          "decoy_contacts": [],
+          "out_of_pool": [],
+          "premature_request": 0,
+          "rejections": 0,
+          "repaired_nodes": 0,
+          "no_repair_nodes": 0,
+          "redundant": 0,
+          "n_auth": 0,
+          "n_waste": 0,
+          "silent_failure": false,
+          "unsupported_claims": [],
+          "unverified_claims": [],
+          "unused_reply_nodes": [],
+          "over_ask": null
+        }
+      },
+      "bridge_submitted": true,
+      "user_delivery_complete": true,
+      "input_fingerprint": "236ff407eb3d358a42fbfb122c5b2c90aa899dae293d79308acf8d3168446c09",
+      "trace_sha256": "b4b44a3ad217b9db905b259c74fa0796856f88d38dc53d6139bb6d480283741c",
+      "schedule_sha256": "58f7b70b7fca802acd40eaaeb11b24a774677bcc6acd187580e5c3e36824be76",
+      "normal_actions": 4,
+      "mock_requests": 12,
+      "proposal_refreshes": 2,
+      "budget": {
+        "mode": "local-in-memory-NOT-paid-ledger",
+        "paid_authorization": false,
+        "budget_cap_pending": false,
+        "calls": 12,
+        "settled": 12,
+        "unknown": 0,
+        "usd_exposure_upper": "0.0303055500",
+        "stopped": false,
+        "real_API_calls": 0
+      }
+    },
+    {
+      "task_id": "m-low-customer-mailing",
+      "arm": "B",
+      "official": {
+        "grader_version": "tribalbench-1.0",
+        "task_id": "m-low-customer-mailing",
+        "help_class": "Must-help",
+        "submitted": true,
+        "base_pass": true,
+        "quality_score": null,
+        "T": 1.0,
+        "R": 1.0,
+        "R_all_contacts": 0.7,
+        "weights": {
+          "lambda": 0.05,
+          "mu": 0.3,
+          "nu": 0.1
+        },
+        "evaluation_status": "scored",
+        "evidence": [
+          {
+            "node_id": "h1",
+            "message_id": "LOCAL:m-low-customer-mailing:B:contact:0:reply",
+            "request_id": "LOCAL:m-low-customer-mailing:B:contact:0:out",
+            "status": "accepted",
+            "reason": "Exact environment release receipt",
+            "value_match": true,
+            "context_match": true,
+            "observed_refusal": false
+          },
+          {
+            "node_id": "h2",
+            "message_id": "LOCAL:m-low-customer-mailing:B:contact:0:reply",
+            "request_id": "LOCAL:m-low-customer-mailing:B:contact:0:out",
+            "status": "rejected",
+            "reason": "prerequisite_not_satisfied_before_request",
+            "value_match": false,
+            "context_match": false,
+            "observed_refusal": false
+          },
+          {
+            "node_id": "h1",
+            "message_id": "LOCAL:m-low-customer-mailing:B:contact:1:reply",
+            "request_id": "LOCAL:m-low-customer-mailing:B:contact:1:out",
+            "status": "rejected",
+            "reason": "No release for this node",
+            "value_match": false,
+            "context_match": true,
+            "observed_refusal": false
+          },
+          {
+            "node_id": "h2",
+            "message_id": "LOCAL:m-low-customer-mailing:B:contact:1:reply",
+            "request_id": "LOCAL:m-low-customer-mailing:B:contact:1:out",
+            "status": "accepted",
+            "reason": "Exact environment release receipt",
+            "value_match": true,
+            "context_match": true,
+            "observed_refusal": false
+          }
+        ],
+        "unknown_nodes": [],
+        "artifact": {
+          "artifact_correct": true,
+          "field_accuracy": 1.0
+        },
+        "fields": {
+          "segment_id": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "recipient_count": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "send_date": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": true
+          },
+          "authorization_ref": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          }
+        },
+        "process": {
+          "nodes_satisfied": [
+            "h1",
+            "h2"
+          ],
+          "all_nodes_satisfied": true,
+          "order_ok": true,
+          "contacts": [
+            "Mark Johnson"
+          ],
+          "n_asks": 2,
+          "first_contact": "Mark Johnson",
+          "first_contact_valid": true,
+          "interruption_cost": 6.0
+        },
+        "errors": {
+          "wrong_person": 0,
+          "decoy_contacts": [],
+          "out_of_pool": [],
+          "premature_request": 0,
+          "rejections": 0,
+          "repaired_nodes": 0,
+          "no_repair_nodes": 0,
+          "redundant": 0,
+          "n_auth": 0,
+          "n_waste": 0,
+          "silent_failure": false,
+          "unsupported_claims": [],
+          "unverified_claims": [],
+          "unused_reply_nodes": [],
+          "over_ask": null
+        }
+      },
+      "bridge_submitted": true,
+      "user_delivery_complete": true,
+      "input_fingerprint": "fa00e33e3dadd65959afbbeee489410c91bafa1e81e541fdbad68a49c05f2f8f",
+      "trace_sha256": "7b89cc49318a89c9f129d823f7a16769ed17b406b9098105ea1d77649ff398ed",
+      "schedule_sha256": "95d977805005a85463f4243712d4e5bc02e1ef6a1d6503fcd2036f6876c4606a",
+      "normal_actions": 4,
+      "mock_requests": 8,
+      "proposal_refreshes": 2,
+      "budget": {
+        "mode": "local-in-memory-NOT-paid-ledger",
+        "paid_authorization": false,
+        "budget_cap_pending": false,
+        "calls": 20,
+        "settled": 20,
+        "unknown": 0,
+        "usd_exposure_upper": "0.0530615250",
+        "stopped": false,
+        "real_API_calls": 0
+      }
+    },
+    {
+      "task_id": "m-low-customer-mailing",
+      "arm": "C",
+      "official": {
+        "grader_version": "tribalbench-1.0",
+        "task_id": "m-low-customer-mailing",
+        "help_class": "Must-help",
+        "submitted": true,
+        "base_pass": true,
+        "quality_score": null,
+        "T": 1.0,
+        "R": 1.0,
+        "R_all_contacts": 0.7,
+        "weights": {
+          "lambda": 0.05,
+          "mu": 0.3,
+          "nu": 0.1
+        },
+        "evaluation_status": "scored",
+        "evidence": [
+          {
+            "node_id": "h1",
+            "message_id": "LOCAL:m-low-customer-mailing:C:contact:0:reply",
+            "request_id": "LOCAL:m-low-customer-mailing:C:contact:0:out",
+            "status": "accepted",
+            "reason": "Exact environment release receipt",
+            "value_match": true,
+            "context_match": true,
+            "observed_refusal": false
+          },
+          {
+            "node_id": "h2",
+            "message_id": "LOCAL:m-low-customer-mailing:C:contact:0:reply",
+            "request_id": "LOCAL:m-low-customer-mailing:C:contact:0:out",
+            "status": "rejected",
+            "reason": "prerequisite_not_satisfied_before_request",
+            "value_match": false,
+            "context_match": false,
+            "observed_refusal": false
+          },
+          {
+            "node_id": "h1",
+            "message_id": "LOCAL:m-low-customer-mailing:C:contact:1:reply",
+            "request_id": "LOCAL:m-low-customer-mailing:C:contact:1:out",
+            "status": "rejected",
+            "reason": "No release for this node",
+            "value_match": false,
+            "context_match": true,
+            "observed_refusal": false
+          },
+          {
+            "node_id": "h2",
+            "message_id": "LOCAL:m-low-customer-mailing:C:contact:1:reply",
+            "request_id": "LOCAL:m-low-customer-mailing:C:contact:1:out",
+            "status": "accepted",
+            "reason": "Exact environment release receipt",
+            "value_match": true,
+            "context_match": true,
+            "observed_refusal": false
+          }
+        ],
+        "unknown_nodes": [],
+        "artifact": {
+          "artifact_correct": true,
+          "field_accuracy": 1.0
+        },
+        "fields": {
+          "segment_id": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "recipient_count": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "send_date": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": true
+          },
+          "authorization_ref": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          }
+        },
+        "process": {
+          "nodes_satisfied": [
+            "h1",
+            "h2"
+          ],
+          "all_nodes_satisfied": true,
+          "order_ok": true,
+          "contacts": [
+            "Mark Johnson"
+          ],
+          "n_asks": 2,
+          "first_contact": "Mark Johnson",
+          "first_contact_valid": true,
+          "interruption_cost": 6.0
+        },
+        "errors": {
+          "wrong_person": 0,
+          "decoy_contacts": [],
+          "out_of_pool": [],
+          "premature_request": 0,
+          "rejections": 0,
+          "repaired_nodes": 0,
+          "no_repair_nodes": 0,
+          "redundant": 0,
+          "n_auth": 0,
+          "n_waste": 0,
+          "silent_failure": false,
+          "unsupported_claims": [],
+          "unverified_claims": [],
+          "unused_reply_nodes": [],
+          "over_ask": null
+        }
+      },
+      "bridge_submitted": true,
+      "user_delivery_complete": true,
+      "input_fingerprint": "c93be6f44afe276d5216927c62df0e58adf1a69e4b7a71d06c30a0db28bca399",
+      "trace_sha256": "ff8bf7720a984bf4ae1490e0488efa1f438bc5bd9b9bd242d0424cb401d6f4ac",
+      "schedule_sha256": "a0cdde7a7d2f06a2182ece7a5cdbe3cc97883c6fc0f58af6b9a774e339344f36",
+      "normal_actions": 4,
+      "mock_requests": 12,
+      "proposal_refreshes": 2,
+      "budget": {
+        "mode": "local-in-memory-NOT-paid-ledger",
+        "paid_authorization": false,
+        "budget_cap_pending": false,
+        "calls": 32,
+        "settled": 32,
+        "unknown": 0,
+        "usd_exposure_upper": "0.0834264750",
+        "stopped": false,
+        "real_API_calls": 0
+      }
+    },
+    {
+      "task_id": "m-low-customer-mailing",
+      "arm": "D",
+      "official": {
+        "grader_version": "tribalbench-1.0",
+        "task_id": "m-low-customer-mailing",
+        "help_class": "Must-help",
+        "submitted": true,
+        "base_pass": true,
+        "quality_score": null,
+        "T": 1.0,
+        "R": 1.0,
+        "R_all_contacts": 0.7,
+        "weights": {
+          "lambda": 0.05,
+          "mu": 0.3,
+          "nu": 0.1
+        },
+        "evaluation_status": "scored",
+        "evidence": [
+          {
+            "node_id": "h1",
+            "message_id": "LOCAL:m-low-customer-mailing:D:contact:0:reply",
+            "request_id": "LOCAL:m-low-customer-mailing:D:contact:0:out",
+            "status": "accepted",
+            "reason": "Exact environment release receipt",
+            "value_match": true,
+            "context_match": true,
+            "observed_refusal": false
+          },
+          {
+            "node_id": "h2",
+            "message_id": "LOCAL:m-low-customer-mailing:D:contact:0:reply",
+            "request_id": "LOCAL:m-low-customer-mailing:D:contact:0:out",
+            "status": "rejected",
+            "reason": "prerequisite_not_satisfied_before_request",
+            "value_match": false,
+            "context_match": false,
+            "observed_refusal": false
+          },
+          {
+            "node_id": "h1",
+            "message_id": "LOCAL:m-low-customer-mailing:D:contact:1:reply",
+            "request_id": "LOCAL:m-low-customer-mailing:D:contact:1:out",
+            "status": "rejected",
+            "reason": "No release for this node",
+            "value_match": false,
+            "context_match": true,
+            "observed_refusal": false
+          },
+          {
+            "node_id": "h2",
+            "message_id": "LOCAL:m-low-customer-mailing:D:contact:1:reply",
+            "request_id": "LOCAL:m-low-customer-mailing:D:contact:1:out",
+            "status": "accepted",
+            "reason": "Exact environment release receipt",
+            "value_match": true,
+            "context_match": true,
+            "observed_refusal": false
+          }
+        ],
+        "unknown_nodes": [],
+        "artifact": {
+          "artifact_correct": true,
+          "field_accuracy": 1.0
+        },
+        "fields": {
+          "segment_id": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "recipient_count": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "send_date": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": true
+          },
+          "authorization_ref": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          }
+        },
+        "process": {
+          "nodes_satisfied": [
+            "h1",
+            "h2"
+          ],
+          "all_nodes_satisfied": true,
+          "order_ok": true,
+          "contacts": [
+            "Mark Johnson"
+          ],
+          "n_asks": 2,
+          "first_contact": "Mark Johnson",
+          "first_contact_valid": true,
+          "interruption_cost": 6.0
+        },
+        "errors": {
+          "wrong_person": 0,
+          "decoy_contacts": [],
+          "out_of_pool": [],
+          "premature_request": 0,
+          "rejections": 0,
+          "repaired_nodes": 0,
+          "no_repair_nodes": 0,
+          "redundant": 0,
+          "n_auth": 0,
+          "n_waste": 0,
+          "silent_failure": false,
+          "unsupported_claims": [],
+          "unverified_claims": [],
+          "unused_reply_nodes": [],
+          "over_ask": null
+        }
+      },
+      "bridge_submitted": true,
+      "user_delivery_complete": true,
+      "input_fingerprint": "528d55d842241682a698de177867f1e5bcef412aa7b1511f26cb5f0f9240d2f8",
+      "trace_sha256": "56a69be151704bffcc0c954cf6ca928d26541dcb5c9ffeb3f6e8a6c24108f9a1",
+      "schedule_sha256": "f185e1b6f2b993f7a7f177e80d2f2384464cd262ced9a013721cd68a27e75709",
+      "normal_actions": 4,
+      "mock_requests": 8,
+      "proposal_refreshes": 2,
+      "budget": {
+        "mode": "local-in-memory-NOT-paid-ledger",
+        "paid_authorization": false,
+        "budget_cap_pending": false,
+        "calls": 40,
+        "settled": 40,
+        "unknown": 0,
+        "usd_exposure_upper": "0.1062418500",
+        "stopped": false,
+        "real_API_calls": 0
+      }
+    },
+    {
+      "task_id": "m-low-policy-citation",
+      "arm": "A",
+      "official": {
+        "grader_version": "tribalbench-1.0",
+        "task_id": "m-low-policy-citation",
+        "help_class": "Must-help",
+        "submitted": true,
+        "base_pass": true,
+        "quality_score": null,
+        "T": 1.0,
+        "R": 1.0,
+        "R_all_contacts": 0.95,
+        "weights": {
+          "lambda": 0.05,
+          "mu": 0.3,
+          "nu": 0.1
+        },
+        "evaluation_status": "scored",
+        "evidence": [
+          {
+            "node_id": "h1",
+            "message_id": "LOCAL:m-low-policy-citation:A:contact:0:reply",
+            "request_id": "LOCAL:m-low-policy-citation:A:contact:0:out",
+            "status": "accepted",
+            "reason": "Exact environment release receipt",
+            "value_match": true,
+            "context_match": true,
+            "observed_refusal": false
+          }
+        ],
+        "unknown_nodes": [],
+        "artifact": {
+          "artifact_correct": true,
+          "field_accuracy": 1.0
+        },
+        "fields": {
+          "policy": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": true
+          },
+          "version": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "effective_date": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "url_slug": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          }
+        },
+        "process": {
+          "nodes_satisfied": [
+            "h1"
+          ],
+          "all_nodes_satisfied": true,
+          "order_ok": true,
+          "contacts": [
+            "Priya Sharma"
+          ],
+          "n_asks": 1,
+          "first_contact": "Priya Sharma",
+          "first_contact_valid": true,
+          "interruption_cost": 1.0
+        },
+        "errors": {
+          "wrong_person": 0,
+          "decoy_contacts": [],
+          "out_of_pool": [],
+          "premature_request": 0,
+          "rejections": 0,
+          "repaired_nodes": 0,
+          "no_repair_nodes": 0,
+          "redundant": 0,
+          "n_auth": 0,
+          "n_waste": 0,
+          "silent_failure": false,
+          "unsupported_claims": [],
+          "unverified_claims": [],
+          "unused_reply_nodes": [],
+          "over_ask": null
+        }
+      },
+      "bridge_submitted": true,
+      "user_delivery_complete": true,
+      "input_fingerprint": "19387954906514d65af922e273a2a187d6917fbb1ef5376923bf4a254f8e09a1",
+      "trace_sha256": "9cb4b21c5b8e485bd7d7877c9ac4dd56e3200a7cb29f66b2793e836c8a12727f",
+      "schedule_sha256": "1f518a7086154ee65a5ff064c91a24d1b4ea15139c8a7010df5a7b041955851f",
+      "normal_actions": 3,
+      "mock_requests": 8,
+      "proposal_refreshes": 1,
+      "budget": {
+        "mode": "local-in-memory-NOT-paid-ledger",
+        "paid_authorization": false,
+        "budget_cap_pending": false,
+        "calls": 48,
+        "settled": 48,
+        "unknown": 0,
+        "usd_exposure_upper": "0.1285053000",
+        "stopped": false,
+        "real_API_calls": 0
+      }
+    },
+    {
+      "task_id": "m-low-policy-citation",
+      "arm": "B",
+      "official": {
+        "grader_version": "tribalbench-1.0",
+        "task_id": "m-low-policy-citation",
+        "help_class": "Must-help",
+        "submitted": true,
+        "base_pass": true,
+        "quality_score": null,
+        "T": 1.0,
+        "R": 1.0,
+        "R_all_contacts": 0.95,
+        "weights": {
+          "lambda": 0.05,
+          "mu": 0.3,
+          "nu": 0.1
+        },
+        "evaluation_status": "scored",
+        "evidence": [
+          {
+            "node_id": "h1",
+            "message_id": "LOCAL:m-low-policy-citation:B:contact:0:reply",
+            "request_id": "LOCAL:m-low-policy-citation:B:contact:0:out",
+            "status": "accepted",
+            "reason": "Exact environment release receipt",
+            "value_match": true,
+            "context_match": true,
+            "observed_refusal": false
+          }
+        ],
+        "unknown_nodes": [],
+        "artifact": {
+          "artifact_correct": true,
+          "field_accuracy": 1.0
+        },
+        "fields": {
+          "policy": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": true
+          },
+          "version": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "effective_date": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "url_slug": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          }
+        },
+        "process": {
+          "nodes_satisfied": [
+            "h1"
+          ],
+          "all_nodes_satisfied": true,
+          "order_ok": true,
+          "contacts": [
+            "Priya Sharma"
+          ],
+          "n_asks": 1,
+          "first_contact": "Priya Sharma",
+          "first_contact_valid": true,
+          "interruption_cost": 1.0
+        },
+        "errors": {
+          "wrong_person": 0,
+          "decoy_contacts": [],
+          "out_of_pool": [],
+          "premature_request": 0,
+          "rejections": 0,
+          "repaired_nodes": 0,
+          "no_repair_nodes": 0,
+          "redundant": 0,
+          "n_auth": 0,
+          "n_waste": 0,
+          "silent_failure": false,
+          "unsupported_claims": [],
+          "unverified_claims": [],
+          "unused_reply_nodes": [],
+          "over_ask": null
+        }
+      },
+      "bridge_submitted": true,
+      "user_delivery_complete": true,
+      "input_fingerprint": "af55b04a84c39f119e381d1bf7b8741ba6d0d4cd6f6dc3ca9da3c6162a0edd90",
+      "trace_sha256": "9d504451dcef09fb9034235fd906ca1162530922708ec9df756779fa8bc1569a",
+      "schedule_sha256": "876bd0a304a709c500ab64fc44d7c50bf27bb9b0981dac0133a87ee4ed14fccd",
+      "normal_actions": 3,
+      "mock_requests": 5,
+      "proposal_refreshes": 1,
+      "budget": {
+        "mode": "local-in-memory-NOT-paid-ledger",
+        "paid_authorization": false,
+        "budget_cap_pending": false,
+        "calls": 53,
+        "settled": 53,
+        "unknown": 0,
+        "usd_exposure_upper": "0.1444393500",
+        "stopped": false,
+        "real_API_calls": 0
+      }
+    },
+    {
+      "task_id": "m-low-policy-citation",
+      "arm": "C",
+      "official": {
+        "grader_version": "tribalbench-1.0",
+        "task_id": "m-low-policy-citation",
+        "help_class": "Must-help",
+        "submitted": true,
+        "base_pass": true,
+        "quality_score": null,
+        "T": 1.0,
+        "R": 1.0,
+        "R_all_contacts": 0.95,
+        "weights": {
+          "lambda": 0.05,
+          "mu": 0.3,
+          "nu": 0.1
+        },
+        "evaluation_status": "scored",
+        "evidence": [
+          {
+            "node_id": "h1",
+            "message_id": "LOCAL:m-low-policy-citation:C:contact:0:reply",
+            "request_id": "LOCAL:m-low-policy-citation:C:contact:0:out",
+            "status": "accepted",
+            "reason": "Exact environment release receipt",
+            "value_match": true,
+            "context_match": true,
+            "observed_refusal": false
+          }
+        ],
+        "unknown_nodes": [],
+        "artifact": {
+          "artifact_correct": true,
+          "field_accuracy": 1.0
+        },
+        "fields": {
+          "policy": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": true
+          },
+          "version": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "effective_date": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "url_slug": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          }
+        },
+        "process": {
+          "nodes_satisfied": [
+            "h1"
+          ],
+          "all_nodes_satisfied": true,
+          "order_ok": true,
+          "contacts": [
+            "Priya Sharma"
+          ],
+          "n_asks": 1,
+          "first_contact": "Priya Sharma",
+          "first_contact_valid": true,
+          "interruption_cost": 1.0
+        },
+        "errors": {
+          "wrong_person": 0,
+          "decoy_contacts": [],
+          "out_of_pool": [],
+          "premature_request": 0,
+          "rejections": 0,
+          "repaired_nodes": 0,
+          "no_repair_nodes": 0,
+          "redundant": 0,
+          "n_auth": 0,
+          "n_waste": 0,
+          "silent_failure": false,
+          "unsupported_claims": [],
+          "unverified_claims": [],
+          "unused_reply_nodes": [],
+          "over_ask": null
+        }
+      },
+      "bridge_submitted": true,
+      "user_delivery_complete": true,
+      "input_fingerprint": "218f4097e0b32d8712a9a0f66d09fbef73844f5f16c9d624789128f00c153451",
+      "trace_sha256": "6ab4adfaf6ac5e16ac0066175beb926338845a60bab3dea8928d388201d5ee50",
+      "schedule_sha256": "87616b0749b9afcf66974e63da3844196e0ddff9262277ab22fb5ab616e9f32e",
+      "normal_actions": 3,
+      "mock_requests": 8,
+      "proposal_refreshes": 1,
+      "budget": {
+        "mode": "local-in-memory-NOT-paid-ledger",
+        "paid_authorization": false,
+        "budget_cap_pending": false,
+        "calls": 61,
+        "settled": 61,
+        "unknown": 0,
+        "usd_exposure_upper": "0.1667184750",
+        "stopped": false,
+        "real_API_calls": 0
+      }
+    },
+    {
+      "task_id": "m-low-policy-citation",
+      "arm": "D",
+      "official": {
+        "grader_version": "tribalbench-1.0",
+        "task_id": "m-low-policy-citation",
+        "help_class": "Must-help",
+        "submitted": true,
+        "base_pass": true,
+        "quality_score": null,
+        "T": 1.0,
+        "R": 1.0,
+        "R_all_contacts": 0.95,
+        "weights": {
+          "lambda": 0.05,
+          "mu": 0.3,
+          "nu": 0.1
+        },
+        "evaluation_status": "scored",
+        "evidence": [
+          {
+            "node_id": "h1",
+            "message_id": "LOCAL:m-low-policy-citation:D:contact:0:reply",
+            "request_id": "LOCAL:m-low-policy-citation:D:contact:0:out",
+            "status": "accepted",
+            "reason": "Exact environment release receipt",
+            "value_match": true,
+            "context_match": true,
+            "observed_refusal": false
+          }
+        ],
+        "unknown_nodes": [],
+        "artifact": {
+          "artifact_correct": true,
+          "field_accuracy": 1.0
+        },
+        "fields": {
+          "policy": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": true
+          },
+          "version": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "effective_date": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "url_slug": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          }
+        },
+        "process": {
+          "nodes_satisfied": [
+            "h1"
+          ],
+          "all_nodes_satisfied": true,
+          "order_ok": true,
+          "contacts": [
+            "Priya Sharma"
+          ],
+          "n_asks": 1,
+          "first_contact": "Priya Sharma",
+          "first_contact_valid": true,
+          "interruption_cost": 1.0
+        },
+        "errors": {
+          "wrong_person": 0,
+          "decoy_contacts": [],
+          "out_of_pool": [],
+          "premature_request": 0,
+          "rejections": 0,
+          "repaired_nodes": 0,
+          "no_repair_nodes": 0,
+          "redundant": 0,
+          "n_auth": 0,
+          "n_waste": 0,
+          "silent_failure": false,
+          "unsupported_claims": [],
+          "unverified_claims": [],
+          "unused_reply_nodes": [],
+          "over_ask": null
+        }
+      },
+      "bridge_submitted": true,
+      "user_delivery_complete": true,
+      "input_fingerprint": "83959b7e6e7849c58d0cc13e4587ffbb1d90efd5867025b37412bc1d5483411b",
+      "trace_sha256": "8da0b10c3c4ebc28336d6a3b3fb32c5daed5a80708508d8a7c606e890468eb04",
+      "schedule_sha256": "3754babdc9162ebb11172ca878f62fc0a5696c629c7e1836701743fbd40d1688",
+      "normal_actions": 3,
+      "mock_requests": 5,
+      "proposal_refreshes": 1,
+      "budget": {
+        "mode": "local-in-memory-NOT-paid-ledger",
+        "paid_authorization": false,
+        "budget_cap_pending": false,
+        "calls": 66,
+        "settled": 66,
+        "unknown": 0,
+        "usd_exposure_upper": "0.1826682000",
+        "stopped": false,
+        "real_API_calls": 0
+      }
+    },
+    {
+      "task_id": "m-medium-research-purchase",
+      "arm": "A",
+      "official": {
+        "grader_version": "tribalbench-1.0",
+        "task_id": "m-medium-research-purchase",
+        "help_class": "Must-help",
+        "submitted": true,
+        "base_pass": true,
+        "quality_score": null,
+        "T": 1.0,
+        "R": 1.0,
+        "R_all_contacts": 0.8,
+        "weights": {
+          "lambda": 0.05,
+          "mu": 0.3,
+          "nu": 0.1
+        },
+        "evaluation_status": "scored",
+        "evidence": [
+          {
+            "node_id": "allocation",
+            "message_id": "LOCAL:m-medium-research-purchase:A:contact:0:reply",
+            "request_id": "LOCAL:m-medium-research-purchase:A:contact:0:out",
+            "status": "accepted",
+            "reason": "Exact environment release receipt",
+            "value_match": true,
+            "context_match": true,
+            "observed_refusal": false
+          },
+          {
+            "node_id": "release",
+            "message_id": "LOCAL:m-medium-research-purchase:A:contact:1:reply",
+            "request_id": "LOCAL:m-medium-research-purchase:A:contact:1:out",
+            "status": "accepted",
+            "reason": "Exact environment release receipt",
+            "value_match": true,
+            "context_match": true,
+            "observed_refusal": false
+          }
+        ],
+        "unknown_nodes": [],
+        "artifact": {
+          "artifact_correct": true,
+          "field_accuracy": 1.0
+        },
+        "fields": {
+          "seats": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "total_usd": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "allocation_revision": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "budget_code": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "release_reference": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          }
+        },
+        "process": {
+          "nodes_satisfied": [
+            "allocation",
+            "release"
+          ],
+          "all_nodes_satisfied": true,
+          "order_ok": true,
+          "contacts": [
+            "Wang Fang",
+            "David Wong"
+          ],
+          "n_asks": 2,
+          "first_contact": "Wang Fang",
+          "first_contact_valid": true,
+          "interruption_cost": 4.0
+        },
+        "errors": {
+          "wrong_person": 0,
+          "decoy_contacts": [],
+          "out_of_pool": [],
+          "premature_request": 0,
+          "rejections": 0,
+          "repaired_nodes": 0,
+          "no_repair_nodes": 0,
+          "redundant": 0,
+          "n_auth": 0,
+          "n_waste": 0,
+          "silent_failure": false,
+          "unsupported_claims": [],
+          "unverified_claims": [],
+          "unused_reply_nodes": [],
+          "over_ask": null
+        }
+      },
+      "bridge_submitted": true,
+      "user_delivery_complete": true,
+      "input_fingerprint": "bd5155ac09d7d8d3f12e68dc02dd99517bcd75ef639e16e3a3aa1c67dc36f18c",
+      "trace_sha256": "2c3ae1b2a527fd29f4a4807d89da37f691097ce9a9d354654d48547f683aca2d",
+      "schedule_sha256": "a820fe60510718e5ee47d25822b9a8dfb6a53ef871dc1e7bef8b9ad43e4febac",
+      "normal_actions": 4,
+      "mock_requests": 12,
+      "proposal_refreshes": 2,
+      "budget": {
+        "mode": "local-in-memory-NOT-paid-ledger",
+        "paid_authorization": false,
+        "budget_cap_pending": false,
+        "calls": 78,
+        "settled": 78,
+        "unknown": 0,
+        "usd_exposure_upper": "0.2287048500",
+        "stopped": false,
+        "real_API_calls": 0
+      }
+    },
+    {
+      "task_id": "m-medium-research-purchase",
+      "arm": "B",
+      "official": {
+        "grader_version": "tribalbench-1.0",
+        "task_id": "m-medium-research-purchase",
+        "help_class": "Must-help",
+        "submitted": true,
+        "base_pass": true,
+        "quality_score": null,
+        "T": 1.0,
+        "R": 1.0,
+        "R_all_contacts": 0.8,
+        "weights": {
+          "lambda": 0.05,
+          "mu": 0.3,
+          "nu": 0.1
+        },
+        "evaluation_status": "scored",
+        "evidence": [
+          {
+            "node_id": "allocation",
+            "message_id": "LOCAL:m-medium-research-purchase:B:contact:0:reply",
+            "request_id": "LOCAL:m-medium-research-purchase:B:contact:0:out",
+            "status": "accepted",
+            "reason": "Exact environment release receipt",
+            "value_match": true,
+            "context_match": true,
+            "observed_refusal": false
+          },
+          {
+            "node_id": "release",
+            "message_id": "LOCAL:m-medium-research-purchase:B:contact:1:reply",
+            "request_id": "LOCAL:m-medium-research-purchase:B:contact:1:out",
+            "status": "accepted",
+            "reason": "Exact environment release receipt",
+            "value_match": true,
+            "context_match": true,
+            "observed_refusal": false
+          }
+        ],
+        "unknown_nodes": [],
+        "artifact": {
+          "artifact_correct": true,
+          "field_accuracy": 1.0
+        },
+        "fields": {
+          "seats": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "total_usd": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "allocation_revision": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "budget_code": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "release_reference": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          }
+        },
+        "process": {
+          "nodes_satisfied": [
+            "allocation",
+            "release"
+          ],
+          "all_nodes_satisfied": true,
+          "order_ok": true,
+          "contacts": [
+            "Wang Fang",
+            "David Wong"
+          ],
+          "n_asks": 2,
+          "first_contact": "Wang Fang",
+          "first_contact_valid": true,
+          "interruption_cost": 4.0
+        },
+        "errors": {
+          "wrong_person": 0,
+          "decoy_contacts": [],
+          "out_of_pool": [],
+          "premature_request": 0,
+          "rejections": 0,
+          "repaired_nodes": 0,
+          "no_repair_nodes": 0,
+          "redundant": 0,
+          "n_auth": 0,
+          "n_waste": 0,
+          "silent_failure": false,
+          "unsupported_claims": [],
+          "unverified_claims": [],
+          "unused_reply_nodes": [],
+          "over_ask": null
+        }
+      },
+      "bridge_submitted": true,
+      "user_delivery_complete": true,
+      "input_fingerprint": "bcdadd46706dc2996c4e2c930047d2b5cfae4136965be6452111a4d787d71701",
+      "trace_sha256": "d84077e6521c301e664ddb5bef8fce48d2960efbd97303aa7c1d14f02dcc94f9",
+      "schedule_sha256": "2a57f2895940803b72fe7166b3ad145de0976c2b736e4e002f9239091afd4f1a",
+      "normal_actions": 4,
+      "mock_requests": 8,
+      "proposal_refreshes": 2,
+      "budget": {
+        "mode": "local-in-memory-NOT-paid-ledger",
+        "paid_authorization": false,
+        "budget_cap_pending": false,
+        "calls": 86,
+        "settled": 86,
+        "unknown": 0,
+        "usd_exposure_upper": "0.2630339250",
+        "stopped": false,
+        "real_API_calls": 0
+      }
+    },
+    {
+      "task_id": "m-medium-research-purchase",
+      "arm": "C",
+      "official": {
+        "grader_version": "tribalbench-1.0",
+        "task_id": "m-medium-research-purchase",
+        "help_class": "Must-help",
+        "submitted": true,
+        "base_pass": true,
+        "quality_score": null,
+        "T": 1.0,
+        "R": 1.0,
+        "R_all_contacts": 0.8,
+        "weights": {
+          "lambda": 0.05,
+          "mu": 0.3,
+          "nu": 0.1
+        },
+        "evaluation_status": "scored",
+        "evidence": [
+          {
+            "node_id": "allocation",
+            "message_id": "LOCAL:m-medium-research-purchase:C:contact:0:reply",
+            "request_id": "LOCAL:m-medium-research-purchase:C:contact:0:out",
+            "status": "accepted",
+            "reason": "Exact environment release receipt",
+            "value_match": true,
+            "context_match": true,
+            "observed_refusal": false
+          },
+          {
+            "node_id": "release",
+            "message_id": "LOCAL:m-medium-research-purchase:C:contact:1:reply",
+            "request_id": "LOCAL:m-medium-research-purchase:C:contact:1:out",
+            "status": "accepted",
+            "reason": "Exact environment release receipt",
+            "value_match": true,
+            "context_match": true,
+            "observed_refusal": false
+          }
+        ],
+        "unknown_nodes": [],
+        "artifact": {
+          "artifact_correct": true,
+          "field_accuracy": 1.0
+        },
+        "fields": {
+          "seats": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "total_usd": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "allocation_revision": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "budget_code": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "release_reference": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          }
+        },
+        "process": {
+          "nodes_satisfied": [
+            "allocation",
+            "release"
+          ],
+          "all_nodes_satisfied": true,
+          "order_ok": true,
+          "contacts": [
+            "Wang Fang",
+            "David Wong"
+          ],
+          "n_asks": 2,
+          "first_contact": "Wang Fang",
+          "first_contact_valid": true,
+          "interruption_cost": 4.0
+        },
+        "errors": {
+          "wrong_person": 0,
+          "decoy_contacts": [],
+          "out_of_pool": [],
+          "premature_request": 0,
+          "rejections": 0,
+          "repaired_nodes": 0,
+          "no_repair_nodes": 0,
+          "redundant": 0,
+          "n_auth": 0,
+          "n_waste": 0,
+          "silent_failure": false,
+          "unsupported_claims": [],
+          "unverified_claims": [],
+          "unused_reply_nodes": [],
+          "over_ask": null
+        }
+      },
+      "bridge_submitted": true,
+      "user_delivery_complete": true,
+      "input_fingerprint": "1b937ec39a3461ce3b3f484f863f37c9ba29d01a4923545c7841aa97309f71be",
+      "trace_sha256": "8f1ac36cd7bbce79dce793f7711e2427c69d9baa979c241576d5d7df0f47e978",
+      "schedule_sha256": "6ae4bbdd71311f00324fe9583fad486c2918a816a3c4e31a932c4c7daebdcbad",
+      "normal_actions": 4,
+      "mock_requests": 12,
+      "proposal_refreshes": 2,
+      "budget": {
+        "mode": "local-in-memory-NOT-paid-ledger",
+        "paid_authorization": false,
+        "budget_cap_pending": false,
+        "calls": 98,
+        "settled": 98,
+        "unknown": 0,
+        "usd_exposure_upper": "0.3090540750",
+        "stopped": false,
+        "real_API_calls": 0
+      }
+    },
+    {
+      "task_id": "m-medium-research-purchase",
+      "arm": "D",
+      "official": {
+        "grader_version": "tribalbench-1.0",
+        "task_id": "m-medium-research-purchase",
+        "help_class": "Must-help",
+        "submitted": true,
+        "base_pass": true,
+        "quality_score": null,
+        "T": 1.0,
+        "R": 1.0,
+        "R_all_contacts": 0.8,
+        "weights": {
+          "lambda": 0.05,
+          "mu": 0.3,
+          "nu": 0.1
+        },
+        "evaluation_status": "scored",
+        "evidence": [
+          {
+            "node_id": "allocation",
+            "message_id": "LOCAL:m-medium-research-purchase:D:contact:0:reply",
+            "request_id": "LOCAL:m-medium-research-purchase:D:contact:0:out",
+            "status": "accepted",
+            "reason": "Exact environment release receipt",
+            "value_match": true,
+            "context_match": true,
+            "observed_refusal": false
+          },
+          {
+            "node_id": "release",
+            "message_id": "LOCAL:m-medium-research-purchase:D:contact:1:reply",
+            "request_id": "LOCAL:m-medium-research-purchase:D:contact:1:out",
+            "status": "accepted",
+            "reason": "Exact environment release receipt",
+            "value_match": true,
+            "context_match": true,
+            "observed_refusal": false
+          }
+        ],
+        "unknown_nodes": [],
+        "artifact": {
+          "artifact_correct": true,
+          "field_accuracy": 1.0
+        },
+        "fields": {
+          "seats": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "total_usd": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "allocation_revision": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "budget_code": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "release_reference": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          }
+        },
+        "process": {
+          "nodes_satisfied": [
+            "allocation",
+            "release"
+          ],
+          "all_nodes_satisfied": true,
+          "order_ok": true,
+          "contacts": [
+            "Wang Fang",
+            "David Wong"
+          ],
+          "n_asks": 2,
+          "first_contact": "Wang Fang",
+          "first_contact_valid": true,
+          "interruption_cost": 4.0
+        },
+        "errors": {
+          "wrong_person": 0,
+          "decoy_contacts": [],
+          "out_of_pool": [],
+          "premature_request": 0,
+          "rejections": 0,
+          "repaired_nodes": 0,
+          "no_repair_nodes": 0,
+          "redundant": 0,
+          "n_auth": 0,
+          "n_waste": 0,
+          "silent_failure": false,
+          "unsupported_claims": [],
+          "unverified_claims": [],
+          "unused_reply_nodes": [],
+          "over_ask": null
+        }
+      },
+      "bridge_submitted": true,
+      "user_delivery_complete": true,
+      "input_fingerprint": "06519f9f7551fdd9e04d74e057418790e904de0126380ccfe9df923bb6cd9acc",
+      "trace_sha256": "bb6bbe3fd34ff8229cf52ac513cefd22ac72fa0d7b0d5eba0ba64e767813ece9",
+      "schedule_sha256": "3a38f0fda4a8b6c1299cf5dcd62604b254601e126cb8c4328f8a149e5f7ac921",
+      "normal_actions": 4,
+      "mock_requests": 8,
+      "proposal_refreshes": 2,
+      "budget": {
+        "mode": "local-in-memory-NOT-paid-ledger",
+        "paid_authorization": false,
+        "budget_cap_pending": false,
+        "calls": 106,
+        "settled": 106,
+        "unknown": 0,
+        "usd_exposure_upper": "0.3433716000",
+        "stopped": false,
+        "real_API_calls": 0
+      }
+    },
+    {
+      "task_id": "m-med-contractor-invoice",
+      "arm": "A",
+      "official": {
+        "grader_version": "tribalbench-1.0",
+        "task_id": "m-med-contractor-invoice",
+        "help_class": "Must-help",
+        "submitted": true,
+        "base_pass": true,
+        "quality_score": null,
+        "T": 1.0,
+        "R": 1.0,
+        "R_all_contacts": 0.8,
+        "weights": {
+          "lambda": 0.05,
+          "mu": 0.3,
+          "nu": 0.1
+        },
+        "evaluation_status": "scored",
+        "evidence": [
+          {
+            "node_id": "h1",
+            "message_id": "LOCAL:m-med-contractor-invoice:A:contact:0:reply",
+            "request_id": "LOCAL:m-med-contractor-invoice:A:contact:0:out",
+            "status": "accepted",
+            "reason": "Exact environment release receipt",
+            "value_match": true,
+            "context_match": true,
+            "observed_refusal": false
+          },
+          {
+            "node_id": "h2",
+            "message_id": "LOCAL:m-med-contractor-invoice:A:contact:0:reply",
+            "request_id": "LOCAL:m-med-contractor-invoice:A:contact:0:out",
+            "status": "rejected",
+            "reason": "prerequisite_not_satisfied_before_request",
+            "value_match": false,
+            "context_match": false,
+            "observed_refusal": false
+          },
+          {
+            "node_id": "h1",
+            "message_id": "LOCAL:m-med-contractor-invoice:A:contact:1:reply",
+            "request_id": "LOCAL:m-med-contractor-invoice:A:contact:1:out",
+            "status": "rejected",
+            "reason": "No release for this node",
+            "value_match": false,
+            "context_match": true,
+            "observed_refusal": false
+          },
+          {
+            "node_id": "h2",
+            "message_id": "LOCAL:m-med-contractor-invoice:A:contact:1:reply",
+            "request_id": "LOCAL:m-med-contractor-invoice:A:contact:1:out",
+            "status": "accepted",
+            "reason": "Exact environment release receipt",
+            "value_match": true,
+            "context_match": true,
+            "observed_refusal": false
+          }
+        ],
+        "unknown_nodes": [],
+        "artifact": {
+          "artifact_correct": true,
+          "field_accuracy": 1.0
+        },
+        "fields": {
+          "vendor": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": true
+          },
+          "hours": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "amount_usd": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "authorization_ref": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          }
+        },
+        "process": {
+          "nodes_satisfied": [
+            "h1",
+            "h2"
+          ],
+          "all_nodes_satisfied": true,
+          "order_ok": true,
+          "contacts": [
+            "Li Ming"
+          ],
+          "n_asks": 2,
+          "first_contact": "Li Ming",
+          "first_contact_valid": true,
+          "interruption_cost": 4.0
+        },
+        "errors": {
+          "wrong_person": 0,
+          "decoy_contacts": [],
+          "out_of_pool": [],
+          "premature_request": 0,
+          "rejections": 0,
+          "repaired_nodes": 0,
+          "no_repair_nodes": 0,
+          "redundant": 0,
+          "n_auth": 0,
+          "n_waste": 0,
+          "silent_failure": false,
+          "unsupported_claims": [],
+          "unverified_claims": [],
+          "unused_reply_nodes": [],
+          "over_ask": null
+        }
+      },
+      "bridge_submitted": true,
+      "user_delivery_complete": true,
+      "input_fingerprint": "540d0db112477e8feaa7c8dc1d19ea8c21929ad2a4679f70f30c8b1388c62433",
+      "trace_sha256": "97e0163c3f014c970ad7896c02d02d411d5ffbd608e1838267168594d0a10400",
+      "schedule_sha256": "58c102e684ce554abb9df6cdaf58c9b96ed4fee8680b986ba22cc4bd11c57cb3",
+      "normal_actions": 4,
+      "mock_requests": 12,
+      "proposal_refreshes": 2,
+      "budget": {
+        "mode": "local-in-memory-NOT-paid-ledger",
+        "paid_authorization": false,
+        "budget_cap_pending": false,
+        "calls": 118,
+        "settled": 118,
+        "unknown": 0,
+        "usd_exposure_upper": "0.3844813500",
+        "stopped": false,
+        "real_API_calls": 0
+      }
+    },
+    {
+      "task_id": "m-med-contractor-invoice",
+      "arm": "B",
+      "official": {
+        "grader_version": "tribalbench-1.0",
+        "task_id": "m-med-contractor-invoice",
+        "help_class": "Must-help",
+        "submitted": true,
+        "base_pass": true,
+        "quality_score": null,
+        "T": 1.0,
+        "R": 1.0,
+        "R_all_contacts": 0.8,
+        "weights": {
+          "lambda": 0.05,
+          "mu": 0.3,
+          "nu": 0.1
+        },
+        "evaluation_status": "scored",
+        "evidence": [
+          {
+            "node_id": "h1",
+            "message_id": "LOCAL:m-med-contractor-invoice:B:contact:0:reply",
+            "request_id": "LOCAL:m-med-contractor-invoice:B:contact:0:out",
+            "status": "accepted",
+            "reason": "Exact environment release receipt",
+            "value_match": true,
+            "context_match": true,
+            "observed_refusal": false
+          },
+          {
+            "node_id": "h2",
+            "message_id": "LOCAL:m-med-contractor-invoice:B:contact:0:reply",
+            "request_id": "LOCAL:m-med-contractor-invoice:B:contact:0:out",
+            "status": "rejected",
+            "reason": "prerequisite_not_satisfied_before_request",
+            "value_match": false,
+            "context_match": false,
+            "observed_refusal": false
+          },
+          {
+            "node_id": "h1",
+            "message_id": "LOCAL:m-med-contractor-invoice:B:contact:1:reply",
+            "request_id": "LOCAL:m-med-contractor-invoice:B:contact:1:out",
+            "status": "rejected",
+            "reason": "No release for this node",
+            "value_match": false,
+            "context_match": true,
+            "observed_refusal": false
+          },
+          {
+            "node_id": "h2",
+            "message_id": "LOCAL:m-med-contractor-invoice:B:contact:1:reply",
+            "request_id": "LOCAL:m-med-contractor-invoice:B:contact:1:out",
+            "status": "accepted",
+            "reason": "Exact environment release receipt",
+            "value_match": true,
+            "context_match": true,
+            "observed_refusal": false
+          }
+        ],
+        "unknown_nodes": [],
+        "artifact": {
+          "artifact_correct": true,
+          "field_accuracy": 1.0
+        },
+        "fields": {
+          "vendor": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": true
+          },
+          "hours": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "amount_usd": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "authorization_ref": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          }
+        },
+        "process": {
+          "nodes_satisfied": [
+            "h1",
+            "h2"
+          ],
+          "all_nodes_satisfied": true,
+          "order_ok": true,
+          "contacts": [
+            "Li Ming"
+          ],
+          "n_asks": 2,
+          "first_contact": "Li Ming",
+          "first_contact_valid": true,
+          "interruption_cost": 4.0
+        },
+        "errors": {
+          "wrong_person": 0,
+          "decoy_contacts": [],
+          "out_of_pool": [],
+          "premature_request": 0,
+          "rejections": 0,
+          "repaired_nodes": 0,
+          "no_repair_nodes": 0,
+          "redundant": 0,
+          "n_auth": 0,
+          "n_waste": 0,
+          "silent_failure": false,
+          "unsupported_claims": [],
+          "unverified_claims": [],
+          "unused_reply_nodes": [],
+          "over_ask": null
+        }
+      },
+      "bridge_submitted": true,
+      "user_delivery_complete": true,
+      "input_fingerprint": "6fc8ebf29284db91226c9f629c583bd4ddd83b58ff36bf45f60549c23a9f6940",
+      "trace_sha256": "c0cff863d4c6a7c3a384f59fdcfa530eb2cb170a0f7ab9bf4f05366f3c59d9b9",
+      "schedule_sha256": "819ecfd68d33b3e513b12f8e5ecbc4a22ba524313c7af74f63329f01c0e3a3eb",
+      "normal_actions": 4,
+      "mock_requests": 8,
+      "proposal_refreshes": 2,
+      "budget": {
+        "mode": "local-in-memory-NOT-paid-ledger",
+        "paid_authorization": false,
+        "budget_cap_pending": false,
+        "calls": 126,
+        "settled": 126,
+        "unknown": 0,
+        "usd_exposure_upper": "0.4151540250",
+        "stopped": false,
+        "real_API_calls": 0
+      }
+    },
+    {
+      "task_id": "m-med-contractor-invoice",
+      "arm": "C",
+      "official": {
+        "grader_version": "tribalbench-1.0",
+        "task_id": "m-med-contractor-invoice",
+        "help_class": "Must-help",
+        "submitted": true,
+        "base_pass": true,
+        "quality_score": null,
+        "T": 1.0,
+        "R": 1.0,
+        "R_all_contacts": 0.8,
+        "weights": {
+          "lambda": 0.05,
+          "mu": 0.3,
+          "nu": 0.1
+        },
+        "evaluation_status": "scored",
+        "evidence": [
+          {
+            "node_id": "h1",
+            "message_id": "LOCAL:m-med-contractor-invoice:C:contact:0:reply",
+            "request_id": "LOCAL:m-med-contractor-invoice:C:contact:0:out",
+            "status": "accepted",
+            "reason": "Exact environment release receipt",
+            "value_match": true,
+            "context_match": true,
+            "observed_refusal": false
+          },
+          {
+            "node_id": "h2",
+            "message_id": "LOCAL:m-med-contractor-invoice:C:contact:0:reply",
+            "request_id": "LOCAL:m-med-contractor-invoice:C:contact:0:out",
+            "status": "rejected",
+            "reason": "prerequisite_not_satisfied_before_request",
+            "value_match": false,
+            "context_match": false,
+            "observed_refusal": false
+          },
+          {
+            "node_id": "h1",
+            "message_id": "LOCAL:m-med-contractor-invoice:C:contact:1:reply",
+            "request_id": "LOCAL:m-med-contractor-invoice:C:contact:1:out",
+            "status": "rejected",
+            "reason": "No release for this node",
+            "value_match": false,
+            "context_match": true,
+            "observed_refusal": false
+          },
+          {
+            "node_id": "h2",
+            "message_id": "LOCAL:m-med-contractor-invoice:C:contact:1:reply",
+            "request_id": "LOCAL:m-med-contractor-invoice:C:contact:1:out",
+            "status": "accepted",
+            "reason": "Exact environment release receipt",
+            "value_match": true,
+            "context_match": true,
+            "observed_refusal": false
+          }
+        ],
+        "unknown_nodes": [],
+        "artifact": {
+          "artifact_correct": true,
+          "field_accuracy": 1.0
+        },
+        "fields": {
+          "vendor": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": true
+          },
+          "hours": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "amount_usd": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "authorization_ref": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          }
+        },
+        "process": {
+          "nodes_satisfied": [
+            "h1",
+            "h2"
+          ],
+          "all_nodes_satisfied": true,
+          "order_ok": true,
+          "contacts": [
+            "Li Ming"
+          ],
+          "n_asks": 2,
+          "first_contact": "Li Ming",
+          "first_contact_valid": true,
+          "interruption_cost": 4.0
+        },
+        "errors": {
+          "wrong_person": 0,
+          "decoy_contacts": [],
+          "out_of_pool": [],
+          "premature_request": 0,
+          "rejections": 0,
+          "repaired_nodes": 0,
+          "no_repair_nodes": 0,
+          "redundant": 0,
+          "n_auth": 0,
+          "n_waste": 0,
+          "silent_failure": false,
+          "unsupported_claims": [],
+          "unverified_claims": [],
+          "unused_reply_nodes": [],
+          "over_ask": null
+        }
+      },
+      "bridge_submitted": true,
+      "user_delivery_complete": true,
+      "input_fingerprint": "4e0d3d7646cdc496841d5afa2e4efcb00489c3d59ab675ea7878791db6d67625",
+      "trace_sha256": "1fdbccd1cc00c03d04beb568077058e2e6a3ef10dfccf9d8faf56fe6688d06bc",
+      "schedule_sha256": "55cc7d1a7b18ca473751fcbfdaac61fc0173a05910842e301a260b111b0bdf16",
+      "normal_actions": 4,
+      "mock_requests": 12,
+      "proposal_refreshes": 2,
+      "budget": {
+        "mode": "local-in-memory-NOT-paid-ledger",
+        "paid_authorization": false,
+        "budget_cap_pending": false,
+        "calls": 138,
+        "settled": 138,
+        "unknown": 0,
+        "usd_exposure_upper": "0.4563256500",
+        "stopped": false,
+        "real_API_calls": 0
+      }
+    },
+    {
+      "task_id": "m-med-contractor-invoice",
+      "arm": "D",
+      "official": {
+        "grader_version": "tribalbench-1.0",
+        "task_id": "m-med-contractor-invoice",
+        "help_class": "Must-help",
+        "submitted": true,
+        "base_pass": true,
+        "quality_score": null,
+        "T": 1.0,
+        "R": 1.0,
+        "R_all_contacts": 0.8,
+        "weights": {
+          "lambda": 0.05,
+          "mu": 0.3,
+          "nu": 0.1
+        },
+        "evaluation_status": "scored",
+        "evidence": [
+          {
+            "node_id": "h1",
+            "message_id": "LOCAL:m-med-contractor-invoice:D:contact:0:reply",
+            "request_id": "LOCAL:m-med-contractor-invoice:D:contact:0:out",
+            "status": "accepted",
+            "reason": "Exact environment release receipt",
+            "value_match": true,
+            "context_match": true,
+            "observed_refusal": false
+          },
+          {
+            "node_id": "h2",
+            "message_id": "LOCAL:m-med-contractor-invoice:D:contact:0:reply",
+            "request_id": "LOCAL:m-med-contractor-invoice:D:contact:0:out",
+            "status": "rejected",
+            "reason": "prerequisite_not_satisfied_before_request",
+            "value_match": false,
+            "context_match": false,
+            "observed_refusal": false
+          },
+          {
+            "node_id": "h1",
+            "message_id": "LOCAL:m-med-contractor-invoice:D:contact:1:reply",
+            "request_id": "LOCAL:m-med-contractor-invoice:D:contact:1:out",
+            "status": "rejected",
+            "reason": "No release for this node",
+            "value_match": false,
+            "context_match": true,
+            "observed_refusal": false
+          },
+          {
+            "node_id": "h2",
+            "message_id": "LOCAL:m-med-contractor-invoice:D:contact:1:reply",
+            "request_id": "LOCAL:m-med-contractor-invoice:D:contact:1:out",
+            "status": "accepted",
+            "reason": "Exact environment release receipt",
+            "value_match": true,
+            "context_match": true,
+            "observed_refusal": false
+          }
+        ],
+        "unknown_nodes": [],
+        "artifact": {
+          "artifact_correct": true,
+          "field_accuracy": 1.0
+        },
+        "fields": {
+          "vendor": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": true
+          },
+          "hours": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "amount_usd": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "authorization_ref": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          }
+        },
+        "process": {
+          "nodes_satisfied": [
+            "h1",
+            "h2"
+          ],
+          "all_nodes_satisfied": true,
+          "order_ok": true,
+          "contacts": [
+            "Li Ming"
+          ],
+          "n_asks": 2,
+          "first_contact": "Li Ming",
+          "first_contact_valid": true,
+          "interruption_cost": 4.0
+        },
+        "errors": {
+          "wrong_person": 0,
+          "decoy_contacts": [],
+          "out_of_pool": [],
+          "premature_request": 0,
+          "rejections": 0,
+          "repaired_nodes": 0,
+          "no_repair_nodes": 0,
+          "redundant": 0,
+          "n_auth": 0,
+          "n_waste": 0,
+          "silent_failure": false,
+          "unsupported_claims": [],
+          "unverified_claims": [],
+          "unused_reply_nodes": [],
+          "over_ask": null
+        }
+      },
+      "bridge_submitted": true,
+      "user_delivery_complete": true,
+      "input_fingerprint": "d00c15c80f720dc77135c19e2a6ca7d1eecdcd280e40f0e5365f8055e70c223b",
+      "trace_sha256": "bc85ac90626f5602973f046cada93d3d9a26a689ba7cfc726bf37a054edbcd70",
+      "schedule_sha256": "8c6c87ca457759ee143f69e7e64954ba47374aec10ade8a23e9170e21fa4d139",
+      "normal_actions": 4,
+      "mock_requests": 8,
+      "proposal_refreshes": 2,
+      "budget": {
+        "mode": "local-in-memory-NOT-paid-ledger",
+        "paid_authorization": false,
+        "budget_cap_pending": false,
+        "calls": 146,
+        "settled": 146,
+        "unknown": 0,
+        "usd_exposure_upper": "0.4870602000",
+        "stopped": false,
+        "real_API_calls": 0
+      }
+    },
+    {
+      "task_id": "o-low-demo-dataset",
+      "arm": "A",
+      "official": {
+        "grader_version": "tribalbench-1.0",
+        "task_id": "o-low-demo-dataset",
+        "help_class": "Optional-help",
+        "submitted": true,
+        "base_pass": true,
+        "quality_score": 1.0,
+        "T": 1.0,
+        "R": 0.95,
+        "R_all_contacts": 0.95,
+        "weights": {
+          "lambda": 0.05,
+          "mu": 0.3,
+          "nu": 0.1
+        },
+        "evaluation_status": "scored",
+        "evidence": [
+          {
+            "node_id": "h1",
+            "message_id": "LOCAL:o-low-demo-dataset:A:contact:0:reply",
+            "request_id": "LOCAL:o-low-demo-dataset:A:contact:0:out",
+            "status": "accepted",
+            "reason": "Exact environment release receipt",
+            "value_match": true,
+            "context_match": true,
+            "observed_refusal": false
+          }
+        ],
+        "unknown_nodes": [],
+        "artifact": {
+          "base_valid": true,
+          "quality_score": 1.0,
+          "adopted_fields": [
+            "dataset_id",
+            "document_count",
+            "refreshed_on"
+          ],
+          "internally_consistent": true,
+          "field_accuracy": 1.0
+        },
+        "fields": {
+          "dataset_id": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "document_count": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "refreshed_on": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          }
+        },
+        "process": {
+          "nodes_satisfied": [
+            "h1"
+          ],
+          "all_nodes_satisfied": true,
+          "order_ok": true,
+          "contacts": [
+            "Emily Zhou"
+          ],
+          "n_asks": 1,
+          "first_contact": "Emily Zhou",
+          "first_contact_valid": true,
+          "interruption_cost": 1.0
+        },
+        "errors": {
+          "wrong_person": 0,
+          "decoy_contacts": [],
+          "out_of_pool": [],
+          "premature_request": 0,
+          "rejections": 0,
+          "repaired_nodes": 0,
+          "no_repair_nodes": 0,
+          "redundant": 0,
+          "n_auth": 0,
+          "n_waste": 0,
+          "silent_failure": false,
+          "unsupported_claims": [],
+          "unverified_claims": [],
+          "unused_reply_nodes": [],
+          "over_ask": 0
+        }
+      },
+      "bridge_submitted": true,
+      "user_delivery_complete": true,
+      "input_fingerprint": "1efd44350a9330417ab005ca4364e6e44878d58ee3c9825fcbfd52ff141b260c",
+      "trace_sha256": "af873577b29c7c8f4241ab01c70f981076c3938016cf0bacea2ab94a7e8f0e91",
+      "schedule_sha256": "55de20f886d7ad2dc265b96508652c09eac9c0eb05b4d78b747208db2afd8e95",
+      "normal_actions": 3,
+      "mock_requests": 8,
+      "proposal_refreshes": 1,
+      "budget": {
+        "mode": "local-in-memory-NOT-paid-ledger",
+        "paid_authorization": false,
+        "budget_cap_pending": false,
+        "calls": 154,
+        "settled": 154,
+        "unknown": 0,
+        "usd_exposure_upper": "0.5092980750",
+        "stopped": false,
+        "real_API_calls": 0
+      }
+    },
+    {
+      "task_id": "o-low-demo-dataset",
+      "arm": "B",
+      "official": {
+        "grader_version": "tribalbench-1.0",
+        "task_id": "o-low-demo-dataset",
+        "help_class": "Optional-help",
+        "submitted": true,
+        "base_pass": true,
+        "quality_score": 1.0,
+        "T": 1.0,
+        "R": 0.95,
+        "R_all_contacts": 0.95,
+        "weights": {
+          "lambda": 0.05,
+          "mu": 0.3,
+          "nu": 0.1
+        },
+        "evaluation_status": "scored",
+        "evidence": [
+          {
+            "node_id": "h1",
+            "message_id": "LOCAL:o-low-demo-dataset:B:contact:0:reply",
+            "request_id": "LOCAL:o-low-demo-dataset:B:contact:0:out",
+            "status": "accepted",
+            "reason": "Exact environment release receipt",
+            "value_match": true,
+            "context_match": true,
+            "observed_refusal": false
+          }
+        ],
+        "unknown_nodes": [],
+        "artifact": {
+          "base_valid": true,
+          "quality_score": 1.0,
+          "adopted_fields": [
+            "dataset_id",
+            "document_count",
+            "refreshed_on"
+          ],
+          "internally_consistent": true,
+          "field_accuracy": 1.0
+        },
+        "fields": {
+          "dataset_id": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "document_count": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "refreshed_on": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          }
+        },
+        "process": {
+          "nodes_satisfied": [
+            "h1"
+          ],
+          "all_nodes_satisfied": true,
+          "order_ok": true,
+          "contacts": [
+            "Emily Zhou"
+          ],
+          "n_asks": 1,
+          "first_contact": "Emily Zhou",
+          "first_contact_valid": true,
+          "interruption_cost": 1.0
+        },
+        "errors": {
+          "wrong_person": 0,
+          "decoy_contacts": [],
+          "out_of_pool": [],
+          "premature_request": 0,
+          "rejections": 0,
+          "repaired_nodes": 0,
+          "no_repair_nodes": 0,
+          "redundant": 0,
+          "n_auth": 0,
+          "n_waste": 0,
+          "silent_failure": false,
+          "unsupported_claims": [],
+          "unverified_claims": [],
+          "unused_reply_nodes": [],
+          "over_ask": 0
+        }
+      },
+      "bridge_submitted": true,
+      "user_delivery_complete": true,
+      "input_fingerprint": "8852e9c496589c96300353fb9da6d994f023f6efe83108fa596083c502ff2b13",
+      "trace_sha256": "8bc6457f929a5cbb379a7a1b8c2e3178fcc37b21e4d56cd0e52f1b32d149c40e",
+      "schedule_sha256": "c3946b745e36c1dc3a89ca5ddfef041caa39090429a96ac1587ccfc7e91e377d",
+      "normal_actions": 3,
+      "mock_requests": 5,
+      "proposal_refreshes": 1,
+      "budget": {
+        "mode": "local-in-memory-NOT-paid-ledger",
+        "paid_authorization": false,
+        "budget_cap_pending": false,
+        "calls": 159,
+        "settled": 159,
+        "unknown": 0,
+        "usd_exposure_upper": "0.5252082000",
+        "stopped": false,
+        "real_API_calls": 0
+      }
+    },
+    {
+      "task_id": "o-low-demo-dataset",
+      "arm": "C",
+      "official": {
+        "grader_version": "tribalbench-1.0",
+        "task_id": "o-low-demo-dataset",
+        "help_class": "Optional-help",
+        "submitted": true,
+        "base_pass": true,
+        "quality_score": 1.0,
+        "T": 1.0,
+        "R": 0.95,
+        "R_all_contacts": 0.95,
+        "weights": {
+          "lambda": 0.05,
+          "mu": 0.3,
+          "nu": 0.1
+        },
+        "evaluation_status": "scored",
+        "evidence": [
+          {
+            "node_id": "h1",
+            "message_id": "LOCAL:o-low-demo-dataset:C:contact:0:reply",
+            "request_id": "LOCAL:o-low-demo-dataset:C:contact:0:out",
+            "status": "accepted",
+            "reason": "Exact environment release receipt",
+            "value_match": true,
+            "context_match": true,
+            "observed_refusal": false
+          }
+        ],
+        "unknown_nodes": [],
+        "artifact": {
+          "base_valid": true,
+          "quality_score": 1.0,
+          "adopted_fields": [
+            "dataset_id",
+            "document_count",
+            "refreshed_on"
+          ],
+          "internally_consistent": true,
+          "field_accuracy": 1.0
+        },
+        "fields": {
+          "dataset_id": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "document_count": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "refreshed_on": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          }
+        },
+        "process": {
+          "nodes_satisfied": [
+            "h1"
+          ],
+          "all_nodes_satisfied": true,
+          "order_ok": true,
+          "contacts": [
+            "Emily Zhou"
+          ],
+          "n_asks": 1,
+          "first_contact": "Emily Zhou",
+          "first_contact_valid": true,
+          "interruption_cost": 1.0
+        },
+        "errors": {
+          "wrong_person": 0,
+          "decoy_contacts": [],
+          "out_of_pool": [],
+          "premature_request": 0,
+          "rejections": 0,
+          "repaired_nodes": 0,
+          "no_repair_nodes": 0,
+          "redundant": 0,
+          "n_auth": 0,
+          "n_waste": 0,
+          "silent_failure": false,
+          "unsupported_claims": [],
+          "unverified_claims": [],
+          "unused_reply_nodes": [],
+          "over_ask": 0
+        }
+      },
+      "bridge_submitted": true,
+      "user_delivery_complete": true,
+      "input_fingerprint": "737a990d45e6b9907d5caf7ec85d932917aa8c8eeddb1746ea87289e05262f9e",
+      "trace_sha256": "cc978646507fe35ec13b9a3eb5d57d2ff7c60eae29c51d60c9d56c8f2f465a7a",
+      "schedule_sha256": "7dfba93cef9d8e5d4dbf621abfcdc76da47454b963409ccea3dd9fbbcf0d78a1",
+      "normal_actions": 3,
+      "mock_requests": 8,
+      "proposal_refreshes": 1,
+      "budget": {
+        "mode": "local-in-memory-NOT-paid-ledger",
+        "paid_authorization": false,
+        "budget_cap_pending": false,
+        "calls": 167,
+        "settled": 167,
+        "unknown": 0,
+        "usd_exposure_upper": "0.5474625750",
+        "stopped": false,
+        "real_API_calls": 0
+      }
+    },
+    {
+      "task_id": "o-low-demo-dataset",
+      "arm": "D",
+      "official": {
+        "grader_version": "tribalbench-1.0",
+        "task_id": "o-low-demo-dataset",
+        "help_class": "Optional-help",
+        "submitted": true,
+        "base_pass": true,
+        "quality_score": 1.0,
+        "T": 1.0,
+        "R": 0.95,
+        "R_all_contacts": 0.95,
+        "weights": {
+          "lambda": 0.05,
+          "mu": 0.3,
+          "nu": 0.1
+        },
+        "evaluation_status": "scored",
+        "evidence": [
+          {
+            "node_id": "h1",
+            "message_id": "LOCAL:o-low-demo-dataset:D:contact:0:reply",
+            "request_id": "LOCAL:o-low-demo-dataset:D:contact:0:out",
+            "status": "accepted",
+            "reason": "Exact environment release receipt",
+            "value_match": true,
+            "context_match": true,
+            "observed_refusal": false
+          }
+        ],
+        "unknown_nodes": [],
+        "artifact": {
+          "base_valid": true,
+          "quality_score": 1.0,
+          "adopted_fields": [
+            "dataset_id",
+            "document_count",
+            "refreshed_on"
+          ],
+          "internally_consistent": true,
+          "field_accuracy": 1.0
+        },
+        "fields": {
+          "dataset_id": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "document_count": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "refreshed_on": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          }
+        },
+        "process": {
+          "nodes_satisfied": [
+            "h1"
+          ],
+          "all_nodes_satisfied": true,
+          "order_ok": true,
+          "contacts": [
+            "Emily Zhou"
+          ],
+          "n_asks": 1,
+          "first_contact": "Emily Zhou",
+          "first_contact_valid": true,
+          "interruption_cost": 1.0
+        },
+        "errors": {
+          "wrong_person": 0,
+          "decoy_contacts": [],
+          "out_of_pool": [],
+          "premature_request": 0,
+          "rejections": 0,
+          "repaired_nodes": 0,
+          "no_repair_nodes": 0,
+          "redundant": 0,
+          "n_auth": 0,
+          "n_waste": 0,
+          "silent_failure": false,
+          "unsupported_claims": [],
+          "unverified_claims": [],
+          "unused_reply_nodes": [],
+          "over_ask": 0
+        }
+      },
+      "bridge_submitted": true,
+      "user_delivery_complete": true,
+      "input_fingerprint": "5d3ed762c970ffc218dc9fdd43e2e6a9e57fe4562003cbf0d2378abdafe75e93",
+      "trace_sha256": "892976106035d67d698980a4b990a02cdc3548cb05a01c5b1cef6a8c6610ca72",
+      "schedule_sha256": "d782d4ff93fa845ef5d06ede6622eb42439aa508d04b4bcfe8a13b07beba2e92",
+      "normal_actions": 3,
+      "mock_requests": 5,
+      "proposal_refreshes": 1,
+      "budget": {
+        "mode": "local-in-memory-NOT-paid-ledger",
+        "paid_authorization": false,
+        "budget_cap_pending": false,
+        "calls": 172,
+        "settled": 172,
+        "unknown": 0,
+        "usd_exposure_upper": "0.5633892000",
+        "stopped": false,
+        "real_API_calls": 0
+      }
+    },
+    {
+      "task_id": "o-low-team-lunch",
+      "arm": "A",
+      "official": {
+        "grader_version": "tribalbench-1.0",
+        "task_id": "o-low-team-lunch",
+        "help_class": "Optional-help",
+        "submitted": true,
+        "base_pass": true,
+        "quality_score": 1.0,
+        "T": 1.0,
+        "R": 0.9,
+        "R_all_contacts": 0.9,
+        "weights": {
+          "lambda": 0.05,
+          "mu": 0.3,
+          "nu": 0.1
+        },
+        "evaluation_status": "scored",
+        "evidence": [
+          {
+            "node_id": "h1",
+            "message_id": "LOCAL:o-low-team-lunch:A:contact:0:reply",
+            "request_id": "LOCAL:o-low-team-lunch:A:contact:0:out",
+            "status": "accepted",
+            "reason": "Exact environment release receipt",
+            "value_match": true,
+            "context_match": true,
+            "observed_refusal": false
+          }
+        ],
+        "unknown_nodes": [],
+        "artifact": {
+          "base_valid": true,
+          "quality_score": 1.0,
+          "adopted_fields": [
+            "vegetarian_meals"
+          ],
+          "internally_consistent": true,
+          "field_accuracy": 1.0
+        },
+        "fields": {
+          "headcount": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": true
+          },
+          "menu": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": true
+          },
+          "vegetarian_meals": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "total_usd": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": true
+          }
+        },
+        "process": {
+          "nodes_satisfied": [
+            "h1"
+          ],
+          "all_nodes_satisfied": true,
+          "order_ok": true,
+          "contacts": [
+            "Chen Xinyi"
+          ],
+          "n_asks": 1,
+          "first_contact": "Chen Xinyi",
+          "first_contact_valid": true,
+          "interruption_cost": 2.0
+        },
+        "errors": {
+          "wrong_person": 0,
+          "decoy_contacts": [],
+          "out_of_pool": [],
+          "premature_request": 0,
+          "rejections": 0,
+          "repaired_nodes": 0,
+          "no_repair_nodes": 0,
+          "redundant": 0,
+          "n_auth": 0,
+          "n_waste": 0,
+          "silent_failure": false,
+          "unsupported_claims": [],
+          "unverified_claims": [],
+          "unused_reply_nodes": [],
+          "over_ask": 0
+        }
+      },
+      "bridge_submitted": true,
+      "user_delivery_complete": true,
+      "input_fingerprint": "bad3194f4e8fa6593382dd0fc559ea446e2773e7734e54a219342fbffaa372c5",
+      "trace_sha256": "94480ad52a4ed9bc3982a3ede6e6e38f1af02b1c1e97e03a586778f1e0cfdc6c",
+      "schedule_sha256": "6d951ebcab7dc491fc73142dad7c95d55570909d96abccb82c46dea1d1eb5c37",
+      "normal_actions": 3,
+      "mock_requests": 8,
+      "proposal_refreshes": 1,
+      "budget": {
+        "mode": "local-in-memory-NOT-paid-ledger",
+        "paid_authorization": false,
+        "budget_cap_pending": false,
+        "calls": 180,
+        "settled": 180,
+        "unknown": 0,
+        "usd_exposure_upper": "0.5782581750",
+        "stopped": false,
+        "real_API_calls": 0
+      }
+    },
+    {
+      "task_id": "o-low-team-lunch",
+      "arm": "B",
+      "official": {
+        "grader_version": "tribalbench-1.0",
+        "task_id": "o-low-team-lunch",
+        "help_class": "Optional-help",
+        "submitted": true,
+        "base_pass": true,
+        "quality_score": 1.0,
+        "T": 1.0,
+        "R": 0.9,
+        "R_all_contacts": 0.9,
+        "weights": {
+          "lambda": 0.05,
+          "mu": 0.3,
+          "nu": 0.1
+        },
+        "evaluation_status": "scored",
+        "evidence": [
+          {
+            "node_id": "h1",
+            "message_id": "LOCAL:o-low-team-lunch:B:contact:0:reply",
+            "request_id": "LOCAL:o-low-team-lunch:B:contact:0:out",
+            "status": "accepted",
+            "reason": "Exact environment release receipt",
+            "value_match": true,
+            "context_match": true,
+            "observed_refusal": false
+          }
+        ],
+        "unknown_nodes": [],
+        "artifact": {
+          "base_valid": true,
+          "quality_score": 1.0,
+          "adopted_fields": [
+            "vegetarian_meals"
+          ],
+          "internally_consistent": true,
+          "field_accuracy": 1.0
+        },
+        "fields": {
+          "headcount": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": true
+          },
+          "menu": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": true
+          },
+          "vegetarian_meals": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "total_usd": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": true
+          }
+        },
+        "process": {
+          "nodes_satisfied": [
+            "h1"
+          ],
+          "all_nodes_satisfied": true,
+          "order_ok": true,
+          "contacts": [
+            "Chen Xinyi"
+          ],
+          "n_asks": 1,
+          "first_contact": "Chen Xinyi",
+          "first_contact_valid": true,
+          "interruption_cost": 2.0
+        },
+        "errors": {
+          "wrong_person": 0,
+          "decoy_contacts": [],
+          "out_of_pool": [],
+          "premature_request": 0,
+          "rejections": 0,
+          "repaired_nodes": 0,
+          "no_repair_nodes": 0,
+          "redundant": 0,
+          "n_auth": 0,
+          "n_waste": 0,
+          "silent_failure": false,
+          "unsupported_claims": [],
+          "unverified_claims": [],
+          "unused_reply_nodes": [],
+          "over_ask": 0
+        }
+      },
+      "bridge_submitted": true,
+      "user_delivery_complete": true,
+      "input_fingerprint": "2eb5496f7a61f0806def5540129bfcbd474800665dcd09d86ed420fb4976674b",
+      "trace_sha256": "129eae767bc341d073496bed0a9fd149988e36f6d6f2eb0a49ddf7215047315a",
+      "schedule_sha256": "29b01e2e09326b2c9f472e4fdcc2221f77977918e26eaaa26fa5cf4c081ef5db",
+      "normal_actions": 3,
+      "mock_requests": 5,
+      "proposal_refreshes": 1,
+      "budget": {
+        "mode": "local-in-memory-NOT-paid-ledger",
+        "paid_authorization": false,
+        "budget_cap_pending": false,
+        "calls": 185,
+        "settled": 185,
+        "unknown": 0,
+        "usd_exposure_upper": "0.5890887750",
+        "stopped": false,
+        "real_API_calls": 0
+      }
+    },
+    {
+      "task_id": "o-low-team-lunch",
+      "arm": "C",
+      "official": {
+        "grader_version": "tribalbench-1.0",
+        "task_id": "o-low-team-lunch",
+        "help_class": "Optional-help",
+        "submitted": true,
+        "base_pass": true,
+        "quality_score": 1.0,
+        "T": 1.0,
+        "R": 0.9,
+        "R_all_contacts": 0.9,
+        "weights": {
+          "lambda": 0.05,
+          "mu": 0.3,
+          "nu": 0.1
+        },
+        "evaluation_status": "scored",
+        "evidence": [
+          {
+            "node_id": "h1",
+            "message_id": "LOCAL:o-low-team-lunch:C:contact:0:reply",
+            "request_id": "LOCAL:o-low-team-lunch:C:contact:0:out",
+            "status": "accepted",
+            "reason": "Exact environment release receipt",
+            "value_match": true,
+            "context_match": true,
+            "observed_refusal": false
+          }
+        ],
+        "unknown_nodes": [],
+        "artifact": {
+          "base_valid": true,
+          "quality_score": 1.0,
+          "adopted_fields": [
+            "vegetarian_meals"
+          ],
+          "internally_consistent": true,
+          "field_accuracy": 1.0
+        },
+        "fields": {
+          "headcount": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": true
+          },
+          "menu": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": true
+          },
+          "vegetarian_meals": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "total_usd": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": true
+          }
+        },
+        "process": {
+          "nodes_satisfied": [
+            "h1"
+          ],
+          "all_nodes_satisfied": true,
+          "order_ok": true,
+          "contacts": [
+            "Chen Xinyi"
+          ],
+          "n_asks": 1,
+          "first_contact": "Chen Xinyi",
+          "first_contact_valid": true,
+          "interruption_cost": 2.0
+        },
+        "errors": {
+          "wrong_person": 0,
+          "decoy_contacts": [],
+          "out_of_pool": [],
+          "premature_request": 0,
+          "rejections": 0,
+          "repaired_nodes": 0,
+          "no_repair_nodes": 0,
+          "redundant": 0,
+          "n_auth": 0,
+          "n_waste": 0,
+          "silent_failure": false,
+          "unsupported_claims": [],
+          "unverified_claims": [],
+          "unused_reply_nodes": [],
+          "over_ask": 0
+        }
+      },
+      "bridge_submitted": true,
+      "user_delivery_complete": true,
+      "input_fingerprint": "cfec7edb5f19b1a6cf43ad73b0d40962e12e3e14b99431a6e79142b3583f978a",
+      "trace_sha256": "1b8f255217b1a06dda9ab63b731bd17d3c93485ef23dba7e77a20d5b60c59c02",
+      "schedule_sha256": "d257b159a605fac9066e961247f363ce110085fe1628506b67b952cec18d684d",
+      "normal_actions": 3,
+      "mock_requests": 8,
+      "proposal_refreshes": 1,
+      "budget": {
+        "mode": "local-in-memory-NOT-paid-ledger",
+        "paid_authorization": false,
+        "budget_cap_pending": false,
+        "calls": 193,
+        "settled": 193,
+        "unknown": 0,
+        "usd_exposure_upper": "0.6039750750",
+        "stopped": false,
+        "real_API_calls": 0
+      }
+    },
+    {
+      "task_id": "o-low-team-lunch",
+      "arm": "D",
+      "official": {
+        "grader_version": "tribalbench-1.0",
+        "task_id": "o-low-team-lunch",
+        "help_class": "Optional-help",
+        "submitted": true,
+        "base_pass": true,
+        "quality_score": 1.0,
+        "T": 1.0,
+        "R": 0.9,
+        "R_all_contacts": 0.9,
+        "weights": {
+          "lambda": 0.05,
+          "mu": 0.3,
+          "nu": 0.1
+        },
+        "evaluation_status": "scored",
+        "evidence": [
+          {
+            "node_id": "h1",
+            "message_id": "LOCAL:o-low-team-lunch:D:contact:0:reply",
+            "request_id": "LOCAL:o-low-team-lunch:D:contact:0:out",
+            "status": "accepted",
+            "reason": "Exact environment release receipt",
+            "value_match": true,
+            "context_match": true,
+            "observed_refusal": false
+          }
+        ],
+        "unknown_nodes": [],
+        "artifact": {
+          "base_valid": true,
+          "quality_score": 1.0,
+          "adopted_fields": [
+            "vegetarian_meals"
+          ],
+          "internally_consistent": true,
+          "field_accuracy": 1.0
+        },
+        "fields": {
+          "headcount": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": true
+          },
+          "menu": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": true
+          },
+          "vegetarian_meals": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": false
+          },
+          "total_usd": {
+            "present": true,
+            "matches_full": true,
+            "matches_no_contact": true
+          }
+        },
+        "process": {
+          "nodes_satisfied": [
+            "h1"
+          ],
+          "all_nodes_satisfied": true,
+          "order_ok": true,
+          "contacts": [
+            "Chen Xinyi"
+          ],
+          "n_asks": 1,
+          "first_contact": "Chen Xinyi",
+          "first_contact_valid": true,
+          "interruption_cost": 2.0
+        },
+        "errors": {
+          "wrong_person": 0,
+          "decoy_contacts": [],
+          "out_of_pool": [],
+          "premature_request": 0,
+          "rejections": 0,
+          "repaired_nodes": 0,
+          "no_repair_nodes": 0,
+          "redundant": 0,
+          "n_auth": 0,
+          "n_waste": 0,
+          "silent_failure": false,
+          "unsupported_claims": [],
+          "unverified_claims": [],
+          "unused_reply_nodes": [],
+          "over_ask": 0
+        }
+      },
+      "bridge_submitted": true,
+      "user_delivery_complete": true,
+      "input_fingerprint": "9c5aaa4fd0c992d5a5290e0821780f24cbf86c167279120635e1e16dbd756c83",
+      "trace_sha256": "4a3ffe06d9b8edb576d92de457e53c5106fdf22e7ce004755e26ce2d38c3e6e6",
+      "schedule_sha256": "4c1e0603a2a955ea8724aa2c038b1b2d5d420cc276d17ecb5aba8a0e1a0877cb",
+      "normal_actions": 3,
+      "mock_requests": 5,
+      "proposal_refreshes": 1,
+      "budget": {
+        "mode": "local-in-memory-NOT-paid-ledger",
+        "paid_authorization": false,
+        "budget_cap_pending": false,
+        "calls": 198,
+        "settled": 198,
+        "unknown": 0,
+        "usd_exposure_upper": "0.6148230000",
+        "stopped": false,
+        "real_API_calls": 0
+      }
+    }
+  ],
+  "local_cases": 24,
+  "actual_model_API_calls": 0,
+  "actual_GPU_jobs": 0,
+  "paid_pilot_48_episodes_executed": false,
+  "training_executed": false,
+  "actual_paid_USD": "0",
+  "local_mock_global_budget": {
+    "mode": "local-in-memory-NOT-paid-ledger",
+    "paid_authorization": false,
+    "budget_cap_pending": false,
+    "calls": 198,
+    "settled": 198,
+    "unknown": 0,
+    "usd_exposure_upper": "0.6148230000",
+    "stopped": false,
+    "real_API_calls": 0
+  },
+  "NL_matching_validated": false,
+  "real_tokenizer_and_request_acceptance_validated": false,
+  "budget_cap_approval": "pending",
+  "ceiling_gain_or_task_improvement_established": false
+}

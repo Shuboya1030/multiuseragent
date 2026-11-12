@@ -7,9 +7,10 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from .admission import decode_response, pending_plan, prepare_request
+from .admission import decode_response, pending_plan, prepare_request, validate_binding
 from .budget import BudgetBlocked
-from .contracts import canonical, fingerprint, strict_json
+from .contracts import CONTROL_ACTIONS, Decision, canonical, fingerprint, strict_json
+from .executor import parse_tool
 from .durable import DurableLedger
 from .local_ceiling_check import ScriptedPublicMini, make_case
 from .native_driver import (RECOVERY_VERSION, SOURCE, NativeMini, make_plan, run_batch,
@@ -19,6 +20,7 @@ from .native_protocol import (BOUND, DECISIONS, VERSION, build_native_request, o
 from .paid_driver import Journal
 from .response_diagnosis import ResponseStageError
 from .test_durable_preflight import approval_for
+from .training_data import audit_rows, model_input, supervision_row
 
 
 def native_plan(root):
@@ -92,7 +94,7 @@ def history_fixture(parent):
 
 def recovery_approval(root, plan):
     approval = approval_for(root, plan)
-    approval["scope"] = "STUDY4_V2_INDEPENDENT_PAID"
+    approval["scope"] = "LOCAL_TEST_NOT_PAID_AUTHORIZATION"
     approval["native_recovery_authorization"] = {
         "approved": True, "new_direct_user_source": SOURCE,
         "recovery_sha256": fingerprint(plan["native_recovery"])}
@@ -178,7 +180,8 @@ class NativeProtocolTests(unittest.TestCase):
             _, runtime, _, _ = make_case("o-low-team-lunch", "A")
             request = build_native_request("ordinary", runtime.observe())
             config = {"version": RECOVERY_VERSION, "new_direct_user_source": SOURCE, "protocol": VERSION,
-                      "phase": "validation", "history": history, "request_sha256": fingerprint(request)}
+                      "phase": "validation", "history": history, "request_sha256": fingerprint(request),
+                      "local_test": True}
             plan = make_plan(config)
             approval = recovery_approval(root, plan)
             transport = NativeTransport(plan)
@@ -221,7 +224,8 @@ class NativeProtocolTests(unittest.TestCase):
             _, runtime, _, _ = make_case("o-low-team-lunch", "A")
             request = build_native_request("ordinary", runtime.observe())
             config = {"version": RECOVERY_VERSION, "new_direct_user_source": SOURCE, "protocol": VERSION,
-                      "phase": "validation", "history": history, "request_sha256": fingerprint(request)}
+                      "phase": "validation", "history": history, "request_sha256": fingerprint(request),
+                      "local_test": True}
             plan = make_plan(config)
             transport = NativeTransport(plan, invalid=True)
             result = validate_once(root, plan, recovery_approval(root, plan), request, transport)
@@ -235,6 +239,125 @@ class NativeProtocolTests(unittest.TestCase):
                 validate_once(root, plan, recovery_approval(root, plan), request, transport)
             self.assertEqual(transport.calls, 1)
             self.assertEqual(verify_history(history)["settled"], Decimal(".013762650"))
+
+
+class HelpOnlyResponsibilityTests(unittest.TestCase):
+    def test_submit_control_is_rejected_not_mapped_to_self_or_applied(self):
+        _, runtime, mini, _ = make_case("o-low-team-lunch", "A")
+        request = build_native_request("control", runtime.observe())
+        self.assertEqual(request["tools"][0]["parameters"]["properties"]["action"]["enum"],
+                         list(CONTROL_ACTIONS))
+        plan, _ = native_plan(Path("."))
+        raw = canonical(response({"action": "SUBMIT", "person_id": None}, "control")).encode()
+        with self.assertRaises(ResponseStageError) as raised:
+            decode_response(raw, "control", runtime.observe(), None, plan, 272000)
+        self.assertEqual(raised.exception.stage, "application_validation")
+        proposal = parse_tool('{"tool":"write_file","arguments":'
+                              '{"path":"/workspace/deliverable.json","content":"{}"}}')
+        before = runtime.snapshot()
+        with self.assertRaisesRegex(ValueError, "help-only"):
+            runtime.cycle(Decision("SUBMIT"), proposed_tool=proposal)
+        self.assertEqual(before, runtime.snapshot())
+        self.assertFalse(mini.requests)
+
+        class OldControl(ScriptedPublicMini):
+            def __call__(self, request):
+                result = super().__call__(request)
+                if strict_json(request["input"][1]["content"])["operation"] == "control":
+                    result["output_text"] = canonical({"action": "SUBMIT", "person_id": None})
+                return result
+        _, runtime, mini, scheduler = make_case("o-low-team-lunch", "A", OldControl(no_ask=True))
+        with self.assertRaisesRegex(ValueError, "Invalid controller"):
+            scheduler.step()
+        self.assertEqual(runtime.normal_actions, 0)
+        self.assertNotIn(runtime.task.artifact_path, runtime.workspace)
+        self.assertEqual(runtime.contacts, 0)
+        self.assertFalse(any(e["kind"] in {"write_file", "submission_blocked", "submit"} for e in runtime.history))
+
+    def test_self_keeps_write_and_only_executor_ordinary_submit_can_finish(self):
+        _, runtime, _, scheduler = make_case("o-low-team-lunch", "A", ScriptedPublicMini(no_ask=True))
+        scheduler.step()
+        self.assertEqual(runtime.normal_actions, 1)
+        self.assertIn(runtime.task.artifact_path, runtime.workspace)
+        self.assertEqual(scheduler.cycles[0]["decision"]["action"], "SELF")
+        self.assertFalse(scheduler.cycles[0]["proposal_discarded"])
+        scheduler.step()
+        self.assertTrue(runtime.progress()["user_delivery_complete"])
+        self.assertFalse(runtime.terminal)
+        scheduler.step()
+        self.assertTrue(runtime.terminal)
+        self.assertEqual([e["kind"] for e in runtime.history if e["kind"] != "control_decision"],
+                         ["write_file", "post_channel", "submit"])
+        self.assertEqual(runtime.normal_actions, 3)
+        self.assertEqual(runtime.contacts, 0)
+
+        _, runtime, _, _ = make_case("o-low-team-lunch", "A")
+        runtime.cycle(Decision("SELF"), proposed_tool=parse_tool(
+            '{"tool":"submit","arguments":{"answer":"not yet delivered"}}'))
+        self.assertFalse(runtime.terminal)
+        self.assertEqual(runtime.history[-1]["kind"], "submission_blocked")
+        self.assertNotIn(runtime.task.artifact_path, runtime.workspace)
+        with tempfile.TemporaryDirectory(prefix="study4_ordinary_submit_receipt_") as folder:
+            journal = Journal(Path(folder) / "LOCAL.jsonl")
+            try:
+                mini = NativeMini(None, None, "LOCAL", journal)
+                data = {"tool": "submit", "arguments": '{"answer":"not yet delivered"}'}
+                call = response(data)["output"][0]
+                mini.pending = {"data": data, "native_function": {
+                    "call_id": call["call_id"], "name": call["name"], "output_items": [call]}}
+                mini.observe_event({"kind": "submission_blocked", "reason": "public delivery incomplete"})
+                receipt = strict_json(mini.native_history[-1]["output"])
+                self.assertEqual(receipt["status"], "not_executed_ordinary_submission_blocked")
+                self.assertIsNone(mini.pending)
+            finally:
+                journal.close()
+
+    def test_old_observation_control_history_and_supervision_are_explicitly_rejected(self):
+        _, runtime, _, scheduler = make_case("o-low-team-lunch", "A", ScriptedPublicMini(no_ask=True))
+        for delivered in (False, True):
+            if delivered:
+                scheduler.run()
+            row = supervision_row(runtime.observe(), [Decision("SELF")], "family", "org", "train")
+            self.assertEqual(row["private_supervision_NOT_model_input"]["mask"]["when"], ["SELF", "ASK"])
+            self.assertEqual(audit_rows([row])["rows"], 1)
+            for field in ("mask", "acceptable"):
+                old = deepcopy(row)
+                if field == "mask":
+                    old["private_supervision_NOT_model_input"]["mask"]["when"].append("SUBMIT")
+                else:
+                    old["private_supervision_NOT_model_input"]["acceptable"][0]["when"] = "SUBMIT"
+                with self.assertRaises(ValueError):
+                    audit_rows([old])
+            row["schema"] = "study4-v2-three-head-proof-1"
+            with self.assertRaisesRegex(ValueError, "three-head"):
+                model_input(row)
+        old = runtime.observe()
+        old["protocol"] = "study4-controller-v2-local-1.1"
+        with self.assertRaisesRegex(ValueError, "Historical observation"):
+            build_native_request("ordinary", old)
+        old = runtime.observe()
+        old["history"].append({"event_id": "old", "kind": "control_decision", "action": "SUBMIT"})
+        with self.assertRaisesRegex(ValueError, "three-state control history"):
+            build_native_request("ordinary", old)
+        history = response({"action": "SUBMIT", "person_id": None}, "control")["output"] + [
+            {"type": "function_call_output", "call_id": "LOCAL_CALL", "output": "{}"}]
+        with self.assertRaisesRegex(ValueError, "three-state native"):
+            build_native_request("ordinary", runtime.observe(), native_history=history)
+
+    def test_new_native_provider_scope_is_closed_before_transport(self):
+        from .ceiling_continuation import make_plan as historical_plan
+        with self.assertRaisesRegex(ValueError, "Frozen single-action-v2"):
+            historical_plan({"phase": "validation"})
+        with tempfile.TemporaryDirectory(prefix="study4_help_only_no_paid_") as folder:
+            root = Path(folder)
+            plan, approval = native_plan(root)
+            plan.update(mode="provider", endpoint="https://api.openai.com/v1/responses",
+                        native_recovery={"no_new_paid_authority": True})
+            approval = approval_for(root, plan)
+            approval["scope"] = "STUDY4_V2_INDEPENDENT_PAID"
+            with self.assertRaisesRegex(ValueError, "no paid execution approval"):
+                validate_binding(plan, approval, root, plan["endpoint"])
+            self.assertEqual(list(root.iterdir()), [])
 
 
 if __name__ == "__main__":

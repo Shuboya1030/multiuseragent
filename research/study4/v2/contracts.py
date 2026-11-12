@@ -6,6 +6,9 @@ import math
 import math
 from pathlib import PurePosixPath
 
+PROTOCOL = "study4-controller-v2-local-1.2-help-only"
+CONTROL_ACTIONS = ("SELF", "ASK")
+
 
 def canonical(value):
     return json.dumps(value, sort_keys=True, separators=(",", ":"), ensure_ascii=False, allow_nan=False)
@@ -92,7 +95,7 @@ class Decision:
     include_value_ids: tuple[str, ...] = ()
 
     def validate(self, task, values):
-        require(self.action in {"SELF", "ASK", "SUBMIT"}, "Unknown control action")
+        require(self.action in CONTROL_ACTIONS, "Unknown help-only control action")
         if self.action == "ASK":
             require(self.person_id in {p.person_id for p in task.people}, "Unknown public recipient")
             require(self.intent in task.intents, "Intent must come from public task")
@@ -101,7 +104,7 @@ class Decision:
                     "Unknown/duplicate value ID; cannot include unread facts")
         else:
             require(self.person_id is None and self.intent is None and not self.include_value_ids,
-                    "SELF/SUBMIT cannot carry a question, private step or answer")
+                    "SELF cannot carry a question, private step or answer")
 
 
 @dataclass(frozen=True)

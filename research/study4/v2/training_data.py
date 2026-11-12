@@ -1,10 +1,10 @@
 """Bounded three-head interface proof; no corpus generation or training."""
 from types import SimpleNamespace
 
-from .contracts import Decision, canonical, fingerprint, require
+from .contracts import CONTROL_ACTIONS, Decision, canonical, fingerprint, require
 from .oracle import identifiability_audit, validate_public_observation
 
-SCHEMA = "study4-v2-three-head-proof-1"
+SCHEMA = "study4-v2-three-head-help-only-2"
 
 
 def supervision_row(observation, acceptable, family, organization, split):
@@ -13,8 +13,6 @@ def supervision_row(observation, acceptable, family, organization, split):
             "Frozen split/group binding and acceptable labels required")
     for decision in acceptable:
         decision.validate(_PublicTaskView(observation), observation["obtained_values"])
-        require(decision.action != "SUBMIT" or observation["progress"]["user_delivery_complete"],
-                "Premature SUBMIT is not an acceptable supervision label")
     persons = [p["person_id"] for p in observation["task"]["people"]]
     intents = observation["task"]["intents"]
     values = [v["value_id"] for v in observation["obtained_values"]]
@@ -24,7 +22,7 @@ def supervision_row(observation, acceptable, family, organization, split):
         "private_supervision_NOT_model_input": {
             "acceptable": [{"when": d.action, "whom": d.person_id, "intent": d.intent,
                             "include_value_ids": list(d.include_value_ids)} for d in acceptable],
-            "mask": {"when": ["SELF", "ASK"] + (["SUBMIT"] if observation["progress"]["user_delivery_complete"] else []),
+            "mask": {"when": list(CONTROL_ACTIONS),
                      "whom": persons, "intent": intents, "include_value_ids": values},
             "when_loss": True, "whom_and_what_loss_only_on_ASK": True,
             "behavior_probability": None, "offline_RL_eligible": False,
@@ -42,6 +40,7 @@ class _PublicTaskView:
 def audit_rows(rows):
     groups, public_rows = {}, []
     for row in rows:
+        require(row["schema"] == SCHEMA, "Historical three-head schema forbidden")
         obs = row["public_input"]
         validate_public_observation(obs)
         require(row["public_input_sha256"] == fingerprint(obs), "Public row content changed")
@@ -52,6 +51,8 @@ def audit_rows(rows):
             require(previous == group["split"], "Family/organization crosses frozen split")
         choices = row["private_supervision_NOT_model_input"]["acceptable"]
         decisions = tuple(Decision(c["when"], c["whom"], c["intent"], tuple(c["include_value_ids"])) for c in choices)
+        require(row == supervision_row(obs, decisions, group["family"], group["organization"], group["split"]),
+                "Supervision tuple/mask contract changed")
         public_rows.append((obs, decisions))
     audit = identifiability_audit(public_rows)
     require(all(g["status"] == "compatible" for g in audit), "Unidentifiable targets: exclude/review, not one-hot")

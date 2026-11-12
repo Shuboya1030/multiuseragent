@@ -1,0 +1,19 @@
+{
+  "version": "study4-native-single-function-help-only-v2",
+  "public_protocol": "study4-controller-v2-local-1.2-help-only",
+  "supersedes_without_rewriting_history": "native_function_contract_v1.json",
+  "controller_actions": ["SELF", "ASK"],
+  "SELF": "No new help request; not tool approval or a task-action instruction",
+  "submit": "Only the ordinary executor selects the existing submit function",
+  "ordinary_function_schema_changed": false,
+  "native_call_count_strictness_changed": false,
+  "question_schema_changed": false,
+  "billing_bound_and_price_domain_changed": false,
+  "historical_control_SUBMIT": "Reject before task actions; never map to SELF",
+  "historical_observations_and_native_control_history": "Explicit version/enum rejection",
+  "actual_provider_validation_for_this_new_version": false,
+  "paid_execution_approval_for_this_new_version": false,
+  "prior_native_v1_actual_requests": 33,
+  "prior_native_v1_actual_runtime_commit": "2e5ca009ef729d9984c3bcb08f9df5171214ed79",
+  "prior_native_v1_results_report_commit": "1dbc9febe952aa5100050ce8a9a0bf6f0daf3ca0"
+}

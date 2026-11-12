@@ -1,6 +1,6 @@
 """Concrete Responses API payloads with LOCAL injection only; no HTTP/key code."""
 
-from .contracts import canonical, require, strict_json
+from .contracts import CONTROL_ACTIONS, canonical, require, strict_json
 from .executor import TOOL_SCHEMA, ordinary_request, parse_tool, validate_question
 from .oracle import validate_public_observation
 
@@ -13,7 +13,7 @@ def object_schema(properties):
 
 STRING = {"type": "string"}
 SCHEMAS = {
-    "control": object_schema({"action": {"type": "string", "enum": ["SELF", "ASK", "SUBMIT"]},
+    "control": object_schema({"action": {"type": "string", "enum": list(CONTROL_ACTIONS)},
                               "person_id": {"type": ["string", "null"]}}),
     "question": object_schema({"intent": STRING, "include_value_ids": {"type": "array", "items": STRING},
                                "question": STRING}),
@@ -33,8 +33,9 @@ def build_request(operation, observation, proposed=None, person_id=None, assista
         if operation == "control":
             body["proposed_ordinary"] = ({"tool": proposed.name, "arguments": dict(proposed.arguments)}
                                          if proposed is not None else None)
-            instruction = ("Choose SELF (allow one ordinary action), ASK to one public person, or SUBMIT only "
-                           "when public delivery is complete. Non-ASK person_id must be null. No final answer.")
+            instruction = ("Choose only SELF (no new help request) or ASK to one public person. "
+                           "SELF is not approval or a task-action instruction. Non-ASK person_id must be null. "
+                           "Never choose SUBMIT or write a final answer; only the ordinary executor can submit.")
         else:
             require(person_id in {p["person_id"] for p in observation["task"]["people"]}, "Nonpublic question recipient")
             body["person_id"] = person_id
@@ -60,7 +61,7 @@ def validate_output(operation, data, observation, assistance=None):
         require(isinstance(data["arguments"], str), "API arguments must be encoded JSON string")
         parse_tool(canonical({"tool": data["tool"], "arguments": strict_json(data["arguments"])}))
     elif operation == "control":
-        require(data["action"] in {"SELF", "ASK", "SUBMIT"} and
+        require(data["action"] in CONTROL_ACTIONS and
                 (data["person_id"] in {p["person_id"] for p in observation["task"]["people"]}
                  if data["action"] == "ASK" else data["person_id"] is None),
                 "Invalid controller action/person")

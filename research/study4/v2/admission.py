@@ -24,7 +24,8 @@ SOURCE_FILES = ("admission.py", "durable.py", "http_transport.py", "mini_request
                 "configs/provider_model_maximum_bound_v1.json", "paid_driver.py", "runtime.py",
                 "scheduler.py", "benchmark.py", "configs/ceiling_pilot.json", "response_diagnosis.py",
                 "recovery_guard.py", "diagnostic_dispatch.py", "ceiling_continuation.py",
-                "native_protocol.py", "native_driver.py", "configs/native_function_contract_v1.json")
+                "native_protocol.py", "native_driver.py", "configs/native_function_contract_v1.json",
+                "configs/native_function_contract_v2.json", "training_data.py")
 
 
 def runtime_binding():

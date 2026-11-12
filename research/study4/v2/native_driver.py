@@ -80,6 +80,8 @@ def make_plan(config):
     plan = frozen_plan() if phase == "batch" else pending_plan()
     plan.update(run_id="study4-v2-native-" + phase + "-20261112-v1", budget_cap_USD="50.00",
                 native_protocol=VERSION, native_recovery=config, token_bound=deepcopy(BOUND))
+    if config.get("local_test") is True:
+        plan.update(mode="local_test", endpoint="http://127.0.0.1:9/v1/responses")
     if phase == "validation":
         plan.update(max_calls=1, max_episodes=1, episodes=["native-validation-no-tools"],
                     environment_tools_allowed=False)
@@ -92,6 +94,7 @@ def make_plan(config):
 
 
 def validate_recovery(plan, approval):
+    require(plan["mode"] == "local_test", "Help-only protocol has no paid execution approval")
     config = plan["native_recovery"]
     require(config["version"] == RECOVERY_VERSION and config["new_direct_user_source"] == SOURCE and
             config["protocol"] == VERSION and len(config["history"]) ==
@@ -156,7 +159,8 @@ class NativeMini(PaidMini):
         if event["kind"] == "control_decision" and event["action"] == "ASK":
             self.receipt(self.pending, {"status": "proposal_discarded_not_executed", "reason": "ASK_refresh"})
         elif event["kind"] == "submission_blocked":
-            self.receipt(self.pending, {"status": "not_executed_controller_submission_blocked", "event": event})
+            require(self.pending["data"]["tool"] == "submit", "Only an ordinary submit can be blocked")
+            self.receipt(self.pending, {"status": "not_executed_ordinary_submission_blocked", "event": event})
         elif event["kind"] in {"write_file", "post_channel", "submit", "tool_result"}:
             data = self.pending["data"]
             tool = event.get("tool") if event["kind"] == "tool_result" else event["kind"]

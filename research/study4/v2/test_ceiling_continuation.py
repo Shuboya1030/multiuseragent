@@ -14,6 +14,7 @@ from .ceiling_continuation import (PROMPT_VERSION, SOURCE, VERSION, make_plan, r
 from .contracts import fingerprint
 from .durable import BatchBusy, BatchLock, DurableLedger
 from .http_transport import HTTPTransport
+from .executor import ORDINARY_PROMPT_VERSION
 from .local_ceiling_check import make_case
 from .mini_request import build_provider_request
 from .test_durable_preflight import approval_for
@@ -58,6 +59,8 @@ def test_approval(root, plan):
     return approval
 
 
+@unittest.skipIf(ORDINARY_PROMPT_VERSION != PROMPT_VERSION,
+                 "Historical continuation requires its frozen original prompt/runtime, not help-only reinterpretation")
 class ContinuationTests(unittest.TestCase):
     def test_transport_failure_now_retains_connect_send_headers_and_read_stages(self):
         failures = (("connect", OSError()),
