@@ -1,8 +1,7 @@
 """One ordinary schema and prompt for every arm, with an injected fixed callback."""
 from copy import deepcopy
-import json
 
-from .contracts import Tool, require
+from .contracts import Tool, require, strict_json
 from .npc_rule import contains_field, contains_intent
 
 PROTOCOL = "study4-controller-v2-local-1.1"
@@ -33,7 +32,7 @@ def ordinary_request(observation):
 
 
 def parse_tool(value):
-    data = json.loads(value)
+    data = strict_json(value)
     require(isinstance(data, dict) and set(data) == {"tool", "arguments"}
             and data["tool"] in FIELDS and isinstance(data["arguments"], dict),
             "Malformed/forbidden ordinary command")
@@ -68,6 +67,6 @@ class SharedExecutor:
                            "Preserve each selected key=value citation. "
                            "Do not change recipient, drop included values, or invent facts.",
         }
-        data = json.loads(self.generate(request))
+        data = strict_json(self.generate(request))
         require(isinstance(data, dict) and set(data) == {"question"}, "Invalid question envelope")
         return validate_question(data["question"], intent, values)

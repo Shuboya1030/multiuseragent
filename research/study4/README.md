@@ -5,7 +5,7 @@
 
 **2026-11-11 v2推进**：[共享协议与零付费第一阶段](v2/README.md)已另立版本，
 含设计v1.1/v1.2、fixture基础与六题固定scorer/四臂调度本地验收、
-[最新实际报告](v2/reports/LOCAL_ADAPTER_STAGE_ZH.md)和待签ceiling预算；
+[最新持久执行前门报告](v2/reports/DURABLE_PREFLIGHT_ZH.md)和待签ceiling预算；
 不改下述SFT87历史结果，不代表新训练或真实ceiling已完成。
 
 研究问题：在固定任务执行器和NPC的能力下，单独学习联合决策 **when（何时求助）＋whom（向谁求助）**，

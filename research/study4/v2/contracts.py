@@ -3,11 +3,25 @@ from dataclasses import dataclass
 import hashlib
 import json
 import math
+import math
 from pathlib import PurePosixPath
 
 
 def canonical(value):
     return json.dumps(value, sort_keys=True, separators=(",", ":"), ensure_ascii=False, allow_nan=False)
+
+
+def strict_json(raw):
+    def pairs(rows):
+        require(len(dict(rows)) == len(rows), "Duplicate JSON object key")
+        return dict(rows)
+    def invalid_constant(_):
+        raise ValueError("Nonfinite JSON number")
+    def finite_float(value):
+        parsed = float(value)
+        require(math.isfinite(parsed), "Nonfinite JSON number")
+        return parsed
+    return json.loads(raw, object_pairs_hook=pairs, parse_constant=invalid_constant, parse_float=finite_float)
 
 
 def fingerprint(value):

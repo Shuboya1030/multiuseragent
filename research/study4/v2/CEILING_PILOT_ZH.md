@@ -5,6 +5,8 @@
 **本文件是方案，不是API授权、账本或已启动runner。**
 共享接口与[固定scorer/六题结构化规则适配](reports/LOCAL_ADAPTER_STAGE_ZH.md)已本地验证；
 真实mini/NPC语义、token/调用/持久费用门未验收及预算未批准时仍禁止API运行。
+持久reserve/恢复/互斥与HTTP已通过[本地故障验收](reports/DURABLE_PREFLIGHT_ZH.md)，
+但真实provider token/framing没有可证明上界，当前会在网络前阻断；下表token费用仍是条件估算。
 
 ## 先做什么、选哪些题
 

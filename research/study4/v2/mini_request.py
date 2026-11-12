@@ -1,7 +1,6 @@
 """Concrete Responses API payloads with LOCAL injection only; no HTTP/key code."""
-import json
 
-from .contracts import canonical, require
+from .contracts import canonical, require, strict_json
 from .executor import TOOL_SCHEMA, ordinary_request, parse_tool, validate_question
 from .oracle import validate_public_observation
 
@@ -54,6 +53,31 @@ def build_request(operation, observation, proposed=None, person_id=None, assista
                                  "strict": True, "schema": SCHEMAS[operation]}}}
 
 
+def validate_output(operation, data, observation, assistance=None):
+    require(isinstance(data, dict) and set(data) == set(SCHEMAS[operation]["properties"]),
+            "Wrong model response shape")
+    if operation == "ordinary":
+        require(isinstance(data["arguments"], str), "API arguments must be encoded JSON string")
+        parse_tool(canonical({"tool": data["tool"], "arguments": strict_json(data["arguments"])}))
+    elif operation == "control":
+        require(data["action"] in {"SELF", "ASK", "SUBMIT"} and
+                (data["person_id"] in {p["person_id"] for p in observation["task"]["people"]}
+                 if data["action"] == "ASK" else data["person_id"] is None),
+                "Invalid controller action/person")
+    else:
+        require(isinstance(data["include_value_ids"], list) and
+                all(isinstance(v, str) for v in data["include_value_ids"]), "Invalid value selection")
+        require(data["intent"] in observation["task"]["intents"] and
+                len(set(data["include_value_ids"])) == len(data["include_value_ids"]) and
+                set(data["include_value_ids"]) <= {v["value_id"] for v in observation["obtained_values"]},
+                "Question selected unread/duplicate context")
+        require(assistance is None or {k: data[k] for k in assistance} == assistance,
+                "Privileged obtained-only request plan changed")
+        selected = [v for v in observation["obtained_values"] if v["value_id"] in data["include_value_ids"]]
+        validate_question(data["question"], data["intent"], selected)
+    return data
+
+
 class LocalMini:
     """Injected MOCK callback; a real API transport is intentionally absent until authorization."""
     def __init__(self, generate, count_full_request_tokens, budget, episode_id):
@@ -85,27 +109,8 @@ class LocalMini:
             self.failed = True
             raise
         try:
-            data = json.loads(response["output_text"])
-            require(isinstance(data, dict) and set(data) == set(SCHEMAS[operation]["properties"]),
-                    "Wrong model response shape")
-            if operation == "control":
-                require(data["action"] in {"SELF", "ASK", "SUBMIT"} and
-                        (data["person_id"] in {p["person_id"] for p in observation["task"]["people"]}
-                         if data["action"] == "ASK" else data["person_id"] is None),
-                        "Invalid controller action/person")
-            elif operation == "question":
-                require(isinstance(data["include_value_ids"], list) and
-                        all(isinstance(v, str) for v in data["include_value_ids"]), "Invalid value selection")
-                require(data["intent"] in observation["task"]["intents"] and
-                        len(set(data["include_value_ids"])) == len(data["include_value_ids"]) and
-                        set(data["include_value_ids"]) <= {v["value_id"] for v in observation["obtained_values"]},
-                        "Question selected unread/duplicate context")
-                assistance = kwargs.get("assistance")
-                require(assistance is None or {k: data[k] for k in assistance} == assistance,
-                        "Privileged obtained-only request plan changed")
-                selected = [v for v in observation["obtained_values"] if v["value_id"] in data["include_value_ids"]]
-                validate_question(data["question"], data["intent"], selected)
-            return data
+            data = strict_json(response["output_text"])
+            return validate_output(operation, data, observation, kwargs.get("assistance"))
         except Exception:
             self.failed = True
             raise
@@ -114,7 +119,7 @@ class LocalMini:
         data = self._call("ordinary", observation)
         try:
             require(isinstance(data["arguments"], str), "API arguments must be encoded JSON string")
-            return parse_tool(canonical({"tool": data["tool"], "arguments": json.loads(data["arguments"])}))
+            return parse_tool(canonical({"tool": data["tool"], "arguments": strict_json(data["arguments"])}))
         except Exception:
             self.failed = True
             raise
