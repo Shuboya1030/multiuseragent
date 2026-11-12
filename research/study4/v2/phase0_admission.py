@@ -44,7 +44,7 @@ def make_plan(history, inherited, *, local_test=False, recovery_source=None):
         systems.update(hashlib.sha256(npc_system(person, scenario).encode()).hexdigest()
                        for person, scenario in case.scenarios.items())
     return {"schema": VERSION, "phase0_protocol": VERSION,
-            "run_id": "study4-formal-phase0-240-20261112-v1",
+            "run_id": "study4-formal-phase0-240-20261112-v2",
             "mode": "local_test" if local_test else "provider",
             "endpoint": "http://127.0.0.1:9/v1/responses" if local_test else "https://api.openai.com/v1/responses",
             "budget_cap_USD": "50.00", "runtime": runtime_binding(), "price": deepcopy(PRICE),
@@ -100,9 +100,9 @@ def validate_binding(plan, approval, root, endpoint, now=None):
             plan["total_output_tokens"] == plan["max_calls"] * 128000,
             "Aggregate token bounds cannot become an unintended early cutoff")
     if plan["mode"] == "provider":
-        require(plan["inherited"] == {"unknown_held_USD": "4.290000", "settled_USD_upper": "3.962225025",
-                                     "calls": 378, "settled_calls": 373, "unknown_calls": 5}
-                and len(plan["history"]) == 8, "All original plus stopped formal exposure must remain counted")
+        require(plan["inherited"] == {"unknown_held_USD": "5.148000", "settled_USD_upper": "3.962225025",
+                                     "calls": 379, "settled_calls": 373, "unknown_calls": 6}
+                and len(plan["history"]) == 9, "All original plus both stopped formal exposures must remain counted")
     require(approval.get("approved") is True and approval.get("run_id") == plan["run_id"] and
             approval.get("plan_sha256") == fingerprint(plan) and approval.get("storage_root_sha256") == root_binding(root)
             and approval.get("budget_cap_USD") == "50.00" and approval.get("direct_user_source") == SOURCE

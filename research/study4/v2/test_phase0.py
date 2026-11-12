@@ -330,9 +330,9 @@ class Phase0Tests(unittest.TestCase):
             make_plan([], {"unknown_held_USD": "0", "settled_USD_upper": "0"})
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
-            inherited = {"unknown_held_USD": "4.290000", "settled_USD_upper": "3.962225025",
-                         "calls": 378, "settled_calls": 373, "unknown_calls": 5}
-            plan = make_plan([{}] * 8, inherited, recovery_source=SOURCE)
+            inherited = {"unknown_held_USD": "5.148000", "settled_USD_upper": "3.962225025",
+                         "calls": 379, "settled_calls": 373, "unknown_calls": 6}
+            plan = make_plan([{}] * 9, inherited, recovery_source=SOURCE)
             authority = self.authority(root, plan)
             authority["scope"] = "STUDY4_FORMAL_PHASE0_240_SAME_CUMULATIVE50"
             validate_binding(plan, authority, root, plan["endpoint"])
@@ -341,8 +341,8 @@ class Phase0Tests(unittest.TestCase):
             ledger = DurableLedger(root, plan, authority, create=True)
             try:
                 status = ledger.status()
-                self.assertEqual(status["occupied_USD_upper"], "8.252225025")
-                self.assertEqual(status["held_USD_upper"], "4.290000")
+                self.assertEqual(status["occupied_USD_upper"], "9.110225025")
+                self.assertEqual(status["held_USD_upper"], "5.148000")
                 self.assertEqual(status["calls"], 0)
             finally:
                 ledger.close()

@@ -21,7 +21,7 @@ from .paid_driver import Journal, write_new
 from .runtime import SharedRuntime
 
 VERSION = "study4-formal-phase0-native-llmnpc-2"
-SOURCE = {"id": "dccf1924-a562-4335-bbca-c6f929b24f2e", "revision": 8}
+SOURCE = {"id": "1babf0c9-1a8f-4242-8816-e8872fda2c22", "revision": 10}
 ARCHIVES = Path(__file__).parents[2] / "study2" / "results" / "r1_2026_11_02" / "archives"
 NPC_SOURCE = "implementations/07e7b828063a63dccaf3bffc9f678c1c1f8608bae2e64b159b49cacdbc994744.py"
 NPC_PUBLISHED_SOURCE_SHA = "1d634c25ba4bfe500abfad35848241f2ba29fa1ff07e206307ac832665af23d2"
@@ -432,8 +432,8 @@ def schedule(repeats=1):
 def verify_inherited(entries, *, locked=False):
     caps = __import__("research.study4.v2.budget", fromlist=["CallCaps"]).CallCaps()
     settled, held, calls, settled_calls, unknown = Decimal(0), Decimal(0), 0, 0, 0
-    require(len(entries) in {7, 8} and len({e["root"] for e in entries}) == len(entries),
-            "Seven original roots plus, for recovery, the stopped formal root")
+    require(len(entries) in {7, 8, 9} and len({e["root"] for e in entries}) == len(entries),
+            "Seven original roots plus the explicitly authorized stopped formal predecessors")
     for entry in entries:
         root = Path(entry["root"])
         for name, digest in entry["file_sha256"].items():
@@ -460,8 +460,9 @@ def verify_inherited(entries, *, locked=False):
                 require(Decimal(charged) == caps.charge(incoming, outgoing), "Historical usage price mismatch")
                 settled_calls += 1
                 settled += Decimal(charged)
-    expected = ((47, 43, 4, Decimal("3.432"), Decimal(".069303300")) if len(entries) == 7 else
-                (378, 373, 5, Decimal("4.29"), Decimal("3.962225025")))
+    expected = {7: (47, 43, 4, Decimal("3.432"), Decimal(".069303300")),
+                8: (378, 373, 5, Decimal("4.29"), Decimal("3.962225025")),
+                9: (379, 373, 6, Decimal("5.148"), Decimal("3.962225025"))}[len(entries)]
     require((calls, settled_calls, unknown, held, settled) == expected, "Never omit original50 exposure")
     return {"unknown_held_USD": format(held, ".6f"), "settled_USD_upper": format(settled, ".9f"),
             "calls": calls, "settled_calls": settled_calls, "unknown_calls": unknown}
@@ -570,17 +571,27 @@ def freeze(root, session_files):
                  r"study4_v2_native_20261112_v1\batch"]
     history = [{"root": str((Path(session_files) / rel).resolve()), "file_sha256": entry["file_sha256"]}
                for rel, entry in zip(relatives, check["all7actual_roots_unchanged"])]
-    stopped = Path(session_files) / "study4_formal_phase0_20261112_v2"
-    prior = strict_json((stopped / "FROZEN_PLAN.json").read_bytes())
-    receipt = strict_json((stopped / "FINAL_RECEIPT.json").read_bytes())
-    require(prior["phase0_protocol"] == "study4-formal-phase0-native-llmnpc-1"
-            and prior["history"] == history and receipt["status"] == "stopped"
-            and receipt["complete_episodes"] == 25 and receipt["budget"]["in_flight"] == 0,
-            "Exact stopped formal predecessor required; no active batch")
-    history.append({"root": str(stopped.resolve()), "file_sha256": {
-        p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in stopped.iterdir() if p.is_file()}})
+    for dirname, protocol, complete, calls in (
+            ("study4_formal_phase0_20261112_v2", "study4-formal-phase0-native-llmnpc-1", 25, 331),
+            ("study4_formal_phase0_240_20261112_v1", VERSION, 0, 1)):
+        stopped = Path(session_files) / dirname
+        prior = strict_json((stopped / "FROZEN_PLAN.json").read_bytes())
+        receipt = strict_json((stopped / "FINAL_RECEIPT.json").read_bytes())
+        require(prior["phase0_protocol"] == protocol and prior["history"] == history
+                and receipt["status"] == "stopped" and receipt["complete_episodes"] == complete
+                and receipt["budget"]["calls"] == calls and receipt["budget"]["in_flight"] == 0,
+                "Exact stopped formal predecessors required; no active batch")
+        history.append({"root": str(stopped.resolve()), "file_sha256": {
+            p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in stopped.iterdir() if p.is_file()}})
     inherited = verify_inherited(history)
     plan = make_plan(history, inherited, recovery_source=SOURCE)
+    plan["authorized_recovery"] = {
+        "source": SOURCE, "prior_attempt_run_id": prior["run_id"],
+        "prior_attempt_plan_sha256": fingerprint(prior),
+        "prior_attempt_receipt_sha256": hashlib.sha256((stopped / "FINAL_RECEIPT.json").read_bytes()).hexdigest(),
+        "prior_attempt_missing_episodes": 240, "prior_attempt_unknown_retained_USD": ".858000",
+        "new_request_is_explicit_user_authorized_not_automatic_replay": True,
+        "user_reports_renewal_not_verified_429_cause": True}
     plan["code_commit"] = subprocess.check_output(
         ["git", "-c", "core.longpaths=true", "rev-parse", "HEAD"], text=True).strip()
     root = Path(root).resolve()
@@ -590,14 +601,14 @@ def freeze(root, session_files):
                 "storage_root_sha256": root_binding(root), "budget_cap_USD": "50.00",
                 "direct_user_source": SOURCE, "scope": "STUDY4_FORMAL_PHASE0_240_SAME_CUMULATIVE50",
                 "not_before": current.isoformat(), "expires": (current + timedelta(hours=24)).isoformat(),
-                "reference": "assignment:741f367f-a37b-48de-a57d-1e7bbe84ade4:call_unhkkkHoQqVzhduFpJOHMnI8"}
+                "reference": "assignment:741f367f-a37b-48de-a57d-1e7bbe84ade4:call_YfUaDbH2JJIDaSHZFbo4EuS0"}
     validate_binding(plan, approval, root, plan["endpoint"])
     root.mkdir(parents=True)
     write_new(root / "FROZEN_PLAN.json", plan)
     write_new(root / "APPROVAL.json", approval)
     write_new(root / "AUTHORIZATION_SOURCE.json", {
         "direct_user_source": SOURCE,
-        "direct_user_text": "\u7ee7\u7eed\u5427",
+        "direct_user_text": "\u6211\u5df2\u7ecf\u7eed\u8d39\u4f60\u7ee7\u7eed\u5427",
         "coordinator_scope": "60 exposed tasks x4 arms x1; fresh uniform protocol2, not old720 or mixed25+215",
         "same_original_total_cap_USD": "50.00", "new_budget_increase": False,
         "inherited": inherited, "formal_max_episodes": 240, "NPC_API_included": True,
@@ -606,7 +617,7 @@ def freeze(root, session_files):
     estimate = {"basis": "old24 complete episodes USD1.23137025; censored partial USD2.625319125",
                 "fresh240_completion_mean_USD_scenario": "12.313702500",
                 "fresh240_one_censored_tail_per26_USD_scenario": "36.07381355769230769230769231",
-                "remaining_original50_USD": "41.747774975",
+                "remaining_original50_USD": "40.889774975",
                 "not_guarantee_or_protocol2_measured_cost": True,
                 "reserve_per_call_USD": ".858000", "unknown_stops_no_retry": True}
     write_new(root / "BUDGET_ESTIMATE.json", estimate)
