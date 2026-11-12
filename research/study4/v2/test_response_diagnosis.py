@@ -40,8 +40,8 @@ class OfflineDiagnosisTests(unittest.TestCase):
                 self.assertEqual(result["accepted"], name == "baseline")
                 self.assertNotIn("NOT-RETAIN-ARBITRARY-TEXT", canonical(result))
                 if name != "baseline":
-                    frames.append(result["validator_frames"][-2]["function"])
-        self.assertIn("decode_response", frames)
+                    frames.extend(row["function"] for row in result["validator_frames"])
+        self.assertIn("message", frames)
         self.assertIn("validate_output", frames)
 
     def test_embedded_arguments_diagnostic_keeps_only_allowlisted_key_types(self):

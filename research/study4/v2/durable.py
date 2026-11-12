@@ -15,6 +15,8 @@ from .admission import (decode_response, prepare_request, response_diagnostic, r
 from .budget import BudgetBlocked, LocalBudget
 from .contracts import canonical, fingerprint, require
 from .provider_bound import reservation_output_bound
+from .response_diagnosis import inspect_response_shape, ResponseStageError
+from .recovery_guard import prior_hold
 
 
 class BatchBusy(RuntimeError):
@@ -88,7 +90,7 @@ class DurableLedger:
             self.connection.row_factory = sqlite3.Row
             self.connection.execute("pragma journal_mode=WAL")
             self.connection.execute("pragma synchronous=FULL")
-            metadata = {"schema": "study4-v2-durable-1", "plan_sha256": fingerprint(plan),
+            metadata = {"schema": "study4-v2-durable-2-diagnostics", "plan_sha256": fingerprint(plan),
                         "approval_sha256": fingerprint(approval), "root_sha256": root_binding(self.root),
                         "mode": plan["mode"], "run_id": plan["run_id"]}
             self.metadata = metadata
@@ -148,12 +150,14 @@ class DurableLedger:
     def status(self):
         rows = self.connection.execute("select * from calls").fetchall()
         settled = sum((Decimal(r["charged"]) for r in rows if r["state"] == "settled"), Decimal(0))
-        held = sum((Decimal(r["reserved"]) for r in rows if r["state"] != "settled"), Decimal(0))
+        external = prior_hold(self.plan)
+        held = sum((Decimal(r["reserved"]) for r in rows if r["state"] != "settled"), Decimal(0)) + external
         return {"calls": len(rows), "settled": sum(r["state"] == "settled" for r in rows),
                 "unknown": sum(r["state"] == "unknown" for r in rows),
                 "in_flight": sum(r["state"] in {"reserved", "sending"} for r in rows),
                 "occupied_USD_upper": str(settled + held), "held_USD_upper": str(held),
-                "cap_USD": str(self.cap), "mode": self.plan["mode"]}
+                "cap_USD": str(self.cap), "mode": self.plan["mode"],
+                "prior_unknown_held_USD": str(external)}
 
     def _reserve(self, call_id, episode, operation, request_hash, bound):
         with self.transaction():
@@ -236,11 +240,17 @@ class DurableLedger:
                 state = self.connection.execute("select state from calls where id=?", (call_id,)).fetchone()["state"]
                 if state != "settled":
                     raw_bytes = raw if isinstance(raw, bytes) else None
+                    diagnostic = response_diagnostic(raw_bytes) if raw_bytes is not None else {}
+                    if raw_bytes is not None:
+                        diagnostic["response_shape"] = inspect_response_shape(raw_bytes)
+                    if isinstance(error, ResponseStageError):
+                        diagnostic.update(validation_stage=error.stage, cause_type=error.cause_type,
+                                          validator_frames=error.validator_frames)
                     self.connection.execute("""update calls set state='unknown',error_type=?,response_sha256=?,
                         response_bytes=?,diagnostic=?,updated=? where id=?""",
                         (type(error).__name__, hashlib.sha256(raw_bytes).hexdigest() if raw_bytes is not None else None,
                          len(raw_bytes) if raw_bytes is not None else None,
-                         canonical(response_diagnostic(raw_bytes)) if raw_bytes is not None else None,
+                         canonical(diagnostic),
                          self.now(), call_id))
                     self.audit("unknown", call_id=call_id, error_type=type(error).__name__)
             raise

@@ -1,7 +1,6 @@
 """Offline-only typed response inspection. Does not read credentials or call a provider."""
 from pathlib import Path
 
-from .admission import decode_response, prepare_request
 from .contracts import strict_json
 from .executor import FIELDS
 
@@ -11,6 +10,33 @@ OUTPUT_TYPES = {"message", "reasoning", "function_call", "web_search_call", "fil
                 "code_interpreter_call", "compaction"}
 APP_KEYS = {"tool", "arguments", "action", "person_id", "intent", "include_value_ids", "question"}
 ARG_KEYS = set().union(*FIELDS.values())
+
+
+class ResponseStageError(ValueError):
+    def __init__(self, stage, cause_type, frames):
+        super().__init__("Response validation failed at " + stage)
+        self.stage, self.cause_type, self.validator_frames = stage, cause_type, frames
+
+
+def validation_frames(error):
+    frames = []
+    trace = error.__traceback__
+    while trace is not None:
+        path = Path(trace.tb_frame.f_code.co_filename).resolve()
+        if path.is_relative_to(ROOT.resolve()):
+            frames.append({"file": path.relative_to(ROOT.resolve()).as_posix(),
+                           "function": trace.tb_frame.f_code.co_name, "line": trace.tb_lineno})
+        trace = trace.tb_next
+    return frames
+
+
+def at_stage(stage, validate):
+    try:
+        return validate()
+    except ResponseStageError:
+        raise
+    except (ValueError, KeyError, TypeError, IndexError, UnicodeError) as error:
+        raise ResponseStageError(stage, type(error).__name__, validation_frames(error)) from None
 
 
 def known_enum(value, allowed):
@@ -76,6 +102,7 @@ def inspect_response_shape(raw):
 
 def diagnose_offline(raw, operation, request, plan, *, provenance):
     """Same unchanged validators; syntheses MUST be marked, never actual-body recovery."""
+    from .admission import decode_response, prepare_request
     result = {"provenance": provenance, "shape": inspect_response_shape(raw)}
     try:
         _, bound, observation, assistance = prepare_request(request, operation, plan)
@@ -83,13 +110,7 @@ def diagnose_offline(raw, operation, request, plan, *, provenance):
         result["accepted"] = True
     except (ValueError, KeyError, TypeError, IndexError, UnicodeError) as error:
         result.update(accepted=False, exception_type=type(error).__name__)
-        frames = []
-        trace = error.__traceback__
-        while trace is not None:
-            path = Path(trace.tb_frame.f_code.co_filename).resolve()
-            if path.is_relative_to(ROOT.resolve()):
-                frames.append({"file": path.relative_to(ROOT.resolve()).as_posix(),
-                               "function": trace.tb_frame.f_code.co_name, "line": trace.tb_lineno})
-            trace = trace.tb_next
-        result["validator_frames"] = frames
+        result["validator_frames"] = getattr(error, "validator_frames", validation_frames(error))
+        if isinstance(error, ResponseStageError):
+            result.update(stage=error.stage, cause_type=error.cause_type)
     return result

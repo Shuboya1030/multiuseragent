@@ -1,0 +1,862 @@
+{
+  "schema": "study4-persistent-response-diagnosis-v2-check-1",
+  "local_date": "2026-11-11",
+  "actual_original_source_commit": "88f1134ac251ada56597b23ec8e615380d54b214",
+  "all_original_actual_runtime_source_hashes_verified_in_immutable_commit": true,
+  "actual_original_batch_files_byte_unchanged": {
+    "APPROVAL.json": "da7cf3d68a8e0eb092325a5bf30c657655bda347244fdae47e7a1cbb084ad67c",
+    "events.jsonl": "8bf92ecaadf8fd6efc86259efdc81711499dc41345eaf3365892154539b5e0f7",
+    "FINAL_RECEIPT.json": "ff0e53edab3b6790f2691e219ce06ccf4c88fa7b51025d1f617acd979a288910",
+    "FRESH_STARTED.json": "860b8ec7864568ee1bfa27a857ca893fe93c52efa5721c1080cd4f76302374fd",
+    "FROZEN_PLAN.json": "a24a58e551463fdcf32fb30c9ca3369791f871db6a811c573bae1730d7ce8fce",
+    "slot-00-INCOMPLETE.json": "0d542d68e0e3b81437775548f70696462e0d2235d8b9dd91ff6c1a9fa22dbbba",
+    "study4-v2-rule-ceiling50-20261111-v1.lock": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "study4-v2-rule-ceiling50-20261111-v1.sqlite3": "4dbd8da07c0128b1d86ad2ac356fc218a7f2dc024a46242fe7959fba16349fe7",
+    "study4-v2-rule-ceiling50-20261111-v1.sqlite3-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "study4-v2-rule-ceiling50-20261111-v1.sqlite3-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "actual_total_model_calls_still": 1,
+  "second_model_call_or_response_GET": false,
+  "actual_original_unknown_held_USD": ".858000",
+  "actual_cap_USD": "50.00",
+  "actual_settled": 0,
+  "actual_tools": 0,
+  "actual_completed_episodes": 0,
+  "actual_root_cause_or_raw_recovered": false,
+  "new_ledger_metadata": "study4-v2-durable-2-diagnostics",
+  "new_plan_schema": "study4-v2-durable-preflight-3",
+  "local_tests_passed": 99,
+  "new_persistent_diagnosis_tests": 4,
+  "passed_test_ids": [
+    "research.study4.v2.test_persistent_diagnosis.PersistentDiagnosisTests.test_exact_failure_stage_and_safe_shape_survive_real_child_exit",
+    "research.study4.v2.test_persistent_diagnosis.PersistentDiagnosisTests.test_known_envelope_shapes_inspected_without_acceptance_or_task_values",
+    "research.study4.v2.test_persistent_diagnosis.PersistentDiagnosisTests.test_old_ledger_schema_not_reinterpreted_as_new",
+    "research.study4.v2.test_persistent_diagnosis.PersistentDiagnosisTests.test_recovery_requires_new_source_and_includes_old_unknown_in_same50cap",
+    "research.study4.v2.test_response_diagnosis.OfflineDiagnosisTests.test_candidate_layers_reproduce_separate_failures_not_actual_root_cause",
+    "research.study4.v2.test_response_diagnosis.OfflineDiagnosisTests.test_embedded_arguments_diagnostic_keeps_only_allowlisted_key_types",
+    "research.study4.v2.test_paid_driver.FreshDriverTests.test_complete_scripted48_journal_hashes_and_rerun_cannot_pay_or_repost",
+    "research.study4.v2.test_paid_driver.FreshDriverTests.test_exact_frozen_scope_balanced_groups_and_no_provider_seed_claim",
+    "research.study4.v2.test_paid_driver.FreshDriverTests.test_frozen_plan_or_approval_drift_never_creates_ledger",
+    "research.study4.v2.test_paid_driver.FreshDriverTests.test_tool_side_effect_then_interrupt_never_replayed_even_if_models_settled",
+    "research.study4.v2.test_paid_driver.FreshDriverTests.test_usage_failure_stops_whole_fresh_batch_keeps_unknown_and_no_resumption",
+    "research.study4.v2.test_provider_bound.ModelMaximumTests.test_durable_reserve_full_max_settle_reported_mock_usage_and_replay_without_send",
+    "research.study4.v2.test_provider_bound.ModelMaximumTests.test_public_actions_unchanged_and_whole_model_bound_not_prompt_token_estimate",
+    "research.study4.v2.test_provider_bound.ModelMaximumTests.test_real_provider_dispatch_still_blocks_without_independent_approval_before_any_files_or_dns",
+    "research.study4.v2.test_provider_bound.ModelMaximumTests.test_remaining_less_than_full_reserve_blocks_even_after_small_settlement",
+    "research.study4.v2.test_provider_bound.ModelMaximumTests.test_unknown_usage_tier_or_overbound_keeps_full_max_after_restart",
+    "research.study4.v2.test_provider_bound.ModelMaximumTests.test_unsupported_billable_modes_rejected_before_reserve_or_transport",
+    "research.study4.v2.test_durable_preflight.DurableTests.test_aggregate_call_token_and_per_operation_limits_survive_settlement",
+    "research.study4.v2.test_durable_preflight.DurableTests.test_batch_process_exclusion_and_no_create_overwrite",
+    "research.study4.v2.test_durable_preflight.DurableTests.test_byte_bound_is_only_proved_for_local_identity_and_unicode_bytes",
+    "research.study4.v2.test_durable_preflight.DurableTests.test_duplicate_embedded_tool_arguments_cannot_silently_change_the_action",
+    "research.study4.v2.test_durable_preflight.DurableTests.test_expired_wrong_storage_or_runtime_binding_blocks_creation",
+    "research.study4.v2.test_durable_preflight.DurableTests.test_pending_or_unmatched_authorization_blocks_before_files_dns_or_socket",
+    "research.study4.v2.test_durable_preflight.DurableTests.test_persist_before_send_and_reopen_completed_without_resending",
+    "research.study4.v2.test_durable_preflight.DurableTests.test_real_process_crash_after_settle_replays_and_does_not_pay_again",
+    "research.study4.v2.test_durable_preflight.DurableTests.test_real_process_crash_reservation_or_sent_becomes_unknown_without_retry",
+    "research.study4.v2.test_durable_preflight.DurableTests.test_reused_id_changed_request_and_mutated_binding_block_without_send",
+    "research.study4.v2.test_durable_preflight.DurableTests.test_socket_failure_is_one_unknown_attempt_with_no_retry",
+    "research.study4.v2.test_durable_preflight.DurableTests.test_static_schema_is_local_validation_not_provider_acceptance",
+    "research.study4.v2.test_durable_preflight.DurableTests.test_tiny_usd_call_total_tokens_and_episode_limits_prevent_send",
+    "research.study4.v2.test_durable_preflight.DurableTests.test_unknown_usage_parse_model_and_resource_errors_hold_max_and_stop",
+    "research.study4.v2.test_durable_preflight.HTTPTests.test_endpoint_and_permit_gates_do_not_resolve_external_hosts",
+    "research.study4.v2.test_durable_preflight.HTTPTests.test_loopback_absolute_deadline_and_cleanup",
+    "research.study4.v2.test_durable_preflight.HTTPTests.test_loopback_http_observes_committed_sending_no_auth_and_replay_skips_socket",
+    "research.study4.v2.test_durable_preflight.HTTPTests.test_redirect_is_not_followed_and_response_size_cap_retains_unknown",
+    "research.study4.v2.test_ceiling_adapter.BudgetTests.test_global_episode_bound_and_rule_NPC_cost_mode",
+    "research.study4.v2.test_ceiling_adapter.BudgetTests.test_pending_budget_dispatches_nothing",
+    "research.study4.v2.test_ceiling_adapter.BudgetTests.test_pending_inflight_blocks_parallel_reserve",
+    "research.study4.v2.test_ceiling_adapter.BudgetTests.test_reserve_settle_funds_usage_and_never_uses_float_math",
+    "research.study4.v2.test_ceiling_adapter.BudgetTests.test_token_call_usd_and_per_episode_operation_limits_pre_dispatch",
+    "research.study4.v2.test_ceiling_adapter.BudgetTests.test_unknown_full_exposure_and_usage_overrun_never_released",
+    "research.study4.v2.test_ceiling_adapter.SchedulingTests.test_C_wrong_recipient_is_not_privately_corrected",
+    "research.study4.v2.test_ceiling_adapter.SchedulingTests.test_bad_output_with_settled_usage_stops_as_infra_not_unknown_money",
+    "research.study4.v2.test_ceiling_adapter.SchedulingTests.test_failure_after_dispatch_retains_unknown_and_stops_without_retry",
+    "research.study4.v2.test_ceiling_adapter.SchedulingTests.test_four_action_checkpoint_and_nonboundary_do_not_add_control_calls",
+    "research.study4.v2.test_ceiling_adapter.SchedulingTests.test_invalid_control_response_disables_client_even_without_scheduler",
+    "research.study4.v2.test_ceiling_adapter.SchedulingTests.test_missing_usage_is_unknown_and_cannot_dispatch_again",
+    "research.study4.v2.test_ceiling_adapter.SchedulingTests.test_no_ask_reuses_proposal_and_does_not_call_question_or_refresh",
+    "research.study4.v2.test_ceiling_adapter.SchedulingTests.test_privileged_what_only_passes_public_intent_and_obtained_ids",
+    "research.study4.v2.test_ceiling_adapter.SchedulingTests.test_prompt_metadata_leak_and_unread_assistance_are_rejected",
+    "research.study4.v2.test_ceiling_adapter.SchedulingTests.test_shared_ordinary_wire_schema_and_no_arm_or_gold_in_prompt",
+    "research.study4.v2.test_ceiling_adapter.SchedulingTests.test_speculative_action_cannot_survive_ask",
+    "research.study4.v2.test_ceiling_adapter.SchedulingTests.test_start_proposal_reply_reasons_coalesced_once_and_ask_refreshes",
+    "research.study4.v2.test_ceiling_adapter.ScorerAdapterTests.test_dependency_partial_refusal_and_bound_rule_evidence",
+    "research.study4.v2.test_ceiling_adapter.ScorerAdapterTests.test_exact_pinned_source_and_24_structured_rule_cases",
+    "research.study4.v2.test_ceiling_adapter.ScorerAdapterTests.test_official_optional_no_contact_remains_half_quality",
+    "research.study4.v2.test_ceiling_adapter.ScorerAdapterTests.test_public_load_does_not_depend_on_private_labels",
+    "research.study4.v2.test_ceiling_adapter.ScorerAdapterTests.test_submit_separate_from_official_content_and_infra_never_zero_filled",
+    "research.study4.v2.test_ceiling_adapter.ScorerAdapterTests.test_trace_scope_edit_and_stale_review_refused",
+    "research.study4.v2.test_ceiling_adapter.ScorerAdapterTests.test_unreviewed_structured_trace_is_unknown_not_automatic_success",
+    "research.study4.v2.test_ceiling_adapter.TrainingInterfaceTests.test_early_submit_or_unread_values_are_not_trainable_labels",
+    "research.study4.v2.test_ceiling_adapter.TrainingInterfaceTests.test_public_projection_and_masked_three_heads_no_fake_RL_probability",
+    "research.study4.v2.test_ceiling_adapter.TrainingInterfaceTests.test_split_overlap_and_unidentifiable_targets_fail",
+    "research.study4.v2.test_protocol.ProtocolTests.test_all_arms_share_identical_ordinary_request_and_schema",
+    "research.study4.v2.test_protocol.ProtocolTests.test_ambiguous_public_states_do_not_get_unique_private_labels",
+    "research.study4.v2.test_protocol.ProtocolTests.test_ask_delivers_before_exactly_one_ordinary_action",
+    "research.study4.v2.test_protocol.ProtocolTests.test_bad_artifact_can_finish_delivery_without_business_success",
+    "research.study4.v2.test_protocol.ProtocolTests.test_bounded_stops_are_not_submitted_and_cyclic_dag_is_rejected",
+    "research.study4.v2.test_protocol.ProtocolTests.test_ceiling_budget_counts_episodes_refresh_calls_and_both_token_prices",
+    "research.study4.v2.test_protocol.ProtocolTests.test_context_protects_replies_and_summary_and_fails_if_protected_overflows",
+    "research.study4.v2.test_protocol.ProtocolTests.test_decision_points_include_proposal_reply_and_four_step_guard",
+    "research.study4.v2.test_protocol.ProtocolTests.test_illegal_tools_or_controller_private_fields_fail_explicitly",
+    "research.study4.v2.test_protocol.ProtocolTests.test_information_complete_is_not_delivery_or_business_success",
+    "research.study4.v2.test_protocol.ProtocolTests.test_no_private_values_before_release_and_source_conflicts_retained",
+    "research.study4.v2.test_protocol.ProtocolTests.test_numeric_context_match_is_token_bound_not_substring",
+    "research.study4.v2.test_protocol.ProtocolTests.test_partial_reply_and_refusal_can_recover",
+    "research.study4.v2.test_protocol.ProtocolTests.test_private_metadata_is_rejected_below_top_level",
+    "research.study4.v2.test_protocol.ProtocolTests.test_private_snapshot_branch_restore_without_double_contact_or_replay",
+    "research.study4.v2.test_protocol.ProtocolTests.test_question_cannot_drop_selected_context",
+    "research.study4.v2.test_protocol.ProtocolTests.test_quoted_intent_or_swapped_context_cannot_release",
+    "research.study4.v2.test_protocol.ProtocolTests.test_reference_paths_and_public_label_compatibility",
+    "research.study4.v2.test_protocol.ProtocolTests.test_repeated_post_keeps_history_and_rewrite_invalidates_summary",
+    "research.study4.v2.test_protocol.ProtocolTests.test_repeated_read_is_idempotent_and_edited_identity_rejected",
+    "research.study4.v2.test_protocol.ProtocolTests.test_report_is_local_proof_not_real_ceiling_or_generator_completion",
+    "research.study4.v2.test_protocol.ProtocolTests.test_self_can_submit_but_must_complete_delivery_first",
+    "research.study4.v2.test_protocol.ProtocolTests.test_threshold_arithmetic_source_and_authority",
+    "research.study4.v2.test_protocol.ProtocolTests.test_unknown_reply_cannot_enter_public_memory",
+    "research.study4.test_help_protocol_v2.Tests.test_continuous_ask_delivers_real_replies_and_agent_progresses_then_submits",
+    "research.study4.test_help_protocol_v2.Tests.test_foreign_reply_or_edited_message_rejected",
+    "research.study4.test_help_protocol_v2.Tests.test_native_v1_policy_checkpoint_and_corpus_do_not_pass_v2_contracts",
+    "research.study4.test_help_protocol_v2.Tests.test_no_ask_normal_work_no_contact_or_message_model",
+    "research.study4.test_help_protocol_v2.Tests.test_no_new_controller_gate_between_help_and_normal_task_and_cycle_limit_is_bounded",
+    "research.study4.test_help_protocol_v2.Tests.test_randomized_v2_collection_and_training_contract_are_consistent_not_trained",
+    "research.study4.test_help_protocol_v2.Tests.test_reply_is_not_public_until_verified_delivery_and_v1_state_rejected",
+    "research.study4.test_help_protocol_v2.Tests.test_send_failure_or_timeout_stops_without_agent_action_or_fake_answer",
+    "research.study4.test_help_protocol_v2.Tests.test_v1_runtime_keeps_ask_only_semantics",
+    "research.study4.test_teacher87_native_agent.Tests.test_native_must_help_really_selects_person_question_then_normal_actions",
+    "research.study4.test_teacher87_native_agent.Tests.test_native_rejects_unknown_recipient_before_sending",
+    "research.study4.test_teacher87_native_agent.Tests.test_shared_prompt_expresses_native_and_controlled_modes_without_unconditional_ban"
+  ],
+  "observed_synthetic_failure_diagnostics_read_after_child_exit": [
+    {
+      "synthetic_stage": "response_json",
+      "child_returncode": 0,
+      "state_after_child_exit": "unknown",
+      "reserved_USD": "0.8580",
+      "diagnostic": {
+        "cause_type": "JSONDecodeError",
+        "json_parse_error_type": "JSONDecodeError",
+        "response_shape": {
+          "parse_error_type": "JSONDecodeError"
+        },
+        "validation_stage": "response_json",
+        "validator_frames": [
+          {
+            "file": "response_diagnosis.py",
+            "function": "at_stage",
+            "line": 35
+          },
+          {
+            "file": "admission.py",
+            "function": "<lambda>",
+            "line": 134
+          },
+          {
+            "file": "contracts.py",
+            "function": "strict_json",
+            "line": 24
+          }
+        ]
+      }
+    },
+    {
+      "synthetic_stage": "response_envelope",
+      "child_returncode": 0,
+      "state_after_child_exit": "unknown",
+      "reserved_USD": "0.8580",
+      "diagnostic": {
+        "cause_type": "ValueError",
+        "reported_usage_NOT_settlement": {
+          "input_tokens": 4684,
+          "output_tokens": 10
+        },
+        "response_shape": {
+          "no_arbitrary_response_text_or_key_values_retained": true,
+          "output": [
+            {
+              "content": [
+                {
+                  "application_shape": {
+                    "known_keys": [
+                      "action",
+                      "person_id"
+                    ],
+                    "known_value_types": {
+                      "action": "str",
+                      "person_id": "NoneType"
+                    },
+                    "other_key_count": 0,
+                    "type": "dict"
+                  },
+                  "shape": {
+                    "known_keys": [
+                      "text",
+                      "type"
+                    ],
+                    "known_value_types": {
+                      "text": "str",
+                      "type": "str"
+                    },
+                    "other_key_count": 0,
+                    "type": "dict"
+                  },
+                  "tool": "unrecognized",
+                  "type": "output_text"
+                }
+              ],
+              "content_count": 1,
+              "content_type": "list",
+              "role": "assistant",
+              "shape": {
+                "known_keys": [
+                  "content",
+                  "role",
+                  "type"
+                ],
+                "known_value_types": {
+                  "content": "list",
+                  "role": "str",
+                  "type": "str"
+                },
+                "other_key_count": 0,
+                "type": "dict"
+              },
+              "type": "message"
+            }
+          ],
+          "output_count": 1,
+          "output_type": "list",
+          "root": {
+            "known_keys": [
+              "error",
+              "id",
+              "incomplete_details",
+              "model",
+              "output",
+              "service_tier",
+              "status",
+              "usage"
+            ],
+            "known_value_types": {
+              "error": "NoneType",
+              "id": "str",
+              "incomplete_details": "NoneType",
+              "model": "str",
+              "output": "list",
+              "service_tier": "str",
+              "status": "str",
+              "usage": "dict"
+            },
+            "other_key_count": 0,
+            "type": "dict"
+          }
+        },
+        "returned_model_matches": false,
+        "service_tier": "default",
+        "status": "completed",
+        "validation_stage": "response_envelope",
+        "validator_frames": [
+          {
+            "file": "response_diagnosis.py",
+            "function": "at_stage",
+            "line": 35
+          },
+          {
+            "file": "admission.py",
+            "function": "envelope",
+            "line": 139
+          },
+          {
+            "file": "contracts.py",
+            "function": "require",
+            "line": 33
+          }
+        ]
+      }
+    },
+    {
+      "synthetic_stage": "output_items",
+      "child_returncode": 0,
+      "state_after_child_exit": "unknown",
+      "reserved_USD": "0.8580",
+      "diagnostic": {
+        "cause_type": "ValueError",
+        "reported_usage_NOT_settlement": {
+          "input_tokens": 4684,
+          "output_tokens": 10
+        },
+        "response_shape": {
+          "no_arbitrary_response_text_or_key_values_retained": true,
+          "output": [
+            {
+              "content_type": "NoneType",
+              "role": "unrecognized",
+              "shape": {
+                "known_keys": [
+                  "summary",
+                  "type"
+                ],
+                "known_value_types": {
+                  "summary": "list",
+                  "type": "str"
+                },
+                "other_key_count": 0,
+                "type": "dict"
+              },
+              "type": "reasoning"
+            },
+            {
+              "content": [
+                {
+                  "application_shape": {
+                    "known_keys": [
+                      "action",
+                      "person_id"
+                    ],
+                    "known_value_types": {
+                      "action": "str",
+                      "person_id": "NoneType"
+                    },
+                    "other_key_count": 0,
+                    "type": "dict"
+                  },
+                  "shape": {
+                    "known_keys": [
+                      "text",
+                      "type"
+                    ],
+                    "known_value_types": {
+                      "text": "str",
+                      "type": "str"
+                    },
+                    "other_key_count": 0,
+                    "type": "dict"
+                  },
+                  "tool": "unrecognized",
+                  "type": "output_text"
+                }
+              ],
+              "content_count": 1,
+              "content_type": "list",
+              "role": "assistant",
+              "shape": {
+                "known_keys": [
+                  "content",
+                  "role",
+                  "type"
+                ],
+                "known_value_types": {
+                  "content": "list",
+                  "role": "str",
+                  "type": "str"
+                },
+                "other_key_count": 0,
+                "type": "dict"
+              },
+              "type": "message"
+            }
+          ],
+          "output_count": 2,
+          "output_type": "list",
+          "root": {
+            "known_keys": [
+              "error",
+              "id",
+              "incomplete_details",
+              "model",
+              "output",
+              "service_tier",
+              "status",
+              "usage"
+            ],
+            "known_value_types": {
+              "error": "NoneType",
+              "id": "str",
+              "incomplete_details": "NoneType",
+              "model": "str",
+              "output": "list",
+              "service_tier": "str",
+              "status": "str",
+              "usage": "dict"
+            },
+            "other_key_count": 0,
+            "type": "dict"
+          }
+        },
+        "returned_model_matches": true,
+        "service_tier": "default",
+        "status": "completed",
+        "validation_stage": "output_items",
+        "validator_frames": [
+          {
+            "file": "response_diagnosis.py",
+            "function": "at_stage",
+            "line": 35
+          },
+          {
+            "file": "admission.py",
+            "function": "message",
+            "line": 145
+          },
+          {
+            "file": "contracts.py",
+            "function": "require",
+            "line": 33
+          }
+        ]
+      }
+    },
+    {
+      "synthetic_stage": "output_content",
+      "child_returncode": 0,
+      "state_after_child_exit": "unknown",
+      "reserved_USD": "0.8580",
+      "diagnostic": {
+        "cause_type": "ValueError",
+        "reported_usage_NOT_settlement": {
+          "input_tokens": 4684,
+          "output_tokens": 10
+        },
+        "response_shape": {
+          "no_arbitrary_response_text_or_key_values_retained": true,
+          "output": [
+            {
+              "content": [
+                {
+                  "shape": {
+                    "known_keys": [
+                      "refusal",
+                      "type"
+                    ],
+                    "known_value_types": {
+                      "refusal": "str",
+                      "type": "str"
+                    },
+                    "other_key_count": 0,
+                    "type": "dict"
+                  },
+                  "type": "refusal"
+                }
+              ],
+              "content_count": 1,
+              "content_type": "list",
+              "role": "assistant",
+              "shape": {
+                "known_keys": [
+                  "content",
+                  "role",
+                  "type"
+                ],
+                "known_value_types": {
+                  "content": "list",
+                  "role": "str",
+                  "type": "str"
+                },
+                "other_key_count": 0,
+                "type": "dict"
+              },
+              "type": "message"
+            }
+          ],
+          "output_count": 1,
+          "output_type": "list",
+          "root": {
+            "known_keys": [
+              "error",
+              "id",
+              "incomplete_details",
+              "model",
+              "output",
+              "service_tier",
+              "status",
+              "usage"
+            ],
+            "known_value_types": {
+              "error": "NoneType",
+              "id": "str",
+              "incomplete_details": "NoneType",
+              "model": "str",
+              "output": "list",
+              "service_tier": "str",
+              "status": "str",
+              "usage": "dict"
+            },
+            "other_key_count": 0,
+            "type": "dict"
+          }
+        },
+        "returned_model_matches": true,
+        "service_tier": "default",
+        "status": "completed",
+        "validation_stage": "output_content",
+        "validator_frames": [
+          {
+            "file": "response_diagnosis.py",
+            "function": "at_stage",
+            "line": 35
+          },
+          {
+            "file": "admission.py",
+            "function": "output_text",
+            "line": 150
+          },
+          {
+            "file": "contracts.py",
+            "function": "require",
+            "line": 33
+          }
+        ]
+      }
+    },
+    {
+      "synthetic_stage": "usage",
+      "child_returncode": 0,
+      "state_after_child_exit": "unknown",
+      "reserved_USD": "0.8580",
+      "diagnostic": {
+        "cause_type": "ValueError",
+        "reported_usage_NOT_settlement": {
+          "input_tokens": 4684,
+          "output_tokens": 1025
+        },
+        "response_shape": {
+          "no_arbitrary_response_text_or_key_values_retained": true,
+          "output": [
+            {
+              "content": [
+                {
+                  "application_shape": {
+                    "known_keys": [
+                      "action",
+                      "person_id"
+                    ],
+                    "known_value_types": {
+                      "action": "str",
+                      "person_id": "NoneType"
+                    },
+                    "other_key_count": 0,
+                    "type": "dict"
+                  },
+                  "shape": {
+                    "known_keys": [
+                      "text",
+                      "type"
+                    ],
+                    "known_value_types": {
+                      "text": "str",
+                      "type": "str"
+                    },
+                    "other_key_count": 0,
+                    "type": "dict"
+                  },
+                  "tool": "unrecognized",
+                  "type": "output_text"
+                }
+              ],
+              "content_count": 1,
+              "content_type": "list",
+              "role": "assistant",
+              "shape": {
+                "known_keys": [
+                  "content",
+                  "role",
+                  "type"
+                ],
+                "known_value_types": {
+                  "content": "list",
+                  "role": "str",
+                  "type": "str"
+                },
+                "other_key_count": 0,
+                "type": "dict"
+              },
+              "type": "message"
+            }
+          ],
+          "output_count": 1,
+          "output_type": "list",
+          "root": {
+            "known_keys": [
+              "error",
+              "id",
+              "incomplete_details",
+              "model",
+              "output",
+              "service_tier",
+              "status",
+              "usage"
+            ],
+            "known_value_types": {
+              "error": "NoneType",
+              "id": "str",
+              "incomplete_details": "NoneType",
+              "model": "str",
+              "output": "list",
+              "service_tier": "str",
+              "status": "str",
+              "usage": "dict"
+            },
+            "other_key_count": 0,
+            "type": "dict"
+          }
+        },
+        "returned_model_matches": true,
+        "service_tier": "default",
+        "status": "completed",
+        "validation_stage": "usage",
+        "validator_frames": [
+          {
+            "file": "response_diagnosis.py",
+            "function": "at_stage",
+            "line": 35
+          },
+          {
+            "file": "admission.py",
+            "function": "usage",
+            "line": 156
+          },
+          {
+            "file": "contracts.py",
+            "function": "require",
+            "line": 33
+          }
+        ]
+      }
+    },
+    {
+      "synthetic_stage": "application_json",
+      "child_returncode": 0,
+      "state_after_child_exit": "unknown",
+      "reserved_USD": "0.8580",
+      "diagnostic": {
+        "cause_type": "JSONDecodeError",
+        "reported_usage_NOT_settlement": {
+          "input_tokens": 4684,
+          "output_tokens": 10
+        },
+        "response_shape": {
+          "no_arbitrary_response_text_or_key_values_retained": true,
+          "output": [
+            {
+              "content": [
+                {
+                  "application_parse_error_type": "JSONDecodeError",
+                  "shape": {
+                    "known_keys": [
+                      "text",
+                      "type"
+                    ],
+                    "known_value_types": {
+                      "text": "str",
+                      "type": "str"
+                    },
+                    "other_key_count": 0,
+                    "type": "dict"
+                  },
+                  "type": "output_text"
+                }
+              ],
+              "content_count": 1,
+              "content_type": "list",
+              "role": "assistant",
+              "shape": {
+                "known_keys": [
+                  "content",
+                  "role",
+                  "type"
+                ],
+                "known_value_types": {
+                  "content": "list",
+                  "role": "str",
+                  "type": "str"
+                },
+                "other_key_count": 0,
+                "type": "dict"
+              },
+              "type": "message"
+            }
+          ],
+          "output_count": 1,
+          "output_type": "list",
+          "root": {
+            "known_keys": [
+              "error",
+              "id",
+              "incomplete_details",
+              "model",
+              "output",
+              "service_tier",
+              "status",
+              "usage"
+            ],
+            "known_value_types": {
+              "error": "NoneType",
+              "id": "str",
+              "incomplete_details": "NoneType",
+              "model": "str",
+              "output": "list",
+              "service_tier": "str",
+              "status": "str",
+              "usage": "dict"
+            },
+            "other_key_count": 0,
+            "type": "dict"
+          }
+        },
+        "returned_model_matches": true,
+        "service_tier": "default",
+        "status": "completed",
+        "validation_stage": "application_json",
+        "validator_frames": [
+          {
+            "file": "response_diagnosis.py",
+            "function": "at_stage",
+            "line": 35
+          },
+          {
+            "file": "admission.py",
+            "function": "<lambda>",
+            "line": 160
+          },
+          {
+            "file": "contracts.py",
+            "function": "strict_json",
+            "line": 24
+          }
+        ]
+      }
+    },
+    {
+      "synthetic_stage": "application_validation",
+      "child_returncode": 0,
+      "state_after_child_exit": "unknown",
+      "reserved_USD": "0.8580",
+      "diagnostic": {
+        "cause_type": "ValueError",
+        "reported_usage_NOT_settlement": {
+          "input_tokens": 4684,
+          "output_tokens": 10
+        },
+        "response_shape": {
+          "no_arbitrary_response_text_or_key_values_retained": true,
+          "output": [
+            {
+              "content": [
+                {
+                  "application_shape": {
+                    "known_keys": [
+                      "action",
+                      "person_id"
+                    ],
+                    "known_value_types": {
+                      "action": "str",
+                      "person_id": "NoneType"
+                    },
+                    "other_key_count": 1,
+                    "type": "dict"
+                  },
+                  "shape": {
+                    "known_keys": [
+                      "text",
+                      "type"
+                    ],
+                    "known_value_types": {
+                      "text": "str",
+                      "type": "str"
+                    },
+                    "other_key_count": 0,
+                    "type": "dict"
+                  },
+                  "tool": "unrecognized",
+                  "type": "output_text"
+                }
+              ],
+              "content_count": 1,
+              "content_type": "list",
+              "role": "assistant",
+              "shape": {
+                "known_keys": [
+                  "content",
+                  "role",
+                  "type"
+                ],
+                "known_value_types": {
+                  "content": "list",
+                  "role": "str",
+                  "type": "str"
+                },
+                "other_key_count": 0,
+                "type": "dict"
+              },
+              "type": "message"
+            }
+          ],
+          "output_count": 1,
+          "output_type": "list",
+          "root": {
+            "known_keys": [
+              "error",
+              "id",
+              "incomplete_details",
+              "model",
+              "output",
+              "service_tier",
+              "status",
+              "usage"
+            ],
+            "known_value_types": {
+              "error": "NoneType",
+              "id": "str",
+              "incomplete_details": "NoneType",
+              "model": "str",
+              "output": "list",
+              "service_tier": "str",
+              "status": "str",
+              "usage": "dict"
+            },
+            "other_key_count": 0,
+            "type": "dict"
+          }
+        },
+        "returned_model_matches": true,
+        "service_tier": "default",
+        "status": "completed",
+        "validation_stage": "application_validation",
+        "validator_frames": [
+          {
+            "file": "response_diagnosis.py",
+            "function": "at_stage",
+            "line": 35
+          },
+          {
+            "file": "admission.py",
+            "function": "<lambda>",
+            "line": 161
+          },
+          {
+            "file": "mini_request.py",
+            "function": "validate_output",
+            "line": 57
+          },
+          {
+            "file": "contracts.py",
+            "function": "require",
+            "line": 33
+          }
+        ]
+      }
+    }
+  ],
+  "observations_are_actual_test_results_NOT_actual_model_response_reconstructions": true,
+  "new_recovery_authorization": null,
+  "provider_recovery_dispatcher_enabled": false,
+  "recovery_test_prior_unknown_USD": ".858000",
+  "recovery_test_second_unknown_total_USD": "1.716000",
+  "old_results_checkpoint_closed_ledger_hashes_unchanged": true,
+  "both_local_reports_exact": true,
+  "new_paid_model_calls": 0,
+  "new_formal_ledgers": 0,
+  "key_reads": 0,
+  "GPU_jobs": 0
+}

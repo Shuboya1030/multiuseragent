@@ -324,7 +324,7 @@ class DurableTests(unittest.TestCase):
             return data
         ledger = self.ledger()
         provider = MockProvider(self.plan, duplicate_arguments)
-        with self.assertRaisesRegex(ValueError, "Duplicate JSON"):
+        with self.assertRaisesRegex(ValueError, "application_validation"):
             ledger.call("ep-0", "ordinary", 0, ordinary, provider)
         self.assertEqual(ledger.status()["unknown"], 1)
 

@@ -11,6 +11,8 @@ from .contracts import canonical, fingerprint, require, strict_json
 from .executor import PROTOCOL, parse_tool
 from .mini_request import MODEL, build_provider_request, build_request, validate_output
 from .provider_bound import MODEL_MAXIMUM_BOUND, uses_model_maximum
+from .response_diagnosis import at_stage
+from .recovery_guard import validate_recovery
 
 PRICE = {
     "model": MODEL, "input_per_million_USD": "0.75", "output_per_million_USD": "4.50",
@@ -20,7 +22,8 @@ PRICE = {
 SOURCE_FILES = ("admission.py", "durable.py", "http_transport.py", "mini_request.py",
                 "contracts.py", "executor.py", "oracle.py", "npc_rule.py", "budget.py", "provider_bound.py",
                 "configs/provider_model_maximum_bound_v1.json", "paid_driver.py", "runtime.py",
-                "scheduler.py", "benchmark.py", "configs/ceiling_pilot.json")
+                "scheduler.py", "benchmark.py", "configs/ceiling_pilot.json", "response_diagnosis.py",
+                "recovery_guard.py")
 
 
 def runtime_binding():
@@ -39,7 +42,7 @@ def root_binding(path):
 def pending_plan():
     caps = asdict(CallCaps(input_tokens=MODEL_MAXIMUM_BOUND["input_tokens"]))
     return {
-        "schema": "study4-v2-durable-preflight-2", "run_id": "study4-v2-ceiling-PENDING",
+        "schema": "study4-v2-durable-preflight-3", "run_id": "study4-v2-ceiling-PENDING",
         "mode": "provider", "endpoint": "https://api.openai.com/v1/responses",
         "budget_cap_USD": None, "episodes": [], "runtime": runtime_binding(),
         "price": PRICE.copy(), "caps": caps,
@@ -85,6 +88,7 @@ def validate_binding(plan, approval, root, endpoint, now=None):
     else:
         require(plan["mode"] == "provider" and approval["scope"] == "STUDY4_V2_INDEPENDENT_PAID",
                 "Paid scope mismatch")
+    validate_recovery(plan, approval)
     token_bound(b"{}", plan)
     return caps
 
@@ -127,23 +131,34 @@ def prepare_request(request, operation, plan):
 
 
 def decode_response(raw, operation, observation, assistance, plan, input_bound):
-    response = strict_json(raw)
-    if uses_model_maximum(plan):
-        require(response.get("service_tier") == "default", "Actual service tier drift; stop, not standard settlement")
-    require(response["model"] == MODEL and response["status"] == "completed" and
-            response.get("error") is None and response.get("incomplete_details") is None and
-            isinstance(response["id"], str) and response["id"], "Incomplete/model-drift response")
-    output = response["output"]
-    require(isinstance(output, list) and len(output) == 1 and output[0]["type"] == "message" and
-            output[0]["role"] == "assistant", "Foreign/multiple/tool response")
-    content = output[0]["content"]
-    require(isinstance(content, list) and len(content) == 1 and content[0]["type"] == "output_text" and
-            isinstance(content[0]["text"], str), "Incomplete/refused/foreign output")
-    usage = response["usage"]
-    incoming, outgoing = usage["input_tokens"], usage["output_tokens"]
-    require(type(incoming) is int and type(outgoing) is int and 0 <= incoming <= input_bound and
-            0 <= outgoing <= plan["caps"]["output_tokens"], "Usage missing/invalid/above reservation")
-    data = validate_output(operation, strict_json(content[0]["text"]), observation, assistance)
+    response = at_stage("response_json", lambda: strict_json(raw))
+    def envelope():
+        require(isinstance(response, dict), "Response root must be object")
+        if uses_model_maximum(plan):
+            require(response.get("service_tier") == "default", "Actual service tier drift")
+        require(response["model"] == MODEL and response["status"] == "completed" and
+                response.get("error") is None and response.get("incomplete_details") is None and
+                isinstance(response["id"], str) and response["id"], "Incomplete/model-drift response")
+        return response["output"]
+    output = at_stage("response_envelope", envelope)
+    def message():
+        require(isinstance(output, list) and len(output) == 1 and output[0]["type"] == "message" and
+                output[0]["role"] == "assistant", "Foreign/multiple/tool response")
+        return output[0]["content"]
+    content = at_stage("output_items", message)
+    def output_text():
+        require(isinstance(content, list) and len(content) == 1 and content[0]["type"] == "output_text" and
+                isinstance(content[0]["text"], str), "Incomplete/refused/foreign output")
+        return content[0]["text"]
+    text = at_stage("output_content", output_text)
+    def usage():
+        incoming, outgoing = response["usage"]["input_tokens"], response["usage"]["output_tokens"]
+        require(type(incoming) is int and type(outgoing) is int and 0 <= incoming <= input_bound and
+                0 <= outgoing <= plan["caps"]["output_tokens"], "Usage missing/invalid/above reservation")
+        return incoming, outgoing
+    incoming, outgoing = at_stage("usage", usage)
+    parsed = at_stage("application_json", lambda: strict_json(text))
+    data = at_stage("application_validation", lambda: validate_output(operation, parsed, observation, assistance))
     return {"data": data, "usage": {"input_tokens": incoming, "output_tokens": outgoing},
             "response_id": response["id"], "model": response["model"]}
 
