@@ -8,6 +8,10 @@
 随后用户已明确要求执行到Phase 0答案：[正式执行合同与预算边界](PHASE0_FORMAL_PROTOCOL_20261112_ZH.md)。
 正式scope为720 episodes且共用原累计USD50；无新训练/RL/GPU授权，不以mock验收当结果。
 
+**最新actual：[25/720覆盖、六完整块、HTTP429及协议2零API修复](reports/PHASE0_ACTUAL_STOP_AND_REPAIR_ZH.md)。**
+原协议1已停；新unknown.858与旧3.432均保留，合计占帽8.252225025/50。
+新版修复历史重复与相同内容write失效，未真实运行；正式训练门未判，provider恢复显式pending。
+
 ## 历史工程状态与证据
 
 **最新：controller二态职责修复已零API验收，只有SELF/ASK；提交仅由ordinary executor产生。**

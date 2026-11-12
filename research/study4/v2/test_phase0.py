@@ -12,7 +12,8 @@ from .budget import BudgetBlocked
 from .contracts import Tool, canonical, fingerprint
 from .durable import BatchLock, DurableLedger
 from .phase0 import (Phase0Mini, Phase0Runtime, SOURCE, build_request, episode,
-                     load_case, npc_system, public_what, schedule, score_record, verify_inherited, VERSION)
+                     history_events, load_case, npc_system, public_sources, public_what,
+                     restore_public_state, schedule, score_record, verify_inherited, VERSION)
 from .phase0_admission import decode_response, make_plan
 from .paid_driver import Journal
 
@@ -228,6 +229,109 @@ class Phase0Tests(unittest.TestCase):
             case = load_case(tid)
             self.assertEqual(len([s for s in slots if s["task_id"] == tid]), 12)
             self.assertEqual(set(case.scenarios), {p.person_id for p in case.public.people})
+
+    def test_long_dialogue_has_one_event_projection_and_no_requoted_source_history(self):
+        runtime = Phase0Runtime(self.case, "growth")
+        mini = Phase0Mini(None, None, {"episode_id": "growth"}, None)
+        known, quoted_count, previous_size = set(), 0, None
+        marker = "\nPublic read-source index (quoted mentions, not new grants):\n"
+        for index in range(28):
+            mid = f"growth:contact:{index}:out"
+            runtime._event("control_decision", action="ASK", person_id="Chen Xinyi")
+            runtime._event("send_message", message_id=mid, person_id="Chen Xinyi",
+                           content="Please confirm the current request.")
+            runtime._event("read_messages", message_id=mid.removesuffix(":out") + ":reply",
+                           in_reply_to=mid, person_id="Chen Xinyi",
+                           content="ID HR-22 is pending, not an approval. Amount 17." if index < 14 else
+                                   "ID HR-22 is approved for amount 23, not amount 17.")
+            function = {"type": "function_call", "name": "ask_colleague", "call_id": str(index),
+                        "arguments": canonical({"person_id": "Chen Xinyi", "question": "Please confirm."})}
+            mini.receipt({"native_function": {"output_items": [function], "call_id": str(index)}},
+                         runtime, {"status": "sent_and_read"})
+            current = runtime.observe()
+            request = build_request("native", current, history=mini.history)
+            body = json.loads(request["input"][-1]["content"])
+            self.assertEqual(body["state"]["history"], [])
+            self.assertEqual(history_events(mini.history), runtime.history)
+            self.assertEqual(canonical(restore_public_state(body["state"], mini.history)), canonical(current))
+            self.assertEqual(len(history_events(mini.history)), 3 * (index + 1))
+            prepare_request(request, "ordinary", self.template)
+            question = public_what(current, "Please confirm.", known)
+            appendix = json.loads(question.partition(marker)[2])
+            quoted_count += len(appendix["new_sources"])
+            known.update(s["source_id"] for s in public_sources(current))
+            self.assertLessEqual(len(appendix["quoted_values"]), 3)
+            if index >= 14:
+                self.assertEqual({v["literal"] for v in appendix["quoted_values"]}, {"HR-22", "17", "23"})
+            if previous_size is not None:
+                self.assertLess(len(canonical(request).encode()) - previous_size, 2000)
+            previous_size = len(canonical(request).encode())
+        self.assertEqual(quoted_count, 28)
+        self.assertEqual(len(public_sources(runtime.observe())), 28)
+        self.assertNotIn("not an approval", question)
+        self.assertIn("not an approval", canonical(mini.history))
+        self.assertIn("not amount 17", canonical(mini.history))
+        duplicated = deepcopy(body["state"])
+        duplicated["history"] = deepcopy(runtime.history)
+        with self.assertRaises(ValueError):
+            restore_public_state(duplicated, mini.history)
+
+    def test_identical_approval_words_do_not_merge_different_request_contexts(self):
+        runtime = Phase0Runtime(self.case, "contexts")
+        for index, amount in enumerate((17, 23)):
+            mid = f"contexts:contact:{index}:out"
+            runtime._event("send_message", message_id=mid, person_id="Chen Xinyi",
+                           content=f"Please approve amount {amount}.")
+            runtime._event("read_messages", message_id=mid + ":reply", in_reply_to=mid,
+                           person_id="Chen Xinyi", content="Approved.")
+        sources = public_sources(runtime.observe())
+        self.assertEqual(len(sources), 2)
+        self.assertNotEqual(sources[0]["request_context_not_confirmation"],
+                            sources[1]["request_context_not_confirmation"])
+        self.assertEqual(len(public_sources({"history": runtime.history + [runtime.history[-1]]})), 2)
+
+    def test_agent_draft_is_not_a_confirmed_public_what_source(self):
+        runtime = Phase0Runtime(self.case, "draft")
+        runtime.workspace[runtime.task.artifact_path] = '{"calculated_total":7317}'
+        self.assertEqual(public_what(runtime.observe(), "Please confirm."), "Please confirm.")
+
+    def test_identical_write_keeps_post_valid_but_changed_content_needs_post(self):
+        runtime = Phase0Runtime(self.case, "rewrite")
+        path = runtime.task.artifact_path
+        content = canonical({key: 0 for key in runtime.task.output_fields})
+        write = Tool("write_file", (("content", content), ("path", path)))
+        post = Tool("post_channel", (("channel", runtime.task.channel), ("content", "Prepared " + path)))
+        runtime._normal(write)
+        runtime._normal(post)
+        for _ in range(6):
+            runtime._normal(write)
+        self.assertEqual(runtime.artifact_revision, 1)
+        self.assertEqual(runtime.normal_actions, 8)
+        self.assertEqual(sum(e["kind"] == "write_file" for e in runtime.history), 7)
+        self.assertTrue(runtime.progress()["posted_current_revision"])
+        runtime._normal(Tool("submit", (("answer", "Delivered"),)))
+        self.assertTrue(runtime.progress()["bridge_submitted"])
+        self.assertIsNone(runtime.progress()["business_success"])
+        changed = Phase0Runtime(self.case, "changed")
+        changed._normal(write)
+        changed._normal(post)
+        changed._normal(Tool("write_file", (("content", content + "\n"), ("path", path))))
+        self.assertEqual(changed.artifact_revision, 2)
+        changed._normal(Tool("submit", (("answer", "Delivered"),)))
+        self.assertFalse(changed.progress()["bridge_submitted"])
+        self.assertEqual(changed.history[-1]["kind"], "submission_blocked")
+        changed._normal(post)
+        changed._normal(Tool("submit", (("answer", "Delivered"),)))
+        self.assertTrue(changed.progress()["bridge_submitted"])
+
+    def test_new_provider_protocol_is_pending_not_a_reuse_of_old_paid_authority(self):
+        with self.assertRaises(BudgetBlocked):
+            make_plan([], {"unknown_held_USD": "0", "settled_USD_upper": "0"})
+        with tempfile.TemporaryDirectory() as directory:
+            plan = deepcopy(self.template)
+            plan["mode"] = "provider"
+            with self.assertRaises(BudgetBlocked):
+                validate_binding(plan, self.authority(Path(directory), plan), Path(directory), plan["endpoint"])
 
     def test_historical_lock_hashes_checked_before_and_after_not_while_exclusively_locked(self):
         import sqlite3

@@ -13,6 +13,7 @@ from .native_protocol import BOUND, one_function
 from .oracle import validate_public_observation
 from .phase0 import (ARCHIVES, MAX_ACTIONS, NPC_PUBLISHED_SOURCE_SHA, OPERATION_LIMITS, SOURCE, VERSION, VENDOR,
                      build_request, load_case, npc_system, schedule)
+from .phase0 import restore_public_state
 from .response_diagnosis import at_stage
 
 PRICE = {"model": MODEL, "input_per_million_USD": "0.75", "output_per_million_USD": "4.50",
@@ -34,14 +35,16 @@ def runtime_binding():
 
 
 def make_plan(history, inherited, *, local_test=False):
+    if not local_test:
+        raise BudgetBlocked("Version2 paid recovery needs new authority and all stopped Phase0 exposure")
     slots = schedule()
     systems = set()
     for tid in {s["task_id"] for s in slots}:
         case = load_case(tid)
         systems.update(hashlib.sha256(npc_system(person, scenario).encode()).hexdigest()
                        for person, scenario in case.scenarios.items())
-    return {"schema": VERSION, "phase0_protocol": VERSION, "run_id": "study4-formal-phase0-20261112-v2",
-            "mode": "local_test" if local_test else "provider",
+    return {"schema": VERSION, "phase0_protocol": VERSION, "run_id": "study4-formal-phase0-protocol2-PENDING",
+            "mode": "local_test",
             "endpoint": "http://127.0.0.1:9/v1/responses" if local_test else "https://api.openai.com/v1/responses",
             "budget_cap_USD": "50.00", "runtime": runtime_binding(), "price": deepcopy(PRICE),
             "token_bound": deepcopy(BOUND), "caps": asdict(CallCaps(input_tokens=272000, output_tokens=2048)),
@@ -70,6 +73,8 @@ def make_plan(history, inherited, *, local_test=False):
 def validate_binding(plan, approval, root, endpoint, now=None):
     if plan.get("budget_cap_USD") is None or approval is None:
         raise BudgetBlocked("No matching Phase0 authority; no key/file/network")
+    if plan.get("mode") != "local_test":
+        raise BudgetBlocked("Version2 provider recovery remains explicitly pending")
     from .http_transport import validate_endpoint
     validate_endpoint(endpoint, plan["mode"])
     require(plan["phase0_protocol"] == VERSION and plan["schema"] == VERSION and
@@ -152,13 +157,16 @@ def prepare_request(request, operation, plan):
     else:
         require(isinstance(request["input"], list) and len(request["input"]) >= 2, "Explicit public state")
         body = strict_json(request["input"][-1]["content"])
-        require(set(body) == {"protocol", "mode", "state", "person_id"} and body["protocol"] == VERSION,
+        require(set(body) == {"protocol", "mode", "state", "person_id", "history_representation"} and
+                body["protocol"] == VERSION and
+                body["history_representation"] == "native_receipt_events_then_state_tail",
                 "Only formal public request body")
-        observation, mode = body["state"], body["mode"]
+        mode = body["mode"]
         require(mode in ({"question"} if operation == "question" else {"native", "ordinary"}), "Operation mismatch")
-        public_state(observation)
         history = request["input"][1:-1]
         validate_history(history)
+        observation = restore_public_state(body["state"], history)
+        public_state(observation)
         expected = build_request(mode, observation, person=body["person_id"], history=history)
         context = {"mode": mode, "person_id": body["person_id"]}
     require(request == expected, "Exact formal wire/domain/functions/schema required")

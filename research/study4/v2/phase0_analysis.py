@@ -74,7 +74,10 @@ def analyze(root, reviews=None):
                              for r, s in zip(eligible, values)]),
                          "Nauth": mean([s["errors"]["n_auth"] for s in values]),
                          "Nwaste": mean([s["errors"]["n_waste"] for s in values]),
-                         "content_pass": sum(s["base_pass"] is True for s in values),
+                         "content_full_match": sum(
+                             s["artifact"].get("artifact_correct", s["artifact"]["field_accuracy"] == 1)
+                             is True for s in values),
+                         "official_base_pass": sum(s["base_pass"] is True for s in values),
                          "delivery": sum(r["progress"]["user_delivery_complete"] for r in own),
                          "submit": sum(r["progress"]["bridge_submitted"] for r in own),
                          "ASK_episode_rate": mean([int(r["score"]["process"]["n_asks"] > 0) for r in own]),
@@ -102,7 +105,8 @@ def analyze(root, reviews=None):
     gate = None
     if complete_coverage:
         gate = any(contrasts[name]["mean_R_difference"] >= .10 for name in ("B-A", "D-A"))
-    return {"schema": "study4-formal-phase0-analysis-1", "complete_episodes": len(rows),
+    return {"schema": "study4-formal-phase0-analysis-2", "record_protocol": plan["phase0_protocol"],
+            "complete_episodes": len(rows),
             "expected_episodes": 720, "missing_slots": [
                 s for s in plan["slots"] if s["episode_id"] not in {r["slot"]["episode_id"] for r in rows}],
             "full_coverage_and_evidence_resolved": complete_coverage,

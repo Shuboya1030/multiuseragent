@@ -20,7 +20,7 @@ from .native_protocol import DESCRIPTIONS
 from .paid_driver import Journal, write_new
 from .runtime import SharedRuntime
 
-VERSION = "study4-formal-phase0-native-llmnpc-1"
+VERSION = "study4-formal-phase0-native-llmnpc-2"
 SOURCE = {"id": "4c1b3c37-82a7-4bc1-9a98-5ad166882657", "revision": 5}
 ARCHIVES = Path(__file__).parents[2] / "study2" / "results" / "r1_2026_11_02" / "archives"
 NPC_SOURCE = "implementations/07e7b828063a63dccaf3bffc9f678c1c1f8608bae2e64b159b49cacdbc994744.py"
@@ -101,20 +101,70 @@ def npc_system(person, scenario):
             + scenario["extra_info"] + "\n" + scenario["strategy_hint"] + "\n" + npc_policy())
 
 
-def public_what(observation, question):
-    """Keep verbatim qualifications alongside tokens; no gold or private object is accepted."""
-    sources = []
+def public_sources(observation):
+    sources, seen = [], {}
+    outgoing = {e["message_id"]: e for e in observation["history"] if e["kind"] == "send_message"}
     for event in observation["history"]:
         if event["kind"] != "read_messages":
             continue
+        identity = event["message_id"]
+        binding = fingerprint([event["person_id"], event.get("in_reply_to"), event["content"]])
+        if identity in seen:
+            require(seen[identity] == binding, "Public source message identity changed")
+            continue
+        seen[identity] = binding
+        request = outgoing.get(event.get("in_reply_to"))
+        request_context = (request["content"].partition(
+            "\nPublic read-source index (quoted mentions, not new grants):\n")[0] if request else None)
         tokens = re.findall(r"\b[A-Za-z][A-Za-z0-9_.]*[-_][A-Za-z0-9_.-]+\b|\b\d[\d,.:/-]*\b",
                             event["content"])
-        sources.append({"message_id": event["message_id"], "person_id": event["person_id"],
+        sources.append({"source_id": "S" + str(len(sources)), "message_id": event["message_id"],
+                        "person_id": event["person_id"],
+                        "request_message_id": event.get("in_reply_to"),
+                        "request_context_not_confirmation": request_context,
+                        "request_sha256": (hashlib.sha256(request["content"].encode()).hexdigest()
+                                           if request else None),
                         "observed_tokens": list(dict.fromkeys(tokens)),
                         "verbatim_statement_not_new_authorization": event["content"]})
+    return sources
+
+
+def public_what(observation, question, known_sources=()):
+    """Quote each source once per recipient; mentions never certify facts or grants."""
+    sources = public_sources(observation)
     if not sources:
         return question
-    return question + "\nPreviously received statements (retain qualifications; not new grants):\n" + canonical(sources)
+    values = {}
+    for source in sources:
+        for token in source["observed_tokens"]:
+            values.setdefault(token, []).append(source["source_id"])
+    return question + "\nPublic read-source index (quoted mentions, not new grants):\n" + canonical({
+        "read_qualifications_in_cited_sources": True,
+        "source_refs": [s["source_id"] for s in sources],
+        "quoted_values": [{"literal": value, "sources": refs} for value, refs in values.items()],
+        "new_sources": [{k: v for k, v in s.items() if k != "observed_tokens"}
+                        for s in sources if s["source_id"] not in known_sources]})
+
+
+def history_events(history):
+    events = []
+    for item in history or []:
+        if item.get("type") == "function_call_output":
+            receipt = strict_json(item["output"])
+            require(isinstance(receipt, dict) and isinstance(receipt.get("events"), list),
+                    "Version2 receipts require explicit public events")
+            events.extend(deepcopy(receipt["events"]))
+    ids = [e["event_id"] for e in events]
+    require(len(ids) == len(set(ids)), "Public event represented more than once")
+    return events
+
+
+def restore_public_state(projected, history):
+    state = deepcopy(projected)
+    state["history"] = history_events(history) + state["history"]
+    ids = [e["event_id"] for e in state["history"]]
+    require(len(ids) == len(set(ids)), "State tail duplicates native receipt events")
+    return state
 
 
 def tool_functions(mode, observation, person=None):
@@ -222,9 +272,15 @@ def build_request(mode, observation=None, *, person=None, history=None, dialogue
     else:
         require(isinstance(observation, dict) and observation["protocol"] == VERSION and dialogue is None,
                 "Public Phase0 state required")
+        represented = history_events(history)
+        require(observation["history"][:len(represented)] == represented,
+                "Native receipts must match the complete public-history prefix")
+        projected = deepcopy(observation)
+        projected["history"] = projected["history"][len(represented):]
         messages = [{"role": "system", "content": AGENT_PROMPT}, *(deepcopy(history or [])),
                     {"role": "user", "content": canonical({
-                        "protocol": VERSION, "mode": mode, "state": observation, "person_id": person})}]
+                        "protocol": VERSION, "mode": mode, "state": projected, "person_id": person,
+                        "history_representation": "native_receipt_events_then_state_tail"})}]
         tools = tool_functions(mode, observation, person)
     request = {"model": MODEL, "reasoning": {"effort": "none"}, "max_output_tokens": 1024 if mode == "npc" else 2048,
                "input": messages, "tools": tools, "service_tier": "default", "context_management": None,
@@ -238,6 +294,7 @@ class Phase0Mini:
     def __init__(self, ledger, transport, slot, journal):
         self.ledger, self.transport, self.slot, self.journal = ledger, transport, slot, journal
         self.history, self.dialogues = [], {}
+        self.event_cursor, self.known_sources = 0, {}
         self.indices = {op: 0 for op in OPERATION_LIMITS}
 
     def call(self, mode, observation=None, person=None):
@@ -257,17 +314,18 @@ class Phase0Mini:
                              "operation": operation, "index": index, "result": result})
         return result
 
-    def receipt(self, result, public_output):
+    def receipt(self, result, runtime, public_output):
         function = result["native_function"]
         self.history.extend(deepcopy(function["output_items"]))
         self.history.append({"type": "function_call_output", "call_id": function["call_id"],
-                             "output": canonical(public_output)})
+                             "output": canonical({**public_output, "events": runtime.history[self.event_cursor:]})})
+        self.event_cursor = len(runtime.history)
 
     def ask(self, case, runtime, result, supplement):
         data = result["data"]
         person, question = data["arguments"]["person_id"], data["arguments"]["question"]
         if supplement:
-            question = public_what(runtime.observe(), question)
+            question = public_what(runtime.observe(), question, self.known_sources.get(person, set()))
         mid = f"{runtime.episode_id}:contact:{runtime.contacts}:out"
         runtime.contacts += 1
         runtime.cost += case.costs[person]
@@ -277,20 +335,22 @@ class Phase0Mini:
             self.dialogues[person] = [{"role": "system", "content": npc_system(person, case.scenarios[person])}]
         self.dialogues[person].append({"role": "user", "content": question})
         reply = self.call("npc", person=person)["data"]["text"]
+        if supplement:
+            self.known_sources.setdefault(person, set()).update(
+                source["source_id"] for source in public_sources(runtime.observe()))
         self.dialogues[person].append({"role": "assistant", "content": reply})
         message = {"message_id": mid.removesuffix(":out") + ":reply", "in_reply_to": mid,
                    "person_id": person, "content": reply}
         runtime._deliver(message)
-        self.receipt(result, {"status": "sent_and_read", "request_message_id": mid,
-                              "actual_sent_content": question, "reply": message,
+        self.receipt(result, runtime, {"status": "sent_and_read", "request_message_id": mid,
+                              "reply_message_id": message["message_id"],
                               "ordinary_action_required_next": True})
 
     def ordinary(self, runtime, result):
         data = result["data"]
         require(data["tool"] in FIELDS, "Only ordinary executor tools can perform task work/submit")
-        before = len(runtime.history)
         runtime._normal(parse_tool(canonical(data)))
-        self.receipt(result, {"events": runtime.history[before:], "progress": runtime.progress()})
+        self.receipt(result, runtime, {"progress": runtime.progress()})
 
 
 def export_events(runtime):

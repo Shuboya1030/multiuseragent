@@ -119,8 +119,9 @@ class SharedRuntime:
         args = dict(command.arguments)
         if command.name == "write_file":
             path = workspace_path(args["path"])
+            changed = self.workspace.get(path) != args["content"]
             self.workspace[path] = args["content"]
-            if path == self.task.artifact_path:
+            if path == self.task.artifact_path and changed:
                 self.artifact_revision += 1
             self._event("write_file", **args)
         elif command.name == "post_channel":
