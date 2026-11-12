@@ -180,7 +180,8 @@ class DurableLedger:
             outgoing = sum(r["output_tokens"] for r in rows) + output_bound
             operations = sum(r["episode"] == episode and r["operation"] == operation for r in rows)
             if (len(rows) >= self.plan["max_calls"] or incoming > self.plan["total_input_tokens"] or
-                    outgoing > self.plan["total_output_tokens"] or operations >= LocalBudget.LIMITS[operation] or
+                    outgoing > self.plan["total_output_tokens"] or
+                    operations >= self.plan.get("operation_limits", LocalBudget.LIMITS)[operation] or
                     Decimal(self.status()["occupied_USD_upper"]) + reservation > self.cap):
                 raise BudgetBlocked("Durable call/token/operation/USD cap reached before send")
             now = self.now()

@@ -40,7 +40,7 @@ def functions(operation):
              "parameters": deepcopy(schema), "strict": True} for name, schema in schemas.items()]
 
 
-def one_function(output, operation=None):
+def one_function(output, operation=None, *, allowed_names=None):
     require(isinstance(output, list), "Native output must be a list")
     calls = []
     for item in output:
@@ -65,8 +65,9 @@ def one_function(output, operation=None):
             require(False, "Unknown or hosted output tool forbidden")
     require(len(calls) == 1, "Exactly one executable function call required")
     call = calls[0]
-    allowed = set(TOOL_SCHEMA) | set(DECISIONS.values()) if operation is None else {
-        f["name"] for f in functions(operation)}
+    allowed = set(allowed_names) if allowed_names is not None else (
+        set(TOOL_SCHEMA) | set(DECISIONS.values()) if operation is None else {
+            f["name"] for f in functions(operation)})
     require(call.get("name") in allowed, "Unknown or wrong-operation function")
     return call
 

@@ -5,7 +5,8 @@
 正式Phase 0为60题×4臂×3、同LLM NPC、C/D仅公开历史what规则；
 本目录六题规则NPC/gold辅助what与人工intent grammar仅历史engineering smoke，不能过训练门。
 旧pilot的“待签差值门”不再是有效研究门，恢复用户平均R的B−A或D−A≥.10；
-本次只更新计划，不继续接口工程、真实验证或训练。
+随后用户已明确要求执行到Phase 0答案：[正式执行合同与预算边界](PHASE0_FORMAL_PROTOCOL_20261112_ZH.md)。
+正式scope为720 episodes且共用原累计USD50；无新训练/RL/GPU授权，不以mock验收当结果。
 
 ## 历史工程状态与证据
 

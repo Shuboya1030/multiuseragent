@@ -3,7 +3,8 @@
 **有效下一计划（2026-11-12）：[Phase 0、假设与条件训练对齐](STUDY4_ACTIVE_PLAN_ALIGNMENT_20261112.md)。**
 已按[用户新文档](PHASE0_ARMS_HYPOTHESES_TRAINING_20261112.md)纠偏：
 正式60题×4臂×3、同LLM NPC、公开what规则 → H1–H5判定 → 条件训练。
-当前正式Phase 0及新训练未开始；六题规则NPC实验仅历史engineering smoke，不是研究门通过。
+正式Phase 0现按[执行合同](v2/PHASE0_FORMAL_PROTOCOL_20261112_ZH.md)推进；
+实际结果以真实记录为准，新训练未开始。六题规则NPC实验仅历史engineering smoke，不是研究门通过。
 
 **下述为2026-11-10旧SFT87历史：训练已完成，但没有体现任务收益。**
 本目录包含研究报告，非完整可复跑训练包；原始数据、模型和请求未随旧发布上传。

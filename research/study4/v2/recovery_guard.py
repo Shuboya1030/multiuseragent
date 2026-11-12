@@ -6,6 +6,8 @@ from .contracts import fingerprint, require
 
 
 def prior_hold(plan):
+    if plan.get("phase0_protocol") is not None:
+        return Decimal(plan["inherited"]["unknown_held_USD"])
     if plan.get("native_recovery") is not None:
         from .native_driver import verify_history
         return verify_history(plan["native_recovery"]["history"])["held"]
@@ -56,6 +58,8 @@ def validate_recovery(plan, approval):
 
 
 def prior_settled(plan):
+    if plan.get("phase0_protocol") is not None:
+        return Decimal(plan["inherited"]["settled_USD_upper"])
     if plan.get("native_recovery") is not None:
         from .native_driver import verify_history
         return verify_history(plan["native_recovery"]["history"])["settled"]

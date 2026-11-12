@@ -60,6 +60,9 @@ def validate_binding(plan, approval, root, endpoint, now=None):
     """Executed before lock/file/socket creation. An approval record is not inferred from a cap."""
     if plan["budget_cap_USD"] is None or approval is None:
         raise BudgetBlocked("Independent budget approval pending; no file/network admission")
+    if plan.get("phase0_protocol") is not None:
+        from .phase0_admission import validate_binding as validate_phase0
+        return validate_phase0(plan, approval, root, endpoint, now)
     from .native_protocol import VERSION
     require(not (plan.get("native_protocol") == VERSION and plan["mode"] == "provider"),
             "Help-only protocol has no paid execution approval")
@@ -117,6 +120,9 @@ def token_bound(body, plan):
 
 
 def prepare_request(request, operation, plan):
+    if plan.get("phase0_protocol") is not None:
+        from .phase0_admission import prepare_request as prepare_phase0
+        return prepare_phase0(request, operation, plan)
     require(operation in {"control", "question", "ordinary"}, "Only scheduled mini operations")
     native = plan.get("native_protocol")
     if native is not None:
@@ -153,6 +159,9 @@ def prepare_request(request, operation, plan):
 
 
 def decode_response(raw, operation, observation, assistance, plan, input_bound):
+    if plan.get("phase0_protocol") is not None:
+        from .phase0_admission import decode_response as decode_phase0
+        return decode_phase0(raw, operation, observation, assistance, plan, input_bound)
     response = at_stage("response_json", lambda: strict_json(raw))
     def envelope():
         require(isinstance(response, dict), "Response root must be object")
