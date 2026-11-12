@@ -1,0 +1,866 @@
+{
+  "schema": "study4-ceiling50-offline-candidates-1",
+  "actual_response_body_recovered": false,
+  "actual_root_cause_identified": false,
+  "actual_request_used_read_only": true,
+  "actual_request_sha256": "977150bed8a4c3477abbee2fa260b5e782925770747b2cd2a626e91acbacd8c9",
+  "usage_numbers_reused_as_synthetic_inputs_not_actual_response_reconstruction": true,
+  "same_frozen_decoder_unchanged": true,
+  "new_model_HTTP_calls": 0,
+  "cases": {
+    "synthetic_baseline": {
+      "provenance": "SYNTHETIC-NOT-ACTUAL:synthetic_baseline",
+      "shape": {
+        "root": {
+          "type": "dict",
+          "known_keys": [
+            "error",
+            "id",
+            "incomplete_details",
+            "model",
+            "output",
+            "service_tier",
+            "status",
+            "usage"
+          ],
+          "other_key_count": 0,
+          "known_value_types": {
+            "error": "NoneType",
+            "id": "str",
+            "incomplete_details": "NoneType",
+            "model": "str",
+            "output": "list",
+            "service_tier": "str",
+            "status": "str",
+            "usage": "dict"
+          }
+        },
+        "output_type": "list",
+        "output_count": 1,
+        "output": [
+          {
+            "shape": {
+              "type": "dict",
+              "known_keys": [
+                "content",
+                "role",
+                "type"
+              ],
+              "other_key_count": 0,
+              "known_value_types": {
+                "content": "list",
+                "role": "str",
+                "type": "str"
+              }
+            },
+            "type": "message",
+            "role": "assistant",
+            "content_type": "list",
+            "content_count": 1,
+            "content": [
+              {
+                "shape": {
+                  "type": "dict",
+                  "known_keys": [
+                    "text",
+                    "type"
+                  ],
+                  "other_key_count": 0,
+                  "known_value_types": {
+                    "text": "str",
+                    "type": "str"
+                  }
+                },
+                "type": "output_text",
+                "application_shape": {
+                  "type": "dict",
+                  "known_keys": [
+                    "arguments",
+                    "tool"
+                  ],
+                  "other_key_count": 0,
+                  "known_value_types": {
+                    "arguments": "str",
+                    "tool": "str"
+                  }
+                },
+                "tool": "list_files",
+                "argument_shape": {
+                  "type": "dict",
+                  "known_keys": [],
+                  "other_key_count": 0,
+                  "known_value_types": {}
+                }
+              }
+            ]
+          }
+        ],
+        "no_arbitrary_response_text_or_key_values_retained": true
+      },
+      "accepted": true
+    },
+    "synthetic_top_id_type": {
+      "provenance": "SYNTHETIC-NOT-ACTUAL:synthetic_top_id_type",
+      "shape": {
+        "root": {
+          "type": "dict",
+          "known_keys": [
+            "error",
+            "id",
+            "incomplete_details",
+            "model",
+            "output",
+            "service_tier",
+            "status",
+            "usage"
+          ],
+          "other_key_count": 0,
+          "known_value_types": {
+            "error": "NoneType",
+            "id": "int",
+            "incomplete_details": "NoneType",
+            "model": "str",
+            "output": "list",
+            "service_tier": "str",
+            "status": "str",
+            "usage": "dict"
+          }
+        },
+        "output_type": "list",
+        "output_count": 1,
+        "output": [
+          {
+            "shape": {
+              "type": "dict",
+              "known_keys": [
+                "content",
+                "role",
+                "type"
+              ],
+              "other_key_count": 0,
+              "known_value_types": {
+                "content": "list",
+                "role": "str",
+                "type": "str"
+              }
+            },
+            "type": "message",
+            "role": "assistant",
+            "content_type": "list",
+            "content_count": 1,
+            "content": [
+              {
+                "shape": {
+                  "type": "dict",
+                  "known_keys": [
+                    "text",
+                    "type"
+                  ],
+                  "other_key_count": 0,
+                  "known_value_types": {
+                    "text": "str",
+                    "type": "str"
+                  }
+                },
+                "type": "output_text",
+                "application_shape": {
+                  "type": "dict",
+                  "known_keys": [
+                    "arguments",
+                    "tool"
+                  ],
+                  "other_key_count": 0,
+                  "known_value_types": {
+                    "arguments": "str",
+                    "tool": "str"
+                  }
+                },
+                "tool": "list_files",
+                "argument_shape": {
+                  "type": "dict",
+                  "known_keys": [],
+                  "other_key_count": 0,
+                  "known_value_types": {}
+                }
+              }
+            ]
+          }
+        ],
+        "no_arbitrary_response_text_or_key_values_retained": true
+      },
+      "accepted": false,
+      "exception_type": "ValueError",
+      "validator_frames": [
+        {
+          "file": "response_diagnosis.py",
+          "function": "diagnose_offline",
+          "line": 82
+        },
+        {
+          "file": "admission.py",
+          "function": "decode_response",
+          "line": 133
+        },
+        {
+          "file": "contracts.py",
+          "function": "require",
+          "line": 33
+        }
+      ]
+    },
+    "synthetic_extra_reasoning": {
+      "provenance": "SYNTHETIC-NOT-ACTUAL:synthetic_extra_reasoning",
+      "shape": {
+        "root": {
+          "type": "dict",
+          "known_keys": [
+            "error",
+            "id",
+            "incomplete_details",
+            "model",
+            "output",
+            "service_tier",
+            "status",
+            "usage"
+          ],
+          "other_key_count": 0,
+          "known_value_types": {
+            "error": "NoneType",
+            "id": "str",
+            "incomplete_details": "NoneType",
+            "model": "str",
+            "output": "list",
+            "service_tier": "str",
+            "status": "str",
+            "usage": "dict"
+          }
+        },
+        "output_type": "list",
+        "output_count": 2,
+        "output": [
+          {
+            "shape": {
+              "type": "dict",
+              "known_keys": [
+                "summary",
+                "type"
+              ],
+              "other_key_count": 0,
+              "known_value_types": {
+                "summary": "list",
+                "type": "str"
+              }
+            },
+            "type": "reasoning",
+            "role": "unrecognized",
+            "content_type": "NoneType"
+          },
+          {
+            "shape": {
+              "type": "dict",
+              "known_keys": [
+                "content",
+                "role",
+                "type"
+              ],
+              "other_key_count": 0,
+              "known_value_types": {
+                "content": "list",
+                "role": "str",
+                "type": "str"
+              }
+            },
+            "type": "message",
+            "role": "assistant",
+            "content_type": "list",
+            "content_count": 1,
+            "content": [
+              {
+                "shape": {
+                  "type": "dict",
+                  "known_keys": [
+                    "text",
+                    "type"
+                  ],
+                  "other_key_count": 0,
+                  "known_value_types": {
+                    "text": "str",
+                    "type": "str"
+                  }
+                },
+                "type": "output_text",
+                "application_shape": {
+                  "type": "dict",
+                  "known_keys": [
+                    "arguments",
+                    "tool"
+                  ],
+                  "other_key_count": 0,
+                  "known_value_types": {
+                    "arguments": "str",
+                    "tool": "str"
+                  }
+                },
+                "tool": "list_files",
+                "argument_shape": {
+                  "type": "dict",
+                  "known_keys": [],
+                  "other_key_count": 0,
+                  "known_value_types": {}
+                }
+              }
+            ]
+          }
+        ],
+        "no_arbitrary_response_text_or_key_values_retained": true
+      },
+      "accepted": false,
+      "exception_type": "ValueError",
+      "validator_frames": [
+        {
+          "file": "response_diagnosis.py",
+          "function": "diagnose_offline",
+          "line": 82
+        },
+        {
+          "file": "admission.py",
+          "function": "decode_response",
+          "line": 137
+        },
+        {
+          "file": "contracts.py",
+          "function": "require",
+          "line": 33
+        }
+      ]
+    },
+    "synthetic_refusal": {
+      "provenance": "SYNTHETIC-NOT-ACTUAL:synthetic_refusal",
+      "shape": {
+        "root": {
+          "type": "dict",
+          "known_keys": [
+            "error",
+            "id",
+            "incomplete_details",
+            "model",
+            "output",
+            "service_tier",
+            "status",
+            "usage"
+          ],
+          "other_key_count": 0,
+          "known_value_types": {
+            "error": "NoneType",
+            "id": "str",
+            "incomplete_details": "NoneType",
+            "model": "str",
+            "output": "list",
+            "service_tier": "str",
+            "status": "str",
+            "usage": "dict"
+          }
+        },
+        "output_type": "list",
+        "output_count": 1,
+        "output": [
+          {
+            "shape": {
+              "type": "dict",
+              "known_keys": [
+                "content",
+                "role",
+                "type"
+              ],
+              "other_key_count": 0,
+              "known_value_types": {
+                "content": "list",
+                "role": "str",
+                "type": "str"
+              }
+            },
+            "type": "message",
+            "role": "assistant",
+            "content_type": "list",
+            "content_count": 1,
+            "content": [
+              {
+                "shape": {
+                  "type": "dict",
+                  "known_keys": [
+                    "refusal",
+                    "type"
+                  ],
+                  "other_key_count": 0,
+                  "known_value_types": {
+                    "refusal": "str",
+                    "type": "str"
+                  }
+                },
+                "type": "refusal"
+              }
+            ]
+          }
+        ],
+        "no_arbitrary_response_text_or_key_values_retained": true
+      },
+      "accepted": false,
+      "exception_type": "ValueError",
+      "validator_frames": [
+        {
+          "file": "response_diagnosis.py",
+          "function": "diagnose_offline",
+          "line": 82
+        },
+        {
+          "file": "admission.py",
+          "function": "decode_response",
+          "line": 140
+        },
+        {
+          "file": "contracts.py",
+          "function": "require",
+          "line": 33
+        }
+      ]
+    },
+    "synthetic_bad_output_text_JSON": {
+      "provenance": "SYNTHETIC-NOT-ACTUAL:synthetic_bad_output_text_JSON",
+      "shape": {
+        "root": {
+          "type": "dict",
+          "known_keys": [
+            "error",
+            "id",
+            "incomplete_details",
+            "model",
+            "output",
+            "service_tier",
+            "status",
+            "usage"
+          ],
+          "other_key_count": 0,
+          "known_value_types": {
+            "error": "NoneType",
+            "id": "str",
+            "incomplete_details": "NoneType",
+            "model": "str",
+            "output": "list",
+            "service_tier": "str",
+            "status": "str",
+            "usage": "dict"
+          }
+        },
+        "output_type": "list",
+        "output_count": 1,
+        "output": [
+          {
+            "shape": {
+              "type": "dict",
+              "known_keys": [
+                "content",
+                "role",
+                "type"
+              ],
+              "other_key_count": 0,
+              "known_value_types": {
+                "content": "list",
+                "role": "str",
+                "type": "str"
+              }
+            },
+            "type": "message",
+            "role": "assistant",
+            "content_type": "list",
+            "content_count": 1,
+            "content": [
+              {
+                "shape": {
+                  "type": "dict",
+                  "known_keys": [
+                    "text",
+                    "type"
+                  ],
+                  "other_key_count": 0,
+                  "known_value_types": {
+                    "text": "str",
+                    "type": "str"
+                  }
+                },
+                "type": "output_text",
+                "application_parse_error_type": "JSONDecodeError"
+              }
+            ]
+          }
+        ],
+        "no_arbitrary_response_text_or_key_values_retained": true
+      },
+      "accepted": false,
+      "exception_type": "JSONDecodeError",
+      "validator_frames": [
+        {
+          "file": "response_diagnosis.py",
+          "function": "diagnose_offline",
+          "line": 82
+        },
+        {
+          "file": "admission.py",
+          "function": "decode_response",
+          "line": 146
+        },
+        {
+          "file": "contracts.py",
+          "function": "strict_json",
+          "line": 24
+        }
+      ]
+    },
+    "synthetic_bad_argument_JSON": {
+      "provenance": "SYNTHETIC-NOT-ACTUAL:synthetic_bad_argument_JSON",
+      "shape": {
+        "root": {
+          "type": "dict",
+          "known_keys": [
+            "error",
+            "id",
+            "incomplete_details",
+            "model",
+            "output",
+            "service_tier",
+            "status",
+            "usage"
+          ],
+          "other_key_count": 0,
+          "known_value_types": {
+            "error": "NoneType",
+            "id": "str",
+            "incomplete_details": "NoneType",
+            "model": "str",
+            "output": "list",
+            "service_tier": "str",
+            "status": "str",
+            "usage": "dict"
+          }
+        },
+        "output_type": "list",
+        "output_count": 1,
+        "output": [
+          {
+            "shape": {
+              "type": "dict",
+              "known_keys": [
+                "content",
+                "role",
+                "type"
+              ],
+              "other_key_count": 0,
+              "known_value_types": {
+                "content": "list",
+                "role": "str",
+                "type": "str"
+              }
+            },
+            "type": "message",
+            "role": "assistant",
+            "content_type": "list",
+            "content_count": 1,
+            "content": [
+              {
+                "shape": {
+                  "type": "dict",
+                  "known_keys": [
+                    "text",
+                    "type"
+                  ],
+                  "other_key_count": 0,
+                  "known_value_types": {
+                    "text": "str",
+                    "type": "str"
+                  }
+                },
+                "type": "output_text",
+                "application_shape": {
+                  "type": "dict",
+                  "known_keys": [
+                    "arguments",
+                    "tool"
+                  ],
+                  "other_key_count": 0,
+                  "known_value_types": {
+                    "arguments": "str",
+                    "tool": "str"
+                  }
+                },
+                "tool": "list_files",
+                "arguments_parse_error_type": "JSONDecodeError"
+              }
+            ]
+          }
+        ],
+        "no_arbitrary_response_text_or_key_values_retained": true
+      },
+      "accepted": false,
+      "exception_type": "JSONDecodeError",
+      "validator_frames": [
+        {
+          "file": "response_diagnosis.py",
+          "function": "diagnose_offline",
+          "line": 82
+        },
+        {
+          "file": "admission.py",
+          "function": "decode_response",
+          "line": 146
+        },
+        {
+          "file": "mini_request.py",
+          "function": "validate_output",
+          "line": 61
+        },
+        {
+          "file": "contracts.py",
+          "function": "strict_json",
+          "line": 24
+        }
+      ]
+    },
+    "synthetic_forbidden_tool": {
+      "provenance": "SYNTHETIC-NOT-ACTUAL:synthetic_forbidden_tool",
+      "shape": {
+        "root": {
+          "type": "dict",
+          "known_keys": [
+            "error",
+            "id",
+            "incomplete_details",
+            "model",
+            "output",
+            "service_tier",
+            "status",
+            "usage"
+          ],
+          "other_key_count": 0,
+          "known_value_types": {
+            "error": "NoneType",
+            "id": "str",
+            "incomplete_details": "NoneType",
+            "model": "str",
+            "output": "list",
+            "service_tier": "str",
+            "status": "str",
+            "usage": "dict"
+          }
+        },
+        "output_type": "list",
+        "output_count": 1,
+        "output": [
+          {
+            "shape": {
+              "type": "dict",
+              "known_keys": [
+                "content",
+                "role",
+                "type"
+              ],
+              "other_key_count": 0,
+              "known_value_types": {
+                "content": "list",
+                "role": "str",
+                "type": "str"
+              }
+            },
+            "type": "message",
+            "role": "assistant",
+            "content_type": "list",
+            "content_count": 1,
+            "content": [
+              {
+                "shape": {
+                  "type": "dict",
+                  "known_keys": [
+                    "text",
+                    "type"
+                  ],
+                  "other_key_count": 0,
+                  "known_value_types": {
+                    "text": "str",
+                    "type": "str"
+                  }
+                },
+                "type": "output_text",
+                "application_shape": {
+                  "type": "dict",
+                  "known_keys": [
+                    "arguments",
+                    "tool"
+                  ],
+                  "other_key_count": 0,
+                  "known_value_types": {
+                    "arguments": "str",
+                    "tool": "str"
+                  }
+                },
+                "tool": "unrecognized",
+                "argument_shape": {
+                  "type": "dict",
+                  "known_keys": [],
+                  "other_key_count": 0,
+                  "known_value_types": {}
+                }
+              }
+            ]
+          }
+        ],
+        "no_arbitrary_response_text_or_key_values_retained": true
+      },
+      "accepted": false,
+      "exception_type": "ValueError",
+      "validator_frames": [
+        {
+          "file": "response_diagnosis.py",
+          "function": "diagnose_offline",
+          "line": 82
+        },
+        {
+          "file": "admission.py",
+          "function": "decode_response",
+          "line": 146
+        },
+        {
+          "file": "mini_request.py",
+          "function": "validate_output",
+          "line": 61
+        },
+        {
+          "file": "executor.py",
+          "function": "parse_tool",
+          "line": 36
+        },
+        {
+          "file": "contracts.py",
+          "function": "require",
+          "line": 33
+        }
+      ]
+    },
+    "synthetic_extra_argument": {
+      "provenance": "SYNTHETIC-NOT-ACTUAL:synthetic_extra_argument",
+      "shape": {
+        "root": {
+          "type": "dict",
+          "known_keys": [
+            "error",
+            "id",
+            "incomplete_details",
+            "model",
+            "output",
+            "service_tier",
+            "status",
+            "usage"
+          ],
+          "other_key_count": 0,
+          "known_value_types": {
+            "error": "NoneType",
+            "id": "str",
+            "incomplete_details": "NoneType",
+            "model": "str",
+            "output": "list",
+            "service_tier": "str",
+            "status": "str",
+            "usage": "dict"
+          }
+        },
+        "output_type": "list",
+        "output_count": 1,
+        "output": [
+          {
+            "shape": {
+              "type": "dict",
+              "known_keys": [
+                "content",
+                "role",
+                "type"
+              ],
+              "other_key_count": 0,
+              "known_value_types": {
+                "content": "list",
+                "role": "str",
+                "type": "str"
+              }
+            },
+            "type": "message",
+            "role": "assistant",
+            "content_type": "list",
+            "content_count": 1,
+            "content": [
+              {
+                "shape": {
+                  "type": "dict",
+                  "known_keys": [
+                    "text",
+                    "type"
+                  ],
+                  "other_key_count": 0,
+                  "known_value_types": {
+                    "text": "str",
+                    "type": "str"
+                  }
+                },
+                "type": "output_text",
+                "application_shape": {
+                  "type": "dict",
+                  "known_keys": [
+                    "arguments",
+                    "tool"
+                  ],
+                  "other_key_count": 0,
+                  "known_value_types": {
+                    "arguments": "str",
+                    "tool": "str"
+                  }
+                },
+                "tool": "list_files",
+                "argument_shape": {
+                  "type": "dict",
+                  "known_keys": [],
+                  "other_key_count": 1,
+                  "known_value_types": {}
+                }
+              }
+            ]
+          }
+        ],
+        "no_arbitrary_response_text_or_key_values_retained": true
+      },
+      "accepted": false,
+      "exception_type": "ValueError",
+      "validator_frames": [
+        {
+          "file": "response_diagnosis.py",
+          "function": "diagnose_offline",
+          "line": 82
+        },
+        {
+          "file": "admission.py",
+          "function": "decode_response",
+          "line": 146
+        },
+        {
+          "file": "mini_request.py",
+          "function": "validate_output",
+          "line": 61
+        },
+        {
+          "file": "executor.py",
+          "function": "parse_tool",
+          "line": 40
+        },
+        {
+          "file": "contracts.py",
+          "function": "require",
+          "line": 33
+        }
+      ]
+    }
+  }
+}

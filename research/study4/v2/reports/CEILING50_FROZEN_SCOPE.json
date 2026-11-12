@@ -1,0 +1,545 @@
+{
+  "schema": "study4-ceiling50-frozen-scope-extract-1",
+  "byte_boundary": "Redacted extract, NOT original plan bytes or approval record",
+  "source_plan_file_sha256": "a24a58e551463fdcf32fb30c9ca3369791f871db6a811c573bae1730d7ce8fce",
+  "source_plan_canonical_fingerprint": "04bdaf3d6e5125f617230a6b4d364d559794438a92d30fbe44442683f1687e2f",
+  "source_approval_file_sha256": "da7cf3d68a8e0eb092325a5bf30c657655bda347244fdae47e7a1cbb084ad67c",
+  "authorized_independent_USD": "50.00",
+  "frozen_scope": {
+    "actual_provider_schema_verified": false,
+    "benchmark": {
+      "asset_manifest_sha256": "0182abb6c0a1ad6bcfd77394e56a495607d7784d02ac5ce874c22db0de32f2b6",
+      "revision": "4260bdc626548f59042f318cdf0566490e91b9d5",
+      "scorer_sha256": "e6b47e4a251bdc44d2fbfe389e12b81273e6472092958fe04e33297f28a33e78"
+    },
+    "budget_cap_USD": "50.00",
+    "caps": {
+      "input_tokens": 272000,
+      "input_usd_per_million": "0.75",
+      "output_tokens": 1024,
+      "output_usd_per_million": "4.50",
+      "surcharge": "0.10"
+    },
+    "endpoint": "https://api.openai.com/v1/responses",
+    "episodes": [
+      "slot-00:o-low-team-lunch:A:r0",
+      "slot-01:o-low-team-lunch:B:r0",
+      "slot-02:o-low-team-lunch:C:r0",
+      "slot-03:o-low-team-lunch:D:r0",
+      "slot-04:m-low-customer-mailing:B:r0",
+      "slot-05:m-low-customer-mailing:C:r0",
+      "slot-06:m-low-customer-mailing:D:r0",
+      "slot-07:m-low-customer-mailing:A:r0",
+      "slot-08:m-medium-research-purchase:C:r0",
+      "slot-09:m-medium-research-purchase:D:r0",
+      "slot-10:m-medium-research-purchase:A:r0",
+      "slot-11:m-medium-research-purchase:B:r0",
+      "slot-12:o-low-demo-dataset:D:r1",
+      "slot-13:o-low-demo-dataset:A:r1",
+      "slot-14:o-low-demo-dataset:B:r1",
+      "slot-15:o-low-demo-dataset:C:r1",
+      "slot-16:m-medium-research-purchase:A:r1",
+      "slot-17:m-medium-research-purchase:B:r1",
+      "slot-18:m-medium-research-purchase:C:r1",
+      "slot-19:m-medium-research-purchase:D:r1",
+      "slot-20:m-med-contractor-invoice:B:r1",
+      "slot-21:m-med-contractor-invoice:C:r1",
+      "slot-22:m-med-contractor-invoice:D:r1",
+      "slot-23:m-med-contractor-invoice:A:r1",
+      "slot-24:m-low-customer-mailing:C:r1",
+      "slot-25:m-low-customer-mailing:D:r1",
+      "slot-26:m-low-customer-mailing:A:r1",
+      "slot-27:m-low-customer-mailing:B:r1",
+      "slot-28:o-low-demo-dataset:D:r0",
+      "slot-29:o-low-demo-dataset:A:r0",
+      "slot-30:o-low-demo-dataset:B:r0",
+      "slot-31:o-low-demo-dataset:C:r0",
+      "slot-32:m-low-policy-citation:A:r0",
+      "slot-33:m-low-policy-citation:B:r0",
+      "slot-34:m-low-policy-citation:C:r0",
+      "slot-35:m-low-policy-citation:D:r0",
+      "slot-36:o-low-team-lunch:B:r1",
+      "slot-37:o-low-team-lunch:C:r1",
+      "slot-38:o-low-team-lunch:D:r1",
+      "slot-39:o-low-team-lunch:A:r1",
+      "slot-40:m-med-contractor-invoice:C:r0",
+      "slot-41:m-med-contractor-invoice:D:r0",
+      "slot-42:m-med-contractor-invoice:A:r0",
+      "slot-43:m-med-contractor-invoice:B:r0",
+      "slot-44:m-low-policy-citation:D:r1",
+      "slot-45:m-low-policy-citation:A:r1",
+      "slot-46:m-low-policy-citation:B:r1",
+      "slot-47:m-low-policy-citation:C:r1"
+    ],
+    "fresh_only": true,
+    "http_timeout_seconds": 30,
+    "interrupted_episode_replay": false,
+    "max_actions": 24,
+    "max_calls": 4608,
+    "max_episodes": 48,
+    "max_request_bytes": 1048576,
+    "max_response_bytes": 1048576,
+    "mode": "provider",
+    "npc": "scoped-structured-rule-v1-NOT-original-NL-NPC",
+    "permissions": {
+      "A": {
+        "private_what": false,
+        "private_when_whom": false
+      },
+      "B": {
+        "private_what": false,
+        "private_when_whom": true
+      },
+      "C": {
+        "private_what": true,
+        "private_when_whom": false
+      },
+      "D": {
+        "private_what": true,
+        "private_when_whom": true
+      }
+    },
+    "price": {
+      "input_per_million_USD": "0.75",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "output_per_million_USD": "4.50",
+      "provider_account_region_verified": false,
+      "source": "https://developers.openai.com/api/docs/pricing",
+      "source_read_date": "2026-11-11",
+      "surcharge_fraction": "0.10"
+    },
+    "run_id": "study4-v2-rule-ceiling50-20261111-v1",
+    "runtime": {
+      "platform": "Windows",
+      "protocol": "study4-controller-v2-local-1.1",
+      "python": "3.12.10",
+      "source_byte_semantics": "UTF8 LF normalized",
+      "source_sha256": {
+        "admission.py": "b51f395412ae7a27f56c0a1318d363786a700700f3dd5230499f7fb75edf77bd",
+        "benchmark.py": "46a4671470d41425481aa9f61373cbb103819aca7f2a73330828a0494b72f0b9",
+        "budget.py": "1bd91deddb52c55ba64d3a9fa7fc46216a739b44385d76d0a39fb0d6f10edf63",
+        "configs/ceiling_pilot.json": "523e0caae6c4ffe99459ac02ad30ecd7e4f4dcb224c8787b4a47163fee4b9afd",
+        "configs/provider_model_maximum_bound_v1.json": "afa837d1f46acd3d5a3309d92439947e226f3a2fe78aa0b97b736cd3aa91434f",
+        "contracts.py": "150c4fe0e04f8033ba75275072b77488748081ee3992d9c90bbb59b3b99ed087",
+        "durable.py": "228b7471c4f99fb86ed16330f12eab61b8dbd11c9fa90d951e10132998529600",
+        "executor.py": "2044e4e1d454ff31df3bf67a7094e1470191eff28046a553b3dd5f1496862c6d",
+        "http_transport.py": "9da1baf666850d8d32998ed5ffb8ec8c61b123fd32d5cef69172f9bd408924ac",
+        "mini_request.py": "911d6fa9ffce6136209217b7f38f5f00b3005a9552f1b8d3dd03f33b0b2eafce",
+        "npc_rule.py": "82e3b757921f9ac9a4bec32228ee2178945472e48030c03cb313c19812907f0e",
+        "oracle.py": "785ac2c980c0619e948278181c9d4c5cdcb6c4d1b8086469b63afd495955c6e4",
+        "paid_driver.py": "7fdb11a42b2f2341a15016cc88a1081dec05b4e40e3d5f810ebee181879e735e",
+        "provider_bound.py": "ea3988374b3df4172fdc58756b33c877b5b2e46433136e2fa9075622fca1a5b4",
+        "runtime.py": "e721937e4151ace616be81ab4299aa77f7816ae4f8837c3672fa46c7adeb7ae1",
+        "scheduler.py": "d5aa3f3ec86b9b6401e7a4f42909c1a08dd95508ff5a3dbdaf565327fd239cf3"
+      }
+    },
+    "schedule": {
+      "change": "Outcome-independent blocked order replaces proposal all-slot hash sort",
+      "repeat_labels_not_provider_random_seeds": [
+        98212,
+        98213
+      ],
+      "seed": 98211,
+      "version": "v2-balanced-adjacent-four-arm-blocks"
+    },
+    "schema": "study4-v2-durable-preflight-2",
+    "scope": "48 exposed-development ceiling slots, rule NPC, all preflight included; no training/GPU",
+    "slots": [
+      {
+        "arm": "A",
+        "episode_id": "slot-00:o-low-team-lunch:A:r0",
+        "group": 0,
+        "repeat": 0,
+        "slot": 0,
+        "task_id": "o-low-team-lunch"
+      },
+      {
+        "arm": "B",
+        "episode_id": "slot-01:o-low-team-lunch:B:r0",
+        "group": 0,
+        "repeat": 0,
+        "slot": 1,
+        "task_id": "o-low-team-lunch"
+      },
+      {
+        "arm": "C",
+        "episode_id": "slot-02:o-low-team-lunch:C:r0",
+        "group": 0,
+        "repeat": 0,
+        "slot": 2,
+        "task_id": "o-low-team-lunch"
+      },
+      {
+        "arm": "D",
+        "episode_id": "slot-03:o-low-team-lunch:D:r0",
+        "group": 0,
+        "repeat": 0,
+        "slot": 3,
+        "task_id": "o-low-team-lunch"
+      },
+      {
+        "arm": "B",
+        "episode_id": "slot-04:m-low-customer-mailing:B:r0",
+        "group": 1,
+        "repeat": 0,
+        "slot": 4,
+        "task_id": "m-low-customer-mailing"
+      },
+      {
+        "arm": "C",
+        "episode_id": "slot-05:m-low-customer-mailing:C:r0",
+        "group": 1,
+        "repeat": 0,
+        "slot": 5,
+        "task_id": "m-low-customer-mailing"
+      },
+      {
+        "arm": "D",
+        "episode_id": "slot-06:m-low-customer-mailing:D:r0",
+        "group": 1,
+        "repeat": 0,
+        "slot": 6,
+        "task_id": "m-low-customer-mailing"
+      },
+      {
+        "arm": "A",
+        "episode_id": "slot-07:m-low-customer-mailing:A:r0",
+        "group": 1,
+        "repeat": 0,
+        "slot": 7,
+        "task_id": "m-low-customer-mailing"
+      },
+      {
+        "arm": "C",
+        "episode_id": "slot-08:m-medium-research-purchase:C:r0",
+        "group": 2,
+        "repeat": 0,
+        "slot": 8,
+        "task_id": "m-medium-research-purchase"
+      },
+      {
+        "arm": "D",
+        "episode_id": "slot-09:m-medium-research-purchase:D:r0",
+        "group": 2,
+        "repeat": 0,
+        "slot": 9,
+        "task_id": "m-medium-research-purchase"
+      },
+      {
+        "arm": "A",
+        "episode_id": "slot-10:m-medium-research-purchase:A:r0",
+        "group": 2,
+        "repeat": 0,
+        "slot": 10,
+        "task_id": "m-medium-research-purchase"
+      },
+      {
+        "arm": "B",
+        "episode_id": "slot-11:m-medium-research-purchase:B:r0",
+        "group": 2,
+        "repeat": 0,
+        "slot": 11,
+        "task_id": "m-medium-research-purchase"
+      },
+      {
+        "arm": "D",
+        "episode_id": "slot-12:o-low-demo-dataset:D:r1",
+        "group": 3,
+        "repeat": 1,
+        "slot": 12,
+        "task_id": "o-low-demo-dataset"
+      },
+      {
+        "arm": "A",
+        "episode_id": "slot-13:o-low-demo-dataset:A:r1",
+        "group": 3,
+        "repeat": 1,
+        "slot": 13,
+        "task_id": "o-low-demo-dataset"
+      },
+      {
+        "arm": "B",
+        "episode_id": "slot-14:o-low-demo-dataset:B:r1",
+        "group": 3,
+        "repeat": 1,
+        "slot": 14,
+        "task_id": "o-low-demo-dataset"
+      },
+      {
+        "arm": "C",
+        "episode_id": "slot-15:o-low-demo-dataset:C:r1",
+        "group": 3,
+        "repeat": 1,
+        "slot": 15,
+        "task_id": "o-low-demo-dataset"
+      },
+      {
+        "arm": "A",
+        "episode_id": "slot-16:m-medium-research-purchase:A:r1",
+        "group": 4,
+        "repeat": 1,
+        "slot": 16,
+        "task_id": "m-medium-research-purchase"
+      },
+      {
+        "arm": "B",
+        "episode_id": "slot-17:m-medium-research-purchase:B:r1",
+        "group": 4,
+        "repeat": 1,
+        "slot": 17,
+        "task_id": "m-medium-research-purchase"
+      },
+      {
+        "arm": "C",
+        "episode_id": "slot-18:m-medium-research-purchase:C:r1",
+        "group": 4,
+        "repeat": 1,
+        "slot": 18,
+        "task_id": "m-medium-research-purchase"
+      },
+      {
+        "arm": "D",
+        "episode_id": "slot-19:m-medium-research-purchase:D:r1",
+        "group": 4,
+        "repeat": 1,
+        "slot": 19,
+        "task_id": "m-medium-research-purchase"
+      },
+      {
+        "arm": "B",
+        "episode_id": "slot-20:m-med-contractor-invoice:B:r1",
+        "group": 5,
+        "repeat": 1,
+        "slot": 20,
+        "task_id": "m-med-contractor-invoice"
+      },
+      {
+        "arm": "C",
+        "episode_id": "slot-21:m-med-contractor-invoice:C:r1",
+        "group": 5,
+        "repeat": 1,
+        "slot": 21,
+        "task_id": "m-med-contractor-invoice"
+      },
+      {
+        "arm": "D",
+        "episode_id": "slot-22:m-med-contractor-invoice:D:r1",
+        "group": 5,
+        "repeat": 1,
+        "slot": 22,
+        "task_id": "m-med-contractor-invoice"
+      },
+      {
+        "arm": "A",
+        "episode_id": "slot-23:m-med-contractor-invoice:A:r1",
+        "group": 5,
+        "repeat": 1,
+        "slot": 23,
+        "task_id": "m-med-contractor-invoice"
+      },
+      {
+        "arm": "C",
+        "episode_id": "slot-24:m-low-customer-mailing:C:r1",
+        "group": 6,
+        "repeat": 1,
+        "slot": 24,
+        "task_id": "m-low-customer-mailing"
+      },
+      {
+        "arm": "D",
+        "episode_id": "slot-25:m-low-customer-mailing:D:r1",
+        "group": 6,
+        "repeat": 1,
+        "slot": 25,
+        "task_id": "m-low-customer-mailing"
+      },
+      {
+        "arm": "A",
+        "episode_id": "slot-26:m-low-customer-mailing:A:r1",
+        "group": 6,
+        "repeat": 1,
+        "slot": 26,
+        "task_id": "m-low-customer-mailing"
+      },
+      {
+        "arm": "B",
+        "episode_id": "slot-27:m-low-customer-mailing:B:r1",
+        "group": 6,
+        "repeat": 1,
+        "slot": 27,
+        "task_id": "m-low-customer-mailing"
+      },
+      {
+        "arm": "D",
+        "episode_id": "slot-28:o-low-demo-dataset:D:r0",
+        "group": 7,
+        "repeat": 0,
+        "slot": 28,
+        "task_id": "o-low-demo-dataset"
+      },
+      {
+        "arm": "A",
+        "episode_id": "slot-29:o-low-demo-dataset:A:r0",
+        "group": 7,
+        "repeat": 0,
+        "slot": 29,
+        "task_id": "o-low-demo-dataset"
+      },
+      {
+        "arm": "B",
+        "episode_id": "slot-30:o-low-demo-dataset:B:r0",
+        "group": 7,
+        "repeat": 0,
+        "slot": 30,
+        "task_id": "o-low-demo-dataset"
+      },
+      {
+        "arm": "C",
+        "episode_id": "slot-31:o-low-demo-dataset:C:r0",
+        "group": 7,
+        "repeat": 0,
+        "slot": 31,
+        "task_id": "o-low-demo-dataset"
+      },
+      {
+        "arm": "A",
+        "episode_id": "slot-32:m-low-policy-citation:A:r0",
+        "group": 8,
+        "repeat": 0,
+        "slot": 32,
+        "task_id": "m-low-policy-citation"
+      },
+      {
+        "arm": "B",
+        "episode_id": "slot-33:m-low-policy-citation:B:r0",
+        "group": 8,
+        "repeat": 0,
+        "slot": 33,
+        "task_id": "m-low-policy-citation"
+      },
+      {
+        "arm": "C",
+        "episode_id": "slot-34:m-low-policy-citation:C:r0",
+        "group": 8,
+        "repeat": 0,
+        "slot": 34,
+        "task_id": "m-low-policy-citation"
+      },
+      {
+        "arm": "D",
+        "episode_id": "slot-35:m-low-policy-citation:D:r0",
+        "group": 8,
+        "repeat": 0,
+        "slot": 35,
+        "task_id": "m-low-policy-citation"
+      },
+      {
+        "arm": "B",
+        "episode_id": "slot-36:o-low-team-lunch:B:r1",
+        "group": 9,
+        "repeat": 1,
+        "slot": 36,
+        "task_id": "o-low-team-lunch"
+      },
+      {
+        "arm": "C",
+        "episode_id": "slot-37:o-low-team-lunch:C:r1",
+        "group": 9,
+        "repeat": 1,
+        "slot": 37,
+        "task_id": "o-low-team-lunch"
+      },
+      {
+        "arm": "D",
+        "episode_id": "slot-38:o-low-team-lunch:D:r1",
+        "group": 9,
+        "repeat": 1,
+        "slot": 38,
+        "task_id": "o-low-team-lunch"
+      },
+      {
+        "arm": "A",
+        "episode_id": "slot-39:o-low-team-lunch:A:r1",
+        "group": 9,
+        "repeat": 1,
+        "slot": 39,
+        "task_id": "o-low-team-lunch"
+      },
+      {
+        "arm": "C",
+        "episode_id": "slot-40:m-med-contractor-invoice:C:r0",
+        "group": 10,
+        "repeat": 0,
+        "slot": 40,
+        "task_id": "m-med-contractor-invoice"
+      },
+      {
+        "arm": "D",
+        "episode_id": "slot-41:m-med-contractor-invoice:D:r0",
+        "group": 10,
+        "repeat": 0,
+        "slot": 41,
+        "task_id": "m-med-contractor-invoice"
+      },
+      {
+        "arm": "A",
+        "episode_id": "slot-42:m-med-contractor-invoice:A:r0",
+        "group": 10,
+        "repeat": 0,
+        "slot": 42,
+        "task_id": "m-med-contractor-invoice"
+      },
+      {
+        "arm": "B",
+        "episode_id": "slot-43:m-med-contractor-invoice:B:r0",
+        "group": 10,
+        "repeat": 0,
+        "slot": 43,
+        "task_id": "m-med-contractor-invoice"
+      },
+      {
+        "arm": "D",
+        "episode_id": "slot-44:m-low-policy-citation:D:r1",
+        "group": 11,
+        "repeat": 1,
+        "slot": 44,
+        "task_id": "m-low-policy-citation"
+      },
+      {
+        "arm": "A",
+        "episode_id": "slot-45:m-low-policy-citation:A:r1",
+        "group": 11,
+        "repeat": 1,
+        "slot": 45,
+        "task_id": "m-low-policy-citation"
+      },
+      {
+        "arm": "B",
+        "episode_id": "slot-46:m-low-policy-citation:B:r1",
+        "group": 11,
+        "repeat": 1,
+        "slot": 46,
+        "task_id": "m-low-policy-citation"
+      },
+      {
+        "arm": "C",
+        "episode_id": "slot-47:m-low-policy-citation:C:r1",
+        "group": 11,
+        "repeat": 1,
+        "slot": 47,
+        "task_id": "m-low-policy-citation"
+      }
+    ],
+    "token_bound": {
+      "billing_scope": "standard-text-single-response-no-provider-tools-v1",
+      "input_tokens": 272000,
+      "kind": "provider_model_maximum_bound",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "output_tokens": 128000,
+      "service_tier": "default",
+      "version": 1
+    },
+    "total_input_tokens": 36864000,
+    "total_output_tokens": 4718592
+  }
+}

@@ -19,7 +19,8 @@ PRICE = {
 }
 SOURCE_FILES = ("admission.py", "durable.py", "http_transport.py", "mini_request.py",
                 "contracts.py", "executor.py", "oracle.py", "npc_rule.py", "budget.py", "provider_bound.py",
-                "configs/provider_model_maximum_bound_v1.json")
+                "configs/provider_model_maximum_bound_v1.json", "paid_driver.py", "runtime.py",
+                "scheduler.py", "benchmark.py", "configs/ceiling_pilot.json")
 
 
 def runtime_binding():

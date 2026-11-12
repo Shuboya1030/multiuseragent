@@ -1,10 +1,12 @@
 # Study4 v2：共享协议、固定scorer与本地调度验收
 
-**当前完成本地协议/fixture、六题scorer/调度及持久预算/HTTP故障验收；没有运行mini四臂ceiling、训练或5000题生成。**
+**当前完成本地接口与driver验收，独立USD50真实ceiling首请求因响应/动作门失败而停；
+完整episode为0，尚无四臂任务收益；没有新训练或5000题生成。**
 旧SFT87及其32episode结果不变，[旧结果入口](../README.md)继续保留。
 
 阅读：[v1.1设计/变更合同](DESIGN_v1_1_ZH.md)＋[v1.2本地适配补充](LOCAL_ADAPTER_CONTRACT_v1_2_ZH.md) →
-[最新模型最大费用上界修正](reports/MODEL_MAXIMUM_BOUND_ZH.md)（[持久执行前门](reports/DURABLE_PREFLIGHT_ZH.md)、
+[最新USD50真实接口停止报告](reports/CEILING50_ACTUAL_STOP_ZH.md)（[模型最大费用上界](reports/MODEL_MAXIMUM_BOUND_ZH.md)、
+[持久执行前门](reports/DURABLE_PREFLIGHT_ZH.md)、
 [适配阶段](reports/LOCAL_ADAPTER_STAGE_ZH.md)、
 [第一阶段](reports/PHASE1_LOCAL_ZH.md)保留） →
 [ceiling pilot与预算待签](CEILING_PILOT_ZH.md)。
@@ -20,6 +22,7 @@ python -m unittest research.study4.v2.test_protocol -v
 python -m unittest research.study4.v2.test_ceiling_adapter -v
 python -m unittest research.study4.v2.test_durable_preflight -v
 python -m unittest research.study4.v2.test_provider_bound -v
+python -m unittest research.study4.v2.test_paid_driver -v
 python -m research.study4.v2.local_acceptance --output LOCAL_PROOF_NEW.json
 python -m research.study4.v2.local_ceiling_check --output LOCAL_ADAPTER_NEW.json
 ```
@@ -55,6 +58,8 @@ durable tests仅创建临时SQLite及本机127.0.0.1 HTTP服务，故障退出�
 | [durable.py](durable.py) | 持久reserve/settle/unknown、崩溃恢复、一次call缓存与OS批次互斥 |
 | [http_transport.py](http_transport.py) | 一次性permit后单次HTTP；无隐式key/代理/redirect/retry；只在loopback实测 |
 | [test_durable_preflight.py](test_durable_preflight.py) | 真实子进程退出/并发、SQLite与loopback故障注入测试 |
+| [paid_driver.py](paid_driver.py) | 绑定独立批准/唯一fresh批次，逐call/event/slot持久证据；中断后禁止工具或episode重放 |
+| [test_paid_driver.py](test_paid_driver.py) | 48slot脚本回放、漂移/usage失败、工具生效后中断及禁止二次启动 |
 
 v1的`HelpRuntime/ServiceRuntime`不改：本版本保留它们的tool envelope、虚拟路径边界、
 stable ID/幂等读和ASK→自动交付→普通一步语义，做独立的小型本地协议实现。
@@ -65,7 +70,8 @@ v2采用标准库自包含边界，避免新代码依赖未上传的运行包。
 三头/candidate-shared-scoring有[数据接口](training_data.py)与[train-only sanity规范](configs/fit_sanity_spec.json)，
 尚无模型头/训练器。proposal失效/关键点合并已通过本地mock，
 持久调用边界通过本地故障测试，模型级费用bound已核来源/本地实现；
-真实API接受/实际usage与tool/episode端到端恢复未通过，独立预算仍未批准。
+真实完整API/应用接口与tool/episode端到端恢复未通过；
+本轮规则NPC48slot上限已获独立USD50批准，但首call unknown使批次停止，不能自动重发。
 context_view仅验收保留/溢出规则，未用真实Qwen tokenizer证明6k容量。
 
 ## 指纹与未决门
@@ -79,7 +85,9 @@ context_view仅验收保留/溢出规则，未用真实Qwen tokenizer证明6k容
 [持久执行前门证据](reports/DURABLE_PREFLIGHT_CHECK.json)及
 [其发布字节指纹](reports/DURABLE_PUBLICATION_MANIFEST.json)绑定历史commit `aa6480a`；
 其中provider bound未证明的结论由[本次有界修正](reports/MODEL_MAXIMUM_BOUND_ZH.md)更新。
-[当前机器验收](reports/MODEL_MAXIMUM_BOUND_CHECK.json)与
-[当前发布字节指纹](reports/MODEL_MAXIMUM_PUBLICATION_MANIFEST.json)另列。
+[模型上界机器验收](reports/MODEL_MAXIMUM_BOUND_CHECK.json)与
+[其发布字节指纹](reports/MODEL_MAXIMUM_PUBLICATION_MANIFEST.json)绑定历史commit `77f1a11`。
+[当前实际停止证据](reports/CEILING50_ACTUAL_CHECK.json)、[冻结scope摘录](reports/CEILING50_FROZEN_SCOPE.json)与
+[当前发布字节指纹](reports/CEILING50_PUBLICATION_MANIFEST.json)另列。
 TribalBench原MIT scorer已固定字节、复制并实际本地执行；旧fixture checker依然不是`tribalbench-1.0`。
 付费ceiling、真实API/NPC语义/持久费用、新split/generator/模型均需后续阶段门。

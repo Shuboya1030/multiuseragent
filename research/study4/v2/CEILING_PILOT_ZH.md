@@ -1,5 +1,10 @@
 # 下一授权门：小型四臂ceiling pilot（未执行、预算待签）
 
+**历史提案，当前状态已更新：** 用户后来为同六题/四臂/两次、规则NPC批准独立USD50；
+真实首call因响应/动作校验失败保留unknown并停止，完整episode0。
+见[实际停止报告](reports/CEILING50_ACTUAL_STOP_ZH.md)，包括实验前均衡排序的明确变更。
+以下USD55/70及8000/1024是原方案，不是已批准金额或当前硬帽。
+
 [v1.1合同](DESIGN_v1_1_ZH.md) · [本阶段实际报告](reports/PHASE1_LOCAL_ZH.md)
 
 **本文件是方案，不是API授权、账本或已启动runner。**
