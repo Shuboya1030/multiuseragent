@@ -1,0 +1,42 @@
+{
+  "schema": "study4-provider-model-maximum-evidence-1",
+  "local_date": "2026-11-11",
+  "model": "gpt-5.4-mini-2026-03-17",
+  "context_window": 400000,
+  "maximum_input_tokens": 272000,
+  "maximum_output_tokens": 128000,
+  "standard_input_USD_per_million": "0.75",
+  "standard_output_USD_per_million": "4.50",
+  "regional_uplift_fraction_used_conservatively": "0.10",
+  "model_maximum_reservation_USD": "0.858000",
+  "requested_output_limit": 1024,
+  "tighter_output_limit_reservation_implemented": false,
+  "scope": "One standard-tier text-only Responses inference, no provider tools, no compaction, no extra model invocation",
+  "excluded": ["tax", "foreign exchange", "unverified account-specific charges", "price changes", "nonstandard service tier", "provider tools/storage/cache-write fees", "additional model calls"],
+  "sources": [
+    {
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.4-mini.md",
+      "retrieved_at_UTC": "2026-11-12T02:51:47.241997+00:00",
+      "bytes": 3695,
+      "sha256": "83625d2f3548c29379b3b2a44b183a26d266d2f5c3ffda7161dd19c9213a9058",
+      "facts": "Default snapshot, 400000 context, maximum input 272000, maximum output 128000; text rates .75/4.5 per million and regional uplift10%."
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/pricing.md",
+      "retrieved_at_UTC": "2026-11-12T02:51:47.376927+00:00",
+      "bytes": 21006,
+      "sha256": "57af767674cca405b46ecf2cbea46941baacbbfc94176faf0a4cd4888c10c3b9",
+      "facts": "Standard mini rates .75/4.50; Fast rates are higher and excluded; regional processing uplift10%; provider tools have separate fees."
+    },
+    {
+      "url": "https://developers.openai.com/api/reference/resources/responses/methods/create.md",
+      "retrieved_at_UTC": "2026-11-12T02:51:05.789236+00:00",
+      "bytes": 558529,
+      "sha256": "29ff2279588282f187b68581b78809d494a75a90b891d31e7f4c0316fc76371f",
+      "facts": "service_tier default explicitly selects standard pricing; actual response tier must be checked. max_output_tokens bounds visible plus reasoning output. context_management config enables compaction; tools array supplies provider tools; disabled truncation rejects oversized context."
+    }
+  ],
+  "evidence_boundary": "Hashes refer to exact retrieved official markdown privately retained, not to this factual summary or an immutable vendor SLA; no full reference dump published.",
+  "paid_approval": null,
+  "actual_provider_schema_verified": false
+}

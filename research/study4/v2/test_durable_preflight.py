@@ -34,6 +34,7 @@ def local_config(root, endpoint="http://127.0.0.1:9/v1/responses"):
     plan.update(run_id="LOCAL_TEMP_TEST", mode="local_test", endpoint=endpoint,
                 budget_cap_USD="1.00", episodes=["ep-0", "ep-1"],
                 token_bound={"kind": "LOCAL_BYTE_IDENTITY_ONLY", "model": MODEL, "provider_framing_upper": 0})
+    plan["caps"]["input_tokens"] = 8000
     return plan, approval_for(root, plan)
 
 

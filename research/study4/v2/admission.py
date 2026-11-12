@@ -9,7 +9,8 @@ import platform
 from .budget import BudgetBlocked, CallCaps
 from .contracts import canonical, fingerprint, require, strict_json
 from .executor import PROTOCOL, parse_tool
-from .mini_request import MODEL, build_request, validate_output
+from .mini_request import MODEL, build_provider_request, build_request, validate_output
+from .provider_bound import MODEL_MAXIMUM_BOUND, uses_model_maximum
 
 PRICE = {
     "model": MODEL, "input_per_million_USD": "0.75", "output_per_million_USD": "4.50",
@@ -17,14 +18,16 @@ PRICE = {
     "source_read_date": "2026-11-11", "provider_account_region_verified": False,
 }
 SOURCE_FILES = ("admission.py", "durable.py", "http_transport.py", "mini_request.py",
-                "contracts.py", "executor.py", "oracle.py", "npc_rule.py", "budget.py")
+                "contracts.py", "executor.py", "oracle.py", "npc_rule.py", "budget.py", "provider_bound.py",
+                "configs/provider_model_maximum_bound_v1.json")
 
 
 def runtime_binding():
     root = Path(__file__).parent
     return {"protocol": PROTOCOL, "python": platform.python_version(),
             "platform": platform.system(), "source_byte_semantics": "UTF8 LF normalized",
-            "source_sha256": {name: hashlib.sha256((root / name).read_bytes().replace(b"\r\n", b"\n")).hexdigest()
+            "source_sha256": {name: hashlib.sha256(root.joinpath(*name.split("/")).read_bytes()
+                                                 .replace(b"\r\n", b"\n")).hexdigest()
                               for name in SOURCE_FILES}}
 
 
@@ -33,16 +36,16 @@ def root_binding(path):
 
 
 def pending_plan():
+    caps = asdict(CallCaps(input_tokens=MODEL_MAXIMUM_BOUND["input_tokens"]))
     return {
-        "schema": "study4-v2-durable-preflight-1", "run_id": "study4-v2-ceiling-PENDING",
+        "schema": "study4-v2-durable-preflight-2", "run_id": "study4-v2-ceiling-PENDING",
         "mode": "provider", "endpoint": "https://api.openai.com/v1/responses",
         "budget_cap_USD": None, "episodes": [], "runtime": runtime_binding(),
-        "price": PRICE.copy(), "caps": asdict(CallCaps()),
+        "price": PRICE.copy(), "caps": caps,
         "max_calls": 4608, "max_episodes": 48, "total_input_tokens": 36_864_000,
         "total_output_tokens": 4_718_592, "max_request_bytes": 1_048_576,
         "max_response_bytes": 1_048_576, "http_timeout_seconds": 30,
-        "token_bound": {"kind": "UNPROVED", "model": MODEL, "provider_framing_upper": None,
-                        "reason": "No verified model tokenizer/minimum-byte and hidden-framing bound"},
+        "token_bound": MODEL_MAXIMUM_BOUND.copy(),
         "actual_provider_schema_verified": False,
     }
 
@@ -88,7 +91,12 @@ def validate_binding(plan, approval, root, endpoint, now=None):
 def token_bound(body, plan):
     require(isinstance(body, bytes) and len(body) <= plan["max_request_bytes"], "Serialized request byte cap")
     proof = plan["token_bound"]
-    # There is deliberately no provider-proof implementation: byte length alone cannot bound hidden framing.
+    if uses_model_maximum(plan):
+        require(plan["mode"] in {"provider", "local_test"} and proof["model"] == MODEL and
+                plan["caps"]["input_tokens"] == proof["input_tokens"] and
+                16 <= plan["caps"]["output_tokens"] <= proof["output_tokens"],
+                "Model maximum reservation/source cap mismatch")
+        return proof["input_tokens"]
     if (plan["mode"] != "local_test" or proof != {
             "kind": "LOCAL_BYTE_IDENTITY_ONLY", "model": MODEL, "provider_framing_upper": 0}):
         raise BudgetBlocked("Provider token/framing bound unproved; do not assume bytes+4096 is safe")
@@ -97,6 +105,9 @@ def token_bound(body, plan):
 
 def prepare_request(request, operation, plan):
     require(operation in {"control", "question", "ordinary"}, "Only scheduled mini operations")
+    require(isinstance(request.get("input"), list) and len(request["input"]) == 2 and
+            all(isinstance(item, dict) and isinstance(item.get("content"), str) for item in request["input"]),
+            "Only explicit text messages; no image/audio/file/conversation input")
     body = strict_json(request["input"][1]["content"])
     observation = body["state"]
     kwargs = {}
@@ -105,7 +116,8 @@ def prepare_request(request, operation, plan):
         kwargs["proposed"] = None if proposal is None else parse_tool(canonical(proposal))
     elif operation == "question":
         kwargs = {"person_id": body["person_id"], "assistance": body.get("request_plan")}
-    require(request == build_request(operation, observation, **kwargs), "Static public wire/schema/model drift")
+    builder = build_provider_request if uses_model_maximum(plan) else build_request
+    require(request == builder(operation, observation, **kwargs), "Static public wire/schema/model/billing domain drift")
     require(request["max_output_tokens"] == plan["caps"]["output_tokens"], "Output cap drift")
     raw = canonical(request).encode("utf-8")
     bound = token_bound(raw, plan)
@@ -115,6 +127,8 @@ def prepare_request(request, operation, plan):
 
 def decode_response(raw, operation, observation, assistance, plan, input_bound):
     response = strict_json(raw)
+    if uses_model_maximum(plan):
+        require(response.get("service_tier") == "default", "Actual service tier drift; stop, not standard settlement")
     require(response["model"] == MODEL and response["status"] == "completed" and
             response.get("error") is None and response.get("incomplete_details") is None and
             isinstance(response["id"], str) and response["id"], "Incomplete/model-drift response")
@@ -145,6 +159,8 @@ def response_diagnostic(raw):
     usage = response.get("usage")
     return {
         "returned_model_matches": response.get("model") == MODEL,
+        "service_tier": response.get("service_tier") if response.get("service_tier") in
+                        ("default", "priority", "fast", "flex", "scale", "ultrafast", "auto") else "unrecognized",
         "status": status if status in ("completed", "incomplete", "failed", "cancelled") else "unrecognized",
         "reported_usage_NOT_settlement": {key: value for key, value in usage.items()
                                          if key in {"input_tokens", "output_tokens"} and type(value) is int}

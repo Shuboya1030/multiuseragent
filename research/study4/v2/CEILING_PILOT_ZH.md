@@ -4,9 +4,11 @@
 
 **本文件是方案，不是API授权、账本或已启动runner。**
 共享接口与[固定scorer/六题结构化规则适配](reports/LOCAL_ADAPTER_STAGE_ZH.md)已本地验证；
-真实mini/NPC语义、token/调用/持久费用门未验收及预算未批准时仍禁止API运行。
+真实mini/NPC语义/服务端schema未验收及独立预算未批准时仍禁止API运行。
 持久reserve/恢复/互斥与HTTP已通过[本地故障验收](reports/DURABLE_PREFLIGHT_ZH.md)，
-但真实provider token/framing没有可证明上界，当前会在网络前阻断；下表token费用仍是条件估算。
+现以[完整模型最大input/output修正](reports/MODEL_MAXIMUM_BOUND_ZH.md)提供每call USD.858000
+的支持域内保守费用bound，不再要求逐prompt精确tokenizer；预算null仍在网络前阻断。
+下表8000/1024仍只是旧方案条件估算，不承诺48episode在USD55/70内完成。
 
 ## 先做什么、选哪些题
 
@@ -60,7 +62,7 @@ cache不计折扣。拟固定snapshot`gpt-5.4-mini-2026-03-17`、reasoning none�
 ordinary包含可能被ASK失效的预生成write/submit proposal及回复后的新普通动作，不能漏计前一次。
 同一步start/reply/proposal等控制原因必须合并；否则重新计算调用帽，不在当前假设内。
 rule NPC本身0调用；LLM NPC再最多1调用。最多24步/24contact、无自动重试。
-每调用完整prompt（含脚手架/目录/历史）上界8000输入token、max输出1024，
+旧方案假设每调用完整prompt（含脚手架/目录/历史）不超过8000输入token、max输出1024，
 普通价每次上界`8000*.75/1e6 + 1024*4.50/1e6 = USD.010608`。
 新controller候选6k不等于完整API request总token上界；须分别计数。
 
@@ -95,6 +97,6 @@ Nauth/Nwaste、refusal/repair、API调用与美元。unknown/技术失败不能�
 不从结果反推margin；本文件不预设一个一定能过的阈值。
 
 技术门：共享ordinary请求一致、public-only、request/what来源、refusal恢复、
-固定scorer字节/evidence、真实token/上下文、独立费用reservation与unknown stop通过；
+固定scorer字节/evidence、模型费用bound/实际usage与上下文合法性、独立费用reservation与unknown stop通过；
 任何一个失败即暂停保留证据，不付费自动重试。
 本地mock门通过后只允许请求下一门授权，不自动采集/生成5000题/训练模型。

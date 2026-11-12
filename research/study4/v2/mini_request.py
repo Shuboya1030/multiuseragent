@@ -78,6 +78,13 @@ def validate_output(operation, data, observation, assistance=None):
     return data
 
 
+def build_provider_request(operation, observation, **kwargs):
+    """Versioned billing envelope; ordinary JSON actions/tools remain unchanged."""
+    return {**build_request(operation, observation, **kwargs),
+            "service_tier": "default", "tools": [], "context_management": None,
+            "store": False, "background": False, "stream": False, "truncation": "disabled"}
+
+
 class LocalMini:
     """Injected MOCK callback; a real API transport is intentionally absent until authorization."""
     def __init__(self, generate, count_full_request_tokens, budget, episode_id):

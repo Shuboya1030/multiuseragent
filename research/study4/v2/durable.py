@@ -14,6 +14,7 @@ from .admission import (decode_response, prepare_request, response_diagnostic, r
                         validate_binding)
 from .budget import BudgetBlocked, LocalBudget
 from .contracts import canonical, fingerprint, require
+from .provider_bound import reservation_output_bound
 
 
 class BatchBusy(RuntimeError):
@@ -168,9 +169,10 @@ class DurableLedger:
             rows = self.connection.execute("select * from calls").fetchall()
             if any(row["state"] != "settled" for row in rows):
                 raise BudgetBlocked("Unresolved/unknown exposure stops the batch")
-            reservation = self.caps.charge(bound, self.caps.output_tokens)
+            output_bound = reservation_output_bound(self.plan)
+            reservation = self.caps.charge(bound, output_bound)
             incoming = sum(r["input_tokens"] for r in rows) + bound
-            outgoing = sum(r["output_tokens"] for r in rows) + self.caps.output_tokens
+            outgoing = sum(r["output_tokens"] for r in rows) + output_bound
             operations = sum(r["episode"] == episode and r["operation"] == operation for r in rows)
             if (len(rows) >= self.plan["max_calls"] or incoming > self.plan["total_input_tokens"] or
                     outgoing > self.plan["total_output_tokens"] or operations >= LocalBudget.LIMITS[operation] or
@@ -180,7 +182,7 @@ class DurableLedger:
             self.connection.execute("""insert into calls(
                 id,episode,operation,request_sha256,state,input_bound,output_bound,reserved,created,updated)
                 values(?,?,?,?,'reserved',?,?,?,?,?)""",
-                (call_id, episode, operation, request_hash, bound, self.caps.output_tokens, str(reservation), now, now))
+                (call_id, episode, operation, request_hash, bound, output_bound, str(reservation), now, now))
             self.audit("reserved", call_id=call_id, request_sha256=request_hash, reserved_USD=str(reservation))
         return None
 
