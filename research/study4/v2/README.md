@@ -1,12 +1,13 @@
 # Study4 v2：共享协议、固定scorer与本地调度验收
 
-**单动作prompt v2的一次新验证在传输层停止；累计3次本地dispatch尝试、
-unknownUSD2.574，仍占原USD50总帽，并非实付。0工具、0完整episode，
-48slot未开始，尚无四臂任务收益；没有新训练或5000题生成。**
+**最新验证通过后已启动真实ceiling，首slot在7个普通动作后因双message输出整批停。
+0完整episode/配对；累计unknownUSD3.432＋settled上界USD0.013762650，
+占原USD50总帽。尚无四臂headroom或训练收益；没有新训练或5000题生成。**
 旧SFT87及其32episode结果不变，[旧结果入口](../README.md)继续保留。
 
 阅读：[v1.1设计/变更合同](DESIGN_v1_1_ZH.md)＋[v1.2本地适配补充](LOCAL_ADAPTER_CONTRACT_v1_2_ZH.md) →
-[最新prompt v2真实验证停止报告](reports/PROMPT_V2_VALIDATION_STOP_ZH.md) →
+[最新实际ceiling部分轨迹/停止报告](reports/CEILING_V2_ACTUAL_PARTIAL_ZH.md) →
+[前次prompt v2传输停止与诊断修复](reports/PROMPT_V2_VALIDATION_STOP_ZH.md) →
 [前次双动作诊断](reports/SINGLE_DIAGNOSTIC_ACTUAL_ZH.md) →
 [持久诊断v2修复](reports/PERSISTENT_DIAGNOSIS_V2_ZH.md) →
 [USD50真实接口停止报告](reports/CEILING50_ACTUAL_STOP_ZH.md)（[模型最大费用上界](reports/MODEL_MAXIMUM_BOUND_ZH.md)、
@@ -87,8 +88,8 @@ v2采用标准库自包含边界，避免新代码依赖未上传的运行包。
 尚无模型头/训练器。proposal失效/关键点合并已通过本地mock，
 持久调用边界通过本地故障测试，模型级费用bound已核来源/本地实现；
 真实完整API/应用接口与tool/episode端到端恢复未通过；
-本轮规则NPC48slot上限已获独立USD50批准，但新prompt验证再次unknown，
-未进入48slot，不能自动重发；此前两笔unknown也不释放。
+本轮规则NPC48slot上限已获独立USD50批准；最新preflight通过后真实batch首slot遇新unknown，
+0完整episode，不能自动重发；此前三个unknown也不释放。
 context_view仅验收保留/溢出规则，未用真实Qwen tokenizer证明6k容量。
 
 ## 指纹与未决门
@@ -115,5 +116,7 @@ context_view仅验收保留/溢出规则，未用真实Qwen tokenizer证明6k容
 [零API传输诊断补丁验收](reports/TRANSPORT_STAGE_DIAGNOSIS_CHECK.json)与
 [补丁发布字节指纹](reports/TRANSPORT_STAGE_PUBLICATION_MANIFEST.json)另列；
 这是HTTP→ledger可诊断性修复，未发新的真实请求，也不推断旧传输原因。
+[最新真实ceiling机器证据](reports/CEILING_V2_ACTUAL_PARTIAL_CHECK.json)与
+[当前发布字节指纹](reports/CEILING_V2_ACTUAL_PUBLICATION_MANIFEST.json)另列。
 TribalBench原MIT scorer已固定字节、复制并实际本地执行；旧fixture checker依然不是`tribalbench-1.0`。
 真实ceiling未通过；新的真实请求、NPC语义/任务收益、新split/generator/模型均需后续阶段门。

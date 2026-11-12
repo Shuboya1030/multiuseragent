@@ -59,7 +59,7 @@ def test_approval(root, plan):
 
 
 class ContinuationTests(unittest.TestCase):
-    def test_transport_error_type_alone_cannot_identify_connect_send_headers_or_read_stage(self):
+    def test_transport_failure_now_retains_connect_send_headers_and_read_stages(self):
         failures = (("connect", OSError()),
                     ("request", http.client.CannotSendRequest()),
                     ("getresponse", http.client.RemoteDisconnected()),
@@ -168,7 +168,7 @@ class ContinuationTests(unittest.TestCase):
             finally:
                 lock.close()
 
-    def test_remaining_less_than_reserve_counts_both_unknowns_before_send(self):
+    def test_remaining_less_than_reserve_counts_three_unknowns_before_send(self):
         with tempfile.TemporaryDirectory(prefix="study4_v2_continuation_admission_") as folder:
             root, plan, approval, request = setup(Path(folder))
             provider = ScriptedTransport(plan)
