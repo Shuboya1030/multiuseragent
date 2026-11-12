@@ -1,6 +1,7 @@
 from copy import deepcopy
 from decimal import Decimal
 import hashlib
+import http.client
 from pathlib import Path
 import sqlite3
 import tempfile
@@ -12,6 +13,7 @@ from .ceiling_continuation import (PROMPT_VERSION, SOURCE, VERSION, make_plan, r
                                    validate_once, verify_history)
 from .contracts import fingerprint
 from .durable import BatchBusy, BatchLock, DurableLedger
+from .http_transport import HTTPTransport
 from .local_ceiling_check import make_case
 from .mini_request import build_provider_request
 from .test_durable_preflight import approval_for
@@ -57,6 +59,32 @@ def test_approval(root, plan):
 
 
 class ContinuationTests(unittest.TestCase):
+    def test_transport_error_type_alone_cannot_identify_connect_send_headers_or_read_stage(self):
+        failures = (("connect", OSError()),
+                    ("request", http.client.CannotSendRequest()),
+                    ("getresponse", http.client.RemoteDisconnected()),
+                    ("read", http.client.IncompleteRead(b"LOCAL_PARTIAL_NOT_RETURNED")))
+        for stage, error in failures:
+            with self.subTest(stage=stage), tempfile.TemporaryDirectory(
+                    prefix="study4_v2_continuation_transport_") as folder:
+                root, plan, approval, request = setup(Path(folder))
+                provider = HTTPTransport(plan["endpoint"], plan["mode"], credential="LOCAL_MOCK_NOT_A_KEY")
+                with patch("research.study4.v2.http_transport.http.client.HTTPSConnection") as factory:
+                    connection = factory.return_value
+                    if stage == "read":
+                        response = connection.getresponse.return_value.__enter__.return_value
+                        response.status = 200
+                        response.getheader.return_value = "application/json"
+                        response.read.side_effect = error
+                    else:
+                        getattr(connection, stage).side_effect = error
+                    result = validate_once(root, plan, approval, request, provider)
+                self.assertEqual(result["error_type"], "TransportFailure")
+                self.assertEqual(result["calls"][0]["diagnostic"], {})
+                self.assertIsNone(result["calls"][0]["response_bytes"])
+                self.assertEqual(Decimal(result["budget"]["held_USD_upper"]), Decimal("2.574"))
+                self.assertFalse((root / "ACTUAL_RESPONSE_SHAPE.json").exists())
+
     def test_one_success_prior_unknowns_unchanged_then_same_48_slot_batch_with_cumulative_cost(self):
         with tempfile.TemporaryDirectory(prefix="study4_v2_continuation_success_") as folder:
             root, plan, approval, request = setup(Path(folder))

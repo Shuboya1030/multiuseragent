@@ -1,12 +1,13 @@
 # Study4 v2：共享协议、固定scorer与本地调度验收
 
-**当前完成本地接口与driver验收，独立USD50真实ceiling首请求因响应/动作门失败而停；
-随后获准的一次诊断证实双message动作冲突也已停，累计2calls/unknownUSD1.716；
-完整episode为0，尚无四臂任务收益；没有新训练或5000题生成。**
+**单动作prompt v2的一次新验证在传输层停止；累计3次本地dispatch尝试、
+unknownUSD2.574，仍占原USD50总帽，并非实付。0工具、0完整episode，
+48slot未开始，尚无四臂任务收益；没有新训练或5000题生成。**
 旧SFT87及其32episode结果不变，[旧结果入口](../README.md)继续保留。
 
 阅读：[v1.1设计/变更合同](DESIGN_v1_1_ZH.md)＋[v1.2本地适配补充](LOCAL_ADAPTER_CONTRACT_v1_2_ZH.md) →
-[最新一次真实诊断结果](reports/SINGLE_DIAGNOSTIC_ACTUAL_ZH.md) →
+[最新prompt v2真实验证停止报告](reports/PROMPT_V2_VALIDATION_STOP_ZH.md) →
+[前次双动作诊断](reports/SINGLE_DIAGNOSTIC_ACTUAL_ZH.md) →
 [持久诊断v2修复](reports/PERSISTENT_DIAGNOSIS_V2_ZH.md) →
 [USD50真实接口停止报告](reports/CEILING50_ACTUAL_STOP_ZH.md)（[模型最大费用上界](reports/MODEL_MAXIMUM_BOUND_ZH.md)、
 [持久执行前门](reports/DURABLE_PREFLIGHT_ZH.md)、
@@ -29,6 +30,7 @@ python -m unittest research.study4.v2.test_paid_driver -v
 python -m unittest research.study4.v2.test_persistent_diagnosis -v
 python -m unittest research.study4.v2.test_diagnostic_dispatch -v
 python -m unittest research.study4.v2.test_prompt_single_action -v
+python -m unittest research.study4.v2.test_ceiling_continuation -v
 python -m research.study4.v2.local_acceptance --output LOCAL_PROOF_NEW.json
 python -m research.study4.v2.local_ceiling_check --output LOCAL_ADAPTER_NEW.json
 ```
@@ -59,10 +61,10 @@ durable tests仅创建临时SQLite及本机127.0.0.1 HTTP服务，故障退出�
 | [budget.py](budget.py) | 内存模拟token/call/episode/USD reservation与unknown-stop；非paid ledger |
 | [training_data.py](training_data.py) | 三头acceptable tuple/mask/public投影与严格cross-group proof |
 | [test_ceiling_adapter.py](test_ceiling_adapter.py) | 六题适配、私有边界、调度、费用和监督接口针对性测试 |
-| [admission.py](admission.py) | 独立授权/价格/runtime/static schema与模型最大token费用bound；预算/真实接口仍未批准/验收 |
+| [admission.py](admission.py) | 独立授权/价格/runtime/static schema与模型最大token费用bound；USD50已批，真实完整接口未验收 |
 | [provider_bound.py](provider_bound.py) | 固定snapshot/standard纯文本域的272000＋128000模型上界，非税费等所有账单保证 |
 | [durable.py](durable.py) | 持久reserve/settle/unknown、崩溃恢复、一次call缓存与OS批次互斥 |
-| [http_transport.py](http_transport.py) | 一次性permit后单次HTTP；无隐式key/代理/redirect/retry；只在loopback实测 |
+| [http_transport.py](http_transport.py) | 一次性permit后单次HTTP；无隐式key/代理/redirect/retry；本次真实尝试传输unknown |
 | [test_durable_preflight.py](test_durable_preflight.py) | 真实子进程退出/并发、SQLite与loopback故障注入测试 |
 | [paid_driver.py](paid_driver.py) | 绑定独立批准/唯一fresh批次，逐call/event/slot持久证据；中断后禁止工具或episode重放 |
 | [test_paid_driver.py](test_paid_driver.py) | 48slot脚本回放、漂移/usage失败、工具生效后中断及禁止二次启动 |
@@ -70,6 +72,8 @@ durable tests仅创建临时SQLite及本机127.0.0.1 HTTP服务，故障退出�
 | [recovery_guard.py](recovery_guard.py) | 显式来源/批准绑定的单诊断例外门，同50总帽先计入旧unknown；一次额度已用完 |
 | [test_persistent_diagnosis.py](test_persistent_diagnosis.py) | 7阶段真实子进程退出后读回、旧metadata拒绝、累计旧占用与新批准门 |
 | [diagnostic_dispatch.py](diagnostic_dispatch.py) | 显式新批准的一次请求，继承旧unknown并持原批mutex；不执行工具、不恢复episode |
+| [ceiling_continuation.py](ceiling_continuation.py) | 新来源绑定的一次prompt v2验证，继承两笔旧unknown；只有合法settle才允许原48slot fresh批次 |
+| [test_ceiling_continuation.py](test_ceiling_continuation.py) | 临时ledger/mock的同帽、前置成功门、48脚本slot、互斥、漂移/重复拒绝及传输候选边界 |
 
 v1的`HelpRuntime/ServiceRuntime`不改：本版本保留它们的tool envelope、虚拟路径边界、
 stable ID/幂等读和ASK→自动交付→普通一步语义，做独立的小型本地协议实现。
@@ -81,7 +85,8 @@ v2采用标准库自包含边界，避免新代码依赖未上传的运行包。
 尚无模型头/训练器。proposal失效/关键点合并已通过本地mock，
 持久调用边界通过本地故障测试，模型级费用bound已核来源/本地实现；
 真实完整API/应用接口与tool/episode端到端恢复未通过；
-本轮规则NPC48slot上限已获独立USD50批准，但首call unknown使批次停止，不能自动重发。
+本轮规则NPC48slot上限已获独立USD50批准，但新prompt验证再次unknown，
+未进入48slot，不能自动重发；此前两笔unknown也不释放。
 context_view仅验收保留/溢出规则，未用真实Qwen tokenizer证明6k容量。
 
 ## 指纹与未决门
@@ -101,7 +106,9 @@ context_view仅验收保留/溢出规则，未用真实Qwen tokenizer证明6k容
 [原失败发布字节指纹](reports/CEILING50_PUBLICATION_MANIFEST.json)绑定历史commit `88f1134`。
 [持久诊断机器验收](reports/PERSISTENT_DIAGNOSIS_V2_CHECK.json)与
 [其发布字节指纹](reports/PERSISTENT_DIAGNOSIS_V2_PUBLICATION_MANIFEST.json)绑定历史commit `0cfe45c`。
-[当前单请求实际证据](reports/SINGLE_DIAGNOSTIC_ACTUAL_CHECK.json)与
-[当前发布字节指纹](reports/SINGLE_DIAGNOSTIC_PUBLICATION_MANIFEST.json)另列。
+[前次单请求实际证据](reports/SINGLE_DIAGNOSTIC_ACTUAL_CHECK.json)与
+[前次发布字节指纹](reports/SINGLE_DIAGNOSTIC_PUBLICATION_MANIFEST.json)绑定历史`8d10359`。
+[最新prompt v2实际证据](reports/PROMPT_V2_VALIDATION_CHECK.json)与
+[本轮发布字节指纹](reports/PROMPT_V2_CONTINUATION_PUBLICATION_MANIFEST.json)另列。
 TribalBench原MIT scorer已固定字节、复制并实际本地执行；旧fixture checker依然不是`tribalbench-1.0`。
-付费ceiling、真实API/NPC语义/持久费用、新split/generator/模型均需后续阶段门。
+真实ceiling未通过；新的真实请求、NPC语义/任务收益、新split/generator/模型均需后续阶段门。
