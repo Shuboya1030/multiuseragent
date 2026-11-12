@@ -85,8 +85,17 @@ Windows自持byte-range mutex不允许再读该锁字节；锁内跳过**仅mute
 
 **尚不具备恢复ceiling的完整接口验收条件。** 单消息/单动作的provider实测门仍失败，
 没有真实完整episode或四臂配对收益；privileged参考也没有变成trained-controller能力。
-若做最小零API修正，应先明确提示“一个assistant final消息、只提一个动作并停止，
-其余步骤等待下一cycle”，仍保持原action/tool/参数校验拒绝多动作。
-这只是提示约束澄清，不能宣称已经用真实API证明会遵守。
+已按随后限定的零API修正，将[共享ordinary prompt](../executor.py)版本明确为
+`study4-ordinary-single-action-v2`：当前回合只选一个动作，一个final assistant消息后停止等工具结果；
+禁止commentary/第二个JSON/当前响应中的后续post或submit，
+write→post→submit只作为多个未来交互回合的总目标。四臂共用同版，action/tool/参数门原样不放宽。
+原实际发送源码先固化在commit `0f88f231f962f41566bd3e9f7e3a8638d1f4fdc7`，
+原请求与两个unknown账本不改，新prompt另有source/prompt_version binding。
+这只是消除潜在请求歧义的缓解；**没有证明旧多步措辞是本次双消息的因果根因，
+也没有真实验证新prompt一定单条。** 多动作仍拒绝，不取第一条、不合并执行、不扩大SELF。
+新增[2项离线回归](../test_prompt_single_action.py)验证四臂同请求、单合法动作接受、
+双message及坏参数仍拒绝。零额外API，完整验收105项。
+旧24脚本适配报告文件保留；新prompt改变mock请求token成本，
+[新版本脚本适配报告](LOCAL_ADAPTER_PROMPT_V2_CHECK.json)单列，不冒充原字节复现或新模型收益。
 任何再验证或恢复48slot均需新的明确范围/费用处置批准；本轮不再付费。
 不连接GPU、不恢复旧训练、不扩题或调reward。

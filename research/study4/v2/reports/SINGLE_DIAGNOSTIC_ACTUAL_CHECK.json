@@ -28,7 +28,7 @@
       "scheduler.py": "d5aa3f3ec86b9b6401e7a4f42909c1a08dd95508ff5a3dbdaf565327fd239cf3"
     }
   },
-  "actual_source_preserved_commit": null,
+  "actual_source_preserved_commit": "0f88f231f962f41566bd3e9f7e3a8638d1f4fdc7",
   "original_request_sha256": "977150bed8a4c3477abbee2fa260b5e782925770747b2cd2a626e91acbacd8c9",
   "same_request_semantics_not_same_response": true,
   "actual_original_failure_cause_still_unknown": true,
@@ -499,8 +499,10 @@
     "model_HTTP_calls": 0,
     "second_guard": "Own Windows byte-range lock prevented hashing original mutex byte"
   },
-  "local_tests_passed": 103,
+  "local_tests_passed": 105,
   "passed_test_ids": [
+    "research.study4.v2.test_prompt_single_action.SingleActionPromptTests.test_all_arms_share_same_one_turn_ordinary_payload_and_unmodified_action_contract",
+    "research.study4.v2.test_prompt_single_action.SingleActionPromptTests.test_single_legal_action_accepted_but_two_messages_or_bad_arguments_still_rejected",
     "research.study4.v2.test_diagnostic_dispatch.SingleDiagnosticTests.test_exact_frozen_empty_wal_allowed_but_any_wal_frames_block",
     "research.study4.v2.test_diagnostic_dispatch.SingleDiagnosticTests.test_exactly_one_success_settles_only_new_call_prior_unchanged_no_tools_or_replay",
     "research.study4.v2.test_diagnostic_dispatch.SingleDiagnosticTests.test_one_decode_failure_retains_both_unknowns_and_safe_actual_shape",
@@ -606,6 +608,6 @@
     "research.study4.test_teacher87_native_agent.Tests.test_shared_prompt_expresses_native_and_controlled_modes_without_unconditional_ban"
   ],
   "historical_fixture_report_exact_current_reproduction": true,
-  "historical_adapter_report_exact_current_reproduction": true,
+  "historical_adapter_report_exact_current_reproduction": false,
   "old_results_checkpoint_and_closed_ledger_hashes_unchanged": true
 }

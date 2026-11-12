@@ -1,6 +1,7 @@
 # Study4 v2：共享协议、固定scorer与本地调度验收
 
 **当前完成本地接口与driver验收，独立USD50真实ceiling首请求因响应/动作门失败而停；
+随后获准的一次诊断证实双message动作冲突也已停，累计2calls/unknownUSD1.716；
 完整episode为0，尚无四臂任务收益；没有新训练或5000题生成。**
 旧SFT87及其32episode结果不变，[旧结果入口](../README.md)继续保留。
 
@@ -27,6 +28,7 @@ python -m unittest research.study4.v2.test_provider_bound -v
 python -m unittest research.study4.v2.test_paid_driver -v
 python -m unittest research.study4.v2.test_persistent_diagnosis -v
 python -m unittest research.study4.v2.test_diagnostic_dispatch -v
+python -m unittest research.study4.v2.test_prompt_single_action -v
 python -m research.study4.v2.local_acceptance --output LOCAL_PROOF_NEW.json
 python -m research.study4.v2.local_ceiling_check --output LOCAL_ADAPTER_NEW.json
 ```
@@ -65,7 +67,7 @@ durable tests仅创建临时SQLite及本机127.0.0.1 HTTP服务，故障退出�
 | [paid_driver.py](paid_driver.py) | 绑定独立批准/唯一fresh批次，逐call/event/slot持久证据；中断后禁止工具或episode重放 |
 | [test_paid_driver.py](test_paid_driver.py) | 48slot脚本回放、漂移/usage失败、工具生效后中断及禁止二次启动 |
 | [response_diagnosis.py](response_diagnosis.py) | 实际decode路径逐阶段错误和脱敏shape，失败事务持久化；不保留任意正文 |
-| [recovery_guard.py](recovery_guard.py) | 默认禁用的单诊断例外门，同50总帽先计入旧unknown；无provider恢复dispatcher |
+| [recovery_guard.py](recovery_guard.py) | 显式来源/批准绑定的单诊断例外门，同50总帽先计入旧unknown；一次额度已用完 |
 | [test_persistent_diagnosis.py](test_persistent_diagnosis.py) | 7阶段真实子进程退出后读回、旧metadata拒绝、累计旧占用与新批准门 |
 | [diagnostic_dispatch.py](diagnostic_dispatch.py) | 显式新批准的一次请求，继承旧unknown并持原批mutex；不执行工具、不恢复episode |
 

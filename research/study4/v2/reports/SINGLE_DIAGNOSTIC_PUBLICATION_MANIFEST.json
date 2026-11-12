@@ -6,8 +6,8 @@
   "tools": 0,
   "cap_USD": "50.00",
   "cumulative_unknown_hold_USD": "1.716000",
-  "tests_passed": 103,
-  "relative_links_checked": 132,
+  "tests_passed": 105,
+  "relative_links_checked": 135,
   "files": {
     "research/study4/README.md": {
       "bytes": 4661,
@@ -51,7 +51,7 @@
     },
     "research/study4/v2/configs/durable_preflight_pending.json": {
       "bytes": 2830,
-      "sha256": "b4d9bc77da84eb8dc6e6869b7eea81dc105abfc9afcbd67d7ac8a9b07232138c",
+      "sha256": "cbd182c3075b02307be87dc81d096663cd970da558124ceba1a1ec224d2fbb4c",
       "byte_semantics": "Git UTF8 LF bytes"
     },
     "research/study4/v2/configs/fit_sanity_spec.json": {
@@ -90,8 +90,8 @@
       "byte_semantics": "Git UTF8 LF bytes"
     },
     "research/study4/v2/executor.py": {
-      "bytes": 3247,
-      "sha256": "2044e4e1d454ff31df3bf67a7094e1470191eff28046a553b3dd5f1496862c6d",
+      "bytes": 3841,
+      "sha256": "a4eb3230e7f67927a995a32cc4114f802ee3e96ca0ed5ec90ee5285464e4f2fc",
       "byte_semantics": "Git UTF8 LF bytes"
     },
     "research/study4/v2/fixtures.py": {
@@ -145,8 +145,8 @@
       "byte_semantics": "Git UTF8 LF bytes"
     },
     "research/study4/v2/README.md": {
-      "bytes": 8501,
-      "sha256": "620977a46849329dfba342259526ae4733827922e04704e4e21087c33d8fdebf",
+      "bytes": 8674,
+      "sha256": "73469648d931f19fa4756312da3fac759e5de72bf90a58b6f5b8fd848a16e616",
       "byte_semantics": "Git UTF8 LF bytes"
     },
     "research/study4/v2/recovery_guard.py": {
@@ -204,6 +204,11 @@
       "sha256": "2e43b3312c789715bd0480956a1141e3edc2200d7589bb912d1f02981485ef09",
       "byte_semantics": "Git UTF8 LF bytes"
     },
+    "research/study4/v2/reports/LOCAL_ADAPTER_PROMPT_V2_CHECK.json": {
+      "bytes": 98870,
+      "sha256": "0de7cfce41e863d672e5a0ca9a8cebb73e4c2e5db18cef53032881d2be30bf78",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
     "research/study4/v2/reports/LOCAL_ADAPTER_PUBLICATION_MANIFEST.json": {
       "bytes": 17206,
       "sha256": "b9a7608957621ff5558def3bbb820a811fa08cd58fba685a0801cd655fec8e6a",
@@ -255,13 +260,13 @@
       "byte_semantics": "Git UTF8 LF bytes"
     },
     "research/study4/v2/reports/SINGLE_DIAGNOSTIC_ACTUAL_CHECK.json": {
-      "bytes": 31103,
-      "sha256": "92b567c42ef4b82900f2c5ed71c51c71ce3b471689110466c868b7ac4a8abe32",
+      "bytes": 31459,
+      "sha256": "84bdb81d3272b2e276bea5567c3056b87e9e8e9b362f9e3aa08048736cc8e413",
       "byte_semantics": "Git UTF8 LF bytes"
     },
     "research/study4/v2/reports/SINGLE_DIAGNOSTIC_ACTUAL_ZH.md": {
-      "bytes": 5980,
-      "sha256": "1f23622e81c9036b206eecaa1c40b1c748d720408a5d463dadf85af0761d8616",
+      "bytes": 6905,
+      "sha256": "2853b41c029839e316bbe240c3aba748b425b49c95d58307b3ea8ad0ce1af7d5",
       "byte_semantics": "Git UTF8 LF bytes"
     },
     "research/study4/v2/response_diagnosis.py": {
@@ -302,6 +307,11 @@
     "research/study4/v2/test_persistent_diagnosis.py": {
       "bytes": 9276,
       "sha256": "8462ca30e8607afdd6c996dba0e4f1604e5c8c5379f9a14b3a029c41ad3a6917",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/test_prompt_single_action.py": {
+      "bytes": 2651,
+      "sha256": "0b45600584ac7936a46874f84d50dc43511b798c16798402e6deb6486a314e16",
       "byte_semantics": "Git UTF8 LF bytes"
     },
     "research/study4/v2/test_protocol.py": {
