@@ -4,7 +4,7 @@ from dataclasses import asdict
 import json
 
 from .contracts import canonical, fingerprint, require, workspace_path
-from .executor import PROTOCOL, parse_tool
+from .executor import PROTOCOL, parse_tool, validate_question
 
 
 class ContextOverflow(ValueError):
@@ -23,10 +23,13 @@ class SharedRuntime:
         self.artifact_revision, self.posted_revision = 0, None
         self.answer, self.terminal, self.failed = None, False, False
         self.after_reply = False
+        self.event_sink = None
 
     def _event(self, kind, **fields):
         row = {"event_id": f"{self.episode_id}:event:{len(self.history)}", "kind": kind, **fields}
         self.history.append(row)
+        if self.event_sink is not None:
+            self.event_sink(deepcopy(row))
         return row
 
     def progress(self):
@@ -143,10 +146,12 @@ class SharedRuntime:
             self.terminal = True
             self._event("action_limit", bridge_submitted=False)
 
-    def cycle(self, decision):
+    def cycle(self, decision, proposed_tool=None, question=None):
         require(not self.terminal and not self.failed, "Cannot advance a stopped episode")
         observation = self.observe()
         decision.validate(self.task, observation["obtained_values"])
+        require(proposed_tool is None or decision.action != "ASK", "ASK invalidates a speculative ordinary action")
+        require(question is None or decision.action == "ASK", "Only ASK can carry an executor question")
         self.after_reply = False
         self._event("control_decision", action=decision.action, person_id=decision.person_id)
         try:
@@ -156,7 +161,8 @@ class SharedRuntime:
             if decision.action == "ASK":
                 require(self.contacts < self.max_actions, "Contact cap reached")
                 selected = [v for v in observation["obtained_values"] if v["value_id"] in decision.include_value_ids]
-                question = self.executor.question(observation, decision.person_id, decision.intent, selected)
+                question = (self.executor.question(observation, decision.person_id, decision.intent, selected)
+                            if question is None else validate_question(question, decision.intent, selected))
                 request_id = f"{self.episode_id}:contact:{self.contacts}:out"
                 self.contacts += 1
                 self.cost += next(p.cost for p in self.task.people if p.person_id == decision.person_id)
@@ -166,7 +172,7 @@ class SharedRuntime:
                 reply = self.npc.reply(decision.person_id, question, request_id)
                 self._deliver({"message_id": request_id.removesuffix(":out") + ":reply",
                                "in_reply_to": request_id, "person_id": decision.person_id, "content": reply})
-            command = self.executor.ordinary(self.observe())
+            command = proposed_tool if proposed_tool is not None else self.executor.ordinary(self.observe())
             require(decision.action != "SUBMIT" or command.name == "submit",
                     "SUBMIT requires an executor-produced submission, not a controller answer")
             self._normal(command)

@@ -1,0 +1,97 @@
+{
+  "task_id": "m-med-contractor-invoice",
+  "help_class": "Must-help",
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Li Ming"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      },
+      {
+        "id": "h2",
+        "admissible_recipients": [
+          "Li Ming"
+        ],
+        "information_ids": [
+          "H2"
+        ],
+        "requires": [
+          "h1"
+        ]
+      }
+    ],
+    "edges": [
+      [
+        "h1",
+        "h2"
+      ]
+    ]
+  },
+  "hidden_information": [
+    {
+      "id": "H1",
+      "holder": "Li Ming",
+      "facts": {
+        "hours": 88
+      },
+      "required_context": [
+        "DBX",
+        "October"
+      ],
+      "release_rule": "Provide final October hours."
+    },
+    {
+      "id": "H2",
+      "holder": "Li Ming",
+      "facts": {
+        "authorization_ref": "INV-APR-5521"
+      },
+      "required_context": [
+        "88",
+        "13200"
+      ],
+      "release_rule": "Approve when final hours and amount are cited."
+    }
+  ],
+  "full_information_reference": {
+    "vendor": "DBX Consulting",
+    "hours": 88,
+    "amount_usd": 13200,
+    "authorization_ref": "INV-APR-5521"
+  },
+  "no_contact_reference": {
+    "vendor": "DBX Consulting",
+    "hours": 64,
+    "amount_usd": 9600,
+    "authorization_ref": "PENDING"
+  },
+  "candidate_pool": [
+    "Mike Chen",
+    "Jessica Chen",
+    "Chen Xinyi",
+    "Liu Qiang",
+    "Sarah Johnson",
+    "Alex Turner",
+    "Huang Jie",
+    "Li Ming"
+  ],
+  "feature_scores": [
+    1,
+    1,
+    0,
+    1
+  ],
+  "difficulty_score": 3,
+  "dependency_depth": 2,
+  "separation": "aligned",
+  "structure": "info-approval",
+  "domain": "finance",
+  "cue": null,
+  "quality": null
+}

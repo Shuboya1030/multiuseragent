@@ -1,0 +1,100 @@
+{
+  "task_id": "m-medium-research-purchase",
+  "help_class": "Must-help",
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "allocation",
+        "admissible_recipients": [
+          "Wang Fang"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      },
+      {
+        "id": "release",
+        "admissible_recipients": [
+          "David Wong"
+        ],
+        "information_ids": [
+          "H2"
+        ],
+        "requires": [
+          "allocation"
+        ]
+      }
+    ],
+    "edges": [
+      [
+        "allocation",
+        "release"
+      ]
+    ]
+  },
+  "hidden_information": [
+    {
+      "id": "H1",
+      "holder": "Wang Fang",
+      "facts": {
+        "seats": 20,
+        "allocation_revision": "P-03",
+        "budget_code": "AI-26-B"
+      },
+      "required_context": [
+        "Pine"
+      ],
+      "release_rule": "Supply the current allocation when the project is identified; you cannot issue an order release."
+    },
+    {
+      "id": "H2",
+      "holder": "David Wong",
+      "facts": {
+        "release_reference": "VB-REL-203"
+      },
+      "required_context": [
+        "P-03",
+        "12000",
+        "AI-26-B"
+      ],
+      "release_rule": "Release only when current revision, amount and budget are supplied. Otherwise state missing fields without revealing the release reference."
+    }
+  ],
+  "full_information_reference": {
+    "seats": 20,
+    "total_usd": 12000,
+    "allocation_revision": "P-03",
+    "budget_code": "AI-26-B",
+    "release_reference": "VB-REL-203"
+  },
+  "no_contact_reference": {
+    "seats": 16,
+    "total_usd": 9600,
+    "allocation_revision": "P-01",
+    "budget_code": "AI-26-A",
+    "release_reference": "VB-PLAN-16"
+  },
+  "candidate_pool": [
+    "Jessica Lee",
+    "Priya Sharma",
+    "Zhang Wei",
+    "Huang Jie",
+    "David Wong",
+    "Emily Zhou",
+    "Mike Chen",
+    "Wang Fang"
+  ],
+  "feature_scores": [
+    1,
+    1,
+    1,
+    2
+  ],
+  "difficulty_score": 5,
+  "dependency_depth": 2,
+  "separation": "separated",
+  "structure": "info-approval",
+  "domain": "procurement",
+  "cue": null
+}

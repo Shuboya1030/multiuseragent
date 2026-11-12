@@ -1,0 +1,94 @@
+{
+  "task_id": "m-low-customer-mailing",
+  "help_class": "Must-help",
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Mark Johnson"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      },
+      {
+        "id": "h2",
+        "admissible_recipients": [
+          "Mark Johnson"
+        ],
+        "information_ids": [
+          "H2"
+        ],
+        "requires": [
+          "h1"
+        ]
+      }
+    ],
+    "edges": [
+      [
+        "h1",
+        "h2"
+      ]
+    ]
+  },
+  "hidden_information": [
+    {
+      "id": "H1",
+      "holder": "Mark Johnson",
+      "facts": {
+        "segment_id": "SEG-Q4-ENT",
+        "recipient_count": 455
+      },
+      "required_context": [
+        "upgrade",
+        "enterprise"
+      ],
+      "release_rule": "Provide the current enterprise segment and count."
+    },
+    {
+      "id": "H2",
+      "holder": "Mark Johnson",
+      "facts": {
+        "authorization_ref": "APR-Q4-77"
+      },
+      "required_context": [
+        "SEG-Q4-ENT",
+        "455"
+      ],
+      "release_rule": "Approve only when the current segment and count are cited."
+    }
+  ],
+  "full_information_reference": {
+    "segment_id": "SEG-Q4-ENT",
+    "recipient_count": 455,
+    "send_date": "2026-11-12",
+    "authorization_ref": "APR-Q4-77"
+  },
+  "no_contact_reference": {
+    "segment_id": "SEG-Q3-ENT",
+    "recipient_count": 420,
+    "send_date": "2026-11-12",
+    "authorization_ref": "APR-Q3"
+  },
+  "candidate_pool": [
+    "Mark Johnson",
+    "Li Ming",
+    "Jessica Chen",
+    "Jessica Lee"
+  ],
+  "feature_scores": [
+    0,
+    1,
+    0,
+    0
+  ],
+  "difficulty_score": 1,
+  "dependency_depth": 2,
+  "separation": "aligned",
+  "structure": "info-approval",
+  "domain": "sales",
+  "cue": null,
+  "quality": null
+}

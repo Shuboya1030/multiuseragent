@@ -1,0 +1,78 @@
+{
+  "task_id": "o-low-demo-dataset",
+  "help_class": "Optional-help",
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Emily Zhou"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      }
+    ],
+    "edges": []
+  },
+  "hidden_information": [
+    {
+      "id": "H1",
+      "holder": "Emily Zhou",
+      "facts": {
+        "dataset_id": "DS-DEMO-5",
+        "document_count": 610000,
+        "refreshed_on": "2026-10-15"
+      },
+      "required_context": [
+        "demo"
+      ],
+      "release_rule": "Provide the latest demo dataset. DS-DEMO-2 remains usable."
+    }
+  ],
+  "full_information_reference": {
+    "dataset_id": "DS-DEMO-5",
+    "document_count": 610000,
+    "refreshed_on": "2026-10-15"
+  },
+  "no_contact_reference": {
+    "dataset_id": "DS-DEMO-2",
+    "document_count": 420000,
+    "refreshed_on": "2025-12-01"
+  },
+  "candidate_pool": [
+    "Emily Zhou",
+    "Priya Sharma",
+    "Zhang Wei",
+    "David Wong",
+    "Mark Johnson",
+    "Jessica Lee",
+    "Sarah Johnson",
+    "Li Ming"
+  ],
+  "feature_scores": [
+    1,
+    0,
+    1,
+    0
+  ],
+  "difficulty_score": 2,
+  "dependency_depth": 1,
+  "separation": null,
+  "structure": null,
+  "domain": "sales-engineering",
+  "cue": {
+    "documents": [
+      "demo.md"
+    ],
+    "description": "Explicit: dataset age and producing team."
+  },
+  "quality": {
+    "dimension": "dataset_age_days_at_demo",
+    "baseline": 339,
+    "full_information": 21,
+    "minimum_improvement": 200,
+    "constraints": []
+  }
+}

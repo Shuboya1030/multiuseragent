@@ -43,6 +43,13 @@ def parse_tool(value):
     return Tool(data["tool"], tuple(sorted(args.items())))
 
 
+def validate_question(question, intent, values):
+    require(isinstance(question, str) and contains_intent(question, intent), "Question lost its public intent")
+    require(all(contains_field(question, row["key"], row["value"]) for row in values),
+            "Question lost included evidence; no silent repair")
+    return question
+
+
 class SharedExecutor:
     def __init__(self, generate, identity="explicit-local-mock"):
         self.generate, self.identity = generate, identity
@@ -62,8 +69,5 @@ class SharedExecutor:
                            "Do not change recipient, drop included values, or invent facts.",
         }
         data = json.loads(self.generate(request))
-        require(isinstance(data, dict) and set(data) == {"question"} and isinstance(data["question"], str)
-                and contains_intent(data["question"], intent), "Question lost its public intent")
-        require(all(contains_field(data["question"], row["key"], row["value"])
-                    for row in values), "Question lost included evidence; no silent repair")
-        return data["question"]
+        require(isinstance(data, dict) and set(data) == {"question"}, "Invalid question envelope")
+        return validate_question(data["question"], intent, values)

@@ -1,0 +1,197 @@
+{
+  "repository": "Shuboya1030/tribalbench",
+  "revision": "4260bdc626548f59042f318cdf0566490e91b9d5",
+  "license": "MIT",
+  "files": {
+    "LICENSE": {
+      "sha256": "f70b14da13c8e87f7b14ae325bae1ad4cb1ddeb8cbe2c9b65ab13a8769b269f5",
+      "bytes": 1067,
+      "git_blob": "2b038b59ec11b2ed3654a47a331cf18c7437d0e6"
+    },
+    "scorer/scorer.py": {
+      "sha256": "e6b47e4a251bdc44d2fbfe389e12b81273e6472092958fe04e33297f28a33e78",
+      "bytes": 18384,
+      "git_blob": "85ff59b7beacde667c7c60932e763aecf9e7fe92"
+    },
+    "organization/roster.json": {
+      "sha256": "54790b2ad904886258e442767cb94c37b1272f986a195448512897181afc5ef2",
+      "bytes": 7685,
+      "git_blob": "8d186380730d22986f91882ec8320723af2ae6ec"
+    },
+    "tasks/m-low-customer-mailing/gold/blueprint.json": {
+      "sha256": "903b58bf7f60d4539dc90090388ade92ef1c8fc6898fdc0392d631d97a066ee7",
+      "bytes": 1839,
+      "git_blob": "56ba64ab4d4e7a4463d0bbcfb79e62fe74ce081a"
+    },
+    "tasks/m-low-customer-mailing/gold/colleague_costs.json": {
+      "sha256": "30bbb7c7c21220b9bfa35981b8f220810328bbd7b07a450a6979b4b113875502",
+      "bytes": 335,
+      "git_blob": "ccfa8964a1871cd726eb28d7e75325c37e532b02"
+    },
+    "tasks/m-low-customer-mailing/public/documents/directory.md": {
+      "sha256": "f9be8b14c460c6673d9ca9eb11152211ed6ea1f3d1c35cc6b195eaa2eef3feb4",
+      "bytes": 1051,
+      "git_blob": "dc8e70e008c79d4ce0303d4b5bedc68032a4cce0"
+    },
+    "tasks/m-low-customer-mailing/public/documents/mailer.md": {
+      "sha256": "46672592a12f68556623edc604973d0467c97e0917fc0fd948bb18e403371a32",
+      "bytes": 138,
+      "git_blob": "20e01e0f250461abc5df92066fd89d59e643218f"
+    },
+    "tasks/m-low-customer-mailing/public/documents/mailing-policy.md": {
+      "sha256": "b8ccba7b34a3d552e2a8ff07513c70116e56ee09d70df548de40e7cefa1364c7",
+      "bytes": 171,
+      "git_blob": "f4991c037fb66c626545b8e5c93e6d6218a7c0e6"
+    },
+    "tasks/m-low-customer-mailing/public/instruction.md": {
+      "sha256": "7f581c475d4d4b3de60f6e12a1ddb0696fc33b88dad76643eba4777bdf5d7206",
+      "bytes": 258,
+      "git_blob": "7a876be9f01d8b6580e88e9f6474acb25d198829"
+    },
+    "tasks/m-low-policy-citation/gold/blueprint.json": {
+      "sha256": "35e993f86acc210d39b051162c5ab41d866b8c01f07fc67eb5047de8b1056bbd",
+      "bytes": 1407,
+      "git_blob": "43705242b18594d10f95428fcbfcd71b4b4d8067"
+    },
+    "tasks/m-low-policy-citation/gold/colleague_costs.json": {
+      "sha256": "30bbb7c7c21220b9bfa35981b8f220810328bbd7b07a450a6979b4b113875502",
+      "bytes": 335,
+      "git_blob": "ccfa8964a1871cd726eb28d7e75325c37e532b02"
+    },
+    "tasks/m-low-policy-citation/public/documents/checklist.md": {
+      "sha256": "93ad020f73d6eceb20a82bc5e50cc460c5f82656276269bcd0b212a69afa34f9",
+      "bytes": 110,
+      "git_blob": "66a3d33fd6ce25e53a282e50c02642fa205a4875"
+    },
+    "tasks/m-low-policy-citation/public/documents/directory.md": {
+      "sha256": "ed9a9f081a219237e18f68074794cd4553f3e4158c283af8d1c4918edfd6d816",
+      "bytes": 2019,
+      "git_blob": "5c17150394f1f6598d8544c3ea55037c9ebeb9c3"
+    },
+    "tasks/m-low-policy-citation/public/documents/wiki-policy.md": {
+      "sha256": "053fb875fa62147f0ad26c401374120322d6903de37657fd3622cc6f8a1b9002",
+      "bytes": 76,
+      "git_blob": "5213bf2e7321e7e946837ed6c1c84367d273cc7f"
+    },
+    "tasks/m-low-policy-citation/public/instruction.md": {
+      "sha256": "d4c36f3f2873edf19d65478ae33341fc7a6ba673980776c8e4118eedc383cc41",
+      "bytes": 225,
+      "git_blob": "5f5f07c2eca528e2cc5c9bb5396ecc9fc9487ed9"
+    },
+    "tasks/m-medium-research-purchase/gold/blueprint.json": {
+      "sha256": "b1471dba8a77ff9a88ef467a23a5e4eddecd79b3c28370d782a0c5bc516a5c0a",
+      "bytes": 2104,
+      "git_blob": "cd12706bde636bbb6104725d7ac35e1f75bfb3ec"
+    },
+    "tasks/m-medium-research-purchase/gold/colleague_costs.json": {
+      "sha256": "30bbb7c7c21220b9bfa35981b8f220810328bbd7b07a450a6979b4b113875502",
+      "bytes": 335,
+      "git_blob": "ccfa8964a1871cd726eb28d7e75325c37e532b02"
+    },
+    "tasks/m-medium-research-purchase/public/documents/directory.md": {
+      "sha256": "2dddd87300c15a3810939822b506abef5f9e99f83c903ec9e06f7921b908a169",
+      "bytes": 2130,
+      "git_blob": "d04be2fac9bbf79a95d9cf085eaf674e2f041712"
+    },
+    "tasks/m-medium-research-purchase/public/documents/policy.md": {
+      "sha256": "e803fcf879d3d318dcf61721f431e8d755584890a513554f7de978ff30d02101",
+      "bytes": 296,
+      "git_blob": "59a77ea92ca387ca94d58da72d4d0f32e290c6d5"
+    },
+    "tasks/m-medium-research-purchase/public/documents/project.md": {
+      "sha256": "fd91d9938db552a1e4fed209ef762816132804c9d1209847fab9484ce688e6e9",
+      "bytes": 151,
+      "git_blob": "a90e53c5e94cc584431f4026490b81a9c3633f3d"
+    },
+    "tasks/m-medium-research-purchase/public/documents/quote.md": {
+      "sha256": "9eb7b67671f113c5f0366adce49a1db00039b7d81c1589b8d0377e32307f381a",
+      "bytes": 92,
+      "git_blob": "9bc60f70163bc5b926afc3b7110663bfe9366baa"
+    },
+    "tasks/m-medium-research-purchase/public/instruction.md": {
+      "sha256": "68186a94d4d4af7490efd740ff60f4d3753d4e64719709c150463177ab60605a",
+      "bytes": 247,
+      "git_blob": "bf69a906fe87256618da1ad1ea5d2710a42cefb7"
+    },
+    "tasks/m-med-contractor-invoice/gold/blueprint.json": {
+      "sha256": "09ed7aa77260ca3838da47da73bb8fc43f816b4523e7ff592fb5547ebc097b65",
+      "bytes": 1772,
+      "git_blob": "0550cd55d41d0c82229f037fba6e76b3f4772d67"
+    },
+    "tasks/m-med-contractor-invoice/gold/colleague_costs.json": {
+      "sha256": "30bbb7c7c21220b9bfa35981b8f220810328bbd7b07a450a6979b4b113875502",
+      "bytes": 335,
+      "git_blob": "ccfa8964a1871cd726eb28d7e75325c37e532b02"
+    },
+    "tasks/m-med-contractor-invoice/public/documents/contractor-policy.md": {
+      "sha256": "4f518e7e07e90d57dc3a3a466287ef9402eec0c88e2ba8904932356c6ff4086e",
+      "bytes": 161,
+      "git_blob": "6fd67ec6619312a3fe827dfc98f06fe8d7449d88"
+    },
+    "tasks/m-med-contractor-invoice/public/documents/directory.md": {
+      "sha256": "69760766f0258fe4434428c92411d92a45bb24ad2c77843a1ed8497a8449d76c",
+      "bytes": 2059,
+      "git_blob": "c9b46b851fa49f5b9fea70a724d9de3c4090ba7a"
+    },
+    "tasks/m-med-contractor-invoice/public/documents/invoice.md": {
+      "sha256": "008c4393c3d4ce814cc519b439be6cc3d5452b1eb6a289f7fccbd95f2b4c5ca4",
+      "bytes": 116,
+      "git_blob": "5bd7027e43df355dc3627abc4fbd53e6e87fde9a"
+    },
+    "tasks/m-med-contractor-invoice/public/instruction.md": {
+      "sha256": "232704c06e38a46853dda60653dd9727b28df280f0b0d09d7e77ee3818cf82db",
+      "bytes": 224,
+      "git_blob": "b7a7e0515d46305de59c7c8d8a7a0669d23a5794"
+    },
+    "tasks/o-low-demo-dataset/gold/blueprint.json": {
+      "sha256": "018c72d1ee48b5bd2af0eec18eaeb1c13dc05514a4363144b12d97c7587a7c20",
+      "bytes": 1574,
+      "git_blob": "550298ae3e9d5bbe38c0ba27292f2dc01b634c3e"
+    },
+    "tasks/o-low-demo-dataset/gold/colleague_costs.json": {
+      "sha256": "30bbb7c7c21220b9bfa35981b8f220810328bbd7b07a450a6979b4b113875502",
+      "bytes": 335,
+      "git_blob": "ccfa8964a1871cd726eb28d7e75325c37e532b02"
+    },
+    "tasks/o-low-demo-dataset/public/documents/demo.md": {
+      "sha256": "367e23036c6504599a1659ddb8d8115d341d481f7e2da06e631ee67d9f3f23da",
+      "bytes": 124,
+      "git_blob": "9c8c0ea367f9ec0de0c3f0454ec75812cf32d93e"
+    },
+    "tasks/o-low-demo-dataset/public/documents/directory.md": {
+      "sha256": "559861c545343bb12db8adead8aee069ae3a177b103f4ca18e6a215888814822",
+      "bytes": 2129,
+      "git_blob": "f41c881559ec0be28331bfdaf06146ac6e94f87d"
+    },
+    "tasks/o-low-demo-dataset/public/instruction.md": {
+      "sha256": "d24ac60be7e1342143e4875b5f8e8e0a05ec63d337d8fe30220e6bbabeadcc10",
+      "bytes": 205,
+      "git_blob": "0895fcd843621f66596c753f9e1a80caba424faa"
+    },
+    "tasks/o-low-team-lunch/gold/blueprint.json": {
+      "sha256": "bd1943ef166f6e3cfef7170a54a4883afa4972a2e365409be8f5eb3987bb5a16",
+      "bytes": 1424,
+      "git_blob": "ab281bbcf8b51b436e94e46b9d7b9b186f088ad9"
+    },
+    "tasks/o-low-team-lunch/gold/colleague_costs.json": {
+      "sha256": "30bbb7c7c21220b9bfa35981b8f220810328bbd7b07a450a6979b4b113875502",
+      "bytes": 335,
+      "git_blob": "ccfa8964a1871cd726eb28d7e75325c37e532b02"
+    },
+    "tasks/o-low-team-lunch/public/documents/directory.md": {
+      "sha256": "c5f3a3480a7102b2eeec9c71eb47e83762f1236292551bd70b7dc46852ec887a",
+      "bytes": 993,
+      "git_blob": "4fe1d321a403afa8a86a7bb98ee9f1e58d42fb93"
+    },
+    "tasks/o-low-team-lunch/public/documents/order.md": {
+      "sha256": "ad61b83e1fb09e601924e37c29ad2f10e5cc1407f9368da1db21341973728908",
+      "bytes": 134,
+      "git_blob": "cb0837078cafcd1923952e74682f6f289d8bef14"
+    },
+    "tasks/o-low-team-lunch/public/instruction.md": {
+      "sha256": "54eac04c6f92d76c1b4950ea37a50a8af2f8952ddadadb880aea70922e8b4b12",
+      "bytes": 246,
+      "git_blob": "dc6add2c1e53a915a830567699e258027f8ea840"
+    }
+  }
+}

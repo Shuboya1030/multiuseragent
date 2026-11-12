@@ -1,0 +1,1 @@
+As of 2026-11-05: Prepare the October invoice record for contractor DBX Consulting. Save /workspace/deliverable.json with vendor, hours, amount_usd, authorization_ref. Post a short summary and the file path in #engineering.

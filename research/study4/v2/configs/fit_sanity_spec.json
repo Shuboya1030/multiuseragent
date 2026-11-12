@@ -1,0 +1,39 @@
+{
+  "schema": "study4-v2-train-only-fit-sanity-proposal-1",
+  "status": "NOT_EXECUTED_no_model_or_GPU_authorization",
+  "purpose": "Detect input/label/mask/optimizer/resume failures before larger training; not research benefit",
+  "allowed_current_work": "Schema/hand-authored proof rows and local validation only",
+  "corpus_generation_gate": "Real ceiling/identifiability and separate generation scope not passed",
+  "proposed_train_only_states": {"minimum": 8, "maximum": 16},
+  "coverage": [
+    "SELF before ordinary action",
+    "ASK for missing current information",
+    "ASK to distinct recipient after partial reply",
+    "Refusal then corrected context request",
+    "Equal-cost multiple acceptable people",
+    "Optional legitimate SELF path",
+    "Delivery incomplete is not SUBMIT",
+    "SUBMIT only after public delivery"
+  ],
+  "input": "training_data.model_input(row), public projection only",
+  "private_supervision": "acceptable label set + masks, never concatenated into model input",
+  "heads": {
+    "when": ["SELF", "ASK", "SUBMIT"],
+    "whom": "Public candidate index; masked conditional loss only on ASK",
+    "what": "Public intent + subset of already-obtained source value IDs; loss only on ASK"
+  },
+  "set_labels": "Preserve correlated acceptable tuples; do not independently combine incompatible head labels",
+  "candidate_loss": "Negative log probability mass of acceptable joint tuples under masked conditional heads",
+  "candidate_loss_status": "Design only, not implemented model objective or proven superior",
+  "probabilities": "No fabricated behavior probability; these SFT/reference rows are NOT offline RL data",
+  "fit_gate": [
+    "All finite train-only proof states select an acceptable legal tuple",
+    "Per-head and conditional ASK recall/whom accuracy/what exact-source match are exported per state",
+    "Loss and parameter changes are finite/nonzero; no unauthorized frozen-parameter updates",
+    "Save/load and interrupted resume reproduce deterministic evaluation logits/actions",
+    "No train/dev/test overlap by frozen family/organization and no test filtering",
+    "Model/runtime/context/resource binding recorded before claiming an actual fit"
+  ],
+  "failure_policy": "Debug train-only interface or label ambiguity; do not tune on a sealed final test",
+  "not_claimed": ["Real fit", "Selected hyperparameters", "Mini task benefit", "New benchmark quality acceptance"]
+}

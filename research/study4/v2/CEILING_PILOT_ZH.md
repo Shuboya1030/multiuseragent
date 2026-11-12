@@ -3,7 +3,8 @@
 [v1.1合同](DESIGN_v1_1_ZH.md) · [本阶段实际报告](reports/PHASE1_LOCAL_ZH.md)
 
 **本文件是方案，不是API授权、账本或已启动runner。**
-先通过共享接口本地门；真实mini/NPC接线、固定scorer执行、token/调用/费用门未验收时禁止运行。
+共享接口与[固定scorer/六题结构化规则适配](reports/LOCAL_ADAPTER_STAGE_ZH.md)已本地验证；
+真实mini/NPC语义、token/调用/持久费用门未验收及预算未批准时仍禁止API运行。
 
 ## 先做什么、选哪些题
 
@@ -41,7 +42,8 @@ B/D不能直接填最终答案或把拿齐信息当submit；C/D不能附未读�
 不同臂决策模型调用数有差异，须计API美元，不能用C=0称运行免费。
 
 默认建议先**同一deterministic scoped rule-NPC**，固定mini executor；
-真实LLM-NPC转移是另一个明确选项。当前local unit NPC不是已验收的全60适配器。
+真实LLM-NPC转移是另一个明确选项。当前scoped rule NPC仅验证六题结构化路径，
+不是已验收的全60适配器或原自然语言NPC等价替代。
 任何LLM-NPC选项均保持snapshot/提示/私有release语义固定，增加NPC费用与语义review门。
 如果用户只批准rule选项，不得自行改跑LLM选项。
 

@@ -1,0 +1,75 @@
+{
+  "task_id": "o-low-team-lunch",
+  "help_class": "Optional-help",
+  "gold_dag": {
+    "nodes": [
+      {
+        "id": "h1",
+        "admissible_recipients": [
+          "Chen Xinyi"
+        ],
+        "information_ids": [
+          "H1"
+        ],
+        "requires": []
+      }
+    ],
+    "edges": []
+  },
+  "hidden_information": [
+    {
+      "id": "H1",
+      "holder": "Chen Xinyi",
+      "facts": {
+        "vegetarian_meals": 6
+      },
+      "required_context": [
+        "Search team",
+        "lunch"
+      ],
+      "release_rule": "Provide the dietary count. The standard order remains valid."
+    }
+  ],
+  "full_information_reference": {
+    "headcount": 22,
+    "menu": "M1",
+    "vegetarian_meals": 6,
+    "total_usd": 550
+  },
+  "no_contact_reference": {
+    "headcount": 22,
+    "menu": "M1",
+    "vegetarian_meals": 0,
+    "total_usd": 550
+  },
+  "candidate_pool": [
+    "Chen Xinyi",
+    "Jessica Chen",
+    "Sophia Rodriguez",
+    "Alex Turner"
+  ],
+  "feature_scores": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "difficulty_score": 0,
+  "dependency_depth": 1,
+  "separation": null,
+  "structure": null,
+  "domain": "facilities",
+  "cue": {
+    "documents": [
+      "order.md"
+    ],
+    "description": "Explicit: dietary list exists with HR."
+  },
+  "quality": {
+    "dimension": "dietary_matched_meals",
+    "baseline": 0,
+    "full_information": 6,
+    "minimum_improvement": 6,
+    "constraints": []
+  }
+}

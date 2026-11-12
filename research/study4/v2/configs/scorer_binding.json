@@ -1,5 +1,5 @@
 {
-  "schema": "study4-v2-read-only-scorer-binding-v1",
+  "schema": "study4-v2-pinned-local-scorer-binding-v2",
   "repository": "Shuboya1030/tribalbench",
   "commit": "4260bdc626548f59042f318cdf0566490e91b9d5",
   "path": "scorer/scorer.py",
@@ -15,8 +15,9 @@
   "Nauth": "authorization-keyword requests to non-admissible recipients",
   "read_at": "2026-11-11",
   "read_via": "GitHub read API at immutable ref; base64 original bytes hashed",
-  "remote_source_executed": false,
-  "official_scoring_in_local_fixture_report": false,
-  "official_runner_scoring_gate": "blocked until frozen source acquisition, execution and evidence-binding integration are separately accepted",
+  "initial_read_only_inspection_executed_source": false,
+  "local_pinned_scorer_execution_verified": true,
+  "official_scoring_in_phase1_fixture_report": false,
+  "official_runner_scoring_gate": "Local structured-rule evidence binding verified; real mini/API, tokenizer, natural-language review and independent budget still blocked",
   "historical_SFT87_rule_unchanged": true
 }

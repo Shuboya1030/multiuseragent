@@ -1,0 +1,1 @@
+Prepare the twelve-month VectorBench order for project Pine as of 2026-11-02. Save /workspace/deliverable.json with seats, total_usd, allocation_revision, budget_code and release_reference. Post its path and a brief order summary in #engineering.
