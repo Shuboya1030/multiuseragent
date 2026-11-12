@@ -2,6 +2,7 @@
 from copy import deepcopy
 from datetime import datetime, timedelta, timezone
 import json
+import hashlib
 from pathlib import Path
 import tempfile
 import unittest
@@ -9,9 +10,9 @@ import unittest
 from .admission import prepare_request, root_binding, validate_binding
 from .budget import BudgetBlocked
 from .contracts import Tool, canonical, fingerprint
-from .durable import DurableLedger
+from .durable import BatchLock, DurableLedger
 from .phase0 import (Phase0Mini, Phase0Runtime, SOURCE, build_request, episode,
-                     load_case, npc_system, public_what, schedule, score_record, VERSION)
+                     load_case, npc_system, public_what, schedule, score_record, verify_inherited, VERSION)
 from .phase0_admission import decode_response, make_plan
 from .paid_driver import Journal
 
@@ -227,6 +228,33 @@ class Phase0Tests(unittest.TestCase):
             case = load_case(tid)
             self.assertEqual(len([s for s in slots if s["task_id"] == tid]), 12)
             self.assertEqual(set(case.scenarios), {p.person_id for p in case.public.people})
+
+    def test_historical_lock_hashes_checked_before_and_after_not_while_exclusively_locked(self):
+        import sqlite3
+        with tempfile.TemporaryDirectory() as directory:
+            entries = []
+            for index in range(7):
+                root = Path(directory) / str(index)
+                root.mkdir()
+                (root / "prior.lock").write_bytes(b"0")
+                db = sqlite3.connect(root / "prior.sqlite3")
+                db.execute("create table calls(state,reserved,charged,input_tokens,output_tokens)")
+                if index == 0:
+                    db.executemany("insert into calls values(?,?,?,?,?)",
+                        [("unknown", ".858000", None, None, None)] * 4 +
+                        [("settled", ".858000", "0", 0, 0)] * 42 +
+                        [("settled", ".858000", ".069303300", 84004, 0)])
+                db.commit()
+                db.close()
+                entries.append({"root": str(root), "file_sha256": {
+                    p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in root.iterdir()}})
+            before = verify_inherited(entries)
+            lock = BatchLock(Path(entries[0]["root"]) / "prior.lock")
+            try:
+                self.assertEqual(verify_inherited(entries, locked=True), before)
+            finally:
+                lock.close()
+            self.assertEqual(verify_inherited(entries), before)
 
 
 if __name__ == "__main__":

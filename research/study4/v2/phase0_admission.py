@@ -40,7 +40,7 @@ def make_plan(history, inherited, *, local_test=False):
         case = load_case(tid)
         systems.update(hashlib.sha256(npc_system(person, scenario).encode()).hexdigest()
                        for person, scenario in case.scenarios.items())
-    return {"schema": VERSION, "phase0_protocol": VERSION, "run_id": "study4-formal-phase0-20261112-v1",
+    return {"schema": VERSION, "phase0_protocol": VERSION, "run_id": "study4-formal-phase0-20261112-v2",
             "mode": "local_test" if local_test else "provider",
             "endpoint": "http://127.0.0.1:9/v1/responses" if local_test else "https://api.openai.com/v1/responses",
             "budget_cap_USD": "50.00", "runtime": runtime_binding(), "price": deepcopy(PRICE),

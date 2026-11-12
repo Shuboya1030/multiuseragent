@@ -368,13 +368,15 @@ def schedule():
     return slots
 
 
-def verify_inherited(entries):
+def verify_inherited(entries, *, locked=False):
     caps = __import__("research.study4.v2.budget", fromlist=["CallCaps"]).CallCaps()
     settled, held, calls, settled_calls, unknown = Decimal(0), Decimal(0), 0, 0, 0
     require(len(entries) == 7 and len({e["root"] for e in entries}) == 7, "Exactly seven original roots")
     for entry in entries:
         root = Path(entry["root"])
         for name, digest in entry["file_sha256"].items():
+            if locked and name.endswith(".lock"):
+                continue
             require(Path(name).name == name and hashlib.sha256((root / name).read_bytes()).hexdigest() == digest,
                     "Original evidence bytes changed")
         names = [name for name in entry["file_sha256"] if name.endswith(".sqlite3")]
@@ -410,12 +412,13 @@ def run(root, plan, approval, transport):
     root = Path(root)
     validate_binding(plan, approval, root, transport.endpoint)
     require(not (root / "STARTED.json").exists(), "Interrupted formal batch is not automatically replayable")
+    require(verify_inherited(plan["history"]) == plan["inherited"], "Inherited50 changed before locking")
     with ExitStack() as stack:
         for entry in plan["history"]:
             name = next(n for n in entry["file_sha256"] if n.endswith(".sqlite3")).removesuffix(".sqlite3")
             lock = BatchLock(Path(entry["root"]) / (name + ".lock"))
             stack.callback(lock.close)
-        require(verify_inherited(plan["history"]) == plan["inherited"], "Inherited50 changed")
+        require(verify_inherited(plan["history"], locked=True) == plan["inherited"], "Inherited50 changed")
         ledger = DurableLedger(root, plan, approval, create=True)
         stack.callback(ledger.close)
         journal = Journal(root / "events.jsonl")
@@ -443,13 +446,14 @@ def run(root, plan, approval, transport):
         except BaseException as error:
             status = "budget_stopped" if isinstance(error, BudgetBlocked) and ledger.status()["unknown"] == 0 else "stopped"
             failure = type(error).__name__
-        require(verify_inherited(plan["history"]) == plan["inherited"], "Historical bytes changed during run")
+        require(verify_inherited(plan["history"], locked=True) == plan["inherited"], "Historical bytes changed during run")
         receipt = {"schema": VERSION, "status": status, "error_type": failure,
                    "complete_episodes": len(completed), "complete_four_arm_blocks": len(completed) // 4,
                    "completed": completed, "budget": ledger.status(), "automatic_retry": False,
                    "incomplete_not_business_zero": True, "finished": now()}
         write_new(root / "FINAL_RECEIPT.json", receipt)
-        return receipt
+    require(verify_inherited(plan["history"]) == plan["inherited"], "Historical bytes changed after unlock")
+    return receipt
 
 
 def historical_usage_estimate():
@@ -515,6 +519,17 @@ def freeze(root, session_files):
         ["git", "-c", "core.longpaths=true", "rev-parse", "HEAD"], text=True).strip()
     root = Path(root).resolve()
     require(not root.exists(), "Never duplicate an attempted or frozen formal root")
+    predecessor = Path(session_files) / "study4_formal_phase0_20261112_v1"
+    if predecessor.exists() and predecessor.resolve() != root:
+        require(not (predecessor / "STARTED.json").exists() and
+                not list(predecessor.glob("*.sqlite3")) and not (predecessor / "PREFLIGHT.json").exists(),
+                "Only the documented before-ledger/no-POST predecessor may be bypassed")
+        plan["prior_formal_zero_call_failure"] = {
+            "root": str(predecessor.resolve()), "model_calls": 0, "paid_ledger_created": False,
+            "stage": "reading_already_locked_historical_lock_file_before_new_ledger",
+            "error_type": "PermissionError",
+            "file_sha256": {p.name: hashlib.sha256(p.read_bytes()).hexdigest()
+                            for p in predecessor.iterdir() if p.is_file()}}
     current = datetime.now(timezone.utc)
     approval = {"approved": True, "run_id": plan["run_id"], "plan_sha256": fingerprint(plan),
                 "storage_root_sha256": root_binding(root), "budget_cap_USD": "50.00",
