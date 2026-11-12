@@ -357,6 +357,11 @@ class HelpOnlyResponsibilityTests(unittest.TestCase):
             approval["scope"] = "STUDY4_V2_INDEPENDENT_PAID"
             with self.assertRaisesRegex(ValueError, "no paid execution approval"):
                 validate_binding(plan, approval, root, plan["endpoint"])
+            plan.pop("native_recovery")
+            approval = approval_for(root, plan)
+            approval["scope"] = "STUDY4_V2_INDEPENDENT_PAID"
+            with self.assertRaisesRegex(ValueError, "no paid execution approval"):
+                validate_binding(plan, approval, root, plan["endpoint"])
             self.assertEqual(list(root.iterdir()), [])
 
 

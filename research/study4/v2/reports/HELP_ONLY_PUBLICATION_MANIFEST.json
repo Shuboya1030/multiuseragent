@@ -6,7 +6,7 @@
     "platform": "Windows",
     "source_byte_semantics": "UTF8 LF normalized",
     "source_sha256": {
-      "admission.py": "b87c98cce40497ce20cae2ee39fe0383bc81d4fe03214ac7325509f9f9089f95",
+      "admission.py": "e4b95ba006d386900c26f5022472b53df25a8383ccf39f6b4072735569a4efa7",
       "durable.py": "344532372d8e14750371ae14fd5b9d8c689b174fbb961643cf83307150e75215",
       "http_transport.py": "a0a14bab28c571b9f17ba18e1429610227fdd34f46e013052f229531eb18387d",
       "mini_request.py": "96bcbc74c50ddf450554302a08565c916a65f06513f40137c06a7eb78ae9d3d0",
@@ -27,7 +27,7 @@
       "diagnostic_dispatch.py": "8b8bc910a696e1f403849f0d5d8d15c1f164a76c2ffc1e61b73f72d663ee4bd8",
       "ceiling_continuation.py": "4ba0d71cd5bc4bfed7c11c34ef6947088f151bae2c47ab93d56ee7999a58f13f",
       "native_protocol.py": "c471eb2589e0a1d5f62731b3d6714cac6209be9195ccc0394da13988f6bbeabb",
-      "native_driver.py": "fd25cb57bec8df3e64b76bbc4342c5c755cc6cddad7bf281c91830fd05835951",
+      "native_driver.py": "8afa0dea4af7931ce0c451ea518e8f45d34e99efbc17394d3216666e279e7333",
       "configs/native_function_contract_v1.json": "5bab251caceb3b58585879cf7405be9517e5be4296dad640ecc4c3e77dd24307",
       "configs/native_function_contract_v2.json": "99346f23f0f54d6a0ee274740e4522ccc20d54d62293300157ed913c331ae7a0",
       "training_data.py": "e3ceb92ed967aa7cf39f5fb1c2147a54912462f174ab103a3bbbf3a6069d9b96"
@@ -60,8 +60,8 @@
       "byte_semantics": "Git UTF8 LF bytes"
     },
     "research/study4/v2/admission.py": {
-      "bytes": 13051,
-      "sha256": "b87c98cce40497ce20cae2ee39fe0383bc81d4fe03214ac7325509f9f9089f95",
+      "bytes": 13246,
+      "sha256": "e4b95ba006d386900c26f5022472b53df25a8383ccf39f6b4072735569a4efa7",
       "byte_semantics": "Git UTF8 LF bytes"
     },
     "research/study4/v2/benchmark.py": {
@@ -180,8 +180,8 @@
       "byte_semantics": "Git UTF8 LF bytes"
     },
     "research/study4/v2/native_driver.py": {
-      "bytes": 13533,
-      "sha256": "fd25cb57bec8df3e64b76bbc4342c5c755cc6cddad7bf281c91830fd05835951",
+      "bytes": 13438,
+      "sha256": "8afa0dea4af7931ce0c451ea518e8f45d34e99efbc17394d3216666e279e7333",
       "byte_semantics": "Git UTF8 LF bytes"
     },
     "research/study4/v2/NATIVE_FUNCTION_PROTOCOL_v1_ZH.md": {
@@ -455,8 +455,8 @@
       "byte_semantics": "Git UTF8 LF bytes"
     },
     "research/study4/v2/test_native_protocol.py": {
-      "bytes": 20926,
-      "sha256": "4a5594081e7f46ec22cf90ac0b7db563fcab309e52cd2ca6edc5050396c6c79d",
+      "bytes": 21231,
+      "sha256": "2e2145b94c6d38f5f60df3340e24d49884ced5eed1482bf9fd18bea3e6b046ee",
       "byte_semantics": "Git UTF8 LF bytes"
     },
     "research/study4/v2/test_paid_driver.py": {

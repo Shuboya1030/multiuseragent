@@ -94,7 +94,6 @@ def make_plan(config):
 
 
 def validate_recovery(plan, approval):
-    require(plan["mode"] == "local_test", "Help-only protocol has no paid execution approval")
     config = plan["native_recovery"]
     require(config["version"] == RECOVERY_VERSION and config["new_direct_user_source"] == SOURCE and
             config["protocol"] == VERSION and len(config["history"]) ==

@@ -60,6 +60,9 @@ def validate_binding(plan, approval, root, endpoint, now=None):
     """Executed before lock/file/socket creation. An approval record is not inferred from a cap."""
     if plan["budget_cap_USD"] is None or approval is None:
         raise BudgetBlocked("Independent budget approval pending; no file/network admission")
+    from .native_protocol import VERSION
+    require(not (plan.get("native_protocol") == VERSION and plan["mode"] == "provider"),
+            "Help-only protocol has no paid execution approval")
     from .http_transport import validate_endpoint
     validate_endpoint(endpoint, plan["mode"])
     require(plan["runtime"] == runtime_binding(), "Runtime/source binding changed")
