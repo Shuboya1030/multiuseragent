@@ -1,5 +1,14 @@
 # Study4 v2：共享协议、固定scorer与本地调度验收
 
+**有效下一计划已转为[Phase 0→假设判定→条件训练](../STUDY4_ACTIVE_PLAN_ALIGNMENT_20261112.md)，**
+依据[用户20261112文档](../PHASE0_ARMS_HYPOTHESES_TRAINING_20261112.md)。
+正式Phase 0为60题×4臂×3、同LLM NPC、C/D仅公开历史what规则；
+本目录六题规则NPC/gold辅助what与人工intent grammar仅历史engineering smoke，不能过训练门。
+旧pilot的“待签差值门”不再是有效研究门，恢复用户平均R的B−A或D−A≥.10；
+本次只更新计划，不继续接口工程、真实验证或训练。
+
+## 历史工程状态与证据
+
 **最新：controller二态职责修复已零API验收，只有SELF/ASK；提交仅由ordinary executor产生。**
 [修复/缺文件合同审计与分版本验收](reports/HELP_ONLY_REPAIR_ZH.md)。
 **原生v1历史真实批次仍是A/B两题例，C因未创建文件读取停批：
@@ -8,7 +17,7 @@
 占原USD50总帽USD3.501303300。当前停止付费，没有新训练或5000题生成。**
 旧SFT87及其32episode结果不变，[旧结果入口](../README.md)继续保留。
 
-阅读：[v1.1设计/变更合同](DESIGN_v1_1_ZH.md)＋[v1.2本地适配补充](LOCAL_ADAPTER_CONTRACT_v1_2_ZH.md) →
+历史证据阅读：[v1.1设计/变更合同](DESIGN_v1_1_ZH.md)＋[v1.2本地适配补充](LOCAL_ADAPTER_CONTRACT_v1_2_ZH.md) →
 [原生单函数升级合同](NATIVE_FUNCTION_PROTOCOL_v1_ZH.md) →
 [新版help-only修复](reports/HELP_ONLY_REPAIR_ZH.md) →
 [最新原生接口真实部分结果](reports/NATIVE_FUNCTION_ACTUAL_ZH.md) →
@@ -21,8 +30,10 @@
 [适配阶段](reports/LOCAL_ADAPTER_STAGE_ZH.md)、
 [第一阶段](reports/PHASE1_LOCAL_ZH.md)保留） →
 [ceiling pilot与预算待签](CEILING_PILOT_ZH.md)。
-原[用户v1设计](../STUDY4_CONTROLLER_DESIGN_v1.md)及
-[论文侧建议](../ADVICE_FROM_PAPER_SESSION_20261111.md)保留，修订冲突以v1.1为准。
+原[用户v1设计](../STUDY4_CONTROLLER_DESIGN_v1.md)、
+[论文侧建议](../ADVICE_FROM_PAPER_SESSION_20261111.md)及v1.1等历史合同保留；
+后续研究顺序与Phase 0定义以[有效下一计划](../STUDY4_ACTIVE_PLAN_ALIGNMENT_20261112.md)为准，
+其中SELF/ASK与ordinary submit为明确列出的兼容修订，不回写历史。
 
 ## 可实际复跑的零模型调用检查
 

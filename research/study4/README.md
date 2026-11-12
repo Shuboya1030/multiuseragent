@@ -1,13 +1,18 @@
 # Study 4：求助控制器训练、结果与下一步
 
-更新：2026-11-10。**训练已完成；当前模型没有体现任务收益。**
-本目录是研究报告发布，不是可直接复跑的完整训练包；原始数据、模型和请求未随本次上传。
+**有效下一计划（2026-11-12）：[Phase 0、假设与条件训练对齐](STUDY4_ACTIVE_PLAN_ALIGNMENT_20261112.md)。**
+已按[用户新文档](PHASE0_ARMS_HYPOTHESES_TRAINING_20261112.md)纠偏：
+正式60题×4臂×3、同LLM NPC、公开what规则 → H1–H5判定 → 条件训练。
+当前正式Phase 0及新训练未开始；六题规则NPC实验仅历史engineering smoke，不是研究门通过。
 
-**2026-11-11 v2推进**：[共享协议与零付费第一阶段](v2/README.md)已另立版本，
+**下述为2026-11-10旧SFT87历史：训练已完成，但没有体现任务收益。**
+本目录包含研究报告，非完整可复跑训练包；原始数据、模型和请求未随旧发布上传。
+
+**2026-11-11至12 v2历史工程推进**：[共享协议与零付费第一阶段](v2/README.md)已另立版本，
 含设计v1.1/v1.2、fixture基础与六题固定scorer/四臂调度本地验收、
 [USD50真实ceiling首接口停止报告](v2/reports/CEILING50_ACTUAL_STOP_ZH.md)及
 [双动作真实诊断](v2/reports/SINGLE_DIAGNOSTIC_ACTUAL_ZH.md)；
-**2026-11-12最新**：[原生单函数真实验收及四臂部分结果](v2/reports/NATIVE_FUNCTION_ACTUAL_ZH.md)，
+**2026-11-12实测**：[原生单函数真实验收及四臂部分结果](v2/reports/NATIVE_FUNCTION_ACTUAL_ZH.md)，
 真实完成A/B两题例，C本地缺文件读取停批；同一Optional题T/R从.5/.5到1/.9，
 但B为特权参考，0完整四臂block，不能宣称训练收益或ceiling通过。
 累计unknownUSD3.432＋settled上界USD0.069303300，仍占原USD50；
@@ -36,11 +41,15 @@ submit仍由ordinary executor产生；尚无新版真实验证或收益，原act
 
 ## 阅读顺序
 
+先读[有效下一计划与对齐表](STUDY4_ACTIVE_PLAN_ALIGNMENT_20261112.md)及
+[用户Phase 0原文](PHASE0_ARMS_HYPOTHESES_TRAINING_20261112.md)。
+以下为保留的历史结果，不再以旧工程路线代替Phase 0：
+
 1. [训练过程与成果](results/TRAINING_PROCESS_ZH.md)：模型、数据、训练目标、完整指标、恢复时间线及选中模型。
 2. [端到端评测结果](results/TEACHER87_NATIVE_MINI_DEV16_RESULTS_ZH.md)：协议、分组结果、配对不确定性、费用及有效性边界。
 3. [失败诊断与缺陷](results/DIAGNOSIS_ZH.md)：已证实事实、支持性机制与尚未验证的解释。
 4. [四组真实配对trace](results/TRACE_CASES_ZH.md)：8条轨迹、44个cycle，看到实际动作、工具、回复与停止情况。
-5. [下一版策略与实验路线](results/NEXT_STEPS_ZH.md)：优先级、阶段产物、go/no-go及新资源授权边界。
+5. [历史下一版策略与实验路线](results/NEXT_STEPS_ZH.md)：保存原文，非现行下一计划。
 6. [证据范围与复核说明](results/EVIDENCE_ZH.md)：已上传/未上传的界限、原字节hash与摘录hash的区别。
 
 小型机器可读证据：[训练/评测摘要](results/evidence/summary.json)、
@@ -61,6 +70,7 @@ ASK由执行器生成问题，发送并读取NPC回复后再自主一步。控�
 此前filtered SFT15/selected10、Joint4与learned Sequential2等工程边界在训练报告末尾单列；
 它们与当前87模型不是同一数据/模型，不等于上述研究目标已完成。
 
-下一版路线全部是**待批准、未执行**；本次文档发布没有新增训练、GPU或模型调用，
+下一版研究执行以[有效下一计划](STUDY4_ACTIVE_PLAN_ALIGNMENT_20261112.md)为准；
+历史路线保留但不自动启动。本次文档对齐没有新增训练、GPU或模型调用，
 没有改变原32次episode、分数或87模型。新采集、新GPU运行和API费用须独立授权，
 不自动延用已结束的USD30评测帽余额。
