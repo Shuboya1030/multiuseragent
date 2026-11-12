@@ -104,7 +104,7 @@ class PersistentDiagnosisTests(unittest.TestCase):
             plan, approval = model_max_config(root)
             ledger = DurableLedger(root, plan, approval, create=True)
             metadata = deepcopy(ledger.metadata)
-            metadata["schema"] = "study4-v2-durable-1"
+            metadata["schema"] = "study4-v2-durable-2-diagnostics"
             ledger.connection.execute("update metadata set payload=?", (canonical(metadata),))
             ledger.close()
             with self.assertRaisesRegex(ValueError, "binding mismatch"):

@@ -31,6 +31,7 @@ python -m unittest research.study4.v2.test_persistent_diagnosis -v
 python -m unittest research.study4.v2.test_diagnostic_dispatch -v
 python -m unittest research.study4.v2.test_prompt_single_action -v
 python -m unittest research.study4.v2.test_ceiling_continuation -v
+python -m unittest research.study4.v2.test_transport_diagnosis -v
 python -m research.study4.v2.local_acceptance --output LOCAL_PROOF_NEW.json
 python -m research.study4.v2.local_ceiling_check --output LOCAL_ADAPTER_NEW.json
 ```
@@ -64,7 +65,7 @@ durable tests仅创建临时SQLite及本机127.0.0.1 HTTP服务，故障退出�
 | [admission.py](admission.py) | 独立授权/价格/runtime/static schema与模型最大token费用bound；USD50已批，真实完整接口未验收 |
 | [provider_bound.py](provider_bound.py) | 固定snapshot/standard纯文本域的272000＋128000模型上界，非税费等所有账单保证 |
 | [durable.py](durable.py) | 持久reserve/settle/unknown、崩溃恢复、一次call缓存与OS批次互斥 |
-| [http_transport.py](http_transport.py) | 一次性permit后单次HTTP；无隐式key/代理/redirect/retry；本次真实尝试传输unknown |
+| [http_transport.py](http_transport.py) | 一次性HTTP、无隐式key/代理/redirect/retry；实际传输阶段/脱敏错误与cleanup诊断，不回填旧unknown |
 | [test_durable_preflight.py](test_durable_preflight.py) | 真实子进程退出/并发、SQLite与loopback故障注入测试 |
 | [paid_driver.py](paid_driver.py) | 绑定独立批准/唯一fresh批次，逐call/event/slot持久证据；中断后禁止工具或episode重放 |
 | [test_paid_driver.py](test_paid_driver.py) | 48slot脚本回放、漂移/usage失败、工具生效后中断及禁止二次启动 |
@@ -74,6 +75,7 @@ durable tests仅创建临时SQLite及本机127.0.0.1 HTTP服务，故障退出�
 | [diagnostic_dispatch.py](diagnostic_dispatch.py) | 显式新批准的一次请求，继承旧unknown并持原批mutex；不执行工具、不恢复episode |
 | [ceiling_continuation.py](ceiling_continuation.py) | 新来源绑定的一次prompt v2验证，继承两笔旧unknown；只有合法settle才允许原48slot fresh批次 |
 | [test_ceiling_continuation.py](test_ceiling_continuation.py) | 临时ledger/mock的同帽、前置成功门、48脚本slot、互斥、漂移/重复拒绝及传输候选边界 |
+| [test_transport_diagnosis.py](test_transport_diagnosis.py) | 子进程退出/重开后的HTTP阶段、敏感异常不落盘、主错误/cleanup优先级及unknown/no retry |
 
 v1的`HelpRuntime/ServiceRuntime`不改：本版本保留它们的tool envelope、虚拟路径边界、
 stable ID/幂等读和ASK→自动交付→普通一步语义，做独立的小型本地协议实现。
@@ -110,5 +112,8 @@ context_view仅验收保留/溢出规则，未用真实Qwen tokenizer证明6k容
 [前次发布字节指纹](reports/SINGLE_DIAGNOSTIC_PUBLICATION_MANIFEST.json)绑定历史`8d10359`。
 [最新prompt v2实际证据](reports/PROMPT_V2_VALIDATION_CHECK.json)与
 [本轮发布字节指纹](reports/PROMPT_V2_CONTINUATION_PUBLICATION_MANIFEST.json)另列。
+[零API传输诊断补丁验收](reports/TRANSPORT_STAGE_DIAGNOSIS_CHECK.json)与
+[补丁发布字节指纹](reports/TRANSPORT_STAGE_PUBLICATION_MANIFEST.json)另列；
+这是HTTP→ledger可诊断性修复，未发新的真实请求，也不推断旧传输原因。
 TribalBench原MIT scorer已固定字节、复制并实际本地执行；旧fixture checker依然不是`tribalbench-1.0`。
 真实ceiling未通过；新的真实请求、NPC语义/任务收益、新split/generator/模型均需后续阶段门。

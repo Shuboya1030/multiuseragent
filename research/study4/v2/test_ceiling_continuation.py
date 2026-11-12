@@ -72,7 +72,7 @@ class ContinuationTests(unittest.TestCase):
                 with patch("research.study4.v2.http_transport.http.client.HTTPSConnection") as factory:
                     connection = factory.return_value
                     if stage == "read":
-                        response = connection.getresponse.return_value.__enter__.return_value
+                        response = connection.getresponse.return_value
                         response.status = 200
                         response.getheader.return_value = "application/json"
                         response.read.side_effect = error
@@ -80,7 +80,9 @@ class ContinuationTests(unittest.TestCase):
                         getattr(connection, stage).side_effect = error
                     result = validate_once(root, plan, approval, request, provider)
                 self.assertEqual(result["error_type"], "TransportFailure")
-                self.assertEqual(result["calls"][0]["diagnostic"], {})
+                diagnostic = result["calls"][0]["diagnostic"]["transport"]
+                expected_stage = {"connect": "connect", "request": "send", "getresponse": "headers", "read": "read"}
+                self.assertEqual(diagnostic["stage"], expected_stage[stage])
                 self.assertIsNone(result["calls"][0]["response_bytes"])
                 self.assertEqual(Decimal(result["budget"]["held_USD_upper"]), Decimal("2.574"))
                 self.assertFalse((root / "ACTUAL_RESPONSE_SHAPE.json").exists())

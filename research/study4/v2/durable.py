@@ -90,7 +90,7 @@ class DurableLedger:
             self.connection.row_factory = sqlite3.Row
             self.connection.execute("pragma journal_mode=WAL")
             self.connection.execute("pragma synchronous=FULL")
-            metadata = {"schema": "study4-v2-durable-2-diagnostics", "plan_sha256": fingerprint(plan),
+            metadata = {"schema": "study4-v2-durable-3-transport-diagnostics", "plan_sha256": fingerprint(plan),
                         "approval_sha256": fingerprint(approval), "root_sha256": root_binding(self.root),
                         "mode": plan["mode"], "run_id": plan["run_id"]}
             self.metadata = metadata
@@ -244,7 +244,7 @@ class DurableLedger:
                 self.audit("settled", call_id=call_id, result_sha256=fingerprint(result))
             fault("after_settle")
             return {"replayed_without_send": False, **result}
-        except Exception as error:
+        except BaseException as error:
             with self.transaction():
                 state = self.connection.execute("select state from calls where id=?", (call_id,)).fetchone()["state"]
                 if state != "settled":
@@ -255,6 +255,11 @@ class DurableLedger:
                     if isinstance(error, ResponseStageError):
                         diagnostic.update(validation_stage=error.stage, cause_type=error.cause_type,
                                           validator_frames=error.validator_frames)
+                    from .http_transport import TransportFailure
+                    if isinstance(error, TransportFailure):
+                        diagnostic["transport"] = error.diagnostic
+                    elif type(error) in (KeyboardInterrupt, SystemExit) and hasattr(error, "transport_diagnostic"):
+                        diagnostic["transport"] = error.transport_diagnostic
                     self.connection.execute("""update calls set state='unknown',error_type=?,response_sha256=?,
                         response_bytes=?,diagnostic=?,updated=? where id=?""",
                         (type(error).__name__, hashlib.sha256(raw_bytes).hexdigest() if raw_bytes is not None else None,

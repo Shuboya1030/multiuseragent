@@ -1,0 +1,138 @@
+{
+  "schema": "study4-transport-stage-local-check-1",
+  "patch_runtime_binding_NOT_actual_provider_runtime": {
+    "protocol": "study4-controller-v2-local-1.1",
+    "python": "3.12.10",
+    "platform": "Windows",
+    "source_byte_semantics": "UTF8 LF normalized",
+    "source_sha256": {
+      "admission.py": "fc91936ec65fd16be8da1e91aa02dc84b5a78f61789408795eb1ba84b96379e6",
+      "durable.py": "08f0662d3eeb18a6a953dfe0497c6eb55c5dbc44ca08a71a25fa2a644bf99def",
+      "http_transport.py": "a0a14bab28c571b9f17ba18e1429610227fdd34f46e013052f229531eb18387d",
+      "mini_request.py": "911d6fa9ffce6136209217b7f38f5f00b3005a9552f1b8d3dd03f33b0b2eafce",
+      "contracts.py": "150c4fe0e04f8033ba75275072b77488748081ee3992d9c90bbb59b3b99ed087",
+      "executor.py": "a4eb3230e7f67927a995a32cc4114f802ee3e96ca0ed5ec90ee5285464e4f2fc",
+      "oracle.py": "785ac2c980c0619e948278181c9d4c5cdcb6c4d1b8086469b63afd495955c6e4",
+      "npc_rule.py": "82e3b757921f9ac9a4bec32228ee2178945472e48030c03cb313c19812907f0e",
+      "budget.py": "1bd91deddb52c55ba64d3a9fa7fc46216a739b44385d76d0a39fb0d6f10edf63",
+      "provider_bound.py": "ea3988374b3df4172fdc58756b33c877b5b2e46433136e2fa9075622fca1a5b4",
+      "configs/provider_model_maximum_bound_v1.json": "afa837d1f46acd3d5a3309d92439947e226f3a2fe78aa0b97b736cd3aa91434f",
+      "paid_driver.py": "8564cd556657eb13f4ab76765e1920650c43fb39504b48d7bbdc76a5e620b4cf",
+      "runtime.py": "e721937e4151ace616be81ab4299aa77f7816ae4f8837c3672fa46c7adeb7ae1",
+      "scheduler.py": "d5aa3f3ec86b9b6401e7a4f42909c1a08dd95508ff5a3dbdaf565327fd239cf3",
+      "benchmark.py": "46a4671470d41425481aa9f61373cbb103819aca7f2a73330828a0494b72f0b9",
+      "configs/ceiling_pilot.json": "523e0caae6c4ffe99459ac02ad30ecd7e4f4dcb224c8787b4a47163fee4b9afd",
+      "response_diagnosis.py": "05460e461d17412d4cc7b8175aeb74bf11ba7e0a99612a0bac0ddebe127c104f",
+      "recovery_guard.py": "f59a33d9726e4c9adcfda4b1dec0006013aebbd4199781501d70eb88144d213d",
+      "diagnostic_dispatch.py": "8b8bc910a696e1f403849f0d5d8d15c1f164a76c2ffc1e61b73f72d663ee4bd8",
+      "ceiling_continuation.py": "a7c1242a8ada65c3fda38049097e91a967d7289bde84bb72e35aeb156de20459"
+    }
+  },
+  "new_ledger_metadata_schema": "study4-v2-durable-3-transport-diagnostics",
+  "transport_diagnosis_schema": "study4-http-stages-1",
+  "local_v2_tests_passed": 104,
+  "legacy_protocol_tests_passed": 12,
+  "child_exit_reopen_evidence_MOCK_NOT_provider": [
+    {
+      "stage": "connect",
+      "child_returncode": 0,
+      "state": "unknown",
+      "held_USD": "0.8580",
+      "diagnostic": {
+        "cause_type": "gaierror",
+        "cleanup_errors": [],
+        "deadline_expired": false,
+        "elapsed_ms": 0,
+        "max_response_bytes": 1048576,
+        "os_errno": 5,
+        "request_bytes": 4684,
+        "schema": "study4-http-stages-1",
+        "stage": "connect",
+        "timeout_seconds": 30
+      }
+    },
+    {
+      "stage": "send",
+      "child_returncode": 0,
+      "state": "unknown",
+      "held_USD": "0.8580",
+      "diagnostic": {
+        "cause_type": "BrokenPipeError",
+        "cleanup_errors": [],
+        "deadline_expired": false,
+        "elapsed_ms": 0,
+        "max_response_bytes": 1048576,
+        "os_errno": 32,
+        "request_bytes": 4684,
+        "schema": "study4-http-stages-1",
+        "stage": "send",
+        "timeout_seconds": 30
+      }
+    },
+    {
+      "stage": "headers",
+      "child_returncode": 0,
+      "state": "unknown",
+      "held_USD": "0.8580",
+      "diagnostic": {
+        "cause_type": "RemoteDisconnected",
+        "cleanup_errors": [],
+        "deadline_expired": false,
+        "elapsed_ms": 0,
+        "max_response_bytes": 1048576,
+        "request_bytes": 4684,
+        "schema": "study4-http-stages-1",
+        "stage": "headers",
+        "timeout_seconds": 30
+      }
+    },
+    {
+      "stage": "read",
+      "child_returncode": 0,
+      "state": "unknown",
+      "held_USD": "0.8580",
+      "diagnostic": {
+        "cause_type": "IncompleteRead",
+        "cleanup_errors": [],
+        "content_type_json": true,
+        "deadline_expired": false,
+        "elapsed_ms": 0,
+        "http_status": 200,
+        "max_response_bytes": 1048576,
+        "request_bytes": 4684,
+        "schema": "study4-http-stages-1",
+        "stage": "read",
+        "timeout_seconds": 30
+      }
+    }
+  ],
+  "validation_rejections": [
+    "status",
+    "content_type",
+    "deadline",
+    "byte_limit"
+  ],
+  "primary_read_error_survives_response_and_connection_close_errors": true,
+  "cleanup_only_failure_is_unknown_not_success_or_settled": true,
+  "unknown_exception_class_and_exception_text_not_persisted": true,
+  "KeyboardInterrupt_preserved_and_unknown_persisted": true,
+  "no_retry_or_provider_socket_in_new_injected_tests": true,
+  "existing_loopback_tests_passed": true,
+  "endpoint_timeout_proxy_output_contract_unchanged": true,
+  "new_paid_calls": 0,
+  "new_response_GET": 0,
+  "credential_reads": 0,
+  "task_tools_executed": 0,
+  "complete_episodes": 0,
+  "GPU_jobs": 0,
+  "actual_provider_cause_not_reconstructed": true,
+  "actual_runtime_preserved_commit": "48130a30bb88457485c3d77ff34428d2207ccab7",
+  "actual_ledger_metadata_schema_unchanged": "study4-v2-durable-2-diagnostics",
+  "actual_three_ledger_evidence_byte_exact": true,
+  "cumulative_actual_unknown_hold_USD_unchanged": "2.574000",
+  "original_total_cap_USD": "50.00",
+  "cumulative_settled_calls": 0,
+  "new_paid_authorization": false,
+  "historical_fixture_and_prompt_v2_scripted_adapter_exact_reproduction": true,
+  "old_model_results_scores_and_closed_ledger_unchanged": true
+}

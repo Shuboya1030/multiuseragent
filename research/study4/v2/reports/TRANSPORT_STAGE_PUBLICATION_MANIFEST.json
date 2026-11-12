@@ -1,0 +1,578 @@
+{
+  "schema": "study4-transport-stage-publication-1",
+  "hash_scope": "Current public package excluding self; earlier manifests bind earlier commits",
+  "actual_runtime_preserved_commit": "48130a30bb88457485c3d77ff34428d2207ccab7",
+  "tests_passed": 116,
+  "new_paid_calls": 0,
+  "same_total_cap_USD": "50.00",
+  "cumulative_unknown_held_USD_unchanged": "2.574000",
+  "complete_episodes": 0,
+  "relative_links_checked": 152,
+  "files": {
+    "research/study4/README.md": {
+      "bytes": 4853,
+      "sha256": "dc9422e0c176a2d5ea78bcb28661c1b0227033cbcbcd214d829a56d0d008c47d",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/__init__.py": {
+      "bytes": 85,
+      "sha256": "098be358c6066c14eacf8cf6d729f05fcbb6a52f8f18fdcd910eb3982be127aa",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/admission.py": {
+      "bytes": 11019,
+      "sha256": "fc91936ec65fd16be8da1e91aa02dc84b5a78f61789408795eb1ba84b96379e6",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/benchmark.py": {
+      "bytes": 12638,
+      "sha256": "46a4671470d41425481aa9f61373cbb103819aca7f2a73330828a0494b72f0b9",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/budget.py": {
+      "bytes": 5741,
+      "sha256": "1bd91deddb52c55ba64d3a9fa7fc46216a739b44385d76d0a39fb0d6f10edf63",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/ceiling_continuation.py": {
+      "bytes": 10248,
+      "sha256": "a7c1242a8ada65c3fda38049097e91a967d7289bde84bb72e35aeb156de20459",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/CEILING_PILOT_ZH.md": {
+      "bytes": 7404,
+      "sha256": "da1fbc2546d15ddf8707bb3e10b8460b80a159d515ce95a9c3c7424d19267fc1",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/configs/ceiling50_diagnostic_recovery_PENDING.json": {
+      "bytes": 3819,
+      "sha256": "fcf7feead121bc61f6fa93ad3c386d1af12155927d11ebea3a37c986cedc87d1",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/configs/ceiling_pilot.json": {
+      "bytes": 1970,
+      "sha256": "523e0caae6c4ffe99459ac02ad30ecd7e4f4dcb224c8787b4a47163fee4b9afd",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/configs/durable_preflight_pending.json": {
+      "bytes": 2923,
+      "sha256": "af1af5d9c7087aa4d65cd3a74d522354dda6bd2e3a0d871fe8ef0ce0626b7d9b",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/configs/fit_sanity_spec.json": {
+      "bytes": 2428,
+      "sha256": "d30843b13289e84118fb039e207f68b1a61a09a0e614b71a439d7436536442b3",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/configs/provider_model_maximum_bound_v1.json": {
+      "bytes": 2486,
+      "sha256": "afa837d1f46acd3d5a3309d92439947e226f3a2fe78aa0b97b736cd3aa91434f",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/configs/scorer_binding.json": {
+      "bytes": 1369,
+      "sha256": "1427bebecec1a7b2eba7d012a3f47d919a7936554b3a26f3b32f96613e2efc02",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/contracts.py": {
+      "bytes": 6415,
+      "sha256": "150c4fe0e04f8033ba75275072b77488748081ee3992d9c90bbb59b3b99ed087",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/DESIGN_v1_1_ZH.md": {
+      "bytes": 10680,
+      "sha256": "0a1e7b9a3868829303a5bf248efc9c15fb12d8abb8f9772dfc227461c3afde1f",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/diagnostic_dispatch.py": {
+      "bytes": 6474,
+      "sha256": "8b8bc910a696e1f403849f0d5d8d15c1f164a76c2ffc1e61b73f72d663ee4bd8",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/durable.py": {
+      "bytes": 15783,
+      "sha256": "08f0662d3eeb18a6a953dfe0497c6eb55c5dbc44ca08a71a25fa2a644bf99def",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/executor.py": {
+      "bytes": 3841,
+      "sha256": "a4eb3230e7f67927a995a32cc4114f802ee3e96ca0ed5ec90ee5285464e4f2fc",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/fixtures.py": {
+      "bytes": 7417,
+      "sha256": "5a5229cf644efdb481cca41ac64fa6d1c1e07430d17a71b28a4861ae8c888a57",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/http_transport.py": {
+      "bytes": 7950,
+      "sha256": "a0a14bab28c571b9f17ba18e1429610227fdd34f46e013052f229531eb18387d",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/local_acceptance.py": {
+      "bytes": 4957,
+      "sha256": "b4de0d05c0bc907207c6773b5f542bce3bc72af14f32165e7e9ee4ff12e689cb",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/LOCAL_ADAPTER_CONTRACT_v1_2_ZH.md": {
+      "bytes": 7651,
+      "sha256": "e21ea81ea512fbe12ffa6a095a217db597c7a03d85ec0366d98f715e4e6ec55a",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/local_ceiling_check.py": {
+      "bytes": 9113,
+      "sha256": "464a86b799fac51566f53e13a1ca261a6c8b261b9447f00780447d733890cb20",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/mini_request.py": {
+      "bytes": 7878,
+      "sha256": "911d6fa9ffce6136209217b7f38f5f00b3005a9552f1b8d3dd03f33b0b2eafce",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/npc_rule.py": {
+      "bytes": 4497,
+      "sha256": "82e3b757921f9ac9a4bec32228ee2178945472e48030c03cb313c19812907f0e",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/oracle.py": {
+      "bytes": 5928,
+      "sha256": "785ac2c980c0619e948278181c9d4c5cdcb6c4d1b8086469b63afd495955c6e4",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/paid_driver.py": {
+      "bytes": 11289,
+      "sha256": "8564cd556657eb13f4ab76765e1920650c43fb39504b48d7bbdc76a5e620b4cf",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/provider_bound.py": {
+      "bytes": 600,
+      "sha256": "ea3988374b3df4172fdc58756b33c877b5b2e46433136e2fa9075622fca1a5b4",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/README.md": {
+      "bytes": 9935,
+      "sha256": "ac0bf687e00b72d06b9e3b3bbb4855ae5066ca018756c5f4408cca19696b817f",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/recovery_guard.py": {
+      "bytes": 2732,
+      "sha256": "f59a33d9726e4c9adcfda4b1dec0006013aebbd4199781501d70eb88144d213d",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/reports/CEILING50_ACTUAL_CHECK.json": {
+      "bytes": 15869,
+      "sha256": "22fc2326c16b1c804da58b73135f45f9640712f57d46de991322651a7f0b4177",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/reports/CEILING50_ACTUAL_STOP_ZH.md": {
+      "bytes": 7435,
+      "sha256": "bdc87b03995c28ae6ae2f35b2d8b722b78ac0fe2a2a03889b736762f4d23cb10",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/reports/CEILING50_FROZEN_SCOPE.json": {
+      "bytes": 16562,
+      "sha256": "0b74df59d14b2814fbdc9643cb29ef37fbc74ab0fb1f5136d56eaa0a984d2e23",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/reports/CEILING50_OFFLINE_CANDIDATES.json": {
+      "bytes": 23576,
+      "sha256": "854013c630411263ee53fcbc55f9c0ea71ad3159abdb42a41d165f6063a0b833",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/reports/CEILING50_PUBLICATION_MANIFEST.json": {
+      "bytes": 21618,
+      "sha256": "94cec3f1bc0eb60eaaacacdc21331de74bfe7f29b00fc509587c9c8df95b17a5",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/reports/DURABLE_PREFLIGHT_CHECK.json": {
+      "bytes": 11683,
+      "sha256": "aa5a357ac68c0be7a7ca8038f0fe82332dcdc6aac7f7f0bfe1837a100c5feb5f",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/reports/DURABLE_PREFLIGHT_ZH.md": {
+      "bytes": 6547,
+      "sha256": "9feaff316a85531c7df3571d78ec212eaa071d331eb5a469694684668439124d",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/reports/DURABLE_PUBLICATION_MANIFEST.json": {
+      "bytes": 20118,
+      "sha256": "cdd88b43b79196400caa25005bc0b5078751b76254b3060f63c13a4a4d259077",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/reports/LOCAL_ACCEPTANCE.json": {
+      "bytes": 66922,
+      "sha256": "594119a7021612887eaf58e19dc255cba95cb654a40a84cb67bd8414d2360a1c",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/reports/LOCAL_ADAPTER_CHECK.json": {
+      "bytes": 92652,
+      "sha256": "2e43b3312c789715bd0480956a1141e3edc2200d7589bb912d1f02981485ef09",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/reports/LOCAL_ADAPTER_PROMPT_V2_CHECK.json": {
+      "bytes": 98870,
+      "sha256": "0de7cfce41e863d672e5a0ca9a8cebb73e4c2e5db18cef53032881d2be30bf78",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/reports/LOCAL_ADAPTER_PUBLICATION_MANIFEST.json": {
+      "bytes": 17206,
+      "sha256": "b9a7608957621ff5558def3bbb820a811fa08cd58fba685a0801cd655fec8e6a",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/reports/LOCAL_ADAPTER_STAGE_ZH.md": {
+      "bytes": 5840,
+      "sha256": "f49df4576d4f7d2c50358694b6a7060cb700517bfdbfdcd38314bfff481d75c5",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/reports/MODEL_MAXIMUM_BOUND_CHECK.json": {
+      "bytes": 12493,
+      "sha256": "9b9bb5d8fd60a1fa4e4d114c7fd4dfb53744eb8272ce23a2d44634f2c6936773",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/reports/MODEL_MAXIMUM_BOUND_ZH.md": {
+      "bytes": 5287,
+      "sha256": "fe6866e572a1aa07cf7d95c351a5f1ffc50b0c9c70fb3180885c1b76c3cbdeb9",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/reports/MODEL_MAXIMUM_PUBLICATION_MANIFEST.json": {
+      "bytes": 19643,
+      "sha256": "f9e31e5ed3a073f569a04d377a70abdef77803fbec96e51de502beb6d99f5ab0",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/reports/PERSISTENT_DIAGNOSIS_V2_CHECK.json": {
+      "bytes": 34958,
+      "sha256": "b68a45b23c66ca96a4fe8088950adae71bac66ac8ac95df0f3c29caeea0b762f",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/reports/PERSISTENT_DIAGNOSIS_V2_PUBLICATION_MANIFEST.json": {
+      "bytes": 22985,
+      "sha256": "6bcd8add9842b1335beeaa46c8dbd703b34ca815b867b6b8eb041e84f5f83d00",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/reports/PERSISTENT_DIAGNOSIS_V2_ZH.md": {
+      "bytes": 4719,
+      "sha256": "8a5734f9c279b226bdce0e587a50e72d01bb611bafd8cf6e426d5d1a80e7f319",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/reports/PHASE1_LOCAL_ZH.md": {
+      "bytes": 6347,
+      "sha256": "58d6ff2df991781c04731ac8a9361f669d520cc8ba2fc1fcce97b495b0c074c0",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/reports/PROMPT_V2_CONTINUATION_PUBLICATION_MANIFEST.json": {
+      "bytes": 25722,
+      "sha256": "9725b973a32bceac382fdb8a5d9ce0362b525ed0a84c4901b38bcbb2e11a135a",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/reports/PROMPT_V2_VALIDATION_CHECK.json": {
+      "bytes": 9010,
+      "sha256": "97e96aa6d92d1bea9272b2614d0294d4abeff69bcd4cf838bd6c08fb183f2a0f",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/reports/PROMPT_V2_VALIDATION_STOP_ZH.md": {
+      "bytes": 9459,
+      "sha256": "754583ff32d83e7695e8e4e8fb71f19c3a88d9a189d7e2f6232f17fed5fc4969",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/reports/PUBLICATION_MANIFEST.json": {
+      "bytes": 3581,
+      "sha256": "e30468b0d4ef5ce7fc32d540f59afc459eacf7361dc317a08641556bfc095a66",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/reports/SINGLE_DIAGNOSTIC_ACTUAL_CHECK.json": {
+      "bytes": 31459,
+      "sha256": "84bdb81d3272b2e276bea5567c3056b87e9e8e9b362f9e3aa08048736cc8e413",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/reports/SINGLE_DIAGNOSTIC_ACTUAL_ZH.md": {
+      "bytes": 6905,
+      "sha256": "2853b41c029839e316bbe240c3aba748b425b49c95d58307b3ea8ad0ce1af7d5",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/reports/SINGLE_DIAGNOSTIC_PUBLICATION_MANIFEST.json": {
+      "bytes": 24546,
+      "sha256": "dbd11deca5be82943539147aa85fa5bc4adfc7a78626e062344b6f9df2ced4dd",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/reports/TRANSPORT_STAGE_DIAGNOSIS_CHECK.json": {
+      "bytes": 5599,
+      "sha256": "e29436b30c58678931deedceadfaaed626117fb1d9dc8e9bda34fbbf8d5b9f59",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/response_diagnosis.py": {
+      "bytes": 5521,
+      "sha256": "05460e461d17412d4cc7b8175aeb74bf11ba7e0a99612a0bac0ddebe127c104f",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/runtime.py": {
+      "bytes": 13218,
+      "sha256": "e721937e4151ace616be81ab4299aa77f7816ae4f8837c3672fa46c7adeb7ae1",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/scheduler.py": {
+      "bytes": 6266,
+      "sha256": "d5aa3f3ec86b9b6401e7a4f42909c1a08dd95508ff5a3dbdaf565327fd239cf3",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/test_ceiling_adapter.py": {
+      "bytes": 18367,
+      "sha256": "07ffc95fdea12b375db55ebbb30d6bbb3caef13e26c3c43e974839dfb5799db7",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/test_ceiling_continuation.py": {
+      "bytes": 10296,
+      "sha256": "b77a1e25900a08542d16612c28e7abc04888ccbc5d97d6e4177fcbcd9063d581",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/test_diagnostic_dispatch.py": {
+      "bytes": 6613,
+      "sha256": "1b7371dc4f048f07364c9568eb3e1ff1b474bf6f8866ddb8b47ac3159be525eb",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/test_durable_preflight.py": {
+      "bytes": 25048,
+      "sha256": "06c509424c862cbfc31c949331ec08cabe7d479ccb9ac81c6d89f3c1020de8bb",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/test_paid_driver.py": {
+      "bytes": 7207,
+      "sha256": "f6c87138750a054a809f5387ec8f885a6d87ac99fbeec2265737f89c1703f2b1",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/test_persistent_diagnosis.py": {
+      "bytes": 9288,
+      "sha256": "69adabfeb28ede22eabaf3800387ffcefd5d782e9f4307d829c7052601b6ae80",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/test_prompt_single_action.py": {
+      "bytes": 2651,
+      "sha256": "0b45600584ac7936a46874f84d50dc43511b798c16798402e6deb6486a314e16",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/test_protocol.py": {
+      "bytes": 19093,
+      "sha256": "bf61ab0a001e3441794d28ef7bf46ecbbf919fc71c432419191c70bf608f676e",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/test_provider_bound.py": {
+      "bytes": 8940,
+      "sha256": "28ecbbd23b1735f799f1d628e723156415ae4b2b19b0c91ccdb5e6654f224e07",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/test_response_diagnosis.py": {
+      "bytes": 3500,
+      "sha256": "d45958c6e0df70f0ad6e8832892e4fb4876e790f7ad1d63355a3bb1b48e8c124",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/test_transport_diagnosis.py": {
+      "bytes": 10923,
+      "sha256": "800f669d000acf837cdf724253d4278c3ebff3980e885affa9f75100bd1b2b90",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/training_data.py": {
+      "bytes": 3650,
+      "sha256": "04d6c789629dd73ede5667005a00a3624fed5f127dcd3a1a05aeddf2d89f537d",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/vendor/.gitattributes": {
+      "bytes": 21,
+      "sha256": "09c85065e79b7a43d82891027f6176c2fd930bb684ad21e9fabb1f6c478fbce0",
+      "byte_semantics": "Git UTF8 LF bytes"
+    },
+    "research/study4/v2/vendor/tribalbench/LICENSE": {
+      "bytes": 1067,
+      "sha256": "f70b14da13c8e87f7b14ae325bae1ad4cb1ddeb8cbe2c9b65ab13a8769b269f5",
+      "byte_semantics": "original bytes (Git -text)"
+    },
+    "research/study4/v2/vendor/tribalbench/organization/roster.json": {
+      "bytes": 7685,
+      "sha256": "54790b2ad904886258e442767cb94c37b1272f986a195448512897181afc5ef2",
+      "byte_semantics": "original bytes (Git -text)"
+    },
+    "research/study4/v2/vendor/tribalbench/scorer/scorer.py": {
+      "bytes": 18384,
+      "sha256": "e6b47e4a251bdc44d2fbfe389e12b81273e6472092958fe04e33297f28a33e78",
+      "byte_semantics": "original bytes (Git -text)"
+    },
+    "research/study4/v2/vendor/tribalbench/SOURCE_MANIFEST.json": {
+      "bytes": 8991,
+      "sha256": "0182abb6c0a1ad6bcfd77394e56a495607d7784d02ac5ce874c22db0de32f2b6",
+      "byte_semantics": "original bytes (Git -text)"
+    },
+    "research/study4/v2/vendor/tribalbench/tasks/m-low-customer-mailing/gold/blueprint.json": {
+      "bytes": 1839,
+      "sha256": "903b58bf7f60d4539dc90090388ade92ef1c8fc6898fdc0392d631d97a066ee7",
+      "byte_semantics": "original bytes (Git -text)"
+    },
+    "research/study4/v2/vendor/tribalbench/tasks/m-low-customer-mailing/gold/colleague_costs.json": {
+      "bytes": 335,
+      "sha256": "30bbb7c7c21220b9bfa35981b8f220810328bbd7b07a450a6979b4b113875502",
+      "byte_semantics": "original bytes (Git -text)"
+    },
+    "research/study4/v2/vendor/tribalbench/tasks/m-low-customer-mailing/public/documents/directory.md": {
+      "bytes": 1051,
+      "sha256": "f9be8b14c460c6673d9ca9eb11152211ed6ea1f3d1c35cc6b195eaa2eef3feb4",
+      "byte_semantics": "original bytes (Git -text)"
+    },
+    "research/study4/v2/vendor/tribalbench/tasks/m-low-customer-mailing/public/documents/mailer.md": {
+      "bytes": 138,
+      "sha256": "46672592a12f68556623edc604973d0467c97e0917fc0fd948bb18e403371a32",
+      "byte_semantics": "original bytes (Git -text)"
+    },
+    "research/study4/v2/vendor/tribalbench/tasks/m-low-customer-mailing/public/documents/mailing-policy.md": {
+      "bytes": 171,
+      "sha256": "b8ccba7b34a3d552e2a8ff07513c70116e56ee09d70df548de40e7cefa1364c7",
+      "byte_semantics": "original bytes (Git -text)"
+    },
+    "research/study4/v2/vendor/tribalbench/tasks/m-low-customer-mailing/public/instruction.md": {
+      "bytes": 258,
+      "sha256": "7f581c475d4d4b3de60f6e12a1ddb0696fc33b88dad76643eba4777bdf5d7206",
+      "byte_semantics": "original bytes (Git -text)"
+    },
+    "research/study4/v2/vendor/tribalbench/tasks/m-low-policy-citation/gold/blueprint.json": {
+      "bytes": 1407,
+      "sha256": "35e993f86acc210d39b051162c5ab41d866b8c01f07fc67eb5047de8b1056bbd",
+      "byte_semantics": "original bytes (Git -text)"
+    },
+    "research/study4/v2/vendor/tribalbench/tasks/m-low-policy-citation/gold/colleague_costs.json": {
+      "bytes": 335,
+      "sha256": "30bbb7c7c21220b9bfa35981b8f220810328bbd7b07a450a6979b4b113875502",
+      "byte_semantics": "original bytes (Git -text)"
+    },
+    "research/study4/v2/vendor/tribalbench/tasks/m-low-policy-citation/public/documents/checklist.md": {
+      "bytes": 110,
+      "sha256": "93ad020f73d6eceb20a82bc5e50cc460c5f82656276269bcd0b212a69afa34f9",
+      "byte_semantics": "original bytes (Git -text)"
+    },
+    "research/study4/v2/vendor/tribalbench/tasks/m-low-policy-citation/public/documents/directory.md": {
+      "bytes": 2019,
+      "sha256": "ed9a9f081a219237e18f68074794cd4553f3e4158c283af8d1c4918edfd6d816",
+      "byte_semantics": "original bytes (Git -text)"
+    },
+    "research/study4/v2/vendor/tribalbench/tasks/m-low-policy-citation/public/documents/wiki-policy.md": {
+      "bytes": 76,
+      "sha256": "053fb875fa62147f0ad26c401374120322d6903de37657fd3622cc6f8a1b9002",
+      "byte_semantics": "original bytes (Git -text)"
+    },
+    "research/study4/v2/vendor/tribalbench/tasks/m-low-policy-citation/public/instruction.md": {
+      "bytes": 225,
+      "sha256": "d4c36f3f2873edf19d65478ae33341fc7a6ba673980776c8e4118eedc383cc41",
+      "byte_semantics": "original bytes (Git -text)"
+    },
+    "research/study4/v2/vendor/tribalbench/tasks/m-med-contractor-invoice/gold/blueprint.json": {
+      "bytes": 1772,
+      "sha256": "09ed7aa77260ca3838da47da73bb8fc43f816b4523e7ff592fb5547ebc097b65",
+      "byte_semantics": "original bytes (Git -text)"
+    },
+    "research/study4/v2/vendor/tribalbench/tasks/m-med-contractor-invoice/gold/colleague_costs.json": {
+      "bytes": 335,
+      "sha256": "30bbb7c7c21220b9bfa35981b8f220810328bbd7b07a450a6979b4b113875502",
+      "byte_semantics": "original bytes (Git -text)"
+    },
+    "research/study4/v2/vendor/tribalbench/tasks/m-med-contractor-invoice/public/documents/contractor-policy.md": {
+      "bytes": 161,
+      "sha256": "4f518e7e07e90d57dc3a3a466287ef9402eec0c88e2ba8904932356c6ff4086e",
+      "byte_semantics": "original bytes (Git -text)"
+    },
+    "research/study4/v2/vendor/tribalbench/tasks/m-med-contractor-invoice/public/documents/directory.md": {
+      "bytes": 2059,
+      "sha256": "69760766f0258fe4434428c92411d92a45bb24ad2c77843a1ed8497a8449d76c",
+      "byte_semantics": "original bytes (Git -text)"
+    },
+    "research/study4/v2/vendor/tribalbench/tasks/m-med-contractor-invoice/public/documents/invoice.md": {
+      "bytes": 116,
+      "sha256": "008c4393c3d4ce814cc519b439be6cc3d5452b1eb6a289f7fccbd95f2b4c5ca4",
+      "byte_semantics": "original bytes (Git -text)"
+    },
+    "research/study4/v2/vendor/tribalbench/tasks/m-med-contractor-invoice/public/instruction.md": {
+      "bytes": 224,
+      "sha256": "232704c06e38a46853dda60653dd9727b28df280f0b0d09d7e77ee3818cf82db",
+      "byte_semantics": "original bytes (Git -text)"
+    },
+    "research/study4/v2/vendor/tribalbench/tasks/m-medium-research-purchase/gold/blueprint.json": {
+      "bytes": 2104,
+      "sha256": "b1471dba8a77ff9a88ef467a23a5e4eddecd79b3c28370d782a0c5bc516a5c0a",
+      "byte_semantics": "original bytes (Git -text)"
+    },
+    "research/study4/v2/vendor/tribalbench/tasks/m-medium-research-purchase/gold/colleague_costs.json": {
+      "bytes": 335,
+      "sha256": "30bbb7c7c21220b9bfa35981b8f220810328bbd7b07a450a6979b4b113875502",
+      "byte_semantics": "original bytes (Git -text)"
+    },
+    "research/study4/v2/vendor/tribalbench/tasks/m-medium-research-purchase/public/documents/directory.md": {
+      "bytes": 2130,
+      "sha256": "2dddd87300c15a3810939822b506abef5f9e99f83c903ec9e06f7921b908a169",
+      "byte_semantics": "original bytes (Git -text)"
+    },
+    "research/study4/v2/vendor/tribalbench/tasks/m-medium-research-purchase/public/documents/policy.md": {
+      "bytes": 296,
+      "sha256": "e803fcf879d3d318dcf61721f431e8d755584890a513554f7de978ff30d02101",
+      "byte_semantics": "original bytes (Git -text)"
+    },
+    "research/study4/v2/vendor/tribalbench/tasks/m-medium-research-purchase/public/documents/project.md": {
+      "bytes": 151,
+      "sha256": "fd91d9938db552a1e4fed209ef762816132804c9d1209847fab9484ce688e6e9",
+      "byte_semantics": "original bytes (Git -text)"
+    },
+    "research/study4/v2/vendor/tribalbench/tasks/m-medium-research-purchase/public/documents/quote.md": {
+      "bytes": 92,
+      "sha256": "9eb7b67671f113c5f0366adce49a1db00039b7d81c1589b8d0377e32307f381a",
+      "byte_semantics": "original bytes (Git -text)"
+    },
+    "research/study4/v2/vendor/tribalbench/tasks/m-medium-research-purchase/public/instruction.md": {
+      "bytes": 247,
+      "sha256": "68186a94d4d4af7490efd740ff60f4d3753d4e64719709c150463177ab60605a",
+      "byte_semantics": "original bytes (Git -text)"
+    },
+    "research/study4/v2/vendor/tribalbench/tasks/o-low-demo-dataset/gold/blueprint.json": {
+      "bytes": 1574,
+      "sha256": "018c72d1ee48b5bd2af0eec18eaeb1c13dc05514a4363144b12d97c7587a7c20",
+      "byte_semantics": "original bytes (Git -text)"
+    },
+    "research/study4/v2/vendor/tribalbench/tasks/o-low-demo-dataset/gold/colleague_costs.json": {
+      "bytes": 335,
+      "sha256": "30bbb7c7c21220b9bfa35981b8f220810328bbd7b07a450a6979b4b113875502",
+      "byte_semantics": "original bytes (Git -text)"
+    },
+    "research/study4/v2/vendor/tribalbench/tasks/o-low-demo-dataset/public/documents/demo.md": {
+      "bytes": 124,
+      "sha256": "367e23036c6504599a1659ddb8d8115d341d481f7e2da06e631ee67d9f3f23da",
+      "byte_semantics": "original bytes (Git -text)"
+    },
+    "research/study4/v2/vendor/tribalbench/tasks/o-low-demo-dataset/public/documents/directory.md": {
+      "bytes": 2129,
+      "sha256": "559861c545343bb12db8adead8aee069ae3a177b103f4ca18e6a215888814822",
+      "byte_semantics": "original bytes (Git -text)"
+    },
+    "research/study4/v2/vendor/tribalbench/tasks/o-low-demo-dataset/public/instruction.md": {
+      "bytes": 205,
+      "sha256": "d24ac60be7e1342143e4875b5f8e8e0a05ec63d337d8fe30220e6bbabeadcc10",
+      "byte_semantics": "original bytes (Git -text)"
+    },
+    "research/study4/v2/vendor/tribalbench/tasks/o-low-team-lunch/gold/blueprint.json": {
+      "bytes": 1424,
+      "sha256": "bd1943ef166f6e3cfef7170a54a4883afa4972a2e365409be8f5eb3987bb5a16",
+      "byte_semantics": "original bytes (Git -text)"
+    },
+    "research/study4/v2/vendor/tribalbench/tasks/o-low-team-lunch/gold/colleague_costs.json": {
+      "bytes": 335,
+      "sha256": "30bbb7c7c21220b9bfa35981b8f220810328bbd7b07a450a6979b4b113875502",
+      "byte_semantics": "original bytes (Git -text)"
+    },
+    "research/study4/v2/vendor/tribalbench/tasks/o-low-team-lunch/public/documents/directory.md": {
+      "bytes": 993,
+      "sha256": "c5f3a3480a7102b2eeec9c71eb47e83762f1236292551bd70b7dc46852ec887a",
+      "byte_semantics": "original bytes (Git -text)"
+    },
+    "research/study4/v2/vendor/tribalbench/tasks/o-low-team-lunch/public/documents/order.md": {
+      "bytes": 134,
+      "sha256": "ad61b83e1fb09e601924e37c29ad2f10e5cc1407f9368da1db21341973728908",
+      "byte_semantics": "original bytes (Git -text)"
+    },
+    "research/study4/v2/vendor/tribalbench/tasks/o-low-team-lunch/public/instruction.md": {
+      "bytes": 246,
+      "sha256": "54eac04c6f92d76c1b4950ea37a50a8af2f8952ddadadb880aea70922e8b4b12",
+      "byte_semantics": "original bytes (Git -text)"
+    }
+  }
+}
