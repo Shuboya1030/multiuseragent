@@ -2,10 +2,11 @@
 
 **有效下一计划（2026-11-12）：[Phase 0、假设与条件训练对齐](STUDY4_ACTIVE_PLAN_ALIGNMENT_20261112.md)。**
 已按[用户新文档](PHASE0_ARMS_HYPOTHESES_TRAINING_20261112.md)纠偏：
-正式60题×4臂×3、同LLM NPC、公开what规则 → H1–H5判定 → 条件训练。
-正式Phase0已真实运行后停在NPC HTTP429：[25/720实际覆盖、六块结果及两项零API修复](v2/reports/PHASE0_ACTUAL_STOP_AND_REPAIR_ZH.md)。
-平均差值训练门未判；累计占原USD50的8.252225025（含unknown4.29）。协议2修复只在本地验收，
-没有续批或新训练。旧[冻结执行合同](v2/PHASE0_FORMAL_PROTOCOL_20261112_ZH.md)与原始证据保留；
+同LLM NPC、公开what规则 → H1–H5判定 → 条件训练。
+**最新授权将规模修订为60题×4臂×1（240），修后统一协议2从头运行，首配对块兼作验收。**
+旧正式run在NPC HTTP429停止：[25/720实际覆盖、六块结果及两项零API修复](v2/reports/PHASE0_ACTUAL_STOP_AND_REPAIR_ZH.md)。
+旧25仅诊断，不补215混协议；训练门未判。原USD50承接占用8.252225025（含unknown4.29），
+新unknown即停，无retry/GET/新增预算或训练。旧[冻结执行合同](v2/PHASE0_FORMAL_PROTOCOL_20261112_ZH.md)与原始证据保留；
 六题规则NPC实验仍仅历史engineering smoke，不是研究门通过。
 
 **下述为2026-11-10旧SFT87历史：训练已完成，但没有体现任务收益。**

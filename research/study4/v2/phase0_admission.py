@@ -34,26 +34,28 @@ def runtime_binding():
     return shared
 
 
-def make_plan(history, inherited, *, local_test=False):
-    if not local_test:
-        raise BudgetBlocked("Version2 paid recovery needs new authority and all stopped Phase0 exposure")
+def make_plan(history, inherited, *, local_test=False, recovery_source=None):
+    if not local_test and recovery_source != SOURCE:
+        raise BudgetBlocked("Version2 recovery requires the current direct240 authority")
     slots = schedule()
     systems = set()
     for tid in {s["task_id"] for s in slots}:
         case = load_case(tid)
         systems.update(hashlib.sha256(npc_system(person, scenario).encode()).hexdigest()
                        for person, scenario in case.scenarios.items())
-    return {"schema": VERSION, "phase0_protocol": VERSION, "run_id": "study4-formal-phase0-protocol2-PENDING",
-            "mode": "local_test",
+    return {"schema": VERSION, "phase0_protocol": VERSION,
+            "run_id": "study4-formal-phase0-240-20261112-v1",
+            "mode": "local_test" if local_test else "provider",
             "endpoint": "http://127.0.0.1:9/v1/responses" if local_test else "https://api.openai.com/v1/responses",
             "budget_cap_USD": "50.00", "runtime": runtime_binding(), "price": deepcopy(PRICE),
             "token_bound": deepcopy(BOUND), "caps": asdict(CallCaps(input_tokens=272000, output_tokens=2048)),
-            "max_calls": 720 * 192 + 1, "max_episodes": 721,
-            "total_input_tokens": (720 * 192 + 1) * 272000,
-            "total_output_tokens": (720 * 192 + 1) * 128000,
+            "max_calls": 240 * 192, "max_episodes": 241 if local_test else 240,
+            "total_input_tokens": 240 * 192 * 272000,
+            "total_output_tokens": 240 * 192 * 128000,
             "max_request_bytes": 1_048_576, "max_response_bytes": 1_048_576, "http_timeout_seconds": 30,
             "operation_limits": deepcopy(OPERATION_LIMITS), "max_actions": MAX_ACTIONS,
-            "episodes": ["phase0-preflight"] + [s["episode_id"] for s in slots], "slots": slots,
+            "episodes": (["phase0-preflight"] if local_test else []) + [
+                s["episode_id"] for s in slots], "slots": slots,
             "history": deepcopy(history), "inherited": deepcopy(inherited),
             "direct_user_source": deepcopy(SOURCE),
             "npc": {"backend": "controlled_rest_conversational_v5", "model": MODEL,
@@ -61,8 +63,9 @@ def make_plan(history, inherited, *, local_test=False):
                     "source_archive": "R1/context.zip", "source_implementation_sha256":
                     "07e7b828063a63dccaf3bffc9f678c1c1f8608bae2e64b159b49cacdbc994744",
                     "published_source_sha256": NPC_PUBLISHED_SOURCE_SHA},
-            "scope": "Formal exposed60x4x3, nativeA/C and gold when-whomB/D, publicwhatC/D; original cumulative50",
-            "statistics": {"task_mean_over_3_repeats_then_equal_60": True,
+            "scope": "Formal exposed60x4x1, nativeA/C and gold when-whomB/D, publicwhatC/D; original cumulative50",
+            "statistics": {"repeats_per_task": 1, "equal_weight_60_tasks": True,
+                           "single_repeat_not_repeat_stability": True,
                            "mean_delta_gate": ".10", "contrast": "B-A OR D-A",
                            "must_optional_separate": True, "CI_is_not_extra_Phase0_gate": True,
                            "missing_or_unknown_not_zero": True},
@@ -73,8 +76,8 @@ def make_plan(history, inherited, *, local_test=False):
 def validate_binding(plan, approval, root, endpoint, now=None):
     if plan.get("budget_cap_USD") is None or approval is None:
         raise BudgetBlocked("No matching Phase0 authority; no key/file/network")
-    if plan.get("mode") != "local_test":
-        raise BudgetBlocked("Version2 provider recovery remains explicitly pending")
+    if plan.get("mode") not in {"provider", "local_test"} or plan.get("direct_user_source") != SOURCE:
+        raise BudgetBlocked("Only current direct240 recovery or local tests")
     from .http_transport import validate_endpoint
     validate_endpoint(endpoint, plan["mode"])
     require(plan["phase0_protocol"] == VERSION and plan["schema"] == VERSION and
@@ -85,24 +88,27 @@ def validate_binding(plan, approval, root, endpoint, now=None):
     require(plan["caps"] == asdict(CallCaps(input_tokens=272000, output_tokens=2048)) and
             plan["operation_limits"] == OPERATION_LIMITS and plan["max_actions"] == MAX_ACTIONS,
             "Same frozen ordinary/NPC opportunity and token caps")
-    require(plan["slots"] == schedule() and plan["episodes"] == ["phase0-preflight"] + [
-        s["episode_id"] for s in plan["slots"]], "Frozen complete60x4x3 schedule changed")
-    require(plan["budget_cap_USD"] == "50.00" and plan["max_calls"] == 720 * 192 + 1 and
-            plan["max_episodes"] == 721 and plan["http_timeout_seconds"] == 30 and
+    require(plan["slots"] == schedule() and plan["episodes"] == (
+        ["phase0-preflight"] if plan["mode"] == "local_test" else []) + [
+        s["episode_id"] for s in plan["slots"]], "Frozen complete60x4x1 schedule changed")
+    require(plan["budget_cap_USD"] == "50.00" and plan["max_calls"] == 240 * 192 and
+            plan["max_episodes"] == (241 if plan["mode"] == "local_test" else 240)
+            and plan["http_timeout_seconds"] == 30 and
             plan["max_request_bytes"] == plan["max_response_bytes"] == 1_048_576,
             "Original cumulative50 and frozen resource bounds")
     require(plan["total_input_tokens"] == plan["max_calls"] * 272000 and
             plan["total_output_tokens"] == plan["max_calls"] * 128000,
             "Aggregate token bounds cannot become an unintended early cutoff")
     if plan["mode"] == "provider":
-        require(plan["inherited"] == {"unknown_held_USD": "3.432000", "settled_USD_upper": "0.069303300",
-                                     "calls": 47, "settled_calls": 43, "unknown_calls": 4}
-                and len(plan["history"]) == 7, "All original unknown/settled exposure must remain counted")
+        require(plan["inherited"] == {"unknown_held_USD": "4.290000", "settled_USD_upper": "3.962225025",
+                                     "calls": 378, "settled_calls": 373, "unknown_calls": 5}
+                and len(plan["history"]) == 8, "All original plus stopped formal exposure must remain counted")
     require(approval.get("approved") is True and approval.get("run_id") == plan["run_id"] and
             approval.get("plan_sha256") == fingerprint(plan) and approval.get("storage_root_sha256") == root_binding(root)
             and approval.get("budget_cap_USD") == "50.00" and approval.get("direct_user_source") == SOURCE
             and approval.get("reference"), "Formal authority must match exact plan/root/cap/source")
-    expected_scope = "LOCAL_TEST_NOT_PAID_AUTHORIZATION" if plan["mode"] == "local_test" else "STUDY4_FORMAL_PHASE0_SAME_CUMULATIVE50"
+    expected_scope = ("LOCAL_TEST_NOT_PAID_AUTHORIZATION" if plan["mode"] == "local_test"
+                      else "STUDY4_FORMAL_PHASE0_240_SAME_CUMULATIVE50")
     require(approval.get("scope") == expected_scope, "Formal scope is not old48/another50")
     at = now or datetime.now(timezone.utc)
     start, end = datetime.fromisoformat(approval["not_before"]), datetime.fromisoformat(approval["expires"])

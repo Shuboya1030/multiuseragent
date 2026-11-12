@@ -23,6 +23,8 @@ def paired_interval(values, seed=20261112):
 def analyze(root, reviews=None):
     root = Path(root)
     plan = strict_json((root / "FROZEN_PLAN.json").read_bytes())
+    repeats = sorted({s["repeat"] for s in plan["slots"]})
+    expected_episodes = len(plan["slots"])
     reviews = reviews or {}
     records, by_task, rows, queue = [], defaultdict(dict), [], []
     frozen_slots = {s["episode_id"]: s for s in plan["slots"]}
@@ -92,22 +94,22 @@ def analyze(root, reviews=None):
             for tid, scores in by_task.items():
                 if group != "all" and load_case(tid).blueprint["help_class"] != group:
                     continue
-                if all((arm, repeat) in scores for arm in (left, right) for repeat in range(3)):
-                    deltas.append(mean([scores[(left, r)]["R"] - scores[(right, r)]["R"] for r in range(3)]))
+                if all((arm, repeat) in scores for arm in (left, right) for repeat in repeats):
+                    deltas.append(mean([scores[(left, r)]["R"] - scores[(right, r)]["R"] for r in repeats]))
             contrasts[left + "-" + right] = {
-                "tasks_with_all_3_paired_repeats": len(deltas), "mean_R_difference": mean(deltas),
+                "tasks_with_all_frozen_paired_repeats": len(deltas), "mean_R_difference": mean(deltas),
                 "within_single_org_task_paired_CI95": paired_interval(deltas),
                 "not_between_organization_uncertainty": True}
         aggregates[group] = {"arms": arms, "contrasts": contrasts}
-    complete_coverage = len(rows) == 720 and all(
-        len(by_task[tid]) == 12 for tid in {s["task_id"] for s in plan["slots"]})
+    complete_coverage = len(rows) == expected_episodes and all(
+        len(by_task[tid]) == 4 * len(repeats) for tid in {s["task_id"] for s in plan["slots"]})
     contrasts = aggregates["all"]["contrasts"]
     gate = None
     if complete_coverage:
         gate = any(contrasts[name]["mean_R_difference"] >= .10 for name in ("B-A", "D-A"))
     return {"schema": "study4-formal-phase0-analysis-2", "record_protocol": plan["phase0_protocol"],
             "complete_episodes": len(rows),
-            "expected_episodes": 720, "missing_slots": [
+            "expected_episodes": expected_episodes, "repeats_per_task": len(repeats), "missing_slots": [
                 s for s in plan["slots"] if s["episode_id"] not in {r["slot"]["episode_id"] for r in rows}],
             "full_coverage_and_evidence_resolved": complete_coverage,
             "mean_R_training_gate_passed": gate, "gate_unknown_not_false": gate is None,

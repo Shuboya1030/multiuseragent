@@ -2,15 +2,17 @@
 
 **有效下一计划已转为[Phase 0→假设判定→条件训练](../STUDY4_ACTIVE_PLAN_ALIGNMENT_20261112.md)，**
 依据[用户20261112文档](../PHASE0_ARMS_HYPOTHESES_TRAINING_20261112.md)。
-正式Phase 0为60题×4臂×3、同LLM NPC、C/D仅公开历史what规则；
+正式Phase 0沿用同LLM NPC、C/D仅公开历史what规则；最新规模经用户修订为60题×4臂×1；
 本目录六题规则NPC/gold辅助what与人工intent grammar仅历史engineering smoke，不能过训练门。
 旧pilot的“待签差值门”不再是有效研究门，恢复用户平均R的B−A或D−A≥.10；
 随后用户已明确要求执行到Phase 0答案：[正式执行合同与预算边界](PHASE0_FORMAL_PROTOCOL_20261112_ZH.md)。
-正式scope为720 episodes且共用原累计USD50；无新训练/RL/GPU授权，不以mock验收当结果。
+当前scope为240 episodes、修后统一协议2从头运行，共用原累计USD50；
+首四臂配对块兼作验收，不再单独probe，无新训练/RL/GPU授权，不以mock验收当结果。
 
 **最新actual：[25/720覆盖、六完整块、HTTP429及协议2零API修复](reports/PHASE0_ACTUAL_STOP_AND_REPAIR_ZH.md)。**
 原协议1已停；新unknown.858与旧3.432均保留，合计占帽8.252225025/50。
-新版修复历史重复与相同内容write失效，未真实运行；正式训练门未判，provider恢复显式pending。
+新版修复历史重复与相同内容write失效，绑定本次直接继续来源及全部378旧calls后恢复；
+旧25仅诊断，不补215混协议。正式训练门未判，新unknown即停；实际终态以新run receipt为准。
 
 ## 历史工程状态与证据
 

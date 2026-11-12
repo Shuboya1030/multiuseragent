@@ -21,7 +21,7 @@ from .paid_driver import Journal, write_new
 from .runtime import SharedRuntime
 
 VERSION = "study4-formal-phase0-native-llmnpc-2"
-SOURCE = {"id": "4c1b3c37-82a7-4bc1-9a98-5ad166882657", "revision": 5}
+SOURCE = {"id": "dccf1924-a562-4335-bbca-c6f929b24f2e", "revision": 8}
 ARCHIVES = Path(__file__).parents[2] / "study2" / "results" / "r1_2026_11_02" / "archives"
 NPC_SOURCE = "implementations/07e7b828063a63dccaf3bffc9f678c1c1f8608bae2e64b159b49cacdbc994744.py"
 NPC_PUBLISHED_SOURCE_SHA = "1d634c25ba4bfe500abfad35848241f2ba29fa1ff07e206307ac832665af23d2"
@@ -411,14 +411,15 @@ def episode(case, slot, mini, journal):
         raise
 
 
-def schedule():
+def schedule(repeats=1):
+    require(type(repeats) is int and repeats in {1, 3}, "Only current1 or historical3 repeats")
     ids = task_ids()
     require(len(ids) == 60 and sum(t.startswith("m-") for t in ids) == 30, "Frozen60 class balance")
     must = sorted((t for t in ids if t.startswith("m-")), key=lambda t: fingerprint([20261112, t]))
     optional = sorted((t for t in ids if t.startswith("o-")), key=lambda t: fingerprint([20261112, t]))
     ordered = [t for pair in zip(must, optional) for t in pair]
     slots = []
-    for repeat in range(3):
+    for repeat in range(repeats):
         for index, tid in enumerate(ordered):
             group = repeat * 60 + index
             arms = "ABCD"[group % 4:] + "ABCD"[:group % 4]
@@ -431,7 +432,8 @@ def schedule():
 def verify_inherited(entries, *, locked=False):
     caps = __import__("research.study4.v2.budget", fromlist=["CallCaps"]).CallCaps()
     settled, held, calls, settled_calls, unknown = Decimal(0), Decimal(0), 0, 0, 0
-    require(len(entries) == 7 and len({e["root"] for e in entries}) == 7, "Exactly seven original roots")
+    require(len(entries) in {7, 8} and len({e["root"] for e in entries}) == len(entries),
+            "Seven original roots plus, for recovery, the stopped formal root")
     for entry in entries:
         root = Path(entry["root"])
         for name, digest in entry["file_sha256"].items():
@@ -458,8 +460,9 @@ def verify_inherited(entries, *, locked=False):
                 require(Decimal(charged) == caps.charge(incoming, outgoing), "Historical usage price mismatch")
                 settled_calls += 1
                 settled += Decimal(charged)
-    require((calls, settled_calls, unknown, held, settled) ==
-            (47, 43, 4, Decimal("3.432"), Decimal(".069303300")), "Never omit original50 exposure")
+    expected = ((47, 43, 4, Decimal("3.432"), Decimal(".069303300")) if len(entries) == 7 else
+                (378, 373, 5, Decimal("4.29"), Decimal("3.962225025")))
+    require((calls, settled_calls, unknown, held, settled) == expected, "Never omit original50 exposure")
     return {"unknown_held_USD": format(held, ".6f"), "settled_USD_upper": format(settled, ".9f"),
             "calls": calls, "settled_calls": settled_calls, "unknown_calls": unknown}
 
@@ -487,12 +490,6 @@ def run(root, plan, approval, transport):
                                          "source": SOURCE, "scope": VERSION})
         completed, status, failure = [], "complete", None
         try:
-            first = plan["slots"][0]
-            state = Phase0Runtime(load_case(first["task_id"]), "phase0-preflight").observe()
-            request = build_request("native", state)
-            preflight = ledger.call("phase0-preflight", "ordinary", 0, request, transport)
-            write_new(root / "PREFLIGHT.json", {"result": preflight, "environment_tools": 0,
-                                               "formal_episodes": 0, "budget": ledger.status()})
             for slot in plan["slots"]:
                 journal.append({"kind": "episode_start", "slot": slot})
                 record = episode(load_case(slot["task_id"]), slot,
@@ -573,41 +570,45 @@ def freeze(root, session_files):
                  r"study4_v2_native_20261112_v1\batch"]
     history = [{"root": str((Path(session_files) / rel).resolve()), "file_sha256": entry["file_sha256"]}
                for rel, entry in zip(relatives, check["all7actual_roots_unchanged"])]
+    stopped = Path(session_files) / "study4_formal_phase0_20261112_v2"
+    prior = strict_json((stopped / "FROZEN_PLAN.json").read_bytes())
+    receipt = strict_json((stopped / "FINAL_RECEIPT.json").read_bytes())
+    require(prior["phase0_protocol"] == "study4-formal-phase0-native-llmnpc-1"
+            and prior["history"] == history and receipt["status"] == "stopped"
+            and receipt["complete_episodes"] == 25 and receipt["budget"]["in_flight"] == 0,
+            "Exact stopped formal predecessor required; no active batch")
+    history.append({"root": str(stopped.resolve()), "file_sha256": {
+        p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in stopped.iterdir() if p.is_file()}})
     inherited = verify_inherited(history)
-    plan = make_plan(history, inherited)
+    plan = make_plan(history, inherited, recovery_source=SOURCE)
     plan["code_commit"] = subprocess.check_output(
         ["git", "-c", "core.longpaths=true", "rev-parse", "HEAD"], text=True).strip()
     root = Path(root).resolve()
     require(not root.exists(), "Never duplicate an attempted or frozen formal root")
-    predecessor = Path(session_files) / "study4_formal_phase0_20261112_v1"
-    if predecessor.exists() and predecessor.resolve() != root:
-        require(not (predecessor / "STARTED.json").exists() and
-                not list(predecessor.glob("*.sqlite3")) and not (predecessor / "PREFLIGHT.json").exists(),
-                "Only the documented before-ledger/no-POST predecessor may be bypassed")
-        plan["prior_formal_zero_call_failure"] = {
-            "root": str(predecessor.resolve()), "model_calls": 0, "paid_ledger_created": False,
-            "stage": "reading_already_locked_historical_lock_file_before_new_ledger",
-            "error_type": "PermissionError",
-            "file_sha256": {p.name: hashlib.sha256(p.read_bytes()).hexdigest()
-                            for p in predecessor.iterdir() if p.is_file()}}
     current = datetime.now(timezone.utc)
     approval = {"approved": True, "run_id": plan["run_id"], "plan_sha256": fingerprint(plan),
                 "storage_root_sha256": root_binding(root), "budget_cap_USD": "50.00",
-                "direct_user_source": SOURCE, "scope": "STUDY4_FORMAL_PHASE0_SAME_CUMULATIVE50",
+                "direct_user_source": SOURCE, "scope": "STUDY4_FORMAL_PHASE0_240_SAME_CUMULATIVE50",
                 "not_before": current.isoformat(), "expires": (current + timedelta(hours=24)).isoformat(),
-                "reference": "assignment:741f367f-a37b-48de-a57d-1e7bbe84ade4:call_FVKXnR20Irsy2D8JWNARY3I0"}
+                "reference": "assignment:741f367f-a37b-48de-a57d-1e7bbe84ade4:call_unhkkkHoQqVzhduFpJOHMnI8"}
     validate_binding(plan, approval, root, plan["endpoint"])
     root.mkdir(parents=True)
     write_new(root / "FROZEN_PLAN.json", plan)
     write_new(root / "APPROVAL.json", approval)
     write_new(root / "AUTHORIZATION_SOURCE.json", {
         "direct_user_source": SOURCE,
-        "direct_user_text": "\u90a3\u4f60\u7ee7\u7eed\u6309\u7167\u4f60\u4fee\u590d\u7684\u8ba1\u5212\u7ee7\u7eed\u6267\u884c\u5427\u3002\u4f60\u6062\u590d\u6062\u590dphase0\u4e86\u5417\uff1f\u8bf7\u4f60\u7ee7\u7eed\uff0c\u76f4\u5230\u7ed9\u6211phase 0\u7684\u7b54\u6848",
+        "direct_user_text": "\u7ee7\u7eed\u5427",
+        "coordinator_scope": "60 exposed tasks x4 arms x1; fresh uniform protocol2, not old720 or mixed25+215",
         "same_original_total_cap_USD": "50.00", "new_budget_increase": False,
-        "inherited": inherited, "formal_max_episodes": 720, "NPC_API_included": True,
-        "one_preflight_no_environment_tools": True, "unknown_stops_no_retry": True,
+        "inherited": inherited, "formal_max_episodes": 240, "NPC_API_included": True,
+        "first_paired_block_is_acceptance_no_separate_probe": True, "unknown_stops_no_retry": True,
         "no_training_RL_GPU_or_final_test": True})
-    estimate = historical_usage_estimate()
+    estimate = {"basis": "old24 complete episodes USD1.23137025; censored partial USD2.625319125",
+                "fresh240_completion_mean_USD_scenario": "12.313702500",
+                "fresh240_one_censored_tail_per26_USD_scenario": "36.07381355769230769230769231",
+                "remaining_original50_USD": "41.747774975",
+                "not_guarantee_or_protocol2_measured_cost": True,
+                "reserve_per_call_USD": ".858000", "unknown_stops_no_retry": True}
     write_new(root / "BUDGET_ESTIMATE.json", estimate)
     return {"frozen": True, "ledger_created": False, "plan_sha256": fingerprint(plan),
             "old_exposure": inherited, "budget_estimate": estimate}

@@ -220,15 +220,16 @@ class Phase0Tests(unittest.TestCase):
 
     def test_full60_balanced_schedule_preserved(self):
         slots = schedule()
-        self.assertEqual(len(slots), 720)
-        for start in range(0, 720, 4):
+        self.assertEqual(len(slots), 240)
+        for start in range(0, 240, 4):
             block = slots[start:start+4]
             self.assertEqual({s["arm"] for s in block}, set("ABCD"))
             self.assertEqual(len({(s["task_id"], s["repeat"]) for s in block}), 1)
         for tid in {s["task_id"] for s in slots}:
             case = load_case(tid)
-            self.assertEqual(len([s for s in slots if s["task_id"] == tid]), 12)
+            self.assertEqual(len([s for s in slots if s["task_id"] == tid]), 4)
             self.assertEqual(set(case.scenarios), {p.person_id for p in case.public.people})
+        self.assertEqual(len(schedule(repeats=3)), 720)
 
     def test_long_dialogue_has_one_event_projection_and_no_requoted_source_history(self):
         runtime = Phase0Runtime(self.case, "growth")
@@ -324,14 +325,35 @@ class Phase0Tests(unittest.TestCase):
         changed._normal(Tool("submit", (("answer", "Delivered"),)))
         self.assertTrue(changed.progress()["bridge_submitted"])
 
-    def test_new_provider_protocol_is_pending_not_a_reuse_of_old_paid_authority(self):
+    def test_current_recovery_requires_all_exposure_and_new_scope_not_old_authority(self):
         with self.assertRaises(BudgetBlocked):
             make_plan([], {"unknown_held_USD": "0", "settled_USD_upper": "0"})
         with tempfile.TemporaryDirectory() as directory:
-            plan = deepcopy(self.template)
-            plan["mode"] = "provider"
-            with self.assertRaises(BudgetBlocked):
-                validate_binding(plan, self.authority(Path(directory), plan), Path(directory), plan["endpoint"])
+            root = Path(directory)
+            inherited = {"unknown_held_USD": "4.290000", "settled_USD_upper": "3.962225025",
+                         "calls": 378, "settled_calls": 373, "unknown_calls": 5}
+            plan = make_plan([{}] * 8, inherited, recovery_source=SOURCE)
+            authority = self.authority(root, plan)
+            authority["scope"] = "STUDY4_FORMAL_PHASE0_240_SAME_CUMULATIVE50"
+            validate_binding(plan, authority, root, plan["endpoint"])
+            self.assertNotIn("phase0-preflight", plan["episodes"])
+            self.assertEqual(len(plan["episodes"]), 240)
+            ledger = DurableLedger(root, plan, authority, create=True)
+            try:
+                status = ledger.status()
+                self.assertEqual(status["occupied_USD_upper"], "8.252225025")
+                self.assertEqual(status["held_USD_upper"], "4.290000")
+                self.assertEqual(status["calls"], 0)
+            finally:
+                ledger.close()
+            authority["scope"] = "STUDY4_FORMAL_PHASE0_SAME_CUMULATIVE50"
+            with self.assertRaises(ValueError):
+                validate_binding(plan, authority, root, plan["endpoint"])
+            plan["inherited"]["unknown_held_USD"] = "3.432000"
+            authority = self.authority(root, plan)
+            authority["scope"] = "STUDY4_FORMAL_PHASE0_240_SAME_CUMULATIVE50"
+            with self.assertRaises(ValueError):
+                validate_binding(plan, authority, root, plan["endpoint"])
 
     def test_historical_lock_hashes_checked_before_and_after_not_while_exclusively_locked(self):
         import sqlite3
