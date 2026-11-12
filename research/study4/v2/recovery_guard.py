@@ -6,6 +6,9 @@ from .contracts import fingerprint, require
 
 
 def prior_hold(plan):
+    if plan.get("continuation") is not None:
+        from .ceiling_continuation import verify_history
+        return verify_history(plan["continuation"]["history"])[0]
     recovery = plan.get("diagnostic_recovery")
     if recovery is None:
         return Decimal(0)
@@ -21,6 +24,10 @@ def prior_hold(plan):
 
 
 def validate_recovery(plan, approval):
+    if plan.get("continuation") is not None:
+        from .ceiling_continuation import validate_continuation
+        validate_continuation(plan, approval)
+        return
     held = prior_hold(plan)
     if not held:
         return
@@ -39,3 +46,10 @@ def validate_recovery(plan, approval):
                 extra["new_direct_user_source"] == SOURCE and plan.get("environment_tools_allowed") is False,
                 "Only current direct single-diagnostic authority; tools forbidden")
         verify_prior(recovery)
+
+
+def prior_settled(plan):
+    if plan.get("continuation") is not None:
+        from .ceiling_continuation import verify_history
+        return verify_history(plan["continuation"]["history"])[1]
+    return Decimal(0)

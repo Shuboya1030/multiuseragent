@@ -111,7 +111,12 @@ class PaidMini:
 def run_fresh(root, plan, approval, transport, on_group=None):
     root = Path(root).resolve()
     validate_binding(plan, approval, root, transport.endpoint)
-    require(plan == frozen_plan(), "Only exact authorized frozen 48-slot USD50 plan")
+    if plan.get("continuation") is not None:
+        from .ceiling_continuation import make_plan
+        require(plan["continuation"]["phase"] == "batch" and plan == make_plan(plan["continuation"]),
+                "Only exact authorized continuation of frozen48 slots")
+    else:
+        require(plan == frozen_plan(), "Only exact authorized frozen 48-slot USD50 plan")
     require(not (root / "FRESH_STARTED.json").exists(), "Batch started before; interrupted tools/episodes NEVER replay")
     ledger = DurableLedger(root, plan, approval, create=True)
     journal, rows, current = None, [], None

@@ -16,7 +16,7 @@ from .budget import BudgetBlocked, LocalBudget
 from .contracts import canonical, fingerprint, require
 from .provider_bound import reservation_output_bound
 from .response_diagnosis import inspect_response_shape, ResponseStageError
-from .recovery_guard import prior_hold
+from .recovery_guard import prior_hold, prior_settled
 
 
 class BatchBusy(RuntimeError):
@@ -151,13 +151,14 @@ class DurableLedger:
         rows = self.connection.execute("select * from calls").fetchall()
         settled = sum((Decimal(r["charged"]) for r in rows if r["state"] == "settled"), Decimal(0))
         external = prior_hold(self.plan)
+        external_settled = prior_settled(self.plan)
         held = sum((Decimal(r["reserved"]) for r in rows if r["state"] != "settled"), Decimal(0)) + external
         return {"calls": len(rows), "settled": sum(r["state"] == "settled" for r in rows),
                 "unknown": sum(r["state"] == "unknown" for r in rows),
                 "in_flight": sum(r["state"] in {"reserved", "sending"} for r in rows),
-                "occupied_USD_upper": str(settled + held), "held_USD_upper": str(held),
+                "occupied_USD_upper": str(settled + held + external_settled), "held_USD_upper": str(held),
                 "cap_USD": str(self.cap), "mode": self.plan["mode"],
-                "prior_unknown_held_USD": str(external)}
+                "prior_unknown_held_USD": str(external), "prior_settled_USD_upper": str(external_settled)}
 
     def _reserve(self, call_id, episode, operation, request_hash, bound):
         with self.transaction():
@@ -207,6 +208,11 @@ class DurableLedger:
         if self.plan.get("dispatcher_version") is not None:
             require(operation == "ordinary" and index == 0 and
                     fingerprint(request) == self.plan["request_sha256"], "Only frozen single ordinary diagnostic")
+        continuation = self.plan.get("continuation")
+        if continuation is not None and continuation["phase"] == "validation":
+            require(operation == "ordinary" and index == 0 and
+                    fingerprint(request) == continuation["request_sha256"],
+                    "Only frozen single prompt-v2 validation")
         body, bound, observation, assistance = prepare_request(request, operation, self.plan)
         call_id = f"{episode}:{operation}:{index}"
         cached = self._reserve(call_id, episode, operation, hashlib.sha256(body).hexdigest(), bound)
