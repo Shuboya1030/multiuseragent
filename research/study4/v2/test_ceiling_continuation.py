@@ -27,7 +27,7 @@ def frozen_history(root, run_id):
 
 def setup(parent):
     history = []
-    for index in range(2):
+    for index in range(3):
         root = parent / ("old" + str(index))
         root.mkdir()
         db = root / ("old" + str(index) + ".sqlite3")
@@ -84,7 +84,7 @@ class ContinuationTests(unittest.TestCase):
                 expected_stage = {"connect": "connect", "request": "send", "getresponse": "headers", "read": "read"}
                 self.assertEqual(diagnostic["stage"], expected_stage[stage])
                 self.assertIsNone(result["calls"][0]["response_bytes"])
-                self.assertEqual(Decimal(result["budget"]["held_USD_upper"]), Decimal("2.574"))
+                self.assertEqual(Decimal(result["budget"]["held_USD_upper"]), Decimal("3.432"))
                 self.assertFalse((root / "ACTUAL_RESPONSE_SHAPE.json").exists())
 
     def test_one_success_prior_unknowns_unchanged_then_same_48_slot_batch_with_cumulative_cost(self):
@@ -95,12 +95,12 @@ class ContinuationTests(unittest.TestCase):
             result = validate_once(root, plan, approval, request, provider)
             self.assertEqual(provider.calls, 1)
             self.assertEqual(result["budget"]["settled"], 1)
-            self.assertEqual(Decimal(result["budget"]["held_USD_upper"]), Decimal("1.716"))
+            self.assertEqual(Decimal(result["budget"]["held_USD_upper"]), Decimal("2.574"))
             self.assertEqual(result["environment_tools_executed"], 0)
             with self.assertRaisesRegex(ValueError, "Already attempted"):
                 validate_once(root, plan, approval, request, provider)
             self.assertEqual(provider.calls, 1)
-            self.assertEqual(verify_history(before), (Decimal("1.716"), Decimal(0)))
+            self.assertEqual(verify_history(before), (Decimal("2.574"), Decimal(0)))
             history = before + [frozen_history(root, plan["run_id"])]
             batch_root = Path(folder) / "batch"
             batch_root.mkdir()
@@ -113,7 +113,7 @@ class ContinuationTests(unittest.TestCase):
             self.assertEqual(batch["status"], "complete")
             self.assertEqual(len(batch["completed"]), 48)
             self.assertEqual(batch["budget"]["unknown"], 0)
-            self.assertEqual(Decimal(batch["budget"]["prior_unknown_held_USD"]), Decimal("1.716"))
+            self.assertEqual(Decimal(batch["budget"]["prior_unknown_held_USD"]), Decimal("2.574"))
             self.assertEqual(Decimal(batch["budget"]["prior_settled_USD_upper"]),
                              Decimal(result["calls"][0]["charged"]))
             calls = batch_provider.calls
@@ -121,13 +121,13 @@ class ContinuationTests(unittest.TestCase):
                 run_batch(batch_root, batch_plan, batch_approval, batch_provider)
             self.assertEqual(batch_provider.calls, calls)
 
-    def test_failed_validation_retains_2574_and_cannot_unlock_batch_or_repeat(self):
+    def test_failed_validation_retains_3432_and_cannot_unlock_batch_or_repeat(self):
         with tempfile.TemporaryDirectory(prefix="study4_v2_continuation_unknown_") as folder:
             root, plan, approval, request = setup(Path(folder))
             provider = ScriptedTransport(plan, invalid=True)
             result = validate_once(root, plan, approval, request, provider)
             self.assertEqual(result["calls"][0]["diagnostic"]["validation_stage"], "usage")
-            self.assertEqual(Decimal(result["budget"]["held_USD_upper"]), Decimal("2.574"))
+            self.assertEqual(Decimal(result["budget"]["held_USD_upper"]), Decimal("3.432"))
             history = plan["continuation"]["history"] + [frozen_history(root, plan["run_id"])]
             with self.assertRaisesRegex(ValueError, "not legally settled"):
                 verify_history(history)
@@ -174,7 +174,7 @@ class ContinuationTests(unittest.TestCase):
             provider = ScriptedTransport(plan)
             ledger = DurableLedger(root, plan, approval, create=True)
             try:
-                with patch.object(ledger, "cap", Decimal("2.573999")):
+                with patch.object(ledger, "cap", Decimal("3.431999")):
                     with self.assertRaises(BudgetBlocked):
                         ledger.call(plan["episodes"][0], "ordinary", 0, request, provider)
                 self.assertEqual(provider.calls, 0)

@@ -9,14 +9,14 @@ import sqlite3
 
 from .contracts import fingerprint, require, strict_json
 
-SOURCE = {"id": "b3cd1516-3d61-45fa-8e7b-08d83f526004", "revision": 5}
-VERSION = "study4-ceiling50-prompt-v2-continuation-1"
+SOURCE = {"id": "137aeefe-fc9f-49ba-9565-951bc6e77dcf", "revision": 2}
+VERSION = "study4-ceiling50-prompt-v2-continuation-2"
 PROMPT_VERSION = "study4-ordinary-single-action-v2"
 
 
 def verify_history(history):
     """Immutable readers never settle, repair, checkpoint or release earlier ledgers."""
-    require(len(history) in {2, 3}, "Exactly two old unknown runs, optionally one settled validation")
+    require(len(history) in {3, 4}, "Exactly three old unknown runs, optionally one settled validation")
     held, settled = Decimal(0), Decimal(0)
     roots = set()
     for index, item in enumerate(history):
@@ -45,8 +45,8 @@ def verify_history(history):
         require(len(rows) == 1, "Each prior run must contain exactly one call")
         state, reserve, charge, incoming, outgoing = rows[0]
         require(Decimal(reserve) == Decimal(".858"), "Prior maximum reserve drift")
-        if index < 2:
-            require(state == "unknown" and charge is None, "Both old unknowns must remain unknown")
+        if index < 3:
+            require(state == "unknown" and charge is None, "Three old unknowns must remain unknown")
             held += Decimal(reserve)
         else:
             require(state == "settled" and Decimal(charge) >= 0 and
@@ -59,7 +59,7 @@ def verify_history(history):
             from .budget import CallCaps
             require(Decimal(charge) == CallCaps().charge(incoming, outgoing), "Prior settled cost drift")
             settled += Decimal(charge)
-    require(held == Decimal("1.716"), "Original unknown exposure must not be reduced")
+    require(held == Decimal("2.574"), "Original unknown exposure must not be reduced")
     return held, settled
 
 
@@ -71,7 +71,7 @@ def make_plan(continuation):
     phase = continuation["phase"]
     require(phase in {"validation", "batch"}, "Unsupported continuation phase")
     plan = frozen_plan() if phase == "batch" else pending_plan()
-    plan.update(run_id="study4-v2-prompt-v2-" + phase + "-20261112-v1",
+    plan.update(run_id="study4-v2-prompt-v2-" + phase + "-20261112-v2",
                 budget_cap_USD="50.00", continuation=continuation)
     if phase == "validation":
         plan.update(max_calls=1, max_episodes=1, episodes=["prompt-v2-validation-no-tools"],
@@ -95,7 +95,7 @@ def validate_continuation(plan, approval):
     require(config["version"] == VERSION and config["new_direct_user_source"] == SOURCE and
             config["prompt_version"] == PROMPT_VERSION and plan["budget_cap_USD"] == "50.00",
             "Continuation source/version/original50 scope mismatch")
-    expected_count = 2 if config["phase"] == "validation" else 3
+    expected_count = 3 if config["phase"] == "validation" else 4
     require(len(config["history"]) == expected_count and plan == make_plan(config),
             "Exact validation or unchanged 48-slot continuation plan required")
     authority = approval.get("continuation_authorization")
@@ -132,7 +132,7 @@ def validate_once(root, plan, approval, request, transport):
         stack.callback(ledger.close)
         write_new(root / "VALIDATION_STARTED.json", {
             "at": datetime.now(timezone.utc).isoformat(), "plan_sha256": fingerprint(plan),
-            "prior_unknown_held_USD": "1.716000", "environment_tools_allowed": False})
+            "prior_unknown_held_USD": "2.574000", "environment_tools_allowed": False})
         observed = ObservedTransport(transport, root)
         error = None
         try:
