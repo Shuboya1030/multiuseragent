@@ -90,7 +90,7 @@ def validate_binding(plan, approval, root, endpoint, now=None):
             plan["total_output_tokens"] == plan["max_calls"] * 128000,
             "Aggregate token bounds cannot become an unintended early cutoff")
     if plan["mode"] == "provider":
-        require(plan["inherited"] == {"unknown_held_USD": "3.432", "settled_USD_upper": "0.069303300",
+        require(plan["inherited"] == {"unknown_held_USD": "3.432000", "settled_USD_upper": "0.069303300",
                                      "calls": 47, "settled_calls": 43, "unknown_calls": 4}
                 and len(plan["history"]) == 7, "All original unknown/settled exposure must remain counted")
     require(approval.get("approved") is True and approval.get("run_id") == plan["run_id"] and

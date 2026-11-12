@@ -398,7 +398,7 @@ def verify_inherited(entries):
                 settled += Decimal(charged)
     require((calls, settled_calls, unknown, held, settled) ==
             (47, 43, 4, Decimal("3.432"), Decimal(".069303300")), "Never omit original50 exposure")
-    return {"unknown_held_USD": str(held), "settled_USD_upper": str(settled),
+    return {"unknown_held_USD": format(held, ".6f"), "settled_USD_upper": format(settled, ".9f"),
             "calls": calls, "settled_calls": settled_calls, "unknown_calls": unknown}
 
 
