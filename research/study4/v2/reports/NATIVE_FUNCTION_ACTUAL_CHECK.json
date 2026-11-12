@@ -1,0 +1,2312 @@
+{
+  "schema": "study4-native-actual-partial-1",
+  "native_protocol": "study4-native-single-function-v1",
+  "actual_runtime_commit": "2e5ca009ef729d9984c3bcb08f9df5171214ed79",
+  "actual_runtime_binding": {
+    "platform": "Windows",
+    "protocol": "study4-controller-v2-local-1.1",
+    "python": "3.12.10",
+    "source_byte_semantics": "UTF8 LF normalized",
+    "source_sha256": {
+      "admission.py": "206365e55729a0bf35f44720ff6ed6d8d4dbf3d9dd5df0ce2abb97a6e29a8c9c",
+      "benchmark.py": "46a4671470d41425481aa9f61373cbb103819aca7f2a73330828a0494b72f0b9",
+      "budget.py": "1bd91deddb52c55ba64d3a9fa7fc46216a739b44385d76d0a39fb0d6f10edf63",
+      "ceiling_continuation.py": "4ba0d71cd5bc4bfed7c11c34ef6947088f151bae2c47ab93d56ee7999a58f13f",
+      "configs/ceiling_pilot.json": "523e0caae6c4ffe99459ac02ad30ecd7e4f4dcb224c8787b4a47163fee4b9afd",
+      "configs/native_function_contract_v1.json": "5bab251caceb3b58585879cf7405be9517e5be4296dad640ecc4c3e77dd24307",
+      "configs/provider_model_maximum_bound_v1.json": "afa837d1f46acd3d5a3309d92439947e226f3a2fe78aa0b97b736cd3aa91434f",
+      "contracts.py": "150c4fe0e04f8033ba75275072b77488748081ee3992d9c90bbb59b3b99ed087",
+      "diagnostic_dispatch.py": "8b8bc910a696e1f403849f0d5d8d15c1f164a76c2ffc1e61b73f72d663ee4bd8",
+      "durable.py": "344532372d8e14750371ae14fd5b9d8c689b174fbb961643cf83307150e75215",
+      "executor.py": "a4eb3230e7f67927a995a32cc4114f802ee3e96ca0ed5ec90ee5285464e4f2fc",
+      "http_transport.py": "a0a14bab28c571b9f17ba18e1429610227fdd34f46e013052f229531eb18387d",
+      "mini_request.py": "911d6fa9ffce6136209217b7f38f5f00b3005a9552f1b8d3dd03f33b0b2eafce",
+      "native_driver.py": "08e6fcd9adbceb63de899495d2ab773a79cf00aa3d064f6e02a950dcf3e4f249",
+      "native_protocol.py": "8e1f7e228013eb4bf851673ffbe9bc0c2b88fe500fab8620c73875958184bc3e",
+      "npc_rule.py": "82e3b757921f9ac9a4bec32228ee2178945472e48030c03cb313c19812907f0e",
+      "oracle.py": "785ac2c980c0619e948278181c9d4c5cdcb6c4d1b8086469b63afd495955c6e4",
+      "paid_driver.py": "9ceca91cb64024b89bf5348c7b323cb1df2bba7da27a432450365ae107d03067",
+      "provider_bound.py": "2e6662a619d7ea326fd046da3377938f6c212e1154d76912658f933f4d0e0321",
+      "recovery_guard.py": "b878c16edb5c731a90eeb51d35e8f6de5917317c9a298d928e44776217725925",
+      "response_diagnosis.py": "de4b9bf95853bb5a95709a87f1ecdd54f1d84a7eb3df6924c33bcbe674736c01",
+      "runtime.py": "e721937e4151ace616be81ab4299aa77f7816ae4f8837c3672fa46c7adeb7ae1",
+      "scheduler.py": "d5aa3f3ec86b9b6401e7a4f42909c1a08dd95508ff5a3dbdaf565327fd239cf3"
+    }
+  },
+  "new_direct_user_source": {
+    "id": "f0d83ab9-9180-4da1-8ff7-7a2feaf440e1",
+    "revision": 3
+  },
+  "actual_validation_plan_sha256": "14963a1a91b0fa5a2fa119dd12bb6302a82ff89ec4738e5950e822477e7741f7",
+  "actual_batch_plan_sha256": "3f2822a3d664776f962b7b3f9a57964c0d06df576dfa8bf126b1799bd68071ed",
+  "prior_original_file_sha256_unchanged": [
+    {
+      "run_id": "study4-v2-rule-ceiling50-20261111-v1",
+      "file_sha256": {
+        "APPROVAL.json": "da7cf3d68a8e0eb092325a5bf30c657655bda347244fdae47e7a1cbb084ad67c",
+        "FINAL_RECEIPT.json": "ff0e53edab3b6790f2691e219ce06ccf4c88fa7b51025d1f617acd979a288910",
+        "FRESH_STARTED.json": "860b8ec7864568ee1bfa27a857ca893fe93c52efa5721c1080cd4f76302374fd",
+        "FROZEN_PLAN.json": "a24a58e551463fdcf32fb30c9ca3369791f871db6a811c573bae1730d7ce8fce",
+        "events.jsonl": "8bf92ecaadf8fd6efc86259efdc81711499dc41345eaf3365892154539b5e0f7",
+        "slot-00-INCOMPLETE.json": "0d542d68e0e3b81437775548f70696462e0d2235d8b9dd91ff6c1a9fa22dbbba",
+        "study4-v2-rule-ceiling50-20261111-v1.lock": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "study4-v2-rule-ceiling50-20261111-v1.sqlite3": "4dbd8da07c0128b1d86ad2ac356fc218a7f2dc024a46242fe7959fba16349fe7",
+        "study4-v2-rule-ceiling50-20261111-v1.sqlite3-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+        "study4-v2-rule-ceiling50-20261111-v1.sqlite3-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "run_id": "study4-v2-single-diagnostic-20261112-v1",
+      "file_sha256": {
+        "ACTUAL_RESPONSE_SHAPE.json": "2919909340db0fff8407d70156bc755317d4ba504f13e1524d031ecfe430e750",
+        "APPROVAL.json": "201fadd3f991e5ee3e08c1f00b1f96bcb7cd5cbe2b5090f0236cd47d638852a8",
+        "DIAGNOSTIC_FINAL.json": "4e7e3848aa6bb156ff2843ab44316762b68b3bee9ae5e38313aa2327ef7af3e6",
+        "DIAGNOSTIC_STARTED.json": "1e1f3943a8695cef6bfc1c9bcdc4346516dd282b1e664a1e39c5547786ebd7a7",
+        "PLAN.json": "25e949539a4b8028329575099eddefac820bec100fe30acf9219dc25c80741b3",
+        "PRE_NETWORK_GATE_APPROVAL.json": "c5612698796f9c07d9fc923137089bce3adac9d27128afe248f7a98be4dcc40b",
+        "PRE_NETWORK_GATE_OBSERVATION.json": "944eadf2dbbb6be4c7bd20bfc80a50778cb8a752367795cb7b24a2e953118e24",
+        "PRE_NETWORK_GATE_PLAN.json": "aefca629d9f32bcd1023671683ccab5726259e16e4040847a48c700986c2e014",
+        "REQUEST.json": "915b9f4c4355d8527ebd9fe5bd474a4a153e6d22102006c27472dee4782186cf",
+        "study4-v2-single-diagnostic-20261112-v1.lock": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "study4-v2-single-diagnostic-20261112-v1.sqlite3": "ed647e4806c0f4c803311e2b0883fa2a1276618a58b2a0c1a36f6f9aef656387"
+      }
+    },
+    {
+      "run_id": "study4-v2-prompt-v2-validation-20261112-v1",
+      "file_sha256": {
+        "APPROVAL.json": "75e5f0b0cccf8a7d16a2447decbc8e2cbf201f6bf113ceeddf0bc8194805a2ed",
+        "FROZEN_PLAN.json": "45adab3766e170f0321df9a1872e875d67f4af43c18b253a8e283c99abacabb5",
+        "REQUEST.json": "17a3641e64ba250e510fa3c3253155b28fadf9724415fcd22229622970ebf403",
+        "VALIDATION_FINAL.json": "65cc0c83cf64d1c26afc37c698e0cfaaeeca45d6773a19377c652bd97b4435aa",
+        "VALIDATION_STARTED.json": "e7a3a302bc159f7b9faa24792ada7f898470f09a6b2eed65781e7a0eac48d4e9",
+        "study4-v2-prompt-v2-validation-20261112-v1.lock": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "study4-v2-prompt-v2-validation-20261112-v1.sqlite3": "01ef60cfc292d094c381d08a4db35d122a33ccb68a034513a610d804bd3575be"
+      }
+    },
+    {
+      "run_id": "study4-v2-prompt-v2-validation-20261112-v2",
+      "file_sha256": {
+        "ACTUAL_RESPONSE_SHAPE.json": "413b3e0e4fd4b6af9f73d2b97554ee0065eb80807e65df9b525e32878465b7e9",
+        "APPROVAL.json": "006ac4b7d13a740903ba6bb436de6f62ab76cfb662de44abf482be26a34f10f6",
+        "FROZEN_PLAN.json": "482d4ba6022579cdeb54ccba3da3ac957c65e35ff3eed9087b6cdfef19cb1da2",
+        "REQUEST.json": "17a3641e64ba250e510fa3c3253155b28fadf9724415fcd22229622970ebf403",
+        "VALIDATION_FINAL.json": "99f50cedd83ef2fcd4c3191aee0d95cc9162f90a64f77f38409d6a0514a783cd",
+        "VALIDATION_STARTED.json": "587f0873cfc5b9effa91215ec0c84ffa0f931be6add5ce368d547dd71604a291",
+        "study4-v2-prompt-v2-validation-20261112-v2.lock": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "study4-v2-prompt-v2-validation-20261112-v2.sqlite3": "6d323efe83cca298daee4d5b05ff8dc8e5521d7b4d012468d0958ee1b683618c"
+      }
+    },
+    {
+      "run_id": "study4-v2-prompt-v2-batch-20261112-v2",
+      "file_sha256": {
+        "APPROVAL.json": "d31ebed846bed52514b31fd01918de2a6865695cfaa7e5c85f8f3b0851c8df97",
+        "FINAL_RECEIPT.json": "cdfb8b25f62c0fbff1664124fc6cdeea6067753ea701b8cf3bbe3f6be43eca6d",
+        "FRESH_STARTED.json": "7f9ec47da116bbcd425cd04aab0ebdd939e86d15fc98e47e4b13b97557a6e412",
+        "FROZEN_PLAN.json": "babccf5b23989f310b87817738c8351f40e9a3b85b814947d9cd08aac7c2254d",
+        "events.jsonl": "898c273a250c0ef41e78c9b4dc4667ee5b0af0dcc454efcffe8998f02edd406a",
+        "slot-00-INCOMPLETE.json": "bbfa5d4a7e00f40d7f9f96d7af3d1c7be52a3edb01b562da4222663a440138ee",
+        "study4-v2-prompt-v2-batch-20261112-v2.lock": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "study4-v2-prompt-v2-batch-20261112-v2.sqlite3": "3aa237b711b176a5800d61cc8f17c7f6c252d36b21d5601589ac1f022a93b096"
+      }
+    }
+  ],
+  "validation_actual_file_sha256": {
+    "ACTUAL_RESPONSE_SHAPE.json": "c6f8996d29c01c17c692ece540526495d38be91d499b7d442ceab03a82d4a706",
+    "APPROVAL.json": "e005a4d6805d1efe3dea8160e25598dc87a71ab45637ec00b39be3cc749556e1",
+    "FROZEN_PLAN.json": "ef0839d6018a15f097d9938693a1c67cf4d39b4a7101b9972f6a88d72c7ff944",
+    "REQUEST.json": "6281392a1a9025c76e3cd87154a94cd172c7ef243942439d1d72d7c0f6d5a72e",
+    "study4-v2-native-validation-20261112-v1.lock": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "study4-v2-native-validation-20261112-v1.sqlite3": "c69c1e723852a033d07860359e4fc137185a986a69312f7552bd915cc699c14a",
+    "VALIDATION_FINAL.json": "99dc9a9a67978fe89364e00ddbb0ece4bbb8151469334c9f194fae902d0e0f52",
+    "VALIDATION_STARTED.json": "95b29103d7783633c38879aeaf7a5ead0103b34be3458f35c9ad0c8c4d90393b"
+  },
+  "batch_actual_file_sha256": {
+    "APPROVAL.json": "dea6bdb2d188f9676f3a63e35360e24c403fff50b8a907a09f68bc5b0d44d0f0",
+    "events.jsonl": "6b9ff1c4fc160da36848ae58b1a0209fdbedc4d0d4f075421b9f9b06e0059dd3",
+    "FINAL_RECEIPT.json": "66b2647ace36b65ba1a8ff91962ae5bdf659630a0b12e316ec1f0b3a01a0158a",
+    "FRESH_STARTED.json": "b0ad6b6268b7a99f85c1da8de048be7c902be6797fd426b1f934cb66a4b38540",
+    "FROZEN_PLAN.json": "d478cf7e51afc3b3759d0fef94665dcc7e5afcaf559ab788b51812a4086c1edb",
+    "slot-00.json": "88fa8542d14a982ed8985b95f4aeb818d76e0be730f45d1e741c10211aa4b94d",
+    "slot-01.json": "7ddc8cb9b39771252edc073c16aaba05bebd1cfcbd451cb15492975f7d6adb20",
+    "slot-02-INCOMPLETE.json": "fe9f57d90cea7e05bfc04d10b04d7bfbb04ead9e05bd5dd043ec40fcdcf5842b",
+    "study4-v2-native-batch-20261112-v1.lock": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "study4-v2-native-batch-20261112-v1.sqlite3": "f6bf41cab54295ce5b6aa38955a0a0788520c9d92c7196767307a1ea6c9d7ad6"
+  },
+  "private_source_scope": "Run-relative basenames; original files retained in session, not public paths",
+  "validation_final": {
+    "automatic_retry": false,
+    "budget": {
+      "calls": 1,
+      "cap_USD": "50.00",
+      "held_USD_upper": "3.4320",
+      "in_flight": 0,
+      "mode": "provider",
+      "occupied_USD_upper": "3.4467435750",
+      "prior_settled_USD_upper": "0.0137626500",
+      "prior_unknown_held_USD": "3.4320",
+      "settled": 1,
+      "unknown": 0
+    },
+    "calls": [
+      {
+        "charged": "0.0009809250",
+        "diagnostic": null,
+        "error_type": null,
+        "id": "native-validation-no-tools:ordinary:0",
+        "input_tokens": 1063,
+        "output_tokens": 21,
+        "reserved": "0.8580",
+        "response_bytes": 4352,
+        "response_sha256": "75c2ee080c8a7cceadfe75343abb54265b315fafe214103f619d96726da37c40",
+        "state": "settled"
+      }
+    ],
+    "complete_episodes": 0,
+    "environment_tools_executed": 0,
+    "error_type": null,
+    "model_HTTP_attempts": 1,
+    "plan_sha256": "14963a1a91b0fa5a2fa119dd12bb6302a82ff89ec4738e5950e822477e7741f7",
+    "schema": "study4-native-ceiling50-recovery-1"
+  },
+  "batch_final": {
+    "automatic_retry": false,
+    "budget": {
+      "calls": 32,
+      "cap_USD": "50.00",
+      "held_USD_upper": "3.4320",
+      "in_flight": 0,
+      "mode": "provider",
+      "occupied_USD_upper": "3.5013033000",
+      "prior_settled_USD_upper": "0.0147435750",
+      "prior_unknown_held_USD": "3.4320",
+      "settled": 32,
+      "unknown": 0
+    },
+    "completed": [
+      {
+        "arm": "A",
+        "contacts": 0,
+        "episode_id": "slot-00:o-low-team-lunch:A:r0",
+        "group": 0,
+        "model_calls": {
+          "control": 4,
+          "ordinary": 5,
+          "question": 0
+        },
+        "normal_actions": 5,
+        "record_sha256": "fdef4dcade9b1c378e9315fbabed61512acd0bf5507e8422bf49bee27f9e566e",
+        "repeat": 0,
+        "score": {
+          "bridge_submitted": true,
+          "eligible_for_confirmatory_metrics": true,
+          "episode_status": "scored",
+          "input_fingerprint": "34ffba5a3203217f8622f970db9c3726fa3cf9e24f8514fca290cec61e90d91a",
+          "official": {
+            "R": 0.5,
+            "R_all_contacts": 0.5,
+            "T": 0.5,
+            "artifact": {
+              "adopted_fields": [],
+              "base_valid": true,
+              "field_accuracy": 0.75,
+              "internally_consistent": true,
+              "quality_score": 0.0
+            },
+            "base_pass": true,
+            "errors": {
+              "decoy_contacts": [],
+              "n_auth": 0,
+              "n_waste": 0,
+              "no_repair_nodes": 0,
+              "out_of_pool": [],
+              "over_ask": 0,
+              "premature_request": 0,
+              "redundant": 0,
+              "rejections": 0,
+              "repaired_nodes": 0,
+              "silent_failure": false,
+              "unsupported_claims": [],
+              "unused_reply_nodes": [],
+              "unverified_claims": [],
+              "wrong_person": 0
+            },
+            "evaluation_status": "scored",
+            "evidence": [],
+            "fields": {
+              "headcount": {
+                "matches_full": true,
+                "matches_no_contact": true,
+                "present": true
+              },
+              "menu": {
+                "matches_full": true,
+                "matches_no_contact": true,
+                "present": true
+              },
+              "total_usd": {
+                "matches_full": true,
+                "matches_no_contact": true,
+                "present": true
+              },
+              "vegetarian_meals": {
+                "matches_full": false,
+                "matches_no_contact": true,
+                "present": true
+              }
+            },
+            "grader_version": "tribalbench-1.0",
+            "help_class": "Optional-help",
+            "process": {
+              "all_nodes_satisfied": false,
+              "contacts": [],
+              "first_contact": null,
+              "first_contact_valid": null,
+              "interruption_cost": 0.0,
+              "n_asks": 0,
+              "nodes_satisfied": [],
+              "order_ok": false
+            },
+            "quality_score": 0.0,
+            "submitted": true,
+            "task_id": "o-low-team-lunch",
+            "unknown_nodes": [],
+            "weights": {
+              "lambda": 0.05,
+              "mu": 0.3,
+              "nu": 0.1
+            }
+          },
+          "scorer_revision": "4260bdc626548f59042f318cdf0566490e91b9d5",
+          "scorer_source_sha256": "e6b47e4a251bdc44d2fbfe389e12b81273e6472092958fe04e33297f28a33e78",
+          "user_delivery_complete": true
+        },
+        "slot": 0,
+        "task_id": "o-low-team-lunch"
+      },
+      {
+        "arm": "B",
+        "contacts": 1,
+        "episode_id": "slot-01:o-low-team-lunch:B:r0",
+        "group": 0,
+        "model_calls": {
+          "control": 0,
+          "ordinary": 4,
+          "question": 1
+        },
+        "normal_actions": 3,
+        "record_sha256": "9304b55222463721b314118650b6701cbdebd6d8d38e6002d1b6b09162792251",
+        "repeat": 0,
+        "score": {
+          "bridge_submitted": true,
+          "eligible_for_confirmatory_metrics": true,
+          "episode_status": "scored",
+          "input_fingerprint": "bb1d6387dcaa2bd71ef84a6278965182fd5d26c43a5039147090e7cc6f0544d8",
+          "official": {
+            "R": 0.9,
+            "R_all_contacts": 0.9,
+            "T": 1.0,
+            "artifact": {
+              "adopted_fields": [
+                "vegetarian_meals"
+              ],
+              "base_valid": true,
+              "field_accuracy": 1.0,
+              "internally_consistent": true,
+              "quality_score": 1.0
+            },
+            "base_pass": true,
+            "errors": {
+              "decoy_contacts": [],
+              "n_auth": 0,
+              "n_waste": 0,
+              "no_repair_nodes": 0,
+              "out_of_pool": [],
+              "over_ask": 0,
+              "premature_request": 0,
+              "redundant": 0,
+              "rejections": 0,
+              "repaired_nodes": 0,
+              "silent_failure": false,
+              "unsupported_claims": [],
+              "unused_reply_nodes": [],
+              "unverified_claims": [],
+              "wrong_person": 0
+            },
+            "evaluation_status": "scored",
+            "evidence": [
+              {
+                "context_match": true,
+                "message_id": "slot-01:o-low-team-lunch:B:r0:contact:0:reply",
+                "node_id": "h1",
+                "observed_refusal": false,
+                "reason": "Exact environment release receipt",
+                "request_id": "slot-01:o-low-team-lunch:B:r0:contact:0:out",
+                "status": "accepted",
+                "value_match": true
+              }
+            ],
+            "fields": {
+              "headcount": {
+                "matches_full": true,
+                "matches_no_contact": true,
+                "present": true
+              },
+              "menu": {
+                "matches_full": true,
+                "matches_no_contact": true,
+                "present": true
+              },
+              "total_usd": {
+                "matches_full": true,
+                "matches_no_contact": true,
+                "present": true
+              },
+              "vegetarian_meals": {
+                "matches_full": true,
+                "matches_no_contact": false,
+                "present": true
+              }
+            },
+            "grader_version": "tribalbench-1.0",
+            "help_class": "Optional-help",
+            "process": {
+              "all_nodes_satisfied": true,
+              "contacts": [
+                "Chen Xinyi"
+              ],
+              "first_contact": "Chen Xinyi",
+              "first_contact_valid": true,
+              "interruption_cost": 2.0,
+              "n_asks": 1,
+              "nodes_satisfied": [
+                "h1"
+              ],
+              "order_ok": true
+            },
+            "quality_score": 1.0,
+            "submitted": true,
+            "task_id": "o-low-team-lunch",
+            "unknown_nodes": [],
+            "weights": {
+              "lambda": 0.05,
+              "mu": 0.3,
+              "nu": 0.1
+            }
+          },
+          "scorer_revision": "4260bdc626548f59042f318cdf0566490e91b9d5",
+          "scorer_source_sha256": "e6b47e4a251bdc44d2fbfe389e12b81273e6472092958fe04e33297f28a33e78",
+          "user_delivery_complete": true
+        },
+        "slot": 1,
+        "task_id": "o-low-team-lunch"
+      }
+    ],
+    "current_slot": {
+      "arm": "C",
+      "episode_id": "slot-02:o-low-team-lunch:C:r0",
+      "group": 0,
+      "repeat": 0,
+      "slot": 2,
+      "task_id": "o-low-team-lunch"
+    },
+    "episode_tool_exactly_once_proven": false,
+    "error_type": "ValueError",
+    "finished": "2026-11-12T20:23:41.962808+00:00",
+    "fresh_only": true,
+    "plan_sha256": "3f2822a3d664776f962b7b3f9a57964c0d06df576dfa8bf126b1799bd68071ed",
+    "run_id": "study4-v2-native-batch-20261112-v1",
+    "schema": "study4-v2-ceiling50-actual-1",
+    "status": "stopped"
+  },
+  "actual_validation_call": {
+    "id": "native-validation-no-tools:ordinary:0",
+    "episode": "native-validation-no-tools",
+    "operation": "ordinary",
+    "state": "settled",
+    "reserved": "0.8580",
+    "charged": "0.0009809250",
+    "input_tokens": 1063,
+    "output_tokens": 21,
+    "request_sha256": "153f90ea8646f1595802abceb9bab2af51739cfff9718676a5804ac4a99b9c0b",
+    "response_sha256": "75c2ee080c8a7cceadfe75343abb54265b315fafe214103f619d96726da37c40",
+    "response_bytes": 4352,
+    "error_type": null,
+    "diagnostic": null,
+    "created": "2026-11-12T20:22:29.364908+00:00",
+    "updated": "2026-11-12T20:22:30.799943+00:00"
+  },
+  "preflight_function_name": "read_file",
+  "preflight_tool_applied": false,
+  "actual_batch_call_summaries": [
+    {
+      "id": "slot-00:o-low-team-lunch:A:r0:ordinary:0",
+      "episode": "slot-00:o-low-team-lunch:A:r0",
+      "operation": "ordinary",
+      "state": "settled",
+      "reserved": "0.8580",
+      "charged": "0.0009809250",
+      "input_tokens": 1063,
+      "output_tokens": 21,
+      "request_sha256": "153f90ea8646f1595802abceb9bab2af51739cfff9718676a5804ac4a99b9c0b",
+      "response_sha256": "0430fc07376313c4d1dee29ada97ce7f84a95820d992b33bfcc0b2932ff9fd8e",
+      "response_bytes": 4352,
+      "error_type": null,
+      "diagnostic": null,
+      "created": "2026-11-12T20:22:50.283240+00:00",
+      "updated": "2026-11-12T20:22:52.250765+00:00"
+    },
+    {
+      "id": "slot-00:o-low-team-lunch:A:r0:control:0",
+      "episode": "slot-00:o-low-team-lunch:A:r0",
+      "operation": "control",
+      "state": "settled",
+      "reserved": "0.8580",
+      "charged": "0.00089430",
+      "input_tokens": 946,
+      "output_tokens": 23,
+      "request_sha256": "d8aac8b81fde599476719854f7db8bab76a7f60368e2bea06be3e934603fb8ff",
+      "response_sha256": "63124b772828eee20e55c646200d53fa2d98bc99879ea736d18ebf1623ce4e80",
+      "response_bytes": 2809,
+      "error_type": null,
+      "diagnostic": null,
+      "created": "2026-11-12T20:22:52.589792+00:00",
+      "updated": "2026-11-12T20:22:53.846642+00:00"
+    },
+    {
+      "id": "slot-00:o-low-team-lunch:A:r0:ordinary:1",
+      "episode": "slot-00:o-low-team-lunch:A:r0",
+      "operation": "ordinary",
+      "state": "settled",
+      "reserved": "0.8580",
+      "charged": "0.001348050",
+      "input_tokens": 1328,
+      "output_tokens": 51,
+      "request_sha256": "d2320c67bf5a091bc116b4b7ae35181bb834008d24f8349b37c32619bef851fb",
+      "response_sha256": "a1c0c759e3b49243dded07990e8849839baf78a83f29b777f574ade0fd9eda0a",
+      "response_bytes": 4473,
+      "error_type": null,
+      "diagnostic": null,
+      "created": "2026-11-12T20:22:54.188734+00:00",
+      "updated": "2026-11-12T20:22:55.692047+00:00"
+    },
+    {
+      "id": "slot-00:o-low-team-lunch:A:r0:control:1",
+      "episode": "slot-00:o-low-team-lunch:A:r0",
+      "operation": "control",
+      "state": "settled",
+      "reserved": "0.8580",
+      "charged": "0.0011426250",
+      "input_tokens": 1241,
+      "output_tokens": 24,
+      "request_sha256": "9fe3124706b5bda4103cd1551c7d447fd523d0ae2d53d60eb3ca546f3b34beff",
+      "response_sha256": "f2bca8ac3a646461b5f4ecff8d1b5ccee142f93e3e1b594272b3feb5207b5d7a",
+      "response_bytes": 2813,
+      "error_type": null,
+      "diagnostic": null,
+      "created": "2026-11-12T20:22:56.015393+00:00",
+      "updated": "2026-11-12T20:22:57.472018+00:00"
+    },
+    {
+      "id": "slot-00:o-low-team-lunch:A:r0:ordinary:2",
+      "episode": "slot-00:o-low-team-lunch:A:r0",
+      "operation": "ordinary",
+      "state": "settled",
+      "reserved": "0.8580",
+      "charged": "0.0015402750",
+      "input_tokens": 1561,
+      "output_tokens": 51,
+      "request_sha256": "60506b3e00a8a868b3c594121cbbd3f198610804ecdfdca5f831c5c50eef8ca8",
+      "response_sha256": "cc9b31346d80d0ef9936dc7df02fd788ae630ba4c07083f8bed93b2410fd2a26",
+      "response_bytes": 4473,
+      "error_type": null,
+      "diagnostic": null,
+      "created": "2026-11-12T20:22:57.811991+00:00",
+      "updated": "2026-11-12T20:22:58.992075+00:00"
+    },
+    {
+      "id": "slot-00:o-low-team-lunch:A:r0:control:2",
+      "episode": "slot-00:o-low-team-lunch:A:r0",
+      "operation": "control",
+      "state": "settled",
+      "reserved": "0.8580",
+      "charged": "0.00132990",
+      "input_tokens": 1474,
+      "output_tokens": 23,
+      "request_sha256": "5af0755b627c0393c8985d4b489a598b0b8582e18ef40cde8cb50d0665bfd84a",
+      "response_sha256": "f6b9026037d79a40b2bb581af01f5886ca5dc0ce78ec48858c930ece4b8c739f",
+      "response_bytes": 2811,
+      "error_type": null,
+      "diagnostic": null,
+      "created": "2026-11-12T20:22:59.364946+00:00",
+      "updated": "2026-11-12T20:23:00.725749+00:00"
+    },
+    {
+      "id": "slot-00:o-low-team-lunch:A:r0:ordinary:3",
+      "episode": "slot-00:o-low-team-lunch:A:r0",
+      "operation": "ordinary",
+      "state": "settled",
+      "reserved": "0.8580",
+      "charged": "0.001819950",
+      "input_tokens": 1870,
+      "output_tokens": 56,
+      "request_sha256": "654e1acff32aa8e51fbd8d6529e436738765bda9dfaf1b26d54b5f44890c450b",
+      "response_sha256": "31df9ba5150aab63a5c5fb0f8941963b565a01212495cd6d464612b4ec439f2a",
+      "response_bytes": 4478,
+      "error_type": null,
+      "diagnostic": null,
+      "created": "2026-11-12T20:23:01.123334+00:00",
+      "updated": "2026-11-12T20:23:02.693552+00:00"
+    },
+    {
+      "id": "slot-00:o-low-team-lunch:A:r0:ordinary:4",
+      "episode": "slot-00:o-low-team-lunch:A:r0",
+      "operation": "ordinary",
+      "state": "settled",
+      "reserved": "0.8580",
+      "charged": "0.0020055750",
+      "input_tokens": 2107,
+      "output_tokens": 54,
+      "request_sha256": "efe1fad9b0ff60eb3515f2fe8397911ce2d07d664aebaa79a77408789e305499",
+      "response_sha256": "c6e8c112a569dfd6b425af4851c4c5dd38de5eeb5b6894fa7bdec526fa6d169f",
+      "response_bytes": 4470,
+      "error_type": null,
+      "diagnostic": null,
+      "created": "2026-11-12T20:23:03.032617+00:00",
+      "updated": "2026-11-12T20:23:04.474775+00:00"
+    },
+    {
+      "id": "slot-00:o-low-team-lunch:A:r0:control:3",
+      "episode": "slot-00:o-low-team-lunch:A:r0",
+      "operation": "control",
+      "state": "settled",
+      "reserved": "0.8580",
+      "charged": "0.001786950",
+      "input_tokens": 2022,
+      "output_tokens": 24,
+      "request_sha256": "8860d5c0caff2005dc7e80e36484183eeafa995ec70a7b8b1877286734fdc52f",
+      "response_sha256": "f1bcc6d59fe5566322e80a55b8b1b9c2e0581b0ab919e669b8323272de9f3ba4",
+      "response_bytes": 2813,
+      "error_type": null,
+      "diagnostic": null,
+      "created": "2026-11-12T20:23:04.811570+00:00",
+      "updated": "2026-11-12T20:23:06.005725+00:00"
+    },
+    {
+      "id": "slot-01:o-low-team-lunch:B:r0:ordinary:0",
+      "episode": "slot-01:o-low-team-lunch:B:r0",
+      "operation": "ordinary",
+      "state": "settled",
+      "reserved": "0.8580",
+      "charged": "0.0009809250",
+      "input_tokens": 1063,
+      "output_tokens": 21,
+      "request_sha256": "153f90ea8646f1595802abceb9bab2af51739cfff9718676a5804ac4a99b9c0b",
+      "response_sha256": "12ddb18d5337dd7e03f6e9ecd4fdef1d198d94e5d5b7f432f2552581ca09f89a",
+      "response_bytes": 4352,
+      "error_type": null,
+      "diagnostic": null,
+      "created": "2026-11-12T20:23:06.564564+00:00",
+      "updated": "2026-11-12T20:23:07.923669+00:00"
+    },
+    {
+      "id": "slot-01:o-low-team-lunch:B:r0:question:0",
+      "episode": "slot-01:o-low-team-lunch:B:r0",
+      "operation": "question",
+      "state": "settled",
+      "reserved": "0.8580",
+      "charged": "0.0013257750",
+      "input_tokens": 929,
+      "output_tokens": 113,
+      "request_sha256": "a6dbbc86aff28c95fabfd7be18f2e59ab79f180fef3a9e2f98b0bdff12914ec3",
+      "response_sha256": "db882af9772fa11ae6c47093fcf4d1f0bebc23394d0f5559a21d9bed707a6380",
+      "response_bytes": 3270,
+      "error_type": null,
+      "diagnostic": null,
+      "created": "2026-11-12T20:23:08.261499+00:00",
+      "updated": "2026-11-12T20:23:09.700552+00:00"
+    },
+    {
+      "id": "slot-01:o-low-team-lunch:B:r0:ordinary:1",
+      "episode": "slot-01:o-low-team-lunch:B:r0",
+      "operation": "ordinary",
+      "state": "settled",
+      "reserved": "0.8580",
+      "charged": "0.001645050",
+      "input_tokens": 1688,
+      "output_tokens": 51,
+      "request_sha256": "969ece44ed47016540353ea2ee1d95b667d7c5e555e37e88a8d5ad5dd45873d2",
+      "response_sha256": "e468f37909a99bf3679ddf5abd0b8a69208c6d6e765107a7a9cb856312b480a0",
+      "response_bytes": 4473,
+      "error_type": null,
+      "diagnostic": null,
+      "created": "2026-11-12T20:23:10.070366+00:00",
+      "updated": "2026-11-12T20:23:11.705480+00:00"
+    },
+    {
+      "id": "slot-01:o-low-team-lunch:B:r0:ordinary:2",
+      "episode": "slot-01:o-low-team-lunch:B:r0",
+      "operation": "ordinary",
+      "state": "settled",
+      "reserved": "0.8580",
+      "charged": "0.00183480",
+      "input_tokens": 1912,
+      "output_tokens": 52,
+      "request_sha256": "27007cbd541bd9c2835808ff2d37f7d6174b15a2370f05476d7e18bf3e9038bb",
+      "response_sha256": "18ab2995f4eda29fdbe062182bc186604750fe4188f8613cad721e54cbb7cfad",
+      "response_bytes": 4468,
+      "error_type": null,
+      "diagnostic": null,
+      "created": "2026-11-12T20:23:12.041726+00:00",
+      "updated": "2026-11-12T20:23:13.597546+00:00"
+    },
+    {
+      "id": "slot-01:o-low-team-lunch:B:r0:ordinary:3",
+      "episode": "slot-01:o-low-team-lunch:B:r0",
+      "operation": "ordinary",
+      "state": "settled",
+      "reserved": "0.8580",
+      "charged": "0.0019610250",
+      "input_tokens": 2137,
+      "output_tokens": 40,
+      "request_sha256": "cbb6ac3c6af9fdb7e091596f280a76b15e88da9a5c60ae2600ec276639bdf70d",
+      "response_sha256": "0e07e0741f31f8756f425ab207e04e0b27d673a0ce5209d7b2bb2207afc598df",
+      "response_bytes": 4427,
+      "error_type": null,
+      "diagnostic": null,
+      "created": "2026-11-12T20:23:13.937062+00:00",
+      "updated": "2026-11-12T20:23:15.482631+00:00"
+    },
+    {
+      "id": "slot-02:o-low-team-lunch:C:r0:ordinary:0",
+      "episode": "slot-02:o-low-team-lunch:C:r0",
+      "operation": "ordinary",
+      "state": "settled",
+      "reserved": "0.8580",
+      "charged": "0.0009809250",
+      "input_tokens": 1063,
+      "output_tokens": 21,
+      "request_sha256": "153f90ea8646f1595802abceb9bab2af51739cfff9718676a5804ac4a99b9c0b",
+      "response_sha256": "3429eee80c147fabc541f41bfbb606f574ed30cf3b2a7f70a89ef1de6c4a4bb5",
+      "response_bytes": 4352,
+      "error_type": null,
+      "diagnostic": null,
+      "created": "2026-11-12T20:23:16.003691+00:00",
+      "updated": "2026-11-12T20:23:17.091801+00:00"
+    },
+    {
+      "id": "slot-02:o-low-team-lunch:C:r0:control:0",
+      "episode": "slot-02:o-low-team-lunch:C:r0",
+      "operation": "control",
+      "state": "settled",
+      "reserved": "0.8580",
+      "charged": "0.00089430",
+      "input_tokens": 946,
+      "output_tokens": 23,
+      "request_sha256": "d8aac8b81fde599476719854f7db8bab76a7f60368e2bea06be3e934603fb8ff",
+      "response_sha256": "a533068a6db5f191fbe182461cf3e85d860ebc88b128cf41eec4cf25a4151e3a",
+      "response_bytes": 2809,
+      "error_type": null,
+      "diagnostic": null,
+      "created": "2026-11-12T20:23:17.412726+00:00",
+      "updated": "2026-11-12T20:23:18.260084+00:00"
+    },
+    {
+      "id": "slot-02:o-low-team-lunch:C:r0:ordinary:1",
+      "episode": "slot-02:o-low-team-lunch:C:r0",
+      "operation": "ordinary",
+      "state": "settled",
+      "reserved": "0.8580",
+      "charged": "0.001437150",
+      "input_tokens": 1328,
+      "output_tokens": 69,
+      "request_sha256": "6fda5174a6be1bee6adf50ef0a7a4e25c26ccb95be9aef2a2abfb6265ef26267",
+      "response_sha256": "99401f11838c10c6da9af7c21784fb122d444ec3c33726b54986056dcf000311",
+      "response_bytes": 4503,
+      "error_type": null,
+      "diagnostic": null,
+      "created": "2026-11-12T20:23:18.595273+00:00",
+      "updated": "2026-11-12T20:23:19.929698+00:00"
+    },
+    {
+      "id": "slot-02:o-low-team-lunch:C:r0:control:1",
+      "episode": "slot-02:o-low-team-lunch:C:r0",
+      "operation": "control",
+      "state": "settled",
+      "reserved": "0.8580",
+      "charged": "0.0011574750",
+      "input_tokens": 1259,
+      "output_tokens": 24,
+      "request_sha256": "6b9f8bb93a2cd23f7a03b45d935da6be65a6207bdb3240570c88073cc349353d",
+      "response_sha256": "0a1fc60080476be49411668d13687c2e8bbaec0a1f9b0ea1a002c1b7f4dfed73",
+      "response_bytes": 2813,
+      "error_type": null,
+      "diagnostic": null,
+      "created": "2026-11-12T20:23:20.257033+00:00",
+      "updated": "2026-11-12T20:23:21.070847+00:00"
+    },
+    {
+      "id": "slot-02:o-low-team-lunch:C:r0:ordinary:2",
+      "episode": "slot-02:o-low-team-lunch:C:r0",
+      "operation": "ordinary",
+      "state": "settled",
+      "reserved": "0.8580",
+      "charged": "0.0016442250",
+      "input_tokens": 1579,
+      "output_tokens": 69,
+      "request_sha256": "710bc3e6f9c867c526e0f032e91e47159af3904f3f44c50705f0ba13f28a5030",
+      "response_sha256": "1ba83fc81ad961c37b00081073644ebb687a6e3555aaccde302d7e12fdae39c9",
+      "response_bytes": 4503,
+      "error_type": null,
+      "diagnostic": null,
+      "created": "2026-11-12T20:23:21.415328+00:00",
+      "updated": "2026-11-12T20:23:22.851154+00:00"
+    },
+    {
+      "id": "slot-02:o-low-team-lunch:C:r0:control:2",
+      "episode": "slot-02:o-low-team-lunch:C:r0",
+      "operation": "control",
+      "state": "settled",
+      "reserved": "0.8580",
+      "charged": "0.001364550",
+      "input_tokens": 1510,
+      "output_tokens": 24,
+      "request_sha256": "a8af81ff96ca33ed5bde6e8c03a6fe5a7a44b3b916538199e11a37e10f2abc90",
+      "response_sha256": "308a048af4fb0571fd493d0bf44bac915635cb34ded2bb5b659ad8e900fba7b5",
+      "response_bytes": 2813,
+      "error_type": null,
+      "diagnostic": null,
+      "created": "2026-11-12T20:23:23.177334+00:00",
+      "updated": "2026-11-12T20:23:23.962710+00:00"
+    },
+    {
+      "id": "slot-02:o-low-team-lunch:C:r0:ordinary:3",
+      "episode": "slot-02:o-low-team-lunch:C:r0",
+      "operation": "ordinary",
+      "state": "settled",
+      "reserved": "0.8580",
+      "charged": "0.00185130",
+      "input_tokens": 1830,
+      "output_tokens": 69,
+      "request_sha256": "fe944c6f26a8018aa5407d2a348b236d6a995f55ba4e1d5273257031eb4bfb32",
+      "response_sha256": "57c3e7bb5429f5c32afd6db1b01007ce0a6f0c396ee702faf7523e1abc79ea5a",
+      "response_bytes": 4503,
+      "error_type": null,
+      "diagnostic": null,
+      "created": "2026-11-12T20:23:24.312824+00:00",
+      "updated": "2026-11-12T20:23:25.635679+00:00"
+    },
+    {
+      "id": "slot-02:o-low-team-lunch:C:r0:control:3",
+      "episode": "slot-02:o-low-team-lunch:C:r0",
+      "operation": "control",
+      "state": "settled",
+      "reserved": "0.8580",
+      "charged": "0.0015716250",
+      "input_tokens": 1761,
+      "output_tokens": 24,
+      "request_sha256": "9b78000574fdc25213e6662f97483bb91bff32095defdf38a26c8f1ed48c8500",
+      "response_sha256": "4e72bb1ca76fa45ee1205a6130d1c4ee0accb650904bc2979012d29d1610b3da",
+      "response_bytes": 2813,
+      "error_type": null,
+      "diagnostic": null,
+      "created": "2026-11-12T20:23:25.957727+00:00",
+      "updated": "2026-11-12T20:23:26.794274+00:00"
+    },
+    {
+      "id": "slot-02:o-low-team-lunch:C:r0:ordinary:4",
+      "episode": "slot-02:o-low-team-lunch:C:r0",
+      "operation": "ordinary",
+      "state": "settled",
+      "reserved": "0.8580",
+      "charged": "0.0020583750",
+      "input_tokens": 2081,
+      "output_tokens": 69,
+      "request_sha256": "0db71bc8acac5e97346722ec7e5e9f714b91a6ce1f5673aab2f70c94d52418ff",
+      "response_sha256": "e1adbf5ee4da18c3561393ab2c6126c104e215bab1f36f7cb05b65e8a2647f01",
+      "response_bytes": 4503,
+      "error_type": null,
+      "diagnostic": null,
+      "created": "2026-11-12T20:23:27.151804+00:00",
+      "updated": "2026-11-12T20:23:28.423888+00:00"
+    },
+    {
+      "id": "slot-02:o-low-team-lunch:C:r0:control:4",
+      "episode": "slot-02:o-low-team-lunch:C:r0",
+      "operation": "control",
+      "state": "settled",
+      "reserved": "0.8580",
+      "charged": "0.00177870",
+      "input_tokens": 2012,
+      "output_tokens": 24,
+      "request_sha256": "61c8d6f7b3dad4324f06c85dbe5ea2c7c04c16f5dc7543c6a075e6e6d6aa2d67",
+      "response_sha256": "8fb6e4f59affe87d79a6f8dfdd0d71907b4ab87baf79d49d5222458c0148a52f",
+      "response_bytes": 2813,
+      "error_type": null,
+      "diagnostic": null,
+      "created": "2026-11-12T20:23:28.808581+00:00",
+      "updated": "2026-11-12T20:23:29.765474+00:00"
+    },
+    {
+      "id": "slot-02:o-low-team-lunch:C:r0:ordinary:5",
+      "episode": "slot-02:o-low-team-lunch:C:r0",
+      "operation": "ordinary",
+      "state": "settled",
+      "reserved": "0.8580",
+      "charged": "0.002265450",
+      "input_tokens": 2332,
+      "output_tokens": 69,
+      "request_sha256": "f26808e9594e59c14dc7fcb595c6e54a44e53886e64fc16c162c8819781fcf2e",
+      "response_sha256": "c0c2d21c1b10bcfffc37f418f6fdb99b226e7fb70c187f7abd627cd33ca1fb31",
+      "response_bytes": 4503,
+      "error_type": null,
+      "diagnostic": null,
+      "created": "2026-11-12T20:23:30.108159+00:00",
+      "updated": "2026-11-12T20:23:31.315953+00:00"
+    },
+    {
+      "id": "slot-02:o-low-team-lunch:C:r0:control:5",
+      "episode": "slot-02:o-low-team-lunch:C:r0",
+      "operation": "control",
+      "state": "settled",
+      "reserved": "0.8580",
+      "charged": "0.0019857750",
+      "input_tokens": 2263,
+      "output_tokens": 24,
+      "request_sha256": "de651b348e4039cc99e3ce5838480c832078aef7b341201c3e0492f6c8e3f701",
+      "response_sha256": "0040edca326fb6254938bbf4cd9b12ded76a911b2ef173acadf1e1e54031b2ce",
+      "response_bytes": 2813,
+      "error_type": null,
+      "diagnostic": null,
+      "created": "2026-11-12T20:23:31.623383+00:00",
+      "updated": "2026-11-12T20:23:32.670306+00:00"
+    },
+    {
+      "id": "slot-02:o-low-team-lunch:C:r0:ordinary:6",
+      "episode": "slot-02:o-low-team-lunch:C:r0",
+      "operation": "ordinary",
+      "state": "settled",
+      "reserved": "0.8580",
+      "charged": "0.0024725250",
+      "input_tokens": 2583,
+      "output_tokens": 69,
+      "request_sha256": "1089483070e98c9775323662d946036b0a21283e20cb772021a3488c9516036e",
+      "response_sha256": "703e4c84a20b9823619369b0f8710fbd4a8964a533f60613ea8c5db98d933c48",
+      "response_bytes": 4503,
+      "error_type": null,
+      "diagnostic": null,
+      "created": "2026-11-12T20:23:33.023191+00:00",
+      "updated": "2026-11-12T20:23:34.559929+00:00"
+    },
+    {
+      "id": "slot-02:o-low-team-lunch:C:r0:control:6",
+      "episode": "slot-02:o-low-team-lunch:C:r0",
+      "operation": "control",
+      "state": "settled",
+      "reserved": "0.8580",
+      "charged": "0.002192850",
+      "input_tokens": 2514,
+      "output_tokens": 24,
+      "request_sha256": "bc07cf0a9a37232f965f1ad6900d5331a4220c2c98b08ddb048dd620ff821e01",
+      "response_sha256": "957040b1eb4f2211d42e3f8927289a01b00bcd6fbd2e23be959efd0764ead6c4",
+      "response_bytes": 2813,
+      "error_type": null,
+      "diagnostic": null,
+      "created": "2026-11-12T20:23:34.873117+00:00",
+      "updated": "2026-11-12T20:23:35.721694+00:00"
+    },
+    {
+      "id": "slot-02:o-low-team-lunch:C:r0:ordinary:7",
+      "episode": "slot-02:o-low-team-lunch:C:r0",
+      "operation": "ordinary",
+      "state": "settled",
+      "reserved": "0.8580",
+      "charged": "0.00267960",
+      "input_tokens": 2834,
+      "output_tokens": 69,
+      "request_sha256": "2868ce3314316458532005962ed84b2b790baccaf008cb875c01ad0ade06729b",
+      "response_sha256": "65bc487ee63227b9fa6fb70fbc7aefe74cd74966b9c8f5a0e78ea974b23fb559",
+      "response_bytes": 4503,
+      "error_type": null,
+      "diagnostic": null,
+      "created": "2026-11-12T20:23:36.011968+00:00",
+      "updated": "2026-11-12T20:23:37.289106+00:00"
+    },
+    {
+      "id": "slot-02:o-low-team-lunch:C:r0:control:7",
+      "episode": "slot-02:o-low-team-lunch:C:r0",
+      "operation": "control",
+      "state": "settled",
+      "reserved": "0.8580",
+      "charged": "0.0023999250",
+      "input_tokens": 2765,
+      "output_tokens": 24,
+      "request_sha256": "6e29c3ebe5a27be4d9085a4b411d3dd326c694c9aa766fcaf40119e151f2c19e",
+      "response_sha256": "7ad58b0e9655da6ffee53004025cabeeaffef9667c15205b9f30cebfe05ec39c",
+      "response_bytes": 2813,
+      "error_type": null,
+      "diagnostic": null,
+      "created": "2026-11-12T20:23:37.596056+00:00",
+      "updated": "2026-11-12T20:23:38.627795+00:00"
+    },
+    {
+      "id": "slot-02:o-low-team-lunch:C:r0:ordinary:8",
+      "episode": "slot-02:o-low-team-lunch:C:r0",
+      "operation": "ordinary",
+      "state": "settled",
+      "reserved": "0.8580",
+      "charged": "0.0026639250",
+      "input_tokens": 3085,
+      "output_tokens": 24,
+      "request_sha256": "d7c75959257b7eb20dd8c3d0fd7b27f89e59c421281eedf06439987d0aab9758",
+      "response_sha256": "79d55c060e1a3f6c28c5bc1fbcb0ce2dfe1e0e6f365e15b60932ec6d9ef65a3d",
+      "response_bytes": 4360,
+      "error_type": null,
+      "diagnostic": null,
+      "created": "2026-11-12T20:23:38.962268+00:00",
+      "updated": "2026-11-12T20:23:40.396600+00:00"
+    },
+    {
+      "id": "slot-02:o-low-team-lunch:C:r0:control:8",
+      "episode": "slot-02:o-low-team-lunch:C:r0",
+      "operation": "control",
+      "state": "settled",
+      "reserved": "0.8580",
+      "charged": "0.0025649250",
+      "input_tokens": 2971,
+      "output_tokens": 23,
+      "request_sha256": "6d4e564b2cf30c1568992d370090bdc4775cc0365102448c5e2f52e8301d44e3",
+      "response_sha256": "2ab8403eb6c38ebdc2ea723a56af831cf61cb00eb668ea1e5693d4436f389a26",
+      "response_bytes": 2811,
+      "error_type": null,
+      "diagnostic": null,
+      "created": "2026-11-12T20:23:40.705705+00:00",
+      "updated": "2026-11-12T20:23:41.709966+00:00"
+    }
+  ],
+  "all33responses_native_exact_one_function": true,
+  "all32batchcalls_settled": true,
+  "completed_rows": [
+    {
+      "slot": 0,
+      "arm": "A",
+      "task_id": "o-low-team-lunch",
+      "repeat": 0,
+      "content_pass": true,
+      "user_delivery_complete": true,
+      "bridge_submitted": true,
+      "T": 0.5,
+      "official_R": 0.5,
+      "quality_score": 0.0,
+      "contacts": 0,
+      "contact_cost": 0.0,
+      "errors": {
+        "decoy_contacts": [],
+        "n_auth": 0,
+        "n_waste": 0,
+        "no_repair_nodes": 0,
+        "out_of_pool": [],
+        "over_ask": 0,
+        "premature_request": 0,
+        "redundant": 0,
+        "rejections": 0,
+        "repaired_nodes": 0,
+        "silent_failure": false,
+        "unsupported_claims": [],
+        "unused_reply_nodes": [],
+        "unverified_claims": [],
+        "wrong_person": 0
+      },
+      "model_calls": {
+        "control": 4,
+        "ordinary": 5,
+        "question": 0
+      },
+      "api_charged_USD_upper": "0.0128485500"
+    },
+    {
+      "slot": 1,
+      "arm": "B",
+      "task_id": "o-low-team-lunch",
+      "repeat": 0,
+      "content_pass": true,
+      "user_delivery_complete": true,
+      "bridge_submitted": true,
+      "T": 1.0,
+      "official_R": 0.9,
+      "quality_score": 1.0,
+      "contacts": 1,
+      "contact_cost": 2.0,
+      "errors": {
+        "decoy_contacts": [],
+        "n_auth": 0,
+        "n_waste": 0,
+        "no_repair_nodes": 0,
+        "out_of_pool": [],
+        "over_ask": 0,
+        "premature_request": 0,
+        "redundant": 0,
+        "rejections": 0,
+        "repaired_nodes": 0,
+        "silent_failure": false,
+        "unsupported_claims": [],
+        "unused_reply_nodes": [],
+        "unverified_claims": [],
+        "wrong_person": 0
+      },
+      "model_calls": {
+        "control": 0,
+        "ordinary": 4,
+        "question": 1
+      },
+      "api_charged_USD_upper": "0.0077475750"
+    }
+  ],
+  "partial_C_offline_reconstruction": {
+    "provenance": "OFFLINE reconstruction of actual persisted responses, not a second actual error traceback",
+    "all_actual_C_requests_exact_sha256": true,
+    "actual_responses_consumed": 18,
+    "state_and_cycles_match_actual_partial_exactly": true,
+    "paid_dispatches": 0,
+    "exception_type": "ValueError",
+    "fixed_local_validator": "Public file missing",
+    "validator_frames": [
+      {
+        "file": "scheduler.py",
+        "function": "run",
+        "line": 114
+      },
+      {
+        "file": "scheduler.py",
+        "function": "step",
+        "line": 97
+      },
+      {
+        "file": "runtime.py",
+        "function": "cycle",
+        "line": 178
+      },
+      {
+        "file": "runtime.py",
+        "function": "_normal",
+        "line": 140
+      },
+      {
+        "file": "contracts.py",
+        "function": "require",
+        "line": 33
+      }
+    ],
+    "failed_tool": "read_file",
+    "failed_public_path": "/workspace/deliverable.json"
+  },
+  "partial_C_complete_cycles": 8,
+  "partial_C_controller_SUBMIT_blocked": 7,
+  "partial_C_actual_ordinary_successful_actions": 1,
+  "partial_C_runtime_normal_actions_includes7blockedSUBMIT": 8,
+  "partial_C_content_T_R": null,
+  "partial_C_what_privilege_never_used": true,
+  "actual_trace_index": [
+    {
+      "source_line_1_based": 10,
+      "source_event_canonical_sha256": "c0e861bf605a3da5e6e6828efd1fc2a62192c8613f1a2529fcc1292deaa29ab0",
+      "kind": "cycle_complete",
+      "episode_id": "slot-00:o-low-team-lunch:A:r0",
+      "cycle": {
+        "arm": "A",
+        "boundary_reasons": [
+          "start"
+        ],
+        "cycle": 0,
+        "decision": {
+          "action": "SELF",
+          "include_value_ids": [],
+          "intent": null,
+          "person_id": null
+        },
+        "private_when_whom_used": false,
+        "proposal": {
+          "arguments": [
+            [
+              "path",
+              "/workspace/order.md"
+            ]
+          ],
+          "name": "read_file"
+        },
+        "proposal_discarded": false,
+        "public_after_sha256": "ec5cb13b2c354a03cfb57179d0a0c604f25b5b714569b7970734460122459e09",
+        "public_before_sha256": "ad5aeb0dcfc8f15458b0ce180efc0e6e73389ad76068193cb79781a4aae3d1df",
+        "public_controller_called": true,
+        "what_assistance_status": "not_requested"
+      },
+      "progress": {
+        "artifact_present": false,
+        "artifact_public_shape_valid": false,
+        "artifact_revision": 0,
+        "bridge_submitted": false,
+        "business_success": null,
+        "posted_current_revision": false,
+        "user_delivery_complete": false
+      }
+    },
+    {
+      "source_line_1_based": 18,
+      "source_event_canonical_sha256": "3cb33aba6aa0f99214ca8736038f11b2717f951832b8ec30916b729facc8a235",
+      "kind": "runtime_event",
+      "episode_id": "slot-00:o-low-team-lunch:A:r0",
+      "event": {
+        "event_id": "slot-00:o-low-team-lunch:A:r0:event:3",
+        "kind": "submission_blocked",
+        "reason": "Complete public artifact and current summary first"
+      }
+    },
+    {
+      "source_line_1_based": 19,
+      "source_event_canonical_sha256": "b7b4a4946927113a02ee1348491e3535a6325c7c37b37ebe48b1e94a90e729eb",
+      "kind": "cycle_complete",
+      "episode_id": "slot-00:o-low-team-lunch:A:r0",
+      "cycle": {
+        "arm": "A",
+        "boundary_reasons": [
+          "deliverable_or_submit_proposal"
+        ],
+        "cycle": 1,
+        "decision": {
+          "action": "SUBMIT",
+          "include_value_ids": [],
+          "intent": null,
+          "person_id": null
+        },
+        "private_when_whom_used": false,
+        "proposal": {
+          "arguments": [
+            [
+              "content",
+              "{\"headcount\":22,\"menu\":\"M1\",\"vegetarian_meals\":0,\"total_usd\":550}"
+            ],
+            [
+              "path",
+              "/workspace/deliverable.json"
+            ]
+          ],
+          "name": "write_file"
+        },
+        "proposal_discarded": false,
+        "public_after_sha256": "4524d9d2b62e7676e0b4e2c2c64d4a212b5d06e54567536e49adc3c2ad865459",
+        "public_before_sha256": "ec5cb13b2c354a03cfb57179d0a0c604f25b5b714569b7970734460122459e09",
+        "public_controller_called": true,
+        "what_assistance_status": "not_requested"
+      },
+      "progress": {
+        "artifact_present": false,
+        "artifact_public_shape_valid": false,
+        "artifact_revision": 0,
+        "bridge_submitted": false,
+        "business_success": null,
+        "posted_current_revision": false,
+        "user_delivery_complete": false
+      }
+    },
+    {
+      "source_line_1_based": 27,
+      "source_event_canonical_sha256": "dcbae54526bdfaed041225a59199a17f2d776e7c2f35e10d04bf85b2c818800f",
+      "kind": "runtime_event",
+      "episode_id": "slot-00:o-low-team-lunch:A:r0",
+      "event": {
+        "content": "{\"headcount\":22,\"menu\":\"M1\",\"vegetarian_meals\":0,\"total_usd\":550}",
+        "event_id": "slot-00:o-low-team-lunch:A:r0:event:5",
+        "kind": "write_file",
+        "path": "/workspace/deliverable.json"
+      }
+    },
+    {
+      "source_line_1_based": 28,
+      "source_event_canonical_sha256": "49bda3240e462f88fcfc58b9c52c3d0746f9f629c45f99ec83b1a5f67e350181",
+      "kind": "cycle_complete",
+      "episode_id": "slot-00:o-low-team-lunch:A:r0",
+      "cycle": {
+        "arm": "A",
+        "boundary_reasons": [
+          "deliverable_or_submit_proposal"
+        ],
+        "cycle": 2,
+        "decision": {
+          "action": "SELF",
+          "include_value_ids": [],
+          "intent": null,
+          "person_id": null
+        },
+        "private_when_whom_used": false,
+        "proposal": {
+          "arguments": [
+            [
+              "content",
+              "{\"headcount\":22,\"menu\":\"M1\",\"vegetarian_meals\":0,\"total_usd\":550}"
+            ],
+            [
+              "path",
+              "/workspace/deliverable.json"
+            ]
+          ],
+          "name": "write_file"
+        },
+        "proposal_discarded": false,
+        "public_after_sha256": "04358f2b127b7395957647fb35dc17984bb7d401a929fdd47b1a01769028c965",
+        "public_before_sha256": "4524d9d2b62e7676e0b4e2c2c64d4a212b5d06e54567536e49adc3c2ad865459",
+        "public_controller_called": true,
+        "what_assistance_status": "not_requested"
+      },
+      "progress": {
+        "artifact_present": true,
+        "artifact_public_shape_valid": true,
+        "artifact_revision": 1,
+        "bridge_submitted": false,
+        "business_success": null,
+        "posted_current_revision": false,
+        "user_delivery_complete": false
+      }
+    },
+    {
+      "source_line_1_based": 33,
+      "source_event_canonical_sha256": "7cbd15a9290faa98599ce875d38da406e12f5bdee284f7eb7e76eff3ec4672a1",
+      "kind": "runtime_event",
+      "episode_id": "slot-00:o-low-team-lunch:A:r0",
+      "event": {
+        "channel": "#engineering",
+        "content": "Catering order saved in /workspace/deliverable.json: headcount 22, menu M1, vegetarian_meals 0, total_usd 550.",
+        "event_id": "slot-00:o-low-team-lunch:A:r0:event:7",
+        "kind": "post_channel"
+      }
+    },
+    {
+      "source_line_1_based": 34,
+      "source_event_canonical_sha256": "92b532b8789b4a26e62a9bbf30169ea425859b1704c024d8399d737f69362799",
+      "kind": "cycle_complete",
+      "episode_id": "slot-00:o-low-team-lunch:A:r0",
+      "cycle": {
+        "arm": "A",
+        "boundary_reasons": [],
+        "cycle": 3,
+        "decision": {
+          "action": "SELF",
+          "include_value_ids": [],
+          "intent": null,
+          "person_id": null
+        },
+        "private_when_whom_used": false,
+        "proposal": {
+          "arguments": [
+            [
+              "channel",
+              "#engineering"
+            ],
+            [
+              "content",
+              "Catering order saved in /workspace/deliverable.json: headcount 22, menu M1, vegetarian_meals 0, total_usd 550."
+            ]
+          ],
+          "name": "post_channel"
+        },
+        "proposal_discarded": false,
+        "public_after_sha256": "5006e04859cea9656f0a6a6f382eba4136d75637b00f5c90d5332cc34d52abbe",
+        "public_before_sha256": "04358f2b127b7395957647fb35dc17984bb7d401a929fdd47b1a01769028c965",
+        "public_controller_called": false,
+        "what_assistance_status": "not_requested"
+      },
+      "progress": {
+        "artifact_present": true,
+        "artifact_public_shape_valid": true,
+        "artifact_revision": 1,
+        "bridge_submitted": false,
+        "business_success": null,
+        "posted_current_revision": true,
+        "user_delivery_complete": true
+      }
+    },
+    {
+      "source_line_1_based": 42,
+      "source_event_canonical_sha256": "f66e9fde8cb782ab576a6b941643a4cfe8426d922ffbd858051716d0d8a6dbba",
+      "kind": "runtime_event",
+      "episode_id": "slot-00:o-low-team-lunch:A:r0",
+      "event": {
+        "answer": "Delivered /workspace/deliverable.json and posted summary in #engineering. Order: headcount 22, menu M1, vegetarian_meals 0, total_usd 550.",
+        "event_id": "slot-00:o-low-team-lunch:A:r0:event:9",
+        "kind": "submit"
+      }
+    },
+    {
+      "source_line_1_based": 43,
+      "source_event_canonical_sha256": "316c7e26c03f5084f66a14398f7be53dc4f8241d84b6da05dd96f677fa6abf5e",
+      "kind": "cycle_complete",
+      "episode_id": "slot-00:o-low-team-lunch:A:r0",
+      "cycle": {
+        "arm": "A",
+        "boundary_reasons": [
+          "deliverable_or_submit_proposal",
+          "four_ordinary_actions"
+        ],
+        "cycle": 4,
+        "decision": {
+          "action": "SUBMIT",
+          "include_value_ids": [],
+          "intent": null,
+          "person_id": null
+        },
+        "private_when_whom_used": false,
+        "proposal": {
+          "arguments": [
+            [
+              "answer",
+              "Delivered /workspace/deliverable.json and posted summary in #engineering. Order: headcount 22, menu M1, vegetarian_meals 0, total_usd 550."
+            ]
+          ],
+          "name": "submit"
+        },
+        "proposal_discarded": false,
+        "public_after_sha256": "e6b58a16f904a650ff5f4d9cf3864ca9d8773ed61572fa65e8e56bc09316c414",
+        "public_before_sha256": "5006e04859cea9656f0a6a6f382eba4136d75637b00f5c90d5332cc34d52abbe",
+        "public_controller_called": true,
+        "what_assistance_status": "not_requested"
+      },
+      "progress": {
+        "artifact_present": true,
+        "artifact_public_shape_valid": true,
+        "artifact_revision": 1,
+        "bridge_submitted": true,
+        "business_success": null,
+        "posted_current_revision": true,
+        "user_delivery_complete": true
+      }
+    },
+    {
+      "source_line_1_based": 44,
+      "source_event_canonical_sha256": "49dc3743ffcd812f8b963ef7724eeef38c45a6c43574d092586f9b96d1a2c217",
+      "kind": "episode_complete",
+      "episode_id": null,
+      "row": {
+        "arm": "A",
+        "contacts": 0,
+        "episode_id": "slot-00:o-low-team-lunch:A:r0",
+        "group": 0,
+        "model_calls": {
+          "control": 4,
+          "ordinary": 5,
+          "question": 0
+        },
+        "normal_actions": 5,
+        "record_sha256": "fdef4dcade9b1c378e9315fbabed61512acd0bf5507e8422bf49bee27f9e566e",
+        "repeat": 0,
+        "score": {
+          "bridge_submitted": true,
+          "eligible_for_confirmatory_metrics": true,
+          "episode_status": "scored",
+          "input_fingerprint": "34ffba5a3203217f8622f970db9c3726fa3cf9e24f8514fca290cec61e90d91a",
+          "official": {
+            "R": 0.5,
+            "R_all_contacts": 0.5,
+            "T": 0.5,
+            "artifact": {
+              "adopted_fields": [],
+              "base_valid": true,
+              "field_accuracy": 0.75,
+              "internally_consistent": true,
+              "quality_score": 0.0
+            },
+            "base_pass": true,
+            "errors": {
+              "decoy_contacts": [],
+              "n_auth": 0,
+              "n_waste": 0,
+              "no_repair_nodes": 0,
+              "out_of_pool": [],
+              "over_ask": 0,
+              "premature_request": 0,
+              "redundant": 0,
+              "rejections": 0,
+              "repaired_nodes": 0,
+              "silent_failure": false,
+              "unsupported_claims": [],
+              "unused_reply_nodes": [],
+              "unverified_claims": [],
+              "wrong_person": 0
+            },
+            "evaluation_status": "scored",
+            "evidence": [],
+            "fields": {
+              "headcount": {
+                "matches_full": true,
+                "matches_no_contact": true,
+                "present": true
+              },
+              "menu": {
+                "matches_full": true,
+                "matches_no_contact": true,
+                "present": true
+              },
+              "total_usd": {
+                "matches_full": true,
+                "matches_no_contact": true,
+                "present": true
+              },
+              "vegetarian_meals": {
+                "matches_full": false,
+                "matches_no_contact": true,
+                "present": true
+              }
+            },
+            "grader_version": "tribalbench-1.0",
+            "help_class": "Optional-help",
+            "process": {
+              "all_nodes_satisfied": false,
+              "contacts": [],
+              "first_contact": null,
+              "first_contact_valid": null,
+              "interruption_cost": 0.0,
+              "n_asks": 0,
+              "nodes_satisfied": [],
+              "order_ok": false
+            },
+            "quality_score": 0.0,
+            "submitted": true,
+            "task_id": "o-low-team-lunch",
+            "unknown_nodes": [],
+            "weights": {
+              "lambda": 0.05,
+              "mu": 0.3,
+              "nu": 0.1
+            }
+          },
+          "scorer_revision": "4260bdc626548f59042f318cdf0566490e91b9d5",
+          "scorer_source_sha256": "e6b47e4a251bdc44d2fbfe389e12b81273e6472092958fe04e33297f28a33e78",
+          "user_delivery_complete": true
+        },
+        "slot": 0,
+        "task_id": "o-low-team-lunch"
+      }
+    },
+    {
+      "source_line_1_based": 53,
+      "source_event_canonical_sha256": "e6e8d3d2db9ee0002719ef21019efae94bec6fa35f8366078238dc9528c3b2ab",
+      "kind": "runtime_event",
+      "episode_id": "slot-01:o-low-team-lunch:B:r0",
+      "event": {
+        "content": "request vegetarian_meals. Public task context: Prepare the catering order for the Search team offsite lunch on 2026-11-18 (22 people). The working directory says: \"22 attendees. Standard menu M1 at USD 25 per person; all meals regular by default. Human Resources keeps the team dietary-needs list.\" Please provide the vegetarian_meals count only, using evidence you already have.",
+        "event_id": "slot-01:o-low-team-lunch:B:r0:event:1",
+        "kind": "send_message",
+        "message_id": "slot-01:o-low-team-lunch:B:r0:contact:0:out",
+        "person_id": "Chen Xinyi"
+      }
+    },
+    {
+      "source_line_1_based": 54,
+      "source_event_canonical_sha256": "eeb0bdc886713f63e8287758fce9b473c64cdf16ec79ae04a8094fa3c389170a",
+      "kind": "runtime_event",
+      "episode_id": "slot-01:o-low-team-lunch:B:r0",
+      "event": {
+        "content": "{\"facts\":{\"vegetarian_meals\":6},\"reason\":\"Requested record released.\",\"status\":\"released\"}",
+        "event_id": "slot-01:o-low-team-lunch:B:r0:event:2",
+        "in_reply_to": "slot-01:o-low-team-lunch:B:r0:contact:0:out",
+        "kind": "read_messages",
+        "message_id": "slot-01:o-low-team-lunch:B:r0:contact:0:reply",
+        "person_id": "Chen Xinyi"
+      }
+    },
+    {
+      "source_line_1_based": 58,
+      "source_event_canonical_sha256": "be1d13a8c07ac058188c890033fe97809585c99e8c13a2672297b8cde43855af",
+      "kind": "runtime_event",
+      "episode_id": "slot-01:o-low-team-lunch:B:r0",
+      "event": {
+        "content": "{\"headcount\":22,\"menu\":\"M1\",\"vegetarian_meals\":6,\"total_usd\":550}",
+        "event_id": "slot-01:o-low-team-lunch:B:r0:event:3",
+        "kind": "write_file",
+        "path": "/workspace/deliverable.json"
+      }
+    },
+    {
+      "source_line_1_based": 59,
+      "source_event_canonical_sha256": "6ac2fafec2a47368435782f4c6a4dc41ded0f8fd97eecc16bc4e9dfd01c803a6",
+      "kind": "cycle_complete",
+      "episode_id": "slot-01:o-low-team-lunch:B:r0",
+      "cycle": {
+        "arm": "B",
+        "boundary_reasons": [
+          "start"
+        ],
+        "cycle": 0,
+        "decision": {
+          "action": "ASK",
+          "include_value_ids": [],
+          "intent": "request vegetarian_meals",
+          "person_id": "Chen Xinyi"
+        },
+        "private_when_whom_used": true,
+        "proposal": {
+          "arguments": [
+            [
+              "path",
+              "/workspace/order.md"
+            ]
+          ],
+          "name": "read_file"
+        },
+        "proposal_discarded": true,
+        "public_after_sha256": "536cf61b3672c1478c6a1eb3e206c04797c03d3518e1fdc58ddbaf299018fb5f",
+        "public_before_sha256": "ad5aeb0dcfc8f15458b0ce180efc0e6e73389ad76068193cb79781a4aae3d1df",
+        "public_controller_called": false,
+        "what_assistance_status": "not_requested"
+      },
+      "progress": {
+        "artifact_present": true,
+        "artifact_public_shape_valid": true,
+        "artifact_revision": 1,
+        "bridge_submitted": false,
+        "business_success": null,
+        "posted_current_revision": false,
+        "user_delivery_complete": false
+      }
+    },
+    {
+      "source_line_1_based": 64,
+      "source_event_canonical_sha256": "09f09926d453165be5a95dd708ff2208b7debdc859b9bd2497dfe7cff91eaa28",
+      "kind": "runtime_event",
+      "episode_id": "slot-01:o-low-team-lunch:B:r0",
+      "event": {
+        "channel": "#engineering",
+        "content": "Delivered /workspace/deliverable.json with headcount 22, menu M1, vegetarian_meals 6, total_usd 550.",
+        "event_id": "slot-01:o-low-team-lunch:B:r0:event:5",
+        "kind": "post_channel"
+      }
+    },
+    {
+      "source_line_1_based": 65,
+      "source_event_canonical_sha256": "254dce285d74fa8363194262f412d4dd6ef964e516cca436b1e3fa683adca1ed",
+      "kind": "cycle_complete",
+      "episode_id": "slot-01:o-low-team-lunch:B:r0",
+      "cycle": {
+        "arm": "B",
+        "boundary_reasons": [
+          "reply"
+        ],
+        "cycle": 1,
+        "decision": {
+          "action": "SELF",
+          "include_value_ids": [],
+          "intent": null,
+          "person_id": null
+        },
+        "private_when_whom_used": true,
+        "proposal": {
+          "arguments": [
+            [
+              "channel",
+              "#engineering"
+            ],
+            [
+              "content",
+              "Delivered /workspace/deliverable.json with headcount 22, menu M1, vegetarian_meals 6, total_usd 550."
+            ]
+          ],
+          "name": "post_channel"
+        },
+        "proposal_discarded": false,
+        "public_after_sha256": "b513509f1264d77f2b2505bb087b1f5faa68f77b576c46f95a7113c0d17fa62b",
+        "public_before_sha256": "536cf61b3672c1478c6a1eb3e206c04797c03d3518e1fdc58ddbaf299018fb5f",
+        "public_controller_called": false,
+        "what_assistance_status": "not_requested"
+      },
+      "progress": {
+        "artifact_present": true,
+        "artifact_public_shape_valid": true,
+        "artifact_revision": 1,
+        "bridge_submitted": false,
+        "business_success": null,
+        "posted_current_revision": true,
+        "user_delivery_complete": true
+      }
+    },
+    {
+      "source_line_1_based": 70,
+      "source_event_canonical_sha256": "da280d21581a4ae4232eb1af478d520c9f80cd874b7910eebf0e9833d7080d6a",
+      "kind": "runtime_event",
+      "episode_id": "slot-01:o-low-team-lunch:B:r0",
+      "event": {
+        "answer": "{\"headcount\":22,\"menu\":\"M1\",\"vegetarian_meals\":6,\"total_usd\":550}",
+        "event_id": "slot-01:o-low-team-lunch:B:r0:event:7",
+        "kind": "submit"
+      }
+    },
+    {
+      "source_line_1_based": 71,
+      "source_event_canonical_sha256": "8a4ea07ee99e9572734eb1bad5c66ea54e3611f50f17a4dbdd84804a3184d5e7",
+      "kind": "cycle_complete",
+      "episode_id": "slot-01:o-low-team-lunch:B:r0",
+      "cycle": {
+        "arm": "B",
+        "boundary_reasons": [
+          "deliverable_or_submit_proposal"
+        ],
+        "cycle": 2,
+        "decision": {
+          "action": "SELF",
+          "include_value_ids": [],
+          "intent": null,
+          "person_id": null
+        },
+        "private_when_whom_used": true,
+        "proposal": {
+          "arguments": [
+            [
+              "answer",
+              "{\"headcount\":22,\"menu\":\"M1\",\"vegetarian_meals\":6,\"total_usd\":550}"
+            ]
+          ],
+          "name": "submit"
+        },
+        "proposal_discarded": false,
+        "public_after_sha256": "5944547353c8f78bc805a2115fb6b1a8a00428ad60ead7c68d7b1f6d1c44560a",
+        "public_before_sha256": "b513509f1264d77f2b2505bb087b1f5faa68f77b576c46f95a7113c0d17fa62b",
+        "public_controller_called": false,
+        "what_assistance_status": "not_requested"
+      },
+      "progress": {
+        "artifact_present": true,
+        "artifact_public_shape_valid": true,
+        "artifact_revision": 1,
+        "bridge_submitted": true,
+        "business_success": null,
+        "posted_current_revision": true,
+        "user_delivery_complete": true
+      }
+    },
+    {
+      "source_line_1_based": 72,
+      "source_event_canonical_sha256": "2a5697dcb465044281a0a6c392dc5f848d790c054fbee26973bd3fb55f03c0b2",
+      "kind": "episode_complete",
+      "episode_id": null,
+      "row": {
+        "arm": "B",
+        "contacts": 1,
+        "episode_id": "slot-01:o-low-team-lunch:B:r0",
+        "group": 0,
+        "model_calls": {
+          "control": 0,
+          "ordinary": 4,
+          "question": 1
+        },
+        "normal_actions": 3,
+        "record_sha256": "9304b55222463721b314118650b6701cbdebd6d8d38e6002d1b6b09162792251",
+        "repeat": 0,
+        "score": {
+          "bridge_submitted": true,
+          "eligible_for_confirmatory_metrics": true,
+          "episode_status": "scored",
+          "input_fingerprint": "bb1d6387dcaa2bd71ef84a6278965182fd5d26c43a5039147090e7cc6f0544d8",
+          "official": {
+            "R": 0.9,
+            "R_all_contacts": 0.9,
+            "T": 1.0,
+            "artifact": {
+              "adopted_fields": [
+                "vegetarian_meals"
+              ],
+              "base_valid": true,
+              "field_accuracy": 1.0,
+              "internally_consistent": true,
+              "quality_score": 1.0
+            },
+            "base_pass": true,
+            "errors": {
+              "decoy_contacts": [],
+              "n_auth": 0,
+              "n_waste": 0,
+              "no_repair_nodes": 0,
+              "out_of_pool": [],
+              "over_ask": 0,
+              "premature_request": 0,
+              "redundant": 0,
+              "rejections": 0,
+              "repaired_nodes": 0,
+              "silent_failure": false,
+              "unsupported_claims": [],
+              "unused_reply_nodes": [],
+              "unverified_claims": [],
+              "wrong_person": 0
+            },
+            "evaluation_status": "scored",
+            "evidence": [
+              {
+                "context_match": true,
+                "message_id": "slot-01:o-low-team-lunch:B:r0:contact:0:reply",
+                "node_id": "h1",
+                "observed_refusal": false,
+                "reason": "Exact environment release receipt",
+                "request_id": "slot-01:o-low-team-lunch:B:r0:contact:0:out",
+                "status": "accepted",
+                "value_match": true
+              }
+            ],
+            "fields": {
+              "headcount": {
+                "matches_full": true,
+                "matches_no_contact": true,
+                "present": true
+              },
+              "menu": {
+                "matches_full": true,
+                "matches_no_contact": true,
+                "present": true
+              },
+              "total_usd": {
+                "matches_full": true,
+                "matches_no_contact": true,
+                "present": true
+              },
+              "vegetarian_meals": {
+                "matches_full": true,
+                "matches_no_contact": false,
+                "present": true
+              }
+            },
+            "grader_version": "tribalbench-1.0",
+            "help_class": "Optional-help",
+            "process": {
+              "all_nodes_satisfied": true,
+              "contacts": [
+                "Chen Xinyi"
+              ],
+              "first_contact": "Chen Xinyi",
+              "first_contact_valid": true,
+              "interruption_cost": 2.0,
+              "n_asks": 1,
+              "nodes_satisfied": [
+                "h1"
+              ],
+              "order_ok": true
+            },
+            "quality_score": 1.0,
+            "submitted": true,
+            "task_id": "o-low-team-lunch",
+            "unknown_nodes": [],
+            "weights": {
+              "lambda": 0.05,
+              "mu": 0.3,
+              "nu": 0.1
+            }
+          },
+          "scorer_revision": "4260bdc626548f59042f318cdf0566490e91b9d5",
+          "scorer_source_sha256": "e6b47e4a251bdc44d2fbfe389e12b81273e6472092958fe04e33297f28a33e78",
+          "user_delivery_complete": true
+        },
+        "slot": 1,
+        "task_id": "o-low-team-lunch"
+      }
+    },
+    {
+      "source_line_1_based": 82,
+      "source_event_canonical_sha256": "0e2b395594353be321a92146bbf6201b523400d00f5d3bc31ce7b773c368b4cc",
+      "kind": "cycle_complete",
+      "episode_id": "slot-02:o-low-team-lunch:C:r0",
+      "cycle": {
+        "arm": "C",
+        "boundary_reasons": [
+          "start"
+        ],
+        "cycle": 0,
+        "decision": {
+          "action": "SELF",
+          "include_value_ids": [],
+          "intent": null,
+          "person_id": null
+        },
+        "private_when_whom_used": false,
+        "proposal": {
+          "arguments": [
+            [
+              "path",
+              "/workspace/order.md"
+            ]
+          ],
+          "name": "read_file"
+        },
+        "proposal_discarded": false,
+        "public_after_sha256": "54f54ddfac5f50c3a06bb4022e176867104e427b0bf2113bf3cbc8ce49106079",
+        "public_before_sha256": "ad5aeb0dcfc8f15458b0ce180efc0e6e73389ad76068193cb79781a4aae3d1df",
+        "public_controller_called": true,
+        "what_assistance_status": "not_requested"
+      },
+      "progress": {
+        "artifact_present": false,
+        "artifact_public_shape_valid": false,
+        "artifact_revision": 0,
+        "bridge_submitted": false,
+        "business_success": null,
+        "posted_current_revision": false,
+        "user_delivery_complete": false
+      }
+    },
+    {
+      "source_line_1_based": 90,
+      "source_event_canonical_sha256": "be68f2ee8ba408e2626a8d849b68d4b1ec02804cb8f4f37a4b6a6668b9146add",
+      "kind": "runtime_event",
+      "episode_id": "slot-02:o-low-team-lunch:C:r0",
+      "event": {
+        "event_id": "slot-02:o-low-team-lunch:C:r0:event:3",
+        "kind": "submission_blocked",
+        "reason": "Complete public artifact and current summary first"
+      }
+    },
+    {
+      "source_line_1_based": 91,
+      "source_event_canonical_sha256": "37e3c0b5c402335707d2a9432fe83dede54665ed8312e8eed4cb210603839ece",
+      "kind": "cycle_complete",
+      "episode_id": "slot-02:o-low-team-lunch:C:r0",
+      "cycle": {
+        "arm": "C",
+        "boundary_reasons": [
+          "deliverable_or_submit_proposal"
+        ],
+        "cycle": 1,
+        "decision": {
+          "action": "SUBMIT",
+          "include_value_ids": [],
+          "intent": null,
+          "person_id": null
+        },
+        "private_when_whom_used": false,
+        "proposal": {
+          "arguments": [
+            [
+              "content",
+              "{\n  \"headcount\": 22,\n  \"menu\": \"M1\",\n  \"vegetarian_meals\": 0,\n  \"total_usd\": 550\n}\n"
+            ],
+            [
+              "path",
+              "/workspace/deliverable.json"
+            ]
+          ],
+          "name": "write_file"
+        },
+        "proposal_discarded": false,
+        "public_after_sha256": "4cb78496f3f97394dbcdf6e537f74db77c5a7645a89a0ead4e1ab37f263bbe75",
+        "public_before_sha256": "54f54ddfac5f50c3a06bb4022e176867104e427b0bf2113bf3cbc8ce49106079",
+        "public_controller_called": true,
+        "what_assistance_status": "not_requested"
+      },
+      "progress": {
+        "artifact_present": false,
+        "artifact_public_shape_valid": false,
+        "artifact_revision": 0,
+        "bridge_submitted": false,
+        "business_success": null,
+        "posted_current_revision": false,
+        "user_delivery_complete": false
+      }
+    },
+    {
+      "source_line_1_based": 99,
+      "source_event_canonical_sha256": "a5d3c2c1632c6096776f980b5bc302eb8f7c22644848b34617f9a040a27f95f4",
+      "kind": "runtime_event",
+      "episode_id": "slot-02:o-low-team-lunch:C:r0",
+      "event": {
+        "event_id": "slot-02:o-low-team-lunch:C:r0:event:5",
+        "kind": "submission_blocked",
+        "reason": "Complete public artifact and current summary first"
+      }
+    },
+    {
+      "source_line_1_based": 100,
+      "source_event_canonical_sha256": "1fab5bab2bbb61dd45ac75bfaa4dd186b93b2d8d75ab430cf0ac4bcefe640f5b",
+      "kind": "cycle_complete",
+      "episode_id": "slot-02:o-low-team-lunch:C:r0",
+      "cycle": {
+        "arm": "C",
+        "boundary_reasons": [
+          "deliverable_or_submit_proposal"
+        ],
+        "cycle": 2,
+        "decision": {
+          "action": "SUBMIT",
+          "include_value_ids": [],
+          "intent": null,
+          "person_id": null
+        },
+        "private_when_whom_used": false,
+        "proposal": {
+          "arguments": [
+            [
+              "content",
+              "{\n  \"headcount\": 22,\n  \"menu\": \"M1\",\n  \"vegetarian_meals\": 0,\n  \"total_usd\": 550\n}\n"
+            ],
+            [
+              "path",
+              "/workspace/deliverable.json"
+            ]
+          ],
+          "name": "write_file"
+        },
+        "proposal_discarded": false,
+        "public_after_sha256": "00e34654389605d9d4f11ebc7f42ff566b53b33e2b1fac1b6c59d24af6ca793e",
+        "public_before_sha256": "4cb78496f3f97394dbcdf6e537f74db77c5a7645a89a0ead4e1ab37f263bbe75",
+        "public_controller_called": true,
+        "what_assistance_status": "not_requested"
+      },
+      "progress": {
+        "artifact_present": false,
+        "artifact_public_shape_valid": false,
+        "artifact_revision": 0,
+        "bridge_submitted": false,
+        "business_success": null,
+        "posted_current_revision": false,
+        "user_delivery_complete": false
+      }
+    },
+    {
+      "source_line_1_based": 108,
+      "source_event_canonical_sha256": "a957e4ceaa60339c5fafb544bb320050ad03fd77461abe9f85b8349d3f270405",
+      "kind": "runtime_event",
+      "episode_id": "slot-02:o-low-team-lunch:C:r0",
+      "event": {
+        "event_id": "slot-02:o-low-team-lunch:C:r0:event:7",
+        "kind": "submission_blocked",
+        "reason": "Complete public artifact and current summary first"
+      }
+    },
+    {
+      "source_line_1_based": 109,
+      "source_event_canonical_sha256": "8c116737ca228c94e5d40cd3852daebf60d1bfbf13b0a5ba8ddb69b881569fae",
+      "kind": "cycle_complete",
+      "episode_id": "slot-02:o-low-team-lunch:C:r0",
+      "cycle": {
+        "arm": "C",
+        "boundary_reasons": [
+          "deliverable_or_submit_proposal"
+        ],
+        "cycle": 3,
+        "decision": {
+          "action": "SUBMIT",
+          "include_value_ids": [],
+          "intent": null,
+          "person_id": null
+        },
+        "private_when_whom_used": false,
+        "proposal": {
+          "arguments": [
+            [
+              "content",
+              "{\n  \"headcount\": 22,\n  \"menu\": \"M1\",\n  \"vegetarian_meals\": 0,\n  \"total_usd\": 550\n}\n"
+            ],
+            [
+              "path",
+              "/workspace/deliverable.json"
+            ]
+          ],
+          "name": "write_file"
+        },
+        "proposal_discarded": false,
+        "public_after_sha256": "085b399d91490228b5e7fa43f40cf1f44bf1f7371d7b3986d237c2506c08e41c",
+        "public_before_sha256": "00e34654389605d9d4f11ebc7f42ff566b53b33e2b1fac1b6c59d24af6ca793e",
+        "public_controller_called": true,
+        "what_assistance_status": "not_requested"
+      },
+      "progress": {
+        "artifact_present": false,
+        "artifact_public_shape_valid": false,
+        "artifact_revision": 0,
+        "bridge_submitted": false,
+        "business_success": null,
+        "posted_current_revision": false,
+        "user_delivery_complete": false
+      }
+    },
+    {
+      "source_line_1_based": 117,
+      "source_event_canonical_sha256": "cf8d08fed8bd0058fab0ec17b3eb7de359c207fb01cd12dfbf4f26399f8ff7c5",
+      "kind": "runtime_event",
+      "episode_id": "slot-02:o-low-team-lunch:C:r0",
+      "event": {
+        "event_id": "slot-02:o-low-team-lunch:C:r0:event:9",
+        "kind": "submission_blocked",
+        "reason": "Complete public artifact and current summary first"
+      }
+    },
+    {
+      "source_line_1_based": 118,
+      "source_event_canonical_sha256": "07689f159b6aae7af07cddec1bb350526adbffdabbed7c8a8246c041b14dc91a",
+      "kind": "cycle_complete",
+      "episode_id": "slot-02:o-low-team-lunch:C:r0",
+      "cycle": {
+        "arm": "C",
+        "boundary_reasons": [
+          "deliverable_or_submit_proposal",
+          "four_ordinary_actions"
+        ],
+        "cycle": 4,
+        "decision": {
+          "action": "SUBMIT",
+          "include_value_ids": [],
+          "intent": null,
+          "person_id": null
+        },
+        "private_when_whom_used": false,
+        "proposal": {
+          "arguments": [
+            [
+              "content",
+              "{\n  \"headcount\": 22,\n  \"menu\": \"M1\",\n  \"vegetarian_meals\": 0,\n  \"total_usd\": 550\n}\n"
+            ],
+            [
+              "path",
+              "/workspace/deliverable.json"
+            ]
+          ],
+          "name": "write_file"
+        },
+        "proposal_discarded": false,
+        "public_after_sha256": "aa9b22e50d070c75c00dbb2d4123407329897c5e7d419991878ce11e496a48a0",
+        "public_before_sha256": "085b399d91490228b5e7fa43f40cf1f44bf1f7371d7b3986d237c2506c08e41c",
+        "public_controller_called": true,
+        "what_assistance_status": "not_requested"
+      },
+      "progress": {
+        "artifact_present": false,
+        "artifact_public_shape_valid": false,
+        "artifact_revision": 0,
+        "bridge_submitted": false,
+        "business_success": null,
+        "posted_current_revision": false,
+        "user_delivery_complete": false
+      }
+    },
+    {
+      "source_line_1_based": 126,
+      "source_event_canonical_sha256": "a1fe68af8b36d3c2fb4f9df25bc839f4e89b2811321f45df210c3345f486cb51",
+      "kind": "runtime_event",
+      "episode_id": "slot-02:o-low-team-lunch:C:r0",
+      "event": {
+        "event_id": "slot-02:o-low-team-lunch:C:r0:event:11",
+        "kind": "submission_blocked",
+        "reason": "Complete public artifact and current summary first"
+      }
+    },
+    {
+      "source_line_1_based": 127,
+      "source_event_canonical_sha256": "82ba5da26785c30527de9ae5b49c8822071c0a0da664c343881a197f3a471834",
+      "kind": "cycle_complete",
+      "episode_id": "slot-02:o-low-team-lunch:C:r0",
+      "cycle": {
+        "arm": "C",
+        "boundary_reasons": [
+          "deliverable_or_submit_proposal"
+        ],
+        "cycle": 5,
+        "decision": {
+          "action": "SUBMIT",
+          "include_value_ids": [],
+          "intent": null,
+          "person_id": null
+        },
+        "private_when_whom_used": false,
+        "proposal": {
+          "arguments": [
+            [
+              "content",
+              "{\n  \"headcount\": 22,\n  \"menu\": \"M1\",\n  \"vegetarian_meals\": 0,\n  \"total_usd\": 550\n}\n"
+            ],
+            [
+              "path",
+              "/workspace/deliverable.json"
+            ]
+          ],
+          "name": "write_file"
+        },
+        "proposal_discarded": false,
+        "public_after_sha256": "7f346f105df4a528f32cf882db622803206c9010df8ed4d8769c12015374a246",
+        "public_before_sha256": "aa9b22e50d070c75c00dbb2d4123407329897c5e7d419991878ce11e496a48a0",
+        "public_controller_called": true,
+        "what_assistance_status": "not_requested"
+      },
+      "progress": {
+        "artifact_present": false,
+        "artifact_public_shape_valid": false,
+        "artifact_revision": 0,
+        "bridge_submitted": false,
+        "business_success": null,
+        "posted_current_revision": false,
+        "user_delivery_complete": false
+      }
+    },
+    {
+      "source_line_1_based": 135,
+      "source_event_canonical_sha256": "5e734c6d67e67e3f11e1cd0ee9461c9715c0f7e60eeadcdceb1bcd8f434963cb",
+      "kind": "runtime_event",
+      "episode_id": "slot-02:o-low-team-lunch:C:r0",
+      "event": {
+        "event_id": "slot-02:o-low-team-lunch:C:r0:event:13",
+        "kind": "submission_blocked",
+        "reason": "Complete public artifact and current summary first"
+      }
+    },
+    {
+      "source_line_1_based": 136,
+      "source_event_canonical_sha256": "8bf669c1e10b6a8e0b52f66cbb90c6469f5e0ba81199570c2f4791bf941f2129",
+      "kind": "cycle_complete",
+      "episode_id": "slot-02:o-low-team-lunch:C:r0",
+      "cycle": {
+        "arm": "C",
+        "boundary_reasons": [
+          "deliverable_or_submit_proposal"
+        ],
+        "cycle": 6,
+        "decision": {
+          "action": "SUBMIT",
+          "include_value_ids": [],
+          "intent": null,
+          "person_id": null
+        },
+        "private_when_whom_used": false,
+        "proposal": {
+          "arguments": [
+            [
+              "content",
+              "{\n  \"headcount\": 22,\n  \"menu\": \"M1\",\n  \"vegetarian_meals\": 0,\n  \"total_usd\": 550\n}\n"
+            ],
+            [
+              "path",
+              "/workspace/deliverable.json"
+            ]
+          ],
+          "name": "write_file"
+        },
+        "proposal_discarded": false,
+        "public_after_sha256": "364b661adb30330645cba859dc841103770f889e13aeab0161e6fd0c177b7019",
+        "public_before_sha256": "7f346f105df4a528f32cf882db622803206c9010df8ed4d8769c12015374a246",
+        "public_controller_called": true,
+        "what_assistance_status": "not_requested"
+      },
+      "progress": {
+        "artifact_present": false,
+        "artifact_public_shape_valid": false,
+        "artifact_revision": 0,
+        "bridge_submitted": false,
+        "business_success": null,
+        "posted_current_revision": false,
+        "user_delivery_complete": false
+      }
+    },
+    {
+      "source_line_1_based": 144,
+      "source_event_canonical_sha256": "5b3579ddeb33cf62586af5499cf9c65b48c3f95f2e6e0941e8ee614625d9cdc8",
+      "kind": "runtime_event",
+      "episode_id": "slot-02:o-low-team-lunch:C:r0",
+      "event": {
+        "event_id": "slot-02:o-low-team-lunch:C:r0:event:15",
+        "kind": "submission_blocked",
+        "reason": "Complete public artifact and current summary first"
+      }
+    },
+    {
+      "source_line_1_based": 145,
+      "source_event_canonical_sha256": "518efb80106675f641ab48157a78cf7b7949e79a148e87a9026a04d9c2d85e47",
+      "kind": "cycle_complete",
+      "episode_id": "slot-02:o-low-team-lunch:C:r0",
+      "cycle": {
+        "arm": "C",
+        "boundary_reasons": [
+          "deliverable_or_submit_proposal"
+        ],
+        "cycle": 7,
+        "decision": {
+          "action": "SUBMIT",
+          "include_value_ids": [],
+          "intent": null,
+          "person_id": null
+        },
+        "private_when_whom_used": false,
+        "proposal": {
+          "arguments": [
+            [
+              "content",
+              "{\n  \"headcount\": 22,\n  \"menu\": \"M1\",\n  \"vegetarian_meals\": 0,\n  \"total_usd\": 550\n}\n"
+            ],
+            [
+              "path",
+              "/workspace/deliverable.json"
+            ]
+          ],
+          "name": "write_file"
+        },
+        "proposal_discarded": false,
+        "public_after_sha256": "d8a626c84d4db9e588bbaff343a7d236db61c8d6461fff756c9dc7850426b0d0",
+        "public_before_sha256": "364b661adb30330645cba859dc841103770f889e13aeab0161e6fd0c177b7019",
+        "public_controller_called": true,
+        "what_assistance_status": "not_requested"
+      },
+      "progress": {
+        "artifact_present": false,
+        "artifact_public_shape_valid": false,
+        "artifact_revision": 0,
+        "bridge_submitted": false,
+        "business_success": null,
+        "posted_current_revision": false,
+        "user_delivery_complete": false
+      }
+    },
+    {
+      "source_line_1_based": 152,
+      "source_event_canonical_sha256": "e562c626295aedaafaa5d566883b2fe02f64267921a8dbea0666fe80662122e0",
+      "kind": "runtime_event",
+      "episode_id": "slot-02:o-low-team-lunch:C:r0",
+      "event": {
+        "business_outcome": null,
+        "event_id": "slot-02:o-low-team-lunch:C:r0:event:17",
+        "exception_type": "ValueError",
+        "kind": "technical_failure"
+      }
+    },
+    {
+      "source_line_1_based": 153,
+      "source_event_canonical_sha256": "50e7b64de0e05047c1fd262962ec08bf38a8ad4dcc7a9bfb15cc8a77286104f8",
+      "kind": "runtime_event",
+      "episode_id": "slot-02:o-low-team-lunch:C:r0",
+      "event": {
+        "business_outcome": null,
+        "event_id": "slot-02:o-low-team-lunch:C:r0:event:18",
+        "exception_type": "ValueError",
+        "kind": "technical_failure"
+      }
+    },
+    {
+      "source_line_1_based": 154,
+      "source_event_canonical_sha256": "19690beca55226a39fa7967de84456e9594f12b85007eeac986ac5e9adaf0f04",
+      "kind": "batch_stop",
+      "episode_id": null,
+      "status": "stopped",
+      "error_type": "ValueError"
+    }
+  ],
+  "trace_file": "events.jsonl",
+  "trace_file_sha256": "6b9ff1c4fc160da36848ae58b1a0209fdbedc4d0d4f075421b9f9b06e0059dd3",
+  "completed_episodes": 2,
+  "completed_four_arm_blocks": 0,
+  "same_original48slot_schedule": true,
+  "headroom": "one exposed Optional task A-vs-B descriptive T+.5/R+.4/contactcost+2; no complete4arm or trained benefit",
+  "paired_or_org_uncertainty": null,
+  "same_total_cap_USD": "50.00",
+  "current_validation_HTTP_attempts": 1,
+  "current_batch_HTTP_attempts": 32,
+  "cumulative_local_HTTP_dispatch_attempts": 47,
+  "cumulative_settled_calls": 43,
+  "cumulative_unknown_calls": 4,
+  "cumulative_unknown_held_USD": "3.432000",
+  "current_native_settled_USD_upper": "0.0555406500",
+  "cumulative_settled_USD_upper": "0.069303300",
+  "cumulative_occupied_USD_upper": "3.501303300",
+  "new_unknown": 0,
+  "no_paid_retry_or_GET": true,
+  "GPU_jobs": 0,
+  "old_SFT87_old32_and_all5historical_runs_byte_unchanged": true,
+  "local_v2_tests_passed_before_dispatch": 110,
+  "legacy_protocol_tests_passed": 12,
+  "historical_fixture_and_prompt_v2_scripted_adapter_exact_reproduction": true
+}

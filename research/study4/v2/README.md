@@ -1,12 +1,14 @@
 # Study4 v2：共享协议、固定scorer与本地调度验收
 
-**最新验证通过后已启动真实ceiling，首slot在7个普通动作后因双message输出整批停。
-0完整episode/配对；累计unknownUSD3.432＋settled上界USD0.013762650，
-占原USD50总帽。尚无四臂headroom或训练收益；没有新训练或5000题生成。**
+**最新原生单函数真实验收通过，实际四臂批次完成A/B两题例，C因未创建文件读取停批。
+同一曝光Optional题A：T/R=.5/.5，B：1/.9；仅是特权when/whom的单题描述性迹象，
+不是完整四臂ceiling或训练收益。累计unknownUSD3.432＋settled上界USD0.069303300，
+占原USD50总帽USD3.501303300。当前停止付费，没有新训练或5000题生成。**
 旧SFT87及其32episode结果不变，[旧结果入口](../README.md)继续保留。
 
 阅读：[v1.1设计/变更合同](DESIGN_v1_1_ZH.md)＋[v1.2本地适配补充](LOCAL_ADAPTER_CONTRACT_v1_2_ZH.md) →
 [原生单函数升级合同](NATIVE_FUNCTION_PROTOCOL_v1_ZH.md) →
+[最新原生接口真实部分结果](reports/NATIVE_FUNCTION_ACTUAL_ZH.md) →
 [最新实际ceiling部分轨迹/停止报告](reports/CEILING_V2_ACTUAL_PARTIAL_ZH.md) →
 [前次prompt v2传输停止与诊断修复](reports/PROMPT_V2_VALIDATION_STOP_ZH.md) →
 [前次双动作诊断](reports/SINGLE_DIAGNOSTIC_ACTUAL_ZH.md) →

@@ -7,9 +7,10 @@
 含设计v1.1/v1.2、fixture基础与六题固定scorer/四臂调度本地验收、
 [USD50真实ceiling首接口停止报告](v2/reports/CEILING50_ACTUAL_STOP_ZH.md)及
 [双动作真实诊断](v2/reports/SINGLE_DIAGNOSTIC_ACTUAL_ZH.md)；
-**2026-11-12最新**：[验证通过后真实ceiling首slot因双动作停止](v2/reports/CEILING_V2_ACTUAL_PARTIAL_ZH.md)，
-7普通动作、0完整episode/配对；累计unknownUSD3.432＋settled上界USD0.013762650，
-尚无四臂真实headroom结果；
+**2026-11-12最新**：[原生单函数真实验收及四臂部分结果](v2/reports/NATIVE_FUNCTION_ACTUAL_ZH.md)，
+真实完成A/B两题例，C本地缺文件读取停批；同一Optional题T/R从.5/.5到1/.9，
+但B为特权参考，0完整四臂block，不能宣称训练收益或ceiling通过。
+累计unknownUSD3.432＋settled上界USD0.069303300，仍占原USD50；
 不改下述SFT87历史结果，不代表新训练或真实ceiling已完成。
 
 研究问题：在固定任务执行器和NPC的能力下，单独学习联合决策 **when（何时求助）＋whom（向谁求助）**，
