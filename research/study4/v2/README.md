@@ -9,9 +9,13 @@
 当前scope为240 episodes、修后统一协议2从头运行，共用原累计USD50；
 首四臂配对块兼作验收，不再单独probe，无新训练/RL/GPU授权，不以mock验收当结果。
 
-**最新actual：[25/720覆盖、六完整块、HTTP429及协议2零API修复](reports/PHASE0_ACTUAL_STOP_AND_REPAIR_ZH.md)。**
+**最新actual：[240首请求HTTP429，0/240完成及零API诊断修订](reports/PHASE0_240_ACTUAL_STOP_ZH.md)。**
+累计379calls/373settled/6unknown，占帽9.110225025/50；无第二call/retry/GET。
+新版诊断只补白名单error.type/code和rate元数据，不能倒推此次429子原因或触发恢复。
+
+此前：[25/720覆盖、六完整块、HTTP429及协议2零API修复](reports/PHASE0_ACTUAL_STOP_AND_REPAIR_ZH.md)。
 原协议1已停；新unknown.858与旧3.432均保留，合计占帽8.252225025/50。
-新版修复历史重复与相同内容write失效，绑定本次直接继续来源及全部378旧calls后恢复；
+新版修复历史重复与相同内容write失效，绑定本次直接继续来源及全部378旧calls后曾恢复；
 旧25仅诊断，不补215混协议。正式训练门未判，新unknown即停；实际终态以新run receipt为准。
 
 ## 历史工程状态与证据

@@ -1,6 +1,7 @@
 from decimal import Decimal
 import errno
 import http.client
+from http.server import BaseHTTPRequestHandler
 from pathlib import Path
 import socket
 import subprocess
@@ -13,14 +14,14 @@ from .budget import BudgetBlocked
 from .contracts import canonical, strict_json
 from .durable import DurableLedger
 from .http_transport import HTTPTransport, TransportFailure
-from .test_durable_preflight import success
+from .test_durable_preflight import approval_for, loopback_server, success
 from .test_provider_bound import control_request, model_max_config, standard_mock
 
 SENSITIVE = "LOCAL_SENSITIVE_EXCEPTION_MESSAGE_NOT_FOR_STORAGE"
 CHILD_FAILURES_OBSERVED = []
 
 
-def injected_call(ledger, kind, close_errors=False):
+def injected_call(ledger, kind, close_errors=False, error_read_failure=False):
     request = control_request()
     connection = MagicMock()
     response = connection.getresponse.return_value
@@ -40,6 +41,8 @@ def injected_call(ledger, kind, close_errors=False):
         target.side_effect = failures[kind]
     elif kind == "status":
         response.status = 429
+        if error_read_failure:
+            response.read.side_effect = http.client.IncompleteRead(SENSITIVE.encode())
     elif kind == "content_type":
         response.getheader.return_value = SENSITIVE
     elif kind == "byte_limit":
@@ -86,6 +89,100 @@ def write_failed_transport_in_child(config_path, stage):
 
 
 class TransportDiagnosisTests(unittest.TestCase):
+    def test_429_error_allowlist_survives_reopen_without_raw_body_headers_or_retry(self):
+        cases = [
+            ({"error": {"type": "insufficient_quota", "code": "insufficient_quota", "message": SENSITIVE}},
+             "insufficient_quota", "insufficient_quota"),
+            ({"error": {"type": "tokens", "code": "rate_limit_exceeded", "message": SENSITIVE}},
+             "tokens", "rate_limit_exceeded"),
+            (b"<html>" + SENSITIVE.encode() + b"</html>", None, None),
+            ({}, None, None),
+            (SENSITIVE.encode() + b"x" * 17000, None, None),
+            ({"error": {"type": SENSITIVE, "code": SENSITIVE, "message": SENSITIVE}},
+             "unrecognized", "unrecognized"),
+        ]
+        for payload, expected_type, expected_code in cases:
+            with self.subTest(error_type=expected_type), tempfile.TemporaryDirectory() as folder:
+                body = payload if isinstance(payload, bytes) else canonical(payload).encode()
+                calls = []
+                class Fixture(BaseHTTPRequestHandler):
+                    def log_message(self, *_):
+                        pass
+
+                    def do_POST(self):
+                        self.rfile.read(int(self.headers["Content-Length"]))
+                        calls.append("one_local_request")
+                        self.send_response(429)
+                        self.send_header("Content-Type", "application/json")
+                        self.send_header("Content-Length", str(len(body)))
+                        self.send_header("Retry-After", "1.5")
+                        self.send_header("x-ratelimit-limit-requests", "100")
+                        self.send_header("x-ratelimit-remaining-tokens", "0")
+                        self.send_header("x-ratelimit-reset-tokens", "1m2.5s")
+                        self.send_header("x-request-id", "req_" + "a" * 32)
+                        self.send_header("Set-Cookie", SENSITIVE)
+                        self.send_header("Authorization", SENSITIVE)
+                        self.send_header("x-unknown-header", SENSITIVE)
+                        self.end_headers()
+                        self.wfile.write(body)
+                root = Path(folder)
+                with loopback_server(Fixture) as endpoint:
+                    plan, _ = local_config(root)
+                    plan["endpoint"] = endpoint
+                    approval = approval_for(root, plan)
+                    ledger = DurableLedger(root, plan, approval, create=True)
+                    try:
+                        with self.assertRaises(TransportFailure):
+                            ledger.call("ep-0", "control", 0, control_request(),
+                                        HTTPTransport(endpoint, "local_test"))
+                    finally:
+                        ledger.close()
+                    ledger = DurableLedger(root, plan, approval, create=False)
+                    try:
+                        row = ledger.connection.execute("select * from calls").fetchone()
+                        transport = strict_json(row["diagnostic"])["transport"]
+                        self.assertEqual(transport["stage"], "status")
+                        self.assertEqual(transport["http_status"], 429)
+                        safe = transport["http_error"]
+                        self.assertEqual(safe.get("error_type"), expected_type)
+                        self.assertEqual(safe.get("error_code"), expected_code)
+                        self.assertEqual(safe["retry_after_seconds"], 1.5)
+                        self.assertEqual(safe["limit_requests"], 100)
+                        self.assertEqual(safe["remaining_tokens"], 0)
+                        self.assertEqual(safe["reset_tokens_milliseconds"], 62500)
+                        self.assertEqual(safe["request_id"], "req_" + "a" * 32)
+                        self.assertEqual(row["state"], "unknown")
+                        self.assertIsNone(row["charged"])
+                        self.assertEqual(Decimal(ledger.status()["held_USD_upper"]), Decimal(".858"))
+                        with self.assertRaises(BudgetBlocked):
+                            ledger.call("ep-0", "control", 1, control_request(),
+                                        HTTPTransport(endpoint, "local_test"))
+                        self.assertEqual(len(calls), 1)
+                    finally:
+                        ledger.close()
+                for file in root.iterdir():
+                    if file.is_file():
+                        self.assertNotIn(SENSITIVE.encode(), file.read_bytes())
+
+    def test_failed_error_body_collection_cannot_mask_original_http_status(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            plan, approval = local_config(root)
+            ledger = DurableLedger(root, plan, approval, create=True)
+            try:
+                with self.assertRaises(TransportFailure):
+                    injected_call(ledger, "status", error_read_failure=True)
+                row = ledger.connection.execute("select * from calls").fetchone()
+                transport = strict_json(row["diagnostic"])["transport"]
+                self.assertEqual(transport["stage"], "status")
+                self.assertEqual(transport["http_status"], 429)
+                self.assertEqual(transport["http_error"]["collection_error"]["cause_type"], "IncompleteRead")
+                self.assertNotIn(SENSITIVE, canonical(transport))
+                self.assertIsNone(row["charged"])
+                self.assertEqual(ledger.status()["unknown"], 1)
+            finally:
+                ledger.close()
+
     def test_four_HTTP_stages_survive_child_exit_reopen_keep_reserve_no_retry_or_sensitive_bytes(self):
         for stage in ("connect", "send", "headers", "read"):
             with self.subTest(stage=stage), tempfile.TemporaryDirectory(prefix="study4_v2_http_stage_") as folder:

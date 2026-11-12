@@ -13,6 +13,12 @@
 60题等权、must/optional分列，B−A或D−A平均R≥.10门不变，CI不附加门；
 单repeat不证明重复稳定性，H5跨模型未测。此修订不改作者方法原文或旧证据。
 
+**该新240 run实际首请求即HTTP429，0/240完成、0工具；已停，未发第二call。**
+[最新实际停止与安全诊断修订](v2/reports/PHASE0_240_ACTUAL_STOP_ZH.md)：
+请求仅14756bytes，不能将429归因长历史；累计379calls/373settled/6unknown，
+占原50帽9.110225025，余40.889774975，unknown5.148不释放。训练门仍unknown。
+后续仅补HTTP错误code/type和受限rate元数据留存，不发付费验证，恢复需要新的有界授权。
+
 累计承接378calls/373settled/5unknown，settled上界USD3.962225025＋unknown预留4.29，
 占原50帽8.252225025，余41.747774975。新scope不是新增预算；新unknown即停，无retry/GET。
 协议2保留修后的单份公开事件/消息来源以及same-byte write规则。

@@ -4,8 +4,11 @@
 已按[用户新文档](PHASE0_ARMS_HYPOTHESES_TRAINING_20261112.md)纠偏：
 同LLM NPC、公开what规则 → H1–H5判定 → 条件训练。
 **最新授权将规模修订为60题×4臂×1（240），修后统一协议2从头运行，首配对块兼作验收。**
+**本次已执行但首请求HTTP429，0/240完成，按约定停批：**
+[240实际停止、累计费用及安全诊断修订](v2/reports/PHASE0_240_ACTUAL_STOP_ZH.md)。
+累计占原50帽9.110225025（unknown预留5.148、非确认实付），余40.889774975；未再发第二call。
 旧正式run在NPC HTTP429停止：[25/720实际覆盖、六块结果及两项零API修复](v2/reports/PHASE0_ACTUAL_STOP_AND_REPAIR_ZH.md)。
-旧25仅诊断，不补215混协议；训练门未判。原USD50承接占用8.252225025（含unknown4.29），
+旧25仅诊断，不补215混协议；训练门未判。原USD50启动时承接占用8.252225025（含unknown4.29），
 新unknown即停，无retry/GET/新增预算或训练。旧[冻结执行合同](v2/PHASE0_FORMAL_PROTOCOL_20261112_ZH.md)与原始证据保留；
 六题规则NPC实验仍仅历史engineering smoke，不是研究门通过。
 
