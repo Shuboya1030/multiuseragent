@@ -6,7 +6,12 @@
 `f1061e1bffc4a8ad54d6d08eae0aab042e911ada`）。
 不改作者原文、历史计划、模型、结果或账本；以下明确列出兼容修订。
 
-**当前恢复：[来源归属纠正与26＋214受限执行](v2/reports/PHASE0_V5_REVIEW_RELEASE_ZH.md)。**
+**最新实际停止：[首fresh B发生10%→5%冲突](v2/reports/REFERENCE_V5_ACTUAL_STOP_ZH.md)。**
+18call均settled、0新unknown，26A/C保留、0fresh完整；下一POST前ReferenceUncertain停止。
+累计占原50帽15.683333325，余34.316666675；不填业务0、不自动重跑。
+H1–H5/训练门均无法判定；提交真实矛盾及原合同处理边界供协调者核验，不启动训练。
+
+**恢复来源：[来源归属纠正与26＋214受限执行](v2/reports/PHASE0_V5_REVIEW_RELEASE_ZH.md)。**
 先前将Agent的阶段性审查暂停误归为用户限制，现明确纠正；原revision10直接来源不变，
 协调者已解除其审查暂停，不伪称新的用户授权或预算。最终恢复源/新root/累计账重新绑定。
 

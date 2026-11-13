@@ -1,6 +1,10 @@
 # Study4 v2：共享协议、固定scorer与本地调度验收
 
-**当前：[原source＋Agent审查解除、214fresh受限恢复](reports/PHASE0_V5_REVIEW_RELEASE_ZH.md)。**
+**当前：[真实18calls后ReferenceUncertain停止及A/C复核](reports/REFERENCE_V5_ACTUAL_STOP_ZH.md)。**
+首B出现同scope10%→5%冲突；18calls全settled、0新unknown，0/214fresh完整。
+26A/C保留；累计占原50帽15.683333325，余34.316666675；不把partial计业务0。
+
+**恢复来源：[原source＋Agent审查解除、214fresh受限恢复](reports/PHASE0_V5_REVIEW_RELEASE_ZH.md)。**
 纠正先前把协调者暂停当作用户限制的归属错误；原revision10仍有效，不伪称新用户批准。
 仅新root内214fresh，完整继承原50帽和6unknown，不独立probe或旧工具重放。
 
@@ -9,7 +13,7 @@
 需214例（A47/B60/C47/D60），不再筛选B/D等价者，旧43候选审计保持原样。
 40项相关离线回归通过；60题/95节点源规格不变，原52/240不是训练门结论。
 旧full240入口仍拒绝；已核验214恢复须另绑定最终源码/原source/Agent解除/新root。
-累计占帽15.629236425/50，余34.370763575；历史6unknown不动，当前付费入口硬禁用。
+恢复前占帽15.629236425/50；历史6unknown不动，最新停止状态/账目以上述实际报告为准。
 
 **有效下一计划已转为[Phase 0→假设判定→条件训练](../STUDY4_ACTIVE_PLAN_ALIGNMENT_20261112.md)，**
 依据[用户20261112文档](../PHASE0_ARMS_HYPOTHESES_TRAINING_20261112.md)。
