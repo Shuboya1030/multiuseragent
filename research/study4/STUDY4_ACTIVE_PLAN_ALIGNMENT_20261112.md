@@ -6,13 +6,15 @@
 `f1061e1bffc4a8ad54d6d08eae0aab042e911ada`）。
 不改作者原文、历史计划、模型、结果或账本；以下明确列出兼容修订。
 
-**最新停止/修复（同日）：[52例安全暂停与reference合同修复](v2/reports/REFERENCE_CONTRACT_REPAIR_ZH.md)。**
+**最新零API核验：[reference-v4授权修复与无筛选26＋214恢复边界](v2/reports/REFERENCE_V4_RECOVERY_REVIEW_ZH.md)。**
 用户要求在inflight settle后暂停；本轮643call全settled、0新unknown/0inflight，
 完整52/240（13块），累计占原50帽15.629236425，余34.370763575，旧6unknown5.148不动。
 已确认all-hiddenfacts单条字面匹配不是预定gold when/whom；不能把这52当Phase0门答案。
-私有reference-v3已零API修复；60题/95节点有源绑定合同，
-全部52逐步对照后43个等价可复用候选、9个仅诊断，partial52不复用；
-若核验接受，需197个fresh slots（A47/B51/C47/D52），不是继续旧run或再跑完整240。
+私有reference-v4修复条件授权误放与旧grant撤回失效；60题/95节点源合同不变，
+39项相关离线回归通过。原13题全部A/C共26例整体通过共享合同及153请求核验，
+只整体保留这组，B/D全部fresh，需214个slots（A47/B60/C47/D60），partial52不续接。
+原43等价候选/197fresh建议已被明确替代：按B/D随机回复等价筛选仍有选择偏差；
+旧52事实、43候选审计及原报告原样保留，不再筛选B/D，不是修后新执行结果。
 付费恢复入口硬禁用，等待协调者核验新版本/清单/批准边界；不启动POST/GET/probe/训练。
 下列scope与旧停止记录按时间保留，不把先前“继续”解释为本次修后付费批准。
 

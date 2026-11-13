@@ -17,6 +17,77 @@ def exchange(events, person, request, reply):
 
 
 class ReferenceCompletionTests(unittest.TestCase):
+    def requisition_context(self):
+        events = []
+        exchange(events, "Huang Jie", "R-77?", "Confirmed level L5 and salary band B5 for R-77.")
+        return load_case("m-med-hiring-requisition"), events
+
+    def test_conditional_authorization_is_not_an_actual_grant(self):
+        replies = [
+            "If approved, authorization_ref: REQ-APR-310",
+            "Once approved, use reference REQ-APR-310",
+            "If approved:\nauthorization_ref: REQ-APR-310",
+            "Once approved:\nuse reference REQ-APR-310",
+        ]
+        for reply in replies:
+            with self.subTest(reply=reply):
+                case, events = self.requisition_context()
+                exchange(events, "Sarah Johnson", "Please approve L5 and B5.", reply)
+                self.assertNotIn("h2", progress(case, events, scorer())["released"])
+
+    def test_explicit_same_scope_revocation_removes_a_previous_grant(self):
+        for ending in ("is revoked", "is not authorized"):
+            with self.subTest(ending=ending):
+                case, events = self.requisition_context()
+                exchange(events, "Sarah Johnson", "Please approve L5 and B5.",
+                         "Approved. Authorization reference: REQ-APR-310.")
+                self.assertIn("h2", reference_released(case, events))
+                exchange(events, "Sarah Johnson", "What is the status of REQ-APR-310?",
+                         "The previous approval REQ-APR-310 " + ending + ".")
+                result = progress(case, events, scorer())
+                self.assertEqual(reference_released(case, events), {"h1"})
+                self.assertEqual(result["withdrawals"][0]["previous_reply_message_id"],
+                                 events[3]["message_id"])
+                self.assertEqual(result["withdrawals"][0]["reply_message_id"],
+                                 events[-1]["message_id"])
+                exchange(events, "Sarah Johnson", "Please approve L5 and B5.",
+                         "I approve this requisition. Authorization reference: REQ-APR-310.")
+                self.assertEqual(reference_released(case, events), {"h1", "h2"})
+
+    def test_quote_or_historical_record_is_not_a_current_grant_or_revocation(self):
+        replies = [
+            "Your note quotes:\nThe previous approval REQ-APR-310 is revoked.",
+            "Historical record: approval REQ-APR-310 was revoked last year.",
+        ]
+        for reply in replies:
+            with self.subTest(reply=reply):
+                case, events = self.requisition_context()
+                exchange(events, "Sarah Johnson", "Please approve L5 and B5.", reply)
+                self.assertNotIn("h2", progress(case, events, scorer())["released"])
+                case, events = self.requisition_context()
+                exchange(events, "Sarah Johnson", "Please approve L5 and B5.",
+                         "Approved. Authorization reference: REQ-APR-310.")
+                exchange(events, "Sarah Johnson", "Please confirm L5 B5 approval status.", reply)
+                self.assertIn("h2", progress(case, events, scorer())["released"])
+
+    def test_unrelated_authority_refusal_does_not_veto_current_explicit_grant(self):
+        case, events = self.requisition_context()
+        exchange(events, "Sarah Johnson", "Please approve L5 and B5.",
+                 "I cannot approve the unrelated equipment purchase.\n"
+                 "I approve this requisition. Authorization reference: REQ-APR-310.")
+        self.assertIn("h2", reference_released(case, events))
+
+    def test_negated_or_unconfirmed_revocation_does_not_retract_a_grant(self):
+        for reply in ("Approval REQ-APR-310 has not been revoked.",
+                      "I cannot confirm whether approval REQ-APR-310 is revoked."):
+            with self.subTest(reply=reply):
+                case, events = self.requisition_context()
+                exchange(events, "Sarah Johnson", "Please approve L5 and B5.",
+                         "Approved. Authorization reference: REQ-APR-310.")
+                exchange(events, "Sarah Johnson", "What is the status of REQ-APR-310?", reply)
+                self.assertIn("h2", reference_released(case, events))
+                self.assertEqual(progress(case, events, scorer())["withdrawals"], [])
+
     def test_ledger_current_invoice_mapping_does_not_require_register_date(self):
         case = load_case("m-low-ledger-allocation")
         events = []

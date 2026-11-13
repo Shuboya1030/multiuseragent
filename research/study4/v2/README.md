@@ -1,8 +1,9 @@
 # Study4 v2：共享协议、固定scorer与本地调度验收
 
-**最新：[52例安全暂停、reference合同缺陷/修复与严格保留清单](reports/REFERENCE_CONTRACT_REPAIR_ZH.md)。**
-私有reference-v3零API修复已接入调度，60题/95节点可核对来源；
-43个逐步等价候选、197个fresh slots待核验。原52/240不是训练门结论。
+**最新：[reference-v4条件授权/撤回修复与无筛选26＋214清单](reports/REFERENCE_V4_RECOVERY_REVIEW_ZH.md)。**
+原13题全部26例A/C整体通过共享合同/153请求核验；B/D全部fresh，
+需214例（A47/B60/C47/D60），不再筛选B/D等价者，旧43候选审计保持原样。
+39项相关离线回归通过；60题/95节点源规格不变，原52/240不是训练门结论。
 累计占帽15.629236425/50，余34.370763575；历史6unknown不动，当前付费入口硬禁用。
 
 **有效下一计划已转为[Phase 0→假设判定→条件训练](../STUDY4_ACTIVE_PLAN_ALIGNMENT_20261112.md)，**

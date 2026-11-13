@@ -6,7 +6,7 @@ import unicodedata
 
 from .contracts import fingerprint, require
 
-VERSION = "study4-reference-completion-3"
+VERSION = "study4-reference-completion-4"
 
 
 class ReferenceUncertain(ValueError):
@@ -51,6 +51,13 @@ ATTRIBUTED = re.compile(
 REFUSAL = re.compile(
     r"\b(?:cannot|can't|unable|withhold|declin\w*|before i can|"
     r"please (?:provide|send|supply)|not (?:approved|authorized|confirmed))\b", re.I)
+CONDITIONAL = re.compile(r"\b(?:if|once|unless|only when|would|subject to approval)\b", re.I)
+HISTORICAL = re.compile(r"\bhistorical (?:record|reference|example|note)\b|\blast year\b", re.I)
+WITHDRAWAL = re.compile(
+    r"\b(?:revoked|withdrawn|rescinded|not authorized|"
+    r"no longer (?:valid|authorized|approved))\b", re.I)
+GRANT = re.compile(
+    r"\b(?:approv\w*|authoriz\w*|grant\w*|reference|sign.?off|attest\w*|mandate)\b", re.I)
 
 
 @dataclass(frozen=True)
@@ -154,14 +161,31 @@ def fact_status(key, value, text, grader, *, single_fact=False):
     """Affirmative field evidence only. Ambiguous speech acts require review."""
     parts = clauses(text)
     evidence, conflict, mentions, attributed_section = False, False, False, False
-    grant_heading = False
+    grant_field = any(word in key for word in ("authorization", "mandate", "signoff", "attestation"))
+    grant_heading = conditional_heading = historical_section = denied_grant = False
+    withdrawn = noncurrent_mentions = conditional_mentions = False
     for part in parts:
+        current_confirmation = re.search(
+            r"\b(?:i|we) (?:can )?(?:confirm|approve|authorize|grant)\b|^approved\b", part)
         if ATTRIBUTED.search(part):
             attributed_section = True
-        elif re.search(r"\b(?:i|we) (?:can )?(?:confirm|approve|authorize|grant)\b", part):
+        elif current_confirmation:
             attributed_section = False
+            historical_section = False
+        if grant_field:
+            if HISTORICAL.search(part):
+                historical_section = True
+            if CONDITIONAL.search(part) and GRANT.search(part):
+                conditional_heading = True
+            elif current_confirmation and not (
+                    NEGATIVE.search(part) or attributed_section or historical_section):
+                conditional_heading = denied_grant = False
+            if (NEGATIVE.search(part) and GRANT.search(part) and
+                    not (attributed_section or historical_section or
+                         re.search(r"\b(?:unrelated|separate|other)\b", part))):
+                denied_grant = True
         if (not NEGATIVE.search(part) and not attributed_section and
-                not re.search(r"\b(once|unless|only when|would|if)\b", part) and
+                not historical_section and not conditional_heading and not CONDITIONAL.search(part) and
                 re.search(r"\b(approval|authorization|mandate|sign.?off|attestation)\b", part) and
                 re.search(r"\b(is|issued|approved|to use)\b|:\s*$", part)):
             grant_heading = True
@@ -188,7 +212,19 @@ def fact_status(key, value, text, grader, *, single_fact=False):
             matched = contains(part, value, grader)
         if matched:
             mentions = True
-            if NEGATIVE.search(part) or attributed_section:
+            if attributed_section or historical_section:
+                noncurrent_mentions = True
+                continue
+            if grant_field and (conditional_heading or CONDITIONAL.search(part)):
+                conditional_mentions = True
+                continue
+            withdrawal = any(not re.search(r"\b(?:not|never)(?: been)?\s*$", part[:m.start()])
+                             for m in WITHDRAWAL.finditer(part))
+            if grant_field and withdrawal and not re.search(
+                    r"\b(?:cannot|can not|can't|unable|unconfirmed|unverified|hypothetical|guess)\b", part):
+                withdrawn, evidence = True, False
+                continue
+            if NEGATIVE.search(part):
                 continue
             if not isinstance(value, bool) and re.search(
                     r"\b(?:not|no|without|non[- ])\s*(?:\w+\s+){0,2}" +
@@ -200,10 +236,7 @@ def fact_status(key, value, text, grader, *, single_fact=False):
                 continue
             if not (named or unique_identifier or single_fact or isinstance(value, list)):
                 continue
-            if any(word in key for word in ("authorization", "mandate", "signoff", "attestation")):
-                denied_grant = any(NEGATIVE.search(p) and re.search(
-                    r"\b(approv\w*|authoriz\w*|grant\w*|reference|sign.?off|attest\w*|mandate)\b", p)
-                    for p in parts)
+            if grant_field:
                 if denied_grant:
                     continue
                 if not (grant_heading or re.search(re.escape(key) + r"\s*[:=]", part) or re.search(
@@ -211,7 +244,8 @@ def fact_status(key, value, text, grader, *, single_fact=False):
                         r"attest\w*|mandate|reference)\b", part)):
                     continue
             evidence = True
-        elif explicit_field and not NEGATIVE.search(part):
+            withdrawn = False
+        elif explicit_field and not (NEGATIVE.search(part) or attributed_section or historical_section):
             # A different explicitly labelled scalar is not silently discarded
             # because an older reply contained the expected value.
             if isinstance(value, (int, float)) and re.search(r"\d", part):
@@ -223,8 +257,14 @@ def fact_status(key, value, text, grader, *, single_fact=False):
             conflict = True
     if conflict:
         return "conflict"
+    if withdrawn:
+        return "withdrawn"
     if evidence:
         return "affirmative"
+    if conditional_mentions:
+        return "conditional"
+    if noncurrent_mentions:
+        return "noncurrent"
     if mentions:
         return "unresolved"
     return "absent"
@@ -235,7 +275,7 @@ def progress(case, events, grader):
     hidden = {h["id"]: h for h in case.blueprint["hidden_information"]}
     requests, request_released = {}, {}
     released, values, unresolved = set(), {}, {}
-    proof = []
+    proof, withdrawals = [], []
     public_text = case.public.instruction + "\n" + "\n".join(text for _, text in case.public.documents)
     for event in events:
         if event["kind"] == "send_message":
@@ -251,15 +291,37 @@ def progress(case, events, grader):
         before = request_released[event["in_reply_to"]]
         for node in case.blueprint["gold_dag"]["nodes"]:
             nid = node["id"]
-            if event["person_id"] not in node["admissible_recipients"] or not set(node["requires"]) <= before:
+            if event["person_id"] not in node["admissible_recipients"]:
                 continue
             records = [hidden[h] for h in node["information_ids"]]
-            if not all(context_present(c, request["content"], public_text, grader)
-                       for h in records for c in h["required_context"]):
-                continue
             facts = {k: v for h in records for k, v in h["facts"].items()}
             states = values.setdefault(nid, {})
             required_keys = {k for a in specs[nid].alternatives for k in a}
+            status_by_key = {}
+            for key, value in facts.items():
+                items = list(enumerate(value)) if isinstance(value, list) else [(None, value)]
+                status_by_key[key] = []
+                for index, item in items:
+                    atom = key if index is None else f"{key}[{index}]"
+                    status = fact_status(key, item, event["content"], grader,
+                                         single_fact=isinstance(value, list) or
+                                         (len(required_keys) == 1 and key in required_keys))
+                    status_by_key[key].append((atom, status))
+                    # Losing an existing grant does not require re-supplying
+                    # the prerequisites needed to obtain a new one.
+                    if status == "withdrawn" and atom in states:
+                        withdrawals.append({
+                            "node_id": nid, "field": atom, "previous_reply_message_id": states[atom],
+                            "reply_message_id": event["message_id"],
+                            "request_message_id": request["message_id"]})
+                        del states[atom]
+                        if isinstance(value, list):
+                            states.pop(key, None)
+                        released.discard(nid)
+            if not set(node["requires"]) <= before or not all(
+                    context_present(c, request["content"], public_text, grader)
+                    for h in records for c in h["required_context"]):
+                continue
             for context in (c for h in records for c in h["required_context"]):
                 identifier = re.fullmatch(r"([A-Za-z][A-Za-z_-]*-)\d[\w.-]*", str(context))
                 if identifier:
@@ -269,16 +331,12 @@ def progress(case, events, grader):
                                              for v in mentioned):
                         unresolved.setdefault(nid, {})["scope"] = "reply explicitly identifies a different record"
             for key, value in facts.items():
-                items = list(enumerate(value)) if isinstance(value, list) else [(None, value)]
                 statuses = []
-                for index, item in items:
-                    status = fact_status(key, item, event["content"], grader,
-                                         single_fact=isinstance(value, list) or
-                                         (len(required_keys) == 1 and key in required_keys))
-                    atom = key if index is None else f"{key}[{index}]"
+                for atom, status in status_by_key[key]:
                     if status == "affirmative":
                         states[atom] = event["message_id"]
-                    statuses.append(status)
+                    if status != "noncurrent" or atom not in states:
+                        statuses.append("unresolved" if status == "noncurrent" else status)
                 if isinstance(value, list) and all(f"{key}[{i}]" in states for i in range(len(value))):
                     states[key] = event["message_id"]
                 status = ("conflict" if "conflict" in statuses else
@@ -301,7 +359,7 @@ def progress(case, events, grader):
                               "contract_sha256": specs[nid].source_sha256})
             elif blockers:
                 released.discard(nid)
-    return {"released": released, "proof": proof,
+    return {"released": released, "proof": proof, "withdrawals": withdrawals,
             "unresolved": {n: v for n, v in unresolved.items() if n not in released},
             "field_conflicts_or_ambiguity": unresolved,
             "contracts": specs}
