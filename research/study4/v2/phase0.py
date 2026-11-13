@@ -232,7 +232,7 @@ class Phase0Runtime(SharedRuntime):
 
 
 def reference_released(case, events):
-    """Private reference-v4 progress; ambiguous releases stop before another call."""
+    """Private reference-v5 progress; ambiguous releases stop before another call."""
     from .reference_completion import released
     return released(case, events, scorer())
 

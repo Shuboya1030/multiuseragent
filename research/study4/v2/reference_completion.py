@@ -6,7 +6,7 @@ import unicodedata
 
 from .contracts import fingerprint, require
 
-VERSION = "study4-reference-completion-4"
+VERSION = "study4-reference-completion-5"
 
 
 class ReferenceUncertain(ValueError):
@@ -58,6 +58,7 @@ WITHDRAWAL = re.compile(
     r"no longer (?:valid|authorized|approved))\b", re.I)
 GRANT = re.compile(
     r"\b(?:approv\w*|authoriz\w*|grant\w*|reference|sign.?off|attest\w*|mandate)\b", re.I)
+ISSUED_REFERENCE_FIELDS = {"readiness_reference", "release_reference", "publication_reference"}
 
 
 @dataclass(frozen=True)
@@ -161,7 +162,8 @@ def fact_status(key, value, text, grader, *, single_fact=False):
     """Affirmative field evidence only. Ambiguous speech acts require review."""
     parts = clauses(text)
     evidence, conflict, mentions, attributed_section = False, False, False, False
-    grant_field = any(word in key for word in ("authorization", "mandate", "signoff", "attestation"))
+    grant_field = key in ISSUED_REFERENCE_FIELDS or any(
+        word in key for word in ("authorization", "mandate", "signoff", "attestation"))
     grant_heading = conditional_heading = historical_section = denied_grant = False
     withdrawn = noncurrent_mentions = conditional_mentions = False
     for part in parts:

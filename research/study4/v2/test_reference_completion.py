@@ -17,6 +17,49 @@ def exchange(events, person, request, reply):
 
 
 class ReferenceCompletionTests(unittest.TestCase):
+    def test_issued_reference_roles_use_same_grant_lifecycle(self):
+        examples = [
+            ("m-high-service-cutover", "readiness_reference"),
+            ("m-medium-research-purchase", "release_reference"),
+            ("m-high-incident-postmortem", "publication_reference"),
+        ]
+        for tid, key in examples:
+            case = load_case(tid)
+            hidden = {h["id"]: h for h in case.blueprint["hidden_information"]}
+            preceding = []
+            for node in case.blueprint["gold_dag"]["nodes"]:
+                records = [hidden[h] for h in node["information_ids"]]
+                request = " ".join(str(c) for h in records for c in h["required_context"])
+                facts = {k: v for h in records for k, v in h["facts"].items()}
+                person = node["admissible_recipients"][0]
+                if key in facts:
+                    break
+                exchange(preceding, person, request,
+                         "\n".join(k + ": " + json.dumps(v) for k, v in facts.items()))
+            else:
+                self.fail("Missing source-spec grant role: " + key)
+            self.assertTrue(set(node["requires"]) <= reference_released(case, preceding))
+            value = facts[key]
+            grant = f"I approve this request. {key}: {value}"
+            scenarios = [
+                ("if", f"If approved, {key}: {value}"),
+                ("once", f"Once approved, use reference {value}"),
+                ("revoked", f"The previous approval {value} is revoked."),
+                ("not_authorized", f"The previous approval {value} is not authorized."),
+            ]
+            for kind, reply in scenarios:
+                with self.subTest(field=key, scenario=kind):
+                    events = deepcopy(preceding)
+                    if kind in {"revoked", "not_authorized"}:
+                        exchange(events, person, request, grant)
+                        self.assertIn(node["id"], reference_released(case, events))
+                    exchange(events, person, request, reply)
+                    self.assertNotIn(node["id"], progress(case, events, scorer())["released"])
+                    exchange(events, person, request, grant)
+                    self.assertIn(node["id"], reference_released(case, events))
+                    exchange(events, person, request, f"Approval {value} has not been revoked.")
+                    self.assertIn(node["id"], reference_released(case, events))
+
     def requisition_context(self):
         events = []
         exchange(events, "Huang Jie", "R-77?", "Confirmed level L5 and salary band B5 for R-77.")
