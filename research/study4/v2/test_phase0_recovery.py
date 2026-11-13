@@ -88,5 +88,55 @@ class RecoveryTests(unittest.TestCase):
         self.assertEqual(sum(s["arm"] in {"B", "D"} for s in fresh), 120)
 
 
+class DerivationRecoveryTests(unittest.TestCase):
+    def binding(self, root):
+        from . import phase0_derivation_recovery as v7
+        _, full, fresh = v7.selection()
+        plan = make_plan([{}] * 12, v7.INHERITED, local_test=True)
+        cohort = strict_json((Path(__file__).parent / "reports" /
+                              "REFERENCE_V7_AC26_AUDIT_20261112.json").read_bytes())
+        cohort["current_runtime_binding"] = plan["runtime"]
+        plan.update(run_id=v7.RUN_ID, mode="provider", endpoint="https://api.openai.com/v1/responses",
+                    direct_user_source=deepcopy(CONTINUE_SOURCE), slots=full, fresh_slots=fresh,
+                    episodes=[s["episode_id"] for s in fresh], max_calls=199 * 192, max_episodes=199,
+                    total_input_tokens=199 * 192 * 272000, total_output_tokens=199 * 192 * 128000,
+                    execution_cohort_audit=cohort, reference_recovery={
+                        "version": v7.RECOVERY, "reviewed_audit": v7.REVIEWED, "review_release": deepcopy(v7.REVIEW)})
+        at = datetime.now(timezone.utc)
+        approval = {"approved": True, "run_id": v7.RUN_ID, "plan_sha256": fingerprint(plan),
+                    "storage_root_sha256": root_binding(root), "budget_cap_USD": "50.00",
+                    "direct_user_source": CONTINUE_SOURCE, "review_release": deepcopy(v7.REVIEW),
+                    "scope": "STUDY4_FORMAL_PHASE0_240_PATH41_REMAIN199_SAME50",
+                    "not_before": at.isoformat(), "expires": (at + timedelta(hours=1)).isoformat(),
+                    "reference": v7.REVIEW["assignment_id"]}
+        return plan, approval
+
+    def test_exact41_plus199_keeps_original_authority_and_all_paid_exposure(self):
+        with tempfile.TemporaryDirectory() as directory:
+            plan, approval = self.binding(directory)
+            validate_binding(plan, approval, directory, plan["endpoint"])
+            self.assertEqual(len(plan["fresh_slots"]), 199)
+            self.assertEqual(plan["inherited"]["calls"], 1340)
+            self.assertEqual(plan["inherited"]["unknown_held_USD"], "5.148000")
+
+    def test_no_dropped_cohort_replaced_source_or_released_unknown(self):
+        mutations = [
+            lambda p: p["fresh_slots"].pop(),
+            lambda p: p["execution_cohort_audit"]["rows"].pop(),
+            lambda p: p["reference_recovery"].update(reviewed_audit="unreviewed"),
+            lambda p: p["reference_recovery"]["review_release"].update(attribution="new user approval"),
+            lambda p: p["inherited"].update(unknown_held_USD="0"),
+            lambda p: p["direct_user_source"].update(revision=14),
+        ]
+        with tempfile.TemporaryDirectory() as directory:
+            for mutate in mutations:
+                with self.subTest(mutation=mutate):
+                    plan, approval = self.binding(directory)
+                    mutate(plan)
+                    approval["plan_sha256"] = fingerprint(plan)
+                    with self.assertRaises((ValueError, KeyError, BudgetBlocked)):
+                        validate_binding(plan, approval, directory, plan["endpoint"])
+
+
 if __name__ == "__main__":
     unittest.main()

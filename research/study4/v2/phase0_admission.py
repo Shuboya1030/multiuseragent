@@ -28,7 +28,8 @@ def runtime_binding():
     root = Path(__file__).parent
     shared["phase0_sources"] = {name: hashlib.sha256((root / name).read_bytes().replace(b"\r\n", b"\n")).hexdigest()
                                for name in ("phase0.py", "phase0_admission.py", "phase0_analysis.py",
-                                            "reference_completion.py", "phase0_recovery.py")}
+                                            "reference_completion.py", "phase0_recovery.py",
+                                            "phase0_derivation_recovery.py")}
     shared["phase0_assets"] = {name: hashlib.sha256((ARCHIVES / name).read_bytes()).hexdigest()
                               for name in ("tasks.zip", "context.zip")}
     shared["phase0_roster"] = hashlib.sha256((VENDOR / "organization" / "roster.json").read_bytes()).hexdigest()
@@ -78,10 +79,15 @@ def validate_binding(plan, approval, root, endpoint, now=None):
     if plan.get("budget_cap_USD") is None or approval is None:
         raise BudgetBlocked("No matching Phase0 authority; no key/file/network")
     recovery = plan.get("reference_recovery")
+    derivation = recovery is not None and recovery.get("version") == (
+        "study4-phase0-reference-v7-source-derivation-continuation-1")
     if plan.get("mode") == "provider":
         if recovery is None:
             raise BudgetBlocked("Old full240 provider plan remains paused; reviewed214 binding required")
-        from .phase0_recovery import validate_review
+        if derivation:
+            from .phase0_derivation_recovery import validate_review
+        else:
+            from .phase0_recovery import validate_review
         validate_review(plan, approval)
     from .phase0_recovery import CONTINUE_SOURCE
     expected_source = CONTINUE_SOURCE if recovery is not None else SOURCE
@@ -98,13 +104,14 @@ def validate_binding(plan, approval, root, endpoint, now=None):
             plan["operation_limits"] == OPERATION_LIMITS and plan["max_actions"] == MAX_ACTIONS,
             "Same frozen ordinary/NPC opportunity and token caps")
     expected_slots = schedule() if recovery is None else plan["slots"]
-    expected_calls = (240 if recovery is None else 214) * 192
+    remaining = 199 if derivation else 214
+    expected_calls = (240 if recovery is None else remaining) * 192
     require(plan["slots"] == expected_slots and plan["episodes"] == (
         ["phase0-preflight"] if plan["mode"] == "local_test" else []) + [
         s["episode_id"] for s in (plan["slots"] if recovery is None else plan["fresh_slots"])],
         "Frozen complete60x4x1 target/fresh schedule changed")
     require(plan["budget_cap_USD"] == "50.00" and plan["max_calls"] == expected_calls and
-            plan["max_episodes"] == (241 if plan["mode"] == "local_test" else (240 if recovery is None else 214))
+            plan["max_episodes"] == (241 if plan["mode"] == "local_test" else (240 if recovery is None else remaining))
             and plan["http_timeout_seconds"] == 30 and
             plan["max_request_bytes"] == plan["max_response_bytes"] == 1_048_576,
             "Original cumulative50 and frozen resource bounds")
@@ -112,15 +119,19 @@ def validate_binding(plan, approval, root, endpoint, now=None):
             plan["total_output_tokens"] == plan["max_calls"] * 128000,
             "Aggregate token bounds cannot become an unintended early cutoff")
     if plan["mode"] == "provider":
-        from .phase0_recovery import INHERITED
-        require(plan["inherited"] == INHERITED and len(plan["history"]) == 11,
+        if derivation:
+            from .phase0_derivation_recovery import INHERITED
+        else:
+            from .phase0_recovery import INHERITED
+        require(plan["inherited"] == INHERITED and len(plan["history"]) == (12 if derivation else 11),
                 "All1040original calls, held unknown and paid18prefix remain counted")
     require(approval.get("approved") is True and approval.get("run_id") == plan["run_id"] and
             approval.get("plan_sha256") == fingerprint(plan) and approval.get("storage_root_sha256") == root_binding(root)
             and approval.get("budget_cap_USD") == "50.00" and approval.get("direct_user_source") == expected_source
             and approval.get("reference"), "Formal authority must match exact plan/root/cap/source")
     expected_scope = ("LOCAL_TEST_NOT_PAID_AUTHORIZATION" if plan["mode"] == "local_test"
-                      else "STUDY4_FORMAL_PHASE0_240_AC26_FRESH214_SAME50")
+                      else ("STUDY4_FORMAL_PHASE0_240_PATH41_REMAIN199_SAME50" if derivation
+                            else "STUDY4_FORMAL_PHASE0_240_AC26_FRESH214_SAME50"))
     require(approval.get("scope") == expected_scope, "Formal scope is not old48/another50")
     at = now or datetime.now(timezone.utc)
     start, end = datetime.fromisoformat(approval["not_before"]), datetime.fromisoformat(approval["expires"])

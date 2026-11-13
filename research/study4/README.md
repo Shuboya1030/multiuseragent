@@ -1,5 +1,9 @@
 # Study 4：求助控制器训练、结果与下一步
 
+**执行更新：协调者`call_Kspbz4P7lgJw01HTKOSpDwJm`已核验v7并解除自己的审查暂停。**
+原用户rev13/240/50不变；以新namespace续接41完整路径＋199待完成，
+两处已付前缀不重POST/工具，最终源重新冻结和26A/C全组重核；下述为暂停时快照。
+
 **当前：[v6安全暂停、v7原规格推导修复与95节点/整批续接证明](v2/reports/REFERENCE_V7_SOURCE_DERIVATION_PAUSE_ZH.md)。**
 42例实际完整、8块、300新增call全settled；无新unknown/inflight。
 41完整路径候选＋1原前缀分支＋1已付proposal续接＋197fresh，不按成绩重抽。

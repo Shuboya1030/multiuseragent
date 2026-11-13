@@ -1,5 +1,9 @@
 # Study4 v2：共享协议、固定scorer与本地调度验收
 
+**执行更新：Agent审查已由`call_Kspbz4P7lgJw01HTKOSpDwJm`解除，原用户rev13范围不变。**
+`phase0_derivation_recovery.py`在新namespace续接41＋199，继承全部1340calls和原50帽；
+最终执行源/26A/C全组重新绑定，原v6路径和错误尾部不改。下述为已发布停点证据。
+
 **当前：[v6安全暂停、v7公开推导合同修复与整批路径证明](reports/REFERENCE_V7_SOURCE_DERIVATION_PAUSE_ZH.md)。**
 42实际完整/8块，300call全settled、0新unknown；95节点源审计及50项离线回归通过。
 41完整路径候选，1原前缀分支、1已付proposal续接、197fresh；不整题重抽。
