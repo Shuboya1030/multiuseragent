@@ -17,6 +17,63 @@ def exchange(events, person, request, reply):
 
 
 class ReferenceCompletionTests(unittest.TestCase):
+    def test_release_tier_has_actual_premises_and_source_bound_public_rule(self):
+        case, events = load_case("m-high-model-release"), []
+        exchange(events, "Wang Fang", "Aurora-7B current evaluation?",
+                 "The current evaluation report is EV-19 and includes external benchmark claims. "
+                 "I do not have the exact release tier or safety attestation wording.")
+        result = progress(case, events, scorer())
+        self.assertEqual(result["released"], {"h1"})
+        certificate = next(iter(result["public_derivation_proofs_PRIVATE"].values()))
+        self.assertEqual(certificate["target"], "release_tier")
+        self.assertEqual(set(certificate["premise_sources"]), {"eval_report_id", "external_benchmark_claims"})
+        self.assertIn("release-tiers.md", certificate["public_source_path"])
+        self.assertFalse(any(p["node_id"] == "h2" for p in result["proof"]))
+        missing_rule = deepcopy(case)
+        from dataclasses import replace
+        missing_rule.public = replace(case.public, documents=tuple(
+            (p, t) for p, t in case.public.documents if not p.endswith("release-tiers.md")))
+        self.assertEqual(reference_released(missing_rule, events), set())
+        missing_report = deepcopy(events)
+        missing_report[-1]["content"] = "The current evaluation includes external benchmark claims."
+        self.assertEqual(reference_released(case, missing_report), set())
+
+    def test_public_arithmetic_does_not_require_npc_to_repeat_a_computed_total(self):
+        examples = [
+            ("o-high-stream-cluster", "Zhang Wei", "analytics stream?",
+             "Use cluster sw-2 with 2 new nodes.", "monthly_usd"),
+            ("o-med-renewal-quote", "Mark Johnson", "Litware terms?",
+             "Term years: 3\nAnnual USD: 21600", "total_usd"),
+            ("o-high-cloud-budget", "Emma Lewis", "API server 2027?",
+             "Instance count: 8\nCommitment: 1-year committed\nDiscount: 30%", "annual_usd"),
+            ("o-med-batch-schedule", "Mike Chen", "embedding batch?",
+             "Start UTC: 02:00\nDiscount: 40%", "monthly_usd"),
+            ("o-med-brochure-translation", "Jessica Lee", "LinguaPro?",
+             "Framework rate: USD 0.08 per word.", "total_usd"),
+        ]
+        for tid, person, question, reply, field in examples:
+            with self.subTest(field=field, source=tid):
+                case, events = load_case(tid), []
+                exchange(events, person, question, reply)
+                result = progress(case, events, scorer())
+                self.assertEqual(result["released"], {"h1"})
+                self.assertIn(field, {p["target"] for p in result["public_derivation_proofs_PRIVATE"].values()})
+
+    def test_public_scope_or_deprecation_rationale_need_not_be_recited_as_extra_private_facts(self):
+        examples = [
+            ("o-med-browser-matrix", "Liu Qiang", "e-commerce redesign?",
+             "The current supported browser count is 4."),
+            ("o-medium-event-package", "Mark Johnson", "Harbor 30 customer workshop?",
+             "Current commercial package: COMM30\nDiscount rate: 15%"),
+        ]
+        for tid, person, question, reply in examples:
+            with self.subTest(source=tid):
+                events = []
+                exchange(events, person, question, reply)
+                case = load_case(tid)
+                self.assertEqual(reference_released(case, events),
+                                 {n["id"] for n in case.blueprint["gold_dag"]["nodes"]})
+
     def test_actual_six_reply_conflict_keeps_acquired_fact_but_not_early_grant(self):
         from pathlib import Path
         data = json.loads((Path(__file__).parent / "reports" /
@@ -46,6 +103,9 @@ class ReferenceCompletionTests(unittest.TestCase):
             ("m-high-service-cutover", "readiness_reference"),
             ("m-medium-research-purchase", "release_reference"),
             ("m-high-incident-postmortem", "publication_reference"),
+            ("m-high-incident-postmortem", "root_cause_code"),
+            ("m-high-payroll-correction", "hr_verification_id"),
+            ("m-high-price-change", "margin_check_id"),
         ]
         for tid, key in examples:
             case = load_case(tid)
@@ -213,7 +273,10 @@ class ReferenceCompletionTests(unittest.TestCase):
         events = []
         exchange(events, "Jessica Lee", "LinguaPro rate?", "Framework rate: USD 0.08 per word.")
         self.assertEqual(reference_released(case, events), {"h1"})
-        self.assertNotIn("total_usd", progress(case, events, scorer())["proof"][0]["field_sources"])
+        self.assertTrue(progress(case, events, scorer())["proof"][0]["field_sources"]["total_usd"].startswith(
+            "public-derivation:"))
+        self.assertEqual(next(iter(progress(case, events, scorer())[
+            "public_derivation_proofs_PRIVATE"].values()))["derived_value"], "960.00")
         events[-1]["content"] = "Framework rate: 8%."
         self.assertEqual(reference_released(case, events), set())
         self.assertTrue(progress(case, events, scorer())["field_conflicts_or_ambiguity"])

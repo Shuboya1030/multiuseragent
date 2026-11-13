@@ -6,7 +6,7 @@ import unicodedata
 
 from .contracts import fingerprint, require
 
-VERSION = "study4-reference-completion-6"
+VERSION = "study4-reference-completion-7"
 
 
 class ReferenceUncertain(ValueError):
@@ -24,6 +24,9 @@ QUALIFIERS = {
     "quote_release": "version scope of the explicitly approved quote",
     "conflict": "rationale for an explicitly clear replacement date/window",
     "variance": "rationale when the complete resulting plan is released",
+    "deprecated": "retired-name rationale when the current supported browser count is released",
+    "eligible_purpose": "applicability already bound by the requested public event purpose",
+    "services": "required service scope already explicit in the public event packet",
 }
 LABELS = {
     "required_retention_days": ("retention",),
@@ -68,6 +71,73 @@ class CompletionContract:
     qualifiers: tuple
     source_sha256: str
     explanation: tuple
+    derivations: tuple = ()
+    issued_fields: tuple = ()
+
+
+def issues_record(record):
+    return bool(re.match(
+        r"^(?:As\b.*?,\s*)?(?:approve\b|sign off\b|attest\b|verify only\b|"
+        r"issue\b|release only\b|provide readiness\b|run margin check\b)",
+        record["release_rule"], re.I))
+
+
+def public_derivations(case, facts):
+    """Small source-text-bound rules, not inference from an expected answer."""
+    result = []
+    for path, text in case.public.documents:
+        def add(target, inputs, kind, constants=()):
+            result.append({"target": target, "inputs": inputs, "kind": kind, "constants": constants,
+                           "public_source_path": path, "public_rule_text": text,
+                           "public_source_sha256": fingerprint(text)})
+        if {"eval_report_id", "external_benchmark_claims", "release_tier"} <= facts.keys():
+            match = re.search(
+                r"A checkpoint is (\w+) tier when its current evaluation report includes external benchmark claims\.",
+                text, re.I)
+            if match:
+                add("release_tier", ("eval_report_id", "external_benchmark_claims"),
+                    "external_claims_tier", (match.group(1).lower(),))
+        if {"instance_count", "commitment", "discount", "annual_usd"} <= facts.keys():
+            match = re.search(r"instances at USD ([\d,]+)(?:\.\d+)?/month", text)
+            if match:
+                add("annual_usd", ("instance_count", "commitment", "discount"),
+                    "annual_commitment", (match.group(1).replace(",", ""),))
+        if {"new_nodes", "monthly_usd"} <= facts.keys():
+            match = re.search(r"nodes at USD ([\d,]+) each", text)
+            if match and "/month" in text:
+                add("monthly_usd", ("new_nodes",), "multiply_constant",
+                    (match.group(1).replace(",", ""),))
+        if {"start_utc", "discount", "monthly_usd"} <= facts.keys():
+            match = re.search(r"USD ([\d,]+)/month", text)
+            if match:
+                add("monthly_usd", ("discount",), "discount_public_quote",
+                    (match.group(1).replace(",", ""),))
+        if {"framework_rate", "total_usd"} <= facts.keys():
+            match = re.search(r"([\d,]+) words, (two|three|\d+) languages", text)
+            if match:
+                languages = {"two": "2", "three": "3"}.get(match.group(2), match.group(2))
+                add("total_usd", ("framework_rate",), "multiply_constant",
+                    (str(Decimal(match.group(1).replace(",", "")) * Decimal(languages)),))
+        if {"term_years", "annual_usd", "total_usd"} <= facts.keys() and "one-year" in text:
+            add("total_usd", ("term_years", "annual_usd"), "multiply_inputs")
+    return tuple(result)
+
+
+def derived_value(rule, facts):
+    kind, inputs = rule["kind"], rule["inputs"]
+    if kind == "external_claims_tier":
+        return rule["constants"][0] if facts["external_benchmark_claims"] is True else None
+    if kind == "annual_commitment":
+        if normalize(facts["commitment"]) != "1-year committed":
+            return None
+        return (Decimal(str(facts["instance_count"])) * Decimal(rule["constants"][0]) * 12 *
+                (1 - Decimal(str(facts["discount"]))))
+    if kind == "discount_public_quote":
+        return Decimal(rule["constants"][0]) * (1 - Decimal(str(facts["discount"])))
+    if kind == "multiply_constant":
+        return Decimal(str(facts[inputs[0]])) * Decimal(rule["constants"][0])
+    require(kind == "multiply_inputs", "Unknown private derivation, no guessed value")
+    return Decimal(str(facts[inputs[0]])) * Decimal(str(facts[inputs[1]]))
 
 
 def contracts(case):
@@ -92,7 +162,9 @@ def contracts(case):
         # A qualifier used by an output or a later authorization remains
         # obligatory; dropping register recitation must not drop prerequisites.
         qualifiers = tuple(k for k in facts if k in QUALIFIERS and k not in output
-                           and facts[k] not in downstream_context)
+                           and facts[k] not in downstream_context and
+                           (k not in {"eligible_purpose", "services"} or any(
+                               str(facts[k]).casefold() in text.casefold() for _, text in case.public.documents)))
         required = tuple(k for k in facts if k not in qualifiers)
         alternatives = [required]
         explanations = [(k, "requested output or released input/constraint") for k in required]
@@ -114,7 +186,8 @@ def contracts(case):
         result[node["id"]] = CompletionContract(
             node["id"], tuple(dict.fromkeys(alternatives)), qualifiers,
             fingerprint({"node": node, "records": records, "output_contract": bp["output_contract"]}),
-            tuple(explanations))
+            tuple(explanations), public_derivations(case, facts),
+            tuple(k for record in records if issues_record(record) for k in record["facts"]))
     return result
 
 
@@ -158,11 +231,11 @@ def context_present(value, request, public_text, grader):
     return False
 
 
-def fact_status(key, value, text, grader, *, single_fact=False):
+def fact_status(key, value, text, grader, *, single_fact=False, issued=False):
     """Affirmative field evidence only. Ambiguous speech acts require review."""
     parts = clauses(text)
     evidence, conflict, mentions, attributed_section = False, False, False, False
-    grant_field = key in ISSUED_REFERENCE_FIELDS or any(
+    grant_field = issued or key in ISSUED_REFERENCE_FIELDS or any(
         word in key for word in ("authorization", "mandate", "signoff", "attestation"))
     grant_heading = conditional_heading = historical_section = denied_grant = False
     withdrawn = noncurrent_mentions = conditional_mentions = False
@@ -212,6 +285,9 @@ def fact_status(key, value, text, grader, *, single_fact=False):
                     matched = matched or bool(re.search(r"\bno personal data\b", part))
         else:
             matched = contains(part, value, grader)
+            if key in {"discount", "discount_rate"} and isinstance(value, (int, float)) and 0 < value < 1:
+                matched |= any(Decimal(n) / 100 == Decimal(str(value))
+                               for n in re.findall(r"(\d+(?:\.\d+)?)\s*%", part))
         if matched:
             mentions = True
             if attributed_section or historical_section:
@@ -241,7 +317,7 @@ def fact_status(key, value, text, grader, *, single_fact=False):
             if grant_field:
                 if denied_grant:
                     continue
-                if not (grant_heading or re.search(re.escape(key) + r"\s*[:=]", part) or re.search(
+                if not (grant_heading or explicit_field or re.search(re.escape(key) + r"\s*[:=]", part) or re.search(
                         r"\b(approv\w*|authoriz\w*|issued?|grant\w*|sign.?off|"
                         r"attest\w*|mandate|reference)\b", part)):
                     continue
@@ -277,7 +353,7 @@ def progress(case, events, grader):
     hidden = {h["id"]: h for h in case.blueprint["hidden_information"]}
     requests, request_released = {}, {}
     released, values, unresolved = set(), {}, {}
-    proof, withdrawals = [], []
+    proof, withdrawals, derivation_proofs = [], [], {}
     public_text = case.public.instruction + "\n" + "\n".join(text for _, text in case.public.documents)
     for event in events:
         if event["kind"] == "send_message":
@@ -317,6 +393,7 @@ def progress(case, events, grader):
                 for index, item in items:
                     atom = key if index is None else f"{key}[{index}]"
                     status = fact_status(key, item, event["content"], grader,
+                                         issued=key in specs[nid].issued_fields,
                                          single_fact=isinstance(value, list) or
                                          (len(required_keys) == 1 and key in required_keys))
                     status_by_key[key].append((atom, status))
@@ -354,6 +431,20 @@ def progress(case, events, grader):
                 elif status == "unresolved" and key in required_keys and not REFUSAL.search(
                         normalize(event["content"])):
                     unresolved.setdefault(nid, {})[key] = "value mentioned without affirmative field-bound release"
+            for rule in specs[nid].derivations:
+                if rule["target"] in states or not set(rule["inputs"]) <= states.keys():
+                    continue
+                calculated = derived_value(rule, facts)
+                expected = facts[rule["target"]]
+                correct = (calculated == expected if isinstance(expected, str) else
+                           calculated is not None and Decimal(str(calculated)) == Decimal(str(expected)))
+                if correct:
+                    certificate = {**rule, "node_id": nid,
+                                   "premise_sources": {k: states[k] for k in rule["inputs"]},
+                                   "derived_value": str(calculated)}
+                    identity = "public-derivation:" + fingerprint(certificate)
+                    states[rule["target"]] = identity
+                    derivation_proofs[identity] = certificate
             # Fixed task truth does not change when an NPC later gives a wrong
             # value. Only witnessed correct facts enter states; actual grant
             # withdrawals above still remove their source and completion.
@@ -371,6 +462,7 @@ def progress(case, events, grader):
     return {"released": released, "proof": proof, "withdrawals": withdrawals,
             "unresolved": {n: v for n, v in unresolved.items() if n not in released},
             "field_conflicts_or_ambiguity": unresolved,
+            "public_derivation_proofs_PRIVATE": derivation_proofs,
             "contracts": specs}
 
 

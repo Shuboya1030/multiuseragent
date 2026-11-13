@@ -6,7 +6,16 @@
 `f1061e1bffc4a8ad54d6d08eae0aab042e911ada`）。
 不改作者原文、历史计划、模型、结果或账本；以下明确列出兼容修订。
 
-**最新执行修订：[revision13批准的NPC事实冲突处理与v6续接](v2/reports/REFERENCE_V6_CONFLICT_CONTINUATION_ZH.md)。**
+**最新状态：[v6安全暂停与v7原规格完成/公开推导修复](v2/reports/REFERENCE_V7_SOURCE_DERIVATION_PAUSE_ZH.md)。**
+协调者因实现残留安排settle后暂停，不是用户新限制或NPC矛盾停批。
+42实际完整/8块/300新增call全settled；原50帽占17.1737659500，余32.8262340500。
+95节点已核对，50项离线回归及26A/C全组/153请求通过；无新API。
+整批建议保留41完整路径，model-release D从首次充分回复后的原前缀分支，
+ledger B应用一次已付未执行proposal，再197fresh，合计240；不挑结果或重抽受影响随机轨迹。
+用户rev13的同范围授权不变；Agent审查解除后才绑定新namespace/最终源及累计账恢复。
+不修改public what/64步/scorer/.10门，不以当前数据作Phase0终结论或启动训练。
+
+**此前执行修订：[revision13批准的NPC事实冲突处理与v6续接](v2/reports/REFERENCE_V6_CONFLICT_CONTINUATION_ZH.md)。**
 新直接来源`f69f8951-214c-43f8-ad71-d57bb64d9573` revision13；
 保留26A/C整组，原18settled前缀原样续接，另213全新episode。
 原60×4×1、64步、模型/NPC/公开what/scorer/.10门和累计50不变。

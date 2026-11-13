@@ -1,6 +1,11 @@
 # Study4 v2：共享协议、固定scorer与本地调度验收
 
-**当前：[v6已批准NPC矛盾处理与18call无重放续接](reports/REFERENCE_V6_CONFLICT_CONTINUATION_ZH.md)。**
+**当前：[v6安全暂停、v7公开推导合同修复与整批路径证明](reports/REFERENCE_V7_SOURCE_DERIVATION_PAUSE_ZH.md)。**
+42实际完整/8块，300call全settled、0新unknown；95节点源审计及50项离线回归通过。
+41完整路径候选，1原前缀分支、1已付proposal续接、197fresh；不整题重抽。
+原50帽占17.1737659500、余32.8262340500；Agent审查暂停仍在，不是用户新限制。
+
+**此前：[v6已批准NPC矛盾处理与18call无重放续接](reports/REFERENCE_V6_CONFLICT_CONTINUATION_ZH.md)。**
 revision13直接来源；26A/C整组复核，214剩余逻辑slots含1个已付前缀和213全新episode。
 原50帽及6unknown不变，普通矛盾不再当provider失败，公开回复不删改/注gold。
 

@@ -1,6 +1,11 @@
 # Study 4：求助控制器训练、结果与下一步
 
-**当前：[revision13批准的v6事实冲突处理与原18call前缀续接](v2/reports/REFERENCE_V6_CONFLICT_CONTINUATION_ZH.md)。**
+**当前：[v6安全暂停、v7原规格推导修复与95节点/整批续接证明](v2/reports/REFERENCE_V7_SOURCE_DERIVATION_PAUSE_ZH.md)。**
+42例实际完整、8块、300新增call全settled；无新unknown/inflight。
+41完整路径候选＋1原前缀分支＋1已付proposal续接＋197fresh，不按成绩重抽。
+原50帽占17.1737659500、余32.8262340500；协调者审查暂停未解除，0新API，训练门未判。
+
+**此前：[revision13批准的v6事实冲突处理与原18call前缀续接](v2/reports/REFERENCE_V6_CONFLICT_CONTINUATION_ZH.md)。**
 保留26A/C；剩214逻辑slots包括1个已付前缀续接与213个全新episode，不重抽/重放。
 原50帽占15.683333325，余34.316666675；普通NPC矛盾记录环境错误，技术unknown仍停批。
 
