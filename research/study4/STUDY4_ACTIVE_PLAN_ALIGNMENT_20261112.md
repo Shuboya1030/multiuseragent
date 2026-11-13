@@ -6,6 +6,13 @@
 `f1061e1bffc4a8ad54d6d08eae0aab042e911ada`）。
 不改作者原文、历史计划、模型、结果或账本；以下明确列出兼容修订。
 
+**限流恢复已获直接确认：[v8原50帽、共享请求前节流与66＋174续接](v2/reports/REFERENCE_V8_PACED_RECOVERY_ZH.md)。**
+用户委托限流决定，随后来源`e7a380f6-ea65-4840-ad16-6d3ff182707d` revision2直接确认；
+首次≥60s、所有ordinary/question/NPC共享≥20s间隔，等待不计HTTP deadline。
+原unknown普通步62仅一次明确新attempt；所有1964历史calls及6.006预留不动，原50帽不增加。
+新namespace/最终执行源/原26AC整组重新冻结；无独立probe、自动429重试或训练。
+下面是真实67例停点，不因恢复已授权而宣称240完成。
+
 **当前停点（2026-11-13）：[真实67例、token-rate429与v8零API合同修复](v2/reports/REFERENCE_V8_CONTEXT_RATE_STOP_ZH.md)。**
 v7确实续接并新增完成26例；67/240、16实际完整块，全部显式非盲复核。
 新token-rate429已保留为unknown并停批：累计占28.1959095000/50，余21.8040905000，

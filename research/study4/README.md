@@ -1,5 +1,10 @@
 # Study 4：求助控制器训练、结果与下一步
 
+**限流恢复已确认：[v8共享预节流、66＋174受限续接](v2/reports/REFERENCE_V8_PACED_RECOVERY_ZH.md)。**
+用户委托限流决定并直接确认；首次≥60s、全调用共享≥20s间隔，原ordinary62仅一次明确新attempt。
+原50帽/7unknown不释放，普通NPC错误继续；无独立probe、训练或加预算。
+下述67例为冻结停点，不代表已经完成240。
+
 **当前：[67/240实际进展、token-rate429停点与v8零API修复](v2/reports/REFERENCE_V8_CONTEXT_RATE_STOP_ZH.md)。**
 原50帽占28.1959095000、余21.8040905000；累计7unknown预留6.006不释放，无inflight。
 67完整例全部显式非盲复核；v8可保留66路径，另174目标含两个原前缀，不重抽。

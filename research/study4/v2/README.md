@@ -1,5 +1,9 @@
 # Study4 v2：共享协议、固定scorer与本地调度验收
 
+**已确认限流恢复：[共享请求前节流与66＋174受限新namespace](reports/REFERENCE_V8_PACED_RECOVERY_ZH.md)。**
+`phase0_context_recovery.py`＋`request_pacing.py`；49项相关回归及最终26A/C全组复核通过。
+原ordinary62一次新attempt绑定旧unknown，保留原50帽及所有费用；下述为实际67例停点。
+
 **当前：[67实际例、token-rate429、v8公开实体上下文修复及恢复选择](reports/REFERENCE_V8_CONTEXT_RATE_STOP_ZH.md)。**
 累计1964calls/1957settled/7unknown；原50帽占28.1959095000、余21.8040905000，无inflight。
 全部67例显式非盲复核完成；66路径＋174待完成目标已零API核验，不代表已按v8运行。
