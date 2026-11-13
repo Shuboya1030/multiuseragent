@@ -6,7 +6,7 @@ import unicodedata
 
 from .contracts import fingerprint, require
 
-VERSION = "study4-reference-completion-7"
+VERSION = "study4-reference-completion-8"
 
 
 class ReferenceUncertain(ValueError):
@@ -217,8 +217,59 @@ def contains(text, value, grader):
     return all(grader._text_has(text, t) for t in (grader._tokens(value) or grader._words(value)))
 
 
+def public_context_aliases(value, public_text):
+    """Only bounded descriptive expansions actually present in the public packet."""
+    words = re.findall(r"[a-z0-9]+(?:[-_][a-z0-9]+)*", normalize(str(value)))
+    if len(words) < 2:
+        return ()
+    blocked = {
+        "and", "or", "not", "no", "other", "another", "different", "unrelated",
+        "if", "unless", "once", "maybe", "perhaps", "possibly", "hypothetical",
+        "uncertain", "unconfirmed", "instead", "than", "without", "but",
+    }
+    pattern = r"(?<!\w)" + r"(?:\s+[a-z]+){0,2}\s+".join(
+        re.escape(word) for word in words) + r"(?!\w)"
+    aliases = set()
+    for match in re.finditer(pattern, normalize(public_text)):
+        alias_words = match.group().split()
+        if (len(words) < len(alias_words) <= len(words) + 2 and
+                not set(alias_words) & blocked):
+            aliases.add(" ".join(alias_words))
+    return tuple(sorted(aliases))
+
+
 def context_present(value, request, public_text, grader):
-    if contains(request, value, grader):
+    text = normalize(request)
+    forms = (str(value), *public_context_aliases(value, public_text))
+    spans, alias_present = [], False
+    for i, form in enumerate(forms):
+        pattern = (r"(?<!\w)" + r"\s+".join(map(re.escape, normalize(form).split())) +
+                   r"(?!\w|[-_.]\w)")
+        matches = list(re.finditer(pattern, text))
+        spans.extend(matches)
+        alias_present |= i > 0 and bool(matches)
+    if re.fullmatch(r"\d+(?:\.\d+)?", str(value)):
+        spans.extend(match for match in re.finditer(
+            r"(?<![\w.])\d[\d,]*(?:\.\d+)?(?!\w|\.\d)", text)
+                     if Decimal(match.group().replace(",", "")) == Decimal(str(value)))
+    # Do not combine a correct identifier/version with a different value from
+    # the same family, or treat a negated/uncertain entity as supplied context.
+    for token in re.findall(r"\b[a-z][a-z_-]*\d[\w.-]*", normalize(str(value))):
+        family = re.match(r"[a-z][a-z_-]*", token).group()
+        mentioned = re.findall(r"\b" + re.escape(family) + r"\d[\w.-]*", text)
+        if any(item.rstrip(".-") != token.rstrip(".-") for item in mentioned):
+            return False
+    for match in spans:
+        prefix = text[max(0, match.start() - 90):match.start()]
+        suffix = text[match.end():match.end() + 70]
+        if (re.search(
+                r"\b(?:not|no|other than|rather than|instead of|different from|unrelated to|"
+                r"maybe|perhaps|possibly|hypothetical|uncertain|unconfirmed|if|unless)"
+                r"\s+(?:(?:the|this|usd)\s+)?$", prefix) or
+                re.match(r"\s+(?:is|was|may be|might be)\s+"
+                         r"(?:not (?:the )?(?:task|scope|entity)|uncertain|unconfirmed)\b", suffix)):
+            return False
+    if contains(request, value, grader) or alias_present:
         return True
     # A named month for an invoice whose public packet has one year is not a
     # different period merely because it was not written as YYYY-MM.

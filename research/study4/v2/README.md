@@ -1,10 +1,15 @@
 # Study4 v2：共享协议、固定scorer与本地调度验收
 
-**执行更新：Agent审查已由`call_Kspbz4P7lgJw01HTKOSpDwJm`解除，原用户rev13范围不变。**
+**当前：[67实际例、token-rate429、v8公开实体上下文修复及恢复选择](reports/REFERENCE_V8_CONTEXT_RATE_STOP_ZH.md)。**
+累计1964calls/1957settled/7unknown；原50帽占28.1959095000、余21.8040905000，无inflight。
+全部67例显式非盲复核完成；66路径＋174待完成目标已零API核验，不代表已按v8运行。
+45项相关回归通过；新unknown不能自动重发，节流仅本地fixture候选，训练门未判/付费暂停。
+
+**此前执行更新：Agent审查已由`call_Kspbz4P7lgJw01HTKOSpDwJm`解除，原用户rev13范围不变。**
 `phase0_derivation_recovery.py`在新namespace续接41＋199，继承全部1340calls和原50帽；
 最终执行源/26A/C全组重新绑定，原v6路径和错误尾部不改。下述为已发布停点证据。
 
-**当前：[v6安全暂停、v7公开推导合同修复与整批路径证明](reports/REFERENCE_V7_SOURCE_DERIVATION_PAUSE_ZH.md)。**
+**此前停点：[v6安全暂停、v7公开推导合同修复与整批路径证明](reports/REFERENCE_V7_SOURCE_DERIVATION_PAUSE_ZH.md)。**
 42实际完整/8块，300call全settled、0新unknown；95节点源审计及50项离线回归通过。
 41完整路径候选，1原前缀分支、1已付proposal续接、197fresh；不整题重抽。
 原50帽占17.1737659500、余32.8262340500；Agent审查暂停仍在，不是用户新限制。

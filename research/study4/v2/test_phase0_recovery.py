@@ -111,10 +111,11 @@ class DerivationRecoveryTests(unittest.TestCase):
                     "reference": v7.REVIEW["assignment_id"]}
         return plan, approval
 
-    def test_exact41_plus199_keeps_original_authority_and_all_paid_exposure(self):
+    def test_old_v7_admission_does_not_authorize_new_reference_source(self):
         with tempfile.TemporaryDirectory() as directory:
             plan, approval = self.binding(directory)
-            validate_binding(plan, approval, directory, plan["endpoint"])
+            with self.assertRaisesRegex(ValueError, "reviewed private rules"):
+                validate_binding(plan, approval, directory, plan["endpoint"])
             self.assertEqual(len(plan["fresh_slots"]), 199)
             self.assertEqual(plan["inherited"]["calls"], 1340)
             self.assertEqual(plan["inherited"]["unknown_held_USD"], "5.148000")

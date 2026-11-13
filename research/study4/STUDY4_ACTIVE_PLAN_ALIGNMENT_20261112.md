@@ -6,12 +6,22 @@
 `f1061e1bffc4a8ad54d6d08eae0aab042e911ada`）。
 不改作者原文、历史计划、模型、结果或账本；以下明确列出兼容修订。
 
-**当前执行：协调者`call_Kspbz4P7lgJw01HTKOSpDwJm`认可v7并解除自身审查暂停。**
+**当前停点（2026-11-13）：[真实67例、token-rate429与v8零API合同修复](v2/reports/REFERENCE_V8_CONTEXT_RATE_STOP_ZH.md)。**
+v7确实续接并新增完成26例；67/240、16实际完整块，全部显式非盲复核。
+新token-rate429已保留为unknown并停批：累计占28.1959095000/50，余21.8040905000，
+7unknown预留6.006不动，无inflight。不是新的用户限制，也不是普通NPC错误停批。
+v8只修公开来源实体全称匹配；全部34A/C及32B/D路径可保留，portal B从原3call前缀分支，
+conference D保留188settled前缀但ordinary62未知请求不能自动重发；另172未开始，共174待完成。
+45项相关回归、95源节点不变及无重放证明完成；尚无v8付费运行/新admission/训练。
+下一步仅确认新unknown一次尝试与预算风险，获批后绑定新namespace、最终源及预节流；
+不是为内部bug另索用户授权。原50不保证足够，0.10门仍未判，不加严门、不改what/64步/模型/scorer。
+
+**此前执行：协调者`call_Kspbz4P7lgJw01HTKOSpDwJm`认可v7并解除自身审查暂停。**
 按原rev13及同240/50任务继续41完整路径＋199待完成；
 新root/最终源码/26A/C全组与1340历史calls重新绑定，不重抽、不重POST已付前缀，不训练。
 下列暂停记录为已保留历史，不是新的用户限制。
 
-**最新状态：[v6安全暂停与v7原规格完成/公开推导修复](v2/reports/REFERENCE_V7_SOURCE_DERIVATION_PAUSE_ZH.md)。**
+**此前状态：[v6安全暂停与v7原规格完成/公开推导修复](v2/reports/REFERENCE_V7_SOURCE_DERIVATION_PAUSE_ZH.md)。**
 协调者因实现残留安排settle后暂停，不是用户新限制或NPC矛盾停批。
 42实际完整/8块/300新增call全settled；原50帽占17.1737659500，余32.8262340500。
 95节点已核对，50项离线回归及26A/C全组/153请求通过；无新API。

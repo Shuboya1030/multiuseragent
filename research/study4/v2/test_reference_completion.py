@@ -4,7 +4,8 @@ import json
 import unittest
 
 from .phase0 import load_case, reference_released, scorer, task_ids
-from .reference_completion import contracts, progress, ReferenceUncertain
+from .reference_completion import (
+    contracts, context_present, progress, public_context_aliases, ReferenceUncertain)
 
 
 def exchange(events, person, request, reply):
@@ -17,6 +18,49 @@ def exchange(events, person, request, reply):
 
 
 class ReferenceCompletionTests(unittest.TestCase):
+    def test_public_entity_expansion_preserves_actual_portal_release(self):
+        case, events = load_case("m-high-portal-launch"), []
+        public = case.public.instruction + "\n" + "\n".join(t for _, t in case.public.documents)
+        question = (
+            "For the API v3 documentation portal go/no-go record, can you confirm the current "
+            "docs_build_id, QA signoff, launch_date, and authorization_ref that should go into "
+            "/workspace/deliverable.json?")
+        exchange(events, "Priya Sharma", question,
+                 "I can confirm the current build and launch date for the API v3 portal:\n"
+                 "- docs_build_id: DB-318\n- launch_date: 2026-11-17\n"
+                 "I don't have the QA signoff or authorization_ref.")
+        self.assertIn("api v3 documentation portal", public_context_aliases("API v3 portal", public))
+        self.assertEqual(reference_released(case, events), {"h1"})
+        self.assertFalse(context_present("API v3 portal", question, "", scorer()))
+        events[-1]["content"] = "The current build is DB-318."
+        self.assertEqual(reference_released(case, events), set())
+        self.assertNotIn("h2", progress(case, events, scorer())["released"])
+
+    def test_public_aliases_are_general_source_bound_and_conservative(self):
+        public = "The Atlas r7 customer console is the current public project."
+        self.assertTrue(context_present(
+            "Atlas r7 console", "Please confirm the Atlas r7 customer console details.", public, scorer()))
+        cases = [
+            "Please confirm the Atlas r2 customer console.",
+            "Please confirm the Atlas r70 customer console.",
+            "Please confirm the Borealis r7 customer console.",
+            "This is not the Atlas r7 customer console.",
+            "Maybe the Atlas r7 customer console is relevant.",
+            "Atlas r7 customer console or Atlas r2 customer console?",
+            "Atlas r7; the customer console belongs to a different project.",
+            "The Atlas r7 customer console is not the task.",
+        ]
+        for request in cases:
+            with self.subTest(request=request):
+                self.assertFalse(context_present("Atlas r7 console", request, public, scorer()))
+        self.assertFalse(context_present(
+            "Atlas r7 console", "Atlas r7 confidential console?", public, scorer()))
+        self.assertFalse(context_present("L5", "Not L5, use L6.", "", scorer()))
+        self.assertFalse(context_present("9100", "Not USD 9100.", "", scorer()))
+        self.assertFalse(context_present("9100", "Not USD 9,100.", "", scorer()))
+        self.assertFalse(context_present("3", "There are 3.1 units.", "", scorer()))
+        self.assertTrue(context_present("9100", "Total USD 9,100.", "", scorer()))
+
     def test_release_tier_has_actual_premises_and_source_bound_public_rule(self):
         case, events = load_case("m-high-model-release"), []
         exchange(events, "Wang Fang", "Aurora-7B current evaluation?",
