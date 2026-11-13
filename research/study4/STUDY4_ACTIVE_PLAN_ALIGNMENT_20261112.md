@@ -6,7 +6,11 @@
 `f1061e1bffc4a8ad54d6d08eae0aab042e911ada`）。
 不改作者原文、历史计划、模型、结果或账本；以下明确列出兼容修订。
 
-**最新零API核验：[reference-v5签发字段补齐与26＋214恢复边界](v2/reports/REFERENCE_V5_ISSUED_FIELDS_ZH.md)。**
+**当前恢复：[来源归属纠正与26＋214受限执行](v2/reports/PHASE0_V5_REVIEW_RELEASE_ZH.md)。**
+先前将Agent的阶段性审查暂停误归为用户限制，现明确纠正；原revision10直接来源不变，
+协调者已解除其审查暂停，不伪称新的用户授权或预算。最终恢复源/新root/累计账重新绑定。
+
+**此前零API核验：[reference-v5签发字段补齐与26＋214恢复边界](v2/reports/REFERENCE_V5_ISSUED_FIELDS_ZH.md)。**
 用户要求在inflight settle后暂停；本轮643call全settled、0新unknown/0inflight，
 完整52/240（13块），累计占原50帽15.629236425，余34.370763575，旧6unknown5.148不动。
 已确认all-hiddenfacts单条字面匹配不是预定gold when/whom；不能把这52当Phase0门答案。
@@ -16,9 +20,8 @@
 只整体保留这组，B/D全部fresh，需214个slots（A47/B60/C47/D60），partial52不续接。
 原43等价候选/197fresh建议已被明确替代：按B/D随机回复等价筛选仍有选择偏差；
 旧52事实、43候选审计及原报告原样保留，不再筛选B/D，不是修后新执行结果。
-付费恢复入口硬禁用，等待协调者核验新版本/清单/批准边界；不启动POST/GET/probe/训练。
-解禁仍必须有新的直接用户授权，并在首个正式请求前绑定、重冻和核验新准入计划；
-本轮coordinator修复指令不构成付费批准。
+旧full240恢复入口仍拒绝；仅新214受限入口按原用户来源和Agent审查解除记录准入，
+在首个正式请求前绑定、重冻和重核整组；不独立probe、不训练。
 下列scope与旧停止记录按时间保留，不把先前“继续”解释为本次修后付费批准。
 
 **当前执行修订（2026-11-12，用户来源`dccf1924-a562-4335-bbca-c6f929b24f2e` revision8）：**

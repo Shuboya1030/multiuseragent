@@ -1,10 +1,14 @@
 # Study4 v2：共享协议、固定scorer与本地调度验收
 
-**最新：[reference-v5签发字段修复与无筛选26＋214清单](reports/REFERENCE_V5_ISSUED_FIELDS_ZH.md)。**
+**当前：[原source＋Agent审查解除、214fresh受限恢复](reports/PHASE0_V5_REVIEW_RELEASE_ZH.md)。**
+纠正先前把协调者暂停当作用户限制的归属错误；原revision10仍有效，不伪称新用户批准。
+仅新root内214fresh，完整继承原50帽和6unknown，不独立probe或旧工具重放。
+
+**此前：[reference-v5签发字段修复与无筛选26＋214清单](reports/REFERENCE_V5_ISSUED_FIELDS_ZH.md)。**
 原13题全部26例A/C整体通过共享合同/153请求核验；B/D全部fresh，
 需214例（A47/B60/C47/D60），不再筛选B/D等价者，旧43候选审计保持原样。
 40项相关离线回归通过；60题/95节点源规格不变，原52/240不是训练门结论。
-仍需新的直接用户付费恢复授权，当前provider准入硬禁用。
+旧full240入口仍拒绝；已核验214恢复须另绑定最终源码/原source/Agent解除/新root。
 累计占帽15.629236425/50，余34.370763575；历史6unknown不动，当前付费入口硬禁用。
 
 **有效下一计划已转为[Phase 0→假设判定→条件训练](../STUDY4_ACTIVE_PLAN_ALIGNMENT_20261112.md)，**

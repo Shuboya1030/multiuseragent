@@ -159,7 +159,8 @@ result = {
     "cohort_is_all_or_none_not_individual_success_filter": True,
     "BD_stochastic_trajectory_equivalence_not_used_for_selection": True,
     "current_public_protocol_label_unchanged_because_public_schema_unchanged": True,
-    "new_private_reference_version": VERSION, "paid_recovery_disabled": True,
+    "new_private_reference_version": VERSION, "audit_is_not_execution_approval": True,
+    "old_full240_paid_recovery_disabled": True,
     "reference_source_sha256_LF": hashlib.sha256(
         (repo / "research/study4/v2/reference_completion.py").read_bytes().replace(b"\r\n", b"\n")).hexdigest(),
     "shared_phase0_functions_AST_identical_except_reference_released": True,

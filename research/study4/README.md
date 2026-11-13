@@ -1,10 +1,14 @@
 # Study 4：求助控制器训练、结果与下一步
 
-**最新：[reference-v5三种签发字段补齐及26＋214重新核验](v2/reports/REFERENCE_V5_ISSUED_FIELDS_ZH.md)。**
+**当前：[来源归属纠正与已核验26＋214恢复](v2/reports/PHASE0_V5_REVIEW_RELEASE_ZH.md)。**
+原revision10授权不变，协调者已解除自己的审查暂停；不是新用户批准或新预算。
+仅新run执行214fresh，旧26A/C整体保留，最终执行源重新冻结核验。
+
+**此前：[reference-v5三种签发字段补齐及26＋214重新核验](v2/reports/REFERENCE_V5_ISSUED_FIELDS_ZH.md)。**
 原13题全部A/C共26例整体通过共享合同及153请求核验；B/D全部fresh，
 新版需214例（A47/B60/C47/D60），不再按随机轨迹等价筛选B/D，旧43候选审计原样保留。
 原52实际结果不变，修后Phase0训练门未判；40项相关离线测试通过，未发新模型请求。
-付费恢复仍需一条新的直接用户授权；coordinator修复指令不是付费批准。
+此前把Agent暂停误归为用户限制的判断已由上述来源纠正说明明确撤回。
 累计占原50帽15.629236425，余34.370763575，6笔unknown5.148保留；0新unknown/0inflight，付费仍停。
 
 **有效下一计划（2026-11-12）：[Phase 0、假设与条件训练对齐](STUDY4_ACTIVE_PLAN_ALIGNMENT_20261112.md)。**
