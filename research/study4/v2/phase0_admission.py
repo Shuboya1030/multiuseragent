@@ -83,12 +83,14 @@ def validate_binding(plan, approval, root, endpoint, now=None):
             raise BudgetBlocked("Old full240 provider plan remains paused; reviewed214 binding required")
         from .phase0_recovery import validate_review
         validate_review(plan, approval)
-    if plan.get("mode") not in {"provider", "local_test"} or plan.get("direct_user_source") != SOURCE:
+    from .phase0_recovery import CONTINUE_SOURCE
+    expected_source = CONTINUE_SOURCE if recovery is not None else SOURCE
+    if plan.get("mode") not in {"provider", "local_test"} or plan.get("direct_user_source") != expected_source:
         raise BudgetBlocked("Only current direct240 recovery or local tests")
     from .http_transport import validate_endpoint
     validate_endpoint(endpoint, plan["mode"])
     require(plan["phase0_protocol"] == VERSION and plan["schema"] == VERSION and
-            plan["direct_user_source"] == SOURCE, "Exact new formal Phase0 scope/source required")
+            plan["direct_user_source"] == expected_source, "Exact new formal Phase0 scope/source required")
     require(plan["runtime"] == runtime_binding() and plan["price"] == PRICE and
             plan["endpoint"] == endpoint and plan["token_bound"] == BOUND,
             "Frozen Phase0 source/price/endpoint/domain drift")
@@ -111,11 +113,11 @@ def validate_binding(plan, approval, root, endpoint, now=None):
             "Aggregate token bounds cannot become an unintended early cutoff")
     if plan["mode"] == "provider":
         from .phase0_recovery import INHERITED
-        require(plan["inherited"] == INHERITED and len(plan["history"]) == 10,
-                "All1022original calls, held unknown and paused52 usage remain counted")
+        require(plan["inherited"] == INHERITED and len(plan["history"]) == 11,
+                "All1040original calls, held unknown and paid18prefix remain counted")
     require(approval.get("approved") is True and approval.get("run_id") == plan["run_id"] and
             approval.get("plan_sha256") == fingerprint(plan) and approval.get("storage_root_sha256") == root_binding(root)
-            and approval.get("budget_cap_USD") == "50.00" and approval.get("direct_user_source") == SOURCE
+            and approval.get("budget_cap_USD") == "50.00" and approval.get("direct_user_source") == expected_source
             and approval.get("reference"), "Formal authority must match exact plan/root/cap/source")
     expected_scope = ("LOCAL_TEST_NOT_PAID_AUTHORIZATION" if plan["mode"] == "local_test"
                       else "STUDY4_FORMAL_PHASE0_240_AC26_FRESH214_SAME50")

@@ -17,6 +17,30 @@ def exchange(events, person, request, reply):
 
 
 class ReferenceCompletionTests(unittest.TestCase):
+    def test_actual_six_reply_conflict_keeps_acquired_fact_but_not_early_grant(self):
+        from pathlib import Path
+        data = json.loads((Path(__file__).parent / "reports" /
+                          "REFERENCE_V5_ACTUAL_STOP_20261112.json").read_text(encoding="utf-8"))
+        actual = data["actual_partial"]
+        case, events = load_case(actual["slot"]["task_id"]), []
+        for contact in actual["six_actual_exchanges_and_progress"]:
+            exchange(events, "Mark Johnson", contact["request"]["content"], contact["reply"]["content"])
+            self.assertEqual(reference_released(case, events), {"h1"})
+        result = progress(case, events, scorer())
+        self.assertIn("credit_percent", result["field_conflicts_or_ambiguity"]["h1"])
+        h1 = [p for p in result["proof"] if p["node_id"] == "h1"]
+        self.assertEqual(h1[-1]["field_sources"]["credit_percent"], events[1]["message_id"])
+        self.assertFalse(any(p["node_id"] == "h2" for p in result["proof"]))
+
+    def test_wrong_only_or_wrong_scope_reply_never_supplies_missing_facts(self):
+        case = load_case("m-low-ledger-allocation")
+        for reply in ("For INV-842: cost_center: CC-628; ledger_period: 2026-11.",
+                      "Cost center: CC-410. Ledger period: 2026-11."):
+            events = []
+            exchange(events, "David Wong", "INV-841 2026-11?", reply)
+            self.assertEqual(reference_released(case, events), set())
+            self.assertTrue(progress(case, events, scorer())["field_conflicts_or_ambiguity"])
+
     def test_issued_reference_roles_use_same_grant_lifecycle(self):
         examples = [
             ("m-high-service-cutover", "readiness_reference"),
@@ -191,8 +215,8 @@ class ReferenceCompletionTests(unittest.TestCase):
         self.assertEqual(reference_released(case, events), {"h1"})
         self.assertNotIn("total_usd", progress(case, events, scorer())["proof"][0]["field_sources"])
         events[-1]["content"] = "Framework rate: 8%."
-        with self.assertRaises(ReferenceUncertain):
-            reference_released(case, events)
+        self.assertEqual(reference_released(case, events), set())
+        self.assertTrue(progress(case, events, scorer())["field_conflicts_or_ambiguity"])
 
     def test_numeric_punctuation_and_unrelated_authority_limits_preserve_actual_facts(self):
         examples = [
@@ -225,7 +249,7 @@ class ReferenceCompletionTests(unittest.TestCase):
                  "That satisfies the context. The approval reference to use is:\nREQ-APR-310")
         self.assertEqual(reference_released(case, clean), {"h1", "h2"})
 
-    def test_numeric_value_in_wrong_field_is_not_certification_and_conflicts_stop(self):
+    def test_numeric_value_in_wrong_field_is_not_certification_and_conflicts_are_diagnostics(self):
         case = load_case("o-high-interview-panel")
         events = []
         exchange(events, "Chen Xinyi", "backend interviewers?",
@@ -235,15 +259,17 @@ class ReferenceCompletionTests(unittest.TestCase):
         events = []
         exchange(events, "David Wong", "INV-841 2026-11?", "Cost center: CC-628.")
         exchange(events, "David Wong", "INV-841 2026-11?", "Cost center: CC-410.")
-        with self.assertRaises(ReferenceUncertain):
-            reference_released(case, events)
+        self.assertEqual(reference_released(case, events), {"mapping"})
+        self.assertIn("cost_center", progress(case, events, scorer())[
+            "field_conflicts_or_ambiguity"]["mapping"])
+        exchange(events, "David Wong", "INV-841 2026-11?", "Ledger period: 2026-11.")
+        self.assertEqual(reference_released(case, events), {"mapping"})
 
     def test_multiline_draft_echo_does_not_release_a_fact(self):
         events = []
         exchange(events, "Alex Turner", "Node-RED renewal?",
                  "Your draft says:\nseats: 26")
-        with self.assertRaises(ReferenceUncertain):
-            reference_released(load_case("m-med-support-renewal"), events)
+        self.assertEqual(reference_released(load_case("m-med-support-renewal"), events), set())
 
     def test_all60_contracts_have_sources_and_ordered_canonical_releases(self):
         for tid in task_ids():

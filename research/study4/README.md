@@ -1,6 +1,10 @@
 # Study 4：求助控制器训练、结果与下一步
 
-**当前：[真实恢复18calls后因10%→5%权威冲突停止](v2/reports/REFERENCE_V5_ACTUAL_STOP_ZH.md)。**
+**当前：[revision13批准的v6事实冲突处理与原18call前缀续接](v2/reports/REFERENCE_V6_CONFLICT_CONTINUATION_ZH.md)。**
+保留26A/C；剩214逻辑slots包括1个已付前缀续接与213个全新episode，不重抽/重放。
+原50帽占15.683333325，余34.316666675；普通NPC矛盾记录环境错误，技术unknown仍停批。
+
+**此前：[真实恢复18calls后因10%→5%权威冲突停止](v2/reports/REFERENCE_V5_ACTUAL_STOP_ZH.md)。**
 26A/C已保留，0/214fresh完整；18calls全部settled、0新unknown，训练门未判。
 原50帽占15.683333325，余34.316666675；不是429或授权阻塞，不自动重跑partial。
 

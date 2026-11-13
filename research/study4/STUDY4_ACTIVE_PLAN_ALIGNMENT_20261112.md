@@ -6,7 +6,15 @@
 `f1061e1bffc4a8ad54d6d08eae0aab042e911ada`）。
 不改作者原文、历史计划、模型、结果或账本；以下明确列出兼容修订。
 
-**最新实际停止：[首fresh B发生10%→5%冲突](v2/reports/REFERENCE_V5_ACTUAL_STOP_ZH.md)。**
+**最新执行修订：[revision13批准的NPC事实冲突处理与v6续接](v2/reports/REFERENCE_V6_CONFLICT_CONTINUATION_ZH.md)。**
+新直接来源`f69f8951-214c-43f8-ad71-d57bb64d9573` revision13；
+保留26A/C整组，原18settled前缀原样续接，另213全新episode。
+原60×4×1、64步、模型/NPC/公开what/scorer/.10门和累计50不变。
+NPC错误作为环境诊断，已实际取得的正确事实保留；授权前置/context和合法撤回仍有效。
+不注入gold、不补答案、不按NPC错误排除任务；B/D明确为gold进度辅助的路由上限。
+技术unknown/预算门不变。此处更新取代下述历史冲突停机边界，不修改历史证据。
+
+**此前实际停止：[首fresh B发生10%→5%冲突](v2/reports/REFERENCE_V5_ACTUAL_STOP_ZH.md)。**
 18call均settled、0新unknown，26A/C保留、0fresh完整；下一POST前ReferenceUncertain停止。
 累计占原50帽15.683333325，余34.316666675；不填业务0、不自动重跑。
 H1–H5/训练门均无法判定；提交真实矛盾及原合同处理边界供协调者核验，不启动训练。

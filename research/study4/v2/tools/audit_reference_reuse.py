@@ -29,8 +29,18 @@ current = runtime_binding()
 assert {k: v for k, v in plan["runtime"].items() if k != "phase0_sources"} == {
     k: v for k, v in current.items() if k != "phase0_sources"}
 def functions(text):
-    return {n.name: ast.dump(n, include_attributes=False) for n in ast.parse(text).body
+    return {n.name: ast.dump(normalize_episode(n), include_attributes=False) for n in ast.parse(text).body
             if isinstance(n, (ast.FunctionDef, ast.ClassDef))}
+def normalize_episode(node):
+    if isinstance(node, ast.FunctionDef) and node.name == "episode" and node.args.kwonlyargs:
+        assert [a.arg for a in node.args.kwonlyargs] == ["runtime"]
+        assert ast.dump(node.args.kw_defaults[0]) == ast.dump(ast.Constant(None))
+        assert ast.dump(node.body[0], include_attributes=False) == ast.dump(ast.parse(
+            'if runtime is None:\n    runtime = Phase0Runtime(case, slot["episode_id"])').body[0],
+            include_attributes=False)
+        node.args.kwonlyargs, node.args.kw_defaults = [], []
+        node.body[0] = node.body[0].body[0]
+    return node
 old = subprocess.check_output(
     ["git", "show", plan["code_commit"] + ":research/study4/v2/phase0.py"], text=True, encoding="utf-8")
 new = (repo / "research/study4/v2/phase0.py").read_text(encoding="utf-8")
@@ -41,6 +51,7 @@ def public_module(text):
     module = ast.parse(text)
     module.body = [n for n in module.body if not (
         isinstance(n, ast.FunctionDef) and n.name == "reference_released")]
+    module.body = [normalize_episode(n) for n in module.body]
     return ast.dump(module, include_attributes=False)
 assert public_module(old) == public_module(new)
 episode_ast = next(n for n in ast.parse(new).body if isinstance(n, ast.FunctionDef) and n.name == "episode")
@@ -165,6 +176,7 @@ result = {
         (repo / "research/study4/v2/reference_completion.py").read_bytes().replace(b"\r\n", b"\n")).hexdigest(),
     "shared_phase0_functions_AST_identical_except_reference_released": True,
     "shared_phase0_module_constants_imports_AST_identical_except_reference_released": True,
+    "episode_optional_hydrated_runtime_only_default_branch_AST_identical": True,
     "reference_call_guard_AST_B_D_only": True,
     "all9historical_roots_unchanged": True,
     "original_run_receipt_still_same_sha256": hashlib.sha256(

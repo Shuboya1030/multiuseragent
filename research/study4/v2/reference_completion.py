@@ -6,7 +6,7 @@ import unicodedata
 
 from .contracts import fingerprint, require
 
-VERSION = "study4-reference-completion-5"
+VERSION = "study4-reference-completion-6"
 
 
 class ReferenceUncertain(ValueError):
@@ -299,6 +299,17 @@ def progress(case, events, grader):
             facts = {k: v for h in records for k, v in h["facts"].items()}
             states = values.setdefault(nid, {})
             required_keys = {k for a in specs[nid].alternatives for k in a}
+            wrong_scope = False
+            for context in (c for h in records for c in h["required_context"]):
+                identifier = re.fullmatch(r"([A-Za-z][A-Za-z_-]*-)\d[\w.-]*", str(context))
+                if identifier:
+                    mentioned = re.findall(r"\b" + re.escape(identifier.group(1)) + r"\d[\w.-]*",
+                                           event["content"], re.I)
+                    wrong_scope |= bool(mentioned) and not any(
+                        normalize(v.rstrip(".-")) == normalize(str(context)) for v in mentioned)
+            if wrong_scope:
+                unresolved.setdefault(nid, {})["scope"] = "reply explicitly identifies a different record"
+                continue
             status_by_key = {}
             for key, value in facts.items():
                 items = list(enumerate(value)) if isinstance(value, list) else [(None, value)]
@@ -323,15 +334,10 @@ def progress(case, events, grader):
             if not set(node["requires"]) <= before or not all(
                     context_present(c, request["content"], public_text, grader)
                     for h in records for c in h["required_context"]):
+                if any(status == "affirmative" for items in status_by_key.values() for _, status in items):
+                    unresolved.setdefault(nid, {})["release_constraints"] = (
+                        "reply contains a true value before actual prerequisite/context satisfaction")
                 continue
-            for context in (c for h in records for c in h["required_context"]):
-                identifier = re.fullmatch(r"([A-Za-z][A-Za-z_-]*-)\d[\w.-]*", str(context))
-                if identifier:
-                    mentioned = re.findall(r"\b" + re.escape(identifier.group(1)) + r"\d[\w.-]*",
-                                           event["content"], re.I)
-                    if mentioned and not any(normalize(v.rstrip(".-")) == normalize(str(context))
-                                             for v in mentioned):
-                        unresolved.setdefault(nid, {})["scope"] = "reply explicitly identifies a different record"
             for key, value in facts.items():
                 statuses = []
                 for atom, status in status_by_key[key]:
@@ -348,9 +354,10 @@ def progress(case, events, grader):
                 elif status == "unresolved" and key in required_keys and not REFUSAL.search(
                         normalize(event["content"])):
                     unresolved.setdefault(nid, {})[key] = "value mentioned without affirmative field-bound release"
-            blockers = unresolved.get(nid, {})
-            valid = [a for a in specs[nid].alternatives if set(a) <= states.keys()
-                     and not (set(a) | set(specs[nid].qualifiers) | {"scope"}) & blockers.keys()]
+            # Fixed task truth does not change when an NPC later gives a wrong
+            # value. Only witnessed correct facts enter states; actual grant
+            # withdrawals above still remove their source and completion.
+            valid = [a for a in specs[nid].alternatives if set(a) <= states.keys()]
             if valid:
                 # Qualifier conflicts remain visible even when literal recitation
                 # of the qualifier was not a completion obligation.
@@ -359,7 +366,7 @@ def progress(case, events, grader):
                               "request_message_id": request["message_id"],
                               "field_sources": dict(states),
                               "contract_sha256": specs[nid].source_sha256})
-            elif blockers:
+            else:
                 released.discard(nid)
     return {"released": released, "proof": proof, "withdrawals": withdrawals,
             "unresolved": {n: v for n, v in unresolved.items() if n not in released},
@@ -368,7 +375,4 @@ def progress(case, events, grader):
 
 
 def released(case, events, grader):
-    result = progress(case, events, grader)
-    if result["unresolved"]:
-        raise ReferenceUncertain("Reference release needs source-bound offline review")
-    return result["released"]
+    return progress(case, events, grader)["released"]

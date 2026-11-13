@@ -232,7 +232,7 @@ class Phase0Runtime(SharedRuntime):
 
 
 def reference_released(case, events):
-    """Private reference-v5 progress; ambiguous releases stop before another call."""
+    """Private truth-bound progress; contradictory NPC values remain diagnostics."""
     from .reference_completion import released
     return released(case, events, scorer())
 
@@ -358,8 +358,9 @@ def score_record(case, record, reviews=None):
     return scorer().score_bundle(case.blueprint, artifact, bundle, case.costs)
 
 
-def episode(case, slot, mini, journal):
-    runtime = Phase0Runtime(case, slot["episode_id"])
+def episode(case, slot, mini, journal, *, runtime=None):
+    if runtime is None:
+        runtime = Phase0Runtime(case, slot["episode_id"])
     def event(row):
         row["timestamp"] = now()
         runtime.history[-1]["timestamp"] = row["timestamp"]

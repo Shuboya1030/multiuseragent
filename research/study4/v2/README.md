@@ -1,6 +1,10 @@
 # Study4 v2：共享协议、固定scorer与本地调度验收
 
-**当前：[真实18calls后ReferenceUncertain停止及A/C复核](reports/REFERENCE_V5_ACTUAL_STOP_ZH.md)。**
+**当前：[v6已批准NPC矛盾处理与18call无重放续接](reports/REFERENCE_V6_CONFLICT_CONTINUATION_ZH.md)。**
+revision13直接来源；26A/C整组复核，214剩余逻辑slots含1个已付前缀和213全新episode。
+原50帽及6unknown不变，普通矛盾不再当provider失败，公开回复不删改/注gold。
+
+**此前：[真实18calls后ReferenceUncertain停止及A/C复核](reports/REFERENCE_V5_ACTUAL_STOP_ZH.md)。**
 首B出现同scope10%→5%冲突；18calls全settled、0新unknown，0/214fresh完整。
 26A/C保留；累计占原50帽15.683333325，余34.316666675；不把partial计业务0。
 
