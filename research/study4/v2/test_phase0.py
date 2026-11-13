@@ -325,35 +325,13 @@ class Phase0Tests(unittest.TestCase):
         changed._normal(Tool("submit", (("answer", "Delivered"),)))
         self.assertTrue(changed.progress()["bridge_submitted"])
 
-    def test_current_recovery_requires_all_exposure_and_new_scope_not_old_authority(self):
+    def test_reference_repair_cannot_reuse_previous_paid_recovery_authority(self):
         with self.assertRaises(BudgetBlocked):
             make_plan([], {"unknown_held_USD": "0", "settled_USD_upper": "0"})
-        with tempfile.TemporaryDirectory() as directory:
-            root = Path(directory)
-            inherited = {"unknown_held_USD": "5.148000", "settled_USD_upper": "3.962225025",
-                         "calls": 379, "settled_calls": 373, "unknown_calls": 6}
-            plan = make_plan([{}] * 9, inherited, recovery_source=SOURCE)
-            authority = self.authority(root, plan)
-            authority["scope"] = "STUDY4_FORMAL_PHASE0_240_SAME_CUMULATIVE50"
-            validate_binding(plan, authority, root, plan["endpoint"])
-            self.assertNotIn("phase0-preflight", plan["episodes"])
-            self.assertEqual(len(plan["episodes"]), 240)
-            ledger = DurableLedger(root, plan, authority, create=True)
-            try:
-                status = ledger.status()
-                self.assertEqual(status["occupied_USD_upper"], "9.110225025")
-                self.assertEqual(status["held_USD_upper"], "5.148000")
-                self.assertEqual(status["calls"], 0)
-            finally:
-                ledger.close()
-            authority["scope"] = "STUDY4_FORMAL_PHASE0_SAME_CUMULATIVE50"
-            with self.assertRaises(ValueError):
-                validate_binding(plan, authority, root, plan["endpoint"])
-            plan["inherited"]["unknown_held_USD"] = "3.432000"
-            authority = self.authority(root, plan)
-            authority["scope"] = "STUDY4_FORMAL_PHASE0_240_SAME_CUMULATIVE50"
-            with self.assertRaises(ValueError):
-                validate_binding(plan, authority, root, plan["endpoint"])
+        inherited = {"unknown_held_USD": "5.148000", "settled_USD_upper": "3.962225025",
+                     "calls": 379, "settled_calls": 373, "unknown_calls": 6}
+        with self.assertRaises(BudgetBlocked):
+            make_plan([{}] * 9, inherited, recovery_source=SOURCE)
 
     def test_historical_lock_hashes_checked_before_and_after_not_while_exclusively_locked(self):
         import sqlite3

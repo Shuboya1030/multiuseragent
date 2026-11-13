@@ -232,24 +232,9 @@ class Phase0Runtime(SharedRuntime):
 
 
 def reference_released(case, events):
-    """Private reference routing aid, not affirmative-release certification for the scorer."""
-    grader = scorer()
-    hidden = {h["id"]: h for h in case.blueprint["hidden_information"]}
-    satisfied = set()
-    refusal = re.compile(r"\b(cannot|can't|not approved|not authorized|unable|withhold|declin\w*|"
-                         r"before I can|please (?:provide|send|supply))\b", re.I)
-    for event in events:
-        if event["kind"] != "read_messages" or refusal.search(event["content"]):
-            continue
-        before = set(satisfied)
-        for node in case.blueprint["gold_dag"]["nodes"]:
-            facts = {k: v for hid in node["information_ids"] for k, v in hidden[hid]["facts"].items()}
-            tokens = [t for value in facts.values() for t in (grader._tokens(value) or grader._words(value))]
-            if (event["person_id"] in node["admissible_recipients"] and
-                    set(node["requires"]) <= before and tokens and
-                    all(grader._text_has(event["content"], token) for token in tokens)):
-                satisfied.add(node["id"])
-    return satisfied
+    """Private reference-v3 progress; ambiguous releases stop before another call."""
+    from .reference_completion import released
+    return released(case, events, scorer())
 
 
 def reference_person(case, runtime):

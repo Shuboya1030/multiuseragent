@@ -1,5 +1,10 @@
 # Study4 v2：共享协议、固定scorer与本地调度验收
 
+**最新：[52例安全暂停、reference合同缺陷/修复与严格保留清单](reports/REFERENCE_CONTRACT_REPAIR_ZH.md)。**
+私有reference-v3零API修复已接入调度，60题/95节点可核对来源；
+43个逐步等价候选、197个fresh slots待核验。原52/240不是训练门结论。
+累计占帽15.629236425/50，余34.370763575；历史6unknown不动，当前付费入口硬禁用。
+
 **有效下一计划已转为[Phase 0→假设判定→条件训练](../STUDY4_ACTIVE_PLAN_ALIGNMENT_20261112.md)，**
 依据[用户20261112文档](../PHASE0_ARMS_HYPOTHESES_TRAINING_20261112.md)。
 正式Phase 0沿用同LLM NPC、C/D仅公开历史what规则；最新规模经用户修订为60题×4臂×1；
@@ -9,7 +14,7 @@
 当前scope为240 episodes、修后统一协议2从头运行，共用原累计USD50；
 首四臂配对块兼作验收，不再单独probe，无新训练/RL/GPU授权，不以mock验收当结果。
 
-**最新actual：[240首请求HTTP429，0/240完成及零API诊断修订](reports/PHASE0_240_ACTUAL_STOP_ZH.md)。**
+**此前actual：[240首请求HTTP429，0/240完成及零API诊断修订](reports/PHASE0_240_ACTUAL_STOP_ZH.md)。**
 累计379calls/373settled/6unknown，占帽9.110225025/50；无第二call/retry/GET。
 新版诊断只补白名单error.type/code和rate元数据，不能倒推此次429子原因或触发恢复。
 

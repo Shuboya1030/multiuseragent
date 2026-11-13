@@ -27,7 +27,8 @@ def runtime_binding():
     shared = shared_binding()
     root = Path(__file__).parent
     shared["phase0_sources"] = {name: hashlib.sha256((root / name).read_bytes().replace(b"\r\n", b"\n")).hexdigest()
-                               for name in ("phase0.py", "phase0_admission.py", "phase0_analysis.py")}
+                               for name in ("phase0.py", "phase0_admission.py", "phase0_analysis.py",
+                                            "reference_completion.py")}
     shared["phase0_assets"] = {name: hashlib.sha256((ARCHIVES / name).read_bytes()).hexdigest()
                               for name in ("tasks.zip", "context.zip")}
     shared["phase0_roster"] = hashlib.sha256((VENDOR / "organization" / "roster.json").read_bytes()).hexdigest()
@@ -35,8 +36,8 @@ def runtime_binding():
 
 
 def make_plan(history, inherited, *, local_test=False, recovery_source=None):
-    if not local_test and recovery_source != SOURCE:
-        raise BudgetBlocked("Version2 recovery requires the current direct240 authority")
+    if not local_test:
+        raise BudgetBlocked("Reference-v3 repair is offline only; paid recovery requires a new reviewed binding")
     slots = schedule()
     systems = set()
     for tid in {s["task_id"] for s in slots}:
@@ -70,12 +71,14 @@ def make_plan(history, inherited, *, local_test=False, recovery_source=None):
                            "must_optional_separate": True, "CI_is_not_extra_Phase0_gate": True,
                            "missing_or_unknown_not_zero": True},
             "fresh_only": True, "automatic_retry": False,
-            "reference_progress": "conservative_private_value_candidate_NOT_semantic_certification"}
+            "reference_progress": "study4-reference-completion-3-offline-paid-recovery-disabled"}
 
 
 def validate_binding(plan, approval, root, endpoint, now=None):
     if plan.get("budget_cap_USD") is None or approval is None:
         raise BudgetBlocked("No matching Phase0 authority; no key/file/network")
+    if plan.get("mode") == "provider":
+        raise BudgetBlocked("Reference-v3 paid recovery remains paused pending reviewed approval")
     if plan.get("mode") not in {"provider", "local_test"} or plan.get("direct_user_source") != SOURCE:
         raise BudgetBlocked("Only current direct240 recovery or local tests")
     from .http_transport import validate_endpoint

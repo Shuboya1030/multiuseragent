@@ -1,10 +1,15 @@
 # Study 4：求助控制器训练、结果与下一步
 
+**最新（2026-11-12）：[52/240安全暂停、gold reference缺陷及零API修复](v2/reports/REFERENCE_CONTRACT_REPAIR_ZH.md)。**
+原reference误把完整hidden记录字面匹配当节点完成，ledger出现59次ASK，不能据此判训练门。
+已离线修复并核对60题/95节点；52例逐步核验43个可复用候选，后续197个fresh slots待核验批准。
+累计占原50帽15.629236425，余34.370763575，6笔unknown5.148保留；0新unknown/0inflight，付费仍停。
+
 **有效下一计划（2026-11-12）：[Phase 0、假设与条件训练对齐](STUDY4_ACTIVE_PLAN_ALIGNMENT_20261112.md)。**
 已按[用户新文档](PHASE0_ARMS_HYPOTHESES_TRAINING_20261112.md)纠偏：
 同LLM NPC、公开what规则 → H1–H5判定 → 条件训练。
 **最新授权将规模修订为60题×4臂×1（240），修后统一协议2从头运行，首配对块兼作验收。**
-**本次已执行但首请求HTTP429，0/240完成，按约定停批：**
+**此前首个240尝试首请求HTTP429，0/240完成，按约定停批：**
 [240实际停止、累计费用及安全诊断修订](v2/reports/PHASE0_240_ACTUAL_STOP_ZH.md)。
 累计占原50帽9.110225025（unknown预留5.148、非确认实付），余40.889774975；未再发第二call。
 旧正式run在NPC HTTP429停止：[25/720实际覆盖、六块结果及两项零API修复](v2/reports/PHASE0_ACTUAL_STOP_AND_REPAIR_ZH.md)。
