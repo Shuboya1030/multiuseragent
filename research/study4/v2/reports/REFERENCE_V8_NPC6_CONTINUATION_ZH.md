@@ -67,3 +67,15 @@ python -m research.study4.v2.phase0_npc_recovery --execute --root $ROOT
 实际完成后才可判原60题四臂0.10门，不以当前缺失当0或失败，不启动训练。
 本页是执行合同；真实首次恢复以新root的model_result、
 `pending_NPC_receipt_and_ordinary_completed`和后续slot为证，不把freeze冒充已执行。
+
+## 已实际恢复（2026-11-16 04:14 UTC）
+
+执行源码已发布`903705c49cd476aa89735ccb2f55ecc22e39727e`；
+新冻结plan hash为`47be96bf7a600018ae9bae70e8480920695eb6b1974b2b67f6bdb07311ceb026`。
+首个正式NPC6请求保持原hash，已settled（usage上界.0038816250）；
+随后ordinary6已settled（.009858750）且写文件一步。
+第一个实际runtime event是原`contact:6:out`对应的read，而不是send。
+04:14:08 UTC receipt完成时contacts仍7、ordinary变7、下一三种indices均7。
+已进入后续原循环；采样时4settled、0新增unknown，有一个后续调用处于在途/预等待。
+原8unknown不释放，未发送独立probe。不是240完成，也不是永久保证不会再断连。
+[首次真实恢复收据](REFERENCE_V8_NPC6_ACTUAL_RECOVERY_20261115.json)保留实际request hashes和状态采样时间。
