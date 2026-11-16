@@ -6,6 +6,11 @@
 `f1061e1bffc4a8ad54d6d08eae0aab042e911ada`）。
 不改作者原文、历史计划、模型、结果或账本；以下明确列出兼容修订。
 
+**最新实际：[81/240，plugin B ordinary20 connect/gaierror停止](v2/reports/REFERENCE_NPC6_DNS_ACTUAL_STOP_ZH.md)。**
+上次NPC6已真实恢复且旧question未重发；继续新增8例后出现不同新unknown，
+累计2225calls/2216settled/9unknown，占31.6185729750/50、余18.3814270250。
+81例内容绑定复核完成，20完整配对块、159缺失，原0.10门null；不启动训练。
+
 **2026-11-15收到新直接source de32a741 revision2“继续运行吧”，批准[一次NPC6恢复](v2/reports/REFERENCE_V8_NPC6_CONTINUATION_ZH.md)。**
 沿73完整＋1原partial＋166未开始；原question6/send不重放，8unknown和累计50不变。
 下面的停止报告保留为历史事实，不再表示缺少这一次恢复授权。

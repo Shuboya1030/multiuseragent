@@ -1,5 +1,9 @@
 # Study 4：求助控制器训练、结果与下一步
 
+**最新实际停止：[81/240、ordinary20 connect/gaierror](v2/reports/REFERENCE_NPC6_DNS_ACTUAL_STOP_ZH.md)。**
+NPC6一次恢复已成功，后续新增8完整例；新unknown触门，无inflight。
+累计占31.6185729750/50、余18.3814270250，9unknown预留7.722保留；81例全复核、20块，门仍null。
+
 **2026-11-15用户明确“继续运行吧”：按[一次NPC6恢复绑定](v2/reports/REFERENCE_V8_NPC6_CONTINUATION_ZH.md)继续原73＋167/累计50。**
 保留原question6/send和8unknown，只为pending NPC6一次独立新attempt；实际执行状态以新namespace证据为准。
 

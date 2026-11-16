@@ -1,5 +1,8 @@
 # Study4 v2：共享协议、固定scorer与本地调度验收
 
+**最新：[81例/20块、发送前connect/gaierror的实际证据与有限恢复选择](reports/REFERENCE_NPC6_DNS_ACTUAL_STOP_ZH.md)。**
+NPC6已成功且question6未重发；现新ordinary20 unknown停批，不是已证429，不自动重试或释放预留。
+
 **最新批准：[原73＋167一次NPC6恢复](reports/REFERENCE_V8_NPC6_CONTINUATION_ZH.md)。**
 不重问/重send/重放旧工具；用户新直接source覆盖一次新attempt，原50及8unknown不变。
 
