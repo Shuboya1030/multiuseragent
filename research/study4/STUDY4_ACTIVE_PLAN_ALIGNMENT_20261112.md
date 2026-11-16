@@ -6,6 +6,13 @@
 `f1061e1bffc4a8ad54d6d08eae0aab042e911ada`）。
 不改作者原文、历史计划、模型、结果或账本；以下明确列出兼容修订。
 
+**2026-11-15实际核验：[限速后73/240、NPC6断连与一次恢复选择](v2/reports/REFERENCE_V8_PACED_ACTUAL_STOP_ZH.md)。**
+原v8于11月13日19:30:49UTC真实HTTP故障停批，不是会话query错误；无活跃runner/inflight。
+累计2080calls/2072settled/8unknown，占29.9292996750/50、余20.0707003250；
+73完整/18块已全内容绑定复核，167目标缺失（partial1＋未开始166），训练门仍null。
+新unknown为service-cutover D NPC6，question6已付且已send，不得重抽/重放。
+新POST暂停，待这一次unknown的明确新attempt恢复决定；不为内部source变化索新任务授权。
+
 **限流恢复已获直接确认：[v8原50帽、共享请求前节流与66＋174续接](v2/reports/REFERENCE_V8_PACED_RECOVERY_ZH.md)。**
 用户委托限流决定，随后来源`e7a380f6-ea65-4840-ad16-6d3ff182707d` revision2直接确认；
 首次≥60s、所有ordinary/question/NPC共享≥20s间隔，等待不计HTTP deadline。

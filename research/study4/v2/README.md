@@ -1,5 +1,9 @@
 # Study4 v2：共享协议、固定scorer与本地调度验收
 
+**最新：[73实际例/18块、限速后RemoteDisconnected停点及精确续接边界](reports/REFERENCE_V8_PACED_ACTUAL_STOP_ZH.md)。**
+115新增settled＋1新unknown，无活跃runner/inflight；原50帽余20.0707003250。
+全部73例内容绑定复核完成；service-cutover D已付question6已send，仅NPC6未知，未自动重试/GET。
+
 **已确认限流恢复：[共享请求前节流与66＋174受限新namespace](reports/REFERENCE_V8_PACED_RECOVERY_ZH.md)。**
 `phase0_context_recovery.py`＋`request_pacing.py`；49项相关回归及最终26A/C全组复核通过。
 原ordinary62一次新attempt绑定旧unknown，保留原50帽及所有费用；下述为实际67例停点。

@@ -1,5 +1,10 @@
 # Study 4：求助控制器训练、结果与下一步
 
+**最新实际：[限速后73/240、NPC6响应头前断连](v2/reports/REFERENCE_V8_PACED_ACTUAL_STOP_ZH.md)。**
+原runner已停，无inflight；73例全部显式复核，18配对块，门仍未判。
+累计占29.9292996750/50、余20.0707003250，8unknown预留6.864不释放。
+本次不是已证429；原partial question6已发，不能重抽/重send，等待新unknown一次尝试的明确恢复决定。
+
 **限流恢复已确认：[v8共享预节流、66＋174受限续接](v2/reports/REFERENCE_V8_PACED_RECOVERY_ZH.md)。**
 用户委托限流决定并直接确认；首次≥60s、全调用共享≥20s间隔，原ordinary62仅一次明确新attempt。
 原50帽/7unknown不释放，普通NPC错误继续；无独立probe、训练或加预算。
