@@ -1,5 +1,8 @@
 # Study4 v2：共享协议、固定scorer与本地调度验收
 
+**最新批准：[原73＋167一次NPC6恢复](reports/REFERENCE_V8_NPC6_CONTINUATION_ZH.md)。**
+不重问/重send/重放旧工具；用户新直接source覆盖一次新attempt，原50及8unknown不变。
+
 **最新：[73实际例/18块、限速后RemoteDisconnected停点及精确续接边界](reports/REFERENCE_V8_PACED_ACTUAL_STOP_ZH.md)。**
 115新增settled＋1新unknown，无活跃runner/inflight；原50帽余20.0707003250。
 全部73例内容绑定复核完成；service-cutover D已付question6已send，仅NPC6未知，未自动重试/GET。

@@ -6,6 +6,10 @@
 `f1061e1bffc4a8ad54d6d08eae0aab042e911ada`）。
 不改作者原文、历史计划、模型、结果或账本；以下明确列出兼容修订。
 
+**2026-11-15收到新直接source de32a741 revision2“继续运行吧”，批准[一次NPC6恢复](v2/reports/REFERENCE_V8_NPC6_CONTINUATION_ZH.md)。**
+沿73完整＋1原partial＋166未开始；原question6/send不重放，8unknown和累计50不变。
+下面的停止报告保留为历史事实，不再表示缺少这一次恢复授权。
+
 **2026-11-15实际核验：[限速后73/240、NPC6断连与一次恢复选择](v2/reports/REFERENCE_V8_PACED_ACTUAL_STOP_ZH.md)。**
 原v8于11月13日19:30:49UTC真实HTTP故障停批，不是会话query错误；无活跃runner/inflight。
 累计2080calls/2072settled/8unknown，占29.9292996750/50、余20.0707003250；

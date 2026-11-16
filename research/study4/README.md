@@ -1,5 +1,8 @@
 # Study 4：求助控制器训练、结果与下一步
 
+**2026-11-15用户明确“继续运行吧”：按[一次NPC6恢复绑定](v2/reports/REFERENCE_V8_NPC6_CONTINUATION_ZH.md)继续原73＋167/累计50。**
+保留原question6/send和8unknown，只为pending NPC6一次独立新attempt；实际执行状态以新namespace证据为准。
+
 **最新实际：[限速后73/240、NPC6响应头前断连](v2/reports/REFERENCE_V8_PACED_ACTUAL_STOP_ZH.md)。**
 原runner已停，无inflight；73例全部显式复核，18配对块，门仍未判。
 累计占29.9292996750/50、余20.0707003250，8unknown预留6.864不释放。
