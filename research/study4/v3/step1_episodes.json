@@ -1,0 +1,765 @@
+[
+{
+"task": "m-med-service-credit",
+"arm": "A",
+"T": 0.25,
+"R": 0.25,
+"asks": 1,
+"cost": 3.0,
+"refused": 1
+},
+{
+"task": "m-med-service-credit",
+"arm": "B",
+"T": 0.5,
+"R": -1.9,
+"asks": 18,
+"cost": 54.0,
+"refused": 2,
+"stale_value": 1,
+"repeat_refused": 1,
+"useful": 14
+},
+{
+"task": "m-med-service-credit",
+"arm": "C",
+"T": 0.75,
+"R": 0.75,
+"asks": 1,
+"cost": 3.0,
+"refused": 1
+},
+{
+"task": "m-med-service-credit",
+"arm": "D",
+"T": 1.0,
+"R": 0.7,
+"asks": 4,
+"cost": 12.0,
+"useful": 1,
+"stale_value": 3
+},
+{
+"task": "o-med-partner-crawl",
+"arm": "B",
+"T": 1.0,
+"R": 0.95,
+"asks": 1,
+"cost": 1.0,
+"useful": 1
+},
+{
+"task": "o-med-partner-crawl",
+"arm": "C",
+"T": 0.0,
+"R": 0.0,
+"asks": 0,
+"cost": 0.0
+},
+{
+"task": "o-med-partner-crawl",
+"arm": "D",
+"T": 1.0,
+"R": 0.95,
+"asks": 1,
+"cost": 1.0,
+"useful": 1
+},
+{
+"task": "o-med-partner-crawl",
+"arm": "A",
+"T": 0.5,
+"R": 0.5,
+"asks": 0,
+"cost": 0.0
+},
+{
+"task": "m-high-model-release",
+"arm": "C",
+"T": 0.6,
+"R": 0.6,
+"asks": 2,
+"cost": 2.0,
+"refused": 1,
+"useful": 1
+},
+{
+"task": "m-high-model-release",
+"arm": "D",
+"T": 0.6,
+"R": 0.1,
+"asks": 15,
+"cost": 15.0,
+"refused": 10,
+"stale_value": 5
+},
+{
+"task": "m-high-model-release",
+"arm": "A",
+"T": 0.4,
+"R": 0.4,
+"asks": 1,
+"cost": 1.0,
+"refused": 1
+},
+{
+"task": "m-high-model-release",
+"arm": "B",
+"T": 1.0,
+"R": 0.75,
+"asks": 6,
+"cost": 10.0,
+"refused": 2,
+"repeat_refused": 1,
+"useful": 3
+},
+{
+"task": "o-med-backup-window",
+"arm": "D",
+"T": 0.5,
+"R": 0.0,
+"asks": 5,
+"cost": 10.0,
+"refused": 3,
+"stale_value": 2
+},
+{
+"task": "o-med-backup-window",
+"arm": "A",
+"T": 0.5,
+"R": 0.5,
+"asks": 0,
+"cost": 0.0
+},
+{
+"task": "o-med-backup-window",
+"arm": "B",
+"T": 1.0,
+"R": 0.9,
+"asks": 1,
+"cost": 2.0,
+"useful": 1
+},
+{
+"task": "o-med-backup-window",
+"arm": "C",
+"T": 0.5,
+"R": 0.5,
+"asks": 0,
+"cost": 0.0
+},
+{
+"task": "m-med-campaign-spend",
+"arm": "A",
+"T": 0.5,
+"R": 0.5,
+"asks": 1,
+"cost": 2.0,
+"refused": 1
+},
+{
+"task": "m-med-campaign-spend",
+"arm": "B",
+"T": 0.0,
+"R": -0.85,
+"asks": 8,
+"cost": 22.0,
+"refused": 2,
+"repeat_refused": 3,
+"useful": 3
+},
+{
+"task": "m-med-campaign-spend",
+"arm": "C",
+"T": 0.0,
+"R": 0.0,
+"asks": 0,
+"cost": 0.0
+},
+{
+"task": "m-med-campaign-spend",
+"arm": "D",
+"T": 0.75,
+"R": 0.75,
+"asks": 2,
+"cost": 5.0,
+"refused": 2
+},
+{
+"task": "o-med-brochure-translation",
+"arm": "B",
+"T": 0.0,
+"R": -0.4,
+"asks": 4,
+"cost": 8.0,
+"refused": 1,
+"repeat_refused": 2,
+"stale_value": 1
+},
+{
+"task": "o-med-brochure-translation",
+"arm": "C",
+"T": 0.0,
+"R": 0.0,
+"asks": 0,
+"cost": 0.0
+},
+{
+"task": "o-med-brochure-translation",
+"arm": "D",
+"T": 0.0,
+"R": -0.2,
+"asks": 2,
+"cost": 4.0,
+"refused": 1,
+"repeat_refused": 1
+},
+{
+"task": "o-med-brochure-translation",
+"arm": "A",
+"T": 0.0,
+"R": 0.0,
+"asks": 0,
+"cost": 0.0
+},
+{
+"task": "m-med-support-renewal",
+"arm": "C",
+"T": 0.75,
+"R": 0.75,
+"asks": 2,
+"cost": 2.0,
+"refused": 1,
+"stale_value": 1
+},
+{
+"task": "m-med-support-renewal",
+"arm": "D",
+"T": 0.75,
+"R": 0.55,
+"asks": 6,
+"cost": 6.0,
+"refused": 3,
+"stale_value": 3
+},
+{
+"task": "m-med-support-renewal",
+"arm": "A",
+"T": 0.75,
+"R": 0.35,
+"asks": 2,
+"cost": 4.0,
+"refused": 1,
+"wrong_person": 1
+},
+{
+"task": "m-med-support-renewal",
+"arm": "B",
+"T": 1.0,
+"R": 0.95,
+"asks": 3,
+"cost": 3.0,
+"refused": 2,
+"stale_value": 1
+},
+{
+"task": "o-high-launch-announcement",
+"arm": "D",
+"T": 0.0,
+"R": -1.5,
+"asks": 15,
+"cost": 30.0,
+"useful": 11,
+"stale_value": 4
+},
+{
+"task": "o-high-launch-announcement",
+"arm": "A",
+"T": 0.5,
+"R": 0.4,
+"asks": 1,
+"cost": 2.0,
+"refused": 1
+},
+{
+"task": "o-high-launch-announcement",
+"arm": "B",
+"T": 0.5,
+"R": -0.2,
+"asks": 7,
+"cost": 14.0,
+"refused": 1,
+"stale_value": 4,
+"useful": 1,
+"repeat_refused": 1
+},
+{
+"task": "o-high-launch-announcement",
+"arm": "C",
+"T": 0.5,
+"R": 0.4,
+"asks": 1,
+"cost": 2.0,
+"useful": 1
+},
+{
+"task": "m-low-ledger-allocation",
+"arm": "A",
+"T": 0.75,
+"R": 0.75,
+"asks": 0,
+"cost": 0.0
+},
+{
+"task": "m-low-ledger-allocation",
+"arm": "B",
+"T": 0.75,
+"R": 0.75,
+"asks": 1,
+"cost": 3.0,
+"useful": 1
+},
+{
+"task": "m-low-ledger-allocation",
+"arm": "C",
+"T": 0.75,
+"R": 0.75,
+"asks": 0,
+"cost": 0.0
+},
+{
+"task": "m-low-ledger-allocation",
+"arm": "D",
+"T": 0.75,
+"R": 0.75,
+"asks": 1,
+"cost": 3.0,
+"refused": 1
+},
+{
+"task": "o-low-press-factsheet",
+"arm": "B",
+"T": 1.0,
+"R": 0.9,
+"asks": 1,
+"cost": 2.0,
+"refused": 1
+},
+{
+"task": "o-low-press-factsheet",
+"arm": "C",
+"T": 0.0,
+"R": -0.1,
+"asks": 1,
+"cost": 2.0,
+"refused": 1
+},
+{
+"task": "o-low-press-factsheet",
+"arm": "D",
+"T": 1.0,
+"R": 0.9,
+"asks": 1,
+"cost": 2.0,
+"refused": 1
+},
+{
+"task": "o-low-press-factsheet",
+"arm": "A",
+"T": 0.5,
+"R": 0.4,
+"asks": 1,
+"cost": 2.0,
+"useful": 1
+},
+{
+"task": "m-med-hiring-requisition",
+"arm": "C",
+"T": 0.2,
+"R": 0.2,
+"asks": 1,
+"cost": 2.0,
+"refused": 1
+},
+{
+"task": "m-med-hiring-requisition",
+"arm": "D",
+"T": 0.8,
+"R": 0.2,
+"asks": 6,
+"cost": 17.0,
+"refused": 2,
+"repeat_refused": 4
+},
+{
+"task": "m-med-hiring-requisition",
+"arm": "A",
+"T": 0.2,
+"R": 0.2,
+"asks": 1,
+"cost": 2.0,
+"refused": 1
+},
+{
+"task": "m-med-hiring-requisition",
+"arm": "B",
+"T": 0.8,
+"R": 0.8,
+"asks": 2,
+"cost": 5.0,
+"refused": 1,
+"useful": 1
+},
+{
+"task": "o-high-interview-panel",
+"arm": "D",
+"T": 0.5,
+"R": 0.1,
+"asks": 4,
+"cost": 8.0,
+"refused": 1,
+"repeat_refused": 2,
+"stale_value": 1
+},
+{
+"task": "o-high-interview-panel",
+"arm": "A",
+"T": 0.0,
+"R": 0.0,
+"asks": 0,
+"cost": 0.0
+},
+{
+"task": "o-high-interview-panel",
+"arm": "B",
+"T": 0.0,
+"R": -0.5,
+"asks": 5,
+"cost": 10.0,
+"refused": 2,
+"repeat_refused": 1,
+"stale_value": 1,
+"useful": 1
+},
+{
+"task": "o-high-interview-panel",
+"arm": "C",
+"T": 0.5,
+"R": 0.5,
+"asks": 0,
+"cost": 0.0
+},
+{
+"task": "m-low-new-hire-record",
+"arm": "A",
+"T": 1.0,
+"R": 1.0,
+"asks": 1,
+"cost": 2.0,
+"refused": 1
+},
+{
+"task": "m-low-new-hire-record",
+"arm": "B",
+"T": 1.0,
+"R": 1.0,
+"asks": 1,
+"cost": 2.0,
+"refused": 1
+},
+{
+"task": "m-low-new-hire-record",
+"arm": "C",
+"T": 1.0,
+"R": 1.0,
+"asks": 1,
+"cost": 2.0,
+"refused": 1
+},
+{
+"task": "m-low-new-hire-record",
+"arm": "D",
+"T": 0.75,
+"R": 0.75,
+"asks": 1,
+"cost": 2.0,
+"refused": 1
+},
+{
+"task": "o-low-team-lunch",
+"arm": "B",
+"T": 0.0,
+"R": -0.1,
+"asks": 1,
+"cost": 2.0,
+"refused": 1
+},
+{
+"task": "o-low-team-lunch",
+"arm": "C",
+"T": 1.0,
+"R": 0.9,
+"asks": 1,
+"cost": 2.0,
+"useful": 1
+},
+{
+"task": "o-low-team-lunch",
+"arm": "D",
+"T": 1.0,
+"R": 0.9,
+"asks": 1,
+"cost": 2.0,
+"useful": 1
+},
+{
+"task": "o-low-team-lunch",
+"arm": "A",
+"T": 0.5,
+"R": 0.5,
+"asks": 0,
+"cost": 0.0
+},
+{
+"task": "m-high-portal-launch",
+"arm": "C",
+"T": 0.75,
+"R": 0.75,
+"asks": 2,
+"cost": 2.0,
+"refused": 2
+},
+{
+"task": "m-high-portal-launch",
+"arm": "D",
+"T": 0.0,
+"R": -1.05,
+"asks": 24,
+"cost": 24.0,
+"useful": 19,
+"refused": 1,
+"stale_value": 4
+},
+{
+"task": "m-high-portal-launch",
+"arm": "A",
+"T": 0.25,
+"R": -0.1,
+"asks": 4,
+"cost": 4.0,
+"useful": 1,
+"refused": 2,
+"wrong_person": 1
+},
+{
+"task": "m-high-portal-launch",
+"arm": "B",
+"T": 0.75,
+"R": 0.05,
+"asks": 17,
+"cost": 17.0,
+"refused": 4,
+"useful": 11,
+"repeat_refused": 2
+},
+{
+"task": "o-high-eval-budget",
+"arm": "D",
+"T": 0.0,
+"R": -0.1,
+"asks": 2,
+"cost": 2.0,
+"refused": 1,
+"repeat_refused": 1
+},
+{
+"task": "o-high-eval-budget",
+"arm": "A",
+"T": 0.5,
+"R": 0.5,
+"asks": 0,
+"cost": 0.0
+},
+{
+"task": "o-high-eval-budget",
+"arm": "B",
+"T": 0.5,
+"R": -0.75,
+"asks": 9,
+"cost": 9.0,
+"refused": 5,
+"stale_value": 2,
+"useful": 1,
+"repeat_refused": 1
+},
+{
+"task": "o-high-eval-budget",
+"arm": "C",
+"T": 0.0,
+"R": 0.0,
+"asks": 0,
+"cost": 0.0
+},
+{
+"task": "m-med-conference-travel",
+"arm": "A",
+"T": 0.2,
+"R": 0.2,
+"asks": 1,
+"cost": 1.0,
+"useful": 1
+},
+{
+"task": "m-med-conference-travel",
+"arm": "B",
+"T": 1.0,
+"R": 0.9,
+"asks": 3,
+"cost": 5.0,
+"useful": 2,
+"refused": 1
+},
+{
+"task": "m-med-conference-travel",
+"arm": "C",
+"T": 0.6,
+"R": 0.15,
+"asks": 3,
+"cost": 6.0,
+"useful": 1,
+"refused": 1,
+"wrong_person": 1
+},
+{
+"task": "m-med-conference-travel",
+"arm": "D",
+"T": 0.6,
+"R": -5.6,
+"asks": 64,
+"cost": 127.0,
+"refused": 56,
+"stale_value": 8
+},
+{
+"task": "o-med-browser-matrix",
+"arm": "B",
+"T": 0.5,
+"R": 0.45,
+"asks": 1,
+"cost": 1.0,
+"useful": 1
+},
+{
+"task": "o-med-browser-matrix",
+"arm": "C",
+"T": 0.0,
+"R": -0.05,
+"asks": 1,
+"cost": 1.0,
+"refused": 1
+},
+{
+"task": "o-med-browser-matrix",
+"arm": "D",
+"T": 0.0,
+"R": -0.15,
+"asks": 3,
+"cost": 3.0,
+"refused": 1,
+"repeat_refused": 2
+},
+{
+"task": "o-med-browser-matrix",
+"arm": "A",
+"T": 0.0,
+"R": -0.2,
+"asks": 2,
+"cost": 2.0,
+"useful": 1,
+"wrong_person": 1
+},
+{
+"task": "m-high-service-cutover",
+"arm": "C",
+"T": 0.0,
+"R": 0.0,
+"asks": 2,
+"cost": 3.0,
+"refused": 2
+},
+{
+"task": "m-high-service-cutover",
+"arm": "D",
+"T": 0.5,
+"R": -0.5,
+"asks": 12,
+"cost": 24.0,
+"useful": 1,
+"refused": 5,
+"stale_value": 6
+},
+{
+"task": "m-high-service-cutover",
+"arm": "A",
+"T": 0.0,
+"R": 0.0,
+"asks": 1,
+"cost": 1.0,
+"useful": 1
+},
+{
+"task": "m-high-service-cutover",
+"arm": "B",
+"T": 0.0,
+"R": -0.85,
+"asks": 19,
+"cost": 21.0,
+"refused": 2,
+"stale_value": 4,
+"repeat_refused": 13
+},
+{
+"task": "o-low-campaign-asset",
+"arm": "D",
+"T": 0.0,
+"R": -0.05,
+"asks": 1,
+"cost": 1.0,
+"refused": 1
+},
+{
+"task": "o-low-campaign-asset",
+"arm": "A",
+"T": 0.0,
+"R": 0.0,
+"asks": 0,
+"cost": 0.0
+},
+{
+"task": "o-low-campaign-asset",
+"arm": "B",
+"T": 0.0,
+"R": -0.05,
+"asks": 1,
+"cost": 1.0,
+"refused": 1
+},
+{
+"task": "o-low-campaign-asset",
+"arm": "C",
+"T": 0.0,
+"R": 0.0,
+"asks": 0,
+"cost": 0.0
+},
+{
+"task": "m-high-plugin-purchase",
+"arm": "A",
+"T": 0.8,
+"R": 0.8,
+"asks": 3,
+"cost": 4.0,
+"useful": 2,
+"refused": 1
+}
+]
